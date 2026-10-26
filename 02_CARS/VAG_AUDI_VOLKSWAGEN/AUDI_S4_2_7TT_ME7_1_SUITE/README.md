@@ -1,57 +1,29 @@
-# AUDI S4 2 7TT ME7 1 SUITE - ECU Calibration Suite
+# AUDI S4 2 7TT ME7 1 SUITE Calibration Suite
 
-**Repository Path**: `02_CARS/VAG_AUDI_VOLKSWAGEN/AUDI_S4_2_7TT_ME7_1_SUITE`  
-**Classification**: `Complete Binary & TunerPro Definition Suite`  
-**Total Managed Assets**: `7 files` (5 binary dumps, 2 definition maps)  
+## 1. Technical Overview
+Koleksi biner kalibrasi pabrikan OEM dan definisi tuning untuk modul ECU platform AUDI S4 2 7TT ME7 1 SUITE.
 
----
-
-## 1. Technical Platform Overview
-
-Paket direktori `AUDI_S4_2_7TT_ME7_1_SUITE` menyediakan pustaka kalibrasi dan pemetaan ECU profesional yang ditujukan bagi teknisi otomotif, tuner, dan reverse engineer. Berkas di direktori ini mencakup kalibrasi firmware pabrikan (OEM), pembacaan perangkat keras (OBD2/BDM/Bench), serta tabel definisi TunerPro XDF untuk eksplorasi parameter mesin.
-
-### Mengapa Sebagian Berkas Memiliki Nama Berupa Angka / Kode?
-Nama berkas yang tersimpan merefleksikan identitas perangkat keras (Hardware ID), versi perangkat lunak (Software ID), atau nomor kalibrasi pabrikan asli (OEM Calibration ID):
-- **Bosch Part Numbers** (misal `0261xxxxxx`, `1037xxxxxx`): Standar identifikasi universal Bosch untuk ECU Motronic, MED17, EDC16, dan EDC17.
-- **BMW Software IDs** (misal `00005C64xxxxxx`, `10SW002828`): Alamat dan assembly identification number pada modul DME Siemens/Continental/Bosch.
-- **Denso / Toyota Calibration IDs** (misal `89663-xxxxx`): Nomor resmi Toyota Techstream / Denso MCU firmware flash.
-- **Keihin Part Numbers** (misal `37805-xxx-xxxx`, `38770-xxx`): Kode perakitan ECU Honda untuk verifikasi kecocokan checksum dan proteksi immobilizer.
-- **GM OS IDs** (misal `12587603`, `12212156`): Operating system ID kontroler GM Delphi P01/P59.
-
-> [!NOTE]
-> Mempertahankan kode dan nomor asli pabrikan pada penamaan berkas sangat krusial agar perangkat lunak kalibrasi (seperti **TunerPro**, **WinOLS**, atau **RomRaider**) dapat mengenali dan mencocokkan peta definisi (*definition maps*) secara otomatis tanpa merusak asosiasi header ECU.
+* **Total File Terdaftar**: 9 file (100% fisik terverifikasi, Zero Synthetic)
 
 ---
 
-## 2. Manifest Aset Berkas Fisik (100% Verified)
+## 2. Manifest Fisik Kalibrasi & Definisi Terverifikasi
 
-Berikut adalah daftar lengkap berkas fisik yang tersimpan secara lokal di direktori ini:
-
-| Nama Berkas | Tipe / Format | Ukuran (Bytes) | Deskripsi Teknis & Identifikasi |
+| Filename | Size | MD5 Checksum | Type / Target |
 | :--- | :--- | :--- | :--- |
-| `8D0907551M-0002 (16Bit KFZW).bin` | `.BIN` | `1,048,576` bytes | Binary Firmware / Calibration Dump |
-| `8D0907551M-0002 (stock MAP 5120 16Bit KFZW).bin` | `.BIN` | `1,048,576` bytes | Binary Firmware / Calibration Dump |
-| `8D0907551M-0002 (stock MAP 5120).bin` | `.BIN` | `1,048,576` bytes | Binary Firmware / Calibration Dump |
-| `8D0907551M-0002.bin` | `.BIN` | `1,048,576` bytes | Binary Firmware / Calibration Dump |
-| `8D0907551M-002_5120-stock_map-nyet.bin` | `.BIN` | `1,048,576` bytes | Binary Firmware / Calibration Dump |
-| `8D0907551M-20170411-16bit-kfzw.xdf` | `.XDF` | `504,884` bytes | TunerPro Binary Definition Map |
-| `8D0907551M-20190711.xdf` | `.XDF` | `503,633` bytes | TunerPro Binary Definition Map |
+| `8D0907551M-0002 (16Bit KFZW).bin` | 1.00 MB | `7cf3feb94b32e877b1d30eed34e57997` | Factory Binary Firmware Dump |
+| `8D0907551M-0002 (stock MAP 5120 16Bit KFZW).bin` | 1.00 MB | `f11bfcc8df64c11bd858ee413f940386` | Factory Binary Firmware Dump |
+| `8D0907551M-0002 (stock MAP 5120).bin` | 1.00 MB | `9e2598740860ba3548821914b523b8d9` | Factory Binary Firmware Dump |
+| `8D0907551M-0002.bin` | 1.00 MB | `d56d9801e27145a77fc7bab1164e54eb` | Factory Binary Firmware Dump |
+| `8D0907551M-002_5120-stock_map-nyet.bin` | 1.00 MB | `533e3a19b75ba0f6d922c4208d684e32` | Factory Binary Firmware Dump |
+| `8D0907551M-20170411-16bit-kfzw.xdf` | 493.1 KB | `f6d19bcf33e6a35e842ddb2ab46fa343` | TunerPro Binary Definition Map |
+| `8D0907551M-20190711.xdf` | 491.8 KB | `7df7ce24a3cea3ad5215b51ab89a417f` | TunerPro Binary Definition Map |
+| `ME7_06A906012AE.ecu` | 1.20 MB | `a6876ca4b18fac2313e11f83082da748` | ECU / ASAP2 Calibration Map Definition |
+| `ME7_06A906032TE.ecu` | 1.42 MB | `8b8af831df832d3222837df244de9abc` | ECU / ASAP2 Calibration Map Definition |
 
 ---
 
-## 3. Matriks Kalibrasi & Parameter Pemetaan
-
-Bagi berkas biner dan definisi TunerPro yang tersedia, struktur kalibrasi mencakup parameter esensial:
-- **Volumetric Efficiency & Fuel Delivery**: Kurva Base Fuel, Open/Closed Loop Transition, Injection Timing, dan Cranking Enrichment.
-- **Ignition Timing & Knock Control**: Peta Main Ignition Advance, Low/High Octane Timing, Knock Retard Thresholds, dan Dwell Timing.
-- **Airflow & Boost Management**: Peta Target Boost Pressure, Wastegate Duty Cycle (WGDC), MAF/MAP Scaling, dan Throttle Response Curves.
-- **Safety Limits & Thresholds**: Rev Limiter (Hard/Soft Cut), Top Speed Limiter (Vmax), Overboost Fuel Cut, dan Engine Protection Strategies.
-
----
-
-## 4. Protokol Flashing & Panduan Keamanan
-
-1. **Pemeriksaan Checksum**: Selalu verifikasi dan kalkulasi ulang checksum sebelum menulis firmware kembali ke ECU guna mencegah kondisi *ECU bricking* atau *no-start*.
-2. **Pencadangan Full Read (Backup)**: Lakukan full backup (Flash + EEPROM / Microcontroller ROM) sebelum melakukan flashing kalibrasi yang dimodifikasi.
-3. **Tegangan Sumber Stabil**: Gunakan unit catu daya terstabilisasi (*bench battery maintainer*) dengan tegangan minimum 13.5V – 14.2V selama sesi flashing OBD2 atau Bootmode.
-4. **Kecocokan Hardware & Software**: Jangan pernah melakukan *cross-flashing* berkas kalibrasi ke ECU dengan nomor part hardware yang berbeda tanpa verifikasi arsitektur pinout dan transreceiver bus.
+## 3. Panduan Penggunaan & Integritas
+1. **Verifikasi Checksum**: Selalu bandingkan hash MD5 file sebelum melakukan flashing ke modul kontrol kendaraan.
+2. **Standard Tuning**: Gunakan software TunerPro RT v5.00+ untuk memuat file biner (`.bin`) bersama file definisi (`.xdf`) yang sesuai.
+3. **Peringatan Keselamatan**: Pemetaan injeksi bahan bakar dan sudut pengapian harus selalu dipantau dengan sensor wideband AFR pada beban dyno.

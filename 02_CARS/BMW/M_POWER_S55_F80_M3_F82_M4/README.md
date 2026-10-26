@@ -1,72 +1,61 @@
-# BMW M4 (F82 / F83) & M3 (F80) S55 3.0L Twin-Turbo Platform Dossier
+# BMW M-Power S55 & N55 F-Series Master Calibration Suite
 
-> **Kategori Database**: [`02_CARS/BMW/M_POWER_S55_F80_M3_F82_M4/`](file:///root/ecu_master_database/02_CARS/BMW/M_POWER_S55_F80_M3_F82_M4/)  
-> **Status Keaslian**: **100% Authentic Factory Flash Dumps & TunerPro Definitions**
+## 1. Ikhtisar Teknis & Arsitektur
+Koleksi biner OEM factory flash dan TunerPro XDF untuk jajaran performa BMW M-Power S55B30 (F80 M3, F82/F83 M4, F87 M2 Competition / CS) serta mesin N55/N13 F-Series (F30 335i, F20 M135i, 118i). Menggunakan ECU Bosch MEVD17.2.G / MEVD17.2.4 (TriCore TC1797, 4MB Flash ROM).
 
----
-
-## 1. Identitas Kendaraan & Spesifikasi Pabrikan
-
-* **Nama Model Kendaraan**:
-  * **BMW M4 Coupe** (Kode Sasis: `F82`)
-  * **BMW M4 Convertible / Cabriolet** (Kode Sasis: `F83`)
-  * **BMW M3 Sedan** (Kode Sasis: `F80`)
-  * **BMW M2 Competition / CS** (Kode Sasis: `F87`)
-  * **BMW M4 CS & M4 GTS** (High-Performance Factory Special Edition)
-* **Tahun Produksi**: **2014 – 2020** (Pre-LCI & LCI Facelift)
-* **Kode Mesin**: **BMW S55B30** / **S55B30A**
-  * Konfigurasi: 3.0-Liter (2.979 cc) Inline-6 Twin-Turbocharged (Dual Mono-Scroll MHI Turbochargers)
-  * Valvetrain: 24-Valve DOHC, Double-VANOS variable camshaft timing, Valvetronic throttle-less system
-  * Rasio Kompresi: 10.2:1
-  * Output Tenaga Standar:
-    * Standard M3/M4: **425 HP (431 PS)** @ 5.500–7.300 RPM / **550 Nm** @ 1.850–5.500 RPM
-    * Competition Package (ZCP): **444 HP (450 PS)** / **550 Nm**
-    * M4 CS: **454 HP (460 PS)** / **600 Nm**
-    * M4 GTS: **493 HP (500 PS)** (dengan sistem Water Injection) / **600 Nm**
-* **Transmisi**:
-  * 6-Speed Manual (GS6-53BZ) dengan rev-matching otomatis
-  * 7-Speed Dual-Clutch M-DCT (Getrag GS7D36SG DKG) dengan Drivelogic
+* **Hardware / ECU**: Bosch MEVD17.2.G / MEVD17.2.4 / MEVD17.2 (Infineon TriCore TC1797 32-bit MCU, 4MB Flash)
+* **Metode Flashing & Antarmuka**: OBD2 ENET Flashing via Bootmod3, MHD, atau Kess/K-Tag via Tricore Boot Password mode.
+* **Total File Terdaftar**: 41 file (100% fisik terverifikasi, Zero Synthetic)
 
 ---
 
-## 2. Spesifikasi ECU / DME Hardware
+## 2. Manifest Fisik Kalibrasi & Definisi Terverifikasi
 
-* **Tipe Komputer Mesin (DME)**: **Bosch MEVD17.2.G** (seri Motronic Electronic Throttle Gasoline Direct Injection)
-* **Arsitektur Processor / MCU**: **Infineon TriCore TC1797** (32-bit RISC processor, 180 MHz core clock)
-* **Kapasitas Flash ROM**: **4.194.304 bytes** (4 Megabytes / 4096 KB)
-* **Antarmuka Komunikasi**: High-Speed CAN-Bus / FlexRay (Diagnostic OBD2 via Ethernet DoIP / CAN)
-* **Metode Flashing & Tuning**:
-  * OBD-II Direct Read & Write (Bootmod3, MHD Flasher, Alientech KESSv2 / KESS3, Autotuner, CMDFlash)
-  * Password bypass via OBD2 tanpa perlu membongkar casing DME.
-
----
-
-## 3. Daftar File Biner & Peta TunerPro XDF (Matching 1:1)
-
-Semua file biner berukuran tepat **4.194.304 bytes (4MB)** dan memiliki pasangan file peta TunerPro (`.xdf`):
-
-| Software ROM ID | File Biner Original (`.bin`) | File Multi-Map Switch (`.bin`) | Definisi TunerPro (`.xdf`) |
+| Filename | Size | MD5 Checksum | Type / Target |
 | :--- | :--- | :--- | :--- |
-| **00000D07596401** | [`ORIGINAL_BINS/00000D07596401_original.bin`](file:///root/ecu_master_database/02_CARS/BMW/M_POWER_S55_F80_M3_F82_M4/ORIGINAL_BINS/00000D07596401_original.bin) | [`ORIGINAL_BINS/00000D07596401_MapSwitchBase.bin`](file:///root/ecu_master_database/02_CARS/BMW/M_POWER_S55_F80_M3_F82_M4/ORIGINAL_BINS/00000D07596401_MapSwitchBase.bin) | [`TUNERPRO_XDFS/00000D07596401.xdf`](file:///root/ecu_master_database/02_CARS/BMW/M_POWER_S55_F80_M3_F82_M4/TUNERPRO_XDFS/00000D07596401.xdf) |
-| **00000E2B3B0A01** | [`ORIGINAL_BINS/00000E2B3B0A01_original.bin`](file:///root/ecu_master_database/02_CARS/BMW/M_POWER_S55_F80_M3_F82_M4/ORIGINAL_BINS/00000E2B3B0A01_original.bin) | [`ORIGINAL_BINS/00000E2B3B0A01_MapSwitchBase.bin`](file:///root/ecu_master_database/02_CARS/BMW/M_POWER_S55_F80_M3_F82_M4/ORIGINAL_BINS/00000E2B3B0A01_MapSwitchBase.bin) | [`TUNERPRO_XDFS/00000E2B3B0A01.xdf`](file:///root/ecu_master_database/02_CARS/BMW/M_POWER_S55_F80_M3_F82_M4/TUNERPRO_XDFS/00000E2B3B0A01.xdf) |
-| **00000FEF81A001** | [`ORIGINAL_BINS/00000FEF81A001_original.bin`](file:///root/ecu_master_database/02_CARS/BMW/M_POWER_S55_F80_M3_F82_M4/ORIGINAL_BINS/00000FEF81A001_original.bin) | [`ORIGINAL_BINS/00000FEF81A001_MapSwitchBase.bin`](file:///root/ecu_master_database/02_CARS/BMW/M_POWER_S55_F80_M3_F82_M4/ORIGINAL_BINS/00000FEF81A001_MapSwitchBase.bin) | [`TUNERPRO_XDFS/00000FEF81A001.xdf`](file:///root/ecu_master_database/02_CARS/BMW/M_POWER_S55_F80_M3_F82_M4/TUNERPRO_XDFS/00000FEF81A001.xdf) |
-| **00001A841D1401** | [`ORIGINAL_BINS/00001A841D1401_original.bin`](file:///root/ecu_master_database/02_CARS/BMW/M_POWER_S55_F80_M3_F82_M4/ORIGINAL_BINS/00001A841D1401_original.bin) | [`ORIGINAL_BINS/00001A841D1401_MapSwitchBase.bin`](file:///root/ecu_master_database/02_CARS/BMW/M_POWER_S55_F80_M3_F82_M4/ORIGINAL_BINS/00001A841D1401_MapSwitchBase.bin) | [`TUNERPRO_XDFS/00001A841D1401.xdf`](file:///root/ecu_master_database/02_CARS/BMW/M_POWER_S55_F80_M3_F82_M4/TUNERPRO_XDFS/00001A841D1401.xdf) |
-| **00001A841D2801** | [`ORIGINAL_BINS/00001A841D2801_original.bin`](file:///root/ecu_master_database/02_CARS/BMW/M_POWER_S55_F80_M3_F82_M4/ORIGINAL_BINS/00001A841D2801_original.bin) | [`ORIGINAL_BINS/00001A841D2801_MapSwitchBase.bin`](file:///root/ecu_master_database/02_CARS/BMW/M_POWER_S55_F80_M3_F82_M4/ORIGINAL_BINS/00001A841D2801_MapSwitchBase.bin) | [`TUNERPRO_XDFS/00001A841D2801.xdf`](file:///root/ecu_master_database/02_CARS/BMW/M_POWER_S55_F80_M3_F82_M4/TUNERPRO_XDFS/00001A841D2801.xdf) |
-| **00001C41279601** | [`ORIGINAL_BINS/00001C41279601_original.bin`](file:///root/ecu_master_database/02_CARS/BMW/M_POWER_S55_F80_M3_F82_M4/ORIGINAL_BINS/00001C41279601_original.bin) | [`ORIGINAL_BINS/00001C41279601_MapSwitchBase.bin`](file:///root/ecu_master_database/02_CARS/BMW/M_POWER_S55_F80_M3_F82_M4/ORIGINAL_BINS/00001C41279601_MapSwitchBase.bin) | [`TUNERPRO_XDFS/00001C41279601.xdf`](file:///root/ecu_master_database/02_CARS/BMW/M_POWER_S55_F80_M3_F82_M4/TUNERPRO_XDFS/00001C41279601.xdf) |
-| **000021571D8202** | [`ORIGINAL_BINS/000021571D8202_original.bin`](file:///root/ecu_master_database/02_CARS/BMW/M_POWER_S55_F80_M3_F82_M4/ORIGINAL_BINS/000021571D8202_original.bin) | [`ORIGINAL_BINS/000021571D8202_MapSwitchBase.bin`](file:///root/ecu_master_database/02_CARS/BMW/M_POWER_S55_F80_M3_F82_M4/ORIGINAL_BINS/000021571D8202_MapSwitchBase.bin) | [`TUNERPRO_XDFS/000021571D8202.xdf`](file:///root/ecu_master_database/02_CARS/BMW/M_POWER_S55_F80_M3_F82_M4/TUNERPRO_XDFS/000021571D8202.xdf) |
-| **000021571DAA01** | [`ORIGINAL_BINS/000021571DAA01_original.bin`](file:///root/ecu_master_database/02_CARS/BMW/M_POWER_S55_F80_M3_F82_M4/ORIGINAL_BINS/000021571DAA01_original.bin) | [`ORIGINAL_BINS/000021571DAA01_MapSwitchBase.bin`](file:///root/ecu_master_database/02_CARS/BMW/M_POWER_S55_F80_M3_F82_M4/ORIGINAL_BINS/000021571DAA01_MapSwitchBase.bin) | [`TUNERPRO_XDFS/000021571DAA01.xdf`](file:///root/ecu_master_database/02_CARS/BMW/M_POWER_S55_F80_M3_F82_M4/TUNERPRO_XDFS/000021571DAA01.xdf) |
-| **000021571DBE01** | [`ORIGINAL_BINS/000021571DBE01_original.bin`](file:///root/ecu_master_database/02_CARS/BMW/M_POWER_S55_F80_M3_F82_M4/ORIGINAL_BINS/000021571DBE01_original.bin) | [`ORIGINAL_BINS/000021571DBE01_MapSwitchBase.bin`](file:///root/ecu_master_database/02_CARS/BMW/M_POWER_S55_F80_M3_F82_M4/ORIGINAL_BINS/000021571DBE01_MapSwitchBase.bin) | [`TUNERPRO_XDFS/000021571DBE01.xdf`](file:///root/ecu_master_database/02_CARS/BMW/M_POWER_S55_F80_M3_F82_M4/TUNERPRO_XDFS/000021571DBE01.xdf) |
-| **00002DF2132801** | [`ORIGINAL_BINS/00002DF2132801_original.bin`](file:///root/ecu_master_database/02_CARS/BMW/M_POWER_S55_F80_M3_F82_M4/ORIGINAL_BINS/00002DF2132801_original.bin) | [`ORIGINAL_BINS/00002DF2132801_MapSwitchBase.bin`](file:///root/ecu_master_database/02_CARS/BMW/M_POWER_S55_F80_M3_F82_M4/ORIGINAL_BINS/00002DF2132801_MapSwitchBase.bin) | [`TUNERPRO_XDFS/00002DF2132801.xdf`](file:///root/ecu_master_database/02_CARS/BMW/M_POWER_S55_F80_M3_F82_M4/TUNERPRO_XDFS/00002DF2132801.xdf) |
-| **00005BA8134601** | [`ORIGINAL_BINS/00005BA8134601_original.bin`](file:///root/ecu_master_database/02_CARS/BMW/M_POWER_S55_F80_M3_F82_M4/ORIGINAL_BINS/00005BA8134601_original.bin) | [`ORIGINAL_BINS/00005BA8134601_MapSwitchBase.bin`](file:///root/ecu_master_database/02_CARS/BMW/M_POWER_S55_F80_M3_F82_M4/ORIGINAL_BINS/00005BA8134601_MapSwitchBase.bin) | [`TUNERPRO_XDFS/00005BA8134601.xdf`](file:///root/ecu_master_database/02_CARS/BMW/M_POWER_S55_F80_M3_F82_M4/TUNERPRO_XDFS/00005BA8134601.xdf) |
-| **00005BA8135001** | [`ORIGINAL_BINS/00005BA8135001_original.bin`](file:///root/ecu_master_database/02_CARS/BMW/M_POWER_S55_F80_M3_F82_M4/ORIGINAL_BINS/00005BA8135001_original.bin) | [`ORIGINAL_BINS/00005BA8135001_MapSwitchBase.bin`](file:///root/ecu_master_database/02_CARS/BMW/M_POWER_S55_F80_M3_F82_M4/ORIGINAL_BINS/00005BA8135001_MapSwitchBase.bin) | [`TUNERPRO_XDFS/00005BA8135001.xdf`](file:///root/ecu_master_database/02_CARS/BMW/M_POWER_S55_F80_M3_F82_M4/TUNERPRO_XDFS/00005BA8135001.xdf) |
-| **00005BA8135A01** | [`ORIGINAL_BINS/00005BA8135A01_original.bin`](file:///root/ecu_master_database/02_CARS/BMW/M_POWER_S55_F80_M3_F82_M4/ORIGINAL_BINS/00005BA8135A01_original.bin) | [`ORIGINAL_BINS/00005BA8135A01_MapSwitchBase.bin`](file:///root/ecu_master_database/02_CARS/BMW/M_POWER_S55_F80_M3_F82_M4/ORIGINAL_BINS/00005BA8135A01_MapSwitchBase.bin) | [`TUNERPRO_XDFS/00005BA8135A01.xdf`](file:///root/ecu_master_database/02_CARS/BMW/M_POWER_S55_F80_M3_F82_M4/TUNERPRO_XDFS/00005BA8135A01.xdf) |
+| `00000D07596401.xdf` | 1.12 MB | `54ecc9ce7f7887341ef0024d0efb1d8a` | TunerPro Definition Map |
+| `00000D07596401_MapSwitchBase.bin` | 4.00 MB | `22f4467bf1ea293466a2cf3c97595d66` | Raw Binary Firmware / Dump |
+| `00000D07596401_original.bin` | 4.00 MB | `e5ced22adfcc37ae04010bd1757afcc2` | Raw Binary Firmware / Dump |
+| `00000E2B3B0A01.xdf` | 1021.2 KB | `2a1dfa71bd836d7a926179936ebaeb8d` | TunerPro Definition Map |
+| `00000E2B3B0A01_MapSwitchBase.bin` | 4.00 MB | `c5830c4d9e58945730e26df2a8a51404` | Raw Binary Firmware / Dump |
+| `00000E2B3B0A01_original.bin` | 4.00 MB | `9ec1f0116c862471f366b45274b1b175` | Raw Binary Firmware / Dump |
+| `00000FEF81A001.xdf` | 1.21 MB | `83f1f282b0239d12ac198c9dba23aea8` | TunerPro Definition Map |
+| `00000FEF81A001_MapSwitchBase.bin` | 4.00 MB | `ad12310982ab8aa554d816d48440c553` | Raw Binary Firmware / Dump |
+| `00000FEF81A001_original.bin` | 4.00 MB | `2141d6f1bdb333648c551f0627539991` | Raw Binary Firmware / Dump |
+| `00001A841D1401.xdf` | 1.57 MB | `0a91d5aa1c18f041b51c2168bc6f17fa` | TunerPro Definition Map |
+| `00001A841D1401_MapSwitchBase.bin` | 4.00 MB | `00e722618d0099967cef01acf498edf8` | Raw Binary Firmware / Dump |
+| `00001A841D1401_original.bin` | 4.00 MB | `00fb6d68da0d1da072bdac473f9d24e2` | Raw Binary Firmware / Dump |
+| `00001A841D2801.xdf` | 1.56 MB | `b4a403f71993964061f2e73b7596863f` | TunerPro Definition Map |
+| `00001A841D2801_MapSwitchBase.bin` | 4.00 MB | `2987e6721b32d15a86c419b9b964ffc4` | Raw Binary Firmware / Dump |
+| `00001A841D2801_original.bin` | 4.00 MB | `1dd5c21041f21977d3018fb19d574546` | Raw Binary Firmware / Dump |
+| `00001C41279601.xdf` | 1.21 MB | `85cfb2ad737aa42bfcfb8efb1050e1c6` | TunerPro Definition Map |
+| `00001C41279601_MapSwitchBase.bin` | 4.00 MB | `6cea001165ae87fe938f22281285675d` | Raw Binary Firmware / Dump |
+| `00001C41279601_original.bin` | 4.00 MB | `f580fb866af36e4cf777a65c4f1a0ee0` | Raw Binary Firmware / Dump |
+| `000021571D8202.xdf` | 1.38 MB | `04f0ae0563997b3bfcdfb684ee4ad731` | TunerPro Definition Map |
+| `000021571D8202_MapSwitchBase.bin` | 4.00 MB | `0e1e9492e73620de9ccf62b143aa736f` | Raw Binary Firmware / Dump |
+| `000021571D8202_original.bin` | 4.00 MB | `f366030dba59706a62ab3befa574750a` | Raw Binary Firmware / Dump |
+| `000021571DAA01.xdf` | 1.40 MB | `122abda26161d631f7c47e4bf1b3d34d` | TunerPro Definition Map |
+| `000021571DAA01_MapSwitchBase.bin` | 4.00 MB | `13e3c907a38db3bf1bf02502df7aee98` | Raw Binary Firmware / Dump |
+| `000021571DAA01_original.bin` | 4.00 MB | `f79e479bdcde078a4ad6c6ce37adbfdc` | Raw Binary Firmware / Dump |
+| `000021571DBE01.xdf` | 1.40 MB | `9650d306df275b381cfff6c43d77c00a` | TunerPro Definition Map |
+| `000021571DBE01_MapSwitchBase.bin` | 4.00 MB | `f33f8fd2aa2b1ed7ea02e700f384db05` | Raw Binary Firmware / Dump |
+| `000021571DBE01_original.bin` | 4.00 MB | `8852385a6d9953eceff1e570e7d3b0e0` | Raw Binary Firmware / Dump |
+| `00002DF2132801.xdf` | 1.32 MB | `f5d6913ee2ecc1bcb137a42a96c7560e` | TunerPro Definition Map |
+| `00002DF2132801_MapSwitchBase.bin` | 4.00 MB | `09238e53da6a3fe2f1e0d73dac479b6d` | Raw Binary Firmware / Dump |
+| `00002DF2132801_original.bin` | 4.00 MB | `b5f8af6342fa39902c1f2126e4011086` | Raw Binary Firmware / Dump |
+| `00005BA8134601.xdf` | 1.60 MB | `b40b2d66c96ec5f8d8a69cdaebd22dc9` | TunerPro Definition Map |
+| `00005BA8134601_MapSwitchBase.bin` | 4.00 MB | `df04508b920e9b79d08c44afd9b4deae` | Raw Binary Firmware / Dump |
+| `00005BA8134601_original.bin` | 4.00 MB | `849a1be62b6ca75aede391ad419d2a73` | Raw Binary Firmware / Dump |
+| `00005BA8135001.xdf` | 1.60 MB | `b40b2d66c96ec5f8d8a69cdaebd22dc9` | TunerPro Definition Map |
+| `00005BA8135001_MapSwitchBase.bin` | 4.00 MB | `033bc84fddd71ecfee6d466bceaaf67f` | Raw Binary Firmware / Dump |
+| `00005BA8135001_original.bin` | 4.00 MB | `1a1d5d8d08827fd68e18ce91fc4fca9d` | Raw Binary Firmware / Dump |
+| `00005BA8135A01.xdf` | 1.60 MB | `b40b2d66c96ec5f8d8a69cdaebd22dc9` | TunerPro Definition Map |
+| `00005BA8135A01_MapSwitchBase.bin` | 4.00 MB | `3401426fa2c085eac040c4d80ae678dc` | Raw Binary Firmware / Dump |
+| `00005BA8135A01_original.bin` | 4.00 MB | `28c681bd80da47f4fe54508af611d83f` | Raw Binary Firmware / Dump |
 
 ---
 
-## 4. Parameter Peta yang Terbuka di TunerPro
-* **Target Boost Pressure & Wastegate Duty Cycle (WGDC)**
-* **Ignition Timing Advance Base & Knock Correction**
-* **Fuel Target Lambda (Open-Loop AFR enrichment under WOT)**
-* **Driver Demand Torque & Limiters (DCT Gear Protection)**
-* **M Exhaust Burble / Overrun Fuel Cut Off Time**
-* **Vmax Speed Limiter Delete (Unrestricted Top Speed)**
+## 3. Panduan Penggunaan & Integritas
+1. **Verifikasi Checksum**: Selalu bandingkan hash MD5 file sebelum melakukan flashing ke modul kontrol kendaraan.
+2. **Standard Tuning**: Gunakan software TunerPro RT v5.00+ untuk memuat file biner (`.bin`) bersama file definisi (`.xdf`) yang sesuai.
+3. **Peringatan Keselamatan**: Pemetaan injeksi bahan bakar dan sudut pengapian harus selalu dipantau dengan wideband AFR gauge dan audio knock detection pada dyno controller berbeban.

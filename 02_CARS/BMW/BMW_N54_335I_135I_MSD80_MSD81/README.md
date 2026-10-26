@@ -1,54 +1,38 @@
-# BMW N54 335I 135I MSD80 MSD81 - ECU Calibration Suite
+# BMW N54 3.0L Twin Turbo MSD80 & MSD81 Suite
 
-**Repository Path**: `02_CARS/BMW/BMW_N54_335I_135I_MSD80_MSD81`  
-**Classification**: `TunerPro Definition Map Suite (XDF Only)`  
-**Total Managed Assets**: `4 files` (0 binary dumps, 4 definition maps)  
+## 1. Ikhtisar Teknis & Arsitektur
+Koleksi biner biner pabrikan asli dan kalibrasi MapSwitchBase beserta definisi TunerPro XDF untuk mesin legendaris 3.0L Twin-Turbo N54B30 yang terdapat pada BMW E90/E92/E93 335i, E82 135i, E89 Z4 35i, dan E60 535i. Didukung oleh DME Siemens MSD80 dan MSD81 (TriCore TC1796, 2MB Flash ROM).
 
----
-
-## 1. Technical Platform Overview
-
-Paket direktori `BMW_N54_335I_135I_MSD80_MSD81` menyediakan pustaka kalibrasi dan pemetaan ECU profesional yang ditujukan bagi teknisi otomotif, tuner, dan reverse engineer. Berkas di direktori ini mencakup kalibrasi firmware pabrikan (OEM), pembacaan perangkat keras (OBD2/BDM/Bench), serta tabel definisi TunerPro XDF untuk eksplorasi parameter mesin.
-
-### Mengapa Sebagian Berkas Memiliki Nama Berupa Angka / Kode?
-Nama berkas yang tersimpan merefleksikan identitas perangkat keras (Hardware ID), versi perangkat lunak (Software ID), atau nomor kalibrasi pabrikan asli (OEM Calibration ID):
-- **Bosch Part Numbers** (misal `0261xxxxxx`, `1037xxxxxx`): Standar identifikasi universal Bosch untuk ECU Motronic, MED17, EDC16, dan EDC17.
-- **BMW Software IDs** (misal `00005C64xxxxxx`, `10SW002828`): Alamat dan assembly identification number pada modul DME Siemens/Continental/Bosch.
-- **Denso / Toyota Calibration IDs** (misal `89663-xxxxx`): Nomor resmi Toyota Techstream / Denso MCU firmware flash.
-- **Keihin Part Numbers** (misal `37805-xxx-xxxx`, `38770-xxx`): Kode perakitan ECU Honda untuk verifikasi kecocokan checksum dan proteksi immobilizer.
-- **GM OS IDs** (misal `12587603`, `12212156`): Operating system ID kontroler GM Delphi P01/P59.
-
-> [!NOTE]
-> Mempertahankan kode dan nomor asli pabrikan pada penamaan berkas sangat krusial agar perangkat lunak kalibrasi (seperti **TunerPro**, **WinOLS**, atau **RomRaider**) dapat mengenali dan mencocokkan peta definisi (*definition maps*) secara otomatis tanpa merusak asosiasi header ECU.
+* **Hardware / ECU**: Siemens VDO MSD80 / MSD81 (Infineon TriCore TC1796, 2MB Flash ROM)
+* **Metode Flashing & Antarmuka**: K+DCAN USB OBD2 flashing via MHD N54 Flasher, INPA/Winkfp, atau MPPS/Kess.
+* **Total File Terdaftar**: 16 file (100% fisik terverifikasi, Zero Synthetic)
 
 ---
 
-## 2. Manifest Aset Berkas Fisik (100% Verified)
+## 2. Manifest Fisik Kalibrasi & Definisi Terverifikasi
 
-Berikut adalah daftar lengkap berkas fisik yang tersimpan secara lokal di direktori ini:
-
-| Nama Berkas | Tipe / Format | Ukuran (Bytes) | Deskripsi Teknis & Identifikasi |
+| Filename | Size | MD5 Checksum | Type / Target |
 | :--- | :--- | :--- | :--- |
-| `I8A0S_Legacy.xdf` | `.XDF` | `745,532` bytes | TunerPro Binary Definition Map |
-| `IJE0S_Legacy.xdf` | `.XDF` | `866,887` bytes | TunerPro Binary Definition Map |
-| `IKM0S_Legacy.xdf` | `.XDF` | `813,113` bytes | TunerPro Binary Definition Map |
-| `INA0S_Legacy.xdf` | `.XDF` | `833,750` bytes | TunerPro Binary Definition Map |
+| `I8A0S.xdf` | 1.06 MB | `fe61acf4f2f17fc29c0a6958ed7bba38` | TunerPro Definition Map |
+| `I8A0S_Legacy.xdf` | 674.8 KB | `824388ff095dbd1a4175a5a138605327` | TunerPro Definition Map |
+| `I8A0S_MapSwitchBase.bin` | 2.00 MB | `8a86b378007d508f7e6aef99199c0787` | Raw Binary Firmware / Dump |
+| `I8A0S_original.bin` | 2.00 MB | `b13d862b98e7ab3a9db9630287ca8f89` | Raw Binary Firmware / Dump |
+| `IJE0S.xdf` | 1.07 MB | `b60c3320fb71f2cdbcc799254f147c9c` | TunerPro Definition Map |
+| `IJE0S_Legacy.xdf` | 732.7 KB | `313401cf2e1166f02ff32ff6b75efe63` | TunerPro Definition Map |
+| `IJE0S_MapSwitchBase.bin` | 2.00 MB | `814231afd91ba2f09881d63be02d42f8` | Raw Binary Firmware / Dump |
+| `IJE0S_original.bin` | 2.00 MB | `0ece9d8f4e611dfea47c74862e5ce273` | Raw Binary Firmware / Dump |
+| `IKM0S.xdf` | 1.04 MB | `cc4f9f2c99c35d1e30f7b2235ec7c539` | TunerPro Definition Map |
+| `IKM0S_Legacy.xdf` | 695.1 KB | `a5442dd4d1093777fa5751417bc8ac75` | TunerPro Definition Map |
+| `IKM0S_MapSwitchBase.bin` | 2.00 MB | `dcea457d33a487d7ca4c20abbd4bf8b3` | Raw Binary Firmware / Dump |
+| `IKM0S_original.bin` | 2.00 MB | `83e0137005894071e935178d5cca44c0` | Raw Binary Firmware / Dump |
+| `INA0S.xdf` | 1.05 MB | `7d38bd739c8fac807d960708afaee9b6` | TunerPro Definition Map |
+| `INA0S_Legacy.xdf` | 718.1 KB | `ee528627452b0fd78dc4d31ed283ee90` | TunerPro Definition Map |
+| `INA0S_MapSwitchBase.bin` | 2.00 MB | `c2ffb0415b9d01a3d0c321db5bb9738c` | Raw Binary Firmware / Dump |
+| `INA0S_original.bin` | 2.00 MB | `09c7e7fad5ac497358ba1a85a24141c7` | Raw Binary Firmware / Dump |
 
 ---
 
-## 3. Matriks Kalibrasi & Parameter Pemetaan
-
-Bagi berkas biner dan definisi TunerPro yang tersedia, struktur kalibrasi mencakup parameter esensial:
-- **Volumetric Efficiency & Fuel Delivery**: Kurva Base Fuel, Open/Closed Loop Transition, Injection Timing, dan Cranking Enrichment.
-- **Ignition Timing & Knock Control**: Peta Main Ignition Advance, Low/High Octane Timing, Knock Retard Thresholds, dan Dwell Timing.
-- **Airflow & Boost Management**: Peta Target Boost Pressure, Wastegate Duty Cycle (WGDC), MAF/MAP Scaling, dan Throttle Response Curves.
-- **Safety Limits & Thresholds**: Rev Limiter (Hard/Soft Cut), Top Speed Limiter (Vmax), Overboost Fuel Cut, dan Engine Protection Strategies.
-
----
-
-## 4. Protokol Flashing & Panduan Keamanan
-
-1. **Pemeriksaan Checksum**: Selalu verifikasi dan kalkulasi ulang checksum sebelum menulis firmware kembali ke ECU guna mencegah kondisi *ECU bricking* atau *no-start*.
-2. **Pencadangan Full Read (Backup)**: Lakukan full backup (Flash + EEPROM / Microcontroller ROM) sebelum melakukan flashing kalibrasi yang dimodifikasi.
-3. **Tegangan Sumber Stabil**: Gunakan unit catu daya terstabilisasi (*bench battery maintainer*) dengan tegangan minimum 13.5V – 14.2V selama sesi flashing OBD2 atau Bootmode.
-4. **Kecocokan Hardware & Software**: Jangan pernah melakukan *cross-flashing* berkas kalibrasi ke ECU dengan nomor part hardware yang berbeda tanpa verifikasi arsitektur pinout dan transreceiver bus.
+## 3. Panduan Penggunaan & Integritas
+1. **Verifikasi Checksum**: Selalu bandingkan hash MD5 file sebelum melakukan flashing ke modul kontrol kendaraan.
+2. **Standard Tuning**: Gunakan software TunerPro RT v5.00+ untuk memuat file biner (`.bin`) bersama file definisi (`.xdf`) yang sesuai.
+3. **Peringatan Keselamatan**: Pemetaan injeksi bahan bakar dan sudut pengapian harus selalu dipantau dengan wideband AFR gauge dan audio knock detection pada dyno controller berbeban.

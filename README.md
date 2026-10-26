@@ -2,11 +2,11 @@
 
 <p align="center">
   <img src="https://img.shields.io/badge/Status-100%25%20Authentic%20Verified-success?style=for-the-badge&logo=shield" alt="Status" />
-  <img src="https://img.shields.io/badge/Binary%20Dumps-6%2C853%20Files-blue?style=for-the-badge&logo=microchip" alt="BIN Dumps" />
-  <img src="https://img.shields.io/badge/TunerPro%20XDF-2%2C466%20Maps-orange?style=for-the-badge&logo=gauge" alt="TunerPro XDFs" />
+  <img src="https://img.shields.io/badge/Binary%20Dumps-7%2C780%2B%20Files-blue?style=for-the-badge&logo=microchip" alt="BIN Dumps" />
+  <img src="https://img.shields.io/badge/TunerPro%20XDF-2%2C567%20Maps-orange?style=for-the-badge&logo=gauge" alt="TunerPro XDFs" />
   <img src="https://img.shields.io/badge/EcuFlash%20XML-1%2C086%20Defs-green?style=for-the-badge&logo=xml" alt="EcuFlash XML" />
-  <img src="https://img.shields.io/badge/Total%20Assets-10%2C521%20Files-purple?style=for-the-badge&logo=database" alt="Total Assets" />
-  <img src="https://img.shields.io/badge/Dossiers-291%20READMEs%20(100%25)-teal?style=for-the-badge&logo=readme" alt="README Coverage" />
+  <img src="https://img.shields.io/badge/Total%20Assets-11%2C843%20Files-purple?style=for-the-badge&logo=database" alt="Total Assets" />
+  <img src="https://img.shields.io/badge/Dossiers-308%20READMEs%20(100%25)-teal?style=for-the-badge&logo=readme" alt="README Coverage" />
 </p>
 
 <p align="center">
@@ -20,10 +20,10 @@
 
 **ApexECUVault** is a curated, high-integrity master repository of factory original binary dumps (`.bin`, `.rom`, `.ori`, `.hex`, `.rwd`, `.mpc`, `.fls`, `.epr`) paired 1:1 with **TunerPro XDF definition maps** and **EcuFlash / RomRaider XML definitions**.
 
-Whether you are performing standalone dynamometer remapping, reverse engineering OEM engine management protocols, or analyzing factory calibration strategies, **ApexECUVault** provides a verified, structured baseline for platforms ranging from iconic supercars and superbikes to mass-market daily vehicles and Southeast Asian (ASEAN) staples.
+Whether you are performing standalone dynamometer remapping, reverse engineering OEM engine management protocols, or analyzing factory calibration strategies, **ApexECUVault** provides a verified, structured baseline for platforms ranging from iconic supercars and superbikes to modern turbocharged engines, mass-market daily vehicles, and Southeast Asian (ASEAN) staples.
 
 ### 🛡️ The Zero-Synthetic Standard
-* **100.00% Genuine Hardware Reads**: Every single binary file in this vault originates from an authentic physical memory dump (EPROM, Flash, TriCore, AURIX, Renesas RL78, or Microcontroller).
+* **100.00% Genuine Hardware Reads**: Every single binary file in this vault originates from an authentic physical memory dump (EPROM, Flash, TriCore, AURIX, Renesas RL78/SH705x/SH725xx, or Microcontroller).
 * **Zero Dummy / Mock Files**: No synthetic buffers, no filler scripts, and no dummy padding (`b'\xFF' * size`).
 * **Cryptographic & Header Integrity**: Audited against SHA-256 cross-reference hashes, factory part numbers, and internal memory headers.
 * **100% Dossier Coverage (0 Phantom References)**: Every asset directory contains an exhaustive, technical `README.md` dossier describing exact platform specs, microcontroller architecture, decoded hardware/software part IDs, and flashing safety protocols.
@@ -34,11 +34,11 @@ Whether you are performing standalone dynamometer remapping, reverse engineering
 
 | Asset Category | File Count | Storage Size | Description & Standards |
 | :--- | :---: | :---: | :--- |
-| **📦 Factory Binary Firmware & Dumps** | **6,853** | ~6.7 GB | Raw factory ROMs, Flash, MPC, and EEPROM dumps (`.bin`, `.hex`, `.rwd`, `.ori`, `.mpc`, `.rom`, `.mod`, `.std`) |
-| **🗺️ TunerPro Definition Maps** | **2,466** | ~1.6 GB | 2D/3D calibration tables for fuel, ignition, boost target, WGDC, and limiters (`.xdf`, `.ecu`, `.adx`) |
+| **📦 Factory Binary Firmware & Dumps** | **7,780+** | ~8.1 GB | Raw factory ROMs, Flash, MPC, and EEPROM dumps (`.bin` 3,286, `.rwd` 2,576, `.ori` 1,332, `.hex` 532, `.tun` 16, `.std` 13, `.mod` 12, `.rom` 8) |
+| **🗺️ TunerPro Definition Maps** | **2,567** | ~1.8 GB | 2D/3D calibration tables for fuel, ignition, boost target, WGDC, and limiters (`.xdf`, `.ecu`, `.adx`) |
 | **📑 EcuFlash & RomRaider XMLs** | **1,086** | ~46 MB | Standard OpenECU XML definitions with memory offsets and scaling formulas (`.xml`) |
-| **📚 Technical Documentation Dossiers** | **291** | ~10 MB | Comprehensive platform dossiers covering 100% of managed asset folders (`README.md`) |
-| **Total Curated Assets** | **10,521** | **8.44 GB** | Complete verified open-source automotive & motorcycle calibration database |
+| **📚 Technical Documentation Dossiers** | **308** | ~12 MB | Comprehensive platform dossiers covering 100% of managed asset folders (`README.md`) |
+| **Total Curated Assets** | **11,843** | **9.99 GB** | Complete verified open-source automotive & motorcycle calibration database |
 
 ---
 
@@ -64,23 +64,44 @@ Whether you are performing standalone dynamometer remapping, reverse engineering
 
 ---
 
-### 2. Supercars, Exotics & High-Performance Division
-* **Ferrari**:
-  * **360 Modena & 360 Challenge** (`02_CARS/FERRARI/FERRARI_360_MODENA_CHALLENGE_ME73/`): Factory race car binary dumps (`0261204841`), dual-bank master/slave Bosch ME7.3H4 ECU.
-  * **458 Italia / Speciale** (4.5L Flat-Plane V8) & **488 GTB / F8 Tributo** (3.9L Twin-Turbo V8).
-* **Porsche**:
-  * **911 (993) Turbo 3.6L Twin-Turbo** (`02_CARS/PORSCHE/PORSCHE_993_3_6L_TWIN_TURBO/`): Air-cooled 408 PS factory flash dumps (`0261204377`) paired with TunerPro definitions.
-  * **Porsche Classic Line** (`02_CARS/PORSCHE/911_964_928_951_BINS/`): 911 Carrera 3.2, 964 C2, 928 GT V8, and 944 Turbo (951) EPROM dumps.
-* **BMW M-Power & Modern Turbo**:
-  * **B58 3.0L Twin-Power Turbo** (`02_CARS/BMW/MG_FLASHER_B58_B48_S58_S55_XDFS/B48 B58 Gen 1/`): Authentic 8MB Bosch MG1CS003 DME 8.6 internal ROM reads (Stock + Stage 2) + matching TunerPro XDF (`10SW002828`).
-  * **M4 (G82/G83) & M3 (G80/G81)** (`02_CARS/BMW/M_POWER_S58_G80_M3_M4/`): S58 3.0L Twin-Turbo 8MB Bosch MG1CS024 factory dumps + 12 matching TunerPro XDF maps.
-  * **M4 (F82/F83) & M3 (F80)** (`02_CARS/BMW/M_POWER_S55_F80_M3_F82_M4/`): S55 3.0L Twin-Turbo 4MB Bosch MEVD17.2.G dumps + 13 matching TunerPro XDF maps.
-  * **E46 M3 & M3 CSL** (`02_CARS/BMW/BMW_E46_M3_S54B32_MSS54_CSL_SUITE/`): 105 factory dumps + 37 TunerPro XDF maps & ASAP2 A2L.
-  * **M5 & M6 V8 Biturbo** (`02_CARS/BMW/S63_TWIN_TURBO_V8_M5_M6_X5M/`): S63 4.4L V8 Twin-Turbo factory dumps & maps.
-* **General Motors LS V8 (Gen 3 & Gen 4)**:
-  * Over 170 factory binary dumps (`.bin`) paired directly into OS-specific XDF folders (`12212156`, `12208322`, `12202088`, `12216125`, `12587603`, `12592433`) covering Corvette C5/C6, Camaro SS, Silverado, and Holden models.
-* **Subaru Performance Division**:
-  * **518 Intel HEX factory ROM dumps** across USDM, JDM, EDM, and ADM markets paired with RomRaider XML and TunerPro XDF definitions (`02_CARS/SUBARU/`).
+### 2. Modern Powertrains & Supercars Division
+* **BMW & Toyota Supra B58 Gen 1 & Gen 2 Master Suite** (`02_CARS/BMW/B58_3_0L_TURBO_GEN1_GEN2/`):
+  * **190 curated assets** (136 factory binary dumps + 54 TunerPro XDF definitions) covering **Toyota GR Supra MK5 (A90/A91)**, **BMW M340i**, **M240i**, **440i**, **540i**, **740i**, **X3 M40i**, and **Z4 M40i** powered by Bosch MG1CS003 / MG1CS024 (TriCore TC298TP / Aurix 8MB Flash).
+* **BMW M-Power S55, S58, S63 & N54 High-Performance Lines**:
+  * **M3 (G80) & M4 (G82) S58 Twin-Turbo** (`02_CARS/BMW/M_POWER_S58_G80_M3_M4/`): 20 authentic 8MB Bosch MG1CS024 dumps + 12 TunerPro XDF maps.
+  * **M3 (F80) & M4 (F82) S55 Twin-Turbo** (`02_CARS/BMW/M_POWER_S55_F80_M3_F82_M4/`): 26 factory dumps (MEVD17.2.G 4MB) + 13 TunerPro XDF maps.
+  * **M5 (F10/F90) & M6 (F12) S63 V8 Biturbo** (`02_CARS/BMW/M_POWER_S63_F10_F90_M5_M6/`): 14 factory dumps + 14 TunerPro XDF maps.
+  * **E90/E92 335i N54 Twin-Turbo** (`02_CARS/BMW/BMW_N54_335I_135I_MSD80_MSD81/`): 8 factory MSD80/MSD81 dumps (`I8A0S`, `IJE0S`, `IKM0S`, `INA0S`) + 8 TunerPro XDF maps.
+  * **M3 V8 (E90/E92) S65B40 MSS60** (`02_CARS/BMW/M_POWER_MSS60_M3_V8/`): 14 factory HEX binaries + 2 official ASAP2 A2L definitions.
+  * **E46 M3 & M3 CSL MSS54** (`02_CARS/BMW/BMW_E46_M3_S54B32_MSS54_CSL_SUITE/`): 105 factory dumps + 37 TunerPro XDF maps & ASAP2 A2L definitions.
+  * **Classic Bosch Motronic M1.1 - M3.3.1 Master Suite** (`02_CARS/BMW/BOSCH_MOTRONIC_M1_M3/`): 105 assets covering BMW E30, E34, E36, E32, and E31 models.
+* **Nissan & Infiniti Historic Factory Master Suite** (`02_CARS/NISSAN_INFINITI/NISSAN_HISTORIC_FACTORY_BIN_SUITE/`):
+  * **453 authentic OEM binary dumps** covering Skyline GT-R (BNR32/BCNR33/BNR34 RB26DETT), Silvia/180SX (S13/S14/S15 SR20DET), 300ZX (Z31/Z32 VG30DETT), Stagea (WC34), Skyline GTS-T (ECR33/ER34 RB25DET), Pulsar GTI-R (RNN14), and Patrol (TB42E/TB45E).
+* **General Motors LS V8 & OBD1 Fleet**:
+  * **GM Gen 3 LS V8 P01 / P59** (`02_CARS/GENERAL_MOTORS/GM_LS_V8_GEN3_P01_P59_BINS_XDFS/`): 134 authentic 1MB binaries & XDFs for Silverado, Tahoe, Suburban, Yukon, Sierra, Escalade, Hummer H2, and Corvette C5.
+  * **GM OBD1 TBI / TPI / LT1 Master BCC Suite** (`02_CARS/GM_CHEVROLET/OBD1_TBI_TPI_LT1/`): 28 authentic factory BCC calibration binaries ($42, $6E, $8D, $DA, $EE).
+* **Supercars & High-Performance Exotics**:
+  * **Ferrari 360 Modena & 360 Challenge** (`02_CARS/FERRARI/FERRARI_360_MODENA_CHALLENGE_ME73/`): Factory race car binary dumps (`0261204841`), dual-bank master/slave Bosch ME7.3H4 ECU.
+  * **Porsche 911 (993) Turbo 3.6L Twin-Turbo** (`02_CARS/PORSCHE/PORSCHE_993_3_6L_TWIN_TURBO/`): Air-cooled 408 PS factory flash dumps (`0261204377`) paired with TunerPro definitions.
+  * **Audi S4/S6 2.2 Turbo 20V AAN / S2 ABY Motronic M2.3.2** (`02_CARS/VAG_AUDI_VOLKSWAGEN/AUDI_S4_S6_2_2T_AAN_ABY_M232/`): Authentic dual-EPROM factory dumps.
+  * **Subaru Performance Division**: 518 Intel HEX factory ROM dumps across USDM, JDM, EDM, and ADM markets paired with RomRaider XML and TunerPro XDF definitions (`02_CARS/SUBARU/`).
+
+---
+
+### 3. Superbikes & Motorcycle Division (`01_MOTORCYCLES/`)
+* **Suzuki Superbike & Hyperbike Master Suite** (`01_MOTORCYCLES/SUZUKI/`):
+  * **Hayabusa Gen 1 (1999-2007)**: 256KB Denso dumps (`G1BusaEUdefault.bin`, `G1BusaUSdefault.bin`).
+  * **Hayabusa Gen 2 (2008-2020)**: 1MB Denso 32-bit hardware reads (`K8.bin` 32920-15H0/15H1).
+  * **B-King 1340cc**: 1MB Denso dumps (`Bking.bin`, `BkingUS.bin`).
+  * **GSX-R1000 K7-L6**: 1MB Denso factory reads (`GixxerK7`, `GixxerK8`, `Gixxerk9`, `DJ0HSE01`, `DJ55SE00`, `DJ47SE10`, `DJE4SE01`, `DJF4SE10`).
+  * **GSX-R750 & GSX-R600 K9**: 1MB Denso dumps (`G750K9.bin` 32920-38H00, `G750K9G.bin`).
+* **Kawasaki Supersport & Superbike**:
+  * ZX-10R Gen 4 & Gen 5 (1MB Denso), Ninja 250 / 300 / 400 (512KB/1MB Keihin/Denso).
+  * ZX-25R TunerPro XDF definitions (`21175-1560`, `21175-1563`, `21175-1798`).
+* **Yamaha Supersport & Scooter**:
+  * YZF-R1 / YZF-R6 (1MB/2MB Denso 32-bit MCU), MT-09, MT-07, TMAX 530, XMAX 300, Aerox 155 Connected, NMAX 155, MX King 150.
+* **Honda PGM-FI Motorcycle**:
+  * CBR1000RR Fireblade, CBR600RR, CBR250RR (K64), CRF250, PCX 150/160, Beat, Vario 125/150/160, Scoopy.
 
 ---
 
@@ -91,10 +112,10 @@ To preserve compatibility with tuning software (**TunerPro**, **WinOLS**, **RomR
 [BRAND]_[MODEL]_[YEAR/GEN]_[ENGINE]_[TRANS/SPEC]_[ORIGINAL_OEM_ID].[ext]
 ```
 - **Bosch Motronic / MED / EDC**: Decoded by 10-digit Hardware ID (`0261xxxxxx`) and Software ID (`1037xxxxxx` / `1267xxxxxx`).
-- **BMW DME / DDE**: Decoded by assembly calibration ID (`00005C64xxxxxx`, `10SWxxxxxx`).
+- **BMW DME / DDE**: Decoded by assembly calibration ID (`00005C64xxxxxx`, `10SWxxxxxx`, `00003076xxxxxx`).
 - **Toyota / Denso**: Decoded by 10-digit software calibration ID (`89663-xxxxx`, `89560-xxxxx`).
 - **Honda / Keihin**: Decoded by factory part assembly number (`37805-xxx-xxxx`, `38770-xxx`).
-- **GM Delphi**: Decoded by 8-digit Operating System ID (`12587603`, `12212156`).
+- **GM Delphi**: Decoded by 8-digit Operating System ID (`12587603`, `12212156`, `12208322`).
 
 ---
 

@@ -1,548 +1,521 @@
-# IMPREZA WRX STI EJ20 EJ25 - ECU Calibration Suite
+# IMPREZA WRX STI EJ20 EJ25 Calibration Suite
 
-**Repository Path**: `02_CARS/SUBARU/IMPREZA_WRX_STI_EJ20_EJ25`  
-**Classification**: `Binary Firmware & Calibration Repository`  
-**Total Managed Assets**: `498 files` (498 binary dumps, 0 definition maps)  
+## 1. Technical Overview
+Koleksi biner kalibrasi pabrikan OEM dan definisi tuning untuk modul ECU platform IMPREZA WRX STI EJ20 EJ25.
 
----
-
-## 1. Technical Platform Overview
-
-Paket direktori `IMPREZA_WRX_STI_EJ20_EJ25` menyediakan pustaka kalibrasi dan pemetaan ECU profesional yang ditujukan bagi teknisi otomotif, tuner, dan reverse engineer. Berkas di direktori ini mencakup kalibrasi firmware pabrikan (OEM), pembacaan perangkat keras (OBD2/BDM/Bench), serta tabel definisi TunerPro XDF untuk eksplorasi parameter mesin.
-
-### Mengapa Sebagian Berkas Memiliki Nama Berupa Angka / Kode?
-Nama berkas yang tersimpan merefleksikan identitas perangkat keras (Hardware ID), versi perangkat lunak (Software ID), atau nomor kalibrasi pabrikan asli (OEM Calibration ID):
-- **Bosch Part Numbers** (misal `0261xxxxxx`, `1037xxxxxx`): Standar identifikasi universal Bosch untuk ECU Motronic, MED17, EDC16, dan EDC17.
-- **BMW Software IDs** (misal `00005C64xxxxxx`, `10SW002828`): Alamat dan assembly identification number pada modul DME Siemens/Continental/Bosch.
-- **Denso / Toyota Calibration IDs** (misal `89663-xxxxx`): Nomor resmi Toyota Techstream / Denso MCU firmware flash.
-- **Keihin Part Numbers** (misal `37805-xxx-xxxx`, `38770-xxx`): Kode perakitan ECU Honda untuk verifikasi kecocokan checksum dan proteksi immobilizer.
-- **GM OS IDs** (misal `12587603`, `12212156`): Operating system ID kontroler GM Delphi P01/P59.
-
-> [!NOTE]
-> Mempertahankan kode dan nomor asli pabrikan pada penamaan berkas sangat krusial agar perangkat lunak kalibrasi (seperti **TunerPro**, **WinOLS**, atau **RomRaider**) dapat mengenali dan mencocokkan peta definisi (*definition maps*) secara otomatis tanpa merusak asosiasi header ECU.
+* **Total File Terdaftar**: 501 file (100% fisik terverifikasi, Zero Synthetic)
 
 ---
 
-## 2. Manifest Aset Berkas Fisik (100% Verified)
+## 2. Manifest Fisik Kalibrasi & Definisi Terverifikasi
 
-Berikut adalah daftar lengkap berkas fisik yang tersimpan secara lokal di direktori ini:
-
-| Nama Berkas | Tipe / Format | Ukuran (Bytes) | Deskripsi Teknis & Identifikasi |
+| Filename | Size | MD5 Checksum | Type / Target |
 | :--- | :--- | :--- | :--- |
-| `A2PG420A-2007-JDM-Subaru-Legacy-GT-AT.hex` | `.HEX` | `1,048,576` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `A2SB000A-2008-JDM-Subaru-Legacy-GT-spec.B-AT.hex` | `.HEX` | `1,048,576` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `A2SB000Y-2008-JDM-Subaru-Outback-XT-AT.hex` | `.HEX` | `1,048,576` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `A2TB000N-2008-USDM-Subaru-Legacy-GT-MT.hex` | `.HEX` | `1,048,576` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `A2TB001C-2008-USDM-Subaru-Legacy(Outback)-GT(XT)-AT.hex` | `.HEX` | `1,048,576` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `A2TB001L-2008-USDM-Subaru-Legacy-GT-spec.B-MT.hex` | `.HEX` | `1,048,576` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `A2TB001N-2008-09-USDM-Subaru-Legacy(Outback)-GT(XT)-MT.hex` | `.HEX` | `1,048,576` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `A2TB002C-2009-USDM-Subaru-Legacy-GT-AT.hex` | `.HEX` | `1,048,576` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `A2TB100A-2008-JDM-Legacy-GT.hex` | `.HEX` | `1,048,576` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `A2TB100B-2007-JDM-Subaru-Legacy-GT-MT.hex` | `.HEX` | `1,048,576` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `A2TB100K-2007-JDM-Subaru-Legacy-GT-spec.B-MT.hex` | `.HEX` | `1,048,576` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `A2TB100U-2008-JDM-Subaru-Impreza-SGT-MT.hex` | `.HEX` | `1,048,576` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `A2TB100V-2008-JDM-Subaru-Impreza-SGT.hex` | `.HEX` | `1,048,576` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `A2TB100Y-2007-JDM-Legacy-GT-TunedbySTI.hex` | `.HEX` | `1,048,576` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `A2UG000B-2006-JDM-Legacy-GT.hex` | `.HEX` | `1,048,576` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `A2UG000C-2007-USDM-Subaru-Legacy-GT-AT.hex` | `.HEX` | `1,048,576` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `A2UG000J-2007-USDM-Subaru-Impreza-STI-MT.hex` | `.HEX` | `1,048,576` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `A2UG000L-2007-USDM-Subaru-Legacy-GT-spec.B-MT.hex` | `.HEX` | `1,048,576` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `A2UG000N-2007-USDM-Subaru-Legacy-GT-MT.hex` | `.HEX` | `1,048,576` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `A2UG000k-2006-JDM-Subaru-Legacy-GT-spec.B-MT.hex` | `.HEX` | `1,048,576` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `A2UG001G-2008-ADM-Subaru-Liberty-GT-AT.hex` | `.HEX` | `1,048,576` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `A2UG002T-2007-ADM-Subaru-Liberty-GT-MT.hex` | `.HEX` | `1,048,576` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `A2UH000A-2006-JDM-Subaru-Legacy-GT-AT.hex` | `.HEX` | `1,048,576` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `A2UI000K-2007-JDM-Subaru-Legacy-GT-spec.B-MT.hex` | `.HEX` | `1,048,576` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `A2UI000Y-2008-ADM-Subaru-Liberty-GT-AT.hex` | `.HEX` | `1,048,576` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `A2UI000Z-2008-ADM-Liberty-GT.hex` | `.HEX` | `1,048,576` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `A2UI001L-2007-USDM-Subaru-Legacy-GT-spec.B-MT.hex` | `.HEX` | `1,048,576` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `A2UJ000J-2007-USDM-Subaru-Impreza-STI-MT.hex` | `.HEX` | `1,048,576` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `A2UJ000J-2007-USDM-Subaru-Impreza-STI.hex` | `.HEX` | `1,048,576` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `A2WC000E-2004-JDM-Forester-STi.hex` | `.HEX` | `524,288` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `A2WC011E-2004-07-JDM-Forester-STi.hex` | `.HEX` | `524,288` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `A2WC012E-2004-07-JDM-Forester-STi.hex` | `.HEX` | `524,288` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `A2WC013E-2004-07-JDM-Subaru-Forester-STi-MT.hex` | `.HEX` | `524,288` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `A2WC400D-2005-USDM-Forester-XT.hex` | `.HEX` | `1,048,576` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `A2WC400H-2005-ADM-Subaru-Forester-XT-AT.hex` | `.HEX` | `524,288` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `A2WC400I-2005-USDM-Subaru-Forester-XT-MT.hex` | `.HEX` | `1,048,576` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `A2WC400L-2005-USDM-Subaru-Baja-Turbo-MT.hex` | `.HEX` | `1,048,576` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `A2WC400M-2005-ADM-Subaru-Forester-XT-MT.hex` | `.HEX` | `524,288` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `A2WC401F-2004-EDM-Forester-XT.hex` | `.HEX` | `524,288` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `A2WC410D-2005-USDM-Subaru-Forester-XT-AT.hex` | `.HEX` | `1,048,576` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `A2WC410I-2005-USDM-Subaru-Forester-XT-MT.hex` | `.HEX` | `1,048,576` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `A2WC411I-2005-USDM-Subaru-Forester-XT-MT.hex` | `.HEX` | `1,048,576` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `A2WC412D-2005-USDM-Subaru-Forester-XT-AT.hex` | `.HEX` | `1,048,576` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `A2WC412I-2005-USDM-Subaru-Forester-XT-MT.hex` | `.HEX` | `1,048,576` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `A2WC420F-2004-EDM-Forester-XT.hex` | `.HEX` | `524,288` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `A2WC420H-2005-ADM-Subaru-Forester-XT-AT.hex` | `.HEX` | `524,288` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `A2WC420M-2005-ADM-Subaru-Forester-XT-MT.hex` | `.HEX` | `524,288` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `A2WC50-A2WC50ZU-2004-USDM-Subaru-Baja-XT-AT.hex` | `.HEX` | `1,048,576` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `A2WC500C-2005-USDM-Subaru-Legacy-GT-AT.hex` | `.HEX` | `1,048,576` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `A2WC500K-2005-USDM-Baja-Turbo.hex` | `.HEX` | `1,048,576` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `A2WC500L-2005-USDM-Baja-Turbo.hex` | `.HEX` | `1,048,576` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `A2WC500N-2005-USDM-Legacy-GT.hex` | `.HEX` | `1,048,576` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `A2WC500R-2005-USDM-Subaru-Outback-XT-AT.hex` | `.HEX` | `1,048,576` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `A2WC500S-2005-USDM-Subaru-Outback-XT-MT.hex` | `.HEX` | `1,048,576` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `A2WC501K-2005-USDM-Subaru-Baja-Turbo-AT.hex` | `.HEX` | `1,048,576` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `A2WC501L-2005-USDM-Baja-Turbo.hex` | `.HEX` | `1,048,576` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `A2WC510C-2005-USDM-Legacy-GT.hex` | `.HEX` | `1,048,576` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `A2WC510N-2005-USDM-Subaru-Legacy-GT-MT.hex` | `.HEX` | `1,048,576` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `A2WC510R-2005-USDM-Subaru-Outback-XT-AT.hex` | `.HEX` | `1,048,576` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `A2WC510S-2005-USDM-Subaru-Outback-XT-MT.hex` | `.HEX` | `1,048,576` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `A2WC511N-2005-USDM-Subaru-Legacy-GT-MT.hex` | `.HEX` | `1,048,576` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `A2WC511R-2005-USDM-Outback-XT.hex` | `.HEX` | `1,048,576` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `A2WC521C-2005-USDM-Legacy-GT.hex` | `.HEX` | `1,048,576` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `A2WC521N-2005-USDM-Legacy-GT.hex` | `.HEX` | `1,048,576` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `A2WC521R-2005-USDM-Subaru-Outback-XT-AT.hex` | `.HEX` | `1,048,576` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `A2WC522N-2005-USDM-Legacy-GT-MT.hex` | `.HEX` | `1,048,576` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `A2WC522S-2005-USDM-Subaru-Outback-XT-MT.hex` | `.HEX` | `1,048,576` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `A2WD000A-2004-JDM-Subaru-Legacy-GT-AT.hex` | `.HEX` | `524,288` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `A2WD001A-2004-JDM-Legacy-GT.hex` | `.HEX` | `524,288` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `A2WD001B-2004-JDM-Subaru-Legacy-GT-MT.hex` | `.HEX` | `524,288` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `A2WD001G-2004-ADM-Liberty-GT.hex` | `.HEX` | `524,288` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `A2WD002T-2005-ADM-Liberty-GT.hex` | `.HEX` | `524,288` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `A2WD010A-2004-JDM-Subaru-Legacy-GT-AT.hex` | `.HEX` | `524,288` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `A2WD010B-2004-JDM-Subaru-Legacy-GT-MT.hex` | `.HEX` | `524,288` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `A2WD010G-2004-ADM-Subaru-Liberty-GT-AT.hex` | `.HEX` | `524,288` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `A2WD010T-2005-ADM-Subaru-Liberty-GT-MT.hex` | `.HEX` | `524,288` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `A2WD010Y-2006-ADM-Subaru-Liberty-GT-AT.hex` | `.HEX` | `524,288` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `A2WD010Z-2006-ADM-Subaru-Liberty-GT-MT.hex` | `.HEX` | `524,288` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `A2WD012A-2004-JDM-Subaru-Legacy-GT-AT.hex` | `.HEX` | `524,288` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `A2WD012B-2004-JDM-Legacy-GT.hex` | `.HEX` | `524,288` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `A2WD012G-2004-ADM-Subaru-Liberty-GT-AT.hex` | `.HEX` | `524,288` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `A2WD012T-2005-ADM-Subaru-Liberty-GT-MT.hex` | `.HEX` | `524,288` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `A2WF100L-2006-USDM-Subaru-Baja-Turbo-MT.hex` | `.HEX` | `1,048,576` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `A2WF101K-2006-USDM-Subaru-Baja-Turbo-AT.hex` | `.HEX` | `1,048,576` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `A2WF101L-2006-USDM-Baja-Turbo.hex` | `.HEX` | `1,048,576` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `A2WF200C-2006-USDM-Subaru-Legacy-GT-AT.hex` | `.HEX` | `1,048,576` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `A2WF200N-2006-USDM-Legacy-GT.hex` | `.HEX` | `1,048,576` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `A2WF200R-2006-USDM-Outback-XT.hex` | `.HEX` | `1,048,576` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `A2WF200S-2006-USDM-Subaru-Outback-XT-MT.hex` | `.HEX` | `1,048,576` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `A2ZJ201D-2004-USDM-Forester-XT.hex` | `.HEX` | `524,288` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `A2ZJ500F-2004-EDM-Forester-XT.hex` | `.HEX` | `524,288` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `A2ZJ500H-2004-ADM-Subaru-Forester-XT-AT.hex` | `.HEX` | `524,288` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `A2ZJ500I-2004-USDM-Subaru-Forester-XT-MT.hex` | `.HEX` | `524,288` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `A2ZJ500J-2004-USDM-Subaru-Impreza-STi.hex` | `.HEX` | `524,288` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `A2ZJ500K-2004-USDM-Baja-Turbo.hex` | `.HEX` | `524,288` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `A2ZJ500L-2004-USDM-Subaru-Baja-Turbo-MT.hex` | `.HEX` | `524,288` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `A2ZJ500M-2004-ADM-Subaru-Forester-XT-MT.hex` | `.HEX` | `524,288` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `A2ZJ512I-2004-USDM-Forester-XT.hex` | `.HEX` | `524,288` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `A2ZJ600B-2004-JDM-Legacy-GT.hex` | `.HEX` | `524,288` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `A2ZJ601A-2004-JDM-Subaru-Legacy-GT-AT.hex` | `.HEX` | `524,288` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `A2ZJ700J-2004-USDM-Subaru-Impreza-STI.hex` | `.HEX` | `524,288` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `A2ZJ710J-2004-USDM-Subaru-Impreza-STi.hex` | `.HEX` | `524,288` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `A2ZJ800A-2004-JDM-Legacy-GT.hex` | `.HEX` | `524,288` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `A2ZJ800G-2004-ADM-Subaru-Liberty-GT-AT.hex` | `.HEX` | `524,288` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `A2ZJA00P-2005-EDM-Subaru-Forester-XT-MT-AT.hex` | `.HEX` | `524,288` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `A2ZJA00Q-2005-ADM-Forester-XT.hex` | `.HEX` | `524,288` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `A2ZJA10P-2005-EDM-Forester-XT.hex` | `.HEX` | `524,288` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `A2ZJB10J-2005-USDM-Subaru-Impreza-STi.hex` | `.HEX` | `1,048,576` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `A2ZJB11J-2005-USDM-Subaru-Impreza-STi-MT.hex` | `.HEX` | `1,048,576` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `A2ZJC00A-2005-JDM-Legacy-2.0-GT-Auto.hex` | `.HEX` | `524,288` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `A2ZJC00A-2005-JDM-Subaru-Legacy-GT-AT.hex` | `.HEX` | `524,288` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `A2ZJC00B-2004-JDM-Subaru-Legacy-GT-MT.hex` | `.HEX` | `524,288` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `A2ZJC00G-2004-ADM-Subaru-Liberty-GT-AT.hex` | `.HEX` | `524,288` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `A2ZJD00A-2004-JDM-Subaru-Legacy-GT-AT.hex` | `.HEX` | `524,288` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `A2ZJD00B-2004-JDM-Subaru-Legacy-GT-MT.hex` | `.HEX` | `524,288` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `A2ZJD00G-2004-ADM-Subaru-Liberty-GT-AT.hex` | `.HEX` | `524,288` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `A2ZJD02A-2003-JDM-Legacy-2.0-GT-Auto.hex` | `.HEX` | `524,288` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `A2ZJD02G-2004-ADM-Liberty-GT.hex` | `.HEX` | `524,288` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `A2ZJE11J-2006-USDM-Subaru-Impreza-STI.hex` | `.HEX` | `1,048,576` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `A4RG050N-2001-02-JDM-Subaru-Impreza-STi-MT-AT.hex` | `.HEX` | `163,840` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `A4RG050R-2001-02-JDM-Subaru-Impreza-STi-MT-AT.hex` | `.HEX` | `163,840` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `A4RG051N-2001-02-JDM-Subaru-Impreza-STi-MT-AT.hex` | `.HEX` | `163,840` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `A4RG052N-2002-JDM-Subaru-Impreza-STI-S202.hex` | `.HEX` | `163,840` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `A4RG060P-2001-02-ADM-Subaru-Impreza-STi.hex` | `.HEX` | `196,608` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `A4RG060Q-2001-02-EDM-Subaru-Impreza-STi-MT.hex` | `.HEX` | `196,608` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `A4RG060Q-2002-EDM-Subaru-Impreza-STI.hex` | `.HEX` | `163,840` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `A4RI200I-2001-02-JDM-Subaru-Forester-Turbo-MT-AT.hex` | `.HEX` | `163,840` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `A4RI300I-2001-02-JDM-Subaru-Forester-Turbo-MT-AT.hex` | `.HEX` | `163,840` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `A4RI401I-2001-02-JDM-Forester-Turbo.hex` | `.HEX` | `163,840` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `A4RL100K-2003-ADM-Forester-Turbo.hex` | `.HEX` | `163,840` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `A4RM100F-2005-ADM-Subaru-Impreza-WRX.hex` | `.HEX` | `163,840` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `A4RM100G-2003-ADM-Subaru-Impreza-STi-MT-AT.hex` | `.HEX` | `163,840` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `A4RM100H-2003-EDM-Subaru-Impreza-STI.hex` | `.HEX` | `163,840` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `A4RM200K-2005-SADM-Subaru-Impreza-WRX-MT-AT.hex` | `.HEX` | `196,608` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `A4RN1000-2001-02-EDM-Subaru-Impreza-STi.hex` | `.HEX` | `196,608` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `A4RN200H-2003-EDM-Subaru-Impreza-STi-MT.hex` | `.HEX` | `163,840` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `A4RN300G-2005-EDM-Subaru-Impreza-STI.hex` | `.HEX` | `163,840` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `A4RN300I-2004-ADM-Subaru-Impreza-STi.hex` | `.HEX` | `196,608` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `A4SD501A-2001-02-JDM-Subaru-Impreza-WRX-MT-AT.hex` | `.HEX` | `163,840` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `A4SD800A-2001-02-JDM-Subaru-Impreza-WRX.hex` | `.HEX` | `163,840` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `A4SD800B-2001-02-JDM-Subaru-Impreza-STi-MT-AT.hex` | `.HEX` | `163,840` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `A4SD900A-2001-02-JDM-Subaru-Impreza-WRX-MT-AT.hex` | `.HEX` | `196,608` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `A4SD900B-2001-02-JDM-Subaru-Impreza-STi.hex` | `.HEX` | `163,840` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `A4SDA00P-2001-02-JDM-Subaru-Impreza-STi-MT-AT.hex` | `.HEX` | `196,608` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `A4SDA00Q-2001-02-JDM-Subaru-Impreza-STi-MT-AT.hex` | `.HEX` | `163,840` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `A4SDA01B-2001-02-JDM-Subaru-Impreza-STi.hex` | `.HEX` | `163,840` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `A4SDA01Q-2001-02-JDM-Subaru-Impreza-STi.hex` | `.HEX` | `196,608` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `A4SE300D-2001-02-EDM-Subaru-Impreza-WRX-MT-AT.hex` | `.HEX` | `163,840` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `A4SE700D-2001-02-EDM-Subaru-Impreza-WRX.hex` | `.HEX` | `163,840` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `A4SE700D-2001-EDM-Subaru-Impreza-WRX.hex` | `.HEX` | `196,608` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `A4SE700E-2001-02-EDM-Forester-Turbo.hex` | `.HEX` | `163,840` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `A4SE700F-2001-02-ADM-Subaru-Forester-Turbo-MT-AT.hex` | `.HEX` | `163,840` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `A4SE700I-2001-02-ADM-Subaru-Impreza-WRX.hex` | `.HEX` | `196,608` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `A4SE700J-2001-02-ADM-Forester-Turbo.hex` | `.HEX` | `163,840` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `A4SE900D-2001-EDM-Subaru-Impreza-WRX.hex` | `.HEX` | `196,608` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `A4SE900I-2001-02-ADM-Subaru-Impreza-WRX.hex` | `.HEX` | `196,608` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `A4SG900C-2002-USDM-Subaru-Impreza-WRX.hex` | `.HEX` | `196,608` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `A4SGA00C-2002-USDM-Subaru-Impreza-WRX.hex` | `.HEX` | `163,840` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `A4SGC00C-2002-USDM-Subaru-Impreza-WRX.hex` | `.HEX` | `163,840` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `A4SGD10C-2002-USDM-Subaru-Impreza-WRX.hex` | `.HEX` | `196,608` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `A4SGE00C-2002-USDM-Subaru-Impreza-WRX-MT-AT.hex` | `.HEX` | `163,840` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `A4SGE01C-2002-USDM-Subaru-Impreza-WRX.hex` | `.HEX` | `163,840` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `A4SH701G-2002-JDM-Subaru-Legacy-BH-MT-AT.hex` | `.HEX` | `163,840` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `A4SH701K-2002-ADM-Liberty-B4.hex` | `.HEX` | `163,840` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `A4SHA10R-2003-ADM-Liberty-B4.hex` | `.HEX` | `163,840` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `A4SHB00G-2002-JDM-Subaru-Legacy-BH-MT-AT.hex` | `.HEX` | `163,840` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `A4SHB00H-2002-JDM-Legacy-B4.hex` | `.HEX` | `163,840` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `A4SHC00G-2002-JDM-Legacy-B4.hex` | `.HEX` | `163,840` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `A4SHC00H-2002-03-JDM-Subaru-Legacy-2.0TT-MT.hex` | `.HEX` | `163,840` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `A4SHC01G-2002-JDM-Legacy-B4-MTAT.hex` | `.HEX` | `163,840` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `A4TC101L-2003-USDM-Subaru-Impreza-WRX.hex` | `.HEX` | `163,840` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `A4TC300K-2003-USDM-Subaru-Impreza-WRX-AT.hex` | `.HEX` | `163,840` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `A4TC300L-2003-USDM-Subaru-Impreza-WRX-MT.hex` | `.HEX` | `163,840` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `A4TC400L-2003-USDM-Subaru-Impreza-WRX.hex` | `.HEX` | `196,608` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `A4TC401L-2003-USDM-Subaru-Impreza-WRX.hex` | `.HEX` | `196,608` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `A4TE000A-2003-JDM-Subaru-Impreza-WRX-MT-AT.hex` | `.HEX` | `163,840` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `A4TE001B-2003-JDM-Subaru-Impreza-STI.hex` | `.HEX` | `163,840` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `A4TE001G-2003-EDM-Subaru-Impreza-WRX.hex` | `.HEX` | `163,840` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `A4TE001I-2003-ADM-Subaru-Impreza-WRX.hex` | `.HEX` | `196,608` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `A4TE002B-2003-JDM-Subaru-Impreza-STi.hex` | `.HEX` | `196,608` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `A4TE002C-2003-JDM-Subaru-Impreza-STI-SpecC.hex` | `.HEX` | `196,608` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `A4TE100G-2003-EDM-Subaru-Impreza-WRX.hex` | `.HEX` | `163,840` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `A4TE200A-2004-JDM-Subaru-Impreza-WRX.hex` | `.HEX` | `196,608` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `A4TE300D-2005-EDM-Subaru-Impreza-WRX-MT-AT.hex` | `.HEX` | `196,608` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `A4TF300E-2004-USDM-Subaru-Impreza-WRX.hex` | `.HEX` | `196,608` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `A4TF300F-2004-USDM-Subaru-Impreza-WRX.hex` | `.HEX` | `196,608` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `A4TF400E-2004-USDM-Subaru-Impreza-WRX-AT.hex` | `.HEX` | `163,840` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `A4TF500F-2004-USDM-Subaru-Impreza-WRX.hex` | `.HEX` | `196,608` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `A4TF510E-2004-USDM-Subaru-Impreza-WRX-AT.hex` | `.HEX` | `163,840` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `A4TF510F-2004-USDM-Subaru-Impreza-WRX-MT.hex` | `.HEX` | `163,840` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `A4TF520F-2004-USDM-Subaru-Impreza-WRX-MT.hex` | `.HEX` | `196,608` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `A4TF520F-2004-USDM-Subaru-Impreza-WRX.hex` | `.HEX` | `196,608` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `A4TF800E-2005-USDM-Subaru-Impreza-WRX-AT.hex` | `.HEX` | `163,840` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `A4TF800F-2005-USDM-Subaru-Impreza-WRX.hex` | `.HEX` | `196,608` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `A4TF810F-2005-USDM-Subaru-Impreza-WRX-MT.hex` | `.HEX` | `163,840` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `A4TH000N-2004-ADM-Subaru-Impreza-WRX-MT-AT.hex` | `.HEX` | `163,840` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `A4TH000O-2004-ADM-Subaru-Impreza-WRX.hex` | `.HEX` | `163,840` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `A4TH100H-2005-ADM-Subaru-Impreza-WRX-MT-AT.hex` | `.HEX` | `196,608` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `A4TH100L-2005-ADM-Subaru-Impreza-WRX-WRP10-limited.hex` | `.HEX` | `196,608` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `A4TJ111B-2005-JDM-Subaru-Impreza-STi.hex` | `.HEX` | `163,840` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `A4TJ111C-2005-JDM-Subaru-Impreza-STi-MT-AT.hex` | `.HEX` | `163,840` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `A4TJ120S-2005-JDM-Subaru-Impreza-STI-S203.hex` | `.HEX` | `163,840` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `A4TJ121B-2005-JDM-Subaru-Impreza-STi.hex` | `.HEX` | `163,840` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `A4TJ121C-2006-JDM-Subaru-Impreza-STI-SpecC-TypeRA.hex` | `.HEX` | `163,840` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `A4TJ121S-2005-JDM-Subaru-Impreza-STI-S204.hex` | `.HEX` | `163,840` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `A4TJ1X00-20xx-JDM-Subaru-Impreza-STi-MT-AT.hex` | `.HEX` | `163,840` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `A8DH100E-2006-SADM-Subaru-Forester-XT-AT.hex` | `.HEX` | `1,048,576` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `A8DH100F-2006-EDM-Forester-XT.hex` | `.HEX` | `1,048,576` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `A8DH100H-2006-ADM-Subaru-Forester-XT-AT.hex` | `.HEX` | `1,048,576` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `A8DH100I-2006-USDM-Subaru-Forester-XT-MT.hex` | `.HEX` | `1,048,576` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `A8DH100M-2006-ADM-Forester-XT.hex` | `.HEX` | `1,048,576` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `A8DH100P-2006-EDM-Forester-XT-AT.hex` | `.HEX` | `1,048,576` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `A8DH101I-2006-USDM-Subaru-Forester-XT-MT.hex` | `.HEX` | `1,048,576` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `A8DH101P-2006-EDM-Subaru-Forester-XT-AT.hex` | `.HEX` | `1,048,576` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `A8DH200O-2006-ADM-Subaru-Impreza-WRX-MT.hex` | `.HEX` | `1,048,576` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `A8DH200U-2006-SADM-Subaru-Impreza-WRX-MT.hex` | `.HEX` | `1,048,576` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `A8DH200V-2006-ADM-Subaru-Impreza-STI-MT.hex` | `.HEX` | `1,048,576` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `A8DH200W-2006-USDM-Subaru-Impreza-WRX-AT.hex` | `.HEX` | `1,048,576` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `A8DH200X-2006-USDM-Subaru-Impreza-WRX.hex` | `.HEX` | `1,048,576` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `A8DH200Y-2006-EDM-Subaru-Impreza-WRX-MT.hex` | `.HEX` | `1,048,576` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `A8DH200Z-2006-EDM-Subaru-Impreza-STI.hex` | `.HEX` | `1,048,576` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `A8DH201X-2006-USDM-Subaru-Impreza-WRX-MT.hex` | `.HEX` | `1,048,576` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `A8DH202X-2006-USDM-Subaru-Impreza-WRX-MT.hex` | `.HEX` | `1,048,576` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `A8DH2Z1Z-2006-EDM-Subaru-Impreza-STI.hex` | `.HEX` | `1,048,576` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `A8DK100D-2007-USDM-Subaru-Forester-XT-AT.hex` | `.HEX` | `1,048,576` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `A8DK100E-2007-SADM-Subaru-Forester-XT-AT.hex` | `.HEX` | `1,048,576` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `A8DK100F-2007-EDM-Forester-XT-MT.hex` | `.HEX` | `1,048,576` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `A8DK100H-2007-ADM-Forester-XT.hex` | `.HEX` | `1,048,576` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `A8DK100I-2007-2008-USDM-Forester-XT.hex` | `.HEX` | `1,048,576` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `A8DK100L-2007-ADM-Subaru-Impreza-WRX-MT.hex` | `.HEX` | `1,048,576` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `A8DK100M-2007-ADM-Subaru-Forester-XT-MT.hex` | `.HEX` | `1,048,576` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `A8DK100O-2007-ADM-Subaru-Impreza-WRX-MT.hex` | `.HEX` | `1,048,576` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `A8DK100Q-2008-SADM-Subaru-Forester-XT-MT.hex` | `.HEX` | `1,048,576` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `A8DK100U-2007-SADM-Subaru-Impreza-WRX-MT.hex` | `.HEX` | `1,048,576` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `A8DK100V-2007-ADM-Subaru-Impreza-STI.hex` | `.HEX` | `1,048,576` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `A8DK100W-2007-USDM-Subaru-Impreza-WRX-AT.hex` | `.HEX` | `1,048,576` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `A8DK100X-2007-USDM-Subaru-Impreza-WRX.hex` | `.HEX` | `1,048,576` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `A8DK100Y-2007-EDM-Subaru-Impreza-WRX.hex` | `.HEX` | `1,048,576` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `A8DK100Z-2007-EDM-Subaru-Impreza-STI-MT.hex` | `.HEX` | `1,048,576` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `A8DK101X-2007-USDM-Subaru-Impreza-WRX-MT.hex` | `.HEX` | `1,048,576` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `AE5F300A-2012-JDM-Subaru-Legacy-GT-AT.hex` | `.HEX` | `1,048,576` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `AE5F300B-2009-JDM-Subaru-Legacy-GT-AT.hex` | `.HEX` | `1,048,576` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `AE5F301C-2010-EDM-Legacy-GT.hex` | `.HEX` | `1,048,576` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `AE5F301D-2010-ADM-Subaru-Liberty-GT-MT.hex` | `.HEX` | `1,048,576` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `AE5F301E-2010-USDM-Subaru-Legacy-GT-MT.hex` | `.HEX` | `1,048,576` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `AE5F301H-2010-EDM-Subaru-Legacy-GT-AT.hex` | `.HEX` | `1,048,576` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `AE5I001A-2011-JDM-Subaru-Legacy-GT-AT.hex` | `.HEX` | `1,048,576` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `AE5I410A-2011-JDM-Subaru-Legacy-GT-AT.hex` | `.HEX` | `1,048,731` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `AE5I500F-2012-ADM-Subaru-Liberty-GT-AT.hex` | `.HEX` | `1,048,576` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `AE5I500G-2011-JDM-Subaru-Legacy-GT-AT.hex` | `.HEX` | `1,048,576` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `AE5I500N-2011-JDM-Subaru-Impreza-STI-AT.hex` | `.HEX` | `1,048,576` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `AE5I910V-2011-USDM-Subaru-Impreza-STI-MT.hex` | `.HEX` | `1,048,576` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `AE5IA10L-2011-USDM-Subaru-Impreza-WRX-MT.hex` | `.HEX` | `1,048,576` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `AE5IB00L-2011-USDM-Subaru-Impreza-WRX-MT.hex` | `.HEX` | `1,048,576` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `AE5IB00V-2011-USDM-Subaru-Impreza-STI-MT.hex` | `.HEX` | `1,048,576` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `AE5IB40L-2011-USDM-Subaru-Impreza-WRX-MT.hex` | `.HEX` | `1,048,576` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `AE5IB40R-2011-USDM-Subaru-Forester-XT-AT.hex` | `.HEX` | `1,048,576` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `AE5IB40V-2011-USDM-Subaru-Impreza-STI.hex` | `.HEX` | `1,048,576` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `AE5K410E-2012-USDM-Subaru-Legacy-GT-MT.hex` | `.HEX` | `1,048,576` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `AE5K500L-2012-USDM-Subaru-Impreza-WRX-MT.hex` | `.HEX` | `1,048,576` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `AE5K611L-2012-USDM-Subaru-Impreza-WRX-MT.hex` | `.HEX` | `1,048,576` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `AE5K611V-2012-USDM-Subaru-Impreza-STI-MT.hex` | `.HEX` | `1,048,576` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `AE5K700L-2012-USDM-Subaru-Impreza-WRX-MT.hex` | `.HEX` | `1,048,576` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `AE5K700V-2012-USDM-Subaru-Impreza-STI-MT.hex` | `.HEX` | `1,048,576` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `AE5K800L-2012-USDM-Subaru-Impreza-WRX-MT.hex` | `.HEX` | `1,048,576` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `AE5K800V-2012-USDM-Subaru-Impreza-STI-MT.hex` | `.HEX` | `1,048,576` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `AE5L500L-2013-USDM-Subaru-Impreza-WRX-MT.hex` | `.HEX` | `1,048,576` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `AE5L500R-2013-USDM-Subaru-Forester-XT-MT.hex` | `.HEX` | `1,048,576` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `AE5L500V-2013-USDM-Subaru-Impreza-STI-MT.hex` | `.HEX` | `1,048,576` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `AE5L600L-2013-USDM-Subaru-Impreza-WRX-MT.hex` | `.HEX` | `1,048,576` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `AE5L700V-2013-USDM-Subaru-Impreza-STI-MT.hex` | `.HEX` | `1,048,576` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `AE5M100G-2013-EDM-Subaru-Legacy-GT-AT.hex` | `.HEX` | `1,048,576` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `AE5Q100L-2014-USDM-Subaru-Impreza-WRX-MT.hex` | `.HEX` | `1,048,576` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `AE5Q100V-2014-USDM-Subaru-Impreza-STI-MT.hex` | `.HEX` | `1,048,576` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `AE5Q200L-2014-USDM-Subaru-Impreza-WRX-MT.hex` | `.HEX` | `1,048,576` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `AE5R100V-2015-USDM-Subaru-Impreza-STI.hex` | `.HEX` | `1,048,576` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `AE5T110V-2016-USDM-Subaru-Impreza-STI-MT.hex` | `.HEX` | `1,048,576` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `AE5T200V-2016-USDM-Subaru-Impreza-STI-MT.hex` | `.HEX` | `1,048,576` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `AF5G200A-2013-JDM-Forester-SJG-DIT.hex` | `.HEX` | `1,572,864` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `AZ1E400C-2008-ADM-Subaru-Impreza-WRX.hex` | `.HEX` | `1,048,576` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `AZ1E400E-2008-ADM-Subaru-Impreza-WRX.hex` | `.HEX` | `1,048,576` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `AZ1E400U-2008-EDM-Subaru-Impreza-WRX.hex` | `.HEX` | `1,048,576` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `AZ1E401A-2008-USDM-Subaru-Impreza-WRX-MT.hex` | `.HEX` | `1,048,576` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `AZ1E401B-2008-USDM-Subaru-Impreza-WRX-AT.hex` | `.HEX` | `1,048,576` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `AZ1G100T-2009-SADM-Subaru-Forester-XT-AT.hex` | `.HEX` | `1,048,576` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `AZ1G101M-2009-10-EDM-Subaru-Forester-XT-MT.hex` | `.HEX` | `1,048,576` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `AZ1G101N-2009-10-EDM-Forester-XT.hex` | `.HEX` | `1,048,576` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `AZ1G101R-2009-USDM-Subaru-Forester-XT-AT.hex` | `.HEX` | `1,048,576` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `AZ1G105L-2009-JDM-Subaru-Forester-XT-AT.hex` | `.HEX` | `1,048,576` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `AZ1G111T-2011-SADM-Subaru-Forester-XT-AT.hex` | `.HEX` | `1,048,576` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `AZ1G200J-2008-SADM-Subaru-Impreza-STI-MT.hex` | `.HEX` | `1,048,576` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `AZ1G201G-2008-EDM-Subaru-Impreza-STI.hex` | `.HEX` | `1,048,576` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `AZ1G201I-2008-2009-USDM-Subaru-Impreza-STI.hex` | `.HEX` | `1,048,576` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `AZ1G202G-2008-EDM-Subaru-Impreza-STI.hex` | `.HEX` | `1,048,576` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `AZ1G300F-2008-JDM-Subaru-Impreza-STI.hex` | `.HEX` | `1,048,576` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `AZ1G301F-2008-JDM-Subaru-Impreza-STI.hex` | `.HEX` | `1,048,576` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `AZ1G400U-2009-EDM-Subaru-Impreza-WRX.hex` | `.HEX` | `1,048,576` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `AZ1G400W-2009-ADM-Subaru-Impreza-WRX-MT.hex` | `.HEX` | `1,048,576` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `AZ1G400Y-2009-SADM-Subaru-Impreza-WRX-MT.hex` | `.HEX` | `1,048,576` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `AZ1G401V-2009-USDM-Subaru-Impreza-WRX-MT.hex` | `.HEX` | `1,048,576` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `AZ1G500F-2009-JDM-Subaru-Impreza-STI.hex` | `.HEX` | `1,048,576` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `AZ1G500Z-2010-JDM-Subaru-Impreza-STI-R205.hex` | `.HEX` | `1,048,576` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `AZ1G501K-2009-JDM-Subaru-Impreza-STI-SpecC.hex` | `.HEX` | `1,048,576` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `AZ1G502L-2009-JDM-Subaru-Impreza-STI-AT.hex` | `.HEX` | `1,048,576` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `AZ1G601R-2010-USDM-Subaru-Forester-XT-AT.hex` | `.HEX` | `1,048,576` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `AZ1G700K-2012-EDM-Subaru-Impreza-STI.hex` | `.HEX` | `1,048,576` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `AZ1G701I-2010-USDM-Subaru-Impreza-STI.hex` | `.HEX` | `1,048,576` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `AZ1G701V-2010-USDM-Subaru-Impreza-WRX-MT.hex` | `.HEX` | `1,048,576` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `AZ1G702I-2010-USDM-Subaru-Impreza-STi-SE.hex` | `.HEX` | `1,048,576` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `AZ1G710V-2010-USDM-Subaru-Impreza-WRX-MT.hex` | `.HEX` | `1,048,576` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `AZ1G800D-2011-SADM-Subaru-Impreza-WRX-MT.hex` | `.HEX` | `1,048,576` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `AZ1G800F-2011-JDM-Subaru-Impreza-STI-AT.hex` | `.HEX` | `1,048,576` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `AZ1G800L-2011-SADM-Subaru-Impreza-STI-MT.hex` | `.HEX` | `1,048,576` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `AZ1G800S-2012-JDM-Subaru-Impreza-STI-MT.hex` | `.HEX` | `1,048,576` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `AZ1G800T-2011-JDM-Subaru-Impreza-WRX-spec.C-MT.hex` | `.HEX` | `1,048,576` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `AZ1G800V-2012-JDM-Subaru-Impreza-STI-S206.hex` | `.HEX` | `1,048,576` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `AZ1G900C-2011-ADM-Subaru-Impreza-WRX-MT.hex` | `.HEX` | `1,048,576` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `AZ1G900O-2011-EDM-Subaru-Forester-XT-AT.hex` | `.HEX` | `1,048,576` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `AZ1G900P-2011-EDM-Subaru-Forester-XT-AT.hex` | `.HEX` | `1,048,576` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `AZ1H102W-2008-JDM-Subaru-Exiga-2.0GT-AT.hex` | `.HEX` | `1,048,576` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `AZ1J200N-2010-JDM-Subaru-Forester-XT-MT.hex` | `.HEX` | `1,048,576` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `AZ1J400H-2011-EDM-Subaru-Impreza-STI-AT.hex` | `.HEX` | `1,048,576` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `AZ1J500G-2011-EDM-Subaru-Impreza-STI.hex` | `.HEX` | `1,048,576` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `AZ1J500J-2011-JDM-Subaru-Impreza-STI.hex` | `.HEX` | `1,048,576` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `AZ1J500L-2011-JDM-Subaru-Forester-XT-MT.hex` | `.HEX` | `1,048,576` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `AZ1J500T-2011-SADM-Subaru-Forester-S.Edition-AT.hex` | `.HEX` | `1,048,576` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `AZ1J500V-2011-ADM-Subaru-Forester-S-Edition-AT.hex` | `.HEX` | `1,048,576` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `AZ1J500X-2010-JDM-Subaru-Impreza-Exiga-MT.hex` | `.HEX` | `1,048,576` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `AZ1K000T-2012-JDM-Subaru-Impreza-STI-SpecC.hex` | `.HEX` | `1,048,576` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `AZ1L100C-2014-ADM-Subaru-Impreza-WRX-MT.hex` | `.HEX` | `1,048,576` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `AZ1L100G-2013-EDM-Subaru-Impreza-STI-MT.hex` | `.HEX` | `1,048,576` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `AZ1L100K-2014-EDM-Subaru-Impreza-STI-MT.hex` | `.HEX` | `1,048,576` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `AZ1L100T-2014-JDM-Subaru-Impreza-STI-MT.hex` | `.HEX` | `1,048,576` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `AZ1L100X-2013-JDM-Subaru-Exiga-2.0-GT-AT.hex` | `.HEX` | `1,048,576` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `AZ1N100G-2014-EDM-Subaru-Impreza-STI.hex` | `.HEX` | `1,048,576` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `AZ1N100M-2014-EDM-Subaru-Impreza-STI.hex` | `.HEX` | `1,048,576` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `AZ1N100S-2015-JDM-Subaru-Impreza-STI-MT.hex` | `.HEX` | `1,048,576` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `AZ1P000G-2016-EDM-Subaru-Impreza-STI.hex` | `.HEX` | `1,048,576` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `AZ1P000L-2015-SADM-Subaru-Impreza-STI-MT.hex` | `.HEX` | `1,048,576` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `AZ1P000M-2015-SADM-Subaru-Impreza-STI-MT.hex` | `.HEX` | `1,048,576` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `AZ1P100S-2016-JDM-Subaru-Impreza-STI.hex` | `.HEX` | `1,048,576` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `AZ1P100T-2016-JDM-Subaru-Impreza-STI-S207.hex` | `.HEX` | `1,048,576` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `D0XJ001P-2006-USDM-Subaru-Outback-3.0R-AT.hex` | `.HEX` | `1,048,576` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `D0XJ001Q-2005-JDM-Subaru-Outback-3.0R-AT.hex` | `.HEX` | `1,048,576` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `D0XJ001R-2006-EDM-Legacy-3.0R.hex` | `.HEX` | `1,048,576` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `D0XJ001T-2006-ADM-Subaru-Liberty-3.0R-AT.hex` | `.HEX` | `1,048,576` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `D0XJ002S-2006-EDM-Subaru-Outback-3.0R-AT.hex` | `.HEX` | `1,048,576` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `D2PH410Q-2007-JDM-Subaru-Legacy-3.0R-AT.hex` | `.HEX` | `1,048,576` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `D2SB001Q-2008-JDM-Subaru-Legacy-3.0R-AT.hex` | `.HEX` | `1,048,576` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `D2TB101P-2008-USDM-Subaru-Legacy-3.0R-AT.hex` | `.HEX` | `1,048,576` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `D2TB201R-2008-EDM-Legacy-3.0R.hex` | `.HEX` | `1,048,576` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `D2UH001M-2007-ADM-Liberty-3.0R.hex` | `.HEX` | `1,048,576` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `D2UH003R-2007-EDM-Subaru-Legacy-3.0R-AT.hex` | `.HEX` | `1,048,576` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `D2UJ001T-2008-ADM-Subaru-Liberty-3.0R-AT.hex` | `.HEX` | `1,048,576` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `D2UJ003R-2007-EDM-Subaru-Legacy-3.0R-AT.hex` | `.HEX` | `1,048,576` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `D2UK001Q-2007-JDM-Subaru-Legacy-3.0R-AT.hex` | `.HEX` | `1,048,576` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `D2WD200A-2004-JDM-Legacy-3.0R.hex` | `.HEX` | `524,288` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `D2WD603H-2005-ADM-Subaru-Liberty-3.0R-MT.hex` | `.HEX` | `524,288` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `D2WD606A-2005-JDM-Subaru-Outback-3.0R-MT.hex` | `.HEX` | `524,288` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `D2WD610A-2005-JDM-Subaru-Legacy-3.0R-MT.hex` | `.HEX` | `524,288` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `D2WD610H-2004-ADM-Subaru-Liberty-3.0R-MT.hex` | `.HEX` | `524,288` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `D2WD701C-2005-EDM-Legacy-3.0R-MT.hex` | `.HEX` | `1,048,576` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `D2ZR003A-2003-JDM-Subaru-Legacy-3.0R-AT.hex` | `.HEX` | `524,288` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `D2ZS002C-2004-EDM-Subaru-Legacy-3.0R-AT.hex` | `.HEX` | `524,288` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `D2ZS002D-2004-ADM-Subaru-Outback-3.0R-AT.hex` | `.HEX` | `524,288` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `D2ZU002A-2004-JDM-Subaru-Legacy-3.0R-AT.hex` | `.HEX` | `524,288` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `D2ZU200A-2004-JDM-Subaru-Legacy-3.0R-AT.hex` | `.HEX` | `524,288` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `D2ZX004B-2005-USDM-Subaru-Outback-3.0R-AT.hex` | `.HEX` | `1,048,576` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `D2ZX110B-2005-USDM-Subaru-Outback-3.0R-AT.hex` | `.HEX` | `1,048,576` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `D2ZY110H-2005-ADM-Subaru-Liberty-3.0R-AT.hex` | `.HEX` | `524,288` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `D2ZZ001E-2005-EDM-Subaru-Legacy-3.0R-AT.hex` | `.HEX` | `524,288` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `D6JM000B-2001-USDM-Subaru-Outback-3.0R-VDC-AT.hex` | `.HEX` | `163,840` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `DE5F201B-2010-USDM-Subaru-Legacy-3.6R-AT.hex` | `.HEX` | `1,048,576` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `DE5F301H-2011-EDM-Subaru-Outback-3.6-AT.hex` | `.HEX` | `1,048,576` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `DE5F810G-2011-USDM-Subaru-Outback-3.6-AT.hex` | `.HEX` | `1,048,576` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `DE5F810K-2011-USDM-Subaru-Tribeca-3.6L-AT.hex` | `.HEX` | `1,048,576` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `DE5I500M-2012-EDM-Subaru-Tribeca-3.6R-AT.hex` | `.HEX` | `1,048,576` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `DE5IB40B-2011-USDM-Subaru-Outback-3.6R-AT.hex` | `.HEX` | `1,048,576` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `DE5K411K-2012-USDM-Subaru-Tribeca-3.6-AT.hex` | `.HEX` | `1,048,576` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `DE5K800B-2012-USDM-Subaru-Legacy-3.6R-AT.hex` | `.HEX` | `1,048,576` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `DE5L510K-2013-USDM-Subaru-Tribeca-3.0R-AT.hex` | `.HEX` | `1,048,576` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `DE5M301C-2013-USDM-Subaru-Legacy-3.6R-AT.hex` | `.HEX` | `1,048,576` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `DE5M301H-2013-USDM-Subaru-Legacy-3.6R-AT.hex` | `.HEX` | `1,048,784` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `DE5Q100C-2014-USDM-Subaru-Legacy-3.6R-AT.hex` | `.HEX` | `1,048,576` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `DZ1E402B-2009-USDM-Subaru-Tribeca-3.6L-AT.hex` | `.HEX` | `1,048,576` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `DZ1G001F-2009-EDM-Subaru-Tribeca-B9-AT.hex` | `.HEX` | `1,048,576` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `E2SB001K-2008-JDM-Subaru-Legacy-2.5i-AT.hex` | `.HEX` | `1,048,576` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `E2SB002L-2008-JDM-Subaru-Outback-2.5i-MT.hex` | `.HEX` | `1,048,576` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `E2TB011I-2008-USDM-Subaru-Forester-2.5-AT.hex` | `.HEX` | `1,048,576` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `E2TB101L-2008-EDM-Subaru-Legacy-2.5i-AT.hex` | `.HEX` | `1,048,576` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `E2TB102M-2008-ADM-Liberty-2.5i.hex` | `.HEX` | `1,048,576` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `E2UD001E-2007-JDM-Legacy-2.0-sohc-B-sport-Auto.hex` | `.HEX` | `1,048,576` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `E2UE101B-2007-USDM-Subaru-Legacy-2.5i-AT.hex` | `.HEX` | `1,048,576` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `E2UE101J-2006-07-ADM-Subaru-Forester-2.5-AT.hex` | `.HEX` | `1,048,576` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `E2UE102B-2007-USDM-Subaru-Outback-2.5i-MT.hex` | `.HEX` | `1,048,576` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `E2UE102G-2006-07-ADM-Subaru-Legacy-2.5i-AT-MT.hex` | `.HEX` | `1,048,576` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `E2UE102J-2006-07-ADM-Subaru-Forester-2.5-MT.hex` | `.HEX` | `1,048,576` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `E2UE102L-2007-USDM-Subaru-Impreza-2.5i.hex` | `.HEX` | `1,048,576` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `E2UE202L-2006-USDM-Subaru-Impreza-2.5i.hex` | `.HEX` | `1,048,576` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `E2UG001B-2007-USDM-Subaru-Outback-2.5i-AT.hex` | `.HEX` | `1,048,576` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `E2UG001I-2007-USDM-Subaru-Forester-2.5i-MT-AT.hex` | `.HEX` | `1,048,576` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `E2UG001L-2007-USDM-Subaru-Impreza-2.5i-AT.hex` | `.HEX` | `1,048,576` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `E2UG002L-2007-USDM-Subaru-Impreza-2.5i-MT.hex` | `.HEX` | `1,048,576` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `E2VG204B-2006-USDM-Subaru-Legacy-2.5i-MT-AT.hex` | `.HEX` | `1,048,576` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `E2VG211D-2006-USDM-Subaru-Forester-2.5-MT-AT.hex` | `.HEX` | `1,048,576` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `E2VG211E-2006-ADM-Subaru-Forester-2.5-MT-AT.hex` | `.HEX` | `1,048,576` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `E2VG212D-2006-USDM-Subaru-Forester-2.5i-MT-AT.hex` | `.HEX` | `1,048,576` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `E2VG212E-2006-ADM-Forester-2.5.hex` | `.HEX` | `1,048,576` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `E2VG221B-2006-USDM-Subaru-Legacy-2.5i-MT-AT.hex` | `.HEX` | `1,048,576` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `E2VG221D-2007-USDM-Subaru-Forester-2.5-MT-AT.hex` | `.HEX` | `1,048,576` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `E2VG222B-2006-USDM-Outback-2.5i.hex` | `.HEX` | `1,048,576` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `E2VH101C-2006-USDM-Subaru-Impreza-2.5i-MT-AT.hex` | `.HEX` | `1,048,576` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `E2VH102C-2006-USDM-Subaru-Impreza-2.5i.hex` | `.HEX` | `1,048,576` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `E2VH111C-2006-USDM-Subaru-Impreza-2.5i-MT-AT.hex` | `.HEX` | `1,048,576` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `E2VH112C-2006-USDM-Subaru-Impreza-2.5i-MT-AT.hex` | `.HEX` | `1,048,576` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `E2VH202C-2006-USDM-Subaru-Impreza-2.5i-MT-AT.hex` | `.HEX` | `1,048,576` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `E2VL002B-2006-USDM-Subaru-Legacy-2.5i-MT-AT.hex` | `.HEX` | `1,048,576` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `E2WD200C-2005-EDM-Subaru-Outback-2.5i-MT-AT.hex` | `.HEX` | `524,288` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `E2WD201C-2005-EDM-Subaru-Legacy-2.5i-MT-AT.hex` | `.HEX` | `524,288` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `E2WD500D-2005-JDM-Outback-2.5i.hex` | `.HEX` | `524,288` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `E2ZD308E-2004-JDM-Legacy-2.0.hex` | `.HEX` | `524,288` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `E2ZD508C-2004-EDM-Outback-2.5i.hex` | `.HEX` | `524,288` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `E2ZI103A-2005-USDM-Subaru-Outback-2.5i-MT.hex` | `.HEX` | `1,048,576` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `E2ZJ101B-2005-USDM-Subaru-Legacy-2.5i-MT-AT.hex` | `.HEX` | `1,048,576` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `E2ZJ101G-2005-USDM-Subaru-Impreza-2.5RS.hex` | `.HEX` | `1,048,576` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `E2ZJ101H-2005-USDM-Subaru-Forester-XS-MT-AT.hex` | `.HEX` | `1,048,576` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `E2ZJ103G-2005-USDM-Subaru-Impreza-2.5RS-MT-AT.hex` | `.HEX` | `1,048,576` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `E2ZJ111G-2005-USDM-Subaru-Impreza-2.5RS-MT-AT.hex` | `.HEX` | `1,048,576` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `E2ZJ112B-2005-USDM-Subaru-Outback-2.5i-MT-AT.hex` | `.HEX` | `1,048,576` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `E2ZJ113G-2005-USDM-Subaru-Impreza-2.5RS-MT-AT.hex` | `.HEX` | `1,048,576` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `E2ZJ121H-2005-USDM-Subaru-Forester-2.5-MT-AT.hex` | `.HEX` | `1,048,576` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `E2ZJ123G-2005-USDM-Subaru-Impreza-2.5RS-MT-AT.hex` | `.HEX` | `1,048,576` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `E2ZJ133G-2005-USDM-Subaru-Impreza-2.5RS-MT-AT.hex` | `.HEX` | `1,048,576` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `E2ZJ141B-2005-USDM-Subaru-Legacy-2.5i-AT-MT.hex` | `.HEX` | `1,048,576` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `E2ZJ173B-2005-USDM-Subaru-Legacy-2.5i-MT-AT.hex` | `.HEX` | `1,048,576` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `E2ZK001A-2005-USDM-Subaru-Legacy-2.5i-AT.hex` | `.HEX` | `1,048,576` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `E2ZK002A-2005-USDM-Subaru-Outback-2.5i-AT.hex` | `.HEX` | `1,048,576` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `E2ZK003A-2005-USDM-Subaru-Legacy-2.5i-AT.hex` | `.HEX` | `1,048,576` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `E6PF101A-2004-USDM-Subaru-Legacy-2.5i-MT-AT.hex` | `.HEX` | `524,288` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `E6PF102A-2004-USDM-Subaru-Outback-2.5i-MT-AT.hex` | `.HEX` | `524,288` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `E6PF103A-2004-USDM-Subaru-Legacy-2.5i-AT-MT.hex` | `.HEX` | `524,288` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `EE5F200W-2010-USDM-Subaru-Legacy-2.5i-MT.hex` | `.HEX` | `1,048,576` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `EE5F300A-2010-USDM-Subaru-Legacy-2.5i-AT.hex` | `.HEX` | `1,048,576` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `EE5I500A-2011-EDM-Subaru-Outback-2.5i-AT.hex` | `.HEX` | `1,048,576` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `EE5I910G-2011-USDM-Subaru-Impreza-2.5i-MT.hex` | `.HEX` | `1,048,576` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `EE5I910H-2011-USDM-Subaru-Impreza-2.5i-MT.hex` | `.HEX` | `1,048,576` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `EE5I910T-2011-USDM-Subaru-Impreza-2.5i-MT.hex` | `.HEX` | `1,048,576` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `EE5I920T-2010-USDM-Subaru-Legacy-Elite-AT.hex` | `.HEX` | `1,048,576` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `EE5IA11T-2011-USDM-Subaru-Outback-2.5i-CVT.hex` | `.HEX` | `1,048,576` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `EE5IB20W-2011-USDM-Subaru-Outback-2.5i-MT.hex` | `.HEX` | `1,048,576` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `EE5IB41T-2012-USDM-Subaru-Outback-2.5i-CVT.hex` | `.HEX` | `1,048,576` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `EE5K000K-2011-JDM-Subaru-Outback-2.5i-AT.hex` | `.HEX` | `1,048,576` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `EE5K412T-2012-USDM-Subaru-Legacy-2.5i-AT.hex` | `.HEX` | `1,048,576` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `EE5K801W-2012-USDM-Subaru-Legacy-2.5i-MT.hex` | `.HEX` | `1,048,576` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `EP5D003Q-2011-JDM-Subaru-Forester-2.0-XS-MT.hex` | `.HEX` | `1,048,576` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `EP5D004L-2011-EDM-Subaru-Forester-2.0X-AT.hex` | `.HEX` | `1,048,576` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `EP5D201D-2011-USDM-Subaru-Forester-2.5i-AT.hex` | `.HEX` | `1,048,576` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `EP5D202A-2011-USDM-Subaru-Forester-2.0X-MT.hex` | `.HEX` | `1,048,576` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `EP5D202N-2012-ADM-Subaru-Forester-2.5-FB-MT.hex` | `.HEX` | `1,048,576` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `EP5D700X-2013-EDM-Subaru-Forester-2.0X-AT.hex.hex` | `.HEX` | `1,048,576` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `EP5F300H-2013-EDM-Subaru-Impreza-2.0-FB-MT.hex` | `.HEX` | `1,048,576` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `EP5F300T-2012-USDM-Subaru-XV-2.5i-CVT.hex` | `.HEX` | `1,048,576` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `EP5F301I-2013-EDM-Subaru-Impreza-2.0i-CVT.hex` | `.HEX` | `1,048,576` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `EP5G211a-2012-USDM-Subaru-Forester-2.5-FB-MT.hex` | `.HEX` | `1,048,576` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `EP5G401z-2013-EDM-Subaru-XVCVT.hex` | `.HEX` | `1,048,576` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `EP5G601B-2012-USDM-Subaru-Impreza-2.0i-CVT.hex` | `.HEX` | `1,048,576` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `EP5I200F-2013-USDM-Subaru-Impreza-2.0i-MT.hex` | `.HEX` | `1,048,576` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `EP5L000p-2014-EDM-Subaru-XV-2.5-FB-MT.hex` | `.HEX` | `1,048,576` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `EZ1D105B-2008-USDM-Subaru-Outback-2.5i-AT.hex` | `.HEX` | `1,048,576` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `EZ1D301A-2008-USDM-Legacy-2.5-PZEV.hex` | `.HEX` | `1,048,576` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `EZ1D302B-2009-USDM-Subaru-Legacy-2.5i-AT.hex` | `.HEX` | `1,048,576` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `EZ1D303B-2008-USDM-Subaru-Legacy-2.5i-AT.hex` | `.HEX` | `1,048,576` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `EZ1E102G-2008-USDM-Subaru-Impreza-2.5i.hex` | `.HEX` | `1,048,576` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `EZ1E401G-2008-09-USDM-Subaru-Impreza-2.5i-MT.hex` | `.HEX` | `1,048,576` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `EZ1E401H-2008-09-USDM-Subaru-Impreza-2.5i-AT.hex` | `.HEX` | `1,048,576` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `EZ1G107M-2009-ADM-Subaru-Forester-2.5-MT.hex` | `.HEX` | `1,048,576` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `EZ1G108K-2009-USDM-Subaru-Forester-2.5i-AT.hex` | `.HEX` | `1,048,576` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `EZ1G108N-2009-ADM-Subaru-Forester-2.5i-MT.hex` | `.HEX` | `1,048,576` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `EZ1G108N-2009-EDM-Subaru-Forester-2.5i-MT.hex` | `.HEX` | `1,048,576` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `EZ1G109J-2009-USDM-Subaru-Forester-2.5i-MT.hex` | `.HEX` | `1,048,576` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `EZ1G109K-2009-USDM-Subaru-Forester-2.5-MT.hex` | `.HEX` | `1,048,576` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `EZ1G110J-2010-USDM-Subaru-Forester-2.5i-AT.hex` | `.HEX` | `1,048,576` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `EZ1G701H-2010-USDM-Subaru-Impreza-2.5i-AT.hex` | `.HEX` | `1,048,576` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `EZ1GB00G-2008-USDM-Subaru-Impreza-2.5i-MT.hex` | `.HEX` | `1,048,576` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `EZ1GB00H-2008-USDM-Subaru-Impreza-2.5i-AT.hex` | `.HEX` | `1,048,576` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `EZ1GB00J-2009-USDM-Subaru-Forester-2.5i-AT.hex` | `.HEX` | `1,048,576` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `EZ1GB10G-2010-USDM-Subaru-Impreza-2.5i-MT.hex` | `.HEX` | `1,048,576` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `EZ1GB10H-2010-USDM-Subaru-Impreza-2.5i-AT.hex` | `.HEX` | `1,048,576` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `EZ1GB10J-2010-USDM-Subaru-Forester-2.5i-AT.hex` | `.HEX` | `1,048,576` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `EZ1GB10K-2010-USDM-Subaru-Forester-2.5i-MT.hex` | `.HEX` | `1,048,576` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `EZ1GD00A-2009-USDM-Subaru-Legacy-2.5i-MT.hex` | `.HEX` | `1,048,576` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `JP3F522A-2011-EDM-Subaru-Forester-2.0T-Diesel-MT.hex` | `.HEX` | `1,048,576` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `JZ2F401A-2009-10-EDM-Subaru-Impreza-2.0T-Diesel-MT.hex` | `.HEX` | `1,048,576` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `JZ2F411A-2009-11-EDM-Subaru-Impreza-2.0T-Diesel-MT.hex` | `.HEX` | `1,048,576` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `JZ2F430A-2011-EDM-Subaru-Impreza-2.0T-Diesel-MT.hex` | `.HEX` | `1,048,576` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `JZ2F441A-2010-EDM-Subaru-Impreza-2.0T-Diesel-MT.hex` | `.HEX` | `1,048,576` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `LV9N100B-2015-JDM-Subaru-Impreza-WRX-S4.hex` | `.HEX` | `2,097,152` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
-| `Z1G20000-2008-09-EDM-Subaru-Impreza-STI.hex` | `.HEX` | `1,048,576` bytes | Subaru Denso / Hitachi Flash Dump (Intel HEX) |
+| `A2PG420A-2007-JDM-Subaru-Legacy-GT-AT.hex` | 1.00 MB | `eef799986d7fa17ed2f66c68886f9bef` | Intel HEX Calibration Firmware |
+| `A2SB000A-2008-JDM-Subaru-Legacy-GT-spec.B-AT.hex` | 1.00 MB | `311ed5dada26e69a91e96269d3674369` | Intel HEX Calibration Firmware |
+| `A2SB000Y-2008-JDM-Subaru-Outback-XT-AT.hex` | 1.00 MB | `a157dea8c3199ee802fd2aefa2ee74dd` | Intel HEX Calibration Firmware |
+| `A2TB000N-2008-USDM-Subaru-Legacy-GT-MT.hex` | 1.00 MB | `97a21bf6169fb1b510712a802f3c3ba7` | Intel HEX Calibration Firmware |
+| `A2TB001C-2008-USDM-Subaru-Legacy(Outback)-GT(XT)-AT.hex` | 1.00 MB | `dad476b6aa1c0ee4869f5e2732fb64e6` | Intel HEX Calibration Firmware |
+| `A2TB001L-2008-USDM-Subaru-Legacy-GT-spec.B-MT.hex` | 1.00 MB | `52cc624dd8e1cf3028550d89af160815` | Intel HEX Calibration Firmware |
+| `A2TB001N-2008-09-USDM-Subaru-Legacy(Outback)-GT(XT)-MT.hex` | 1.00 MB | `5329109f8d2812a1f3b51e607a9f7830` | Intel HEX Calibration Firmware |
+| `A2TB002C-2009-USDM-Subaru-Legacy-GT-AT.hex` | 1.00 MB | `1de62dc35b90260b39badb3f31b13941` | Intel HEX Calibration Firmware |
+| `A2TB100A-2008-JDM-Legacy-GT.hex` | 1.00 MB | `e7acd04c0b09ce9cc79a8af0ecf320b2` | Intel HEX Calibration Firmware |
+| `A2TB100B-2007-JDM-Subaru-Legacy-GT-MT.hex` | 1.00 MB | `39d7433c9d35bccd1050152db210dee1` | Intel HEX Calibration Firmware |
+| `A2TB100K-2007-JDM-Subaru-Legacy-GT-spec.B-MT.hex` | 1.00 MB | `b460a003e6d44eff598eb862edb4947e` | Intel HEX Calibration Firmware |
+| `A2TB100U-2008-JDM-Subaru-Impreza-SGT-MT.hex` | 1.00 MB | `5e37eabad163754b67498ac7aa61d7ff` | Intel HEX Calibration Firmware |
+| `A2TB100V-2008-JDM-Subaru-Impreza-SGT.hex` | 1.00 MB | `97d3a0df2e6c27c1eddc3042d688898a` | Intel HEX Calibration Firmware |
+| `A2TB100Y-2007-JDM-Legacy-GT-TunedbySTI.hex` | 1.00 MB | `d31b4666b95febfb8be06fff5ad9198c` | Intel HEX Calibration Firmware |
+| `A2UG000B-2006-JDM-Legacy-GT.hex` | 1.00 MB | `c8d0ded99d5d9d8bb803d4a56e088dc1` | Intel HEX Calibration Firmware |
+| `A2UG000C-2007-USDM-Subaru-Legacy-GT-AT.hex` | 1.00 MB | `6371e252ff5926471ca4d2b92a1aabeb` | Intel HEX Calibration Firmware |
+| `A2UG000J-2007-USDM-Subaru-Impreza-STI-MT.hex` | 1.00 MB | `7f95d7b7658605110dbfceba67bb1f98` | Intel HEX Calibration Firmware |
+| `A2UG000L-2007-USDM-Subaru-Legacy-GT-spec.B-MT.hex` | 1.00 MB | `ed466737687ba0561a49caf92d2b5c05` | Intel HEX Calibration Firmware |
+| `A2UG000N-2007-USDM-Subaru-Legacy-GT-MT.hex` | 1.00 MB | `ddd0ac1e799d696e508dea1fcb762cd5` | Intel HEX Calibration Firmware |
+| `A2UG000k-2006-JDM-Subaru-Legacy-GT-spec.B-MT.hex` | 1.00 MB | `f6d6b1f4f205f18746c10d7ed16eb858` | Intel HEX Calibration Firmware |
+| `A2UG001G-2008-ADM-Subaru-Liberty-GT-AT.hex` | 1.00 MB | `7d27c8be7e984a99ae126da29b26a0e9` | Intel HEX Calibration Firmware |
+| `A2UG002T-2007-ADM-Subaru-Liberty-GT-MT.hex` | 1.00 MB | `c6cdea215ae054d83b6fba2f2e9ed1d4` | Intel HEX Calibration Firmware |
+| `A2UH000A-2006-JDM-Subaru-Legacy-GT-AT.hex` | 1.00 MB | `2bd19b0ed41f982d01908176f13aa451` | Intel HEX Calibration Firmware |
+| `A2UI000K-2007-JDM-Subaru-Legacy-GT-spec.B-MT.hex` | 1.00 MB | `acdfdaa3e7b721e0f25007db5d7883fe` | Intel HEX Calibration Firmware |
+| `A2UI000Y-2008-ADM-Subaru-Liberty-GT-AT.hex` | 1.00 MB | `b2312b070d360677dbcf500b181ae5f8` | Intel HEX Calibration Firmware |
+| `A2UI000Z-2008-ADM-Liberty-GT.hex` | 1.00 MB | `beec9c9c5c2fc09922f151e05779cae4` | Intel HEX Calibration Firmware |
+| `A2UI001L-2007-USDM-Subaru-Legacy-GT-spec.B-MT.hex` | 1.00 MB | `a0a01ca4b891d79e4838b89c541f23db` | Intel HEX Calibration Firmware |
+| `A2UJ000J-2007-USDM-Subaru-Impreza-STI-MT.hex` | 1.00 MB | `affd835c9c0f9a96331ecba5fbb4b8f5` | Intel HEX Calibration Firmware |
+| `A2UJ000J-2007-USDM-Subaru-Impreza-STI.hex` | 1.00 MB | `f68c448cbf78e204f855b04f6da3819d` | Intel HEX Calibration Firmware |
+| `A2WC000E-2004-JDM-Forester-STi.hex` | 512.0 KB | `3f0b00c89195cc18a5d59060250bf4d6` | Intel HEX Calibration Firmware |
+| `A2WC011E-2004-07-JDM-Forester-STi.hex` | 512.0 KB | `6c9c859252f8ad2ef8d9887e4100a329` | Intel HEX Calibration Firmware |
+| `A2WC012E-2004-07-JDM-Forester-STi.hex` | 512.0 KB | `bce44ae5cf77fba0819588d06936429d` | Intel HEX Calibration Firmware |
+| `A2WC013E-2004-07-JDM-Subaru-Forester-STi-MT.hex` | 512.0 KB | `7b01c5ab77d7581f28895c7c318be47f` | Intel HEX Calibration Firmware |
+| `A2WC400D-2005-USDM-Forester-XT.hex` | 1.00 MB | `0e8eb18044a806fe2179b4615ec41793` | Intel HEX Calibration Firmware |
+| `A2WC400H-2005-ADM-Subaru-Forester-XT-AT.hex` | 512.0 KB | `4f800830babdf32e9463cf676b2506df` | Intel HEX Calibration Firmware |
+| `A2WC400I-2005-USDM-Subaru-Forester-XT-MT.hex` | 1.00 MB | `615a481fc151148480996eef14eeb6f5` | Intel HEX Calibration Firmware |
+| `A2WC400L-2005-USDM-Subaru-Baja-Turbo-MT.hex` | 1.00 MB | `cd6960c6baa6fc08477f957b03974097` | Intel HEX Calibration Firmware |
+| `A2WC400M-2005-ADM-Subaru-Forester-XT-MT.hex` | 512.0 KB | `d2e3931006e5c4eb3bc70fb396eca0ec` | Intel HEX Calibration Firmware |
+| `A2WC401F-2004-EDM-Forester-XT.hex` | 512.0 KB | `fe8803e361deeff0409e1dab9f14353e` | Intel HEX Calibration Firmware |
+| `A2WC410D-2005-USDM-Subaru-Forester-XT-AT.hex` | 1.00 MB | `9eb6ca72fb5b81f8a95080f47125df2c` | Intel HEX Calibration Firmware |
+| `A2WC410I-2005-USDM-Subaru-Forester-XT-MT.hex` | 1.00 MB | `b79f6203e3f0453f949e9b8e66187071` | Intel HEX Calibration Firmware |
+| `A2WC411I-2005-USDM-Subaru-Forester-XT-MT.hex` | 1.00 MB | `900f9ed965b089e22d6d7cf8b2735b93` | Intel HEX Calibration Firmware |
+| `A2WC412D-2005-USDM-Subaru-Forester-XT-AT.hex` | 1.00 MB | `620090fc037ffcaae2d944972908301a` | Intel HEX Calibration Firmware |
+| `A2WC412I-2005-USDM-Subaru-Forester-XT-MT.hex` | 1.00 MB | `9b60793df14d2ca893bdb22e46cc15f3` | Intel HEX Calibration Firmware |
+| `A2WC420F-2004-EDM-Forester-XT.hex` | 512.0 KB | `f6747c9eb891181dc2808fd666a06a82` | Intel HEX Calibration Firmware |
+| `A2WC420H-2005-ADM-Subaru-Forester-XT-AT.hex` | 512.0 KB | `60ccbaba7554e675efbd2d64e504c545` | Intel HEX Calibration Firmware |
+| `A2WC420M-2005-ADM-Subaru-Forester-XT-MT.hex` | 512.0 KB | `ae1134b0a4a082cebc20a4eaed3d9675` | Intel HEX Calibration Firmware |
+| `A2WC50-A2WC50ZU-2004-USDM-Subaru-Baja-XT-AT.hex` | 1.00 MB | `8284fa056b87780ac66835e8ca504200` | Intel HEX Calibration Firmware |
+| `A2WC500C-2005-USDM-Subaru-Legacy-GT-AT.hex` | 1.00 MB | `51e00691dd3bcdaa1ae2a1abd396bda7` | Intel HEX Calibration Firmware |
+| `A2WC500K-2005-USDM-Baja-Turbo.hex` | 1.00 MB | `ca0d8310184c222fb76c434f9205cd2c` | Intel HEX Calibration Firmware |
+| `A2WC500L-2005-USDM-Baja-Turbo.hex` | 1.00 MB | `fd95f57e60b1497669b1128cf8aab13c` | Intel HEX Calibration Firmware |
+| `A2WC500N-2005-USDM-Legacy-GT.hex` | 1.00 MB | `8947699bb0880c17cbd2b532977ae4d4` | Intel HEX Calibration Firmware |
+| `A2WC500R-2005-USDM-Subaru-Outback-XT-AT.hex` | 1.00 MB | `e5d8c4dbc04a503f59697f51428faf13` | Intel HEX Calibration Firmware |
+| `A2WC500S-2005-USDM-Subaru-Outback-XT-MT.hex` | 1.00 MB | `1c70c4fd302d51721dcfd0b15abfc1d2` | Intel HEX Calibration Firmware |
+| `A2WC501K-2005-USDM-Subaru-Baja-Turbo-AT.hex` | 1.00 MB | `432e2fac58a1cfdd6b5187fbdebfe041` | Intel HEX Calibration Firmware |
+| `A2WC501L-2005-USDM-Baja-Turbo.hex` | 1.00 MB | `4195203aa58acf859986527861a418c2` | Intel HEX Calibration Firmware |
+| `A2WC510C-2005-USDM-Legacy-GT.hex` | 1.00 MB | `f82fa667bc446feef1280c7a4192a408` | Intel HEX Calibration Firmware |
+| `A2WC510N-2005-USDM-Subaru-Legacy-GT-MT.hex` | 1.00 MB | `4853b6cf7c8b316cda0d6c4de7a42216` | Intel HEX Calibration Firmware |
+| `A2WC510R-2005-USDM-Subaru-Outback-XT-AT.hex` | 1.00 MB | `ec8ef57bc8488437ffe771b9e61d5614` | Intel HEX Calibration Firmware |
+| `A2WC510S-2005-USDM-Subaru-Outback-XT-MT.hex` | 1.00 MB | `9ab14f8eaa5fea95c665be6fec72a9fd` | Intel HEX Calibration Firmware |
+| `A2WC511N-2005-USDM-Subaru-Legacy-GT-MT.hex` | 1.00 MB | `11fdac3b71f5704fda9feef229c1b81f` | Intel HEX Calibration Firmware |
+| `A2WC511R-2005-USDM-Outback-XT.hex` | 1.00 MB | `9a667f12b4ef04eae6a94cc77bc7fce2` | Intel HEX Calibration Firmware |
+| `A2WC521C-2005-USDM-Legacy-GT.hex` | 1.00 MB | `e5d15c721e41e4587f105e39cbee4b87` | Intel HEX Calibration Firmware |
+| `A2WC521N-2005-USDM-Legacy-GT.hex` | 1.00 MB | `547b01bda1ec153c4456f823ba1fdc3e` | Intel HEX Calibration Firmware |
+| `A2WC521R-2005-USDM-Subaru-Outback-XT-AT.hex` | 1.00 MB | `9d7c790fe4ca218a7c038fd599bf735c` | Intel HEX Calibration Firmware |
+| `A2WC522N-2005-USDM-Legacy-GT-MT.hex` | 1.00 MB | `fb0c4e29dd74cc347d264dd22bb31cac` | Intel HEX Calibration Firmware |
+| `A2WC522S-2005-USDM-Subaru-Outback-XT-MT.hex` | 1.00 MB | `788a8ebcaf239ec24e5c934e34ec24a4` | Intel HEX Calibration Firmware |
+| `A2WD000A-2004-JDM-Subaru-Legacy-GT-AT.hex` | 512.0 KB | `fd4da1a30fab20fed69f518921b69f2d` | Intel HEX Calibration Firmware |
+| `A2WD001A-2004-JDM-Legacy-GT.hex` | 512.0 KB | `0fb496d67f5661af4e0cee4a804f8001` | Intel HEX Calibration Firmware |
+| `A2WD001B-2004-JDM-Subaru-Legacy-GT-MT.hex` | 512.0 KB | `96e0dc4a381e1206f1c076a0167290a0` | Intel HEX Calibration Firmware |
+| `A2WD001G-2004-ADM-Liberty-GT.hex` | 512.0 KB | `59dda20b81378e5ccd84ed19e47b1f45` | Intel HEX Calibration Firmware |
+| `A2WD002T-2005-ADM-Liberty-GT.hex` | 512.0 KB | `105fad0e0e2938083e529b6b13d58e04` | Intel HEX Calibration Firmware |
+| `A2WD010A-2004-JDM-Subaru-Legacy-GT-AT.hex` | 512.0 KB | `700c8599a0136655e8d466c7d7b0c4f8` | Intel HEX Calibration Firmware |
+| `A2WD010B-2004-JDM-Subaru-Legacy-GT-MT.hex` | 512.0 KB | `b4cb8da8abb09525bda0cce80c3beaac` | Intel HEX Calibration Firmware |
+| `A2WD010G-2004-ADM-Subaru-Liberty-GT-AT.hex` | 512.0 KB | `aeee9fbe315ad7bb600c4303067e3408` | Intel HEX Calibration Firmware |
+| `A2WD010T-2005-ADM-Subaru-Liberty-GT-MT.hex` | 512.0 KB | `7c49a7d8d580b601e9cd5c83d47eb603` | Intel HEX Calibration Firmware |
+| `A2WD010Y-2006-ADM-Subaru-Liberty-GT-AT.hex` | 512.0 KB | `a144f75ab32d160cccf845db3c1f1408` | Intel HEX Calibration Firmware |
+| `A2WD010Z-2006-ADM-Subaru-Liberty-GT-MT.hex` | 512.0 KB | `6ead59f5f94b701e6335cf8cef854499` | Intel HEX Calibration Firmware |
+| `A2WD012A-2004-JDM-Subaru-Legacy-GT-AT.hex` | 512.0 KB | `88a9031b9dc771645a6ae832154935e2` | Intel HEX Calibration Firmware |
+| `A2WD012B-2004-JDM-Legacy-GT.hex` | 512.0 KB | `7e7b9acfde9e5dfae982fc1c3fc71772` | Intel HEX Calibration Firmware |
+| `A2WD012G-2004-ADM-Subaru-Liberty-GT-AT.hex` | 512.0 KB | `907a23eb7234359e8cd343d5d5f3ea73` | Intel HEX Calibration Firmware |
+| `A2WD012T-2005-ADM-Subaru-Liberty-GT-MT.hex` | 512.0 KB | `59871c31953e490c1d9bc3640932f07b` | Intel HEX Calibration Firmware |
+| `A2WF100L-2006-USDM-Subaru-Baja-Turbo-MT.hex` | 1.00 MB | `07520d2a8996b9d6360b20e7ca70185d` | Intel HEX Calibration Firmware |
+| `A2WF101K-2006-USDM-Subaru-Baja-Turbo-AT.hex` | 1.00 MB | `a42f05f5f1201900d10acc21f7c65352` | Intel HEX Calibration Firmware |
+| `A2WF101L-2006-USDM-Baja-Turbo.hex` | 1.00 MB | `c523ae1af3f663793ce5d27592425a65` | Intel HEX Calibration Firmware |
+| `A2WF200C-2006-USDM-Subaru-Legacy-GT-AT.hex` | 1.00 MB | `26364310acbae64a23e9577d1817ffa3` | Intel HEX Calibration Firmware |
+| `A2WF200N-2006-USDM-Legacy-GT.hex` | 1.00 MB | `ecf94e7fb46a73d140517514edda0e90` | Intel HEX Calibration Firmware |
+| `A2WF200R-2006-USDM-Outback-XT.hex` | 1.00 MB | `3fffdddc854fa4cb1fc392f9245c0692` | Intel HEX Calibration Firmware |
+| `A2WF200S-2006-USDM-Subaru-Outback-XT-MT.hex` | 1.00 MB | `34798007e9c6a11f684cf65a8f2c441e` | Intel HEX Calibration Firmware |
+| `A2ZJ201D-2004-USDM-Forester-XT.hex` | 512.0 KB | `ee3fd9cc1dfee783d58d65ea9e4c05bc` | Intel HEX Calibration Firmware |
+| `A2ZJ500F-2004-EDM-Forester-XT.hex` | 512.0 KB | `23c1fc210f19f2c2cce7de0dfd5198d6` | Intel HEX Calibration Firmware |
+| `A2ZJ500H-2004-ADM-Subaru-Forester-XT-AT.hex` | 512.0 KB | `ec5543cb95792fa6b51fcbb389240213` | Intel HEX Calibration Firmware |
+| `A2ZJ500I-2004-USDM-Subaru-Forester-XT-MT.hex` | 512.0 KB | `97b3a930995e2bf9bb8c500fc365c503` | Intel HEX Calibration Firmware |
+| `A2ZJ500J-2004-USDM-Subaru-Impreza-STi.hex` | 512.0 KB | `08ac0e557c4825edc1ab09538cc9fbb6` | Intel HEX Calibration Firmware |
+| `A2ZJ500K-2004-USDM-Baja-Turbo.hex` | 512.0 KB | `7e42c603b4aebc2477f9fd30939ee0ca` | Intel HEX Calibration Firmware |
+| `A2ZJ500L-2004-USDM-Subaru-Baja-Turbo-MT.hex` | 512.0 KB | `7cc9d2021ad376fbbc90def2525f4463` | Intel HEX Calibration Firmware |
+| `A2ZJ500M-2004-ADM-Subaru-Forester-XT-MT.hex` | 512.0 KB | `43753a573621a2f49c32c772bb34ba4d` | Intel HEX Calibration Firmware |
+| `A2ZJ512I-2004-USDM-Forester-XT.hex` | 512.0 KB | `4512a285976b0915f547d64880f284b8` | Intel HEX Calibration Firmware |
+| `A2ZJ600B-2004-JDM-Legacy-GT.hex` | 512.0 KB | `8072af4a2509b0699fe7bc907c251aac` | Intel HEX Calibration Firmware |
+| `A2ZJ601A-2004-JDM-Subaru-Legacy-GT-AT.hex` | 512.0 KB | `45a9dcac02981e161e992627cf036ed3` | Intel HEX Calibration Firmware |
+| `A2ZJ700J-2004-USDM-Subaru-Impreza-STI.hex` | 512.0 KB | `0d8b729e48dc4b83f859d8f8dec5fff0` | Intel HEX Calibration Firmware |
+| `A2ZJ710J-2004-USDM-Subaru-Impreza-STi.hex` | 512.0 KB | `32d9ce606c0eabb81d61972527f782a5` | Intel HEX Calibration Firmware |
+| `A2ZJ800A-2004-JDM-Legacy-GT.hex` | 512.0 KB | `803a6f5bce103e03fb9ebd4216382e39` | Intel HEX Calibration Firmware |
+| `A2ZJ800G-2004-ADM-Subaru-Liberty-GT-AT.hex` | 512.0 KB | `9ecea7d00d6d54220980f4fd6d95e82f` | Intel HEX Calibration Firmware |
+| `A2ZJA00P-2005-EDM-Subaru-Forester-XT-MT-AT.hex` | 512.0 KB | `f84619ae4ec878dab85012c314ce47c6` | Intel HEX Calibration Firmware |
+| `A2ZJA00Q-2005-ADM-Forester-XT.hex` | 512.0 KB | `8e713e629395ba4bddf32fae17e6b896` | Intel HEX Calibration Firmware |
+| `A2ZJA10P-2005-EDM-Forester-XT.hex` | 512.0 KB | `1aac1e342c6f1d93bf7af6ecf61525c0` | Intel HEX Calibration Firmware |
+| `A2ZJB10J-2005-USDM-Subaru-Impreza-STi.hex` | 1.00 MB | `b9749623211f970e6d6e21c2c542feea` | Intel HEX Calibration Firmware |
+| `A2ZJB11J-2005-USDM-Subaru-Impreza-STi-MT.hex` | 1.00 MB | `24d86490cccb2c10d35497201fb412e7` | Intel HEX Calibration Firmware |
+| `A2ZJC00A-2005-JDM-Legacy-2.0-GT-Auto.hex` | 512.0 KB | `67828a60f54b4254e53ab9c7e18d527c` | Intel HEX Calibration Firmware |
+| `A2ZJC00A-2005-JDM-Subaru-Legacy-GT-AT.hex` | 512.0 KB | `4362eee2f01ddbdf4d6ea003c2e815e7` | Intel HEX Calibration Firmware |
+| `A2ZJC00B-2004-JDM-Subaru-Legacy-GT-MT.hex` | 512.0 KB | `74461053f99def5904153c5fe993660f` | Intel HEX Calibration Firmware |
+| `A2ZJC00G-2004-ADM-Subaru-Liberty-GT-AT.hex` | 512.0 KB | `1c9454ddf0a33bb7d9dc24de2a9fecbf` | Intel HEX Calibration Firmware |
+| `A2ZJD00A-2004-JDM-Subaru-Legacy-GT-AT.hex` | 512.0 KB | `f940cbf98ab1afe7e7333536ecab9bc7` | Intel HEX Calibration Firmware |
+| `A2ZJD00B-2004-JDM-Subaru-Legacy-GT-MT.hex` | 512.0 KB | `818b6403fe0928058cafd930d97419cf` | Intel HEX Calibration Firmware |
+| `A2ZJD00G-2004-ADM-Subaru-Liberty-GT-AT.hex` | 512.0 KB | `bbbe01bae775a7383331b16b14dfd19d` | Intel HEX Calibration Firmware |
+| `A2ZJD02A-2003-JDM-Legacy-2.0-GT-Auto.hex` | 512.0 KB | `6638126e31af2bb237485d4d191b56f8` | Intel HEX Calibration Firmware |
+| `A2ZJD02G-2004-ADM-Liberty-GT.hex` | 512.0 KB | `42547d485bfa9567d542471beec8a0e2` | Intel HEX Calibration Firmware |
+| `A2ZJE11J-2006-USDM-Subaru-Impreza-STI.hex` | 1.00 MB | `e0a5d228494ca922efa262ad92c486d6` | Intel HEX Calibration Firmware |
+| `A4RG050N-2001-02-JDM-Subaru-Impreza-STi-MT-AT.hex` | 160.0 KB | `1606ac50960f84da4b8aafacd5b19abe` | Intel HEX Calibration Firmware |
+| `A4RG050R-2001-02-JDM-Subaru-Impreza-STi-MT-AT.hex` | 160.0 KB | `1545cac194d006107c7e6b13675ab98c` | Intel HEX Calibration Firmware |
+| `A4RG051N-2001-02-JDM-Subaru-Impreza-STi-MT-AT.hex` | 160.0 KB | `ef343a0bf2a1c14173b974a727b98cc0` | Intel HEX Calibration Firmware |
+| `A4RG052N-2002-JDM-Subaru-Impreza-STI-S202.hex` | 160.0 KB | `a13b97888abea09da22ba58d44ac6cfc` | Intel HEX Calibration Firmware |
+| `A4RG060P-2001-02-ADM-Subaru-Impreza-STi.hex` | 192.0 KB | `c0958cf777aedac2cdb6d4a8f57157e7` | Intel HEX Calibration Firmware |
+| `A4RG060Q-2001-02-EDM-Subaru-Impreza-STi-MT.hex` | 192.0 KB | `dd70f97546c37167ba7dc5ca2588e429` | Intel HEX Calibration Firmware |
+| `A4RG060Q-2002-EDM-Subaru-Impreza-STI.hex` | 160.0 KB | `366993cd7553e4077989beb327ecb9c8` | Intel HEX Calibration Firmware |
+| `A4RI200I-2001-02-JDM-Subaru-Forester-Turbo-MT-AT.hex` | 160.0 KB | `cf66b5e9883139cc849ba6722c2d529e` | Intel HEX Calibration Firmware |
+| `A4RI300I-2001-02-JDM-Subaru-Forester-Turbo-MT-AT.hex` | 160.0 KB | `d099a74f5e889991994074b9db143e22` | Intel HEX Calibration Firmware |
+| `A4RI401I-2001-02-JDM-Forester-Turbo.hex` | 160.0 KB | `3dca02b26b5541a71ba065c0e884c05e` | Intel HEX Calibration Firmware |
+| `A4RL100J-2003-EDM-Forester-Turbo.HEX` | 160.0 KB | `9218becb1fc8a6b9de2c95c8c80a41af` | Intel HEX Calibration Firmware |
+| `A4RL100K-2003-ADM-Forester-Turbo.hex` | 160.0 KB | `3c6e2020312ac2c7eab203537109bbe0` | Intel HEX Calibration Firmware |
+| `A4RM100F-2005-ADM-Subaru-Impreza-WRX.hex` | 160.0 KB | `3b105d3a1c45415642dc0fbd30eb026e` | Intel HEX Calibration Firmware |
+| `A4RM100G-2003-ADM-Subaru-Impreza-STi-MT-AT.hex` | 160.0 KB | `162922ffd8b667c314f8d1a465c03708` | Intel HEX Calibration Firmware |
+| `A4RM100H-2003-EDM-Subaru-Impreza-STI.hex` | 160.0 KB | `7f8c77743bb7e95d3bbd5d3ee9fe42f9` | Intel HEX Calibration Firmware |
+| `A4RM200K-2005-SADM-Subaru-Impreza-WRX-MT-AT.hex` | 192.0 KB | `684928d475019d67e53c9eccc277a61c` | Intel HEX Calibration Firmware |
+| `A4RN1000-2001-02-EDM-Subaru-Impreza-STi.hex` | 192.0 KB | `8113333beb8a99c60b2d55fb47b87437` | Intel HEX Calibration Firmware |
+| `A4RN200H-2003-EDM-Subaru-Impreza-STi-MT.hex` | 160.0 KB | `137e8cc0a189fc7f7795eab8688dc7c3` | Intel HEX Calibration Firmware |
+| `A4RN300G-2005-EDM-Subaru-Impreza-STI.hex` | 160.0 KB | `71ff1dbe30308bf4092009b530665669` | Intel HEX Calibration Firmware |
+| `A4RN300I-2004-ADM-Subaru-Impreza-STi.hex` | 192.0 KB | `beb48bb250c3ba0e6e65a94537458b8a` | Intel HEX Calibration Firmware |
+| `A4SD501A-2001-02-JDM-Subaru-Impreza-WRX-MT-AT.hex` | 160.0 KB | `d7dfd939fadb42e83b7791891337cfa8` | Intel HEX Calibration Firmware |
+| `A4SD800A-2001-02-JDM-Subaru-Impreza-WRX.hex` | 160.0 KB | `a9a9d1c63f724cacd7160acd928bbb23` | Intel HEX Calibration Firmware |
+| `A4SD800B-2001-02-JDM-Subaru-Impreza-STi-MT-AT.hex` | 160.0 KB | `0c1f5c50e759fbf888f85791cd1aa2a4` | Intel HEX Calibration Firmware |
+| `A4SD900A-2001-02-JDM-Subaru-Impreza-WRX-MT-AT.hex` | 192.0 KB | `08057489bd2e44d6c6d6b00f848f3b8a` | Intel HEX Calibration Firmware |
+| `A4SD900B-2001-02-JDM-Subaru-Impreza-STi.hex` | 160.0 KB | `0c1b14f20d0dc62733ba13a52f9df5b3` | Intel HEX Calibration Firmware |
+| `A4SDA00P-2001-02-JDM-Subaru-Impreza-STi-MT-AT.hex` | 192.0 KB | `5b311fa5293a2365ffaed5e116671f9c` | Intel HEX Calibration Firmware |
+| `A4SDA00Q-2001-02-JDM-Subaru-Impreza-STi-MT-AT.hex` | 160.0 KB | `8ac72319ae63d059e5c4f7ce1542af0f` | Intel HEX Calibration Firmware |
+| `A4SDA01B-2001-02-JDM-Subaru-Impreza-STi.hex` | 160.0 KB | `17f078e673d26ec5eaa638c69f7b11a6` | Intel HEX Calibration Firmware |
+| `A4SDA01Q-2001-02-JDM-Subaru-Impreza-STi.hex` | 192.0 KB | `be68b83eee6c2e945cd738c6c16d73b9` | Intel HEX Calibration Firmware |
+| `A4SE300D-2001-02-EDM-Subaru-Impreza-WRX-MT-AT.hex` | 160.0 KB | `6bda0ec231989b2bd29aa676b171202e` | Intel HEX Calibration Firmware |
+| `A4SE700D-2001-02-EDM-Subaru-Impreza-WRX.hex` | 160.0 KB | `230beabcfcc4f2d9f7a3df84fbf49f3e` | Intel HEX Calibration Firmware |
+| `A4SE700D-2001-EDM-Subaru-Impreza-WRX.hex` | 192.0 KB | `00c0dfedadfd6186120e67c59910d1ac` | Intel HEX Calibration Firmware |
+| `A4SE700E-2001-02-EDM-Forester-Turbo.hex` | 160.0 KB | `a4dea3f80016aff7e810217c55e3b496` | Intel HEX Calibration Firmware |
+| `A4SE700F-2001-02-ADM-Subaru-Forester-Turbo-MT-AT.hex` | 160.0 KB | `f2bf5ef894e2ce3761f749013b93bc8b` | Intel HEX Calibration Firmware |
+| `A4SE700I-2001-02-ADM-Subaru-Impreza-WRX.hex` | 192.0 KB | `6404e4b7aa21c5c216ccb57728f64a50` | Intel HEX Calibration Firmware |
+| `A4SE700J-2001-02-ADM-Forester-Turbo.hex` | 160.0 KB | `6d0cb59f82e22b5dceea071c645b871b` | Intel HEX Calibration Firmware |
+| `A4SE900D-2001-EDM-Subaru-Impreza-WRX.hex` | 192.0 KB | `4deaace37a158fb0866655cf7aadf3f5` | Intel HEX Calibration Firmware |
+| `A4SE900I-2001-02-ADM-Subaru-Impreza-WRX.hex` | 192.0 KB | `038927ab4c8db265e63b778882048c53` | Intel HEX Calibration Firmware |
+| `A4SG900C-2002-USDM-Subaru-Impreza-WRX.hex` | 192.0 KB | `96d0fe9cd6d646a8a8176470653fc5d9` | Intel HEX Calibration Firmware |
+| `A4SGA00C-2002-USDM-Subaru-Impreza-WRX.hex` | 160.0 KB | `e37912cebbfae5c87a22ea7651e24344` | Intel HEX Calibration Firmware |
+| `A4SGC00C-2002-USDM-Subaru-Impreza-WRX.hex` | 160.0 KB | `669e94cb3ae606c0c74182de67b37c02` | Intel HEX Calibration Firmware |
+| `A4SGD10C-2002-USDM-Subaru-Impreza-WRX.hex` | 192.0 KB | `264d59e6712a7e35068673e4275c64d7` | Intel HEX Calibration Firmware |
+| `A4SGE00C-2002-USDM-Subaru-Impreza-WRX-MT-AT.hex` | 160.0 KB | `2e92f33fc5e3c87e45a4c7ff289388c2` | Intel HEX Calibration Firmware |
+| `A4SGE01C-2002-USDM-Subaru-Impreza-WRX.hex` | 160.0 KB | `7f2196062ba1543582ce190d3874b4a7` | Intel HEX Calibration Firmware |
+| `A4SH701G-2002-JDM-Subaru-Legacy-BH-MT-AT.hex` | 160.0 KB | `5e6acc5d899c853999ae7256746c8cc4` | Intel HEX Calibration Firmware |
+| `A4SH701K-2002-ADM-Liberty-B4.hex` | 160.0 KB | `5ceb3b4ecd74b419342aee79e2fcef02` | Intel HEX Calibration Firmware |
+| `A4SHA10R-2003-ADM-Liberty-B4.hex` | 160.0 KB | `3e3c43073767257391be898f5bc5e635` | Intel HEX Calibration Firmware |
+| `A4SHB00G-2002-JDM-Subaru-Legacy-BH-MT-AT.hex` | 160.0 KB | `d62a17c1e9bab48178bb1b6a3f402cec` | Intel HEX Calibration Firmware |
+| `A4SHB00H-2002-JDM-Legacy-B4.hex` | 160.0 KB | `902eb6c97e299e78b236437104cdb66e` | Intel HEX Calibration Firmware |
+| `A4SHC00G-2002-JDM-Legacy-B4.hex` | 160.0 KB | `b8bf3cb9107140baa0a55c2fcb7a2d19` | Intel HEX Calibration Firmware |
+| `A4SHC00H-2002-03-JDM-Subaru-Legacy-2.0TT-MT.hex` | 160.0 KB | `4a0091af963c76846aa68e8608787d16` | Intel HEX Calibration Firmware |
+| `A4SHC01G-2002-JDM-Legacy-B4-MTAT.hex` | 160.0 KB | `0f5fc1a5eb70c95b81b58fb10c19dc90` | Intel HEX Calibration Firmware |
+| `A4TC101L-2003-USDM-Subaru-Impreza-WRX.hex` | 160.0 KB | `ca0a36d8bdc99fc11f7ec9fadbdc67f4` | Intel HEX Calibration Firmware |
+| `A4TC300K-2003-USDM-Subaru-Impreza-WRX-AT.hex` | 160.0 KB | `9db48fbd2826f15615891dc30b6902a5` | Intel HEX Calibration Firmware |
+| `A4TC300L-2003-USDM-Subaru-Impreza-WRX-MT.hex` | 160.0 KB | `d17a0a1c1006d5fa4321d8c9120e2f8b` | Intel HEX Calibration Firmware |
+| `A4TC400L-2003-USDM-Subaru-Impreza-WRX.hex` | 192.0 KB | `e49a9ac66b80db822d103173bc4cff2b` | Intel HEX Calibration Firmware |
+| `A4TC401L-2003-USDM-Subaru-Impreza-WRX.hex` | 192.0 KB | `3ac562538f08e6cf972d5c1973e83bdc` | Intel HEX Calibration Firmware |
+| `A4TE000A-2003-JDM-Subaru-Impreza-WRX-MT-AT.hex` | 160.0 KB | `c2a4f2bca2838ff97be78044fae420bf` | Intel HEX Calibration Firmware |
+| `A4TE001B-2003-JDM-Subaru-Impreza-STI.hex` | 160.0 KB | `a964c3d48e4141ee214fcf9c331b3afb` | Intel HEX Calibration Firmware |
+| `A4TE001G-2003-EDM-Subaru-Impreza-WRX.hex` | 160.0 KB | `672ea81300066acec53b0d426e4b60cf` | Intel HEX Calibration Firmware |
+| `A4TE001I-2003-ADM-Subaru-Impreza-WRX.hex` | 192.0 KB | `ac3f42a0b7e1a54781951254a893ab38` | Intel HEX Calibration Firmware |
+| `A4TE002B-2003-JDM-Subaru-Impreza-STi.hex` | 192.0 KB | `864bd21fa5ea49b66e20105b8e3725e8` | Intel HEX Calibration Firmware |
+| `A4TE002C-2003-JDM-Subaru-Impreza-STI-SpecC.hex` | 192.0 KB | `0a6207d0b8286ac88e558ea0ed6e99c0` | Intel HEX Calibration Firmware |
+| `A4TE100G-2003-EDM-Subaru-Impreza-WRX.hex` | 160.0 KB | `9a429bc73b0ae20356dd74cc4df603cd` | Intel HEX Calibration Firmware |
+| `A4TE200A-2004-JDM-Subaru-Impreza-WRX.hex` | 192.0 KB | `09c8f745fda2d66c8c93bb05feba5646` | Intel HEX Calibration Firmware |
+| `A4TE300D-2005-EDM-Subaru-Impreza-WRX-MT-AT.hex` | 192.0 KB | `875d34fe97d48f64981e79156a737d7c` | Intel HEX Calibration Firmware |
+| `A4TF300E-2004-USDM-Subaru-Impreza-WRX.hex` | 192.0 KB | `0bebf7577f186d1ea139a0418209805a` | Intel HEX Calibration Firmware |
+| `A4TF300F-2004-USDM-Subaru-Impreza-WRX.hex` | 192.0 KB | `95c60ccc8d055525ec97ae6ca5b5d90b` | Intel HEX Calibration Firmware |
+| `A4TF400E-2004-USDM-Subaru-Impreza-WRX-AT.hex` | 160.0 KB | `e6071c372e72562958b9e4bfa033d056` | Intel HEX Calibration Firmware |
+| `A4TF500F-2004-USDM-Subaru-Impreza-WRX.hex` | 192.0 KB | `1ba96e34cb33af28b121fee721c4a405` | Intel HEX Calibration Firmware |
+| `A4TF510E-2004-USDM-Subaru-Impreza-WRX-AT.hex` | 160.0 KB | `490765d924a16696a9fa05a6d9d26054` | Intel HEX Calibration Firmware |
+| `A4TF510F-2004-USDM-Subaru-Impreza-WRX-MT.hex` | 160.0 KB | `0e9995a770b40f58253a1a2992498d6e` | Intel HEX Calibration Firmware |
+| `A4TF520F-2004-USDM-Subaru-Impreza-WRX-MT.hex` | 192.0 KB | `f8c87c87d0e45d36f006ddcb64a5baa3` | Intel HEX Calibration Firmware |
+| `A4TF520F-2004-USDM-Subaru-Impreza-WRX.hex` | 192.0 KB | `aaee8ca7d86938e910a981f5e2418bac` | Intel HEX Calibration Firmware |
+| `A4TF800E-2005-USDM-Subaru-Impreza-WRX-AT.hex` | 160.0 KB | `2fd6351129926326505851ab0471b72a` | Intel HEX Calibration Firmware |
+| `A4TF800F-2005-USDM-Subaru-Impreza-WRX.hex` | 192.0 KB | `976a2e2dce947747c2f4d31cd5f6d069` | Intel HEX Calibration Firmware |
+| `A4TF810F-2005-USDM-Subaru-Impreza-WRX-MT.hex` | 160.0 KB | `1cbc8291b4a3bbc2b9493dc88a83eafb` | Intel HEX Calibration Firmware |
+| `A4TH000N-2004-ADM-Subaru-Impreza-WRX-MT-AT.hex` | 160.0 KB | `75ed372937dbee78b7054442ddb69bf4` | Intel HEX Calibration Firmware |
+| `A4TH000O-2004-ADM-Subaru-Impreza-WRX.hex` | 160.0 KB | `77fb07ceaeafd3e2288a45a9b38adebb` | Intel HEX Calibration Firmware |
+| `A4TH100H-2005-ADM-Subaru-Impreza-WRX-MT-AT.hex` | 192.0 KB | `f051dcdc8209272221b7ea4d3ab8bce1` | Intel HEX Calibration Firmware |
+| `A4TH100L-2005-ADM-Subaru-Impreza-WRX-WRP10-limited.hex` | 192.0 KB | `89cba7a22cd5df885f3608a004e09d12` | Intel HEX Calibration Firmware |
+| `A4TJ111B-2005-JDM-Subaru-Impreza-STi.hex` | 160.0 KB | `403d6c73e22306e798262dbba7975ed5` | Intel HEX Calibration Firmware |
+| `A4TJ111C-2005-JDM-Subaru-Impreza-STi-MT-AT.hex` | 160.0 KB | `bca077246b66f3c4e649119fb06cfb20` | Intel HEX Calibration Firmware |
+| `A4TJ120S-2005-JDM-Subaru-Impreza-STI-S203.hex` | 160.0 KB | `439070aec78d02bda59bf167e29ebd65` | Intel HEX Calibration Firmware |
+| `A4TJ121B-2005-JDM-Subaru-Impreza-STi.hex` | 160.0 KB | `6b60cafec3e1dd3b6c6868911fb599b3` | Intel HEX Calibration Firmware |
+| `A4TJ121C-2006-JDM-Subaru-Impreza-STI-SpecC-TypeRA.hex` | 160.0 KB | `621564a7a02609e74fced30994103ac7` | Intel HEX Calibration Firmware |
+| `A4TJ121S-2005-JDM-Subaru-Impreza-STI-S204.hex` | 160.0 KB | `7ea2433ae6ac9117964dd45a6b8529e7` | Intel HEX Calibration Firmware |
+| `A4TJ1X00-20xx-JDM-Subaru-Impreza-STi-MT-AT.hex` | 160.0 KB | `4829e0cb0dddddcdaa47c88391c4b3c7` | Intel HEX Calibration Firmware |
+| `A8DH100E-2006-SADM-Subaru-Forester-XT-AT.hex` | 1.00 MB | `9c04286ba0b099a6a68e5b053db53a1e` | Intel HEX Calibration Firmware |
+| `A8DH100F-2006-EDM-Forester-XT.hex` | 1.00 MB | `dab4f1901dd09218dd2f210771d30ff8` | Intel HEX Calibration Firmware |
+| `A8DH100H-2006-ADM-Subaru-Forester-XT-AT.hex` | 1.00 MB | `d1706f09ba40ce07fcec6343500872d2` | Intel HEX Calibration Firmware |
+| `A8DH100I-2006-USDM-Subaru-Forester-XT-MT.hex` | 1.00 MB | `6b8d908bf6dd178eb3b8e0b7eafb9039` | Intel HEX Calibration Firmware |
+| `A8DH100M-2006-ADM-Forester-XT.hex` | 1.00 MB | `72de28c1930dcb5f85bc5c04bbdf737f` | Intel HEX Calibration Firmware |
+| `A8DH100P-2006-EDM-Forester-XT-AT.hex` | 1.00 MB | `80b8ce432fd4cd0ff5b271ec1c3b5fd4` | Intel HEX Calibration Firmware |
+| `A8DH101I-2006-USDM-Subaru-Forester-XT-MT.hex` | 1.00 MB | `98b13db2e06b6a71be4754e616e7302d` | Intel HEX Calibration Firmware |
+| `A8DH101P-2006-EDM-Subaru-Forester-XT-AT.hex` | 1.00 MB | `9ca29c7de13493aa8f2403c5e9f60668` | Intel HEX Calibration Firmware |
+| `A8DH200O-2006-ADM-Subaru-Impreza-WRX-MT.hex` | 1.00 MB | `5a1090c1dfd9b02d887e6a848391003a` | Intel HEX Calibration Firmware |
+| `A8DH200U-2006-SADM-Subaru-Impreza-WRX-MT.hex` | 1.00 MB | `df424a25ce9a60935490957d7db7e473` | Intel HEX Calibration Firmware |
+| `A8DH200V-2006-ADM-Subaru-Impreza-STI-MT.hex` | 1.00 MB | `2dd5e9008b3f8284f167d1526f44896d` | Intel HEX Calibration Firmware |
+| `A8DH200W-2006-USDM-Subaru-Impreza-WRX-AT.hex` | 1.00 MB | `203f8ce5965f8ecafa939e404edc9625` | Intel HEX Calibration Firmware |
+| `A8DH200X-2006-USDM-Subaru-Impreza-WRX.hex` | 1.00 MB | `534eef6a1581dcc977da31d26047c0be` | Intel HEX Calibration Firmware |
+| `A8DH200Y-2006-EDM-Subaru-Impreza-WRX-MT.hex` | 1.00 MB | `7379cfe74819356fa5394a5a10f175d5` | Intel HEX Calibration Firmware |
+| `A8DH200Z-2006-EDM-Subaru-Impreza-STI.hex` | 1.00 MB | `3762ad31c40d361a3b39d51cbb298a70` | Intel HEX Calibration Firmware |
+| `A8DH201X-2006-USDM-Subaru-Impreza-WRX-MT.hex` | 1.00 MB | `fc215c5c2fbe9020c866c0eca66faa22` | Intel HEX Calibration Firmware |
+| `A8DH202X-2006-USDM-Subaru-Impreza-WRX-MT.hex` | 1.00 MB | `cb8f9c78883f01af26ffc86b992f921c` | Intel HEX Calibration Firmware |
+| `A8DH2Z1Z-2006-EDM-Subaru-Impreza-STI.hex` | 1.00 MB | `5aff832fd7d8598f8243cf2a51cc004d` | Intel HEX Calibration Firmware |
+| `A8DK100D-2007-USDM-Subaru-Forester-XT-AT.hex` | 1.00 MB | `2c3152ce17e04387ee752bf641327264` | Intel HEX Calibration Firmware |
+| `A8DK100E-2007-SADM-Subaru-Forester-XT-AT.hex` | 1.00 MB | `c2324bd7e4f029d91c248ff32b4b056d` | Intel HEX Calibration Firmware |
+| `A8DK100F-2007-EDM-Forester-XT-MT.hex` | 1.00 MB | `0c94d07247c98ebcbd8d65e88b4bc8cc` | Intel HEX Calibration Firmware |
+| `A8DK100H-2007-ADM-Forester-XT.hex` | 1.00 MB | `acab57203539336fde6917572292766c` | Intel HEX Calibration Firmware |
+| `A8DK100I-2007-2008-USDM-Forester-XT.hex` | 1.00 MB | `3c1fa0bc2853f0becf1fe4ef5cedc7d6` | Intel HEX Calibration Firmware |
+| `A8DK100L-2007-ADM-Subaru-Impreza-WRX-MT.hex` | 1.00 MB | `36b7b590fb5ac7e6a73783c4171ab693` | Intel HEX Calibration Firmware |
+| `A8DK100M-2007-ADM-Subaru-Forester-XT-MT.hex` | 1.00 MB | `df6e35e3a7ce29a5a4a79c7797ad4108` | Intel HEX Calibration Firmware |
+| `A8DK100O-2007-ADM-Subaru-Impreza-WRX-MT.hex` | 1.00 MB | `8cebe82b7eecb8bb9b81ae3d6e56ceab` | Intel HEX Calibration Firmware |
+| `A8DK100Q-2008-SADM-Subaru-Forester-XT-MT.hex` | 1.00 MB | `05cd60df67fa5d7837196e2db6c7dcbe` | Intel HEX Calibration Firmware |
+| `A8DK100U-2007-SADM-Subaru-Impreza-WRX-MT.hex` | 1.00 MB | `5ea5674a288c6352cbcadcbdb2e02727` | Intel HEX Calibration Firmware |
+| `A8DK100V-2007-ADM-Subaru-Impreza-STI.hex` | 1.00 MB | `20f31e0a79ef4eabd13655b96444df40` | Intel HEX Calibration Firmware |
+| `A8DK100W-2007-USDM-Subaru-Impreza-WRX-AT.hex` | 1.00 MB | `9b5a4392e1766c66a258468006bc5e62` | Intel HEX Calibration Firmware |
+| `A8DK100X-2007-USDM-Subaru-Impreza-WRX.hex` | 1.00 MB | `2bbed125e34ea38094890ca1c298c144` | Intel HEX Calibration Firmware |
+| `A8DK100Y-2007-EDM-Subaru-Impreza-WRX.hex` | 1.00 MB | `1ba05d4dcfb57daff525db3033119230` | Intel HEX Calibration Firmware |
+| `A8DK100Z-2007-EDM-Subaru-Impreza-STI-MT.hex` | 1.00 MB | `465a526be34b2d00fa0a042a0d7d3029` | Intel HEX Calibration Firmware |
+| `A8DK101X-2007-USDM-Subaru-Impreza-WRX-MT.hex` | 1.00 MB | `7b074eb98210e5f7efc2005f8d0cd9c6` | Intel HEX Calibration Firmware |
+| `AE5F300A-2012-JDM-Subaru-Legacy-GT-AT.hex` | 1.00 MB | `e3538dd6172587550990a8669fdf7e74` | Intel HEX Calibration Firmware |
+| `AE5F300B-2009-JDM-Subaru-Legacy-GT-AT.hex` | 1.00 MB | `92c3d88cb103c1948e8a17b922b06ae5` | Intel HEX Calibration Firmware |
+| `AE5F301C-2010-EDM-Legacy-GT.hex` | 1.00 MB | `ad14986b4202f2ffe651d6379ab2a209` | Intel HEX Calibration Firmware |
+| `AE5F301D-2010-ADM-Subaru-Liberty-GT-MT.hex` | 1.00 MB | `740b4cfcf32aa925c1b3dd9d1a31f331` | Intel HEX Calibration Firmware |
+| `AE5F301E-2010-USDM-Subaru-Legacy-GT-MT.hex` | 1.00 MB | `d762df6883f923eedd0fb9c924b9e5b0` | Intel HEX Calibration Firmware |
+| `AE5F301H-2010-EDM-Subaru-Legacy-GT-AT.hex` | 1.00 MB | `7423d8702e31a1d4afaf1072ac11d560` | Intel HEX Calibration Firmware |
+| `AE5I001A-2011-JDM-Subaru-Legacy-GT-AT.hex` | 1.00 MB | `1620c5163f2ce237007131d75353f8ed` | Intel HEX Calibration Firmware |
+| `AE5I410A-2011-JDM-Subaru-Legacy-GT-AT.hex` | 1.00 MB | `17be235f5dd816ecc2956224671e4f90` | Intel HEX Calibration Firmware |
+| `AE5I500F-2012-ADM-Subaru-Liberty-GT-AT.hex` | 1.00 MB | `5053e44b4d9da47e4b82f273b57a1701` | Intel HEX Calibration Firmware |
+| `AE5I500G-2011-JDM-Subaru-Legacy-GT-AT.hex` | 1.00 MB | `daee4e977f12577b122803ff1dfc7c1c` | Intel HEX Calibration Firmware |
+| `AE5I500N-2011-JDM-Subaru-Impreza-STI-AT.hex` | 1.00 MB | `222af94c41427367503dade862145840` | Intel HEX Calibration Firmware |
+| `AE5I910V-2011-USDM-Subaru-Impreza-STI-MT.hex` | 1.00 MB | `1b6fbd9f5830a093261d265063a69399` | Intel HEX Calibration Firmware |
+| `AE5IA10L-2011-USDM-Subaru-Impreza-WRX-MT.hex` | 1.00 MB | `6cd96489ba4e27ba02f71d0872e69bce` | Intel HEX Calibration Firmware |
+| `AE5IB00L-2011-USDM-Subaru-Impreza-WRX-MT.hex` | 1.00 MB | `31238254f6aa4e19b8d1c5a6c374b997` | Intel HEX Calibration Firmware |
+| `AE5IB00V-2011-USDM-Subaru-Impreza-STI-MT.hex` | 1.00 MB | `c302ae721ef947efd760b16d48c58d56` | Intel HEX Calibration Firmware |
+| `AE5IB40L-2011-USDM-Subaru-Impreza-WRX-MT.hex` | 1.00 MB | `305010c60c54a63ec34625b494ab8089` | Intel HEX Calibration Firmware |
+| `AE5IB40R-2011-USDM-Subaru-Forester-XT-AT.hex` | 1.00 MB | `d830455dbc715c724741b4a13ecca736` | Intel HEX Calibration Firmware |
+| `AE5IB40V-2011-USDM-Subaru-Impreza-STI.hex` | 1.00 MB | `0b30f150bf55f0df1bbe53c4daaa698b` | Intel HEX Calibration Firmware |
+| `AE5K410E-2012-USDM-Subaru-Legacy-GT-MT.hex` | 1.00 MB | `5834717660f97ce3bd9ebde163d877ca` | Intel HEX Calibration Firmware |
+| `AE5K500L-2012-USDM-Subaru-Impreza-WRX-MT.hex` | 1.00 MB | `d97314f30fa66e269ebf9df56c81574d` | Intel HEX Calibration Firmware |
+| `AE5K500V-2012-USDM-Subaru-Impreza-STI.Hex` | 1.00 MB | `5c5632cac5ac1ba4e7013fdeadbfe6eb` | Intel HEX Calibration Firmware |
+| `AE5K611L-2012-USDM-Subaru-Impreza-WRX-MT.hex` | 1.00 MB | `6e5f8791a535954386be3daf7d400d82` | Intel HEX Calibration Firmware |
+| `AE5K611V-2012-USDM-Subaru-Impreza-STI-MT.hex` | 1.00 MB | `68b2410bf82cbecb74cc25478ab00213` | Intel HEX Calibration Firmware |
+| `AE5K700L-2012-USDM-Subaru-Impreza-WRX-MT.hex` | 1.00 MB | `414471fb1b2ebea1a0def1bd39dea3b5` | Intel HEX Calibration Firmware |
+| `AE5K700V-2012-USDM-Subaru-Impreza-STI-MT.hex` | 1.00 MB | `c7c49cb70071cca79974d11f2b83fd06` | Intel HEX Calibration Firmware |
+| `AE5K800L-2012-USDM-Subaru-Impreza-WRX-MT.hex` | 1.00 MB | `7385a554edf7a5057112fa42a59d5e54` | Intel HEX Calibration Firmware |
+| `AE5K800V-2012-USDM-Subaru-Impreza-STI-MT.hex` | 1.00 MB | `a47897f9e48e9c13acca7a44df58ac1f` | Intel HEX Calibration Firmware |
+| `AE5L500L-2013-USDM-Subaru-Impreza-WRX-MT.hex` | 1.00 MB | `f038f734b970a087028be82c56161c2b` | Intel HEX Calibration Firmware |
+| `AE5L500R-2013-USDM-Subaru-Forester-XT-MT.hex` | 1.00 MB | `f4c87795562a0c77e6395ca6242d9c96` | Intel HEX Calibration Firmware |
+| `AE5L500V-2013-USDM-Subaru-Impreza-STI-MT.hex` | 1.00 MB | `fb6c4a1d9b4e2e6860d8a1998bfdcbc9` | Intel HEX Calibration Firmware |
+| `AE5L600L-2013-USDM-Subaru-Impreza-WRX-MT.hex` | 1.00 MB | `a8ea39d447f977e270e27ee670243c88` | Intel HEX Calibration Firmware |
+| `AE5L700V-2013-USDM-Subaru-Impreza-STI-MT.hex` | 1.00 MB | `8a99fd3b1f8a881ed5c15d97ff5401fa` | Intel HEX Calibration Firmware |
+| `AE5M100G-2013-EDM-Subaru-Legacy-GT-AT.hex` | 1.00 MB | `818314baab020c6b6be11e08f0a8732c` | Intel HEX Calibration Firmware |
+| `AE5Q100L-2014-USDM-Subaru-Impreza-WRX-MT.hex` | 1.00 MB | `2e228b68300cd2191b6b92579dffebef` | Intel HEX Calibration Firmware |
+| `AE5Q100V-2014-USDM-Subaru-Impreza-STI-MT.hex` | 1.00 MB | `920a6061a328835e121685736b95d99b` | Intel HEX Calibration Firmware |
+| `AE5Q200L-2014-USDM-Subaru-Impreza-WRX-MT.hex` | 1.00 MB | `fb755f284a43d65e07c565d0c1800508` | Intel HEX Calibration Firmware |
+| `AE5R100V-2015-USDM-Subaru-Impreza-STI.hex` | 1.00 MB | `03569163e1e94ac1b6ae370abc38ee28` | Intel HEX Calibration Firmware |
+| `AE5T110V-2016-USDM-Subaru-Impreza-STI-MT.hex` | 1.00 MB | `0bda3250ba8f3034947a5437700cc362` | Intel HEX Calibration Firmware |
+| `AE5T200V-2016-USDM-Subaru-Impreza-STI-MT.hex` | 1.00 MB | `b8ee2214ef9bab27856829403ddb716f` | Intel HEX Calibration Firmware |
+| `AF5G200A-2013-JDM-Forester-SJG-DIT.hex` | 1.50 MB | `a6f5c3dbf22f8563a715d932a45500de` | Intel HEX Calibration Firmware |
+| `AZ1E400C-2008-ADM-Subaru-Impreza-WRX.hex` | 1.00 MB | `7b7e18c40ae0de0dcee357f1fe4bcf53` | Intel HEX Calibration Firmware |
+| `AZ1E400E-2008-ADM-Subaru-Impreza-WRX.hex` | 1.00 MB | `e160efdd5fc4df042bea7b9497da8fc2` | Intel HEX Calibration Firmware |
+| `AZ1E400U-2008-EDM-Subaru-Impreza-WRX.hex` | 1.00 MB | `3a3c56ce76f12d5eed8b835eab1b1b26` | Intel HEX Calibration Firmware |
+| `AZ1E401A-2008-USDM-Subaru-Impreza-WRX-MT.hex` | 1.00 MB | `64f87f5ff864c1607e1fe0034f555886` | Intel HEX Calibration Firmware |
+| `AZ1E401B-2008-USDM-Subaru-Impreza-WRX-AT.hex` | 1.00 MB | `0a0ede43db95dbc658b6cd0958ec806a` | Intel HEX Calibration Firmware |
+| `AZ1G100T-2009-SADM-Subaru-Forester-XT-AT.hex` | 1.00 MB | `c0a096d38d76decb444ae5aed15bf3c0` | Intel HEX Calibration Firmware |
+| `AZ1G101M-2009-10-EDM-Subaru-Forester-XT-MT.hex` | 1.00 MB | `cb4c0658377fe067e94810d3305b1995` | Intel HEX Calibration Firmware |
+| `AZ1G101N-2009-10-EDM-Forester-XT.hex` | 1.00 MB | `eb7364c2b531a9b3529ddf8105182d6c` | Intel HEX Calibration Firmware |
+| `AZ1G101R-2009-USDM-Subaru-Forester-XT-AT.hex` | 1.00 MB | `8a19e1964221505586b5644814ae4e8b` | Intel HEX Calibration Firmware |
+| `AZ1G105L-2009-JDM-Subaru-Forester-XT-AT.hex` | 1.00 MB | `e567bd6bed0caf63d8a498393045f5a7` | Intel HEX Calibration Firmware |
+| `AZ1G111T-2011-SADM-Subaru-Forester-XT-AT.hex` | 1.00 MB | `da210f0fc6cd6e583d888566a2fa0088` | Intel HEX Calibration Firmware |
+| `AZ1G200J-2008-SADM-Subaru-Impreza-STI-MT.hex` | 1.00 MB | `542b2eeeed97235b9f7507052a5149c3` | Intel HEX Calibration Firmware |
+| `AZ1G201G-2008-EDM-Subaru-Impreza-STI.hex` | 1.00 MB | `fecb70ba62a872bc3b79e3436ec423ba` | Intel HEX Calibration Firmware |
+| `AZ1G201I-2008-2009-USDM-Subaru-Impreza-STI.hex` | 1.00 MB | `1aefee8d88ef18cec5a77ba11c57e61f` | Intel HEX Calibration Firmware |
+| `AZ1G202G-2008-EDM-Subaru-Impreza-STI.hex` | 1.00 MB | `a4873244ec69c19a66287799df68681e` | Intel HEX Calibration Firmware |
+| `AZ1G202I-2008-09-USDM-Subaru-Impreza-STI-MT.HEX` | 1.00 MB | `50158e8f4a5647c39c4693b20edb7d73` | Intel HEX Calibration Firmware |
+| `AZ1G300F-2008-JDM-Subaru-Impreza-STI.hex` | 1.00 MB | `5409b90b80f32e7c64f9d0a6896ad024` | Intel HEX Calibration Firmware |
+| `AZ1G301F-2008-JDM-Subaru-Impreza-STI.hex` | 1.00 MB | `f410f5d21926232a4fd44aee124acc7e` | Intel HEX Calibration Firmware |
+| `AZ1G400U-2009-EDM-Subaru-Impreza-WRX.hex` | 1.00 MB | `c678efda62efe31c37570d78addb3937` | Intel HEX Calibration Firmware |
+| `AZ1G400W-2009-ADM-Subaru-Impreza-WRX-MT.hex` | 1.00 MB | `0acedc155b6d0ddea81b18bcdfbebdcc` | Intel HEX Calibration Firmware |
+| `AZ1G400Y-2009-SADM-Subaru-Impreza-WRX-MT.hex` | 1.00 MB | `dc1f2ad548ef9109a5c9fd4394851b20` | Intel HEX Calibration Firmware |
+| `AZ1G401V-2009-USDM-Subaru-Impreza-WRX-MT.hex` | 1.00 MB | `81c08c60748c4fc80200d91ab75e32f1` | Intel HEX Calibration Firmware |
+| `AZ1G500F-2009-JDM-Subaru-Impreza-STI.hex` | 1.00 MB | `e809bb86b92872b6fb198f5ff947a3bd` | Intel HEX Calibration Firmware |
+| `AZ1G500Z-2010-JDM-Subaru-Impreza-STI-R205.hex` | 1.00 MB | `0e6e07c7bcc194f0ccf74f7f2e15c5df` | Intel HEX Calibration Firmware |
+| `AZ1G501K-2009-JDM-Subaru-Impreza-STI-SpecC.hex` | 1.00 MB | `d134ffc040c18218a6a28add68951ee2` | Intel HEX Calibration Firmware |
+| `AZ1G502L-2009-JDM-Subaru-Impreza-STI-AT.hex` | 1.00 MB | `c599672c3ab6620f301aac922921b092` | Intel HEX Calibration Firmware |
+| `AZ1G601R-2010-USDM-Subaru-Forester-XT-AT.hex` | 1.00 MB | `ad23cda606c492ff26ef148106a01289` | Intel HEX Calibration Firmware |
+| `AZ1G700K-2012-EDM-Subaru-Impreza-STI.hex` | 1.00 MB | `ee227ebbebe2a62a4216692e2b4b289c` | Intel HEX Calibration Firmware |
+| `AZ1G701I-2010-USDM-Subaru-Impreza-STI.hex` | 1.00 MB | `c4e1d09c15d7393624e1f54565fb779d` | Intel HEX Calibration Firmware |
+| `AZ1G701V-2010-USDM-Subaru-Impreza-WRX-MT.hex` | 1.00 MB | `d185396a1ec1eccb23e1d623cc3c3933` | Intel HEX Calibration Firmware |
+| `AZ1G702I-2010-USDM-Subaru-Impreza-STi-SE.hex` | 1.00 MB | `e7e602ce2a46ba1f1bd51c6150577299` | Intel HEX Calibration Firmware |
+| `AZ1G710V-2010-USDM-Subaru-Impreza-WRX-MT.hex` | 1.00 MB | `461abbb2d1cbce0a39a8fbd2c2059b54` | Intel HEX Calibration Firmware |
+| `AZ1G800D-2011-SADM-Subaru-Impreza-WRX-MT.hex` | 1.00 MB | `b05f1b9c8576b3f36d2d0bddbd594771` | Intel HEX Calibration Firmware |
+| `AZ1G800F-2011-JDM-Subaru-Impreza-STI-AT.hex` | 1.00 MB | `78fe7d85b8189a564408857cb8a1d408` | Intel HEX Calibration Firmware |
+| `AZ1G800L-2011-SADM-Subaru-Impreza-STI-MT.hex` | 1.00 MB | `aa921ef2189ccaafc34f88e451d9996c` | Intel HEX Calibration Firmware |
+| `AZ1G800S-2012-JDM-Subaru-Impreza-STI-MT.hex` | 1.00 MB | `64cff1e0d51736d492d85fcdd7de5294` | Intel HEX Calibration Firmware |
+| `AZ1G800T-2011-JDM-Subaru-Impreza-WRX-spec.C-MT.hex` | 1.00 MB | `faa8d4a1d00705b5c351c6446e516712` | Intel HEX Calibration Firmware |
+| `AZ1G800V-2012-JDM-Subaru-Impreza-STI-S206.hex` | 1.00 MB | `2dd458395f331f8c1ac9e55439726d59` | Intel HEX Calibration Firmware |
+| `AZ1G900C-2011-ADM-Subaru-Impreza-WRX-MT.hex` | 1.00 MB | `fa7cbb191f9e3cd69d09d9454da49359` | Intel HEX Calibration Firmware |
+| `AZ1G900O-2011-EDM-Subaru-Forester-XT-AT.hex` | 1.00 MB | `e6890a1ccaae0181824ce707e4a4c87e` | Intel HEX Calibration Firmware |
+| `AZ1G900P-2011-EDM-Subaru-Forester-XT-AT.hex` | 1.00 MB | `ba0c24c38881f3e5160f87bf4ac3246d` | Intel HEX Calibration Firmware |
+| `AZ1H102W-2008-JDM-Subaru-Exiga-2.0GT-AT.hex` | 1.00 MB | `0db4dcb4971c3be0b62205a366c3b660` | Intel HEX Calibration Firmware |
+| `AZ1J200N-2010-JDM-Subaru-Forester-XT-MT.hex` | 1.00 MB | `3c43a7ef220a45cc570edeb37198fa91` | Intel HEX Calibration Firmware |
+| `AZ1J400H-2011-EDM-Subaru-Impreza-STI-AT.hex` | 1.00 MB | `baff2443df295d2e74e1befdeaf69cd3` | Intel HEX Calibration Firmware |
+| `AZ1J500G-2011-EDM-Subaru-Impreza-STI.hex` | 1.00 MB | `a90f1945fe4543e6cc612465e1e7db26` | Intel HEX Calibration Firmware |
+| `AZ1J500J-2011-JDM-Subaru-Impreza-STI.hex` | 1.00 MB | `6af20d47ac1ab9e2c9d0e83df4c8cb7a` | Intel HEX Calibration Firmware |
+| `AZ1J500L-2011-JDM-Subaru-Forester-XT-MT.hex` | 1.00 MB | `e5bf0851f197f0097e0dd7ce7eb2316e` | Intel HEX Calibration Firmware |
+| `AZ1J500T-2011-SADM-Subaru-Forester-S.Edition-AT.hex` | 1.00 MB | `84db602a008de5775feb7a9467569c23` | Intel HEX Calibration Firmware |
+| `AZ1J500V-2011-ADM-Subaru-Forester-S-Edition-AT.hex` | 1.00 MB | `e0d48bf1e3391e8c1831e23e1a8a9a90` | Intel HEX Calibration Firmware |
+| `AZ1J500X-2010-JDM-Subaru-Impreza-Exiga-MT.hex` | 1.00 MB | `3cf9a557667496702214bd6be0aecf8a` | Intel HEX Calibration Firmware |
+| `AZ1K000T-2012-JDM-Subaru-Impreza-STI-SpecC.hex` | 1.00 MB | `785e351eb7a2ae6b0cc854753a3b1358` | Intel HEX Calibration Firmware |
+| `AZ1L100C-2014-ADM-Subaru-Impreza-WRX-MT.hex` | 1.00 MB | `e0e098bd5daf45a4f80b8ca73fe14e43` | Intel HEX Calibration Firmware |
+| `AZ1L100G-2013-EDM-Subaru-Impreza-STI-MT.hex` | 1.00 MB | `92e0a8cdab5a446490850a3a7ce3fe8a` | Intel HEX Calibration Firmware |
+| `AZ1L100K-2014-EDM-Subaru-Impreza-STI-MT.hex` | 1.00 MB | `a963ee22877782bfb71ffa942feb8f1f` | Intel HEX Calibration Firmware |
+| `AZ1L100T-2014-JDM-Subaru-Impreza-STI-MT.hex` | 1.00 MB | `9039e214622f264b396b4e6905303406` | Intel HEX Calibration Firmware |
+| `AZ1L100X-2013-JDM-Subaru-Exiga-2.0-GT-AT.hex` | 1.00 MB | `0feae85ae105f5d5877410c99b6bae68` | Intel HEX Calibration Firmware |
+| `AZ1N100G-2014-EDM-Subaru-Impreza-STI.hex` | 1.00 MB | `7d29b6f1c914405f3726c364464afad1` | Intel HEX Calibration Firmware |
+| `AZ1N100M-2014-EDM-Subaru-Impreza-STI.hex` | 1.00 MB | `0a5c3a348597d3ee43f41879ddfbccf3` | Intel HEX Calibration Firmware |
+| `AZ1N100S-2015-JDM-Subaru-Impreza-STI-MT.hex` | 1.00 MB | `a8627309f654aae38c823dea2aa7f5e2` | Intel HEX Calibration Firmware |
+| `AZ1P000G-2016-EDM-Subaru-Impreza-STI.hex` | 1.00 MB | `9a03944bee86ea02bfd0e33c13790027` | Intel HEX Calibration Firmware |
+| `AZ1P000L-2015-SADM-Subaru-Impreza-STI-MT.hex` | 1.00 MB | `ae5129e392ddb9fdca569a1fd4a86757` | Intel HEX Calibration Firmware |
+| `AZ1P000M-2015-SADM-Subaru-Impreza-STI-MT.hex` | 1.00 MB | `09518a8033dea53f661750aaa44066a1` | Intel HEX Calibration Firmware |
+| `AZ1P100S-2016-JDM-Subaru-Impreza-STI.hex` | 1.00 MB | `5dc3105a3a8fda906268a22a26d4b9b7` | Intel HEX Calibration Firmware |
+| `AZ1P100T-2016-JDM-Subaru-Impreza-STI-S207.hex` | 1.00 MB | `33b308bf43b34c5087d750ff624faf38` | Intel HEX Calibration Firmware |
+| `D0XJ001P-2006-USDM-Subaru-Outback-3.0R-AT.hex` | 1.00 MB | `be4d14add6849a247d45dfb899a86400` | Intel HEX Calibration Firmware |
+| `D0XJ001Q-2005-JDM-Subaru-Outback-3.0R-AT.hex` | 1.00 MB | `b9d9fd39d4e353a8db0ada2e767c291a` | Intel HEX Calibration Firmware |
+| `D0XJ001R-2006-EDM-Legacy-3.0R.hex` | 1.00 MB | `8862f3262db00d916ca4773b6552bdb9` | Intel HEX Calibration Firmware |
+| `D0XJ001T-2006-ADM-Subaru-Liberty-3.0R-AT.hex` | 1.00 MB | `5f9bf3a0e16ac77385d246d05dbe07ed` | Intel HEX Calibration Firmware |
+| `D0XJ002S-2006-EDM-Subaru-Outback-3.0R-AT.hex` | 1.00 MB | `e538faa11c9666d66f2cd70917856f25` | Intel HEX Calibration Firmware |
+| `D2PH410Q-2007-JDM-Subaru-Legacy-3.0R-AT.hex` | 1.00 MB | `f8ed3522108f607b683d184073c0ac03` | Intel HEX Calibration Firmware |
+| `D2SB001Q-2008-JDM-Subaru-Legacy-3.0R-AT.hex` | 1.00 MB | `fd5c9c35c87a19f5f9d1dfef1265e8c9` | Intel HEX Calibration Firmware |
+| `D2TB101P-2008-USDM-Subaru-Legacy-3.0R-AT.hex` | 1.00 MB | `2c49d5f9a6c6463b8da028c91c00822f` | Intel HEX Calibration Firmware |
+| `D2TB201R-2008-EDM-Legacy-3.0R.hex` | 1.00 MB | `b261a492cc3277571b5cfbcfeb417804` | Intel HEX Calibration Firmware |
+| `D2UH001M-2007-ADM-Liberty-3.0R.hex` | 1.00 MB | `8de477ab94c38c6f48506149ee1fc777` | Intel HEX Calibration Firmware |
+| `D2UH003R-2007-EDM-Subaru-Legacy-3.0R-AT.hex` | 1.00 MB | `03f95f9cba08759570f0af58f5a0114d` | Intel HEX Calibration Firmware |
+| `D2UJ001T-2008-ADM-Subaru-Liberty-3.0R-AT.hex` | 1.00 MB | `8682322c469cd005039459a465047724` | Intel HEX Calibration Firmware |
+| `D2UJ003R-2007-EDM-Subaru-Legacy-3.0R-AT.hex` | 1.00 MB | `7fa89a1f04644324cf3c92ab91198f03` | Intel HEX Calibration Firmware |
+| `D2UK001Q-2007-JDM-Subaru-Legacy-3.0R-AT.hex` | 1.00 MB | `9f251bb6f458ecac43e5b6d3c09d1704` | Intel HEX Calibration Firmware |
+| `D2WD200A-2004-JDM-Legacy-3.0R.hex` | 512.0 KB | `32757fd180b3c64f0703c0e82ffb6081` | Intel HEX Calibration Firmware |
+| `D2WD603H-2005-ADM-Subaru-Liberty-3.0R-MT.hex` | 512.0 KB | `f6130be157fc87520181dd2f7ea048d9` | Intel HEX Calibration Firmware |
+| `D2WD606A-2005-JDM-Subaru-Outback-3.0R-MT.hex` | 512.0 KB | `0e650b6c13011f2f0404fbd5c023ebe2` | Intel HEX Calibration Firmware |
+| `D2WD610A-2005-JDM-Subaru-Legacy-3.0R-MT.hex` | 512.0 KB | `6834763c822ba91f3c16b9de5b2b0604` | Intel HEX Calibration Firmware |
+| `D2WD610H-2004-ADM-Subaru-Liberty-3.0R-MT.hex` | 512.0 KB | `4377ec286547441e2b6877a17721c1f4` | Intel HEX Calibration Firmware |
+| `D2WD701C-2005-EDM-Legacy-3.0R-MT.hex` | 1.00 MB | `0c28c5534c36416b52a925c59450f033` | Intel HEX Calibration Firmware |
+| `D2ZR003A-2003-JDM-Subaru-Legacy-3.0R-AT.hex` | 512.0 KB | `fd6c833c901503df6b1efd6c9fc81225` | Intel HEX Calibration Firmware |
+| `D2ZS002C-2004-EDM-Subaru-Legacy-3.0R-AT.hex` | 512.0 KB | `9717aaabdcfba80273affbb5aad2695b` | Intel HEX Calibration Firmware |
+| `D2ZS002D-2004-ADM-Subaru-Outback-3.0R-AT.hex` | 512.0 KB | `40fa129f2bfbdec59ac7f880891875ac` | Intel HEX Calibration Firmware |
+| `D2ZU002A-2004-JDM-Subaru-Legacy-3.0R-AT.hex` | 512.0 KB | `90f9415a0f042e7dc2da52147ed84e1f` | Intel HEX Calibration Firmware |
+| `D2ZU200A-2004-JDM-Subaru-Legacy-3.0R-AT.hex` | 512.0 KB | `a8007320fa5f355a123015b72acdaf47` | Intel HEX Calibration Firmware |
+| `D2ZX004B-2005-USDM-Subaru-Outback-3.0R-AT.hex` | 1.00 MB | `dc51a1222227ff5a42ec01ec407883ba` | Intel HEX Calibration Firmware |
+| `D2ZX110B-2005-USDM-Subaru-Outback-3.0R-AT.hex` | 1.00 MB | `012fd957d3d4028f60d25120ce82e324` | Intel HEX Calibration Firmware |
+| `D2ZY110H-2005-ADM-Subaru-Liberty-3.0R-AT.hex` | 512.0 KB | `6ee25d612f94979c070d38e1b2b5d642` | Intel HEX Calibration Firmware |
+| `D2ZZ001E-2005-EDM-Subaru-Legacy-3.0R-AT.hex` | 512.0 KB | `bea5c7d51d9babc1faba9fd6de1f9496` | Intel HEX Calibration Firmware |
+| `D6JM000B-2001-USDM-Subaru-Outback-3.0R-VDC-AT.hex` | 160.0 KB | `7b17e036ae6f05cfb9e1915ff29748bb` | Intel HEX Calibration Firmware |
+| `DE5F201B-2010-USDM-Subaru-Legacy-3.6R-AT.hex` | 1.00 MB | `80080ff31ce9bd804a9f41ac091ab736` | Intel HEX Calibration Firmware |
+| `DE5F301H-2011-EDM-Subaru-Outback-3.6-AT.hex` | 1.00 MB | `a5e5e5a7b2c7495a98bc3d99488c0c8d` | Intel HEX Calibration Firmware |
+| `DE5F810G-2011-USDM-Subaru-Outback-3.6-AT.hex` | 1.00 MB | `2e43b1e24c295cca673616978049183d` | Intel HEX Calibration Firmware |
+| `DE5F810K-2011-USDM-Subaru-Tribeca-3.6L-AT.hex` | 1.00 MB | `6af67a17e589ed8a47ffb2d12c077e81` | Intel HEX Calibration Firmware |
+| `DE5I500M-2012-EDM-Subaru-Tribeca-3.6R-AT.hex` | 1.00 MB | `49646b77d18777d9887d17e9525c4d62` | Intel HEX Calibration Firmware |
+| `DE5IB40B-2011-USDM-Subaru-Outback-3.6R-AT.hex` | 1.00 MB | `41fd2e28905dab28f4a6e9033989cfcc` | Intel HEX Calibration Firmware |
+| `DE5K411K-2012-USDM-Subaru-Tribeca-3.6-AT.hex` | 1.00 MB | `917a4e06cb699f2ccb97fbd6ce728163` | Intel HEX Calibration Firmware |
+| `DE5K800B-2012-USDM-Subaru-Legacy-3.6R-AT.hex` | 1.00 MB | `46c644f2f9f491b5f740fa8433026348` | Intel HEX Calibration Firmware |
+| `DE5L510K-2013-USDM-Subaru-Tribeca-3.0R-AT.hex` | 1.00 MB | `b7823721a06880a2f783a89be1ad9228` | Intel HEX Calibration Firmware |
+| `DE5M301C-2013-USDM-Subaru-Legacy-3.6R-AT.hex` | 1.00 MB | `214b4e7d646cca9231d119bc0152ec34` | Intel HEX Calibration Firmware |
+| `DE5M301H-2013-USDM-Subaru-Legacy-3.6R-AT.hex` | 1.00 MB | `c6b10e4f25410a9d7c06bc8a8d40af21` | Intel HEX Calibration Firmware |
+| `DE5Q100C-2014-USDM-Subaru-Legacy-3.6R-AT.hex` | 1.00 MB | `ddf6629516c040fb5fd97e1f7d1f896f` | Intel HEX Calibration Firmware |
+| `DZ1E402B-2009-USDM-Subaru-Tribeca-3.6L-AT.hex` | 1.00 MB | `dea1459dc78dbb27394026d6c63d9770` | Intel HEX Calibration Firmware |
+| `DZ1G001F-2009-EDM-Subaru-Tribeca-B9-AT.hex` | 1.00 MB | `6faa9555518f49277bb4ad57dcde7f41` | Intel HEX Calibration Firmware |
+| `E2SB001K-2008-JDM-Subaru-Legacy-2.5i-AT.hex` | 1.00 MB | `b0b3ccbaf75d7c1162f3cba88bc1e7fb` | Intel HEX Calibration Firmware |
+| `E2SB002L-2008-JDM-Subaru-Outback-2.5i-MT.hex` | 1.00 MB | `173281855c5251a64fbef9452ac22b44` | Intel HEX Calibration Firmware |
+| `E2TB011I-2008-USDM-Subaru-Forester-2.5-AT.hex` | 1.00 MB | `f96b3f7e6510fbe3510fbcdf32bf147d` | Intel HEX Calibration Firmware |
+| `E2TB101L-2008-EDM-Subaru-Legacy-2.5i-AT.hex` | 1.00 MB | `b2b41baadc93010532a5191f95bd7b4a` | Intel HEX Calibration Firmware |
+| `E2TB102M-2008-ADM-Liberty-2.5i.hex` | 1.00 MB | `3e97d08339ed7ec599065c5baaff0c20` | Intel HEX Calibration Firmware |
+| `E2UD001E-2007-JDM-Legacy-2.0-sohc-B-sport-Auto.hex` | 1.00 MB | `51b175a88be612966bde99179460a5f4` | Intel HEX Calibration Firmware |
+| `E2UE101B-2007-USDM-Subaru-Legacy-2.5i-AT.hex` | 1.00 MB | `7c197893138ba1484181b61e405da4ea` | Intel HEX Calibration Firmware |
+| `E2UE101J-2006-07-ADM-Subaru-Forester-2.5-AT.hex` | 1.00 MB | `0ce60a4f55ddde1c1a214c2d59047bc7` | Intel HEX Calibration Firmware |
+| `E2UE102B-2007-USDM-Subaru-Outback-2.5i-MT.hex` | 1.00 MB | `88161d8acd322cd5e264a69841cce54a` | Intel HEX Calibration Firmware |
+| `E2UE102G-2006-07-ADM-Subaru-Legacy-2.5i-AT-MT.hex` | 1.00 MB | `9bb66d483bc64b1d32eb2fe2d976d34e` | Intel HEX Calibration Firmware |
+| `E2UE102J-2006-07-ADM-Subaru-Forester-2.5-MT.hex` | 1.00 MB | `f23bca7b262ee646419a49f55eeed358` | Intel HEX Calibration Firmware |
+| `E2UE102L-2007-USDM-Subaru-Impreza-2.5i.hex` | 1.00 MB | `cda0e50873e9bd45eea06addf4814ed4` | Intel HEX Calibration Firmware |
+| `E2UE202L-2006-USDM-Subaru-Impreza-2.5i.hex` | 1.00 MB | `7c7cff085127bc86ef53fe8dd51ede4d` | Intel HEX Calibration Firmware |
+| `E2UG001B-2007-USDM-Subaru-Outback-2.5i-AT.hex` | 1.00 MB | `f063897e36acab809f18f85e1c5aab9e` | Intel HEX Calibration Firmware |
+| `E2UG001I-2007-USDM-Subaru-Forester-2.5i-MT-AT.hex` | 1.00 MB | `1d354f0caefc33f9007518635c9b9d02` | Intel HEX Calibration Firmware |
+| `E2UG001L-2007-USDM-Subaru-Impreza-2.5i-AT.hex` | 1.00 MB | `f79dbf6737f711cb04a3d3755a0aaccc` | Intel HEX Calibration Firmware |
+| `E2UG002L-2007-USDM-Subaru-Impreza-2.5i-MT.hex` | 1.00 MB | `835724722ead48d3be2193be2f1b3617` | Intel HEX Calibration Firmware |
+| `E2VG204B-2006-USDM-Subaru-Legacy-2.5i-MT-AT.hex` | 1.00 MB | `e838c0783429e8538f38ce57758cf261` | Intel HEX Calibration Firmware |
+| `E2VG211D-2006-USDM-Subaru-Forester-2.5-MT-AT.hex` | 1.00 MB | `d8f05452a628bcbe5ad9cf01706d213f` | Intel HEX Calibration Firmware |
+| `E2VG211E-2006-ADM-Subaru-Forester-2.5-MT-AT.hex` | 1.00 MB | `65b75302f48f2811fa2070b2b23769d7` | Intel HEX Calibration Firmware |
+| `E2VG212D-2006-USDM-Subaru-Forester-2.5i-MT-AT.hex` | 1.00 MB | `a1de70dd0e59f398519ebec9494baec7` | Intel HEX Calibration Firmware |
+| `E2VG212E-2006-ADM-Forester-2.5.hex` | 1.00 MB | `bd91867098a6b46a056d9d26efa69869` | Intel HEX Calibration Firmware |
+| `E2VG221B-2006-USDM-Subaru-Legacy-2.5i-MT-AT.hex` | 1.00 MB | `ff7b1a5775eeb1cdb2a70fa0bd9de868` | Intel HEX Calibration Firmware |
+| `E2VG221D-2007-USDM-Subaru-Forester-2.5-MT-AT.hex` | 1.00 MB | `50b53a7c6fca2f877c367fa74de3de64` | Intel HEX Calibration Firmware |
+| `E2VG222B-2006-USDM-Outback-2.5i.hex` | 1.00 MB | `850cad1cb9cc346afcf621ba88b24e62` | Intel HEX Calibration Firmware |
+| `E2VH101C-2006-USDM-Subaru-Impreza-2.5i-MT-AT.hex` | 1.00 MB | `4b8151f4802a0b2339083c6725076e45` | Intel HEX Calibration Firmware |
+| `E2VH102C-2006-USDM-Subaru-Impreza-2.5i.hex` | 1.00 MB | `4140dbd445527b0d2410c2e14f308b69` | Intel HEX Calibration Firmware |
+| `E2VH111C-2006-USDM-Subaru-Impreza-2.5i-MT-AT.hex` | 1.00 MB | `1a7cb2de3db293bfb676656f597e6673` | Intel HEX Calibration Firmware |
+| `E2VH112C-2006-USDM-Subaru-Impreza-2.5i-MT-AT.hex` | 1.00 MB | `5741b18d90636a77bc158c98e78eaef9` | Intel HEX Calibration Firmware |
+| `E2VH202C-2006-USDM-Subaru-Impreza-2.5i-MT-AT.hex` | 1.00 MB | `44af85750031ef19bbac59684648f9b7` | Intel HEX Calibration Firmware |
+| `E2VL002B-2006-USDM-Subaru-Legacy-2.5i-MT-AT.hex` | 1.00 MB | `096c10e976daeb233638b9b5bc6ede88` | Intel HEX Calibration Firmware |
+| `E2WD200C-2005-EDM-Subaru-Outback-2.5i-MT-AT.hex` | 512.0 KB | `5c7cac4fecb06d817e2258ef10bdf161` | Intel HEX Calibration Firmware |
+| `E2WD201C-2005-EDM-Subaru-Legacy-2.5i-MT-AT.hex` | 512.0 KB | `c4110d878252d990db35d85bcf63f411` | Intel HEX Calibration Firmware |
+| `E2WD500D-2005-JDM-Outback-2.5i.hex` | 512.0 KB | `fad1c962bd296c10edd7960a38512358` | Intel HEX Calibration Firmware |
+| `E2ZD308E-2004-JDM-Legacy-2.0.hex` | 512.0 KB | `d536d00f36fe6132627eb23790b6522e` | Intel HEX Calibration Firmware |
+| `E2ZD508C-2004-EDM-Outback-2.5i.hex` | 512.0 KB | `716ee9a0a35052d9a2ab237a8c45ef67` | Intel HEX Calibration Firmware |
+| `E2ZI103A-2005-USDM-Subaru-Outback-2.5i-MT.hex` | 1.00 MB | `0a08925be1bffa706004bc887afa8482` | Intel HEX Calibration Firmware |
+| `E2ZJ101B-2005-USDM-Subaru-Legacy-2.5i-MT-AT.hex` | 1.00 MB | `83c59970f644abef5bc73015b04650e8` | Intel HEX Calibration Firmware |
+| `E2ZJ101G-2005-USDM-Subaru-Impreza-2.5RS.hex` | 1.00 MB | `58544b50257560df8b5d682fbe1cf05f` | Intel HEX Calibration Firmware |
+| `E2ZJ101H-2005-USDM-Subaru-Forester-XS-MT-AT.hex` | 1.00 MB | `20dec51fb4da2951d98a7be1bb3b4c01` | Intel HEX Calibration Firmware |
+| `E2ZJ103G-2005-USDM-Subaru-Impreza-2.5RS-MT-AT.hex` | 1.00 MB | `e20c66b9be5776158c42c9e86ef47196` | Intel HEX Calibration Firmware |
+| `E2ZJ111G-2005-USDM-Subaru-Impreza-2.5RS-MT-AT.hex` | 1.00 MB | `ee6472e29dad5af21e28a49b68f9b516` | Intel HEX Calibration Firmware |
+| `E2ZJ112B-2005-USDM-Subaru-Outback-2.5i-MT-AT.hex` | 1.00 MB | `573a786b1cc1f838fc2164c3b38dc6f7` | Intel HEX Calibration Firmware |
+| `E2ZJ113G-2005-USDM-Subaru-Impreza-2.5RS-MT-AT.hex` | 1.00 MB | `faade1a556d41aeb1d0729a376c5a67f` | Intel HEX Calibration Firmware |
+| `E2ZJ121H-2005-USDM-Subaru-Forester-2.5-MT-AT.hex` | 1.00 MB | `449c98561ad424a1a9e7bdc757a85626` | Intel HEX Calibration Firmware |
+| `E2ZJ123G-2005-USDM-Subaru-Impreza-2.5RS-MT-AT.hex` | 1.00 MB | `46fabb1d5c536262aa645bfa65468494` | Intel HEX Calibration Firmware |
+| `E2ZJ133G-2005-USDM-Subaru-Impreza-2.5RS-MT-AT.hex` | 1.00 MB | `edbc87fd84f85cb94567453d431b1ac2` | Intel HEX Calibration Firmware |
+| `E2ZJ141B-2005-USDM-Subaru-Legacy-2.5i-AT-MT.hex` | 1.00 MB | `4010ae2c54afc3a7512cd88fdec476e7` | Intel HEX Calibration Firmware |
+| `E2ZJ173B-2005-USDM-Subaru-Legacy-2.5i-MT-AT.hex` | 1.00 MB | `c8a547292064986a6ab3d506de13ab59` | Intel HEX Calibration Firmware |
+| `E2ZK001A-2005-USDM-Subaru-Legacy-2.5i-AT.hex` | 1.00 MB | `5cc4429d356ae050aa482e397bbefcd8` | Intel HEX Calibration Firmware |
+| `E2ZK002A-2005-USDM-Subaru-Outback-2.5i-AT.hex` | 1.00 MB | `676fd4a7649a5cff03b8bbcbb7668efa` | Intel HEX Calibration Firmware |
+| `E2ZK003A-2005-USDM-Subaru-Legacy-2.5i-AT.hex` | 1.00 MB | `6acbde5179e96f3bbd4e2b160f7a18c7` | Intel HEX Calibration Firmware |
+| `E6PF101A-2004-USDM-Subaru-Legacy-2.5i-MT-AT.hex` | 512.0 KB | `90c68fdad354836338df909806d02662` | Intel HEX Calibration Firmware |
+| `E6PF102A-2004-USDM-Subaru-Outback-2.5i-MT-AT.hex` | 512.0 KB | `76c5321993c8a2b34dffd4f529cb0e3e` | Intel HEX Calibration Firmware |
+| `E6PF103A-2004-USDM-Subaru-Legacy-2.5i-AT-MT.hex` | 512.0 KB | `2b5869abeadbce3ae0ac72e7e74d0a6b` | Intel HEX Calibration Firmware |
+| `EE5F200W-2010-USDM-Subaru-Legacy-2.5i-MT.hex` | 1.00 MB | `707488c9b879aecaa980dd502c8118dc` | Intel HEX Calibration Firmware |
+| `EE5F300A-2010-USDM-Subaru-Legacy-2.5i-AT.hex` | 1.00 MB | `badc2de379862982f7e655a4548d1702` | Intel HEX Calibration Firmware |
+| `EE5I500A-2011-EDM-Subaru-Outback-2.5i-AT.hex` | 1.00 MB | `833b6e665a385ef659115f7b5a1a23d9` | Intel HEX Calibration Firmware |
+| `EE5I910G-2011-USDM-Subaru-Impreza-2.5i-MT.hex` | 1.00 MB | `25db966f77d04598e2a49ad439997e19` | Intel HEX Calibration Firmware |
+| `EE5I910H-2011-USDM-Subaru-Impreza-2.5i-MT.hex` | 1.00 MB | `98bffeec192975a05f6ce8b7bab1672d` | Intel HEX Calibration Firmware |
+| `EE5I910T-2011-USDM-Subaru-Impreza-2.5i-MT.hex` | 1.00 MB | `3e85de9c3fec3f69829a5f511e32394f` | Intel HEX Calibration Firmware |
+| `EE5I920T-2010-USDM-Subaru-Legacy-Elite-AT.hex` | 1.00 MB | `945c7e81c045abf7ca88911eea6afde2` | Intel HEX Calibration Firmware |
+| `EE5IA11T-2011-USDM-Subaru-Outback-2.5i-CVT.hex` | 1.00 MB | `899a631e925260ac2b9022f7c4ea9f9f` | Intel HEX Calibration Firmware |
+| `EE5IB20W-2011-USDM-Subaru-Outback-2.5i-MT.hex` | 1.00 MB | `9f98e5715ac36ca44054a13ab8c6dc45` | Intel HEX Calibration Firmware |
+| `EE5IB41T-2012-USDM-Subaru-Outback-2.5i-CVT.hex` | 1.00 MB | `47eef8caca2517152fa1fb79277ffe15` | Intel HEX Calibration Firmware |
+| `EE5K000K-2011-JDM-Subaru-Outback-2.5i-AT.hex` | 1.00 MB | `380fde53f3324c370ed42548b907e88e` | Intel HEX Calibration Firmware |
+| `EE5K412T-2012-USDM-Subaru-Legacy-2.5i-AT.hex` | 1.00 MB | `4e8e320de295df5216e57b4ce152fdb8` | Intel HEX Calibration Firmware |
+| `EE5K801W-2012-USDM-Subaru-Legacy-2.5i-MT.hex` | 1.00 MB | `1b560f62c5b030931b2fb5ed812298a3` | Intel HEX Calibration Firmware |
+| `EP5D003Q-2011-JDM-Subaru-Forester-2.0-XS-MT.hex` | 1.00 MB | `b5fc4c42b10fb289c879d59590b8e8cb` | Intel HEX Calibration Firmware |
+| `EP5D004L-2011-EDM-Subaru-Forester-2.0X-AT.hex` | 1.00 MB | `5df17f190fd4d37d0fdfadb79774b6b2` | Intel HEX Calibration Firmware |
+| `EP5D201D-2011-USDM-Subaru-Forester-2.5i-AT.hex` | 1.00 MB | `c84364267d95ab59350c8579be100b1b` | Intel HEX Calibration Firmware |
+| `EP5D202A-2011-USDM-Subaru-Forester-2.0X-MT.hex` | 1.00 MB | `ff8c159a7b31965443764f2ff6289d83` | Intel HEX Calibration Firmware |
+| `EP5D202N-2012-ADM-Subaru-Forester-2.5-FB-MT.hex` | 1.00 MB | `1cf5d282051e6d208fb34a26d37cf902` | Intel HEX Calibration Firmware |
+| `EP5D700X-2013-EDM-Subaru-Forester-2.0X-AT.hex.hex` | 1.00 MB | `78804ceabe00bedc681172ae47764bdf` | Intel HEX Calibration Firmware |
+| `EP5F300H-2013-EDM-Subaru-Impreza-2.0-FB-MT.hex` | 1.00 MB | `2cf56be94c8c846d51fd2c34e4291b4a` | Intel HEX Calibration Firmware |
+| `EP5F300T-2012-USDM-Subaru-XV-2.5i-CVT.hex` | 1.00 MB | `004452133fd4d4864064db91f6c0df91` | Intel HEX Calibration Firmware |
+| `EP5F301I-2013-EDM-Subaru-Impreza-2.0i-CVT.hex` | 1.00 MB | `ba5ce7b02553ba75beca013ee747d147` | Intel HEX Calibration Firmware |
+| `EP5G211a-2012-USDM-Subaru-Forester-2.5-FB-MT.hex` | 1.00 MB | `eb64f019ba7783a8dc3e8411d0d571e6` | Intel HEX Calibration Firmware |
+| `EP5G401z-2013-EDM-Subaru-XVCVT.hex` | 1.00 MB | `e4188f00e0e745d5773349aa2b4dcafd` | Intel HEX Calibration Firmware |
+| `EP5G601B-2012-USDM-Subaru-Impreza-2.0i-CVT.hex` | 1.00 MB | `74fe623045c107560e302565836313a2` | Intel HEX Calibration Firmware |
+| `EP5I200F-2013-USDM-Subaru-Impreza-2.0i-MT.hex` | 1.00 MB | `56d499a611d3b5f173083c0b7d7e7f88` | Intel HEX Calibration Firmware |
+| `EP5L000p-2014-EDM-Subaru-XV-2.5-FB-MT.hex` | 1.00 MB | `8b2d2cce6b61704360d3d9a6ee5a7d99` | Intel HEX Calibration Firmware |
+| `EZ1D105B-2008-USDM-Subaru-Outback-2.5i-AT.hex` | 1.00 MB | `1663bf9046a7251b338b596b72636a5a` | Intel HEX Calibration Firmware |
+| `EZ1D301A-2008-USDM-Legacy-2.5-PZEV.hex` | 1.00 MB | `a9d4bd368e311caf87b79efb8b001e3d` | Intel HEX Calibration Firmware |
+| `EZ1D302B-2009-USDM-Subaru-Legacy-2.5i-AT.hex` | 1.00 MB | `a702a9ec63cc9052062562b9b38fa477` | Intel HEX Calibration Firmware |
+| `EZ1D303B-2008-USDM-Subaru-Legacy-2.5i-AT.hex` | 1.00 MB | `96360d198d9e519fff111ac30fcfb317` | Intel HEX Calibration Firmware |
+| `EZ1E102G-2008-USDM-Subaru-Impreza-2.5i.hex` | 1.00 MB | `67d9b35c8e68605cda0b9f9a06eee7a7` | Intel HEX Calibration Firmware |
+| `EZ1E401G-2008-09-USDM-Subaru-Impreza-2.5i-MT.hex` | 1.00 MB | `226d42d5d5764b8fd383147a77dee267` | Intel HEX Calibration Firmware |
+| `EZ1E401H-2008-09-USDM-Subaru-Impreza-2.5i-AT.hex` | 1.00 MB | `06c9abc046e472d2bd3ca0f3f6e9d03b` | Intel HEX Calibration Firmware |
+| `EZ1G107M-2009-ADM-Subaru-Forester-2.5-MT.hex` | 1.00 MB | `8066c5923964d83de746cc208fc0ad54` | Intel HEX Calibration Firmware |
+| `EZ1G108K-2009-USDM-Subaru-Forester-2.5i-AT.hex` | 1.00 MB | `e75b40f1470d011a1075d5c97ec27479` | Intel HEX Calibration Firmware |
+| `EZ1G108N-2009-ADM-Subaru-Forester-2.5i-MT.hex` | 1.00 MB | `9354e6437769646670c800bebd14a4f4` | Intel HEX Calibration Firmware |
+| `EZ1G108N-2009-EDM-Subaru-Forester-2.5i-MT.hex` | 1.00 MB | `9354e6437769646670c800bebd14a4f4` | Intel HEX Calibration Firmware |
+| `EZ1G109J-2009-USDM-Subaru-Forester-2.5i-MT.hex` | 1.00 MB | `a7260557dcb4422a5dc35f60d179bb30` | Intel HEX Calibration Firmware |
+| `EZ1G109K-2009-USDM-Subaru-Forester-2.5-MT.hex` | 1.00 MB | `133e6342fa7c5f14dd8397c970ed9193` | Intel HEX Calibration Firmware |
+| `EZ1G110J-2010-USDM-Subaru-Forester-2.5i-AT.hex` | 1.00 MB | `4c27da64db9c720289f319408a99b951` | Intel HEX Calibration Firmware |
+| `EZ1G701H-2010-USDM-Subaru-Impreza-2.5i-AT.hex` | 1.00 MB | `231b8361293a9138265f3c5d4c720632` | Intel HEX Calibration Firmware |
+| `EZ1GB00G-2008-USDM-Subaru-Impreza-2.5i-MT.hex` | 1.00 MB | `8a343405605d39da84add17cb76f33f8` | Intel HEX Calibration Firmware |
+| `EZ1GB00H-2008-USDM-Subaru-Impreza-2.5i-AT.hex` | 1.00 MB | `734412542ca62a717f1e0fce707cadba` | Intel HEX Calibration Firmware |
+| `EZ1GB00J-2009-USDM-Subaru-Forester-2.5i-AT.hex` | 1.00 MB | `a26888f9ea44601595f83b1f05656f4d` | Intel HEX Calibration Firmware |
+| `EZ1GB10G-2010-USDM-Subaru-Impreza-2.5i-MT.hex` | 1.00 MB | `11b698d2e16b834995ac5a6a0c815c65` | Intel HEX Calibration Firmware |
+| `EZ1GB10H-2010-USDM-Subaru-Impreza-2.5i-AT.hex` | 1.00 MB | `6f92df4c5b55abdfaafdd90a00410481` | Intel HEX Calibration Firmware |
+| `EZ1GB10J-2010-USDM-Subaru-Forester-2.5i-AT.hex` | 1.00 MB | `cbc990db5f028f0c89df31fab5f4f391` | Intel HEX Calibration Firmware |
+| `EZ1GB10K-2010-USDM-Subaru-Forester-2.5i-MT.hex` | 1.00 MB | `378967a69dc0681120beae572838620c` | Intel HEX Calibration Firmware |
+| `EZ1GD00A-2009-USDM-Subaru-Legacy-2.5i-MT.hex` | 1.00 MB | `d1b6b3194286066efcc9ad732e9b4be7` | Intel HEX Calibration Firmware |
+| `JP3F522A-2011-EDM-Subaru-Forester-2.0T-Diesel-MT.hex` | 1.00 MB | `e36e3a594b2646bd5210aba3ca961caa` | Intel HEX Calibration Firmware |
+| `JZ2F401A-2009-10-EDM-Subaru-Impreza-2.0T-Diesel-MT.hex` | 1.00 MB | `cabf6c2367d3de406048271dd7c64837` | Intel HEX Calibration Firmware |
+| `JZ2F411A-2009-11-EDM-Subaru-Impreza-2.0T-Diesel-MT.hex` | 1.00 MB | `8c8fecfacb3686cc9cc4db13528154fb` | Intel HEX Calibration Firmware |
+| `JZ2F430A-2011-EDM-Subaru-Impreza-2.0T-Diesel-MT.hex` | 1.00 MB | `c30150cc4c58d7df4c7a9fdc4c3a9d45` | Intel HEX Calibration Firmware |
+| `JZ2F441A-2010-EDM-Subaru-Impreza-2.0T-Diesel-MT.hex` | 1.00 MB | `163aad169b79aa9789693a16c124d9df` | Intel HEX Calibration Firmware |
+| `LV9N100B-2015-JDM-Subaru-Impreza-WRX-S4.hex` | 2.00 MB | `7d1727d98abd03423edf205f8d2fbe10` | Intel HEX Calibration Firmware |
+| `Z1G20000-2008-09-EDM-Subaru-Impreza-STI.hex` | 1.00 MB | `d772887311ad588e065fc042c03e4863` | Intel HEX Calibration Firmware |
 
 ---
 
-## 3. Matriks Kalibrasi & Parameter Pemetaan
-
-Bagi berkas biner dan definisi TunerPro yang tersedia, struktur kalibrasi mencakup parameter esensial:
-- **Volumetric Efficiency & Fuel Delivery**: Kurva Base Fuel, Open/Closed Loop Transition, Injection Timing, dan Cranking Enrichment.
-- **Ignition Timing & Knock Control**: Peta Main Ignition Advance, Low/High Octane Timing, Knock Retard Thresholds, dan Dwell Timing.
-- **Airflow & Boost Management**: Peta Target Boost Pressure, Wastegate Duty Cycle (WGDC), MAF/MAP Scaling, dan Throttle Response Curves.
-- **Safety Limits & Thresholds**: Rev Limiter (Hard/Soft Cut), Top Speed Limiter (Vmax), Overboost Fuel Cut, dan Engine Protection Strategies.
-
----
-
-## 4. Protokol Flashing & Panduan Keamanan
-
-1. **Pemeriksaan Checksum**: Selalu verifikasi dan kalkulasi ulang checksum sebelum menulis firmware kembali ke ECU guna mencegah kondisi *ECU bricking* atau *no-start*.
-2. **Pencadangan Full Read (Backup)**: Lakukan full backup (Flash + EEPROM / Microcontroller ROM) sebelum melakukan flashing kalibrasi yang dimodifikasi.
-3. **Tegangan Sumber Stabil**: Gunakan unit catu daya terstabilisasi (*bench battery maintainer*) dengan tegangan minimum 13.5V – 14.2V selama sesi flashing OBD2 atau Bootmode.
-4. **Kecocokan Hardware & Software**: Jangan pernah melakukan *cross-flashing* berkas kalibrasi ke ECU dengan nomor part hardware yang berbeda tanpa verifikasi arsitektur pinout dan transreceiver bus.
+## 3. Panduan Penggunaan & Integritas
+1. **Verifikasi Checksum**: Selalu bandingkan hash MD5 file sebelum melakukan flashing ke modul kontrol kendaraan.
+2. **Standard Tuning**: Gunakan software TunerPro RT v5.00+ untuk memuat file biner (`.bin`) bersama file definisi (`.xdf`) yang sesuai.
+3. **Peringatan Keselamatan**: Pemetaan injeksi bahan bakar dan sudut pengapian harus selalu dipantau dengan sensor wideband AFR pada beban dyno.

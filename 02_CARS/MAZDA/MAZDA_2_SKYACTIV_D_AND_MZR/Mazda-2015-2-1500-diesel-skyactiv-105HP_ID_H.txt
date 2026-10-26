@@ -1,0 +1,29 @@
+Partial: T
+Starting address of partial file: 0x00008000
+Partial file size: 0x003B7D00
+Eprom size: 0x00400000
+
+File Version: 
+Name of the parent process: FLASH_0575
+Protocol version: 6.013 - 1.010
+File date: 24/12/2017
+File time: 16:30.43
+Brand: MAZDA
+Model: 2 (DJ)
+Type: 1.5L 16V SKYACTIV-D 77kW/103HP DENSO
+Protocol: FLASH_0575 MAZDA TDI DENSO RENESAS SH7059/SH725X MY2015
+Hardware Nr.: S51C-188K1-
+Software Nr.: S51K-18881-H
+Hardware date: 
+Software date: 
+VIN: MM8DL2SSA0W111691
+Software Version: S51C-18881-
+Spare part number: 
+Engine code: 
+Hardware Version: 
+Software Upgrade Nr.: S51K-188K2-H
+Unique identification number: 
+System type: 
+Client code: C8750
+File type: ECU
+Hardware type: NewGenius

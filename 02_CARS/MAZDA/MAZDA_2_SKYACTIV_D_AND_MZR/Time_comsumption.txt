@@ -1,0 +1,6 @@
+-----------Read------------
+Mazda_2010_2_1300_ID = 11 mins
+Mazda_2015_2_1500_diesel_skyactiv_105HP = 42 mins
+
+----------Write------------
+Mazda_2015_2_1500_diesel_skyactiv_105HP = 4.5 mins

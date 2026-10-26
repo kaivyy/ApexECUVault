@@ -1,0 +1,19 @@
+﻿<rom base="8J164">
+	<romid>
+		<xmlid>5Y711</xmlid>
+		<caseid>1TKE8Z5N5</caseid>
+		<internalidaddress>6B78</internalidaddress>
+		<internalidstring>5Y711</internalidstring>
+		<ecuid>157Y11</ecuid>
+		<year>2003</year>
+		<market>USDM</market>
+		<make>Nissan</make>
+		<model>Maxima</model>
+		<submodel>Unknown</submodel>
+		<transmission>Unknown</transmission>
+		<memmodel>SH7055</memmodel>
+		<endian>Big</endian>
+		<flashmethod>Nisprog</flashmethod>
+		<filesize>512kb</filesize>
+	</romid>
+</rom>

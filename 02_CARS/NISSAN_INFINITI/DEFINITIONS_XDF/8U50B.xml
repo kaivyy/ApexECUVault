@@ -1,0 +1,16 @@
+<rom base="8U52B">
+	<romid>
+		<xmlid>8U50B</xmlid>
+		<caseid>3TREE21N19</caseid>
+		<internalidaddress>747C</internalidaddress>
+		<internalidstring>8U50B</internalidstring>
+		<ecuid>18U50B</ecuid>
+		<year>2003</year>
+		<market>USDM</market>
+		<make>Nissan</make>
+		<model>Sentra</model>
+		<submodel>SE-R</submodel>
+		<transmission>AT</transmission>
+		<memmodel>SH7055</memmodel>
+	</romid>
+</rom>

@@ -1,0 +1,17 @@
+<rom base="CF42C">
+	<romid>
+		<xmlid>ZH98C</xmlid>
+		<caseid>6ZVYXN00</caseid>
+		<internalidaddress>2401</internalidaddress>
+		<internalidstring>ZH98C</internalidstring>
+		<ecuid>1ZH98C</ecuid>
+		<year>2006</year>
+		<market>JDM</market>
+		<make>Nissan</make>
+		<model>Altima</model>
+		<submodel>SER</submodel>
+		<transmission>AT</transmission>
+		<memmodel>SH7058</memmodel>
+	</romid>
+</rom>
+	

@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--ROMRAIDER METRIC UNITS LOGGER DEFINITION FILE (VERSION 370) 20211116_191942 [en]
+363 20211115_191632 Updated ECU ID: 4B0A377007 extended parameters Changed address/length/bit entry for ECU ID 4B0A377007 for extended parameter E56
+364 20211115_192241 Added ECU ID: CD2A904007 to extended parameters
+365 20211115_192824 Added ECU ID: 6CF2504007 to extended parameters
+366 20211115_193234 Added ECU ID: 5222168107 to extended parameters
+367 20211115_195926 Added ECU ID: 4E22048007 to extended parameters
+368 20211116_191013 Update MS43 parameters from https://github.com/ba114/Siemens-MS43
+369 20211116_191723 Added MSS52 parameters from https://github.com/ba114/MSS52
+370 20211116_191942 Add Nissan CAN Support
+
+TERMS, CONDITIONS, AND DISCLAIMERS
+- - - - - - - - - - - - - - - - - - - - - - - - -
+WARNING: These definition files are created as the result of the extremely complex and time consuming process
+of reverse-engineering the factory ECU. Because of this complexity, it is necessary to make certain assumptions
+and, therefore, it is impossible to always deal in absolutes in regards to representations made by these
+definitions. In addition, due to this complexity and the numerous variations among different ECUs, it is also
+impossible to guarantee that the definitions will not contain errors or other bugs. What this all means is that
+there is the potential for bugs, errors and misrepresentations which can result in damage to your motor, your
+ECU as well the possibility of causing your vehicle to behave unexpectedly on the road, increasing the risk of
+death or injury. Modifications to your vehicle's ECU may also be in violation of local, state and federal laws.
+By using these definition files, either directly or indirectly, you agree to assume 100% of all risk and
+RomRaider's creators and contributors shall not be held responsible for any damages or injuries you receive.
+This product is for advanced users only. There are no safeguards in place when tuning with RomRaider. As such,
+the potential for serious damage and injury still exists, even if the user does not experience any bugs or errors.
+As always, use at your own risk.
+
+These definitions are created for FREE without any sort of guarantee. The developers cannot be held liable for
+any damage or injury incurred as a result of these definitions. USE AT YOUR OWN RISK! -->
+<!DOCTYPE logger [
+
+<!ELEMENT address ( #PCDATA ) >
+<!ATTLIST address length CDATA #IMPLIED >
+<!ATTLIST address bit ( 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 | 13 | 14 | 15 | 16 | 17 | 18 | 19 | 20 | 21 | 22 | 23 | 24 | 25 | 26 | 27 | 28 | 29 | 30 | 31 ) #IMPLIED >
+
+<!ELEMENT ecu ( address+ ) >
+<!ATTLIST ecu id CDATA #REQUIRED >
+
+<!ELEMENT ref EMPTY >
+<!ATTLIST ref ecuparam CDATA #IMPLIED >
+<!ATTLIST ref parameter IDREF #IMPLIED >
+
+<!ELEMENT depends ( ref+ ) >
+
+<!ELEMENT replace EMPTY >
+<!ATTLIST replace value CDATA #REQUIRED >
+<!ATTLIST replace with CDATA #REQUIRED >
+
+<!ELEMENT conversion ( replace* ) >
+<!ATTLIST conversion expr CDATA #REQUIRED >
+<!ATTLIST conversion format ( 0 | 0.0 | 0.00 | 0.000 | 0.0000 | 0.00000 | 0.000000) #REQUIRED >
+<!ATTLIST conversion storagetype ( int8 | int16 | uint8 | uint16 | int32 | uint32 | float ) #IMPLIED >
+<!ATTLIST conversion endian CDATA #IMPLIED >
+<!ATTLIST conversion units CDATA #REQUIRED >
+<!ATTLIST conversion gauge_min CDATA #IMPLIED >
+<!ATTLIST conversion gauge_max CDATA #IMPLIED >
+<!ATTLIST conversion gauge_step CDATA #IMPLIED >
+
+<!ELEMENT conversions ( conversion+ ) >
+
+<!ELEMENT parameter ( ( address+, conversions?) | (depends, conversions?) ) >
+<!ATTLIST parameter target CDATA #REQUIRED >
+<!ATTLIST parameter ecubit ( 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 ) #IMPLIED >
+<!ATTLIST parameter ecubyteindex CDATA #IMPLIED >
+<!ATTLIST parameter desc CDATA #REQUIRED >
+<!ATTLIST parameter name CDATA #REQUIRED >
+<!ATTLIST parameter id ID #REQUIRED >
+
+<!ELEMENT parameters ( parameter+ ) >
+<!ATTLIST parameters mode CDATA #IMPLIED >
+
+<!ELEMENT switch EMPTY >
+<!ATTLIST switch target CDATA #REQUIRED >
+<!ATTLIST switch ecubyteindex CDATA #IMPLIED >
+<!ATTLIST switch bit ( 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 ) #REQUIRED >
+<!ATTLIST switch byte CDATA #REQUIRED >
+<!ATTLIST switch desc CDATA #REQUIRED >
+<!ATTLIST switch name CDATA #REQUIRED >
+<!ATTLIST switch id ID #REQUIRED >
+
+<!ELEMENT switches ( switch+ ) >
+
+<!ELEMENT dtcode EMPTY >
+<!ATTLIST dtcode bit ( 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 ) #REQUIRED >
+<!ATTLIST dtcode memaddr CDATA #REQUIRED >
+<!ATTLIST dtcode tmpaddr CDATA #REQUIRED >
+<!ATTLIST dtcode desc CDATA #REQUIRED >
+<!ATTLIST dtcode name CDATA #REQUIRED >
+<!ATTLIST dtcode id ID #REQUIRED >
+
+<!ELEMENT dtcodes ( dtcode+) >
+
+<!ELEMENT ecuparam ( ecu+, conversions? ) >
+<!ATTLIST ecuparam target CDATA #REQUIRED >
+<!ATTLIST ecuparam groupsize CDATA #IMPLIED >
+<!ATTLIST ecuparam subgroup CDATA #IMPLIED >
+<!ATTLIST ecuparam group CDATA #IMPLIED >
+<!ATTLIST ecuparam desc CDATA #REQUIRED >
+<!ATTLIST ecuparam name CDATA #REQUIRED >
+<!ATTLIST ecuparam id ID #REQUIRED >
+
+<!ELEMENT ecuparams ( ecuparam+ ) >
+
+<!ELEMENT module EMPTY >
+<!ATTLIST module fastpoll CDATA #IMPLIED >
+<!ATTLIST module tester CDATA #IMPLIED >
+<!ATTLIST module desc CDATA #REQUIRED >
+<!ATTLIST module address CDATA #REQUIRED >
+<!ATTLIST module id ID #REQUIRED >
+
+<!ELEMENT transport ( module+ ) >
+<!ATTLIST transport desc CDATA #REQUIRED >
+<!ATTLIST transport name CDATA #REQUIRED >
+<!ATTLIST transport id ID #REQUIRED >
+
+<!ELEMENT transports ( transport+ ) >
+
+<!ELEMENT protocol ( transports, parameters?, switches?, dtcodes?, ecuparams? ) >
+<!ATTLIST protocol id ID #REQUIRED >
+<!ATTLIST protocol baud CDATA #REQUIRED >
+<!ATTLIST protocol databits CDATA #REQUIRED >
+<!ATTLIST protocol stopbits CDATA #REQUIRED >
+<!ATTLIST protocol parity CDATA #REQUIRED >
+<!ATTLIST protocol connect_timeout CDATA #REQUIRED >
+<!ATTLIST protocol send_timeout CDATA #REQUIRED >
+
+<!ELEMENT protocols ( protocol+ ) >
+
+<!ELEMENT logger ( protocols ) >
+<!ATTLIST logger version CDATA #IMPLIED >
+]>
+<logger version="370">
+    <protocols>
+		<protocol id="MAZDA" baud="500000" databits="8" stopbits="1" parity="0" connect_timeout="4000" send_timeout="55">
+            <transports>	
+                <transport id="iso15765" name="CAN bus" desc="CAN bus logging ~MY2007+.">
+                    <module id="ecu" address="0x000007E8" desc="Engine Control Unit" tester="0x000007E0"  fastpoll="true"/>
+                    <module id="tcu" address="0x000007E9" desc="Transmission Control Unit" tester="0x000007E1" />
+                </transport>
+            </transports>
+			<parameters>
+				<parameter id="PIDTEST" name="Coolant Temp" desc="Coolant temperature" >
+						<address>0x220005</address>
+						<conversions>
+							<conversion units="C" expr="x-40" format="0" gauge_min="120" gauge_max="-20" gauge_step="20" />
+							<conversion units="F" expr="32+9*(x-40)/5" format="0" gauge_min="0" gauge_max="240" gauge_step="30" />
+						</conversions>
+				</parameter>
+				<parameter id="PIDTEST2" name="OL Status" desc="OL status" >
+						<address>0x220003</address>
+						<conversions>
+							<conversion units="raw" expr="x" format="0" gauge_min="120" gauge_max="-20" gauge_step="1" />
+						</conversions>
+				</parameter>
+				<parameter id="PIDTEST2" name="Tire Size" desc="Tire Size" >
+						<address>0x2216F0</address>
+						<conversions>
+							<conversion storagetype="uint16" units="Rev/Mile" expr="x" format="0" gauge_max="500"/>
+						</conversions>
+				</parameter>
+				<parameter id="PIDTEST3" name="Knock Retard" desc="Tire Size" >
+						<address>0x221746</address>
+						<conversions>
+							<conversion storagetype="uint8" units="deg" expr="x*0.3515625" format="0.00" gauge_max="500"/>
+						</conversions>
+				</parameter>
+				<parameter id="PIDTEST4" name="Injector Pulse Time" desc="Injector Pulse Time" >
+						<address>0x221410</address>
+						<conversions>
+							<conversion storagetype="uint8" units="us" expr="x*8" format="0.000" gauge_max="500"/>
+							<conversion storagetype="uint16" units="ms" expr="(x*8)*0.001" format="0.000" gauge_min="120" gauge_max="-20" gauge_step="20" />
+						</conversions>
+				</parameter>
+				<parameter id="PIDTEST5" name="Throttle Pedal Position" desc="Throttle Pedal Position" >
+						<address>0x221410</address>
+						<conversions>
+							<conversion storagetype="uint8" units="%" expr="x*0.3921568" format="0.0" gauge_max="500"/>
+						</conversions>
+				</parameter>
+				<parameter id="PIDTEST6" name="Engine Speed" desc="The speed of the engine" >
+						<address>0x22000C</address>
+						<conversions>
+							<conversion storagetype="uint16"  units="RPM" expr="x*.25" format="0" gauge_min="0" gauge_max="10000" gauge_step="1" />
+						</conversions>
+				</parameter>
+				<parameter id="PIDTEST7" name="Vehicle Speed" desc="The speed of the vehicle" >
+						<address>0x22000D</address>
+						<conversions>
+							<conversion units="kph" expr="x" format="0.0" gauge_min="120" gauge_max="-20" gauge_step="1" />
+							<conversion units="mph" expr="x*0.621371" format="0.0" gauge_min="120" gauge_max="-20" gauge_step="1" />
+						</conversions>
+				</parameter>
+				<parameter id="PIDTEST8" name="Leading Ignition Timing" desc="Leading timing" >
+						<address>0x22000E</address>
+						<conversions>
+							<conversion storagetype="uint8" units="deg" expr="(x*0.5)-64" format="0.00" gauge_max="500"/>
+						</conversions>
+				</parameter>
+				<parameter id="PIDTEST8" name="Trailing Ignition Timing" desc="Trailing timing" >
+						<address>0x220904</address>
+						<conversions>
+							<conversion storagetype="uint8" units="deg" expr="(x*0.5)-64" format="0.00" gauge_max="500"/>
+						</conversions>
+				</parameter>
+				<parameter id="PIDTEST9" name="Intake Air Temperature" desc="IAT" >
+						<address>0x22000f</address>
+						<conversions>
+							<conversion units="C" expr="x-40" format="0" gauge_min="120" gauge_max="-20" gauge_step="20" />
+							<conversion units="F" expr="32+9*(x-40)/5" format="0" gauge_min="0" gauge_max="240" gauge_step="30" />
+						</conversions>
+				</parameter>
+				<parameter id="PIDTEST69" name="Ethanol Content" desc="Ethanol Content" >
+						<address>0x220555</address>
+						<conversions>
+							<conversion storagetype="uint16" units="%" expr="x" format="0" gauge_min="0" gauge_max="100" gauge_step="5" />
+						</conversions>
+				</parameter>
+				<parameter id="PIDTEST69" name="Flex Cranking Multiplier" desc="Ethanol Content" >
+						<address>0x22055C</address>
+						<conversions>
+							<conversion storagetype="uint16" units="mult" expr="x*0.01" format="0.00" gauge_min="1" gauge_max="4" gauge_step=".01" />
+						</conversions>
+				</parameter>
+				<parameter id="PIDTEST69" name="Flex Fuel Timing Multiplier" desc="Flex Fuel Timing Multiplier" >
+						<address>0x22022b</address>
+						<conversions>
+							<conversion storagetype="uint16" units="mult" expr="x*0.0005" format="0.000" gauge_min="0" gauge_max="11" gauge_step=".125" />
+						</conversions>
+				</parameter>
+				<parameter id="PIDTEST8" name="Flex Leading Ignition Timing Adder" desc="Timing Adder" >
+						<address>0x220557</address>
+						<conversions>
+							<conversion storagetype="uint16" units="deg" expr="(x*0.5)-50" format="0.00" gauge_max="500"/>
+						</conversions>
+				</parameter>
+				<parameter id="PIDTEST8" name="Flex Trailing Ignition Timing Adder" desc="Timing Adder" >
+						<address>0x220558</address>
+						<conversions>
+							<conversion storagetype="uint16" units="deg" expr="(x*0.5)-50" format="0.00" gauge_max="500"/>
+						</conversions>
+				</parameter>
+				<parameter id="PIDTEST69" name="Engine Load" desc="Engine load" >
+						<address>0x220043</address>
+						<conversions>
+							<conversion storagetype="uint16" units="mult" expr="x*0.003921568" format="0.00" gauge_min="0" gauge_max="11" gauge_step=".125" />
+						</conversions>
+				</parameter>
+				<parameter id="PIDTEST69" name="Lambda Target" desc="Lambda Target" >
+						<address>0x220044</address>
+						<conversions>
+							<conversion storagetype="uint16" units="mult" expr="x*0.00003051758" format="0.000" gauge_min="0" gauge_max="2" gauge_step=".001" />
+						</conversions>
+				</parameter>
+				<parameter id="PIDTEST69" name="OL Fueling Final" desc="Lambda Target" >
+						<address>0x22055A</address>
+						<conversions>
+							<conversion storagetype="uint16" units="mult" expr="x*0.00003051758" format="0.000" gauge_min="0" gauge_max="2" gauge_step=".001" />
+						</conversions>
+				</parameter>
+				<parameter id="PIDTEST69" name="Flex Sensor Fault Status" desc="0=No fault, 1=fault" >
+						<address>0x22055B</address>
+						<conversions>
+							<conversion storagetype="uint8" units="bool" expr="x*1" format="0" gauge_min="0" gauge_max="2" gauge_step=".001" />
+						</conversions>
+				</parameter>
+				<parameter id="PIDTEST10" name="Mass Air Flow" desc="MAF" >
+						<address>0x220010</address>
+						<conversions>
+							<conversion units="g/sec" expr="x*0.01" format="0.0" gauge_min="120" gauge_max="-20" gauge_step="20" />
+						</conversions>
+				</parameter>
+				<parameter id="PIDTEST10" name="Air Fuel Ratio" desc="AFR" >
+						<address>0x220034</address>
+						<conversions>
+							<conversion storagetype="uint16" units="lambda" expr="x*0.000030517578" format="0.000" gauge_min="120" gauge_max="-20" gauge_step="20" />
+							<conversion storagetype="uint16" units="AFR (Gasoline)" expr="(x*0.000030517578)*14.7" format="0.00" gauge_min="120" gauge_max="-20" gauge_step="20" />
+							<conversion storagetype="uint16" units="AFR (E85)" expr="(x*0.000030517578)*9.8" format="0.00" gauge_min="120" gauge_max="-20" gauge_step="20" />
+						</conversions>
+				</parameter>
+			</parameters>
+		</protocol>
+   </protocols>
+</logger>

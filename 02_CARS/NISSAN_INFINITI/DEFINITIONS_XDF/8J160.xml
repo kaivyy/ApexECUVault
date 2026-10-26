@@ -1,0 +1,15 @@
+﻿<rom base="8J164">
+	<romid>
+		<xmlid>8J160</xmlid>
+		<caseid>1TKE8Z5N5</caseid>
+		<internalidaddress>6B78</internalidaddress>
+		<internalidstring>8J160</internalidstring>
+		<ecuid>18J160</ecuid>
+		<year>2003</year>
+		<market>USDM</market>
+		<make>Nissan</make>
+		<model>Altima</model>
+		<submodel>Base</submodel>
+		<transmission>MT</transmission>
+	</romid>
+</rom>

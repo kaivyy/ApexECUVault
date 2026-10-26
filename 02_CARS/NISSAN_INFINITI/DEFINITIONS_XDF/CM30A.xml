@@ -1,0 +1,16 @@
+<rom base="CF40D">
+	<romid>
+		<xmlid>CM30A</xmlid>
+		<caseid>6ZV2RN10</caseid>
+		<internalidaddress>2401</internalidaddress>
+		<internalidstring>CM30A</internalidstring>
+		<ecuid>1CM30A</ecuid>
+		<year>2006</year>
+		<market>USDM</market>
+		<make>Infiniti</make>
+		<model>G35</model>
+		<submodel>Sport</submodel>
+		<transmission>AT</transmission>
+		<memmodel>SH7058</memmodel>
+	</romid>
+</rom>

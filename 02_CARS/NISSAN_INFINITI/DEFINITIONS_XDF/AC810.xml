@@ -1,0 +1,16 @@
+<rom base="AC81A">
+	<romid>
+		<xmlid>AC810</xmlid>
+		<caseid>5GIWYN14</caseid>
+		<internalidaddress>A216</internalidaddress>
+		<internalidstring>AC810</internalidstring>
+		<ecuid>1AC810</ecuid>
+		<year>2005</year>
+		<market>USDM</market>
+		<make>Infiniti</make>
+		<model>G35</model>
+		<submodel>REv-Up</submodel>
+		<transmission>MT</transmission>
+		<memmodel>SH7058</memmodel>
+	</romid>
+</rom>

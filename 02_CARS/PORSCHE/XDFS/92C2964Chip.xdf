@@ -1,0 +1,889 @@
+XDF
+1.110000
+
+DO NOT HAND EDIT!!!! (Trust me)
+
+%%HEADER%%
+	001000 FileVers         =""
+	001005 DefTitle         ="92 Porsche C2"
+	001007 DescSize         =0x14C
+	001006 Desc             ="This XDF is for the 1992 Porsche 911 C2 it is for the 32K (27c256) UV  EProm chip that was used for the 92 cars. This XDF works with following chips: 1267357006, 1267357245 (RS Chip) may work with others as well but will not work with early C2 chips as the early chips have diffrent map table and the maps are in diffrent locations."
+	001010 Author           ="Sal Carceller"
+	001030 BinSize          =0x8000
+	001035 BaseOffset       =0
+	001200 ADSAssoc         =""
+	001225 ADSCheck         =0x0
+	001300 GenFlags         =0x0
+	001325 ModeFlags        =0x0
+	002000 Category0        ="FuelMaps"
+	002001 Category1        ="IgnitionMaps"
+	002002 Category2        ="IdleMaps"
+	002003 Category3        ="PartThrottleMaps"
+	002004 Category4        ="WOTMaps"
+	002005 Category5        ="AFMMaps"
+	002006 Category6        ="RPMMaps"
+%%END%%
+
+%%TABLE%%
+	000002 UniqueID         =0x2B8E
+	000100 Cat0ID           =0x7
+	040005 Title            ="T_IdleRPMMap62"
+	040011 DescSize         =0x5D
+	040010 Desc             ="Idle RPM is calculated by taking the value and multipling it by 10. So, IdleRPM = value * 10"
+	040100 Address          =0x69CB
+	040150 Flags            =0x30
+	040200 ZEq              =x*10,TH|0|0|0|0|
+	040203 XOutType         =0x4
+	040304 YOutType         =0x4
+	040205 OutType          =0x2
+	040210 DecimalPl        =0x0
+	040230 RangeLow         =0.0000
+	040240 RangeHigh        =2000.0000
+	040300 Rows             =0x1
+	040305 Cols             =0x3
+	040320 XUnits           ="Temp C"
+	040325 YUnits           ="IdleRPM"
+	040330 ZUnits           ="4"
+	040350 XLabels          =-25,37,66
+	040352 XLabelType       =0x4
+	040354 XEq              =X,TH|0|0|0|0|
+	040360 YLabels          =RPM
+	040362 YLabelType       =0x4
+	040364 YEq              =X,TH|0|0|0|0|
+	040660 XAxisMin         =1000.000000
+	040670 XAxisMax         =1000.000000
+	040760 YAxisMin         =1000.000000
+	040770 YAxisMax         =1000.000000
+%%END%%
+
+%%TABLE%%
+	000002 UniqueID         =0x505B
+	000100 Cat0ID           =0x7
+	040005 Title            ="?_IdleRPMMap61"
+	040011 DescSize         =0x92
+	040010 Desc             ="This is another idle RPM map but not sure when used? Idle RPM is calculated by taking the value and multipling it by 10. So, IdleRPM = value * 10"
+	040100 Address          =0x69C3
+	040150 Flags            =0x30
+	040200 ZEq              =x*10,TH|0|0|0|0|
+	040203 XOutType         =0x4
+	040304 YOutType         =0x4
+	040205 OutType          =0x2
+	040210 DecimalPl        =0x0
+	040230 RangeLow         =0.0000
+	040240 RangeHigh        =2000.0000
+	040300 Rows             =0x1
+	040305 Cols             =0x3
+	040320 XUnits           ="Temp C"
+	040325 YUnits           ="IdleRPM"
+	040330 ZUnits           ="4"
+	040350 XLabels          =-25,37,66
+	040352 XLabelType       =0x4
+	040354 XEq              =X,TH|0|0|0|0|
+	040360 YLabels          =RPM
+	040362 YLabelType       =0x4
+	040364 YEq              =X,TH|0|0|0|0|
+	040660 XAxisMin         =1000.000000
+	040670 XAxisMax         =1000.000000
+	040760 YAxisMin         =1000.000000
+	040770 YAxisMax         =1000.000000
+%%END%%
+
+%%TABLE%%
+	000002 UniqueID         =0x957
+	000100 Cat0ID           =0x7
+	040005 Title            ="T_RevLimitDeactivateRPM"
+	040011 DescSize         =0xBA
+	040010 Desc             ="Rev Limiter - RPM at which the rev limit is deactivated. This is not  the RPM at which the rev limiter activates but rather the RPM at which it deactivates. This value is found at 0x61C"
+	040100 Address          =0x61CA
+	040200 ZEq              =X*40,TH|0|0|0|0|
+	040203 XOutType         =0x4
+	040304 YOutType         =0x4
+	040205 OutType          =0x2
+	040210 DecimalPl        =0x0
+	040230 RangeLow         =0.0000
+	040240 RangeHigh        =255.0000
+	040300 Rows             =0x1
+	040305 Cols             =0x1
+	040320 XUnits           =""
+	040325 YUnits           ="RevLimitDeactivate "
+	040330 ZUnits           ="4"
+	040350 XLabels          =(null)
+	040352 XLabelType       =0x4
+	040354 XEq              =X,TH|0|0|0|0|
+	040360 YLabels          =(null)
+	040362 YLabelType       =0x4
+	040364 YEq              =X,TH|0|0|0|0|
+	040660 XAxisMin         =1000.000000
+	040670 XAxisMax         =1000.000000
+	040760 YAxisMin         =1000.000000
+	040770 YAxisMax         =1000.000000
+%%END%%
+
+%%TABLE%%
+	000002 UniqueID         =0x449
+	000100 Cat0ID           =0x7
+	040005 Title            ="T_RevLimitActivateOffset"
+	040011 DescSize         =0xBE
+	040010 Desc             ="Rev Limiter - Max RPMs for the engine is calculated by adding this offset to the RevLimitDeactivate. So if the deactivate is 6520RPMs then the cutoff is 6520 + (this offset 03 * 40) = 6640."
+	040100 Address          =0x61CB
+	040200 ZEq              =X*40,TH|0|0|0|0|
+	040203 XOutType         =0x4
+	040304 YOutType         =0x4
+	040205 OutType          =0x2
+	040210 DecimalPl        =0x0
+	040230 RangeLow         =0.0000
+	040240 RangeHigh        =255.0000
+	040300 Rows             =0x1
+	040305 Cols             =0x1
+	040320 XUnits           =""
+	040325 YUnits           ="Rev Limit"
+	040330 ZUnits           ="4"
+	040350 XLabels          =(null)
+	040352 XLabelType       =0x4
+	040354 XEq              =X,TH|0|0|0|0|
+	040360 YLabels          =(null)
+	040362 YLabelType       =0x4
+	040364 YEq              =X,TH|0|0|0|0|
+	040660 XAxisMin         =1000.000000
+	040670 XAxisMax         =1000.000000
+	040760 YAxisMin         =1000.000000
+	040770 YAxisMax         =1000.000000
+%%END%%
+
+%%TABLE%%
+	000002 UniqueID         =0x622A
+	000100 Cat0ID           =0x7
+	040005 Title            ="T_OverrunFuelCutoffMap29-a"
+	040011 DescSize         =0x132
+	040010 Desc             ="Fuel cutoff on decel map. When throttle returns closed on decel this map determines RPM at which fuel is cut, if you are above this RPM on decel fuel is cut. Fuel comes back on once RPM drops lower than this RPM. Map has 4 cells and the scale is CHT in DegC, this allows for diffrent cutoff during warmup."
+	040100 Address          =0x67C7
+	040150 Flags            =0x30
+	040200 ZEq              =X*40,TH|0|0|0|0|
+	040203 XOutType         =0x4
+	040304 YOutType         =0x4
+	040205 OutType          =0x2
+	040210 DecimalPl        =0x0
+	040230 RangeLow         =0.0000
+	040240 RangeHigh        =5000.0000
+	040300 Rows             =0x1
+	040305 Cols             =0x4
+	040320 XUnits           ="Temp C"
+	040325 YUnits           ="RPM"
+	040330 ZUnits           ="4"
+	040350 XLabels          =-18C,-7C,46C,75C
+	040352 XLabelType       =0x4
+	040354 XEq              =X,TH|0|0|0|0|
+	040360 YLabels          =RPM
+	040362 YLabelType       =0x4
+	040364 YEq              =X,TH|0|0|0|0|
+	040660 XAxisMin         =1000.000000
+	040670 XAxisMax         =1000.000000
+	040760 YAxisMin         =1000.000000
+	040770 YAxisMax         =1000.000000
+%%END%%
+
+%%TABLE%%
+	000002 UniqueID         =0x6CC1
+	000100 Cat0ID           =0x1
+	000101 Cat1ID           =0x3
+	040005 Title            ="T_FuelIdleMap91"
+	040011 DescSize         =0x45
+	040010 Desc             ="Idle Fuel Trim Map located at 0x6D67 the Idle trim map has 5 values."
+	040100 Address          =0x6D67
+	040150 Flags            =0x30
+	040200 ZEq              =X,TH|0|0|0|0|
+	040203 XOutType         =0x4
+	040304 YOutType         =0x4
+	040205 OutType          =0x2
+	040210 DecimalPl        =0x0
+	040230 RangeLow         =100.0000
+	040240 RangeHigh        =120.0000
+	040300 Rows             =0x5
+	040305 Cols             =0x1
+	040320 XUnits           =""
+	040325 YUnits           ="RPMs"
+	040330 ZUnits           ="3"
+	040350 XLabels          =(null)
+	040352 XLabelType       =0x4
+	040354 XEq              =X,TH|0|0|0|0|
+	040360 YLabels          =480,1320,2080,2400,3000
+	040362 YLabelType       =0x4
+	040364 YEq              =X,TH|0|0|0|0|
+	040660 XAxisMin         =1000.000000
+	040670 XAxisMax         =1000.000000
+	040760 YAxisMin         =1000.000000
+	040770 YAxisMax         =1000.000000
+%%END%%
+
+%%TABLE%%
+	000002 UniqueID         =0x5157
+	000100 Cat0ID           =0x1
+	000101 Cat1ID           =0x3
+	040005 Title            ="T_FuelIdleMap98"
+	040011 DescSize         =0x45
+	040010 Desc             ="Idle Fuel Trim Map located at 0x701D the Idle trim map has 5 values."
+	040100 Address          =0x701D
+	040150 Flags            =0x30
+	040200 ZEq              =X,TH|0|0|0|0|
+	040203 XOutType         =0x4
+	040304 YOutType         =0x4
+	040205 OutType          =0x2
+	040210 DecimalPl        =0x0
+	040230 RangeLow         =100.0000
+	040240 RangeHigh        =120.0000
+	040300 Rows             =0x5
+	040305 Cols             =0x1
+	040320 XUnits           =""
+	040325 YUnits           ="RPMs"
+	040330 ZUnits           ="3"
+	040350 XLabels          =(null)
+	040352 XLabelType       =0x4
+	040354 XEq              =X,TH|0|0|0|0|
+	040360 YLabels          =480,1320,2080,2400,3000
+	040362 YLabelType       =0x4
+	040364 YEq              =X,TH|0|0|0|0|
+	040660 XAxisMin         =1000.000000
+	040670 XAxisMax         =1000.000000
+	040760 YAxisMin         =1000.000000
+	040770 YAxisMax         =1000.000000
+%%END%%
+
+%%TABLE%%
+	000002 UniqueID         =0x7C0C
+	000100 Cat0ID           =0x2
+	000101 Cat1ID           =0x3
+	040005 Title            ="T_IgnitionIdleMap105"
+	040011 DescSize         =0x4A
+	040010 Desc             ="Idle Ignition Trim Map located at 0x7376, the Idle trim map has 8 values."
+	040100 Address          =0x7376
+	040150 Flags            =0x30
+	040200 ZEq              =(X-20)*.6,TH|0|0|0|0|
+	040203 XOutType         =0x4
+	040304 YOutType         =0x4
+	040210 DecimalPl        =0x1
+	040230 RangeLow         =0.0000
+	040240 RangeHigh        =50.0000
+	040300 Rows             =0x8
+	040305 Cols             =0x1
+	040320 XUnits           =""
+	040325 YUnits           ="RPMs"
+	040330 ZUnits           ="2"
+	040350 XLabels          =(null)
+	040352 XLabelType       =0x4
+	040354 XEq              =X,TH|0|0|0|0|
+	040360 YLabels          =800,1120,1760,2080,3000,4000,5000,6800
+	040362 YLabelType       =0x4
+	040364 YEq              =X,TH|0|0|0|0|
+	040660 XAxisMin         =1000.000000
+	040670 XAxisMax         =1000.000000
+	040760 YAxisMin         =1000.000000
+	040770 YAxisMax         =1000.000000
+%%END%%
+
+%%TABLE%%
+	000002 UniqueID         =0x70D2
+	000100 Cat0ID           =0x1
+	000101 Cat1ID           =0x5
+	040005 Title            ="T_FuelWOTMap92-ROW"
+	040011 DescSize         =0x1
+	040010 Desc             =""
+	040100 Address          =0x6D7D
+	040150 Flags            =0x30
+	040200 ZEq              =X,TH|0|0|0|0|
+	040203 XOutType         =0x4
+	040304 YOutType         =0x4
+	040210 DecimalPl        =0x0
+	040230 RangeLow         =100.0000
+	040240 RangeHigh        =150.0000
+	040300 Rows             =0xF
+	040305 Cols             =0x1
+	040320 XUnits           =""
+	040325 YUnits           ="RPMs"
+	040330 ZUnits           ="3"
+	040350 XLabels          =(null)
+	040352 XLabelType       =0x4
+	040354 XEq              =X,TH|0|0|0|0|
+	040360 YLabels          =1000,1480,2000,2480,3000,3480,4320,4520,4760,5520,6000,6200,6520,6800,7000
+	040362 YLabelType       =0x4
+	040364 YEq              =X,TH|0|0|0|0|
+	040660 XAxisMin         =1000.000000
+	040670 XAxisMax         =1000.000000
+	040760 YAxisMin         =1000.000000
+	040770 YAxisMax         =1000.000000
+%%END%%
+
+%%TABLE%%
+	000002 UniqueID         =0x3AC0
+	000100 Cat0ID           =0x1
+	000101 Cat1ID           =0x5
+	040005 Title            ="T_FuelWOTMap99-USACAN"
+	040011 DescSize         =0x1
+	040010 Desc             =""
+	040100 Address          =0x7033
+	040150 Flags            =0x30
+	040200 ZEq              =X,TH|0|0|0|0|
+	040203 XOutType         =0x4
+	040304 YOutType         =0x4
+	040210 DecimalPl        =0x0
+	040230 RangeLow         =100.0000
+	040240 RangeHigh        =150.0000
+	040300 Rows             =0xF
+	040305 Cols             =0x1
+	040320 XUnits           =""
+	040325 YUnits           ="RPMs"
+	040330 ZUnits           ="3"
+	040350 XLabels          =(null)
+	040352 XLabelType       =0x4
+	040354 XEq              =X,TH|0|0|0|0|
+	040360 YLabels          =1000,1480,2000,2480,3000,3480,4320,4520,4760,5520,6000,6200,6520,6800,7000
+	040362 YLabelType       =0x4
+	040364 YEq              =X,TH|0|0|0|0|
+	040660 XAxisMin         =1000.000000
+	040670 XAxisMax         =1000.000000
+	040760 YAxisMin         =1000.000000
+	040770 YAxisMax         =1000.000000
+%%END%%
+
+%%TABLE%%
+	000002 UniqueID         =0x7320
+	000100 Cat0ID           =0x2
+	000101 Cat1ID           =0x5
+	040005 Title            ="T_IgnitionWOTMap94-USACAN"
+	040011 DescSize         =0x147
+	040010 Desc             ="Wide Open Throttle (WOT) Ignition Map located at 0x6e61, the WOT trim map has 13 values. The formula for converting a ignition advance data point is DegAdvance=(X-20)*.6 (see the Conversion tab). It is NOT recommended to exceed 27deg advance on these air cooled engines for this WOT map, these cars do not have a knock sensor!"
+	040100 Address          =0x6E61
+	040150 Flags            =0x30
+	040200 ZEq              =(X-20)*.6,TH|0|0|0|0|
+	040203 XOutType         =0x4
+	040304 YOutType         =0x4
+	040210 DecimalPl        =0x1
+	040230 RangeLow         =0.0000
+	040240 RangeHigh        =30.0000
+	040300 Rows             =0xD
+	040305 Cols             =0x1
+	040320 XUnits           ="Deg. Advance"
+	040325 YUnits           ="RPMs"
+	040330 ZUnits           ="2"
+	040350 XLabels          =(null)
+	040352 XLabelType       =0x4
+	040354 XEq              =X,TH|0|0|0|0|
+	040360 YLabels          =800,1000,1480,2000,2480,3000,3480,4000,4480,5000,5480,6000,6240
+	040362 YLabelType       =0x4
+	040364 YEq              =X,TH|0|0|0|0|
+	040660 XAxisMin         =1000.000000
+	040670 XAxisMax         =1000.000000
+	040760 YAxisMin         =1000.000000
+	040770 YAxisMax         =1000.000000
+%%END%%
+
+%%TABLE%%
+	000002 UniqueID         =0x7069
+	000100 Cat0ID           =0x2
+	000101 Cat1ID           =0x5
+	040005 Title            ="T_IgnitionWOTMap96-ROW"
+	040011 DescSize         =0x147
+	040010 Desc             ="Wide Open Throttle (WOT) Ignition Map located at 0x6e61, the WOT trim map has 13 values. The formula for converting a ignition advance data point is DegAdvance=(X-20)*.6 (see the Conversion tab). It is NOT recommended to exceed 27deg advance on these air cooled engines for this WOT map, these cars do not have a knock sensor!"
+	040100 Address          =0x6F43
+	040150 Flags            =0x30
+	040200 ZEq              =(X-20)*.6,TH|0|0|0|0|
+	040203 XOutType         =0x4
+	040304 YOutType         =0x4
+	040210 DecimalPl        =0x1
+	040230 RangeLow         =0.0000
+	040240 RangeHigh        =30.0000
+	040300 Rows             =0xD
+	040305 Cols             =0x1
+	040320 XUnits           ="Deg. Advance"
+	040325 YUnits           ="RPMs"
+	040330 ZUnits           ="2"
+	040350 XLabels          =(null)
+	040352 XLabelType       =0x4
+	040354 XEq              =X,TH|0|0|0|0|
+	040360 YLabels          =800,1000,1480,2000,2480,3000,3480,4000,4480,5000,5480,6000,6240
+	040362 YLabelType       =0x4
+	040364 YEq              =X,TH|0|0|0|0|
+	040660 XAxisMin         =1000.000000
+	040670 XAxisMax         =1000.000000
+	040760 YAxisMin         =1000.000000
+	040770 YAxisMax         =1000.000000
+%%END%%
+
+%%TABLE%%
+	000002 UniqueID         =0x39A5
+	000100 Cat0ID           =0x2
+	000101 Cat1ID           =0x5
+	040005 Title            ="T_IgnitionWOTMap86-M150"
+	040011 DescSize         =0x192
+	040010 Desc             ="Wide Open Throttle (WOT) Ignition Map located at 0x6C45, the WOT trim map has 13 values. The formula for converting a ignition advance data point is DegAdvance=(X-20)*.6 (see the Conversion tab). It is NOT recommended to exceed 28deg advance on these air cooled engines for this WOT map, these cars do not have a knock sensor! In the RS chip this map86 is more agressive than the other 2 WOT Ign Maps."
+	040100 Address          =0x6C45
+	040150 Flags            =0x30
+	040200 ZEq              =(X-20)*.6,TH|0|0|0|0|
+	040203 XOutType         =0x4
+	040304 YOutType         =0x4
+	040210 DecimalPl        =0x1
+	040230 RangeLow         =0.0000
+	040240 RangeHigh        =30.0000
+	040300 Rows             =0xD
+	040305 Cols             =0x1
+	040320 XUnits           ="Deg. Advance"
+	040325 YUnits           ="RPMs"
+	040330 ZUnits           ="2"
+	040350 XLabels          =(null)
+	040352 XLabelType       =0x4
+	040354 XEq              =X,TH|0|0|0|0|
+	040360 YLabels          =800,1000,1480,2000,2480,3000,3480,4000,4480,5000,5480,6000,6240
+	040362 YLabelType       =0x4
+	040364 YEq              =X,TH|0|0|0|0|
+	040660 XAxisMin         =1000.000000
+	040670 XAxisMax         =1000.000000
+	040760 YAxisMin         =1000.000000
+	040770 YAxisMax         =1000.000000
+%%END%%
+
+%%TABLE%%
+	000002 UniqueID         =0x66E9
+	000100 Cat0ID           =0x1
+	000101 Cat1ID           =0x4
+	040005 Title            ="T_FuelPartThrottleMap93-ROW"
+	040011 DescSize         =0xB4
+	040010 Desc             ="Thie Fuel Part Throttle Map is located at 0x6DAA. This is a 2 axis map. This map is a 14X12 map with 168 data values.The Rows are the load scale while the colums are the RPM scale"
+	040100 Address          =0x6DAA
+	040200 ZEq              =X,TH|0|0|0|0|
+	040203 XOutType         =0x4
+	040304 YOutType         =0x4
+	040205 OutType          =0x2
+	040210 DecimalPl        =0x0
+	040230 RangeLow         =0.0000
+	040240 RangeHigh        =255.0000
+	040300 Rows             =0xC
+	040305 Cols             =0xE
+	040310 PopByCol         =0x1
+	040320 XUnits           ="RPMs"
+	040325 YUnits           ="% Load"
+	040330 ZUnits           ="3"
+	040350 XLabels          =520,800,1120,1440,1760,2080,3000,4000,4480,5000,5480,6000,6520,6800
+	040352 XLabelType       =0x4
+	040354 XEq              =X,TH|0|0|0|0|
+	040360 YLabels          =8%,10%,13%,16%,18%,21%,26%,31%,36%,41%,46%,58%
+	040362 YLabelType       =0x4
+	040364 YEq              =X,TH|0|0|0|0|
+	040660 XAxisMin         =1000.000000
+	040670 XAxisMax         =1000.000000
+	040760 YAxisMin         =1000.000000
+	040770 YAxisMax         =1000.000000
+%%END%%
+
+%%TABLE%%
+	000002 UniqueID         =0x6ADE
+	000100 Cat0ID           =0x1
+	000101 Cat1ID           =0x4
+	040005 Title            ="T_FuelPartThrottleMap100-USACAN"
+	040011 DescSize         =0xB4
+	040010 Desc             ="Thie Fuel Part Throttle Map is located at 0x7060. This is a 2 axis map. This map is a 14X12 map with 168 data values.The Rows are the load scale while the colums are the RPM scale"
+	040100 Address          =0x7060
+	040200 ZEq              =X,TH|0|0|0|0|
+	040203 XOutType         =0x4
+	040304 YOutType         =0x4
+	040205 OutType          =0x2
+	040210 DecimalPl        =0x0
+	040230 RangeLow         =0.0000
+	040240 RangeHigh        =255.0000
+	040300 Rows             =0xC
+	040305 Cols             =0xE
+	040310 PopByCol         =0x1
+	040320 XUnits           ="RPMs"
+	040325 YUnits           ="% Load"
+	040330 ZUnits           ="3"
+	040350 XLabels          =520,800,1120,1440,1760,2080,3000,4000,4480,5000,5480,6000,6520,6800
+	040352 XLabelType       =0x4
+	040354 XEq              =X,TH|0|0|0|0|
+	040360 YLabels          =8%,10%,13%,16%,18%,21%,26%,31%,36%,41%,46%,58%
+	040362 YLabelType       =0x4
+	040364 YEq              =X,TH|0|0|0|0|
+	040660 XAxisMin         =1000.000000
+	040670 XAxisMax         =1000.000000
+	040760 YAxisMin         =1000.000000
+	040770 YAxisMax         =1000.000000
+%%END%%
+
+%%TABLE%%
+	000002 UniqueID         =0x4364
+	000100 Cat0ID           =0x2
+	000101 Cat1ID           =0x4
+	040005 Title            ="T_IgnitionPartThrottleMap90-ROW"
+	040011 DescSize         =0xBC
+	040010 Desc             ="The Ignition Part Throttle Map (PT) is located at 0x6CB8. This is a 2 axis map. This map is a 14X12 map with 168 data values.The Rows are the load scale while the colums are the RPM scale"
+	040100 Address          =0x6CB8
+	040150 Flags            =0x30
+	040200 ZEq              =(X-20)*0.6,TH|0|0|0|0|
+	040203 XOutType         =0x4
+	040304 YOutType         =0x4
+	040210 DecimalPl        =0x1
+	040230 RangeLow         =0.0000
+	040240 RangeHigh        =50.0000
+	040300 Rows             =0xC
+	040305 Cols             =0xE
+	040310 PopByCol         =0x1
+	040320 XUnits           ="RPMs"
+	040325 YUnits           ="% Load"
+	040330 ZUnits           ="2"
+	040350 XLabels          =520,800,1120,1440,1600,1760,2080,3000,4000,4480,5000,5480,6000,6520
+	040352 XLabelType       =0x4
+	040354 XEq              =X,TH|0|0|0|0|
+	040360 YLabels          =8,10,13,16,18,21,26,31,36,41,46,58
+	040362 YLabelType       =0x4
+	040364 YEq              =X,TH|0|0|0|0|
+	040660 XAxisMin         =1000.000000
+	040670 XAxisMax         =1000.000000
+	040760 YAxisMin         =1000.000000
+	040770 YAxisMax         =1000.000000
+%%END%%
+
+%%TABLE%%
+	000002 UniqueID         =0x6742
+	000100 Cat0ID           =0x2
+	000101 Cat1ID           =0x4
+	040005 Title            ="T_IgnitionPartThrottleMap97-M150"
+	040011 DescSize         =0xBC
+	040010 Desc             ="The Ignition Part Throttle Map (PT) is located at 0x6F6E. This is a 2 axis map. This map is a 14X12 map with 168 data values.The Rows are the load scale while the colums are the RPM scale"
+	040100 Address          =0x6F6E
+	040150 Flags            =0x30
+	040200 ZEq              =(X-20)*0.6,TH|0|0|0|0|
+	040203 XOutType         =0x4
+	040304 YOutType         =0x4
+	040210 DecimalPl        =0x1
+	040230 RangeLow         =0.0000
+	040240 RangeHigh        =50.0000
+	040300 Rows             =0xC
+	040305 Cols             =0xE
+	040310 PopByCol         =0x1
+	040320 XUnits           ="RPMs"
+	040325 YUnits           ="% Load"
+	040330 ZUnits           ="2"
+	040350 XLabels          =520,800,1120,1440,1600,1760,2080,3000,4000,4480,5000,5480,6000,6520
+	040352 XLabelType       =0x4
+	040354 XEq              =X,TH|0|0|0|0|
+	040360 YLabels          =8,10,13,16,18,21,26,31,36,41,46,58
+	040362 YLabelType       =0x4
+	040364 YEq              =X,TH|0|0|0|0|
+	040660 XAxisMin         =1000.000000
+	040670 XAxisMax         =1000.000000
+	040760 YAxisMin         =1000.000000
+	040770 YAxisMax         =1000.000000
+%%END%%
+
+%%TABLE%%
+	000002 UniqueID         =0x58D3
+	000100 Cat0ID           =0x2
+	000101 Cat1ID           =0x4
+	040005 Title            ="T_IgnitionPartThrottleMap95-USACAN"
+	040011 DescSize         =0xBC
+	040010 Desc             ="The Ignition Part Throttle Map (PT) is located at 0x6E8C. This is a 2 axis map. This map is a 14X12 map with 168 data values.The Rows are the load scale while the colums are the RPM scale"
+	040100 Address          =0x6E8C
+	040150 Flags            =0x30
+	040200 ZEq              =(X-20)*0.6,TH|0|0|0|0|
+	040203 XOutType         =0x4
+	040304 YOutType         =0x4
+	040210 DecimalPl        =0x1
+	040230 RangeLow         =0.0000
+	040240 RangeHigh        =50.0000
+	040300 Rows             =0xC
+	040305 Cols             =0xE
+	040310 PopByCol         =0x1
+	040320 XUnits           ="RPMs"
+	040325 YUnits           ="% Load"
+	040330 ZUnits           ="2"
+	040350 XLabels          =520,800,1120,1440,1600,1760,2080,3000,4000,4480,5000,5480,6000,6520
+	040352 XLabelType       =0x4
+	040354 XEq              =X,TH|0|0|0|0|
+	040360 YLabels          =8,10,13,16,18,21,26,31,36,41,46,58
+	040362 YLabelType       =0x4
+	040364 YEq              =X,TH|0|0|0|0|
+	040660 XAxisMin         =1000.000000
+	040670 XAxisMax         =1000.000000
+	040760 YAxisMin         =1000.000000
+	040770 YAxisMax         =1000.000000
+%%END%%
+
+%%TABLE%%
+	000002 UniqueID         =0x79D2
+	000100 Cat0ID           =0x2
+	000101 Cat1ID           =0x4
+	040005 Title            ="T_IgnitionPartThrottleMap101-ROW-Tip"
+	040011 DescSize         =0xBC
+	040010 Desc             ="The Ignition Part Throttle Map (PT) is located at 0x7126. This is a 2 axis map. This map is a 14X12 map with 168 data values.The Rows are the load scale while the colums are the RPM scale"
+	040100 Address          =0x7126
+	040150 Flags            =0x30
+	040200 ZEq              =(X-20)*0.6,TH|0|0|0|0|
+	040203 XOutType         =0x4
+	040304 YOutType         =0x4
+	040210 DecimalPl        =0x1
+	040230 RangeLow         =0.0000
+	040240 RangeHigh        =50.0000
+	040300 Rows             =0xC
+	040305 Cols             =0xE
+	040310 PopByCol         =0x1
+	040320 XUnits           ="RPMs"
+	040325 YUnits           ="% Load"
+	040330 ZUnits           ="2"
+	040350 XLabels          =520,800,1120,1440,1600,1760,2080,3000,4000,4480,5000,5480,6000,6520
+	040352 XLabelType       =0x4
+	040354 XEq              =X,TH|0|0|0|0|
+	040360 YLabels          =8,10,13,16,18,21,26,31,36,41,46,58
+	040362 YLabelType       =0x4
+	040364 YEq              =X,TH|0|0|0|0|
+	040660 XAxisMin         =1000.000000
+	040670 XAxisMax         =1000.000000
+	040760 YAxisMin         =1000.000000
+	040770 YAxisMax         =1000.000000
+%%END%%
+
+%%TABLE%%
+	000002 UniqueID         =0x6E76
+	000100 Cat0ID           =0x2
+	000101 Cat1ID           =0x4
+	040005 Title            ="T_IgnitionPartThrottleMap102-USACAN-Tip"
+	040011 DescSize         =0xBC
+	040010 Desc             ="The Ignition Part Throttle Map (PT) is located at 0x71EC. This is a 2 axis map. This map is a 14X12 map with 168 data values.The Rows are the load scale while the colums are the RPM scale"
+	040100 Address          =0x71EC
+	040150 Flags            =0x30
+	040200 ZEq              =(X-20)*0.6,TH|0|0|0|0|
+	040203 XOutType         =0x4
+	040304 YOutType         =0x4
+	040210 DecimalPl        =0x1
+	040230 RangeLow         =0.0000
+	040240 RangeHigh        =50.0000
+	040300 Rows             =0xC
+	040305 Cols             =0xE
+	040310 PopByCol         =0x1
+	040320 XUnits           ="RPMs"
+	040325 YUnits           ="% Load"
+	040330 ZUnits           ="2"
+	040350 XLabels          =520,800,1120,1440,1600,1760,2080,3000,4000,4480,5000,5480,6000,6520
+	040352 XLabelType       =0x4
+	040354 XEq              =X,TH|0|0|0|0|
+	040360 YLabels          =8,10,13,16,18,21,26,31,36,41,46,58
+	040362 YLabelType       =0x4
+	040364 YEq              =X,TH|0|0|0|0|
+	040660 XAxisMin         =1000.000000
+	040670 XAxisMax         =1000.000000
+	040760 YAxisMin         =1000.000000
+	040770 YAxisMax         =1000.000000
+%%END%%
+
+%%TABLE%%
+	000002 UniqueID         =0x101C
+	000100 Cat0ID           =0x2
+	000101 Cat1ID           =0x4
+	040005 Title            ="T_IgnitionPartThrottleMap103-M150-Tip"
+	040011 DescSize         =0xBC
+	040010 Desc             ="The Ignition Part Throttle Map (PT) is located at 0x72B2. This is a 2 axis map. This map is a 14X12 map with 168 data values.The Rows are the load scale while the colums are the RPM scale"
+	040100 Address          =0x72B2
+	040150 Flags            =0x30
+	040200 ZEq              =(X-20)*0.6,TH|0|0|0|0|
+	040203 XOutType         =0x4
+	040304 YOutType         =0x4
+	040210 DecimalPl        =0x1
+	040230 RangeLow         =0.0000
+	040240 RangeHigh        =50.0000
+	040300 Rows             =0xC
+	040305 Cols             =0xE
+	040310 PopByCol         =0x1
+	040320 XUnits           ="RPMs"
+	040325 YUnits           ="% Load"
+	040330 ZUnits           ="2"
+	040350 XLabels          =520,800,1120,1440,1600,1760,2080,3000,4000,4480,5000,5480,6000,6520
+	040352 XLabelType       =0x4
+	040354 XEq              =X,TH|0|0|0|0|
+	040360 YLabels          =8,10,13,16,18,21,26,31,36,41,46,58
+	040362 YLabelType       =0x4
+	040364 YEq              =X,TH|0|0|0|0|
+	040660 XAxisMin         =1000.000000
+	040670 XAxisMax         =1000.000000
+	040760 YAxisMin         =1000.000000
+	040770 YAxisMax         =1000.000000
+%%END%%
+
+%%TABLE%%
+	000002 UniqueID         =0x7475
+	040005 Title            ="T_TempSensorConvLawMap01"
+	040011 DescSize         =0x73
+	040010 Desc             ="CHT & IAT sensor conversion law. Map has 12 data points. Formula for Temp C scale is: TempC = (ScaleValue*0.67)-39"
+	040100 Address          =0x6698
+	040150 Flags            =0x30
+	040200 ZEq              =X,TH|0|0|0|0|
+	040203 XOutType         =0x4
+	040304 YOutType         =0x2
+	040210 DecimalPl        =0x0
+	040230 RangeLow         =0.0000
+	040240 RangeHigh        =255.0000
+	040300 Rows             =0xC
+	040305 Cols             =0x1
+	040310 PopByCol         =0x1
+	040320 XUnits           =""
+	040325 YUnits           ="Temp C"
+	040330 ZUnits           ="3"
+	040350 XLabels          =(null)
+	040352 XLabelType       =0x4
+	040354 XEq              =X,TH|0|0|0|0|
+	040360 YLabels          =-35,-33,-29,-20,-02,26,57,78,96,108,112,118
+	040362 YLabelType       =0x2
+	040364 YEq              =(X*.67)-39,TH|0|0|0|0|
+	040660 XAxisMin         =1000.000000
+	040670 XAxisMax         =1000.000000
+	040700 YAddress         =0x668C
+	040710 YDataSize        =0x1
+	040720 YAddrStep        =2
+	040750 YOutputDig       =0x3
+	040760 YAxisMin         =1000.000000
+	040770 YAxisMax         =1000.000000
+%%END%%
+
+%%TABLE%%
+	000002 UniqueID         =0x4C4A
+	000100 Cat0ID           =0x2
+	040005 Title            ="T_IgnitionDwellMap44"
+	040011 DescSize         =0x3D
+	040010 Desc             ="Not 100% certain, but this seems like the ignition Dwell Map"
+	040100 Address          =0x687C
+	040200 ZEq              =X,TH|0|0|0|0|
+	040203 XOutType         =0x4
+	040304 YOutType         =0x4
+	040205 OutType          =0x2
+	040210 DecimalPl        =0x0
+	040230 RangeLow         =0.0000
+	040240 RangeHigh        =255.0000
+	040300 Rows             =0xC
+	040305 Cols             =0x7
+	040320 XUnits           ="Volts"
+	040325 YUnits           ="RPM"
+	040330 ZUnits           ="4"
+	040350 XLabels          =88,117,147,176,206,235,242
+	040352 XLabelType       =0x4
+	040354 XEq              =X,TH|0|0|0|0|
+	040360 YLabels          =40,240,480,680,1440,2200,2760,4000,4720,5560,6000,7000
+	040362 YLabelType       =0x4
+	040364 YEq              =X,TH|0|0|0|0|
+	040660 XAxisMin         =1000.000000
+	040670 XAxisMax         =1000.000000
+	040760 YAxisMin         =1000.000000
+	040770 YAxisMax         =1000.000000
+%%END%%
+
+%%TABLE%%
+	000002 UniqueID         =0x4EB0
+	040005 Title            ="T_AFMConstants1"
+	040011 DescSize         =0x2D
+	040010 Desc             ="These 8 values seem to be voltage constants?"
+	040100 Address          =0x6560
+	040200 ZEq              =X,TH|0|0|0|0|
+	040203 XOutType         =0x4
+	040304 YOutType         =0x4
+	040230 RangeLow         =0.0000
+	040240 RangeHigh        =255.0000
+	040300 Rows             =0x8
+	040305 Cols             =0x1
+	040320 XUnits           =""
+	040325 YUnits           ="Volts?"
+	040330 ZUnits           =""
+	040350 XLabels          =
+	040352 XLabelType       =0x4
+	040354 XEq              =X,TH|0|0|0|0|
+	040360 YLabels          =0.5,1.0,2.0,2.5,3.0,3.5,4.0,5.0
+	040362 YLabelType       =0x4
+	040364 YEq              =X,TH|0|0|0|0|
+	040660 XAxisMin         =1000.000000
+	040670 XAxisMax         =1000.000000
+	040760 YAxisMin         =1000.000000
+	040770 YAxisMax         =1000.000000
+%%END%%
+
+%%TABLE%%
+	000002 UniqueID         =0x6700
+	040005 Title            ="T_AFMConstants2"
+	040011 DescSize         =0x1
+	040010 Desc             =""
+	040100 Address          =0x6568
+	040200 ZEq              =X,TH|0|0|0|0|
+	040203 XOutType         =0x4
+	040304 YOutType         =0x4
+	040230 RangeLow         =0.0000
+	040240 RangeHigh        =255.0000
+	040300 Rows             =0x8
+	040305 Cols             =0x1
+	040320 XUnits           =""
+	040325 YUnits           =""
+	040330 ZUnits           =""
+	040350 XLabels          =
+	040352 XLabelType       =0x4
+	040354 XEq              =X,TH|0|0|0|0|
+	040360 YLabels          =
+	040362 YLabelType       =0x4
+	040364 YEq              =X,TH|0|0|0|0|
+	040660 XAxisMin         =1000.000000
+	040670 XAxisMax         =1000.000000
+	040760 YAxisMin         =1000.000000
+	040770 YAxisMax         =1000.000000
+%%END%%
+
+%%TABLE%%
+	000002 UniqueID         =0x2AE2
+	040005 Title            ="T_AFMTransferMap"
+	040011 DescSize         =0x46
+	040010 Desc             ="Air Flow Meter Transfer Map, could be used for AFM to MAF conversion."
+	040100 Address          =0x6570
+	040150 Flags            =0x30
+	040200 ZEq              =X,TH|0|0|0|0|
+	040203 XOutType         =0x4
+	040304 YOutType         =0x4
+	040205 OutType          =0x2
+	040210 DecimalPl        =0x0
+	040230 RangeLow         =128.0000
+	040240 RangeHigh        =255.0000
+	040300 Rows             =0x20
+	040305 Cols             =0x1
+	040320 XUnits           ="Value"
+	040325 YUnits           ="AFM Door Position"
+	040330 ZUnits           ="4"
+	040350 XLabels          =
+	040352 XLabelType       =0x4
+	040354 XEq              =X,TH|0|0|0|0|
+	040360 YLabels          =Door Closed,Door Open
+	040362 YLabelType       =0x4
+	040364 YEq              =X,TH|0|0|0|0|
+	040660 XAxisMin         =1000.000000
+	040670 XAxisMax         =1000.000000
+	040760 YAxisMin         =1000.000000
+	040770 YAxisMax         =1000.000000
+%%END%%
+
+%%TABLE%%
+	000002 UniqueID         =0x4830
+	040005 Title            ="??_Map71"
+	040011 DescSize         =0x1
+	040010 Desc             =""
+	040100 Address          =0x6A2F
+	040200 ZEq              =X,TH|0|0|0|0|
+	040203 XOutType         =0x4
+	040304 YOutType         =0x4
+	040205 OutType          =0x2
+	040210 DecimalPl        =0x0
+	040230 RangeLow         =0.0000
+	040240 RangeHigh        =255.0000
+	040300 Rows             =0x7
+	040305 Cols             =0x6
+	040320 XUnits           ="Load"
+	040325 YUnits           ="RPM"
+	040330 ZUnits           ="4"
+	040350 XLabels          =(null),(null),(null),(null),(null),(null)
+	040352 XLabelType       =0x4
+	040354 XEq              =X,TH|0|0|0|0|
+	040360 YLabels          =(null),(null),(null),(null),(null),(null),(null)
+	040362 YLabelType       =0x4
+	040364 YEq              =X,TH|0|0|0|0|
+	040660 XAxisMin         =1000.000000
+	040670 XAxisMax         =1000.000000
+	040760 YAxisMin         =1000.000000
+	040770 YAxisMax         =1000.000000
+%%END%%
+

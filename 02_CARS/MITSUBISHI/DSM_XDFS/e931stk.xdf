@@ -1,0 +1,355 @@
+XDF
+1.110000
+
+DO NOT HAND EDIT!!!! (Trust me)
+
+%%HEADER%%
+	001000 FileVers         =""
+	001005 DefTitle         ="DSM E931"
+	001007 DescSize         =0x0
+	001006 Desc             =""
+	001010 Author           =""
+	001030 BinSize          =0x4000
+	001035 BaseOffset       =-49152
+	001200 ADSAssoc         =""
+	001225 ADSCheck         =0x0
+	001300 GenFlags         =0x0
+	001325 ModeFlags        =0x0
+%%END%%
+
+%%CHECKSUM%%
+	000002 UniqueID         =0x3AEF
+	010005 Title            ="Imported Checksum"
+	010010 DataStart        =0x0
+	010015 DataEnd          =0x0
+	010020 SizeBits         =0x8
+	010025 StoreAddr        =0x0
+	010030 CalcMethod       =0x0
+	010050 Flags            =0x0
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x3AF0
+	020005 Title            ="Rev Limiter [rpm]"
+	020011 DescSize         =0x1
+	020010 Desc             =""
+	020020 Units            =""
+	020050 SizeInBits       =0x10
+	020100 Address          =0xF27A
+	020200 Equation         =3750000.000000 / X + 0.000000,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x3AF1
+	020005 Title            ="Injector Size Compensation [cc/min]"
+	020011 DescSize         =0x1
+	020010 Desc             =""
+	020020 Units            =""
+	020100 Address          =0xD99F
+	020200 Equation         =33150.000000 / X + 0.000000,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x3AF2
+	020005 Title            ="Fuel Cut"
+	020011 DescSize         =0x1
+	020010 Desc             =""
+	020020 Units            =""
+	020100 Address          =0xD59A
+	020200 Equation         =1 * X + 0.000000,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x3AF3
+	020005 Title            ="MAF adder"
+	020011 DescSize         =0x1
+	020010 Desc             =""
+	020020 Units            =""
+	020100 Address          =0xD669
+	020200 Equation         =1.000000 * X + 0.000000,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x3B10
+	020005 Title            ="MAF scalar"
+	020011 DescSize         =0x1
+	020010 Desc             =""
+	020020 Units            =""
+	020050 SizeInBits       =0x10
+	020100 Address          =0xD49A
+	020200 Equation         =1.000000 * X + 0.000000,TH|0|0|0|0|
+%%END%%
+
+%%TABLE%%
+	000002 UniqueID         =0x3B11
+	040005 Title            ="Fuel Table (AFR)"
+	040011 DescSize         =0x1
+	040010 Desc             =""
+	040100 Address          =0xFC3F
+	040200 ZEq              =1881.600000 / X + 0.000000,TH|0|0|0|0|
+	040230 RangeLow         =0.0000
+	040240 RangeHigh        =255.0000
+	040300 Rows             =0xC
+	040305 Cols             =0xE
+	040320 XUnits           ="rpm"
+	040325 YUnits           ="Load"
+	040330 ZUnits           =""
+	040350 XLabels          =500,1000,1500,2000,2500,3000,3500,4000,4500,5000,5500,6000,6500,7000
+	040352 XLabelType       =0x4
+	040354 XEq              =X,TH|0|0|0|0|
+	040360 YLabels          =  low,    2,    3,    4,    5,    6,    7,    8,    9,   10,   11, high
+	040362 YLabelType       =0x4
+	040364 YEq              =X,TH|0|0|0|0|
+	040660 XAxisMin         =1000.000000
+	040670 XAxisMax         =1000.000000
+	040760 YAxisMin         =1000.000000
+	040770 YAxisMax         =1000.000000
+%%END%%
+
+%%TABLE%%
+	000002 UniqueID         =0x3B12
+	040005 Title            ="Octane Table"
+	040011 DescSize         =0x1
+	040010 Desc             =""
+	040100 Address          =0xFE08
+	040200 ZEq              =1.000000 * X + -10.000000,TH|0|0|0|0|
+	040230 RangeLow         =0.0000
+	040240 RangeHigh        =255.0000
+	040300 Rows             =0x9
+	040305 Cols             =0x10
+	040320 XUnits           ="rpm"
+	040325 YUnits           ="timing"
+	040330 ZUnits           =""
+	040350 XLabels          =750,1000,1250,1500,1750,2000,2500,3000,3500,4000,4500,5000,5500,6000,6500,7000
+	040352 XLabelType       =0x4
+	040354 XEq              =X,TH|0|0|0|0|
+	040360 YLabels          =    4,    5,    6,    7,    8,    9,   10,   11, high
+	040362 YLabelType       =0x4
+	040364 YEq              =X,TH|0|0|0|0|
+	040660 XAxisMin         =1000.000000
+	040670 XAxisMax         =1000.000000
+	040760 YAxisMin         =1000.000000
+	040770 YAxisMax         =1000.000000
+%%END%%
+
+%%TABLE%%
+	000002 UniqueID         =0x3B13
+	040005 Title            ="Idle map"
+	040011 DescSize         =0x1
+	040010 Desc             =""
+	040100 Address          =0xFEC0
+	040200 ZEq              =8.000000 * X + 0.000000,TH|0|0|0|0|
+	040230 RangeLow         =0.0000
+	040240 RangeHigh        =255.0000
+	040300 Rows             =0x1
+	040305 Cols             =0x8
+	040320 XUnits           ="Coolant temp"
+	040325 YUnits           ="rpm"
+	040330 ZUnits           =""
+	040350 XLabels          =(null),(null),(null),(null),(null),(null),(null),(null)
+	040352 XLabelType       =0x4
+	040354 XEq              =X,TH|0|0|0|0|
+	040360 YLabels          =rpm
+	040362 YLabelType       =0x4
+	040364 YEq              =X,TH|0|0|0|0|
+	040660 XAxisMin         =1000.000000
+	040670 XAxisMax         =1000.000000
+	040760 YAxisMin         =1000.000000
+	040770 YAxisMax         =1000.000000
+%%END%%
+
+%%TABLE%%
+	000002 UniqueID         =0x3B14
+	040005 Title            ="Timing Table"
+	040011 DescSize         =0x1
+	040010 Desc             =""
+	040100 Address          =0xFD48
+	040200 ZEq              =1.000000 * X + -10.000000,TH|0|0|0|0|
+	040230 RangeLow         =0.0000
+	040240 RangeHigh        =255.0000
+	040300 Rows             =0xC
+	040305 Cols             =0x10
+	040320 XUnits           ="RPM"
+	040325 YUnits           ="Load"
+	040330 ZUnits           =""
+	040350 XLabels          =750,1000,1250,1500,1750,2000,2500,3000,3500,4000,4500,5000,5500,6000,6500,7000
+	040352 XLabelType       =0x4
+	040354 XEq              =X,TH|0|0|0|0|
+	040360 YLabels          =  low,    2,    3,    4,    5,    6,    7,    8,    9,   10,   11, high
+	040362 YLabelType       =0x4
+	040364 YEq              =X,TH|0|0|0|0|
+	040660 XAxisMin         =1000.000000
+	040670 XAxisMax         =1000.000000
+	040760 YAxisMin         =1000.000000
+	040770 YAxisMax         =1000.000000
+%%END%%
+
+%%TABLE%%
+	000002 UniqueID         =0x3B15
+	040005 Title            ="Fuel Injector Deadtime"
+	040011 DescSize         =0x1
+	040010 Desc             =""
+	040100 Address          =0xFCE7
+	040200 ZEq              =24.000000 * X + 0.000000,TH|0|0|0|0|
+	040230 RangeLow         =0.0000
+	040240 RangeHigh        =255.0000
+	040300 Rows             =0x7
+	040305 Cols             =0x1
+	040320 XUnits           ="Deadtime (ms)"
+	040325 YUnits           ="Volts"
+	040330 ZUnits           =""
+	040350 XLabels          =(null)
+	040352 XLabelType       =0x4
+	040354 XEq              =X,TH|0|0|0|0|
+	040360 YLabels          =  4.7,  7.0, 9.34,11.68, 14.0,16.35, 18.7
+	040362 YLabelType       =0x4
+	040364 YEq              =X,TH|0|0|0|0|
+	040660 XAxisMin         =1000.000000
+	040670 XAxisMax         =1000.000000
+	040760 YAxisMin         =1000.000000
+	040770 YAxisMax         =1000.000000
+%%END%%
+
+%%TABLE%%
+	000002 UniqueID         =0x3B16
+	040005 Title            ="MAF Compensation"
+	040011 DescSize         =0x1
+	040010 Desc             =""
+	040100 Address          =0xFB6E
+	040200 ZEq              =1.000000 * X + 0.000000,TH|0|0|0|0|
+	040230 RangeLow         =0.0000
+	040240 RangeHigh        =255.0000
+	040300 Rows             =0x15
+	040305 Cols             =0x1
+	040320 XUnits           =""
+	040325 YUnits           ="Hz"
+	040330 ZUnits           =""
+	040350 XLabels          =(null)
+	040352 XLabelType       =0x4
+	040354 XEq              =X,TH|0|0|0|0|
+	040360 YLabels          =    0,   25,   50,   75,  100,  125,  150,  175,  200,  225,  250,  275,  300,  400,  500,  600,  800, 1000, 1200, 1400, 1600
+	040362 YLabelType       =0x4
+	040364 YEq              =X,TH|0|0|0|0|
+	040660 XAxisMin         =1000.000000
+	040670 XAxisMax         =1000.000000
+	040760 YAxisMin         =1000.000000
+	040770 YAxisMax         =1000.000000
+%%END%%
+
+%%TABLE%%
+	000002 UniqueID         =0x3B17
+	040005 Title            ="Closed Loop Throttle Position"
+	040011 DescSize         =0x1
+	040010 Desc             =""
+	040100 Address          =0xFBDE
+	040200 ZEq              =0.392157 * X + 0.000000,TH|0|0|0|0|
+	040230 RangeLow         =0.0000
+	040240 RangeHigh        =255.0000
+	040300 Rows             =0xA
+	040305 Cols             =0x1
+	040320 XUnits           ="%TPS"
+	040325 YUnits           ="rpm"
+	040330 ZUnits           =""
+	040350 XLabels          =(null)
+	040352 XLabelType       =0x4
+	040354 XEq              =X,TH|0|0|0|0|
+	040360 YLabels          =  500, 1000, 1500, 2000, 2500, 3000, 3500, 4000, 4500, 5000
+	040362 YLabelType       =0x4
+	040364 YEq              =X,TH|0|0|0|0|
+	040660 XAxisMin         =1000.000000
+	040670 XAxisMax         =1000.000000
+	040760 YAxisMin         =1000.000000
+	040770 YAxisMax         =1000.000000
+%%END%%
+
+%%TABLE%%
+	000002 UniqueID         =0x3B18
+	040005 Title            ="Closed Loop Airflow"
+	040011 DescSize         =0x1
+	040010 Desc             =""
+	040100 Address          =0xFBD4
+	040200 ZEq              =1.000000 * X + 0.000000,TH|0|0|0|0|
+	040230 RangeLow         =0.0000
+	040240 RangeHigh        =255.0000
+	040300 Rows             =0xA
+	040305 Cols             =0x1
+	040320 XUnits           ="Airflow"
+	040325 YUnits           ="rpm"
+	040330 ZUnits           =""
+	040350 XLabels          =(null)
+	040352 XLabelType       =0x4
+	040354 XEq              =X,TH|0|0|0|0|
+	040360 YLabels          =  500, 1000, 1500, 2000, 2500, 3000, 3500, 4000, 4500, 5000
+	040362 YLabelType       =0x4
+	040364 YEq              =X,TH|0|0|0|0|
+	040660 XAxisMin         =1000.000000
+	040670 XAxisMax         =1000.000000
+	040760 YAxisMin         =1000.000000
+	040770 YAxisMax         =1000.000000
+%%END%%
+
+%%TABLE%%
+	000002 UniqueID         =0x3B19
+	040005 Title            ="Closed Loop Fuel Trim"
+	040011 DescSize         =0x1
+	040010 Desc             =""
+	040100 Address          =0xFBCA
+	040200 ZEq              =1.000000 * X + 0.000000,TH|0|0|0|0|
+	040230 RangeLow         =0.0000
+	040240 RangeHigh        =255.0000
+	040300 Rows             =0xA
+	040305 Cols             =0x1
+	040320 XUnits           ="Fuel trim"
+	040325 YUnits           ="rpm"
+	040330 ZUnits           =""
+	040350 XLabels          =(null)
+	040352 XLabelType       =0x4
+	040354 XEq              =X,TH|0|0|0|0|
+	040360 YLabels          =  500, 1000, 1500, 2000, 2500, 3000, 3500, 4000, 4500, 5000
+	040362 YLabelType       =0x4
+	040364 YEq              =X,TH|0|0|0|0|
+	040660 XAxisMin         =1000.000000
+	040670 XAxisMax         =1000.000000
+	040760 YAxisMin         =1000.000000
+	040770 YAxisMax         =1000.000000
+%%END%%
+
+%%TABLE%%
+	000002 UniqueID         =0xCDB
+	040005 Title            ="Logger Table"
+	040011 DescSize         =0x1
+	040010 Desc             =""
+	040100 Address          =0xD000
+	040200 ZEq              =X,TH|0|0|0|0|
+	040203 XOutType         =0x2
+	040304 YOutType         =0x2
+	040205 OutType          =0x3
+	040230 RangeLow         =0.0000
+	040240 RangeHigh        =255.0000
+	040300 Rows             =0x4
+	040305 Cols             =0x10
+	040320 XUnits           =""
+	040325 YUnits           =""
+	040330 ZUnits           =""
+	040350 XLabels          =01,02,03,04,05,06,07,08,09,10,11,12,13,14,15,16
+	040352 XLabelType       =0x2
+	040354 XEq              =X,TH|0|0|0|0|
+	040360 YLabels          =01,02,03,04
+	040362 YLabelType       =0x2
+	040364 YEq              =X,TH|0|0|0|0|
+	040660 XAxisMin         =1000.000000
+	040670 XAxisMax         =1000.000000
+	040760 YAxisMin         =1000.000000
+	040770 YAxisMax         =1000.000000
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x6A6C
+	020005 Title            ="Rolling Speed Idle Adjustment"
+	020011 DescSize         =0x1
+	020010 Desc             =""
+	020020 Units            ="rpm"
+	020100 Address          =0xFB48
+	020200 Equation         =X*31.25,TH|0|0|0|0|
+%%END%%
+

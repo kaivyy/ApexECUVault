@@ -8,7 +8,7 @@
 
 ## 1. Technical Platform Overview
 
-Paket direktori `CRV_HRV_SUVS_ODYSSEY` menyediakan pustaka kalibrasi dan pemetaan ECU profesional untuk Honda SUV & Crossover Platforms. Berkas di direktori ini mencakup kalibrasi firmware pabrikan (OEM), pembacaan perangkat keras (OBD2/BDM/Bench), serta tabel definisi TunerPro XDF untuk eksplorasi parameter mesin.
+Paket direktori `CRV_HRV_SUVS_ODYSSEY` menyediakan pustaka kalibrasi dan pemetaan ECU profesional untuk Honda SUV, Crossover & Minivan Vehicle Platform. Berkas di direktori ini mencakup kalibrasi firmware pabrikan (OEM), pembacaan perangkat keras (OBD2/BDM/Bench), serta tabel definisi TunerPro XDF untuk eksplorasi parameter mesin.
 
 ### Mengapa Sebagian Berkas Memiliki Nama Berupa Angka / Kode?
 Nama berkas merefleksikan identitas perangkat keras (Hardware ID), versi perangkat lunak (Software ID), atau nomor kalibrasi pabrikan asli (OEM Calibration ID) untuk menjaga kecocokan header pada TunerPro dan alat flasher.
@@ -71,7 +71,7 @@ Berikut adalah daftar lengkap berkas fisik yang tersimpan secara lokal di direkt
 
 ### Subdirektori Tambahan
 
-- **`OFFICIAL_CALIBRATION_PACKAGES/`**: Mengelola 47 aset kalibrasi lanjutan.
+- **`OFFICIAL_CALIBRATION_PACKAGES/`**: Mengelola 197 aset kalibrasi lanjutan.
 
 ---
 

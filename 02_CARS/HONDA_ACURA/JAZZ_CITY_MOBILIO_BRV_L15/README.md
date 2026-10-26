@@ -8,7 +8,7 @@
 
 ## 1. Technical Platform Overview
 
-Paket direktori `JAZZ_CITY_MOBILIO_BRV_L15` menyediakan pustaka kalibrasi dan pemetaan ECU profesional untuk Honda Jazz, City, Mobilio, BR-V 1.5L L15 Engine Platform. Berkas di direktori ini mencakup kalibrasi firmware pabrikan (OEM), pembacaan perangkat keras (OBD2/BDM/Bench), serta tabel definisi TunerPro XDF untuk eksplorasi parameter mesin.
+Paket direktori `JAZZ_CITY_MOBILIO_BRV_L15` menyediakan pustaka kalibrasi dan pemetaan ECU profesional untuk Honda Jazz, City, Mobilio, BR-V 1.5L L15 Engine Management Platform. Berkas di direktori ini mencakup kalibrasi firmware pabrikan (OEM), pembacaan perangkat keras (OBD2/BDM/Bench), serta tabel definisi TunerPro XDF untuk eksplorasi parameter mesin.
 
 ### Mengapa Sebagian Berkas Memiliki Nama Berupa Angka / Kode?
 Nama berkas merefleksikan identitas perangkat keras (Hardware ID), versi perangkat lunak (Software ID), atau nomor kalibrasi pabrikan asli (OEM Calibration ID) untuk menjaga kecocokan header pada TunerPro dan alat flasher.
@@ -37,7 +37,7 @@ Berikut adalah daftar lengkap berkas fisik yang tersimpan secara lokal di direkt
 
 ### Subdirektori Tambahan
 
-- **`OFFICIAL_CALIBRATION_PACKAGES/`**: Mengelola 22 aset kalibrasi lanjutan.
+- **`OFFICIAL_CALIBRATION_PACKAGES/`**: Mengelola 375 aset kalibrasi lanjutan.
 
 ---
 

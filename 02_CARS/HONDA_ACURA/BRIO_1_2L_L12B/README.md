@@ -8,7 +8,7 @@
 
 ## 1. Technical Platform Overview
 
-Paket direktori `BRIO_1_2L_L12B` menyediakan pustaka kalibrasi dan pemetaan ECU profesional untuk Honda Brio 1.2L i-VTEC (L12B) Keihin ECU. Berkas di direktori ini mencakup kalibrasi firmware pabrikan (OEM), pembacaan perangkat keras (OBD2/BDM/Bench), serta tabel definisi TunerPro XDF untuk eksplorasi parameter mesin.
+Paket direktori `BRIO_1_2L_L12B` menyediakan pustaka kalibrasi dan pemetaan ECU profesional untuk Honda Brio 1.2L i-VTEC (L12B) Keihin Engine Management Platform. Berkas di direktori ini mencakup kalibrasi firmware pabrikan (OEM), pembacaan perangkat keras (OBD2/BDM/Bench), serta tabel definisi TunerPro XDF untuk eksplorasi parameter mesin.
 
 ### Mengapa Sebagian Berkas Memiliki Nama Berupa Angka / Kode?
 Nama berkas merefleksikan identitas perangkat keras (Hardware ID), versi perangkat lunak (Software ID), atau nomor kalibrasi pabrikan asli (OEM Calibration ID) untuk menjaga kecocokan header pada TunerPro dan alat flasher.

@@ -102,3 +102,52 @@
    - Land Rover Defender L663 (P300/P400/D300): `4 MB` (Bosch MG1CS028 / MD1CS003 TriCore).
 3. **Cross-Flashing Warning**:
    - Meskipun peta kurva bahan bakar dan pengapian dapat ditiru antar negara menggunakan file `.xdf`, **jangan menimpa (*cross-flash*) file biner mentah secara langsung** jika terdapat perbedaan fitur immobilizer/Smart Key, sensor O2 heater, atau standar emisi Euro3 vs Euro4.
+---
+
+## 4. Worldwide Cross-Platform Shared ECU Architectures (Badge Engineering & Shared Controllers)
+
+Di industri otomotif dan motorsport global, banyak kendaraan yang memiliki nama model, merek, dan pasar yang berbeda drastis, namun ditenagai oleh keluarga ECU, arsitektur mikrokontroler, dan struktur peta kalibrasi yang 100% identik:
+
+### A. Bosch EDC16C39 & EDC15 Platform (Universal Common Rail Diesel)
+ECU Bosch EDC16C39 (berbasis Motorola MPC562 / MPC564) digunakan secara luas lintas aliansi manufaktur global:
+- **Alfa Romeo**: 147, 156, 159, GT, Brera 1.9 & 2.4 JTDM (`02_CARS/ALFA_ROMEO/BOSCH_EDC15C_EDC16C39_ORIGINAL_DUMPS/`)
+- **Fiat**: Grande Punto, Bravo, Croma 1.9 MultiJet
+- **Opel / Vauxhall**: Astra H, Vectra C, Zafira B 1.9 CDTI (Z19DT / Z19DTH) (`02_CARS/EUROPEAN_OTHER/OPEL_VAUXHALL_BOSCH_EDC16_ME7_DELCO/`)
+- **Saab**: 9-3 & 9-5 1.9 TiD / TTiD
+- **Suzuki**: Grand Vitara 1.9 DDiS
+*Kunci Kalibrasi*: Tabel durasi injeksi (SOI), rail pressure (1600 bar), smoke limiter, dan boost pressure target menggunakan konvensi penamaan Bosch 1037xxxxxx yang dapat dipetakan langsung dengan WinOLS atau TunerPro.
+
+### B. PSA DV6 / DW10 Bosch EDC16C34 (Platform Sharing Eropa & Amerika)
+Mesin diesel HDi hasil kolaborasi PSA Group dan Ford Motor Company:
+- **Peugeot & Citroen**: 206, 207, 307, 308, 407, C3, C4, C5 1.6 & 2.0 HDi (`02_CARS/EUROPEAN_OTHER/PSA_PEUGEOT_CITROEN_HDI_EDC15_EDC16/`)
+- **Ford**: Focus Mk2, Fiesta, C-Max 1.6 TDCi
+- **Volvo**: C30, S40, V50 1.6D & 2.0D
+- **Mazda**: Mazda 3 (BK/BL) 1.6 MZ-CD
+- **MINI**: Cooper D (R56) 1.6 W16 engine
+*Kunci Kalibrasi*: Pengendali turbo variabel (VNT N75), pembatas torsi (Torque Limiter by Gear), dan regenerasi DPF/FAP.
+
+### C. Continental / Siemens SIM2K-250 (Hyundai N Performance Global Division)
+Platform sport global yang dipasarkan dengan nama berbeda di setiap benua:
+- **Hyundai i30N / i30 Fastback N**: Pasar Eropa, UK, dan Australia
+- **Hyundai Veloster N**: Pasar Amerika Serikat dan Korea Selatan
+- **Hyundai Elantra N / Avante N**: Pasar Global & Korea Selatan
+- **Hyundai Kona N**: Pasar SUV Performa Tinggi Global
+*Keluarga ECU*: Continental / Kefico SIM2K-250 (Infineon Tricore SAK-TC1791 4MB Flash) (`02_CARS/HYUNDAI_KIA/SIM2K_250_HYUNDAI_N_SERIES/`). Seluruhnya berbagi logika boost control target, dual-variable valve timing, direct injection pressure, dan exhaust pop & bang multi-stage.
+
+### D. Siemens MS42 & MS43 (BMW M52TU / M54 Six-Cylinder Platform)
+Unit kontrol digital DME Siemens C167CR 512KB yang digunakan pada berbagai sasis:
+- **BMW 3-Series (E46)**: 320i, 323i, 325i, 328i, 330i, Compact
+- **BMW 5-Series (E39)**: 520i, 523i, 525i, 528i, 530i
+- **BMW 7-Series (E38)**: 728i
+- **BMW X5 (E53)**: 3.0i M54
+- **BMW Z3 (E36/7)**: 2.2i, 2.5i, 2.8i, 3.0i
+- **Land Rover Range Rover (L322)**: 3.0L M54 I6
+*Kunci Kalibrasi*: Versi software `0110C6` (MS42) dan `MS430069` (MS43) (`02_CARS/BMW/SIEMENS_MS42/`, `02_CARS/BMW/SIEMENS_MS43/`) memiliki struktur memori 100% interoperabel.
+
+### E. VAG TDI & TFSI Platform (Volkswagen, Audi, Skoda, Seat)
+Arsitektur engine management VAG Group yang berbagi ECU secara penuh:
+- **Volkswagen**: Golf, Passat, Bora, Jetta, Polo, Sharan, Touran
+- **Audi**: A3, A4, A6, TT
+- **Skoda**: Octavia, Fabia, Superb, Roomster
+- **Seat**: Leon, Ibiza, Toledo, Altea, Cordoba
+*Keluarga ECU*: Bosch EDC15P, EDC16U1, EDC16U34, Motronic ME7.5, MED9.1, MED17 (`02_CARS/VAG_AUDI_VOLKSWAGEN/`).

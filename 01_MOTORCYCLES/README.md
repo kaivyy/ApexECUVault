@@ -17,7 +17,8 @@ Direktori ini memuat seluruh file kalibrasi biner firmware **Original / Asli** h
 | | `CBR_SPORT/CBR1000RR` | CBR1000RR Fireblade (SC57/SC59), HRC Race ECU | `MFJ`, `MEL`, `MFL`, `MGP` | 141 Dump Flash Keihin SH7058 Asli + XDF |
 | | `MATIC_BEAT_SCOOPY_GENIO` | Beat FI, Scoopy-i, Vario 110, Spacy | `K25`, `K16`, `K44`, `K20` | Definisi TunerPro XDF Asli Komunitas (64KB/256KB) |
 | | `UNDERBONE_SONIC_GTR_SUPRA_WAVE`| Sonic 150R, Winner 150, Supra GTR, Wave 125i | `K56`, `K41`, `KYZ` | Definisi TunerPro XDF Asli Komunitas |
-| **SUZUKI** | `GSX_R1000_DENSO_41G00` | GSX-R1000 K5/K6 Denso | `32920-41G00` | Dump Asli EPROM Denso + XDF |
+| **SUZUKI** | `BIG_BIKE_GSXR_HAYABUSA` | GSX1300R Hayabusa Gen 2/3 (2021-2026), GSX-R1000 M7 | `32990-10L`, `32990-48L` | 10 Dump Flash 2MB Asli (US/EU/Race) + XDF |
+| | `GSX_R1000_DENSO_41G00` | GSX-R1000 K5/K6 Denso | `32920-41G00` | Dump Asli EPROM Denso + XDF |
 | **DUCATI** | `DUCATI_900SS_MARELLI_M153`| Ducati 900 SS EU | Magneti Marelli IAW M15.3 | Dump EPROM Asli (`DUCATI/DUCATI_900SS_MARELLI_M153/AM28F010_DUCATI_900_SS_EU.bin` 128KB) + XDF |
 | **HARLEY-DAVIDSON**| `DELPHI_DYNO_TUNES` | Sportster 883/1200, Softail, Touring Twin Cam | Delphi Centurion / Power Vision | 33 File Kalibrasi Dyno Asli |
 | **BUELL & GUZZI** | `BUELL_BUEIA_ECU` | Buell XB12/XB9, Moto Guzzi P7/P8 | DDFI / IAW P7/P8 | Definisi TunerPro XDF Asli Komunitas |

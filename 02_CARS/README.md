@@ -23,6 +23,14 @@ Direktori ini memuat seluruh file kalibrasi biner firmware **Original / Asli Pab
 | | `FALCON_BARRA_INTECH_6CYL` | Ford Falcon AU 1/2/3, Barra 4.0L Turbo | 4.0L Intech & Barra Turbo (Ford EEC-V 256KB) | 26 Dump Asli Pabrik & Enhanced Fueling + XDF |
 | | `EEC_IV_EEC_V_BINS` | Mustang Fox Body 5.0L Manual (A9L), Thunderbird Turbo 2.3T (LA3) | 5.0L 302 Windsor V8, 2.3L Turbo (Ford EEC-IV 56KB/64KB) | 6 Dump Asli Pabrik (OpenEEC Archive) + XDF |
 | **CHEVROLET** | `CHEVROLET_CAPTIVA_2_2_AWD` | Chevrolet Captiva 2.2L VCDi AWD | 2.2L VCDi Common Rail (Delphi DCM3.7 2MB) | Dump Biner Asli Hardware Read (`.ori`) |
+| **HYUNDAI & KIA** | `SIM2K_250_HYUNDAI_N_SERIES` | i30N, Veloster N, Elantra N / Avante N, Kona N | 2.0L T-GDI Theta II / Smartstream (Continental SIM2K-250 4MB) | 9 Dump Biner OEM Asli (2.62MB/2.75MB) + 9 XDF TunerPro Maps |
+| **ALFA ROMEO** | `BOSCH_EDC15C_EDC16C39_ORIGINAL_DUMPS` | 147, 156, 159, GT, Brera, Spider, 166 | 1.9 & 2.4 JTD/JTDM 8V/16V/20V, Twin Spark (Bosch EDC15/16/ME7) | 106 Dump Biner OEM Asli Hardware Read (.ori/.bin) |
+| **PSA PEUGEOT CITROEN** | `PSA_PEUGEOT_CITROEN_HDI_EDC15_EDC16` | 206, 207, 307, 407, C3, C4, C5, Berlingo | 1.4, 1.6, 2.0, 2.2, 2.7 HDi (Bosch EDC15C2, EDC16C34, SID803) | 190 Dump Biner OEM Asli Hardware Read (.ori/.bin) |
+| **OPEL & VAUXHALL** | `OPEL_VAUXHALL_BOSCH_EDC16_ME7_DELCO` | Astra G/H, Corsa C/D, Vectra C, Zafira | 1.3, 1.7, 1.9 CDTI, 2.0 Turbo (Bosch EDC16C9/39, ME7.6, Delco) | 116 Dump Biner OEM Asli Hardware Read (.ori/.bin) |
+| **VAG SKODA & SEAT** | `SKODA_SEAT_TDI_TFSI_ORIGINAL_BINS` | Octavia, Fabia, Superb, Leon Cupra, Ibiza FR | 1.9 TDI PD, 2.0 TDI, 1.8T 20V, 2.0 TFSI (Bosch EDC15/16, MED9) | 206 Dump Biner OEM Asli Hardware Read (.ori/.bin) |
+| **VAG VW & AUDI** | `VAG_TDI_EDC15_EDC16_ORIGINAL_BINS` | Golf IV/V, Passat B5/B6, A3, A4, A6, Touareg | 1.9 TDI, 2.0 TDI PD/CR, 2.5 TDI V6, 1.8T, 2.0 TFSI (EDC15/16/ME7) | 882 Dump Biner OEM Asli Hardware Read (.ori/.bin) |
+| **SUBARU TRANSMISSION**| `SUBARU_5EAT_TCU_DENSO_HITACHI` | Legacy GT, Outback 3.0R, Forester STI, Tribeca | 5EAT Electronic Automatic Transmission (Denso SH7058 / Hitachi M32R) | 26 Dump ROM TCU Asli + 3 RomRaider XML Definitions |
+| **NISSAN & INFINITI** | `STAGEA_NM35_SKYLINE_V35_VQ25DET` | Stagea NM35 AR-X FOUR, Skyline V35 | 2.5L V6 Turbo VQ25DET Neo Di (Hitachi / Unisia Jecs 512KB) | 6 Dump Biner OEM Asli & Stage Tuned |
 | **BMW** | `MG_FLASHER_B58_B48_S58_S55`| BMW 340i/540i G20/G30 B58, 330i B48 | 3.0L Turbo B58B30 (Bosch MG1CS003 DME 8.6 8MB) | 2 Dump iROM 8MB Asli (Stock + Stage 2) + Ratusan XDF |
 | | `M_POWER_S58_G80_M3_M4` | BMW M3 G80, M4 G82, M2 G87 Competition | 3.0L Twin Turbo S58B30 (Bosch MG1 8MB) | 20 Dump Asli Pabrik & MapSwitchBase + 12 XDF |
 | | `M_POWER_S55_F80_M3_F82_M4`| BMW M3 F80, M4 F82, M2 Competition | 3.0L Twin Turbo S55B30 (Bosch MEVD17.2.G 4MB) | 26 Dump Asli Pabrik & MapSwitchBase + 13 XDF |

@@ -21,17 +21,19 @@ Nama berkas yang tersimpan merefleksikan identitas perangkat keras (Hardware ID)
 > [!NOTE]
 > Mempertahankan kode dan nomor asli pabrikan pada penamaan berkas sangat krusial agar perangkat lunak kalibrasi (seperti **TunerPro**, **WinOLS**, atau **RomRaider**) dapat mengenali dan mencocokkan peta definisi (*definition maps*) secara otomatis tanpa merusak asosiasi header ECU.
 
+* **Rentang Tahun / Model Year**: OEM Production
+
 ---
 
-## 2. Manifest Aset Berkas Fisik (100% Verified)
+## 2. Manifest Fisik Kalibrasi & Definisi Terverifikasi
 
-Berikut adalah daftar lengkap berkas fisik yang tersimpan secara lokal di direktori ini:
+Berikut adalah daftar lengkap berkas fisik yang tersimpan secara lokal di direktori ini dengan verifikasi Model Year (Tahun Produksi), ukuran, MD5 checksum, dan tipe platform:
 
-| Nama Berkas | Tipe / Format | Ukuran (Bytes) | Deskripsi Teknis & Identifikasi |
-| :--- | :--- | :--- | :--- |
-| `GENERATIONAL_HL3A-12A650-B_Ford_F150_Raptor_3.5TT_HO_TwinTurbo_2017_2023.xdf` | `.XDF` | `4,038` bytes | TunerPro Binary Definition Map |
-| `GENERATIONAL_JB3A-12A650-D_Ford_Ranger_2.0L_BiTurbo_Diesel_Panther_2018_2023.xdf` | `.XDF` | `4,042` bytes | TunerPro Binary Definition Map |
-| `GENERATIONAL_LC3A-12A650-A_Ford_SuperDuty_F250_F350_6.7L_PowerStroke_V8_Diesel_2020_2024.xdf` | `.XDF` | `4,054` bytes | TunerPro Binary Definition Map |
+| Filename | Tahun / Model Year | Size | MD5 Checksum | Type / Target Platform |
+| :--- | :---: | :--- | :--- | :--- |
+| `GENERATIONAL_HL3A-12A650-B_Ford_F150_Raptor_3.5TT_HO_TwinTurbo_2017_2023.xdf` | **2017–2023** | 3.9 KB | `803dab8a1a5795cc2013c9b9bb456502` | TunerPro Binary Definition Map |
+| `GENERATIONAL_JB3A-12A650-D_Ford_Ranger_2.0L_BiTurbo_Diesel_Panther_2018_2023.xdf` | **2018–2023** | 3.9 KB | `a0cd9fda5b723b5b0fd8070eaf256757` | TunerPro Binary Definition Map |
+| `GENERATIONAL_LC3A-12A650-A_Ford_SuperDuty_F250_F350_6.7L_PowerStroke_V8_Diesel_2020_2024.xdf` | **2020–2024** | 4.0 KB | `d9c61a8c5efc742a983fd7a70a110002` | TunerPro Binary Definition Map |
 
 ---
 

@@ -21,689 +21,691 @@ Nama berkas yang tersimpan merefleksikan identitas perangkat keras (Hardware ID)
 > [!NOTE]
 > Mempertahankan kode dan nomor asli pabrikan pada penamaan berkas sangat krusial agar perangkat lunak kalibrasi (seperti **TunerPro**, **WinOLS**, atau **RomRaider**) dapat mengenali dan mencocokkan peta definisi (*definition maps*) secara otomatis tanpa merusak asosiasi header ECU.
 
+* **Rentang Tahun / Model Year**: 2001–2014
+
 ---
 
-## 2. Manifest Aset Berkas Fisik (100% Verified)
+## 2. Manifest Fisik Kalibrasi & Definisi Terverifikasi
 
-Berikut adalah daftar lengkap berkas fisik yang tersimpan secara lokal di direktori ini:
+Berikut adalah daftar lengkap berkas fisik yang tersimpan secara lokal di direktori ini dengan verifikasi Model Year (Tahun Produksi), ukuran, MD5 checksum, dan tipe platform:
 
-| Nama Berkas | Tipe / Format | Ukuran (Bytes) | Deskripsi Teknis & Identifikasi |
-| :--- | :--- | :--- | :--- |
-| `16BITBASE.xml` | `.XML` | `367,985` bytes | RomRaider / EcuFlash XML Definition |
-| `32BITBASE.xml` | `.XML` | `501,081` bytes | RomRaider / EcuFlash XML Definition |
-| `4SLEHB00.xml` | `.XML` | `14,268` bytes | RomRaider / EcuFlash XML Definition |
-| `A2PG420A.xml` | `.XML` | `28,716` bytes | RomRaider / EcuFlash XML Definition |
-| `A2SB000A.xml` | `.XML` | `28,853` bytes | RomRaider / EcuFlash XML Definition |
-| `A2SB000Y.xml` | `.XML` | `28,015` bytes | RomRaider / EcuFlash XML Definition |
-| `A2TB000L.xml` | `.XML` | `7,200` bytes | RomRaider / EcuFlash XML Definition |
-| `A2TB000N.xml` | `.XML` | `9,372` bytes | RomRaider / EcuFlash XML Definition |
-| `A2TB001C.xml` | `.XML` | `31,480` bytes | RomRaider / EcuFlash XML Definition |
-| `A2TB001L.xml` | `.XML` | `31,579` bytes | RomRaider / EcuFlash XML Definition |
-| `A2TB001N.xml` | `.XML` | `2,694` bytes | RomRaider / EcuFlash XML Definition |
-| `A2TB100A.xml` | `.XML` | `28,853` bytes | RomRaider / EcuFlash XML Definition |
-| `A2TB100B.xml` | `.XML` | `2,330` bytes | RomRaider / EcuFlash XML Definition |
-| `A2TB100K.xml` | `.XML` | `28,816` bytes | RomRaider / EcuFlash XML Definition |
-| `A2TB100U.xml` | `.XML` | `26,600` bytes | RomRaider / EcuFlash XML Definition |
-| `A2TB100V.xml` | `.XML` | `26,800` bytes | RomRaider / EcuFlash XML Definition |
-| `A2TB100Y.xml` | `.XML` | `28,671` bytes | RomRaider / EcuFlash XML Definition |
-| `A2UG000B.xml` | `.XML` | `28,163` bytes | RomRaider / EcuFlash XML Definition |
-| `A2UG000C.xml` | `.XML` | `31,200` bytes | RomRaider / EcuFlash XML Definition |
-| `A2UG000J.xml` | `.XML` | `32,365` bytes | RomRaider / EcuFlash XML Definition |
-| `A2UG000L.xml` | `.XML` | `31,312` bytes | RomRaider / EcuFlash XML Definition |
-| `A2UG000N.xml` | `.XML` | `499` bytes | RomRaider / EcuFlash XML Definition |
-| `A2UG001G.xml` | `.XML` | `28,192` bytes | RomRaider / EcuFlash XML Definition |
-| `A2UG002T.xml` | `.XML` | `28,297` bytes | RomRaider / EcuFlash XML Definition |
-| `A2UH000A.xml` | `.XML` | `28,149` bytes | RomRaider / EcuFlash XML Definition |
-| `A2UI000A.xml` | `.XML` | `28,149` bytes | RomRaider / EcuFlash XML Definition |
-| `A2UI000K.xml` | `.XML` | `27,969` bytes | RomRaider / EcuFlash XML Definition |
-| `A2UI000Y.xml` | `.XML` | `28,192` bytes | RomRaider / EcuFlash XML Definition |
-| `A2UI000Z.xml` | `.XML` | `28,167` bytes | RomRaider / EcuFlash XML Definition |
-| `A2UI001C.xml` | `.XML` | `31,347` bytes | RomRaider / EcuFlash XML Definition |
-| `A2UI001L.xml` | `.XML` | `20,612` bytes | RomRaider / EcuFlash XML Definition |
-| `A2UJ000J.xml` | `.XML` | `32,365` bytes | RomRaider / EcuFlash XML Definition |
-| `A2WA20  .xml` | `.XML` | `21,942` bytes | RomRaider / EcuFlash XML Definition |
-| `A2WC000E.xml` | `.XML` | `22,056` bytes | RomRaider / EcuFlash XML Definition |
-| `A2WC011E.xml` | `.XML` | `500` bytes | RomRaider / EcuFlash XML Definition |
-| `A2WC012E.xml` | `.XML` | `22,059` bytes | RomRaider / EcuFlash XML Definition |
-| `A2WC013E.xml` | `.XML` | `500` bytes | RomRaider / EcuFlash XML Definition |
-| `A2WC400D.xml` | `.XML` | `26,432` bytes | RomRaider / EcuFlash XML Definition |
-| `A2WC400H.xml` | `.XML` | `22,961` bytes | RomRaider / EcuFlash XML Definition |
-| `A2WC400I.xml` | `.XML` | `26,316` bytes | RomRaider / EcuFlash XML Definition |
-| `A2WC400K.xml` | `.XML` | `26,514` bytes | RomRaider / EcuFlash XML Definition |
-| `A2WC400M.xml` | `.XML` | `22,845` bytes | RomRaider / EcuFlash XML Definition |
-| `A2WC401F.xml` | `.XML` | `23,643` bytes | RomRaider / EcuFlash XML Definition |
-| `A2WC410D.xml` | `.XML` | `26,193` bytes | RomRaider / EcuFlash XML Definition |
-| `A2WC410I.xml` | `.XML` | `26,076` bytes | RomRaider / EcuFlash XML Definition |
-| `A2WC411I.xml` | `.XML` | `497` bytes | RomRaider / EcuFlash XML Definition |
-| `A2WC412D.xml` | `.XML` | `26,192` bytes | RomRaider / EcuFlash XML Definition |
-| `A2WC412I.xml` | `.XML` | `7,119` bytes | RomRaider / EcuFlash XML Definition |
-| `A2WC420F.xml` | `.XML` | `23,643` bytes | RomRaider / EcuFlash XML Definition |
-| `A2WC420M.xml` | `.XML` | `22,845` bytes | RomRaider / EcuFlash XML Definition |
-| `A2WC500C.xml` | `.XML` | `27,319` bytes | RomRaider / EcuFlash XML Definition |
-| `A2WC500K.xml` | `.XML` | `26,783` bytes | RomRaider / EcuFlash XML Definition |
-| `A2WC500L.xml` | `.XML` | `26,680` bytes | RomRaider / EcuFlash XML Definition |
-| `A2WC500N.xml` | `.XML` | `27,316` bytes | RomRaider / EcuFlash XML Definition |
-| `A2WC500R.xml` | `.XML` | `496` bytes | RomRaider / EcuFlash XML Definition |
-| `A2WC501L.xml` | `.XML` | `496` bytes | RomRaider / EcuFlash XML Definition |
-| `A2WC510C.xml` | `.XML` | `27,233` bytes | RomRaider / EcuFlash XML Definition |
-| `A2WC510N.xml` | `.XML` | `27,076` bytes | RomRaider / EcuFlash XML Definition |
-| `A2WC510R.xml` | `.XML` | `496` bytes | RomRaider / EcuFlash XML Definition |
-| `A2WC510S.xml` | `.XML` | `496` bytes | RomRaider / EcuFlash XML Definition |
-| `A2WC511C.xml` | `.XML` | `495` bytes | RomRaider / EcuFlash XML Definition |
-| `A2WC511N.xml` | `.XML` | `495` bytes | RomRaider / EcuFlash XML Definition |
-| `A2WC511R.xml` | `.XML` | `496` bytes | RomRaider / EcuFlash XML Definition |
-| `A2WC521C.xml` | `.XML` | `27,388` bytes | RomRaider / EcuFlash XML Definition |
-| `A2WC521N.xml` | `.XML` | `27,230` bytes | RomRaider / EcuFlash XML Definition |
-| `A2WC521R.xml` | `.XML` | `496` bytes | RomRaider / EcuFlash XML Definition |
-| `A2WC522N.xml` | `.XML` | `495` bytes | RomRaider / EcuFlash XML Definition |
-| `A2WC522S.xml` | `.XML` | `496` bytes | RomRaider / EcuFlash XML Definition |
-| `A2WD000A.xml` | `.XML` | `494` bytes | RomRaider / EcuFlash XML Definition |
-| `A2WD001A.xml` | `.XML` | `23,260` bytes | RomRaider / EcuFlash XML Definition |
-| `A2WD001B.xml` | `.XML` | `23,209` bytes | RomRaider / EcuFlash XML Definition |
-| `A2WD001G.xml` | `.XML` | `23,261` bytes | RomRaider / EcuFlash XML Definition |
-| `A2WD002T.xml` | `.XML` | `23,213` bytes | RomRaider / EcuFlash XML Definition |
-| `A2WD010A.xml` | `.XML` | `494` bytes | RomRaider / EcuFlash XML Definition |
-| `A2WD010B.xml` | `.XML` | `22,956` bytes | RomRaider / EcuFlash XML Definition |
-| `A2WD010G.xml` | `.XML` | `23,261` bytes | RomRaider / EcuFlash XML Definition |
-| `A2WD010T.xml` | `.XML` | `23,213` bytes | RomRaider / EcuFlash XML Definition |
-| `A2WD010Y.xml` | `.XML` | `495` bytes | RomRaider / EcuFlash XML Definition |
-| `A2WD010Z.xml` | `.XML` | `5,956` bytes | RomRaider / EcuFlash XML Definition |
-| `A2WD012A.xml` | `.XML` | `23,004` bytes | RomRaider / EcuFlash XML Definition |
-| `A2WD012B.xml` | `.XML` | `494` bytes | RomRaider / EcuFlash XML Definition |
-| `A2WD012G.xml` | `.XML` | `495` bytes | RomRaider / EcuFlash XML Definition |
-| `A2WD012T.xml` | `.XML` | `495` bytes | RomRaider / EcuFlash XML Definition |
-| `A2WF100K.xml` | `.XML` | `496` bytes | RomRaider / EcuFlash XML Definition |
-| `A2WF100L.xml` | `.XML` | `26,679` bytes | RomRaider / EcuFlash XML Definition |
-| `A2WF101K.xml` | `.XML` | `26,783` bytes | RomRaider / EcuFlash XML Definition |
-| `A2WF101L.xml` | `.XML` | `496` bytes | RomRaider / EcuFlash XML Definition |
-| `A2WF200C.xml` | `.XML` | `27,388` bytes | RomRaider / EcuFlash XML Definition |
-| `A2WF200N.xml` | `.XML` | `27,230` bytes | RomRaider / EcuFlash XML Definition |
-| `A2WF200R.xml` | `.XML` | `27,389` bytes | RomRaider / EcuFlash XML Definition |
-| `A2WF200S.xml` | `.XML` | `496` bytes | RomRaider / EcuFlash XML Definition |
-| `A2ZJ201D.xml` | `.XML` | `25,587` bytes | RomRaider / EcuFlash XML Definition |
-| `A2ZJ500F.xml` | `.XML` | `26,061` bytes | RomRaider / EcuFlash XML Definition |
-| `A2ZJ500H.xml` | `.XML` | `21,820` bytes | RomRaider / EcuFlash XML Definition |
-| `A2ZJ500I.xml` | `.XML` | `25,470` bytes | RomRaider / EcuFlash XML Definition |
-| `A2ZJ500J.xml` | `.XML` | `26,756` bytes | RomRaider / EcuFlash XML Definition |
-| `A2ZJ500K.xml` | `.XML` | `25,655` bytes | RomRaider / EcuFlash XML Definition |
-| `A2ZJ500L.xml` | `.XML` | `25,551` bytes | RomRaider / EcuFlash XML Definition |
-| `A2ZJ500M.xml` | `.XML` | `21,703` bytes | RomRaider / EcuFlash XML Definition |
-| `A2ZJ512I.xml` | `.XML` | `25,470` bytes | RomRaider / EcuFlash XML Definition |
-| `A2ZJ600B.xml` | `.XML` | `22,619` bytes | RomRaider / EcuFlash XML Definition |
-| `A2ZJ601A.xml` | `.XML` | `22,667` bytes | RomRaider / EcuFlash XML Definition |
-| `A2ZJ700J.xml` | `.XML` | `26,756` bytes | RomRaider / EcuFlash XML Definition |
-| `A2ZJ710J.xml` | `.XML` | `26,756` bytes | RomRaider / EcuFlash XML Definition |
-| `A2ZJ800A.xml` | `.XML` | `22,664` bytes | RomRaider / EcuFlash XML Definition |
-| `A2ZJ800G.xml` | `.XML` | `22,668` bytes | RomRaider / EcuFlash XML Definition |
-| `A2ZJA00P.xml` | `.XML` | `25,487` bytes | RomRaider / EcuFlash XML Definition |
-| `A2ZJA00Q.xml` | `.XML` | `500` bytes | RomRaider / EcuFlash XML Definition |
-| `A2ZJA10P.xml` | `.XML` | `25,487` bytes | RomRaider / EcuFlash XML Definition |
-| `A2ZJB10J.xml` | `.XML` | `26,969` bytes | RomRaider / EcuFlash XML Definition |
-| `A2ZJB11J.xml` | `.XML` | `26,889` bytes | RomRaider / EcuFlash XML Definition |
-| `A2ZJC00B.xml` | `.XML` | `22,616` bytes | RomRaider / EcuFlash XML Definition |
-| `A2ZJC00G.xml` | `.XML` | `22,668` bytes | RomRaider / EcuFlash XML Definition |
-| `A2ZJD00A.xml` | `.XML` | `494` bytes | RomRaider / EcuFlash XML Definition |
-| `A2ZJD00B.xml` | `.XML` | `22,619` bytes | RomRaider / EcuFlash XML Definition |
-| `A2ZJD00G.xml` | `.XML` | `495` bytes | RomRaider / EcuFlash XML Definition |
-| `A2ZJD01A.xml` | `.XML` | `22,667` bytes | RomRaider / EcuFlash XML Definition |
-| `A2ZJD02B.xml` | `.XML` | `494` bytes | RomRaider / EcuFlash XML Definition |
-| `A2ZJD02G.xml` | `.XML` | `22,668` bytes | RomRaider / EcuFlash XML Definition |
-| `A2ZJE11J.xml` | `.XML` | `26,889` bytes | RomRaider / EcuFlash XML Definition |
-| `A4RG0500.xml` | `.XML` | `456` bytes | RomRaider / EcuFlash XML Definition |
-| `A4RG050N.xml` | `.XML` | `456` bytes | RomRaider / EcuFlash XML Definition |
-| `A4RG050R.xml` | `.XML` | `456` bytes | RomRaider / EcuFlash XML Definition |
-| `A4RG051N.xml` | `.XML` | `456` bytes | RomRaider / EcuFlash XML Definition |
-| `A4RG052N.xml` | `.XML` | `31,867` bytes | RomRaider / EcuFlash XML Definition |
-| `A4RG060P.xml` | `.XML` | `676` bytes | RomRaider / EcuFlash XML Definition |
-| `A4RG060Q.xml` | `.XML` | `28,774` bytes | RomRaider / EcuFlash XML Definition |
-| `A4RI200I.xml` | `.XML` | `30,754` bytes | RomRaider / EcuFlash XML Definition |
-| `A4RI300I.xml` | `.XML` | `3,826` bytes | RomRaider / EcuFlash XML Definition |
-| `A4RI401I.xml` | `.XML` | `3,826` bytes | RomRaider / EcuFlash XML Definition |
-| `A4RL100J.xml` | `.XML` | `28,447` bytes | RomRaider / EcuFlash XML Definition |
-| `A4RL100K.xml` | `.XML` | `457` bytes | RomRaider / EcuFlash XML Definition |
-| `A4RM000H.xml` | `.XML` | `453` bytes | RomRaider / EcuFlash XML Definition |
-| `A4RM100F.xml` | `.XML` | `28,330` bytes | RomRaider / EcuFlash XML Definition |
-| `A4RM100G.xml` | `.XML` | `783` bytes | RomRaider / EcuFlash XML Definition |
-| `A4RM100H.xml` | `.XML` | `28,421` bytes | RomRaider / EcuFlash XML Definition |
-| `A4RM200K.xml` | `.XML` | `29,062` bytes | RomRaider / EcuFlash XML Definition |
-| `A4RN1000.xml` | `.XML` | `988` bytes | RomRaider / EcuFlash XML Definition |
-| `A4RN2000.xml` | `.XML` | `450` bytes | RomRaider / EcuFlash XML Definition |
-| `A4RN200H.xml` | `.XML` | `28,421` bytes | RomRaider / EcuFlash XML Definition |
-| `A4RN300G.xml` | `.XML` | `29,153` bytes | RomRaider / EcuFlash XML Definition |
-| `A4RN300I.xml` | `.XML` | `783` bytes | RomRaider / EcuFlash XML Definition |
-| `A4SD501A.xml` | `.XML` | `30,424` bytes | RomRaider / EcuFlash XML Definition |
-| `A4SD600B.xml` | `.XML` | `30,470` bytes | RomRaider / EcuFlash XML Definition |
-| `A4SD700B.xml` | `.XML` | `30,470` bytes | RomRaider / EcuFlash XML Definition |
-| `A4SD800A.xml` | `.XML` | `2,210` bytes | RomRaider / EcuFlash XML Definition |
-| `A4SD800B.xml` | `.XML` | `2,098` bytes | RomRaider / EcuFlash XML Definition |
-| `A4SD900A.xml` | `.XML` | `739` bytes | RomRaider / EcuFlash XML Definition |
-| `A4SD900B.xml` | `.XML` | `30,476` bytes | RomRaider / EcuFlash XML Definition |
-| `A4SDA00P.xml` | `.XML` | `568` bytes | RomRaider / EcuFlash XML Definition |
-| `A4SDA00Q.xml` | `.XML` | `456` bytes | RomRaider / EcuFlash XML Definition |
-| `A4SDA01B.xml` | `.XML` | `456` bytes | RomRaider / EcuFlash XML Definition |
-| `A4SDA01Q.xml` | `.XML` | `30,476` bytes | RomRaider / EcuFlash XML Definition |
-| `A4SE300D.xml` | `.XML` | `28,638` bytes | RomRaider / EcuFlash XML Definition |
-| `A4SE700D.xml` | `.XML` | `28,388` bytes | RomRaider / EcuFlash XML Definition |
-| `A4SE700E.xml` | `.XML` | `28,259` bytes | RomRaider / EcuFlash XML Definition |
-| `A4SE700F.xml` | `.XML` | `27,929` bytes | RomRaider / EcuFlash XML Definition |
-| `A4SE700I.xml` | `.XML` | `28,058` bytes | RomRaider / EcuFlash XML Definition |
-| `A4SE700J.xml` | `.XML` | `460` bytes | RomRaider / EcuFlash XML Definition |
-| `A4SE900D.xml` | `.XML` | `28,388` bytes | RomRaider / EcuFlash XML Definition |
-| `A4SE900I.xml` | `.XML` | `28,058` bytes | RomRaider / EcuFlash XML Definition |
-| `A4SG900C.xml` | `.XML` | `28,109` bytes | RomRaider / EcuFlash XML Definition |
-| `A4SGA00C.xml` | `.XML` | `28,108` bytes | RomRaider / EcuFlash XML Definition |
-| `A4SGC00C.xml` | `.XML` | `28,021` bytes | RomRaider / EcuFlash XML Definition |
-| `A4SGD10C.xml` | `.XML` | `28,021` bytes | RomRaider / EcuFlash XML Definition |
-| `A4SGE00C.xml` | `.XML` | `899` bytes | RomRaider / EcuFlash XML Definition |
-| `A4SGE01C.xml` | `.XML` | `899` bytes | RomRaider / EcuFlash XML Definition |
-| `A4SH701G.xml` | `.XML` | `14,268` bytes | RomRaider / EcuFlash XML Definition |
-| `A4SH701H.xml` | `.XML` | `14,268` bytes | RomRaider / EcuFlash XML Definition |
-| `A4SH701K.xml` | `.XML` | `14,269` bytes | RomRaider / EcuFlash XML Definition |
-| `A4SHA10R.xml` | `.XML` | `14,269` bytes | RomRaider / EcuFlash XML Definition |
-| `A4SHB00G.xml` | `.XML` | `14,268` bytes | RomRaider / EcuFlash XML Definition |
-| `A4SHB00H.xml` | `.XML` | `14,268` bytes | RomRaider / EcuFlash XML Definition |
-| `A4SHC00G.xml` | `.XML` | `14,268` bytes | RomRaider / EcuFlash XML Definition |
-| `A4SHC01G.xml` | `.XML` | `14,268` bytes | RomRaider / EcuFlash XML Definition |
-| `A4TC101K.xml` | `.XML` | `2,460` bytes | RomRaider / EcuFlash XML Definition |
-| `A4TC101L.xml` | `.XML` | `2,460` bytes | RomRaider / EcuFlash XML Definition |
-| `A4TC300K.xml` | `.XML` | `710` bytes | RomRaider / EcuFlash XML Definition |
-| `A4TC300L.xml` | `.XML` | `26,951` bytes | RomRaider / EcuFlash XML Definition |
-| `A4TC400L.xml` | `.XML` | `1,075` bytes | RomRaider / EcuFlash XML Definition |
-| `A4TC401L.xml` | `.XML` | `1,075` bytes | RomRaider / EcuFlash XML Definition |
-| `A4TE0000.xml` | `.XML` | `29,745` bytes | RomRaider / EcuFlash XML Definition |
-| `A4TE000A.xml` | `.XML` | `29,745` bytes | RomRaider / EcuFlash XML Definition |
-| `A4TE001B.xml` | `.XML` | `453` bytes | RomRaider / EcuFlash XML Definition |
-| `A4TE001G.xml` | `.XML` | `27,965` bytes | RomRaider / EcuFlash XML Definition |
-| `A4TE001I.xml` | `.XML` | `29,745` bytes | RomRaider / EcuFlash XML Definition |
-| `A4TE002B.xml` | `.XML` | `29,827` bytes | RomRaider / EcuFlash XML Definition |
-| `A4TE002C.xml` | `.XML` | `453` bytes | RomRaider / EcuFlash XML Definition |
-| `A4TE002Q.xml` | `.XML` | `29,760` bytes | RomRaider / EcuFlash XML Definition |
-| `A4TE100G.xml` | `.XML` | `2,083` bytes | RomRaider / EcuFlash XML Definition |
-| `A4TE200A.xml` | `.XML` | `1,924` bytes | RomRaider / EcuFlash XML Definition |
-| `A4TE3000.xml` | `.XML` | `518` bytes | RomRaider / EcuFlash XML Definition |
-| `A4TE300D.xml` | `.XML` | `28,697` bytes | RomRaider / EcuFlash XML Definition |
-| `A4TF300E.xml` | `.XML` | `2,110` bytes | RomRaider / EcuFlash XML Definition |
-| `A4TF300F.xml` | `.XML` | `2,110` bytes | RomRaider / EcuFlash XML Definition |
-| `A4TF400E.xml` | `.XML` | `26,868` bytes | RomRaider / EcuFlash XML Definition |
-| `A4TF500F.xml` | `.XML` | `1,898` bytes | RomRaider / EcuFlash XML Definition |
-| `A4TF510E.xml` | `.XML` | `2,041` bytes | RomRaider / EcuFlash XML Definition |
-| `A4TF510F.xml` | `.XML` | `2,041` bytes | RomRaider / EcuFlash XML Definition |
-| `A4TF520F.xml` | `.XML` | `26,869` bytes | RomRaider / EcuFlash XML Definition |
-| `A4TF7000.xml` | `.XML` | `2,820` bytes | RomRaider / EcuFlash XML Definition |
-| `A4TF800E.xml` | `.XML` | `2,069` bytes | RomRaider / EcuFlash XML Definition |
-| `A4TF800F.xml` | `.XML` | `27,213` bytes | RomRaider / EcuFlash XML Definition |
-| `A4TF810F.xml` | `.XML` | `27,213` bytes | RomRaider / EcuFlash XML Definition |
-| `A4TH000N.xml` | `.XML` | `29,883` bytes | RomRaider / EcuFlash XML Definition |
-| `A4TH000O.xml` | `.XML` | `1,924` bytes | RomRaider / EcuFlash XML Definition |
-| `A4TH100H.xml` | `.XML` | `29,791` bytes | RomRaider / EcuFlash XML Definition |
-| `A4TH100L.xml` | `.XML` | `453` bytes | RomRaider / EcuFlash XML Definition |
-| `A4TJ111B.xml` | `.XML` | `453` bytes | RomRaider / EcuFlash XML Definition |
-| `A4TJ111C.xml` | `.XML` | `453` bytes | RomRaider / EcuFlash XML Definition |
-| `A4TJ120S.xml` | `.XML` | `453` bytes | RomRaider / EcuFlash XML Definition |
-| `A4TJ121B.xml` | `.XML` | `453` bytes | RomRaider / EcuFlash XML Definition |
-| `A4TJ121C.xml` | `.XML` | `30,316` bytes | RomRaider / EcuFlash XML Definition |
-| `A4TJ121S.xml` | `.XML` | `453` bytes | RomRaider / EcuFlash XML Definition |
-| `A4TJ1X00.xml` | `.XML` | `30,080` bytes | RomRaider / EcuFlash XML Definition |
-| `A8DG300Z.xml` | `.XML` | `25,727` bytes | RomRaider / EcuFlash XML Definition |
-| `A8DH100F.xml` | `.XML` | `25,851` bytes | RomRaider / EcuFlash XML Definition |
-| `A8DH100H.xml` | `.XML` | `25,982` bytes | RomRaider / EcuFlash XML Definition |
-| `A8DH100I.xml` | `.XML` | `28,934` bytes | RomRaider / EcuFlash XML Definition |
-| `A8DH100M.xml` | `.XML` | `25,851` bytes | RomRaider / EcuFlash XML Definition |
-| `A8DH100P.xml` | `.XML` | `25,982` bytes | RomRaider / EcuFlash XML Definition |
-| `A8DH101D.xml` | `.XML` | `29,065` bytes | RomRaider / EcuFlash XML Definition |
-| `A8DH101I.xml` | `.XML` | `497` bytes | RomRaider / EcuFlash XML Definition |
-| `A8DH200O.xml` | `.XML` | `25,822` bytes | RomRaider / EcuFlash XML Definition |
-| `A8DH200U.xml` | `.XML` | `497` bytes | RomRaider / EcuFlash XML Definition |
-| `A8DH200V.xml` | `.XML` | `25,837` bytes | RomRaider / EcuFlash XML Definition |
-| `A8DH200W.xml` | `.XML` | `29,176` bytes | RomRaider / EcuFlash XML Definition |
-| `A8DH200X.xml` | `.XML` | `29,045` bytes | RomRaider / EcuFlash XML Definition |
-| `A8DH200Y.xml` | `.XML` | `25,822` bytes | RomRaider / EcuFlash XML Definition |
-| `A8DH200Z.xml` | `.XML` | `25,837` bytes | RomRaider / EcuFlash XML Definition |
-| `A8DH201X.xml` | `.XML` | `497` bytes | RomRaider / EcuFlash XML Definition |
-| `A8DH202X.xml` | `.XML` | `497` bytes | RomRaider / EcuFlash XML Definition |
-| `A8DK100D.xml` | `.XML` | `29,217` bytes | RomRaider / EcuFlash XML Definition |
-| `A8DK100E.xml` | `.XML` | `1,785` bytes | RomRaider / EcuFlash XML Definition |
-| `A8DK100F.xml` | `.XML` | `25,886` bytes | RomRaider / EcuFlash XML Definition |
-| `A8DK100H.xml` | `.XML` | `26,082` bytes | RomRaider / EcuFlash XML Definition |
-| `A8DK100I.xml` | `.XML` | `29,116` bytes | RomRaider / EcuFlash XML Definition |
-| `A8DK100K.xml` | `.XML` | `496` bytes | RomRaider / EcuFlash XML Definition |
-| `A8DK100L.xml` | `.XML` | `496` bytes | RomRaider / EcuFlash XML Definition |
-| `A8DK100M.xml` | `.XML` | `25,907` bytes | RomRaider / EcuFlash XML Definition |
-| `A8DK100O.xml` | `.XML` | `25,990` bytes | RomRaider / EcuFlash XML Definition |
-| `A8DK100P.xml` | `.XML` | `26,082` bytes | RomRaider / EcuFlash XML Definition |
-| `A8DK100U.xml` | `.XML` | `568` bytes | RomRaider / EcuFlash XML Definition |
-| `A8DK100V.xml` | `.XML` | `26,005` bytes | RomRaider / EcuFlash XML Definition |
-| `A8DK100W.xml` | `.XML` | `29,396` bytes | RomRaider / EcuFlash XML Definition |
-| `A8DK100X.xml` | `.XML` | `29,265` bytes | RomRaider / EcuFlash XML Definition |
-| `A8DK100Y.xml` | `.XML` | `25,990` bytes | RomRaider / EcuFlash XML Definition |
-| `A8DK100Z.xml` | `.XML` | `26,005` bytes | RomRaider / EcuFlash XML Definition |
-| `A8DK101X.xml` | `.XML` | `497` bytes | RomRaider / EcuFlash XML Definition |
-| `AE5F301D.xml` | `.XML` | `28,971` bytes | RomRaider / EcuFlash XML Definition |
-| `AZ1E400C.xml` | `.XML` | `28,345` bytes | RomRaider / EcuFlash XML Definition |
-| `AZ1E400E.xml` | `.XML` | `28,132` bytes | RomRaider / EcuFlash XML Definition |
-| `AZ1E400U.xml` | `.XML` | `809` bytes | RomRaider / EcuFlash XML Definition |
-| `AZ1E401A.xml` | `.XML` | `31,065` bytes | RomRaider / EcuFlash XML Definition |
-| `AZ1E401B.xml` | `.XML` | `31,193` bytes | RomRaider / EcuFlash XML Definition |
-| `AZ1G101M.xml` | `.XML` | `28,193` bytes | RomRaider / EcuFlash XML Definition |
-| `AZ1G101N.xml` | `.XML` | `28,335` bytes | RomRaider / EcuFlash XML Definition |
-| `AZ1G101R.xml` | `.XML` | `31,352` bytes | RomRaider / EcuFlash XML Definition |
-| `AZ1G105L.xml` | `.XML` | `28,942` bytes | RomRaider / EcuFlash XML Definition |
-| `AZ1G200J.xml` | `.XML` | `29,125` bytes | RomRaider / EcuFlash XML Definition |
-| `AZ1G201G.xml` | `.XML` | `29,392` bytes | RomRaider / EcuFlash XML Definition |
-| `AZ1G201I.xml` | `.XML` | `33,794` bytes | RomRaider / EcuFlash XML Definition |
-| `AZ1G202G.xml` | `.XML` | `500` bytes | RomRaider / EcuFlash XML Definition |
-| `AZ1G202I.xml` | `.XML` | `504` bytes | RomRaider / EcuFlash XML Definition |
-| `AZ1G300F.xml` | `.XML` | `29,369` bytes | RomRaider / EcuFlash XML Definition |
-| `AZ1G301F.xml` | `.XML` | `500` bytes | RomRaider / EcuFlash XML Definition |
-| `AZ1G400U.xml` | `.XML` | `28,345` bytes | RomRaider / EcuFlash XML Definition |
-| `AZ1G400W.xml` | `.XML` | `28,274` bytes | RomRaider / EcuFlash XML Definition |
-| `AZ1G400X.xml` | `.XML` | `28,132` bytes | RomRaider / EcuFlash XML Definition |
-| `AZ1G401V.xml` | `.XML` | `31,294` bytes | RomRaider / EcuFlash XML Definition |
-| `AZ1G500F.xml` | `.XML` | `29,621` bytes | RomRaider / EcuFlash XML Definition |
-| `AZ1G502L.xml` | `.XML` | `29,810` bytes | RomRaider / EcuFlash XML Definition |
-| `AZ1G701I.xml` | `.XML` | `33,736` bytes | RomRaider / EcuFlash XML Definition |
-| `AZ1H101W.xml` | `.XML` | `28,805` bytes | RomRaider / EcuFlash XML Definition |
-| `AZ1H102W.xml` | `.XML` | `500` bytes | RomRaider / EcuFlash XML Definition |
-| `D0XJ001M.xml` | `.XML` | `20,348` bytes | RomRaider / EcuFlash XML Definition |
-| `D0XJ001R.xml` | `.XML` | `20,885` bytes | RomRaider / EcuFlash XML Definition |
-| `D0XJ001T.xml` | `.XML` | `20,211` bytes | RomRaider / EcuFlash XML Definition |
-| `D0XJ002B.xml` | `.XML` | `23,409` bytes | RomRaider / EcuFlash XML Definition |
-| `D2TB201R.xml` | `.XML` | `21,496` bytes | RomRaider / EcuFlash XML Definition |
-| `D2TC001P.xml` | `.XML` | `24,166` bytes | RomRaider / EcuFlash XML Definition |
-| `D2UG101B.xml` | `.XML` | `23,470` bytes | RomRaider / EcuFlash XML Definition |
-| `D2UH001M.xml` | `.XML` | `20,695` bytes | RomRaider / EcuFlash XML Definition |
-| `D2UK001Q.xml` | `.XML` | `20,426` bytes | RomRaider / EcuFlash XML Definition |
-| `D2WD200A.xml` | `.XML` | `18,546` bytes | RomRaider / EcuFlash XML Definition |
-| `D2WD603H.xml` | `.XML` | `18,719` bytes | RomRaider / EcuFlash XML Definition |
-| `D2WD604A.xml` | `.XML` | `496` bytes | RomRaider / EcuFlash XML Definition |
-| `D2WD610H.xml` | `.XML` | `18,585` bytes | RomRaider / EcuFlash XML Definition |
-| `D2ZU200A.xml` | `.XML` | `17,892` bytes | RomRaider / EcuFlash XML Definition |
-| `D2ZZ001E.xml` | `.XML` | `19,459` bytes | RomRaider / EcuFlash XML Definition |
-| `DZ1E402B.xml` | `.XML` | `26,708` bytes | RomRaider / EcuFlash XML Definition |
-| `DZ1G001F.xml` | `.XML` | `24,556` bytes | RomRaider / EcuFlash XML Definition |
-| `E2SB001K.xml` | `.XML` | `24,940` bytes | RomRaider / EcuFlash XML Definition |
-| `E2TB011I.xml` | `.XML` | `27,893` bytes | RomRaider / EcuFlash XML Definition |
-| `E2TB101Q.xml` | `.XML` | `21,064` bytes | RomRaider / EcuFlash XML Definition |
-| `E2TB102M.xml` | `.XML` | `25,289` bytes | RomRaider / EcuFlash XML Definition |
-| `E2UE101J.xml` | `.XML` | `23,728` bytes | RomRaider / EcuFlash XML Definition |
-| `E2UE101L.xml` | `.XML` | `27,852` bytes | RomRaider / EcuFlash XML Definition |
-| `E2UE102J.xml` | `.XML` | `23,794` bytes | RomRaider / EcuFlash XML Definition |
-| `E2UE102L.xml` | `.XML` | `27,892` bytes | RomRaider / EcuFlash XML Definition |
-| `E2UE202L.xml` | `.XML` | `27,892` bytes | RomRaider / EcuFlash XML Definition |
-| `E2VG211D.xml` | `.XML` | `501` bytes | RomRaider / EcuFlash XML Definition |
-| `E2VG212E.xml` | `.XML` | `25,029` bytes | RomRaider / EcuFlash XML Definition |
-| `E2VG221D.xml` | `.XML` | `29,169` bytes | RomRaider / EcuFlash XML Definition |
-| `E2VG222B.xml` | `.XML` | `29,192` bytes | RomRaider / EcuFlash XML Definition |
-| `E2VH100C.xml` | `.XML` | `29,317` bytes | RomRaider / EcuFlash XML Definition |
-| `E2VH101C.xml` | `.XML` | `501` bytes | RomRaider / EcuFlash XML Definition |
-| `E2VH102C.xml` | `.XML` | `29,277` bytes | RomRaider / EcuFlash XML Definition |
-| `E2VH111C.xml` | `.XML` | `501` bytes | RomRaider / EcuFlash XML Definition |
-| `E2VH112C.xml` | `.XML` | `501` bytes | RomRaider / EcuFlash XML Definition |
-| `E2VH202C.xml` | `.XML` | `29,317` bytes | RomRaider / EcuFlash XML Definition |
-| `E2WD500D.xml` | `.XML` | `16,880` bytes | RomRaider / EcuFlash XML Definition |
-| `E2ZD308E.xml` | `.XML` | `17,985` bytes | RomRaider / EcuFlash XML Definition |
-| `E2ZD508C.xml` | `.XML` | `17,656` bytes | RomRaider / EcuFlash XML Definition |
-| `E2ZJ101G.xml` | `.XML` | `25,427` bytes | RomRaider / EcuFlash XML Definition |
-| `E2ZJ103G.xml` | `.XML` | `502` bytes | RomRaider / EcuFlash XML Definition |
-| `E2ZJ111G.xml` | `.XML` | `25,187` bytes | RomRaider / EcuFlash XML Definition |
-| `E2ZJ113G.xml` | `.XML` | `502` bytes | RomRaider / EcuFlash XML Definition |
-| `E2ZJ121G.xml` | `.XML` | `502` bytes | RomRaider / EcuFlash XML Definition |
-| `E2ZJ121H.xml` | `.XML` | `4,304` bytes | RomRaider / EcuFlash XML Definition |
-| `E2ZJ123G.xml` | `.XML` | `502` bytes | RomRaider / EcuFlash XML Definition |
-| `E2ZJ133G.xml` | `.XML` | `25,187` bytes | RomRaider / EcuFlash XML Definition |
-| `ECUFlash_subaru_standard_B9_Tribeca_D0XJ002B.xml` | `.XML` | `23,409` bytes | RomRaider / EcuFlash XML Definition |
-| `ECUFlash_subaru_standard_B9_Tribeca_D2UG101B.xml` | `.XML` | `23,470` bytes | RomRaider / EcuFlash XML Definition |
-| `ECUFlash_subaru_standard_Baja_Turbo_A2WC400K.xml` | `.XML` | `26,514` bytes | RomRaider / EcuFlash XML Definition |
-| `ECUFlash_subaru_standard_Baja_Turbo_A2WC500K.xml` | `.XML` | `26,783` bytes | RomRaider / EcuFlash XML Definition |
-| `ECUFlash_subaru_standard_Baja_Turbo_A2WC500L.xml` | `.XML` | `26,680` bytes | RomRaider / EcuFlash XML Definition |
-| `ECUFlash_subaru_standard_Baja_Turbo_A2WC501L.xml` | `.XML` | `496` bytes | RomRaider / EcuFlash XML Definition |
-| `ECUFlash_subaru_standard_Baja_Turbo_A2WF100K.xml` | `.XML` | `496` bytes | RomRaider / EcuFlash XML Definition |
-| `ECUFlash_subaru_standard_Baja_Turbo_A2WF100L.xml` | `.XML` | `26,679` bytes | RomRaider / EcuFlash XML Definition |
-| `ECUFlash_subaru_standard_Baja_Turbo_A2WF101K.xml` | `.XML` | `26,783` bytes | RomRaider / EcuFlash XML Definition |
-| `ECUFlash_subaru_standard_Baja_Turbo_A2WF101L.xml` | `.XML` | `496` bytes | RomRaider / EcuFlash XML Definition |
-| `ECUFlash_subaru_standard_Baja_Turbo_A2ZJ500K.xml` | `.XML` | `25,655` bytes | RomRaider / EcuFlash XML Definition |
-| `ECUFlash_subaru_standard_Baja_Turbo_A2ZJ500L.xml` | `.XML` | `25,551` bytes | RomRaider / EcuFlash XML Definition |
-| `ECUFlash_subaru_standard_Bases_16BITBASE.xml` | `.XML` | `368,727` bytes | RomRaider / EcuFlash XML Definition |
-| `ECUFlash_subaru_standard_Bases_32BITBASE.xml` | `.XML` | `502,310` bytes | RomRaider / EcuFlash XML Definition |
-| `ECUFlash_subaru_standard_Exiga_2.0GT_AZ1H102W.xml` | `.XML` | `500` bytes | RomRaider / EcuFlash XML Definition |
-| `ECUFlash_subaru_standard_Exiga_2.0i_E2TB101Q.xml` | `.XML` | `21,064` bytes | RomRaider / EcuFlash XML Definition |
-| `ECUFlash_subaru_standard_Forester_2.5_E2TB011I.xml` | `.XML` | `27,893` bytes | RomRaider / EcuFlash XML Definition |
-| `ECUFlash_subaru_standard_Forester_2.5_E2UE101J.xml` | `.XML` | `23,728` bytes | RomRaider / EcuFlash XML Definition |
-| `ECUFlash_subaru_standard_Forester_2.5_E2UE102J.xml` | `.XML` | `23,794` bytes | RomRaider / EcuFlash XML Definition |
-| `ECUFlash_subaru_standard_Forester_2.5_E2VG211D.xml` | `.XML` | `501` bytes | RomRaider / EcuFlash XML Definition |
-| `ECUFlash_subaru_standard_Forester_2.5_E2VG212E.xml` | `.XML` | `25,029` bytes | RomRaider / EcuFlash XML Definition |
-| `ECUFlash_subaru_standard_Forester_2.5_E2VG221D.xml` | `.XML` | `29,169` bytes | RomRaider / EcuFlash XML Definition |
-| `ECUFlash_subaru_standard_Forester_2.5_E2ZJ121H.xml` | `.XML` | `4,304` bytes | RomRaider / EcuFlash XML Definition |
-| `ECUFlash_subaru_standard_Forester_2.5_EZ1G107M.xml` | `.XML` | `23,078` bytes | RomRaider / EcuFlash XML Definition |
-| `ECUFlash_subaru_standard_Forester_2.5_EZ1G109K.xml` | `.XML` | `25,665` bytes | RomRaider / EcuFlash XML Definition |
-| `ECUFlash_subaru_standard_Forester_STi_A2WA20  .xml` | `.XML` | `21,942` bytes | RomRaider / EcuFlash XML Definition |
-| `ECUFlash_subaru_standard_Forester_STi_A2WC000E.xml` | `.XML` | `22,056` bytes | RomRaider / EcuFlash XML Definition |
-| `ECUFlash_subaru_standard_Forester_STi_A2WC011E.xml` | `.XML` | `500` bytes | RomRaider / EcuFlash XML Definition |
-| `ECUFlash_subaru_standard_Forester_STi_A2WC012E.xml` | `.XML` | `22,059` bytes | RomRaider / EcuFlash XML Definition |
-| `ECUFlash_subaru_standard_Forester_STi_A2WC013E.xml` | `.XML` | `500` bytes | RomRaider / EcuFlash XML Definition |
-| `ECUFlash_subaru_standard_Forester_Turbo_A4RI200I.xml` | `.XML` | `30,754` bytes | RomRaider / EcuFlash XML Definition |
-| `ECUFlash_subaru_standard_Forester_Turbo_A4RI300I.xml` | `.XML` | `3,826` bytes | RomRaider / EcuFlash XML Definition |
-| `ECUFlash_subaru_standard_Forester_Turbo_A4RI401I.xml` | `.XML` | `3,826` bytes | RomRaider / EcuFlash XML Definition |
-| `ECUFlash_subaru_standard_Forester_Turbo_A4RL100J.xml` | `.XML` | `28,447` bytes | RomRaider / EcuFlash XML Definition |
-| `ECUFlash_subaru_standard_Forester_Turbo_A4RL100K.xml` | `.XML` | `457` bytes | RomRaider / EcuFlash XML Definition |
-| `ECUFlash_subaru_standard_Forester_Turbo_A4SE700E.xml` | `.XML` | `28,259` bytes | RomRaider / EcuFlash XML Definition |
-| `ECUFlash_subaru_standard_Forester_Turbo_A4SE700F.xml` | `.XML` | `27,929` bytes | RomRaider / EcuFlash XML Definition |
-| `ECUFlash_subaru_standard_Forester_Turbo_A4SE700J.xml` | `.XML` | `460` bytes | RomRaider / EcuFlash XML Definition |
-| `ECUFlash_subaru_standard_Forester_XT_A2WC400D.xml` | `.XML` | `26,432` bytes | RomRaider / EcuFlash XML Definition |
-| `ECUFlash_subaru_standard_Forester_XT_A2WC400H.xml` | `.XML` | `22,961` bytes | RomRaider / EcuFlash XML Definition |
-| `ECUFlash_subaru_standard_Forester_XT_A2WC400I.xml` | `.XML` | `26,316` bytes | RomRaider / EcuFlash XML Definition |
-| `ECUFlash_subaru_standard_Forester_XT_A2WC400M.xml` | `.XML` | `22,845` bytes | RomRaider / EcuFlash XML Definition |
-| `ECUFlash_subaru_standard_Forester_XT_A2WC401F.xml` | `.XML` | `23,643` bytes | RomRaider / EcuFlash XML Definition |
-| `ECUFlash_subaru_standard_Forester_XT_A2WC410D.xml` | `.XML` | `26,193` bytes | RomRaider / EcuFlash XML Definition |
-| `ECUFlash_subaru_standard_Forester_XT_A2WC410I.xml` | `.XML` | `26,076` bytes | RomRaider / EcuFlash XML Definition |
-| `ECUFlash_subaru_standard_Forester_XT_A2WC411I.xml` | `.XML` | `497` bytes | RomRaider / EcuFlash XML Definition |
-| `ECUFlash_subaru_standard_Forester_XT_A2WC412D.xml` | `.XML` | `26,192` bytes | RomRaider / EcuFlash XML Definition |
-| `ECUFlash_subaru_standard_Forester_XT_A2WC412I.xml` | `.XML` | `7,119` bytes | RomRaider / EcuFlash XML Definition |
-| `ECUFlash_subaru_standard_Forester_XT_A2WC420F.xml` | `.XML` | `23,643` bytes | RomRaider / EcuFlash XML Definition |
-| `ECUFlash_subaru_standard_Forester_XT_A2WC420M.xml` | `.XML` | `22,845` bytes | RomRaider / EcuFlash XML Definition |
-| `ECUFlash_subaru_standard_Forester_XT_A2ZJ201D.xml` | `.XML` | `25,587` bytes | RomRaider / EcuFlash XML Definition |
-| `ECUFlash_subaru_standard_Forester_XT_A2ZJ500F.xml` | `.XML` | `26,061` bytes | RomRaider / EcuFlash XML Definition |
-| `ECUFlash_subaru_standard_Forester_XT_A2ZJ500H.xml` | `.XML` | `21,820` bytes | RomRaider / EcuFlash XML Definition |
-| `ECUFlash_subaru_standard_Forester_XT_A2ZJ500I.xml` | `.XML` | `25,470` bytes | RomRaider / EcuFlash XML Definition |
-| `ECUFlash_subaru_standard_Forester_XT_A2ZJ500M.xml` | `.XML` | `21,703` bytes | RomRaider / EcuFlash XML Definition |
-| `ECUFlash_subaru_standard_Forester_XT_A2ZJ512I.xml` | `.XML` | `25,470` bytes | RomRaider / EcuFlash XML Definition |
-| `ECUFlash_subaru_standard_Forester_XT_A2ZJA00P.xml` | `.XML` | `25,487` bytes | RomRaider / EcuFlash XML Definition |
-| `ECUFlash_subaru_standard_Forester_XT_A2ZJA00Q.xml` | `.XML` | `500` bytes | RomRaider / EcuFlash XML Definition |
-| `ECUFlash_subaru_standard_Forester_XT_A2ZJA10P.xml` | `.XML` | `25,487` bytes | RomRaider / EcuFlash XML Definition |
-| `ECUFlash_subaru_standard_Forester_XT_A8DH100F.xml` | `.XML` | `25,851` bytes | RomRaider / EcuFlash XML Definition |
-| `ECUFlash_subaru_standard_Forester_XT_A8DH100H.xml` | `.XML` | `25,982` bytes | RomRaider / EcuFlash XML Definition |
-| `ECUFlash_subaru_standard_Forester_XT_A8DH100I.xml` | `.XML` | `28,934` bytes | RomRaider / EcuFlash XML Definition |
-| `ECUFlash_subaru_standard_Forester_XT_A8DH100M.xml` | `.XML` | `25,851` bytes | RomRaider / EcuFlash XML Definition |
-| `ECUFlash_subaru_standard_Forester_XT_A8DH100P.xml` | `.XML` | `25,982` bytes | RomRaider / EcuFlash XML Definition |
-| `ECUFlash_subaru_standard_Forester_XT_A8DH101D.xml` | `.XML` | `29,065` bytes | RomRaider / EcuFlash XML Definition |
-| `ECUFlash_subaru_standard_Forester_XT_A8DH101I.xml` | `.XML` | `497` bytes | RomRaider / EcuFlash XML Definition |
-| `ECUFlash_subaru_standard_Forester_XT_A8DK100D.xml` | `.XML` | `29,217` bytes | RomRaider / EcuFlash XML Definition |
-| `ECUFlash_subaru_standard_Forester_XT_A8DK100E.xml` | `.XML` | `1,785` bytes | RomRaider / EcuFlash XML Definition |
-| `ECUFlash_subaru_standard_Forester_XT_A8DK100F.xml` | `.XML` | `25,886` bytes | RomRaider / EcuFlash XML Definition |
-| `ECUFlash_subaru_standard_Forester_XT_A8DK100H.xml` | `.XML` | `26,082` bytes | RomRaider / EcuFlash XML Definition |
-| `ECUFlash_subaru_standard_Forester_XT_A8DK100I.xml` | `.XML` | `29,116` bytes | RomRaider / EcuFlash XML Definition |
-| `ECUFlash_subaru_standard_Forester_XT_A8DK100M.xml` | `.XML` | `25,907` bytes | RomRaider / EcuFlash XML Definition |
-| `ECUFlash_subaru_standard_Forester_XT_A8DK100P.xml` | `.XML` | `26,082` bytes | RomRaider / EcuFlash XML Definition |
-| `ECUFlash_subaru_standard_Forester_XT_AZ1G101M.xml` | `.XML` | `28,193` bytes | RomRaider / EcuFlash XML Definition |
-| `ECUFlash_subaru_standard_Forester_XT_AZ1G101N.xml` | `.XML` | `28,335` bytes | RomRaider / EcuFlash XML Definition |
-| `ECUFlash_subaru_standard_Forester_XT_AZ1G101R.xml` | `.XML` | `31,352` bytes | RomRaider / EcuFlash XML Definition |
-| `ECUFlash_subaru_standard_Forester_XT_AZ1G105L.xml` | `.XML` | `28,942` bytes | RomRaider / EcuFlash XML Definition |
-| `ECUFlash_subaru_standard_Impreza_2.5RS_E2ZJ101G.xml` | `.XML` | `25,427` bytes | RomRaider / EcuFlash XML Definition |
-| `ECUFlash_subaru_standard_Impreza_2.5RS_E2ZJ103G.xml` | `.XML` | `502` bytes | RomRaider / EcuFlash XML Definition |
-| `ECUFlash_subaru_standard_Impreza_2.5RS_E2ZJ111G.xml` | `.XML` | `25,187` bytes | RomRaider / EcuFlash XML Definition |
-| `ECUFlash_subaru_standard_Impreza_2.5RS_E2ZJ113G.xml` | `.XML` | `502` bytes | RomRaider / EcuFlash XML Definition |
-| `ECUFlash_subaru_standard_Impreza_2.5RS_E2ZJ121G.xml` | `.XML` | `502` bytes | RomRaider / EcuFlash XML Definition |
-| `ECUFlash_subaru_standard_Impreza_2.5RS_E2ZJ123G.xml` | `.XML` | `502` bytes | RomRaider / EcuFlash XML Definition |
-| `ECUFlash_subaru_standard_Impreza_2.5RS_E2ZJ133G.xml` | `.XML` | `25,187` bytes | RomRaider / EcuFlash XML Definition |
-| `ECUFlash_subaru_standard_Impreza_2.5i_E2UE101L.xml` | `.XML` | `27,852` bytes | RomRaider / EcuFlash XML Definition |
-| `ECUFlash_subaru_standard_Impreza_2.5i_E2UE102L.xml` | `.XML` | `27,892` bytes | RomRaider / EcuFlash XML Definition |
-| `ECUFlash_subaru_standard_Impreza_2.5i_E2UE202L.xml` | `.XML` | `27,892` bytes | RomRaider / EcuFlash XML Definition |
-| `ECUFlash_subaru_standard_Impreza_2.5i_E2VH100C.xml` | `.XML` | `29,317` bytes | RomRaider / EcuFlash XML Definition |
-| `ECUFlash_subaru_standard_Impreza_2.5i_E2VH101C.xml` | `.XML` | `501` bytes | RomRaider / EcuFlash XML Definition |
-| `ECUFlash_subaru_standard_Impreza_2.5i_E2VH102C.xml` | `.XML` | `29,277` bytes | RomRaider / EcuFlash XML Definition |
-| `ECUFlash_subaru_standard_Impreza_2.5i_E2VH111C.xml` | `.XML` | `501` bytes | RomRaider / EcuFlash XML Definition |
-| `ECUFlash_subaru_standard_Impreza_2.5i_E2VH112C.xml` | `.XML` | `501` bytes | RomRaider / EcuFlash XML Definition |
-| `ECUFlash_subaru_standard_Impreza_2.5i_E2VH202C.xml` | `.XML` | `29,317` bytes | RomRaider / EcuFlash XML Definition |
-| `ECUFlash_subaru_standard_Impreza_2.5i_EZ1E102G.xml` | `.XML` | `25,639` bytes | RomRaider / EcuFlash XML Definition |
-| `ECUFlash_subaru_standard_Impreza_2.5i_EZ1E102H.xml` | `.XML` | `25,702` bytes | RomRaider / EcuFlash XML Definition |
-| `ECUFlash_subaru_standard_Impreza_2.5i_EZ1E401G.xml` | `.XML` | `505` bytes | RomRaider / EcuFlash XML Definition |
-| `ECUFlash_subaru_standard_Impreza_SGT_A2TB100U.xml` | `.XML` | `26,600` bytes | RomRaider / EcuFlash XML Definition |
-| `ECUFlash_subaru_standard_Impreza_SGT_A2TB100V.xml` | `.XML` | `26,800` bytes | RomRaider / EcuFlash XML Definition |
-| `ECUFlash_subaru_standard_Impreza_SGT_AZ1H101W.xml` | `.XML` | `28,805` bytes | RomRaider / EcuFlash XML Definition |
-| `ECUFlash_subaru_standard_Impreza_STi_A2UG000J.xml` | `.XML` | `32,365` bytes | RomRaider / EcuFlash XML Definition |
-| `ECUFlash_subaru_standard_Impreza_STi_A2UJ000J.xml` | `.XML` | `32,365` bytes | RomRaider / EcuFlash XML Definition |
-| `ECUFlash_subaru_standard_Impreza_STi_A2ZJ500J.xml` | `.XML` | `26,756` bytes | RomRaider / EcuFlash XML Definition |
-| `ECUFlash_subaru_standard_Impreza_STi_A2ZJ700J.xml` | `.XML` | `26,756` bytes | RomRaider / EcuFlash XML Definition |
-| `ECUFlash_subaru_standard_Impreza_STi_A2ZJ710J.xml` | `.XML` | `26,756` bytes | RomRaider / EcuFlash XML Definition |
-| `ECUFlash_subaru_standard_Impreza_STi_A2ZJB10J.xml` | `.XML` | `26,969` bytes | RomRaider / EcuFlash XML Definition |
-| `ECUFlash_subaru_standard_Impreza_STi_A2ZJB11J.xml` | `.XML` | `26,889` bytes | RomRaider / EcuFlash XML Definition |
-| `ECUFlash_subaru_standard_Impreza_STi_A2ZJE11J.xml` | `.XML` | `26,889` bytes | RomRaider / EcuFlash XML Definition |
-| `ECUFlash_subaru_standard_Impreza_STi_A4RG0500.xml` | `.XML` | `456` bytes | RomRaider / EcuFlash XML Definition |
-| `ECUFlash_subaru_standard_Impreza_STi_A4RG050N.xml` | `.XML` | `456` bytes | RomRaider / EcuFlash XML Definition |
-| `ECUFlash_subaru_standard_Impreza_STi_A4RG050R.xml` | `.XML` | `456` bytes | RomRaider / EcuFlash XML Definition |
-| `ECUFlash_subaru_standard_Impreza_STi_A4RG051N.xml` | `.XML` | `456` bytes | RomRaider / EcuFlash XML Definition |
-| `ECUFlash_subaru_standard_Impreza_STi_A4RG052N.xml` | `.XML` | `31,867` bytes | RomRaider / EcuFlash XML Definition |
-| `ECUFlash_subaru_standard_Impreza_STi_A4RG060P.xml` | `.XML` | `676` bytes | RomRaider / EcuFlash XML Definition |
-| `ECUFlash_subaru_standard_Impreza_STi_A4RG060Q.xml` | `.XML` | `28,774` bytes | RomRaider / EcuFlash XML Definition |
-| `ECUFlash_subaru_standard_Impreza_STi_A4RM000H.xml` | `.XML` | `453` bytes | RomRaider / EcuFlash XML Definition |
-| `ECUFlash_subaru_standard_Impreza_STi_A4RM100G.xml` | `.XML` | `783` bytes | RomRaider / EcuFlash XML Definition |
-| `ECUFlash_subaru_standard_Impreza_STi_A4RM100H.xml` | `.XML` | `28,421` bytes | RomRaider / EcuFlash XML Definition |
-| `ECUFlash_subaru_standard_Impreza_STi_A4RN1000.xml` | `.XML` | `988` bytes | RomRaider / EcuFlash XML Definition |
-| `ECUFlash_subaru_standard_Impreza_STi_A4RN2000.xml` | `.XML` | `450` bytes | RomRaider / EcuFlash XML Definition |
-| `ECUFlash_subaru_standard_Impreza_STi_A4RN200H.xml` | `.XML` | `28,421` bytes | RomRaider / EcuFlash XML Definition |
-| `ECUFlash_subaru_standard_Impreza_STi_A4RN300G.xml` | `.XML` | `29,153` bytes | RomRaider / EcuFlash XML Definition |
-| `ECUFlash_subaru_standard_Impreza_STi_A4RN300I.xml` | `.XML` | `783` bytes | RomRaider / EcuFlash XML Definition |
-| `ECUFlash_subaru_standard_Impreza_STi_A4SD600B.xml` | `.XML` | `30,470` bytes | RomRaider / EcuFlash XML Definition |
-| `ECUFlash_subaru_standard_Impreza_STi_A4SD700B.xml` | `.XML` | `30,470` bytes | RomRaider / EcuFlash XML Definition |
-| `ECUFlash_subaru_standard_Impreza_STi_A4SD800B.xml` | `.XML` | `2,098` bytes | RomRaider / EcuFlash XML Definition |
-| `ECUFlash_subaru_standard_Impreza_STi_A4SD900B.xml` | `.XML` | `30,476` bytes | RomRaider / EcuFlash XML Definition |
-| `ECUFlash_subaru_standard_Impreza_STi_A4SDA00P.xml` | `.XML` | `568` bytes | RomRaider / EcuFlash XML Definition |
-| `ECUFlash_subaru_standard_Impreza_STi_A4SDA00Q.xml` | `.XML` | `456` bytes | RomRaider / EcuFlash XML Definition |
-| `ECUFlash_subaru_standard_Impreza_STi_A4SDA01B.xml` | `.XML` | `456` bytes | RomRaider / EcuFlash XML Definition |
-| `ECUFlash_subaru_standard_Impreza_STi_A4SDA01Q.xml` | `.XML` | `30,476` bytes | RomRaider / EcuFlash XML Definition |
-| `ECUFlash_subaru_standard_Impreza_STi_A4TE001B.xml` | `.XML` | `453` bytes | RomRaider / EcuFlash XML Definition |
-| `ECUFlash_subaru_standard_Impreza_STi_A4TE002B.xml` | `.XML` | `29,827` bytes | RomRaider / EcuFlash XML Definition |
-| `ECUFlash_subaru_standard_Impreza_STi_A4TE002C.xml` | `.XML` | `453` bytes | RomRaider / EcuFlash XML Definition |
-| `ECUFlash_subaru_standard_Impreza_STi_A4TE002Q.xml` | `.XML` | `29,760` bytes | RomRaider / EcuFlash XML Definition |
-| `ECUFlash_subaru_standard_Impreza_STi_A4TJ111B.xml` | `.XML` | `453` bytes | RomRaider / EcuFlash XML Definition |
-| `ECUFlash_subaru_standard_Impreza_STi_A4TJ111C.xml` | `.XML` | `453` bytes | RomRaider / EcuFlash XML Definition |
-| `ECUFlash_subaru_standard_Impreza_STi_A4TJ120S.xml` | `.XML` | `453` bytes | RomRaider / EcuFlash XML Definition |
-| `ECUFlash_subaru_standard_Impreza_STi_A4TJ121B.xml` | `.XML` | `453` bytes | RomRaider / EcuFlash XML Definition |
-| `ECUFlash_subaru_standard_Impreza_STi_A4TJ121C.xml` | `.XML` | `30,316` bytes | RomRaider / EcuFlash XML Definition |
-| `ECUFlash_subaru_standard_Impreza_STi_A4TJ121S.xml` | `.XML` | `453` bytes | RomRaider / EcuFlash XML Definition |
-| `ECUFlash_subaru_standard_Impreza_STi_A4TJ1X00.xml` | `.XML` | `30,080` bytes | RomRaider / EcuFlash XML Definition |
-| `ECUFlash_subaru_standard_Impreza_STi_A8DG300Z.xml` | `.XML` | `25,727` bytes | RomRaider / EcuFlash XML Definition |
-| `ECUFlash_subaru_standard_Impreza_STi_A8DH200V.xml` | `.XML` | `25,837` bytes | RomRaider / EcuFlash XML Definition |
-| `ECUFlash_subaru_standard_Impreza_STi_A8DH200Z.xml` | `.XML` | `25,837` bytes | RomRaider / EcuFlash XML Definition |
-| `ECUFlash_subaru_standard_Impreza_STi_A8DK100V.xml` | `.XML` | `26,005` bytes | RomRaider / EcuFlash XML Definition |
-| `ECUFlash_subaru_standard_Impreza_STi_A8DK100Z.xml` | `.XML` | `26,005` bytes | RomRaider / EcuFlash XML Definition |
-| `ECUFlash_subaru_standard_Impreza_STi_AZ1G200J.xml` | `.XML` | `29,125` bytes | RomRaider / EcuFlash XML Definition |
-| `ECUFlash_subaru_standard_Impreza_STi_AZ1G201G.xml` | `.XML` | `29,392` bytes | RomRaider / EcuFlash XML Definition |
-| `ECUFlash_subaru_standard_Impreza_STi_AZ1G201I.xml` | `.XML` | `33,794` bytes | RomRaider / EcuFlash XML Definition |
-| `ECUFlash_subaru_standard_Impreza_STi_AZ1G202G.xml` | `.XML` | `500` bytes | RomRaider / EcuFlash XML Definition |
-| `ECUFlash_subaru_standard_Impreza_STi_AZ1G202I.xml` | `.XML` | `504` bytes | RomRaider / EcuFlash XML Definition |
-| `ECUFlash_subaru_standard_Impreza_STi_AZ1G300F.xml` | `.XML` | `29,369` bytes | RomRaider / EcuFlash XML Definition |
-| `ECUFlash_subaru_standard_Impreza_STi_AZ1G301F.xml` | `.XML` | `500` bytes | RomRaider / EcuFlash XML Definition |
-| `ECUFlash_subaru_standard_Impreza_STi_AZ1G500F.xml` | `.XML` | `29,621` bytes | RomRaider / EcuFlash XML Definition |
-| `ECUFlash_subaru_standard_Impreza_STi_AZ1G502L.xml` | `.XML` | `29,810` bytes | RomRaider / EcuFlash XML Definition |
-| `ECUFlash_subaru_standard_Impreza_STi_AZ1G701I.xml` | `.XML` | `33,736` bytes | RomRaider / EcuFlash XML Definition |
-| `ECUFlash_subaru_standard_Impreza_STi_Z1G20000.xml` | `.XML` | `503` bytes | RomRaider / EcuFlash XML Definition |
-| `ECUFlash_subaru_standard_Impreza_WRX_A4RM100F.xml` | `.XML` | `28,330` bytes | RomRaider / EcuFlash XML Definition |
-| `ECUFlash_subaru_standard_Impreza_WRX_A4RM200K.xml` | `.XML` | `29,062` bytes | RomRaider / EcuFlash XML Definition |
-| `ECUFlash_subaru_standard_Impreza_WRX_A4SD501A.xml` | `.XML` | `30,424` bytes | RomRaider / EcuFlash XML Definition |
-| `ECUFlash_subaru_standard_Impreza_WRX_A4SD800A.xml` | `.XML` | `2,210` bytes | RomRaider / EcuFlash XML Definition |
-| `ECUFlash_subaru_standard_Impreza_WRX_A4SD900A.xml` | `.XML` | `739` bytes | RomRaider / EcuFlash XML Definition |
-| `ECUFlash_subaru_standard_Impreza_WRX_A4SE300D.xml` | `.XML` | `28,638` bytes | RomRaider / EcuFlash XML Definition |
-| `ECUFlash_subaru_standard_Impreza_WRX_A4SE700D.xml` | `.XML` | `28,388` bytes | RomRaider / EcuFlash XML Definition |
-| `ECUFlash_subaru_standard_Impreza_WRX_A4SE700I.xml` | `.XML` | `28,058` bytes | RomRaider / EcuFlash XML Definition |
-| `ECUFlash_subaru_standard_Impreza_WRX_A4SE900D.xml` | `.XML` | `28,388` bytes | RomRaider / EcuFlash XML Definition |
-| `ECUFlash_subaru_standard_Impreza_WRX_A4SE900I.xml` | `.XML` | `28,058` bytes | RomRaider / EcuFlash XML Definition |
-| `ECUFlash_subaru_standard_Impreza_WRX_A4SG900C.xml` | `.XML` | `28,109` bytes | RomRaider / EcuFlash XML Definition |
-| `ECUFlash_subaru_standard_Impreza_WRX_A4SGA00C.xml` | `.XML` | `28,108` bytes | RomRaider / EcuFlash XML Definition |
-| `ECUFlash_subaru_standard_Impreza_WRX_A4SGC00C.xml` | `.XML` | `28,021` bytes | RomRaider / EcuFlash XML Definition |
-| `ECUFlash_subaru_standard_Impreza_WRX_A4SGD10C.xml` | `.XML` | `28,021` bytes | RomRaider / EcuFlash XML Definition |
-| `ECUFlash_subaru_standard_Impreza_WRX_A4SGE00C.xml` | `.XML` | `899` bytes | RomRaider / EcuFlash XML Definition |
-| `ECUFlash_subaru_standard_Impreza_WRX_A4SGE01C.xml` | `.XML` | `899` bytes | RomRaider / EcuFlash XML Definition |
-| `ECUFlash_subaru_standard_Impreza_WRX_A4TC101K.xml` | `.XML` | `2,460` bytes | RomRaider / EcuFlash XML Definition |
-| `ECUFlash_subaru_standard_Impreza_WRX_A4TC101L.xml` | `.XML` | `2,460` bytes | RomRaider / EcuFlash XML Definition |
-| `ECUFlash_subaru_standard_Impreza_WRX_A4TC300K.xml` | `.XML` | `710` bytes | RomRaider / EcuFlash XML Definition |
-| `ECUFlash_subaru_standard_Impreza_WRX_A4TC300L.xml` | `.XML` | `26,951` bytes | RomRaider / EcuFlash XML Definition |
-| `ECUFlash_subaru_standard_Impreza_WRX_A4TC400L.xml` | `.XML` | `1,075` bytes | RomRaider / EcuFlash XML Definition |
-| `ECUFlash_subaru_standard_Impreza_WRX_A4TC401L.xml` | `.XML` | `1,075` bytes | RomRaider / EcuFlash XML Definition |
-| `ECUFlash_subaru_standard_Impreza_WRX_A4TE0000.xml` | `.XML` | `29,745` bytes | RomRaider / EcuFlash XML Definition |
-| `ECUFlash_subaru_standard_Impreza_WRX_A4TE000A.xml` | `.XML` | `29,745` bytes | RomRaider / EcuFlash XML Definition |
-| `ECUFlash_subaru_standard_Impreza_WRX_A4TE001G.xml` | `.XML` | `27,965` bytes | RomRaider / EcuFlash XML Definition |
-| `ECUFlash_subaru_standard_Impreza_WRX_A4TE001I.xml` | `.XML` | `29,745` bytes | RomRaider / EcuFlash XML Definition |
-| `ECUFlash_subaru_standard_Impreza_WRX_A4TE100G.xml` | `.XML` | `2,083` bytes | RomRaider / EcuFlash XML Definition |
-| `ECUFlash_subaru_standard_Impreza_WRX_A4TE200A.xml` | `.XML` | `1,924` bytes | RomRaider / EcuFlash XML Definition |
-| `ECUFlash_subaru_standard_Impreza_WRX_A4TE3000.xml` | `.XML` | `518` bytes | RomRaider / EcuFlash XML Definition |
-| `ECUFlash_subaru_standard_Impreza_WRX_A4TE300D.xml` | `.XML` | `28,697` bytes | RomRaider / EcuFlash XML Definition |
-| `ECUFlash_subaru_standard_Impreza_WRX_A4TF300E.xml` | `.XML` | `2,110` bytes | RomRaider / EcuFlash XML Definition |
-| `ECUFlash_subaru_standard_Impreza_WRX_A4TF300F.xml` | `.XML` | `2,110` bytes | RomRaider / EcuFlash XML Definition |
-| `ECUFlash_subaru_standard_Impreza_WRX_A4TF400E.xml` | `.XML` | `26,868` bytes | RomRaider / EcuFlash XML Definition |
-| `ECUFlash_subaru_standard_Impreza_WRX_A4TF500F.xml` | `.XML` | `1,898` bytes | RomRaider / EcuFlash XML Definition |
-| `ECUFlash_subaru_standard_Impreza_WRX_A4TF510E.xml` | `.XML` | `2,041` bytes | RomRaider / EcuFlash XML Definition |
-| `ECUFlash_subaru_standard_Impreza_WRX_A4TF510F.xml` | `.XML` | `2,041` bytes | RomRaider / EcuFlash XML Definition |
-| `ECUFlash_subaru_standard_Impreza_WRX_A4TF520F.xml` | `.XML` | `26,869` bytes | RomRaider / EcuFlash XML Definition |
-| `ECUFlash_subaru_standard_Impreza_WRX_A4TF7000.xml` | `.XML` | `2,820` bytes | RomRaider / EcuFlash XML Definition |
-| `ECUFlash_subaru_standard_Impreza_WRX_A4TF800E.xml` | `.XML` | `2,069` bytes | RomRaider / EcuFlash XML Definition |
-| `ECUFlash_subaru_standard_Impreza_WRX_A4TF800F.xml` | `.XML` | `27,213` bytes | RomRaider / EcuFlash XML Definition |
-| `ECUFlash_subaru_standard_Impreza_WRX_A4TF810F.xml` | `.XML` | `27,213` bytes | RomRaider / EcuFlash XML Definition |
-| `ECUFlash_subaru_standard_Impreza_WRX_A4TH000N.xml` | `.XML` | `29,883` bytes | RomRaider / EcuFlash XML Definition |
-| `ECUFlash_subaru_standard_Impreza_WRX_A4TH000O.xml` | `.XML` | `1,924` bytes | RomRaider / EcuFlash XML Definition |
-| `ECUFlash_subaru_standard_Impreza_WRX_A4TH100H.xml` | `.XML` | `29,791` bytes | RomRaider / EcuFlash XML Definition |
-| `ECUFlash_subaru_standard_Impreza_WRX_A4TH100L.xml` | `.XML` | `453` bytes | RomRaider / EcuFlash XML Definition |
-| `ECUFlash_subaru_standard_Impreza_WRX_A8DH200O.xml` | `.XML` | `25,822` bytes | RomRaider / EcuFlash XML Definition |
-| `ECUFlash_subaru_standard_Impreza_WRX_A8DH200U.xml` | `.XML` | `497` bytes | RomRaider / EcuFlash XML Definition |
-| `ECUFlash_subaru_standard_Impreza_WRX_A8DH200W.xml` | `.XML` | `29,176` bytes | RomRaider / EcuFlash XML Definition |
-| `ECUFlash_subaru_standard_Impreza_WRX_A8DH200X.xml` | `.XML` | `29,045` bytes | RomRaider / EcuFlash XML Definition |
-| `ECUFlash_subaru_standard_Impreza_WRX_A8DH200Y.xml` | `.XML` | `25,822` bytes | RomRaider / EcuFlash XML Definition |
-| `ECUFlash_subaru_standard_Impreza_WRX_A8DH201X.xml` | `.XML` | `497` bytes | RomRaider / EcuFlash XML Definition |
-| `ECUFlash_subaru_standard_Impreza_WRX_A8DH202X.xml` | `.XML` | `497` bytes | RomRaider / EcuFlash XML Definition |
-| `ECUFlash_subaru_standard_Impreza_WRX_A8DK100K.xml` | `.XML` | `496` bytes | RomRaider / EcuFlash XML Definition |
-| `ECUFlash_subaru_standard_Impreza_WRX_A8DK100L.xml` | `.XML` | `496` bytes | RomRaider / EcuFlash XML Definition |
-| `ECUFlash_subaru_standard_Impreza_WRX_A8DK100O.xml` | `.XML` | `25,990` bytes | RomRaider / EcuFlash XML Definition |
-| `ECUFlash_subaru_standard_Impreza_WRX_A8DK100U.xml` | `.XML` | `568` bytes | RomRaider / EcuFlash XML Definition |
-| `ECUFlash_subaru_standard_Impreza_WRX_A8DK100W.xml` | `.XML` | `29,396` bytes | RomRaider / EcuFlash XML Definition |
-| `ECUFlash_subaru_standard_Impreza_WRX_A8DK100X.xml` | `.XML` | `29,265` bytes | RomRaider / EcuFlash XML Definition |
-| `ECUFlash_subaru_standard_Impreza_WRX_A8DK100Y.xml` | `.XML` | `25,990` bytes | RomRaider / EcuFlash XML Definition |
-| `ECUFlash_subaru_standard_Impreza_WRX_A8DK101X.xml` | `.XML` | `497` bytes | RomRaider / EcuFlash XML Definition |
-| `ECUFlash_subaru_standard_Impreza_WRX_AZ1E400C.xml` | `.XML` | `28,345` bytes | RomRaider / EcuFlash XML Definition |
-| `ECUFlash_subaru_standard_Impreza_WRX_AZ1E400E.xml` | `.XML` | `28,132` bytes | RomRaider / EcuFlash XML Definition |
-| `ECUFlash_subaru_standard_Impreza_WRX_AZ1E400U.xml` | `.XML` | `809` bytes | RomRaider / EcuFlash XML Definition |
-| `ECUFlash_subaru_standard_Impreza_WRX_AZ1E401A.xml` | `.XML` | `31,065` bytes | RomRaider / EcuFlash XML Definition |
-| `ECUFlash_subaru_standard_Impreza_WRX_AZ1E401B.xml` | `.XML` | `31,193` bytes | RomRaider / EcuFlash XML Definition |
-| `ECUFlash_subaru_standard_Impreza_WRX_AZ1G400U.xml` | `.XML` | `28,345` bytes | RomRaider / EcuFlash XML Definition |
-| `ECUFlash_subaru_standard_Impreza_WRX_AZ1G400W.xml` | `.XML` | `28,274` bytes | RomRaider / EcuFlash XML Definition |
-| `ECUFlash_subaru_standard_Impreza_WRX_AZ1G400X.xml` | `.XML` | `28,132` bytes | RomRaider / EcuFlash XML Definition |
-| `ECUFlash_subaru_standard_Impreza_WRX_AZ1G401V.xml` | `.XML` | `31,294` bytes | RomRaider / EcuFlash XML Definition |
-| `ECUFlash_subaru_standard_Legacy(Outback)_GT(XT)_A2TB001C.xml` | `.XML` | `31,480` bytes | RomRaider / EcuFlash XML Definition |
-| `ECUFlash_subaru_standard_Legacy(Outback)_GT(XT)_A2TB001N.xml` | `.XML` | `2,694` bytes | RomRaider / EcuFlash XML Definition |
-| `ECUFlash_subaru_standard_Legacy_2.0_E2ZD308E.xml` | `.XML` | `17,985` bytes | RomRaider / EcuFlash XML Definition |
-| `ECUFlash_subaru_standard_Legacy_2.5i_E2SB001K.xml` | `.XML` | `24,940` bytes | RomRaider / EcuFlash XML Definition |
-| `ECUFlash_subaru_standard_Legacy_2.5i_EZ1D105C.xml` | `.XML` | `25,839` bytes | RomRaider / EcuFlash XML Definition |
-| `ECUFlash_subaru_standard_Legacy_2.5i_EZ1D201D.xml` | `.XML` | `25,701` bytes | RomRaider / EcuFlash XML Definition |
-| `ECUFlash_subaru_standard_Legacy_2.5i_EZ1D302B.xml` | `.XML` | `25,701` bytes | RomRaider / EcuFlash XML Definition |
-| `ECUFlash_subaru_standard_Legacy_2.5i_EZ1D302C.xml` | `.XML` | `25,839` bytes | RomRaider / EcuFlash XML Definition |
-| `ECUFlash_subaru_standard_Legacy_2.5i_EZ1D302D.xml` | `.XML` | `25,701` bytes | RomRaider / EcuFlash XML Definition |
-| `ECUFlash_subaru_standard_Legacy_3.0R_D0XJ001R.xml` | `.XML` | `20,885` bytes | RomRaider / EcuFlash XML Definition |
-| `ECUFlash_subaru_standard_Legacy_3.0R_D2TB201R.xml` | `.XML` | `21,496` bytes | RomRaider / EcuFlash XML Definition |
-| `ECUFlash_subaru_standard_Legacy_3.0R_D2TC001P.xml` | `.XML` | `24,166` bytes | RomRaider / EcuFlash XML Definition |
-| `ECUFlash_subaru_standard_Legacy_3.0R_D2UK001Q.xml` | `.XML` | `20,426` bytes | RomRaider / EcuFlash XML Definition |
-| `ECUFlash_subaru_standard_Legacy_3.0R_D2WD200A.xml` | `.XML` | `18,546` bytes | RomRaider / EcuFlash XML Definition |
-| `ECUFlash_subaru_standard_Legacy_3.0R_D2WD604A.xml` | `.XML` | `496` bytes | RomRaider / EcuFlash XML Definition |
-| `ECUFlash_subaru_standard_Legacy_3.0R_D2ZU200A.xml` | `.XML` | `17,892` bytes | RomRaider / EcuFlash XML Definition |
-| `ECUFlash_subaru_standard_Legacy_3.0R_D2ZZ001E.xml` | `.XML` | `19,459` bytes | RomRaider / EcuFlash XML Definition |
-| `ECUFlash_subaru_standard_Legacy_B4_A4SH701H.xml` | `.XML` | `14,268` bytes | RomRaider / EcuFlash XML Definition |
-| `ECUFlash_subaru_standard_Legacy_B4_A4SHB00H.xml` | `.XML` | `14,268` bytes | RomRaider / EcuFlash XML Definition |
-| `ECUFlash_subaru_standard_Legacy_B4_A4SHC00G.xml` | `.XML` | `14,268` bytes | RomRaider / EcuFlash XML Definition |
-| `ECUFlash_subaru_standard_Legacy_B4_A4SHC01G.xml` | `.XML` | `14,268` bytes | RomRaider / EcuFlash XML Definition |
-| `ECUFlash_subaru_standard_Legacy_BH_4SLEHB00.xml` | `.XML` | `14,268` bytes | RomRaider / EcuFlash XML Definition |
-| `ECUFlash_subaru_standard_Legacy_BH_A4SH701G.xml` | `.XML` | `14,268` bytes | RomRaider / EcuFlash XML Definition |
-| `ECUFlash_subaru_standard_Legacy_BH_A4SHB00G.xml` | `.XML` | `14,268` bytes | RomRaider / EcuFlash XML Definition |
-| `ECUFlash_subaru_standard_Legacy_GT_A2PG420A.xml` | `.XML` | `28,716` bytes | RomRaider / EcuFlash XML Definition |
-| `ECUFlash_subaru_standard_Legacy_GT_A2SB000A.xml` | `.XML` | `28,853` bytes | RomRaider / EcuFlash XML Definition |
-| `ECUFlash_subaru_standard_Legacy_GT_A2TB000N.xml` | `.XML` | `9,372` bytes | RomRaider / EcuFlash XML Definition |
-| `ECUFlash_subaru_standard_Legacy_GT_A2TB100A.xml` | `.XML` | `28,853` bytes | RomRaider / EcuFlash XML Definition |
-| `ECUFlash_subaru_standard_Legacy_GT_A2TB100B.xml` | `.XML` | `2,330` bytes | RomRaider / EcuFlash XML Definition |
-| `ECUFlash_subaru_standard_Legacy_GT_A2TB100Y.xml` | `.XML` | `28,671` bytes | RomRaider / EcuFlash XML Definition |
-| `ECUFlash_subaru_standard_Legacy_GT_A2UG000B.xml` | `.XML` | `28,163` bytes | RomRaider / EcuFlash XML Definition |
-| `ECUFlash_subaru_standard_Legacy_GT_A2UG000C.xml` | `.XML` | `31,200` bytes | RomRaider / EcuFlash XML Definition |
-| `ECUFlash_subaru_standard_Legacy_GT_A2UG000N.xml` | `.XML` | `499` bytes | RomRaider / EcuFlash XML Definition |
-| `ECUFlash_subaru_standard_Legacy_GT_A2UH000A.xml` | `.XML` | `28,149` bytes | RomRaider / EcuFlash XML Definition |
-| `ECUFlash_subaru_standard_Legacy_GT_A2UI000A.xml` | `.XML` | `28,149` bytes | RomRaider / EcuFlash XML Definition |
-| `ECUFlash_subaru_standard_Legacy_GT_A2UI001C.xml` | `.XML` | `31,347` bytes | RomRaider / EcuFlash XML Definition |
-| `ECUFlash_subaru_standard_Legacy_GT_A2WC500C.xml` | `.XML` | `27,319` bytes | RomRaider / EcuFlash XML Definition |
-| `ECUFlash_subaru_standard_Legacy_GT_A2WC500N.xml` | `.XML` | `27,316` bytes | RomRaider / EcuFlash XML Definition |
-| `ECUFlash_subaru_standard_Legacy_GT_A2WC510C.xml` | `.XML` | `27,233` bytes | RomRaider / EcuFlash XML Definition |
-| `ECUFlash_subaru_standard_Legacy_GT_A2WC510N.xml` | `.XML` | `27,076` bytes | RomRaider / EcuFlash XML Definition |
-| `ECUFlash_subaru_standard_Legacy_GT_A2WC511C.xml` | `.XML` | `495` bytes | RomRaider / EcuFlash XML Definition |
-| `ECUFlash_subaru_standard_Legacy_GT_A2WC511N.xml` | `.XML` | `495` bytes | RomRaider / EcuFlash XML Definition |
-| `ECUFlash_subaru_standard_Legacy_GT_A2WC521C.xml` | `.XML` | `27,388` bytes | RomRaider / EcuFlash XML Definition |
-| `ECUFlash_subaru_standard_Legacy_GT_A2WC521N.xml` | `.XML` | `27,230` bytes | RomRaider / EcuFlash XML Definition |
-| `ECUFlash_subaru_standard_Legacy_GT_A2WC522N.xml` | `.XML` | `495` bytes | RomRaider / EcuFlash XML Definition |
-| `ECUFlash_subaru_standard_Legacy_GT_A2WD000A.xml` | `.XML` | `494` bytes | RomRaider / EcuFlash XML Definition |
-| `ECUFlash_subaru_standard_Legacy_GT_A2WD001A.xml` | `.XML` | `23,260` bytes | RomRaider / EcuFlash XML Definition |
-| `ECUFlash_subaru_standard_Legacy_GT_A2WD001B.xml` | `.XML` | `23,209` bytes | RomRaider / EcuFlash XML Definition |
-| `ECUFlash_subaru_standard_Legacy_GT_A2WD010A.xml` | `.XML` | `494` bytes | RomRaider / EcuFlash XML Definition |
-| `ECUFlash_subaru_standard_Legacy_GT_A2WD010B.xml` | `.XML` | `22,956` bytes | RomRaider / EcuFlash XML Definition |
-| `ECUFlash_subaru_standard_Legacy_GT_A2WD012A.xml` | `.XML` | `23,004` bytes | RomRaider / EcuFlash XML Definition |
-| `ECUFlash_subaru_standard_Legacy_GT_A2WD012B.xml` | `.XML` | `494` bytes | RomRaider / EcuFlash XML Definition |
-| `ECUFlash_subaru_standard_Legacy_GT_A2WF200C.xml` | `.XML` | `27,388` bytes | RomRaider / EcuFlash XML Definition |
-| `ECUFlash_subaru_standard_Legacy_GT_A2WF200N.xml` | `.XML` | `27,230` bytes | RomRaider / EcuFlash XML Definition |
-| `ECUFlash_subaru_standard_Legacy_GT_A2ZJ600B.xml` | `.XML` | `22,619` bytes | RomRaider / EcuFlash XML Definition |
-| `ECUFlash_subaru_standard_Legacy_GT_A2ZJ601A.xml` | `.XML` | `22,667` bytes | RomRaider / EcuFlash XML Definition |
-| `ECUFlash_subaru_standard_Legacy_GT_A2ZJ800A.xml` | `.XML` | `22,664` bytes | RomRaider / EcuFlash XML Definition |
-| `ECUFlash_subaru_standard_Legacy_GT_A2ZJC00B.xml` | `.XML` | `22,616` bytes | RomRaider / EcuFlash XML Definition |
-| `ECUFlash_subaru_standard_Legacy_GT_A2ZJD00A.xml` | `.XML` | `494` bytes | RomRaider / EcuFlash XML Definition |
-| `ECUFlash_subaru_standard_Legacy_GT_A2ZJD00B.xml` | `.XML` | `22,619` bytes | RomRaider / EcuFlash XML Definition |
-| `ECUFlash_subaru_standard_Legacy_GT_A2ZJD01A.xml` | `.XML` | `22,667` bytes | RomRaider / EcuFlash XML Definition |
-| `ECUFlash_subaru_standard_Legacy_GT_A2ZJD02B.xml` | `.XML` | `494` bytes | RomRaider / EcuFlash XML Definition |
-| `ECUFlash_subaru_standard_Legacy_GT_spec.B_A2TB000L.xml` | `.XML` | `7,200` bytes | RomRaider / EcuFlash XML Definition |
-| `ECUFlash_subaru_standard_Legacy_GT_spec.B_A2TB001L.xml` | `.XML` | `31,579` bytes | RomRaider / EcuFlash XML Definition |
-| `ECUFlash_subaru_standard_Legacy_GT_spec.B_A2TB100K.xml` | `.XML` | `28,816` bytes | RomRaider / EcuFlash XML Definition |
-| `ECUFlash_subaru_standard_Legacy_GT_spec.B_A2UG000L.xml` | `.XML` | `31,312` bytes | RomRaider / EcuFlash XML Definition |
-| `ECUFlash_subaru_standard_Legacy_GT_spec.B_A2UI000K.xml` | `.XML` | `27,969` bytes | RomRaider / EcuFlash XML Definition |
-| `ECUFlash_subaru_standard_Legacy_GT_spec.B_A2UI001L.xml` | `.XML` | `20,612` bytes | RomRaider / EcuFlash XML Definition |
-| `ECUFlash_subaru_standard_Liberty_2.5i_E2TB102M.xml` | `.XML` | `25,289` bytes | RomRaider / EcuFlash XML Definition |
-| `ECUFlash_subaru_standard_Liberty_3.0R_D0XJ001M.xml` | `.XML` | `20,348` bytes | RomRaider / EcuFlash XML Definition |
-| `ECUFlash_subaru_standard_Liberty_3.0R_D0XJ001T.xml` | `.XML` | `20,211` bytes | RomRaider / EcuFlash XML Definition |
-| `ECUFlash_subaru_standard_Liberty_3.0R_D2UH001M.xml` | `.XML` | `20,695` bytes | RomRaider / EcuFlash XML Definition |
-| `ECUFlash_subaru_standard_Liberty_3.0R_D2WD603H.xml` | `.XML` | `18,719` bytes | RomRaider / EcuFlash XML Definition |
-| `ECUFlash_subaru_standard_Liberty_3.0R_D2WD610H.xml` | `.XML` | `18,585` bytes | RomRaider / EcuFlash XML Definition |
-| `ECUFlash_subaru_standard_Liberty_B4_A4SH701K.xml` | `.XML` | `14,269` bytes | RomRaider / EcuFlash XML Definition |
-| `ECUFlash_subaru_standard_Liberty_B4_A4SHA10R.xml` | `.XML` | `14,269` bytes | RomRaider / EcuFlash XML Definition |
-| `ECUFlash_subaru_standard_Liberty_GT_A2UG001G.xml` | `.XML` | `28,192` bytes | RomRaider / EcuFlash XML Definition |
-| `ECUFlash_subaru_standard_Liberty_GT_A2UG002T.xml` | `.XML` | `28,297` bytes | RomRaider / EcuFlash XML Definition |
-| `ECUFlash_subaru_standard_Liberty_GT_A2UI000Y.xml` | `.XML` | `28,192` bytes | RomRaider / EcuFlash XML Definition |
-| `ECUFlash_subaru_standard_Liberty_GT_A2UI000Z.xml` | `.XML` | `28,167` bytes | RomRaider / EcuFlash XML Definition |
-| `ECUFlash_subaru_standard_Liberty_GT_A2WD001G.xml` | `.XML` | `23,261` bytes | RomRaider / EcuFlash XML Definition |
-| `ECUFlash_subaru_standard_Liberty_GT_A2WD002T.xml` | `.XML` | `23,213` bytes | RomRaider / EcuFlash XML Definition |
-| `ECUFlash_subaru_standard_Liberty_GT_A2WD010G.xml` | `.XML` | `23,261` bytes | RomRaider / EcuFlash XML Definition |
-| `ECUFlash_subaru_standard_Liberty_GT_A2WD010T.xml` | `.XML` | `23,213` bytes | RomRaider / EcuFlash XML Definition |
-| `ECUFlash_subaru_standard_Liberty_GT_A2WD010Y.xml` | `.XML` | `495` bytes | RomRaider / EcuFlash XML Definition |
-| `ECUFlash_subaru_standard_Liberty_GT_A2WD010Z.xml` | `.XML` | `5,956` bytes | RomRaider / EcuFlash XML Definition |
-| `ECUFlash_subaru_standard_Liberty_GT_A2WD012G.xml` | `.XML` | `495` bytes | RomRaider / EcuFlash XML Definition |
-| `ECUFlash_subaru_standard_Liberty_GT_A2WD012T.xml` | `.XML` | `495` bytes | RomRaider / EcuFlash XML Definition |
-| `ECUFlash_subaru_standard_Liberty_GT_A2ZJ800G.xml` | `.XML` | `22,668` bytes | RomRaider / EcuFlash XML Definition |
-| `ECUFlash_subaru_standard_Liberty_GT_A2ZJC00G.xml` | `.XML` | `22,668` bytes | RomRaider / EcuFlash XML Definition |
-| `ECUFlash_subaru_standard_Liberty_GT_A2ZJD00G.xml` | `.XML` | `495` bytes | RomRaider / EcuFlash XML Definition |
-| `ECUFlash_subaru_standard_Liberty_GT_A2ZJD02G.xml` | `.XML` | `22,668` bytes | RomRaider / EcuFlash XML Definition |
-| `ECUFlash_subaru_standard_Liberty_GT_AE5F301D.xml` | `.XML` | `28,971` bytes | RomRaider / EcuFlash XML Definition |
-| `ECUFlash_subaru_standard_Outback_2.5i_E2VG222B.xml` | `.XML` | `29,192` bytes | RomRaider / EcuFlash XML Definition |
-| `ECUFlash_subaru_standard_Outback_2.5i_E2WD500D.xml` | `.XML` | `16,880` bytes | RomRaider / EcuFlash XML Definition |
-| `ECUFlash_subaru_standard_Outback_2.5i_E2ZD508C.xml` | `.XML` | `17,656` bytes | RomRaider / EcuFlash XML Definition |
-| `ECUFlash_subaru_standard_Outback_XT_A2SB000Y.xml` | `.XML` | `28,015` bytes | RomRaider / EcuFlash XML Definition |
-| `ECUFlash_subaru_standard_Outback_XT_A2WC500R.xml` | `.XML` | `496` bytes | RomRaider / EcuFlash XML Definition |
-| `ECUFlash_subaru_standard_Outback_XT_A2WC510R.xml` | `.XML` | `496` bytes | RomRaider / EcuFlash XML Definition |
-| `ECUFlash_subaru_standard_Outback_XT_A2WC510S.xml` | `.XML` | `496` bytes | RomRaider / EcuFlash XML Definition |
-| `ECUFlash_subaru_standard_Outback_XT_A2WC511R.xml` | `.XML` | `496` bytes | RomRaider / EcuFlash XML Definition |
-| `ECUFlash_subaru_standard_Outback_XT_A2WC521R.xml` | `.XML` | `496` bytes | RomRaider / EcuFlash XML Definition |
-| `ECUFlash_subaru_standard_Outback_XT_A2WC522S.xml` | `.XML` | `496` bytes | RomRaider / EcuFlash XML Definition |
-| `ECUFlash_subaru_standard_Outback_XT_A2WF200R.xml` | `.XML` | `27,389` bytes | RomRaider / EcuFlash XML Definition |
-| `ECUFlash_subaru_standard_Outback_XT_A2WF200S.xml` | `.XML` | `496` bytes | RomRaider / EcuFlash XML Definition |
-| `ECUFlash_subaru_standard_Tribeca_DZ1E402B.xml` | `.XML` | `26,708` bytes | RomRaider / EcuFlash XML Definition |
-| `ECUFlash_subaru_standard_Tribeca_DZ1G001F.xml` | `.XML` | `24,556` bytes | RomRaider / EcuFlash XML Definition |
-| `EZ1D105C.xml` | `.XML` | `25,839` bytes | RomRaider / EcuFlash XML Definition |
-| `EZ1D201D.xml` | `.XML` | `25,701` bytes | RomRaider / EcuFlash XML Definition |
-| `EZ1D302B.xml` | `.XML` | `25,701` bytes | RomRaider / EcuFlash XML Definition |
-| `EZ1D302C.xml` | `.XML` | `25,839` bytes | RomRaider / EcuFlash XML Definition |
-| `EZ1D302D.xml` | `.XML` | `25,701` bytes | RomRaider / EcuFlash XML Definition |
-| `EZ1E102G.xml` | `.XML` | `25,639` bytes | RomRaider / EcuFlash XML Definition |
-| `EZ1E102H.xml` | `.XML` | `25,702` bytes | RomRaider / EcuFlash XML Definition |
-| `EZ1E401G.xml` | `.XML` | `505` bytes | RomRaider / EcuFlash XML Definition |
-| `EZ1G107M.xml` | `.XML` | `23,078` bytes | RomRaider / EcuFlash XML Definition |
-| `EZ1G109K.xml` | `.XML` | `25,665` bytes | RomRaider / EcuFlash XML Definition |
-| `RomRaider_ecu_standard_ecu_defs.xml` | `.XML` | `7,825,988` bytes | RomRaider / EcuFlash XML Definition |
-| `RomRaider_logger_standard_logger.xml` | `.XML` | `2,074,498` bytes | RomRaider / EcuFlash XML Definition |
-| `Z1G20000.xml` | `.XML` | `503` bytes | RomRaider / EcuFlash XML Definition |
-| `ZA1JS10C_v7.xml` | `.XML` | `658,618` bytes | RomRaider / EcuFlash XML Definition |
-| `ZA1JS20G_v1.xml` | `.XML` | `634,284` bytes | RomRaider / EcuFlash XML Definition |
-| `ZA1JU01A_v22.xml` | `.XML` | `691,895` bytes | RomRaider / EcuFlash XML Definition |
-| `ZA1JV00C00G_v36.xml` | `.XML` | `705,616` bytes | RomRaider / EcuFlash XML Definition |
-| `cars_def.xml` | `.XML` | `46,476` bytes | RomRaider / EcuFlash XML Definition |
-| `ecu_defs.xml` | `.XML` | `7,822,214` bytes | RomRaider / EcuFlash XML Definition |
-| `logger.xml` | `.XML` | `2,074,495` bytes | RomRaider / EcuFlash XML Definition |
+| Filename | Tahun / Model Year | Size | MD5 Checksum | Type / Target Platform |
+| :--- | :---: | :--- | :--- | :--- |
+| `16BITBASE.xml` | **2001–2014** | 359.4 KB | `16332c7eb0f5561acd2953db01b8c19a` | ECU / ASAP2 Calibration Map Definition |
+| `32BITBASE.xml` | **2001–2014** | 489.3 KB | `6f4c7ffdbbbc504587a1a7a1b968594a` | ECU / ASAP2 Calibration Map Definition |
+| `4SLEHB00.xml` | **2001–2014** | 13.9 KB | `912597df598c59c644fd081bfd6f214f` | ECU / ASAP2 Calibration Map Definition |
+| `A2PG420A.xml` | **2001–2014** | 28.0 KB | `0dc058a4231485bea5f5684626bb6a01` | ECU / ASAP2 Calibration Map Definition |
+| `A2SB000A.xml` | **2001–2014** | 28.2 KB | `a79286f13cf4e13d6f8bd9278221dd86` | ECU / ASAP2 Calibration Map Definition |
+| `A2SB000Y.xml` | **2001–2014** | 27.4 KB | `013862f2e36cd0b6b5dc70a9598c83eb` | ECU / ASAP2 Calibration Map Definition |
+| `A2TB000L.xml` | **2001–2014** | 7.0 KB | `e5cb4ee205c757bb01e8e87ac1650037` | ECU / ASAP2 Calibration Map Definition |
+| `A2TB000N.xml` | **2001–2014** | 9.2 KB | `617d6a8997160723bf783d9bad3e9d35` | ECU / ASAP2 Calibration Map Definition |
+| `A2TB001C.xml` | **2001–2014** | 30.7 KB | `78db5d0b23c6ff8fc13535778f67bbad` | ECU / ASAP2 Calibration Map Definition |
+| `A2TB001L.xml` | **2001–2014** | 30.8 KB | `30780ec0ed9f8b7f919fbcd0484920a5` | ECU / ASAP2 Calibration Map Definition |
+| `A2TB001N.xml` | **2001–2014** | 2.6 KB | `011f593f3282c6844d863e0638978f19` | ECU / ASAP2 Calibration Map Definition |
+| `A2TB100A.xml` | **2001–2014** | 28.2 KB | `f4fd2aa11413d1b783cdab786c42c5ad` | ECU / ASAP2 Calibration Map Definition |
+| `A2TB100B.xml` | **2001–2014** | 2.3 KB | `b5d51289379a71d5c372b0117ebfecea` | ECU / ASAP2 Calibration Map Definition |
+| `A2TB100K.xml` | **2001–2014** | 28.1 KB | `c6e28b90460b5d888e1247f434e26d38` | ECU / ASAP2 Calibration Map Definition |
+| `A2TB100U.xml` | **2001–2014** | 26.0 KB | `7c24a05dbbdcfb5d6a9fe27d7aeede62` | ECU / ASAP2 Calibration Map Definition |
+| `A2TB100V.xml` | **2001–2014** | 26.2 KB | `73126c43c0b51583ac765361d1af6dec` | ECU / ASAP2 Calibration Map Definition |
+| `A2TB100Y.xml` | **2001–2014** | 28.0 KB | `407004840d9429056ca304b82d0ef26c` | ECU / ASAP2 Calibration Map Definition |
+| `A2UG000B.xml` | **2001–2014** | 27.5 KB | `8fbdf9e600c63f475b0e18f46136c284` | ECU / ASAP2 Calibration Map Definition |
+| `A2UG000C.xml` | **2001–2014** | 30.5 KB | `74268dd61a0679e9ec25d1a636ea84ce` | ECU / ASAP2 Calibration Map Definition |
+| `A2UG000J.xml` | **2001–2014** | 31.6 KB | `2fdc45a9801a4fa7678a129ddeaee10d` | ECU / ASAP2 Calibration Map Definition |
+| `A2UG000L.xml` | **2001–2014** | 30.6 KB | `235295523cef5ed07c67e42557f57054` | ECU / ASAP2 Calibration Map Definition |
+| `A2UG000N.xml` | **2001–2014** | 499 B | `8e95aff410593c4e77e03048566e41c6` | ECU / ASAP2 Calibration Map Definition |
+| `A2UG001G.xml` | **2001–2014** | 27.5 KB | `477e5a76cc48fb578ac63c766f311b37` | ECU / ASAP2 Calibration Map Definition |
+| `A2UG002T.xml` | **2001–2014** | 27.6 KB | `8733d3422c678538814d8a9d7788f09f` | ECU / ASAP2 Calibration Map Definition |
+| `A2UH000A.xml` | **2001–2014** | 27.5 KB | `ba7d81b951167f53092192d0a9389878` | ECU / ASAP2 Calibration Map Definition |
+| `A2UI000A.xml` | **2001–2014** | 27.5 KB | `3535ab7a51a771f9be4129b388b7362f` | ECU / ASAP2 Calibration Map Definition |
+| `A2UI000K.xml` | **2001–2014** | 27.3 KB | `4554415f1d3d6f3d09dce8ae4311afaa` | ECU / ASAP2 Calibration Map Definition |
+| `A2UI000Y.xml` | **2001–2014** | 27.5 KB | `f08b3fc682eb2364764b80d36ff4226d` | ECU / ASAP2 Calibration Map Definition |
+| `A2UI000Z.xml` | **2001–2014** | 27.5 KB | `1b14bc428acafabd93f2141d9ea841cf` | ECU / ASAP2 Calibration Map Definition |
+| `A2UI001C.xml` | **2001–2014** | 30.6 KB | `d39eb20cd276a5ae3eebe3932faf509f` | ECU / ASAP2 Calibration Map Definition |
+| `A2UI001L.xml` | **2001–2014** | 20.1 KB | `ac92a819dd52bd306491e21836e94f87` | ECU / ASAP2 Calibration Map Definition |
+| `A2UJ000J.xml` | **2001–2014** | 31.6 KB | `1d889d590275095bcd51f59546684454` | ECU / ASAP2 Calibration Map Definition |
+| `A2WA20  .xml` | **2001–2014** | 21.4 KB | `d0d7a29d8be5b4e0094ba35a44267119` | ECU / ASAP2 Calibration Map Definition |
+| `A2WC000E.xml` | **2001–2014** | 21.5 KB | `811c8d8a279d9aeb780ab044f7b7b6ce` | ECU / ASAP2 Calibration Map Definition |
+| `A2WC011E.xml` | **2001–2014** | 500 B | `a6039267cc33774cc799f656d918fea4` | ECU / ASAP2 Calibration Map Definition |
+| `A2WC012E.xml` | **2001–2014** | 21.5 KB | `405da9da1443b4a2cb9d3663878047cb` | ECU / ASAP2 Calibration Map Definition |
+| `A2WC013E.xml` | **2001–2014** | 500 B | `5cf71d8334ebd9c35d953f1c3145cc38` | ECU / ASAP2 Calibration Map Definition |
+| `A2WC400D.xml` | **2001–2014** | 25.8 KB | `b373fe57ac4589319645f6654d5f12f3` | ECU / ASAP2 Calibration Map Definition |
+| `A2WC400H.xml` | **2001–2014** | 22.4 KB | `785e81d34d9a26fc97dd168a977946a6` | ECU / ASAP2 Calibration Map Definition |
+| `A2WC400I.xml` | **2001–2014** | 25.7 KB | `26af6017d28a0c3a08253bd34432e71a` | ECU / ASAP2 Calibration Map Definition |
+| `A2WC400K.xml` | **2001–2014** | 25.9 KB | `57c82a0e97710d52b641fe2b5169c146` | ECU / ASAP2 Calibration Map Definition |
+| `A2WC400M.xml` | **2001–2014** | 22.3 KB | `e5f1823a4c6e8cfa3b16ee224a03e784` | ECU / ASAP2 Calibration Map Definition |
+| `A2WC401F.xml` | **2001–2014** | 23.1 KB | `663cf1ba42c5385fb12aa29d5d346678` | ECU / ASAP2 Calibration Map Definition |
+| `A2WC410D.xml` | **2001–2014** | 25.6 KB | `da3cb7b614136f9c1db508a4395c3cba` | ECU / ASAP2 Calibration Map Definition |
+| `A2WC410I.xml` | **2001–2014** | 25.5 KB | `47151189fdbe9553100af2de13e5d7b8` | ECU / ASAP2 Calibration Map Definition |
+| `A2WC411I.xml` | **2001–2014** | 497 B | `311136009a35a4e3c26c837ae7ced576` | ECU / ASAP2 Calibration Map Definition |
+| `A2WC412D.xml` | **2001–2014** | 25.6 KB | `e4d89b3520fc40625eb5b348d1141cff` | ECU / ASAP2 Calibration Map Definition |
+| `A2WC412I.xml` | **2001–2014** | 7.0 KB | `4ec7fa62b9b44a27ca52bbaf58a694fa` | ECU / ASAP2 Calibration Map Definition |
+| `A2WC420F.xml` | **2001–2014** | 23.1 KB | `23379015ae2d0dc4ec336c67e239ef8c` | ECU / ASAP2 Calibration Map Definition |
+| `A2WC420M.xml` | **2001–2014** | 22.3 KB | `05a1a93dc2fba63850ad2df1a3f200a6` | ECU / ASAP2 Calibration Map Definition |
+| `A2WC500C.xml` | **2001–2014** | 26.7 KB | `18bc0c1cb651269032ae16fc07c4c5e6` | ECU / ASAP2 Calibration Map Definition |
+| `A2WC500K.xml` | **2001–2014** | 26.2 KB | `7efae8736e462b7fb378ffa3af7474bf` | ECU / ASAP2 Calibration Map Definition |
+| `A2WC500L.xml` | **2001–2014** | 26.1 KB | `9a68b3cd2a3545758ad0deda54f0c79c` | ECU / ASAP2 Calibration Map Definition |
+| `A2WC500N.xml` | **2001–2014** | 26.7 KB | `e2dda28c88efb85f9a2542017e6933c6` | ECU / ASAP2 Calibration Map Definition |
+| `A2WC500R.xml` | **2001–2014** | 496 B | `4c7a77861bdef83acf71785380a10265` | ECU / ASAP2 Calibration Map Definition |
+| `A2WC501L.xml` | **2001–2014** | 496 B | `0985fd0b5040658b9525153927e66687` | ECU / ASAP2 Calibration Map Definition |
+| `A2WC510C.xml` | **2001–2014** | 26.6 KB | `6bf649bcf855cafd8f2759225bafa10c` | ECU / ASAP2 Calibration Map Definition |
+| `A2WC510N.xml` | **2001–2014** | 26.4 KB | `b8ee13bd8c50e7ee71002ddf81757d97` | ECU / ASAP2 Calibration Map Definition |
+| `A2WC510R.xml` | **2001–2014** | 496 B | `afcbaddef7ef51cf0a27a527e42b0bc8` | ECU / ASAP2 Calibration Map Definition |
+| `A2WC510S.xml` | **2001–2014** | 496 B | `004ef2ebf29eaa532267a452371d50f2` | ECU / ASAP2 Calibration Map Definition |
+| `A2WC511C.xml` | **2001–2014** | 495 B | `73e1f3da980e9f5bc07d65b1f8ff42b5` | ECU / ASAP2 Calibration Map Definition |
+| `A2WC511N.xml` | **2001–2014** | 495 B | `9438525b5f2628b7fd3247fbd42efb58` | ECU / ASAP2 Calibration Map Definition |
+| `A2WC511R.xml` | **2001–2014** | 496 B | `efde1d075fd9ee1f4a51ef729823d9c9` | ECU / ASAP2 Calibration Map Definition |
+| `A2WC521C.xml` | **2001–2014** | 26.7 KB | `8e009a636c18e5440c3b242ec9cbdd18` | ECU / ASAP2 Calibration Map Definition |
+| `A2WC521N.xml` | **2001–2014** | 26.6 KB | `6470b38b5f94abf73f55e08e49a2ef69` | ECU / ASAP2 Calibration Map Definition |
+| `A2WC521R.xml` | **2001–2014** | 496 B | `2aa1c3b14f4b8689bab11fd0b25866e0` | ECU / ASAP2 Calibration Map Definition |
+| `A2WC522N.xml` | **2001–2014** | 495 B | `04f38e07567b993045ee334b8f23a8cf` | ECU / ASAP2 Calibration Map Definition |
+| `A2WC522S.xml` | **2001–2014** | 496 B | `2bc260e054da7dc4b8566666fd8b6fdd` | ECU / ASAP2 Calibration Map Definition |
+| `A2WD000A.xml` | **2001–2014** | 494 B | `d873d3df26ad3c16d75c9c0c9a12382d` | ECU / ASAP2 Calibration Map Definition |
+| `A2WD001A.xml` | **2001–2014** | 22.7 KB | `e04ac3d3d604f6ef9d002dc32f496123` | ECU / ASAP2 Calibration Map Definition |
+| `A2WD001B.xml` | **2001–2014** | 22.7 KB | `bb7199c7b0446c81e510460c97f67396` | ECU / ASAP2 Calibration Map Definition |
+| `A2WD001G.xml` | **2001–2014** | 22.7 KB | `adcf7bcf3c386397e6db623f72a1866a` | ECU / ASAP2 Calibration Map Definition |
+| `A2WD002T.xml` | **2001–2014** | 22.7 KB | `022468fded63167892d698442ff55bf9` | ECU / ASAP2 Calibration Map Definition |
+| `A2WD010A.xml` | **2001–2014** | 494 B | `81f1669ba07a93a494e5d36fcf7f05fd` | ECU / ASAP2 Calibration Map Definition |
+| `A2WD010B.xml` | **2001–2014** | 22.4 KB | `f5e8f12f125a250196a6e73253397bb2` | ECU / ASAP2 Calibration Map Definition |
+| `A2WD010G.xml` | **2001–2014** | 22.7 KB | `a0ba7ac9740edf2f8a5cd8d5574d401a` | ECU / ASAP2 Calibration Map Definition |
+| `A2WD010T.xml` | **2001–2014** | 22.7 KB | `174c645de6adea7aaf4cb925e31dc605` | ECU / ASAP2 Calibration Map Definition |
+| `A2WD010Y.xml` | **2001–2014** | 495 B | `06e9561a771d4f022290bc2032dc8403` | ECU / ASAP2 Calibration Map Definition |
+| `A2WD010Z.xml` | **2001–2014** | 5.8 KB | `f754fd1852dd24e7ad8fd395be556452` | ECU / ASAP2 Calibration Map Definition |
+| `A2WD012A.xml` | **2001–2014** | 22.5 KB | `ea81c79585c1f3821e07f990f203168c` | ECU / ASAP2 Calibration Map Definition |
+| `A2WD012B.xml` | **2001–2014** | 494 B | `038b3b7498627e9cf0aa5cf2d037a7e4` | ECU / ASAP2 Calibration Map Definition |
+| `A2WD012G.xml` | **2001–2014** | 495 B | `0a0b1bfe800b49690b8c83727e210059` | ECU / ASAP2 Calibration Map Definition |
+| `A2WD012T.xml` | **2001–2014** | 495 B | `e76130d4ea0811475b0c54e432c73512` | ECU / ASAP2 Calibration Map Definition |
+| `A2WF100K.xml` | **2011–2016** | 496 B | `4c3f578597016ac5960c6880e6b469f7` | ECU / ASAP2 Calibration Map Definition |
+| `A2WF100L.xml` | **2011–2016** | 26.1 KB | `b9ae31407480a560f4f756a7fc341d87` | ECU / ASAP2 Calibration Map Definition |
+| `A2WF101K.xml` | **2011–2016** | 26.2 KB | `6a0c6b841e8096cc8ffe85dfd6997120` | ECU / ASAP2 Calibration Map Definition |
+| `A2WF101L.xml` | **2011–2016** | 496 B | `08ffbdb57a14ad715ea4b93ee142c837` | ECU / ASAP2 Calibration Map Definition |
+| `A2WF200C.xml` | **2001–2014** | 26.7 KB | `97c6119603ce2a505edf74001b819d92` | ECU / ASAP2 Calibration Map Definition |
+| `A2WF200N.xml` | **2001–2014** | 26.6 KB | `8e211324767fc176e390d1985472b0a6` | ECU / ASAP2 Calibration Map Definition |
+| `A2WF200R.xml` | **2001–2014** | 26.7 KB | `1d3e26bda43965244382e95e719467b3` | ECU / ASAP2 Calibration Map Definition |
+| `A2WF200S.xml` | **2001–2014** | 496 B | `5602ae3228e29927aef6f6ff2e3fb469` | ECU / ASAP2 Calibration Map Definition |
+| `A2ZJ201D.xml` | **2001–2014** | 25.0 KB | `7fe4295bc0b748a62a4afc40999f84f2` | ECU / ASAP2 Calibration Map Definition |
+| `A2ZJ500F.xml` | **2001–2014** | 25.5 KB | `6920a736126b919f90f1a828447a73ae` | ECU / ASAP2 Calibration Map Definition |
+| `A2ZJ500H.xml` | **2001–2014** | 21.3 KB | `8d9cbd0d2d7da7b256e8e6514a7c5799` | ECU / ASAP2 Calibration Map Definition |
+| `A2ZJ500I.xml` | **2001–2014** | 24.9 KB | `75a4cc11f463ae5cb689caa0b919c2b4` | ECU / ASAP2 Calibration Map Definition |
+| `A2ZJ500J.xml` | **2001–2014** | 26.1 KB | `1c246c5e2ac8b68fe2da1277f6b86794` | ECU / ASAP2 Calibration Map Definition |
+| `A2ZJ500K.xml` | **2001–2014** | 25.1 KB | `1af950e8475d395c23e4cc68c1203a15` | ECU / ASAP2 Calibration Map Definition |
+| `A2ZJ500L.xml` | **2001–2014** | 25.0 KB | `3c0e410d3597a1d4e4ac272920f887ed` | ECU / ASAP2 Calibration Map Definition |
+| `A2ZJ500M.xml` | **2001–2014** | 21.2 KB | `b55f2a6ade2aa8a3bdc9b198cbf2d45e` | ECU / ASAP2 Calibration Map Definition |
+| `A2ZJ512I.xml` | **2001–2014** | 24.9 KB | `7800e81a55ef3b6fe893e75637fb5824` | ECU / ASAP2 Calibration Map Definition |
+| `A2ZJ600B.xml` | **2001–2014** | 22.1 KB | `c11b13c1ad4511d602c0d1bfe0ea7cfa` | ECU / ASAP2 Calibration Map Definition |
+| `A2ZJ601A.xml` | **2001–2014** | 22.1 KB | `c97f91f5ca7a27f42a374723e00cad3a` | ECU / ASAP2 Calibration Map Definition |
+| `A2ZJ700J.xml` | **2001–2014** | 26.1 KB | `c6f79a0986e7921109029bf287fcb179` | ECU / ASAP2 Calibration Map Definition |
+| `A2ZJ710J.xml` | **2001–2014** | 26.1 KB | `3d93492ac67a08c3816ea14d97376577` | ECU / ASAP2 Calibration Map Definition |
+| `A2ZJ800A.xml` | **2001–2014** | 22.1 KB | `14bce3caf66668e8efe911c1b6dbfac2` | ECU / ASAP2 Calibration Map Definition |
+| `A2ZJ800G.xml` | **2001–2014** | 22.1 KB | `b672081d62e65be2a87b2d41d78fabb1` | ECU / ASAP2 Calibration Map Definition |
+| `A2ZJA00P.xml` | **2001–2014** | 24.9 KB | `d238d5fadc21851b5d0a2eb921e1d5a4` | ECU / ASAP2 Calibration Map Definition |
+| `A2ZJA00Q.xml` | **2001–2014** | 500 B | `70b7019c58cbdd469be7b50756f06d2c` | ECU / ASAP2 Calibration Map Definition |
+| `A2ZJA10P.xml` | **2001–2014** | 24.9 KB | `c3960f473afa366af609d595b80aea88` | ECU / ASAP2 Calibration Map Definition |
+| `A2ZJB10J.xml` | **2001–2014** | 26.3 KB | `e57f9c7f56b149f436a781f9c3922668` | ECU / ASAP2 Calibration Map Definition |
+| `A2ZJB11J.xml` | **2001–2014** | 26.3 KB | `aeb3522ecd6e4f80497ef53617bcb122` | ECU / ASAP2 Calibration Map Definition |
+| `A2ZJC00B.xml` | **2001–2014** | 22.1 KB | `6a8f3d840734b7fa50e5b80f8ba5932e` | ECU / ASAP2 Calibration Map Definition |
+| `A2ZJC00G.xml` | **2001–2014** | 22.1 KB | `f1cecfc4c47ba422dc83ab7114e6e4a5` | ECU / ASAP2 Calibration Map Definition |
+| `A2ZJD00A.xml` | **2001–2014** | 494 B | `261e2a6fb1e39fea25f69271d0532ed2` | ECU / ASAP2 Calibration Map Definition |
+| `A2ZJD00B.xml` | **2001–2014** | 22.1 KB | `a2f421f356c853631ec3e0170798965f` | ECU / ASAP2 Calibration Map Definition |
+| `A2ZJD00G.xml` | **2001–2014** | 495 B | `6f82a8328609fd0a0e62e29a31b85803` | ECU / ASAP2 Calibration Map Definition |
+| `A2ZJD01A.xml` | **2001–2014** | 22.1 KB | `8446fa27a25f1b3d8fef8118749a2d33` | ECU / ASAP2 Calibration Map Definition |
+| `A2ZJD02B.xml` | **2001–2014** | 494 B | `78a38b64bbe1cd38969838942afb8f34` | ECU / ASAP2 Calibration Map Definition |
+| `A2ZJD02G.xml` | **2001–2014** | 22.1 KB | `fbfcf2693dd665aa78e63b9fac38e9d6` | ECU / ASAP2 Calibration Map Definition |
+| `A2ZJE11J.xml` | **2001–2014** | 26.3 KB | `3368f8d2297b868fcd2b91bc7c73e156` | ECU / ASAP2 Calibration Map Definition |
+| `A4RG0500.xml` | **2001–2014** | 456 B | `a994f6cccb8b461b7a15c1c52407df32` | ECU / ASAP2 Calibration Map Definition |
+| `A4RG050N.xml` | **2001–2014** | 456 B | `ad6771340139cb20f496359ae1649919` | ECU / ASAP2 Calibration Map Definition |
+| `A4RG050R.xml` | **2001–2014** | 456 B | `fe755689d9d17bfbf4ab73029cecc420` | ECU / ASAP2 Calibration Map Definition |
+| `A4RG051N.xml` | **2001–2014** | 456 B | `d09af23aa5b8802e5aa4e147438291db` | ECU / ASAP2 Calibration Map Definition |
+| `A4RG052N.xml` | **2001–2014** | 31.1 KB | `c47f805ce77557a0d0596c655c288b2a` | ECU / ASAP2 Calibration Map Definition |
+| `A4RG060P.xml` | **2001–2014** | 676 B | `a84358bd5393abf82fd493251a6e4019` | ECU / ASAP2 Calibration Map Definition |
+| `A4RG060Q.xml` | **2001–2014** | 28.1 KB | `c68fe12379f83d592b37b01c76c41599` | ECU / ASAP2 Calibration Map Definition |
+| `A4RI200I.xml` | **2001–2014** | 30.0 KB | `3e94b947a01e8b32ddeb444d99d147a1` | ECU / ASAP2 Calibration Map Definition |
+| `A4RI300I.xml` | **2001–2014** | 3.7 KB | `eb41d1ca9c813c05457e34b950e3fc24` | ECU / ASAP2 Calibration Map Definition |
+| `A4RI401I.xml` | **2001–2014** | 3.7 KB | `82f71e277ea21e5968df2a8d982188de` | ECU / ASAP2 Calibration Map Definition |
+| `A4RL100J.xml` | **2001–2014** | 27.8 KB | `cde9bf3d05a6bd824927c16f3a90b79b` | ECU / ASAP2 Calibration Map Definition |
+| `A4RL100K.xml` | **2001–2014** | 457 B | `5da4a57e5dc30a70b8177cc9110640e0` | ECU / ASAP2 Calibration Map Definition |
+| `A4RM000H.xml` | **2001–2014** | 453 B | `574e9a90c9e678a5cb822cda1e75e033` | ECU / ASAP2 Calibration Map Definition |
+| `A4RM100F.xml` | **2001–2014** | 27.7 KB | `6ada25d8f9635e6058edaf489900e203` | ECU / ASAP2 Calibration Map Definition |
+| `A4RM100G.xml` | **2001–2014** | 783 B | `e0bcd8fc2feb78b42e2b2c0c7c40bfdc` | ECU / ASAP2 Calibration Map Definition |
+| `A4RM100H.xml` | **2001–2014** | 27.8 KB | `79d620998aa70f07594f018df56ed849` | ECU / ASAP2 Calibration Map Definition |
+| `A4RM200K.xml` | **2001–2014** | 28.4 KB | `b8a549fd36aad8773ad0b0155ea90803` | ECU / ASAP2 Calibration Map Definition |
+| `A4RN1000.xml` | **2001–2014** | 988 B | `9c1e56d91c878b1d7bafdfd08dc82d58` | ECU / ASAP2 Calibration Map Definition |
+| `A4RN2000.xml` | **2000** | 450 B | `218cd7085f50252c5b9cd845b0400528` | ECU / ASAP2 Calibration Map Definition |
+| `A4RN200H.xml` | **2001–2014** | 27.8 KB | `9fec55e44b0af29e662fd249daa2202d` | ECU / ASAP2 Calibration Map Definition |
+| `A4RN300G.xml` | **2001–2014** | 28.5 KB | `88a9eb9298913391db494a18c08fbf27` | ECU / ASAP2 Calibration Map Definition |
+| `A4RN300I.xml` | **2001–2014** | 783 B | `cab0e7c36525a635129f61afa0d403f4` | ECU / ASAP2 Calibration Map Definition |
+| `A4SD501A.xml` | **2001–2014** | 29.7 KB | `27bc68006825874187deca3773aee266` | ECU / ASAP2 Calibration Map Definition |
+| `A4SD600B.xml` | **2001–2014** | 29.8 KB | `4bea385cad9a403b0b45cd9ed313998e` | ECU / ASAP2 Calibration Map Definition |
+| `A4SD700B.xml` | **2001–2014** | 29.8 KB | `d50e748b379a69f7a9547ca4af5219fe` | ECU / ASAP2 Calibration Map Definition |
+| `A4SD800A.xml` | **2001–2014** | 2.2 KB | `9bc1c137c377bca647d880bfe486f9c7` | ECU / ASAP2 Calibration Map Definition |
+| `A4SD800B.xml` | **2001–2014** | 2.0 KB | `22b9b51f03e21193e11469e3369c3946` | ECU / ASAP2 Calibration Map Definition |
+| `A4SD900A.xml` | **2001–2014** | 739 B | `125df9df82aebc0f1ef9f0bf542f9faa` | ECU / ASAP2 Calibration Map Definition |
+| `A4SD900B.xml` | **2001–2014** | 29.8 KB | `dc24aa01bf3042bedd73948a79cd8b96` | ECU / ASAP2 Calibration Map Definition |
+| `A4SDA00P.xml` | **2001–2014** | 568 B | `145f4a45364af7699c7000eeab697393` | ECU / ASAP2 Calibration Map Definition |
+| `A4SDA00Q.xml` | **2001–2014** | 456 B | `0b04718ac8844ac10701af33ebefe97f` | ECU / ASAP2 Calibration Map Definition |
+| `A4SDA01B.xml` | **2001–2014** | 456 B | `ebcd470828accb02ab55e547c63dae3b` | ECU / ASAP2 Calibration Map Definition |
+| `A4SDA01Q.xml` | **2001–2014** | 29.8 KB | `282b3e55fc6239c23bdccbbaaeecf820` | ECU / ASAP2 Calibration Map Definition |
+| `A4SE300D.xml` | **1987–1993** | 28.0 KB | `f7ce744af8a90bc9aa13840a87d6e3f0` | ECU / ASAP2 Calibration Map Definition |
+| `A4SE700D.xml` | **2001–2014** | 27.7 KB | `0b0c599d48e7be3e947bb5a2e8e1620f` | ECU / ASAP2 Calibration Map Definition |
+| `A4SE700E.xml` | **2001–2014** | 27.6 KB | `b759e918feb12f93895e64fea1978742` | ECU / ASAP2 Calibration Map Definition |
+| `A4SE700F.xml` | **2001–2014** | 27.3 KB | `679edf5f92c49428046180f7ce5c685b` | ECU / ASAP2 Calibration Map Definition |
+| `A4SE700I.xml` | **2001–2014** | 27.4 KB | `67ae7a04831e3d7fb5625c066d36b5e8` | ECU / ASAP2 Calibration Map Definition |
+| `A4SE700J.xml` | **2001–2014** | 460 B | `180f5f6d8a8952c2f6dcf5e20461d79f` | ECU / ASAP2 Calibration Map Definition |
+| `A4SE900D.xml` | **2006–2013** | 27.7 KB | `2f18549c5f5c8c120cc8a9ec25335a13` | ECU / ASAP2 Calibration Map Definition |
+| `A4SE900I.xml` | **2006–2013** | 27.4 KB | `93e4ed8e256b988f2d06fb899f8c1e2b` | ECU / ASAP2 Calibration Map Definition |
+| `A4SG900C.xml` | **2001–2014** | 27.5 KB | `556d8e2d01a05c63c156eed3d72ad7a1` | ECU / ASAP2 Calibration Map Definition |
+| `A4SGA00C.xml` | **2001–2014** | 27.4 KB | `f8c12fd4b70ce22f02d15dd07f878098` | ECU / ASAP2 Calibration Map Definition |
+| `A4SGC00C.xml` | **2001–2014** | 27.4 KB | `cd279385ea964de1e0a490b590487958` | ECU / ASAP2 Calibration Map Definition |
+| `A4SGD10C.xml` | **2001–2014** | 27.4 KB | `445e1f3f5511f423cd9a9fdef74301d6` | ECU / ASAP2 Calibration Map Definition |
+| `A4SGE00C.xml` | **2001–2014** | 899 B | `2cb3ffc201c4c8293eb159fdded5e604` | ECU / ASAP2 Calibration Map Definition |
+| `A4SGE01C.xml` | **2001–2014** | 899 B | `460a3080d8ec9b7b237ea287113f062c` | ECU / ASAP2 Calibration Map Definition |
+| `A4SH701G.xml` | **2001–2014** | 13.9 KB | `df8566a1e0ee1beff969ab28446581be` | ECU / ASAP2 Calibration Map Definition |
+| `A4SH701H.xml` | **2001–2014** | 13.9 KB | `31256941654916702e787ecd40563ad4` | ECU / ASAP2 Calibration Map Definition |
+| `A4SH701K.xml` | **2001–2014** | 13.9 KB | `7d7c56182f997e74b575d2395231e984` | ECU / ASAP2 Calibration Map Definition |
+| `A4SHA10R.xml` | **2001–2014** | 13.9 KB | `217705010dafc697ab9d8bd06c25d640` | ECU / ASAP2 Calibration Map Definition |
+| `A4SHB00G.xml` | **2001–2014** | 13.9 KB | `7fb25ab2ded700573ad5214b6b5e8eb0` | ECU / ASAP2 Calibration Map Definition |
+| `A4SHB00H.xml` | **2001–2014** | 13.9 KB | `1be72c3e58631a23dca88b4d57c9a2f6` | ECU / ASAP2 Calibration Map Definition |
+| `A4SHC00G.xml` | **2001–2014** | 13.9 KB | `52b8d33438743bd57b364bc7b18f5024` | ECU / ASAP2 Calibration Map Definition |
+| `A4SHC01G.xml` | **2001–2014** | 13.9 KB | `5cf22bd2931b2f00ea9049b4aa9cf4a2` | ECU / ASAP2 Calibration Map Definition |
+| `A4TC101K.xml` | **2001–2014** | 2.4 KB | `98a4634a953e705b357c359a0e75ac7f` | ECU / ASAP2 Calibration Map Definition |
+| `A4TC101L.xml` | **2001–2014** | 2.4 KB | `36761c2ed5259c138883f73ff16cb8af` | ECU / ASAP2 Calibration Map Definition |
+| `A4TC300K.xml` | **2001–2014** | 710 B | `73e856043cf2e95deadf3007889ae159` | ECU / ASAP2 Calibration Map Definition |
+| `A4TC300L.xml` | **2001–2014** | 26.3 KB | `5d86cf9393d4d21a07499db449a38c2e` | ECU / ASAP2 Calibration Map Definition |
+| `A4TC400L.xml` | **2001–2014** | 1.0 KB | `9152314dc2c5e3194b5577e292e9723f` | ECU / ASAP2 Calibration Map Definition |
+| `A4TC401L.xml` | **2001–2014** | 1.0 KB | `3b1de20fcdd2cf5e28508a8349c1a1bc` | ECU / ASAP2 Calibration Map Definition |
+| `A4TE0000.xml` | **2001–2014** | 29.0 KB | `9b1cdad2d305508381946e533cd37429` | ECU / ASAP2 Calibration Map Definition |
+| `A4TE000A.xml` | **2001–2014** | 29.0 KB | `d160659bf618c5ca369636b8dc6edd38` | ECU / ASAP2 Calibration Map Definition |
+| `A4TE001B.xml` | **2001–2014** | 453 B | `949d628467916066a1b8b41e72bb591a` | ECU / ASAP2 Calibration Map Definition |
+| `A4TE001G.xml` | **2001–2014** | 27.3 KB | `e5902985a6bccb52e892452a02e1ac2e` | ECU / ASAP2 Calibration Map Definition |
+| `A4TE001I.xml` | **2001–2014** | 29.0 KB | `34d7df01c907d15572860cec36f39fc1` | ECU / ASAP2 Calibration Map Definition |
+| `A4TE002B.xml` | **2001–2014** | 29.1 KB | `dbc1623f5e1f8dcf1133c88d1dfc4bb0` | ECU / ASAP2 Calibration Map Definition |
+| `A4TE002C.xml` | **2001–2014** | 453 B | `cfb1010e40dc7128da282cae090206d9` | ECU / ASAP2 Calibration Map Definition |
+| `A4TE002Q.xml` | **2001–2014** | 29.1 KB | `3c97944778e3892afc0ec893edba265a` | ECU / ASAP2 Calibration Map Definition |
+| `A4TE100G.xml` | **2001–2014** | 2.0 KB | `beff30791ca81f4c791396c3b9c8af93` | ECU / ASAP2 Calibration Map Definition |
+| `A4TE200A.xml` | **2001–2014** | 1.9 KB | `25c034a3e4f92d82ecdc9d8b9b56bde7` | ECU / ASAP2 Calibration Map Definition |
+| `A4TE3000.xml` | **1987–1993** | 518 B | `b5b978031c95838472f09463e6ecf46b` | ECU / ASAP2 Calibration Map Definition |
+| `A4TE300D.xml` | **1987–1993** | 28.0 KB | `3ae58cf848e81707e03f0141b65d0d0f` | ECU / ASAP2 Calibration Map Definition |
+| `A4TF300E.xml` | **2001–2014** | 2.1 KB | `b4592e8b8ffefd61c7da35c74e14d237` | ECU / ASAP2 Calibration Map Definition |
+| `A4TF300F.xml` | **2001–2014** | 2.1 KB | `00103bdaa51f2de92839d0cd12eea808` | ECU / ASAP2 Calibration Map Definition |
+| `A4TF400E.xml` | **2001–2014** | 26.2 KB | `206eac6418e1058bf42332b974d282c3` | ECU / ASAP2 Calibration Map Definition |
+| `A4TF500F.xml` | **2001–2014** | 1.9 KB | `5809ceeb8321f7399b944ed12a16e24c` | ECU / ASAP2 Calibration Map Definition |
+| `A4TF510E.xml` | **2001–2014** | 2.0 KB | `c20fe427888b4e9d8ae6047941426943` | ECU / ASAP2 Calibration Map Definition |
+| `A4TF510F.xml` | **2001–2014** | 2.0 KB | `dec54456361d73d844856b5cb138185f` | ECU / ASAP2 Calibration Map Definition |
+| `A4TF520F.xml` | **2001–2014** | 26.2 KB | `9479499452050b67897ce89fb1362169` | ECU / ASAP2 Calibration Map Definition |
+| `A4TF7000.xml` | **2001–2014** | 2.8 KB | `f61399d0953103a64c634fa69e41673a` | ECU / ASAP2 Calibration Map Definition |
+| `A4TF800E.xml` | **2014–2020** | 2.0 KB | `57ac926b945616e486721174965e55a4` | ECU / ASAP2 Calibration Map Definition |
+| `A4TF800F.xml` | **2014–2020** | 26.6 KB | `37f575433a2042aabb4b30c320fa2b3a` | ECU / ASAP2 Calibration Map Definition |
+| `A4TF810F.xml` | **2001–2014** | 26.6 KB | `77b3621f87becce6db86be47afee5ccb` | ECU / ASAP2 Calibration Map Definition |
+| `A4TH000N.xml` | **2001–2014** | 29.2 KB | `2abb3ec2a4d2ce05f869c38e8297467f` | ECU / ASAP2 Calibration Map Definition |
+| `A4TH000O.xml` | **2001–2014** | 1.9 KB | `6f44c1bf7a5d90a0b8877c96e76f5a80` | ECU / ASAP2 Calibration Map Definition |
+| `A4TH100H.xml` | **2001–2014** | 29.1 KB | `9bf85caad72cb1394755deeef718f9a0` | ECU / ASAP2 Calibration Map Definition |
+| `A4TH100L.xml` | **2001–2014** | 453 B | `da5b671a19c2bdc4613700bf02fab85d` | ECU / ASAP2 Calibration Map Definition |
+| `A4TJ111B.xml` | **2001–2014** | 453 B | `1cbfea95e57fd655d42b77963f148ba6` | ECU / ASAP2 Calibration Map Definition |
+| `A4TJ111C.xml` | **2001–2014** | 453 B | `6c997d30931f185fe5052b00b1561718` | ECU / ASAP2 Calibration Map Definition |
+| `A4TJ120S.xml` | **2001–2014** | 453 B | `7f6f2e96d5f52766bfbd142d6d2a850e` | ECU / ASAP2 Calibration Map Definition |
+| `A4TJ121B.xml` | **2001–2014** | 453 B | `c6413f6fd1829db792892a7e96c5e3d1` | ECU / ASAP2 Calibration Map Definition |
+| `A4TJ121C.xml` | **2001–2014** | 29.6 KB | `2715eb27958f0a2a0b7d48d78fed1796` | ECU / ASAP2 Calibration Map Definition |
+| `A4TJ121S.xml` | **2001–2014** | 453 B | `2883f622d16d57f539d3b6e6bf27dab2` | ECU / ASAP2 Calibration Map Definition |
+| `A4TJ1X00.xml` | **2001–2014** | 29.4 KB | `5976621f79d32292a478266550782ea1` | ECU / ASAP2 Calibration Map Definition |
+| `A8DG300Z.xml` | **2001–2014** | 25.1 KB | `ce04f969ad4fd0ecb9f1faa094079e6c` | ECU / ASAP2 Calibration Map Definition |
+| `A8DH100F.xml` | **2001–2014** | 25.2 KB | `cc6a9fd1006b3e69cb2c0de0616cee7a` | ECU / ASAP2 Calibration Map Definition |
+| `A8DH100H.xml` | **2001–2014** | 25.4 KB | `b6ae8eec2608c4946d03bbccf69a851c` | ECU / ASAP2 Calibration Map Definition |
+| `A8DH100I.xml` | **2001–2014** | 28.3 KB | `4cf5709c44e8b1328ce6dd44c248f2da` | ECU / ASAP2 Calibration Map Definition |
+| `A8DH100M.xml` | **2001–2014** | 25.2 KB | `d84344d878a3d8bfbf52de83eae473ef` | ECU / ASAP2 Calibration Map Definition |
+| `A8DH100P.xml` | **2001–2014** | 25.4 KB | `8698376ef1d0ac156b5024f3d1c8f36c` | ECU / ASAP2 Calibration Map Definition |
+| `A8DH101D.xml` | **2001–2014** | 28.4 KB | `9493588c94ba5c02ef682d0bf7a25cd8` | ECU / ASAP2 Calibration Map Definition |
+| `A8DH101I.xml` | **2001–2014** | 497 B | `e34e0fdc0f8d5b13cdef475c3ea378ed` | ECU / ASAP2 Calibration Map Definition |
+| `A8DH200O.xml` | **2001–2014** | 25.2 KB | `6b653c69e4fcd2edca97280cb99acbb7` | ECU / ASAP2 Calibration Map Definition |
+| `A8DH200U.xml` | **2001–2014** | 497 B | `93066f47c0f11adc8dffef7e9c781f08` | ECU / ASAP2 Calibration Map Definition |
+| `A8DH200V.xml` | **2001–2014** | 25.2 KB | `b34de8ae89b3d2960fc53e1b3016beec` | ECU / ASAP2 Calibration Map Definition |
+| `A8DH200W.xml` | **2001–2014** | 28.5 KB | `01e753300a6a656d566df2be924fd11d` | ECU / ASAP2 Calibration Map Definition |
+| `A8DH200X.xml` | **2001–2014** | 28.4 KB | `caee5a813949fb9ae64046d4e888fd6c` | ECU / ASAP2 Calibration Map Definition |
+| `A8DH200Y.xml` | **2001–2014** | 25.2 KB | `d657c2fa9fd2576763eda4b64ccf3466` | ECU / ASAP2 Calibration Map Definition |
+| `A8DH200Z.xml` | **2001–2014** | 25.2 KB | `9653176699391e2ae52cc6f1d9cff0ab` | ECU / ASAP2 Calibration Map Definition |
+| `A8DH201X.xml` | **2001–2014** | 497 B | `21e5f6d21f879f2ce7e7fc777a4e737a` | ECU / ASAP2 Calibration Map Definition |
+| `A8DH202X.xml` | **2001–2014** | 497 B | `109077ad32e10f66308005630af0e059` | ECU / ASAP2 Calibration Map Definition |
+| `A8DK100D.xml` | **2001–2014** | 28.5 KB | `fd330f53a7ce7978f54a2c095698db64` | ECU / ASAP2 Calibration Map Definition |
+| `A8DK100E.xml` | **2001–2014** | 1.7 KB | `79c2a727b88eee12f1c607ff8d073bad` | ECU / ASAP2 Calibration Map Definition |
+| `A8DK100F.xml` | **2001–2014** | 25.3 KB | `d8e7444c2a941738c67e236ecb1f8ea1` | ECU / ASAP2 Calibration Map Definition |
+| `A8DK100H.xml` | **2001–2014** | 25.5 KB | `b3ed28be9d5844afe6d662181ebf93d9` | ECU / ASAP2 Calibration Map Definition |
+| `A8DK100I.xml` | **2001–2014** | 28.4 KB | `41d36a305e211b9d182668cb645decad` | ECU / ASAP2 Calibration Map Definition |
+| `A8DK100K.xml` | **2001–2014** | 496 B | `982a70853849b5c03369b7257195fd6f` | ECU / ASAP2 Calibration Map Definition |
+| `A8DK100L.xml` | **2001–2014** | 496 B | `f77fc329487063ac0f509568d4567644` | ECU / ASAP2 Calibration Map Definition |
+| `A8DK100M.xml` | **2001–2014** | 25.3 KB | `a8b9e097be22ec0b48b1ec5ed5e44a52` | ECU / ASAP2 Calibration Map Definition |
+| `A8DK100O.xml` | **2001–2014** | 25.4 KB | `68e8ce57f2178de7befbd1dcc768d497` | ECU / ASAP2 Calibration Map Definition |
+| `A8DK100P.xml` | **2001–2014** | 25.5 KB | `50e07858ad2cef8ebe97bd12d6e828d6` | ECU / ASAP2 Calibration Map Definition |
+| `A8DK100U.xml` | **2001–2014** | 568 B | `6563da622cff76fd5849041fc78497cd` | ECU / ASAP2 Calibration Map Definition |
+| `A8DK100V.xml` | **2001–2014** | 25.4 KB | `fdf0eb616d094a8332939655bb5f52ca` | ECU / ASAP2 Calibration Map Definition |
+| `A8DK100W.xml` | **2001–2014** | 28.7 KB | `94910e13c00e1aedd293979bcb377064` | ECU / ASAP2 Calibration Map Definition |
+| `A8DK100X.xml` | **2001–2014** | 28.6 KB | `04ac4ebf41def9215198d6a158a8abfa` | ECU / ASAP2 Calibration Map Definition |
+| `A8DK100Y.xml` | **2001–2014** | 25.4 KB | `bbfccec74c07da0d16732587c2ff9078` | ECU / ASAP2 Calibration Map Definition |
+| `A8DK100Z.xml` | **2001–2014** | 25.4 KB | `7de15ae88cc5dd5cb3e8293a2928fd45` | ECU / ASAP2 Calibration Map Definition |
+| `A8DK101X.xml` | **2001–2014** | 497 B | `7abd188558e9be1eb36fee3a20dddda4` | ECU / ASAP2 Calibration Map Definition |
+| `AE5F301D.xml` | **2001–2014** | 28.3 KB | `8f19598389c58261903c2c92f34a85bb` | ECU / ASAP2 Calibration Map Definition |
+| `AZ1E400C.xml` | **2001–2014** | 27.7 KB | `2af07c76fb712c344b29ea87a6ee1397` | ECU / ASAP2 Calibration Map Definition |
+| `AZ1E400E.xml` | **2001–2014** | 27.5 KB | `fda886bade7910cf8f4215704b152fa9` | ECU / ASAP2 Calibration Map Definition |
+| `AZ1E400U.xml` | **2001–2014** | 809 B | `6bc7d3508780bc1b45a905404b96745e` | ECU / ASAP2 Calibration Map Definition |
+| `AZ1E401A.xml` | **2001–2014** | 30.3 KB | `504e8981419f2f040f3782160f29d592` | ECU / ASAP2 Calibration Map Definition |
+| `AZ1E401B.xml` | **2001–2014** | 30.5 KB | `09572ebd5cbc69c9048df5e426884430` | ECU / ASAP2 Calibration Map Definition |
+| `AZ1G101M.xml` | **2001–2014** | 27.5 KB | `a6b01c9458a14ec39831b726f3301513` | ECU / ASAP2 Calibration Map Definition |
+| `AZ1G101N.xml` | **2001–2014** | 27.7 KB | `21d89a7c19eeeded2bf53c70195834bf` | ECU / ASAP2 Calibration Map Definition |
+| `AZ1G101R.xml` | **2001–2014** | 30.6 KB | `74bca08e20a9dd281c20e1fcbb22cd2e` | ECU / ASAP2 Calibration Map Definition |
+| `AZ1G105L.xml` | **2001–2014** | 28.3 KB | `d06ddcf0e6cbbe53d3673c23f3955e6e` | ECU / ASAP2 Calibration Map Definition |
+| `AZ1G200J.xml` | **2001–2014** | 28.4 KB | `c741beaf42074fdfba89b654d0b35592` | ECU / ASAP2 Calibration Map Definition |
+| `AZ1G201G.xml` | **2001–2014** | 28.7 KB | `c25678f7eb576a9fdcdd6383884b94c3` | ECU / ASAP2 Calibration Map Definition |
+| `AZ1G201I.xml` | **2001–2014** | 33.0 KB | `a325ddea44fd234f2396a95fb4fd9ea5` | ECU / ASAP2 Calibration Map Definition |
+| `AZ1G202G.xml` | **2001–2014** | 500 B | `b66ddf6a773c099c5a284a6b64e33d7e` | ECU / ASAP2 Calibration Map Definition |
+| `AZ1G202I.xml` | **2001–2014** | 504 B | `91255751c2c1400bcfa1f4b9e9273245` | ECU / ASAP2 Calibration Map Definition |
+| `AZ1G300F.xml` | **2001–2014** | 28.7 KB | `5fd3ecca2f2eb5962dadb3da4cb1eca6` | ECU / ASAP2 Calibration Map Definition |
+| `AZ1G301F.xml` | **2001–2014** | 500 B | `642d8a616891ede30bcb003e0eeb376e` | ECU / ASAP2 Calibration Map Definition |
+| `AZ1G400U.xml` | **2001–2014** | 27.7 KB | `8113d39fe81509a836085bd0a9e9e0b5` | ECU / ASAP2 Calibration Map Definition |
+| `AZ1G400W.xml` | **2001–2014** | 27.6 KB | `6d9a9edae8f5d7c3024bf5d1a5edfd16` | ECU / ASAP2 Calibration Map Definition |
+| `AZ1G400X.xml` | **2001–2014** | 27.5 KB | `62d2b5499c3a1a29cebc086a04af51c4` | ECU / ASAP2 Calibration Map Definition |
+| `AZ1G401V.xml` | **2001–2014** | 30.6 KB | `085fab7a59e7ad9d892737066a4d7d61` | ECU / ASAP2 Calibration Map Definition |
+| `AZ1G500F.xml` | **2001–2014** | 28.9 KB | `39459b5deac3b171abeb407c88e93ff6` | ECU / ASAP2 Calibration Map Definition |
+| `AZ1G502L.xml` | **2001–2014** | 29.1 KB | `6b3e9063ff9cd504dec0ddd14ad16108` | ECU / ASAP2 Calibration Map Definition |
+| `AZ1G701I.xml` | **2001–2014** | 32.9 KB | `b84d9849e8ea9c536145910fce8b9cbf` | ECU / ASAP2 Calibration Map Definition |
+| `AZ1H101W.xml` | **2001–2014** | 28.1 KB | `329f53521069ffd6ae90d58f267137ad` | ECU / ASAP2 Calibration Map Definition |
+| `AZ1H102W.xml` | **2001–2014** | 500 B | `55f457585f11b871f218395ce2a7c6fe` | ECU / ASAP2 Calibration Map Definition |
+| `D0XJ001M.xml` | **2001–2014** | 19.9 KB | `38398124c30d4cdd4583b9f1fcfc1325` | ECU / ASAP2 Calibration Map Definition |
+| `D0XJ001R.xml` | **2001–2014** | 20.4 KB | `b95e2e2d247531f23f5c9cdca2b8321e` | ECU / ASAP2 Calibration Map Definition |
+| `D0XJ001T.xml` | **2001–2014** | 19.7 KB | `d2a583f2e829285a42d4cf591179cd1e` | ECU / ASAP2 Calibration Map Definition |
+| `D0XJ002B.xml` | **2001–2014** | 22.9 KB | `901869b702632c9912f09a3850e9ae78` | ECU / ASAP2 Calibration Map Definition |
+| `D2TB201R.xml` | **2001–2014** | 21.0 KB | `64748b70dced410e79941d670a789043` | ECU / ASAP2 Calibration Map Definition |
+| `D2TC001P.xml` | **2001–2014** | 23.6 KB | `586198d928700ea1aab70c6383922c31` | ECU / ASAP2 Calibration Map Definition |
+| `D2UG101B.xml` | **2001–2014** | 22.9 KB | `6d31a52b90b922665ec8fd98f0a3011a` | ECU / ASAP2 Calibration Map Definition |
+| `D2UH001M.xml` | **2001–2014** | 20.2 KB | `ab7014748c433410910893c4f275c4c0` | ECU / ASAP2 Calibration Map Definition |
+| `D2UK001Q.xml` | **2001–2014** | 19.9 KB | `6dd3549df42dc478446d719fcf0f3f1f` | ECU / ASAP2 Calibration Map Definition |
+| `D2WD200A.xml` | **2001–2014** | 18.1 KB | `b816bb309a397f2c0769ef4f084a6603` | ECU / ASAP2 Calibration Map Definition |
+| `D2WD603H.xml` | **2001–2014** | 18.3 KB | `6967455ab99ec9b2e2b975a35120e5de` | ECU / ASAP2 Calibration Map Definition |
+| `D2WD604A.xml` | **2001–2014** | 496 B | `5919975f691e879a6df40818633a41ef` | ECU / ASAP2 Calibration Map Definition |
+| `D2WD610H.xml` | **2001–2014** | 18.1 KB | `833d6afb1d92d754c196a244fb504508` | ECU / ASAP2 Calibration Map Definition |
+| `D2ZU200A.xml` | **2001–2014** | 17.5 KB | `73acf9742f38c3da5dd692089ce3904b` | ECU / ASAP2 Calibration Map Definition |
+| `D2ZZ001E.xml` | **2001–2014** | 19.0 KB | `5f3b503c02af3e967b73469fac7eb47d` | ECU / ASAP2 Calibration Map Definition |
+| `DZ1E402B.xml` | **2001–2014** | 26.1 KB | `39f4751ddbf8257bad72c94023086b01` | ECU / ASAP2 Calibration Map Definition |
+| `DZ1G001F.xml` | **2001–2014** | 24.0 KB | `0facf0b970737a4225eef900d56eb947` | ECU / ASAP2 Calibration Map Definition |
+| `E2SB001K.xml` | **2001–2014** | 24.4 KB | `6a2deef7fe24421793872389e469e023` | ECU / ASAP2 Calibration Map Definition |
+| `E2TB011I.xml` | **2001–2014** | 27.2 KB | `1c46e4a1ff2f62db9f1e8a969dbe1067` | ECU / ASAP2 Calibration Map Definition |
+| `E2TB101Q.xml` | **2001–2014** | 20.6 KB | `6ce147711060b808bbf4bf15a64f0de8` | ECU / ASAP2 Calibration Map Definition |
+| `E2TB102M.xml` | **2001–2014** | 24.7 KB | `daf8463ec97f135208c4749eae8c8ffb` | ECU / ASAP2 Calibration Map Definition |
+| `E2UE101J.xml` | **2001–2014** | 23.2 KB | `5caab816787468874c767ec1351a9465` | ECU / ASAP2 Calibration Map Definition |
+| `E2UE101L.xml` | **2001–2014** | 27.2 KB | `2b2f22840bdb79b56d73f7c4a8f14489` | ECU / ASAP2 Calibration Map Definition |
+| `E2UE102J.xml` | **2001–2014** | 23.2 KB | `7c07365e3efb7dc0a6493ea218060fe1` | ECU / ASAP2 Calibration Map Definition |
+| `E2UE102L.xml` | **2001–2014** | 27.2 KB | `9ed911654279e5be6ae9cd6166483722` | ECU / ASAP2 Calibration Map Definition |
+| `E2UE202L.xml` | **2001–2014** | 27.2 KB | `ac6ce28ba7de75b1e081d11facffb757` | ECU / ASAP2 Calibration Map Definition |
+| `E2VG211D.xml` | **2001–2014** | 501 B | `62ba548a0ea1c8efa1e6899364c38a93` | ECU / ASAP2 Calibration Map Definition |
+| `E2VG212E.xml` | **2001–2014** | 24.4 KB | `f7e648c6a8f049bad6b96c23b73bd91b` | ECU / ASAP2 Calibration Map Definition |
+| `E2VG221D.xml` | **2001–2014** | 28.5 KB | `a8c6ea19b89f5d53d5b90e0d62eb7300` | ECU / ASAP2 Calibration Map Definition |
+| `E2VG222B.xml` | **2001–2014** | 28.5 KB | `209ec9770285c506902191ed379a6607` | ECU / ASAP2 Calibration Map Definition |
+| `E2VH100C.xml` | **2001–2014** | 28.6 KB | `ac74475f2c05cb52c959c6a26f933fd3` | ECU / ASAP2 Calibration Map Definition |
+| `E2VH101C.xml` | **2001–2014** | 501 B | `b65fcb2a9580f4dc9b0a626b73367c96` | ECU / ASAP2 Calibration Map Definition |
+| `E2VH102C.xml` | **2001–2014** | 28.6 KB | `51b062efa9b2cfb7941a28c33853f5cf` | ECU / ASAP2 Calibration Map Definition |
+| `E2VH111C.xml` | **2001–2014** | 501 B | `bc879b68b9ba56d10fdee8db5115f5a0` | ECU / ASAP2 Calibration Map Definition |
+| `E2VH112C.xml` | **2001–2014** | 501 B | `053c0e631f1932ee2936cdce0e53fb35` | ECU / ASAP2 Calibration Map Definition |
+| `E2VH202C.xml` | **2001–2014** | 28.6 KB | `745087d4b725a16384ecca400cadb9c5` | ECU / ASAP2 Calibration Map Definition |
+| `E2WD500D.xml` | **2001–2014** | 16.5 KB | `a9b716d0ab227ba484a147512781a7b7` | ECU / ASAP2 Calibration Map Definition |
+| `E2ZD308E.xml` | **2001–2014** | 17.6 KB | `2a70fae6fdc30d04cf0e85fb52bbf175` | ECU / ASAP2 Calibration Map Definition |
+| `E2ZD508C.xml` | **2001–2014** | 17.2 KB | `14b06525faecfb7bcd90b1358d5513c5` | ECU / ASAP2 Calibration Map Definition |
+| `E2ZJ101G.xml` | **2001–2014** | 24.8 KB | `a138d0799be7a9c0784e92d100963da0` | ECU / ASAP2 Calibration Map Definition |
+| `E2ZJ103G.xml` | **2001–2014** | 502 B | `aa11be59b4aeedd72fa2a082ebdecc43` | ECU / ASAP2 Calibration Map Definition |
+| `E2ZJ111G.xml` | **2001–2014** | 24.6 KB | `1ee375b124874bae3baab928e263718e` | ECU / ASAP2 Calibration Map Definition |
+| `E2ZJ113G.xml` | **2001–2014** | 502 B | `a3e1bebf0c827f8d4b76615f3546247a` | ECU / ASAP2 Calibration Map Definition |
+| `E2ZJ121G.xml` | **2001–2014** | 502 B | `84f42736332062ceeabdd2e5ae647b67` | ECU / ASAP2 Calibration Map Definition |
+| `E2ZJ121H.xml` | **2001–2014** | 4.2 KB | `8561da7ef0b8650ca18589f01545025d` | ECU / ASAP2 Calibration Map Definition |
+| `E2ZJ123G.xml` | **2001–2014** | 502 B | `3904920b449a34fd9ae613b666e968d5` | ECU / ASAP2 Calibration Map Definition |
+| `E2ZJ133G.xml` | **2001–2014** | 24.6 KB | `6beda16976a11c6741bfee9796ddf01b` | ECU / ASAP2 Calibration Map Definition |
+| `ECUFlash_subaru_standard_B9_Tribeca_D0XJ002B.xml` | **2001–2014** | 22.9 KB | `901869b702632c9912f09a3850e9ae78` | ECU / ASAP2 Calibration Map Definition |
+| `ECUFlash_subaru_standard_B9_Tribeca_D2UG101B.xml` | **2001–2014** | 22.9 KB | `6d31a52b90b922665ec8fd98f0a3011a` | ECU / ASAP2 Calibration Map Definition |
+| `ECUFlash_subaru_standard_Baja_Turbo_A2WC400K.xml` | **2001–2014** | 25.9 KB | `57c82a0e97710d52b641fe2b5169c146` | ECU / ASAP2 Calibration Map Definition |
+| `ECUFlash_subaru_standard_Baja_Turbo_A2WC500K.xml` | **2001–2014** | 26.2 KB | `7efae8736e462b7fb378ffa3af7474bf` | ECU / ASAP2 Calibration Map Definition |
+| `ECUFlash_subaru_standard_Baja_Turbo_A2WC500L.xml` | **2001–2014** | 26.1 KB | `9a68b3cd2a3545758ad0deda54f0c79c` | ECU / ASAP2 Calibration Map Definition |
+| `ECUFlash_subaru_standard_Baja_Turbo_A2WC501L.xml` | **2001–2014** | 496 B | `0985fd0b5040658b9525153927e66687` | ECU / ASAP2 Calibration Map Definition |
+| `ECUFlash_subaru_standard_Baja_Turbo_A2WF100K.xml` | **2011–2016** | 496 B | `4c3f578597016ac5960c6880e6b469f7` | ECU / ASAP2 Calibration Map Definition |
+| `ECUFlash_subaru_standard_Baja_Turbo_A2WF100L.xml` | **2011–2016** | 26.1 KB | `b9ae31407480a560f4f756a7fc341d87` | ECU / ASAP2 Calibration Map Definition |
+| `ECUFlash_subaru_standard_Baja_Turbo_A2WF101K.xml` | **2011–2016** | 26.2 KB | `6a0c6b841e8096cc8ffe85dfd6997120` | ECU / ASAP2 Calibration Map Definition |
+| `ECUFlash_subaru_standard_Baja_Turbo_A2WF101L.xml` | **2011–2016** | 496 B | `08ffbdb57a14ad715ea4b93ee142c837` | ECU / ASAP2 Calibration Map Definition |
+| `ECUFlash_subaru_standard_Baja_Turbo_A2ZJ500K.xml` | **2001–2014** | 25.1 KB | `1af950e8475d395c23e4cc68c1203a15` | ECU / ASAP2 Calibration Map Definition |
+| `ECUFlash_subaru_standard_Baja_Turbo_A2ZJ500L.xml` | **2001–2014** | 25.0 KB | `3c0e410d3597a1d4e4ac272920f887ed` | ECU / ASAP2 Calibration Map Definition |
+| `ECUFlash_subaru_standard_Bases_16BITBASE.xml` | **2001–2014** | 360.1 KB | `baa08af3550385dc3bd710aacf81cac5` | ECU / ASAP2 Calibration Map Definition |
+| `ECUFlash_subaru_standard_Bases_32BITBASE.xml` | **2001–2014** | 490.5 KB | `0144299bcbb2069a467b28b4d8ee36de` | ECU / ASAP2 Calibration Map Definition |
+| `ECUFlash_subaru_standard_Exiga_2.0GT_AZ1H102W.xml` | **2001–2014** | 500 B | `55f457585f11b871f218395ce2a7c6fe` | ECU / ASAP2 Calibration Map Definition |
+| `ECUFlash_subaru_standard_Exiga_2.0i_E2TB101Q.xml` | **2001–2014** | 20.6 KB | `6ce147711060b808bbf4bf15a64f0de8` | ECU / ASAP2 Calibration Map Definition |
+| `ECUFlash_subaru_standard_Forester_2.5_E2TB011I.xml` | **2001–2014** | 27.2 KB | `1c46e4a1ff2f62db9f1e8a969dbe1067` | ECU / ASAP2 Calibration Map Definition |
+| `ECUFlash_subaru_standard_Forester_2.5_E2UE101J.xml` | **2001–2014** | 23.2 KB | `5caab816787468874c767ec1351a9465` | ECU / ASAP2 Calibration Map Definition |
+| `ECUFlash_subaru_standard_Forester_2.5_E2UE102J.xml` | **2001–2014** | 23.2 KB | `7c07365e3efb7dc0a6493ea218060fe1` | ECU / ASAP2 Calibration Map Definition |
+| `ECUFlash_subaru_standard_Forester_2.5_E2VG211D.xml` | **2001–2014** | 501 B | `62ba548a0ea1c8efa1e6899364c38a93` | ECU / ASAP2 Calibration Map Definition |
+| `ECUFlash_subaru_standard_Forester_2.5_E2VG212E.xml` | **2001–2014** | 24.4 KB | `f7e648c6a8f049bad6b96c23b73bd91b` | ECU / ASAP2 Calibration Map Definition |
+| `ECUFlash_subaru_standard_Forester_2.5_E2VG221D.xml` | **2001–2014** | 28.5 KB | `a8c6ea19b89f5d53d5b90e0d62eb7300` | ECU / ASAP2 Calibration Map Definition |
+| `ECUFlash_subaru_standard_Forester_2.5_E2ZJ121H.xml` | **2001–2014** | 4.2 KB | `8561da7ef0b8650ca18589f01545025d` | ECU / ASAP2 Calibration Map Definition |
+| `ECUFlash_subaru_standard_Forester_2.5_EZ1G107M.xml` | **2001–2014** | 22.5 KB | `e25468233a03fc51a3c211eed3abc1fa` | ECU / ASAP2 Calibration Map Definition |
+| `ECUFlash_subaru_standard_Forester_2.5_EZ1G109K.xml` | **2001–2014** | 25.1 KB | `8d9c069411b9fc0d57b78256f7669eb0` | ECU / ASAP2 Calibration Map Definition |
+| `ECUFlash_subaru_standard_Forester_STi_A2WA20  .xml` | **2001–2014** | 21.4 KB | `d0d7a29d8be5b4e0094ba35a44267119` | ECU / ASAP2 Calibration Map Definition |
+| `ECUFlash_subaru_standard_Forester_STi_A2WC000E.xml` | **2001–2014** | 21.5 KB | `811c8d8a279d9aeb780ab044f7b7b6ce` | ECU / ASAP2 Calibration Map Definition |
+| `ECUFlash_subaru_standard_Forester_STi_A2WC011E.xml` | **2001–2014** | 500 B | `a6039267cc33774cc799f656d918fea4` | ECU / ASAP2 Calibration Map Definition |
+| `ECUFlash_subaru_standard_Forester_STi_A2WC012E.xml` | **2001–2014** | 21.5 KB | `405da9da1443b4a2cb9d3663878047cb` | ECU / ASAP2 Calibration Map Definition |
+| `ECUFlash_subaru_standard_Forester_STi_A2WC013E.xml` | **2001–2014** | 500 B | `5cf71d8334ebd9c35d953f1c3145cc38` | ECU / ASAP2 Calibration Map Definition |
+| `ECUFlash_subaru_standard_Forester_Turbo_A4RI200I.xml` | **2001–2014** | 30.0 KB | `3e94b947a01e8b32ddeb444d99d147a1` | ECU / ASAP2 Calibration Map Definition |
+| `ECUFlash_subaru_standard_Forester_Turbo_A4RI300I.xml` | **2001–2014** | 3.7 KB | `eb41d1ca9c813c05457e34b950e3fc24` | ECU / ASAP2 Calibration Map Definition |
+| `ECUFlash_subaru_standard_Forester_Turbo_A4RI401I.xml` | **2001–2014** | 3.7 KB | `82f71e277ea21e5968df2a8d982188de` | ECU / ASAP2 Calibration Map Definition |
+| `ECUFlash_subaru_standard_Forester_Turbo_A4RL100J.xml` | **2001–2014** | 27.8 KB | `cde9bf3d05a6bd824927c16f3a90b79b` | ECU / ASAP2 Calibration Map Definition |
+| `ECUFlash_subaru_standard_Forester_Turbo_A4RL100K.xml` | **2001–2014** | 457 B | `5da4a57e5dc30a70b8177cc9110640e0` | ECU / ASAP2 Calibration Map Definition |
+| `ECUFlash_subaru_standard_Forester_Turbo_A4SE700E.xml` | **2001–2014** | 27.6 KB | `b759e918feb12f93895e64fea1978742` | ECU / ASAP2 Calibration Map Definition |
+| `ECUFlash_subaru_standard_Forester_Turbo_A4SE700F.xml` | **2001–2014** | 27.3 KB | `679edf5f92c49428046180f7ce5c685b` | ECU / ASAP2 Calibration Map Definition |
+| `ECUFlash_subaru_standard_Forester_Turbo_A4SE700J.xml` | **2001–2014** | 460 B | `180f5f6d8a8952c2f6dcf5e20461d79f` | ECU / ASAP2 Calibration Map Definition |
+| `ECUFlash_subaru_standard_Forester_XT_A2WC400D.xml` | **2001–2014** | 25.8 KB | `b373fe57ac4589319645f6654d5f12f3` | ECU / ASAP2 Calibration Map Definition |
+| `ECUFlash_subaru_standard_Forester_XT_A2WC400H.xml` | **2001–2014** | 22.4 KB | `785e81d34d9a26fc97dd168a977946a6` | ECU / ASAP2 Calibration Map Definition |
+| `ECUFlash_subaru_standard_Forester_XT_A2WC400I.xml` | **2001–2014** | 25.7 KB | `26af6017d28a0c3a08253bd34432e71a` | ECU / ASAP2 Calibration Map Definition |
+| `ECUFlash_subaru_standard_Forester_XT_A2WC400M.xml` | **2001–2014** | 22.3 KB | `e5f1823a4c6e8cfa3b16ee224a03e784` | ECU / ASAP2 Calibration Map Definition |
+| `ECUFlash_subaru_standard_Forester_XT_A2WC401F.xml` | **2001–2014** | 23.1 KB | `663cf1ba42c5385fb12aa29d5d346678` | ECU / ASAP2 Calibration Map Definition |
+| `ECUFlash_subaru_standard_Forester_XT_A2WC410D.xml` | **2001–2014** | 25.6 KB | `da3cb7b614136f9c1db508a4395c3cba` | ECU / ASAP2 Calibration Map Definition |
+| `ECUFlash_subaru_standard_Forester_XT_A2WC410I.xml` | **2001–2014** | 25.5 KB | `47151189fdbe9553100af2de13e5d7b8` | ECU / ASAP2 Calibration Map Definition |
+| `ECUFlash_subaru_standard_Forester_XT_A2WC411I.xml` | **2001–2014** | 497 B | `311136009a35a4e3c26c837ae7ced576` | ECU / ASAP2 Calibration Map Definition |
+| `ECUFlash_subaru_standard_Forester_XT_A2WC412D.xml` | **2001–2014** | 25.6 KB | `e4d89b3520fc40625eb5b348d1141cff` | ECU / ASAP2 Calibration Map Definition |
+| `ECUFlash_subaru_standard_Forester_XT_A2WC412I.xml` | **2001–2014** | 7.0 KB | `4ec7fa62b9b44a27ca52bbaf58a694fa` | ECU / ASAP2 Calibration Map Definition |
+| `ECUFlash_subaru_standard_Forester_XT_A2WC420F.xml` | **2001–2014** | 23.1 KB | `23379015ae2d0dc4ec336c67e239ef8c` | ECU / ASAP2 Calibration Map Definition |
+| `ECUFlash_subaru_standard_Forester_XT_A2WC420M.xml` | **2001–2014** | 22.3 KB | `05a1a93dc2fba63850ad2df1a3f200a6` | ECU / ASAP2 Calibration Map Definition |
+| `ECUFlash_subaru_standard_Forester_XT_A2ZJ201D.xml` | **2001–2014** | 25.0 KB | `7fe4295bc0b748a62a4afc40999f84f2` | ECU / ASAP2 Calibration Map Definition |
+| `ECUFlash_subaru_standard_Forester_XT_A2ZJ500F.xml` | **2001–2014** | 25.5 KB | `6920a736126b919f90f1a828447a73ae` | ECU / ASAP2 Calibration Map Definition |
+| `ECUFlash_subaru_standard_Forester_XT_A2ZJ500H.xml` | **2001–2014** | 21.3 KB | `8d9cbd0d2d7da7b256e8e6514a7c5799` | ECU / ASAP2 Calibration Map Definition |
+| `ECUFlash_subaru_standard_Forester_XT_A2ZJ500I.xml` | **2001–2014** | 24.9 KB | `75a4cc11f463ae5cb689caa0b919c2b4` | ECU / ASAP2 Calibration Map Definition |
+| `ECUFlash_subaru_standard_Forester_XT_A2ZJ500M.xml` | **2001–2014** | 21.2 KB | `b55f2a6ade2aa8a3bdc9b198cbf2d45e` | ECU / ASAP2 Calibration Map Definition |
+| `ECUFlash_subaru_standard_Forester_XT_A2ZJ512I.xml` | **2001–2014** | 24.9 KB | `7800e81a55ef3b6fe893e75637fb5824` | ECU / ASAP2 Calibration Map Definition |
+| `ECUFlash_subaru_standard_Forester_XT_A2ZJA00P.xml` | **2001–2014** | 24.9 KB | `d238d5fadc21851b5d0a2eb921e1d5a4` | ECU / ASAP2 Calibration Map Definition |
+| `ECUFlash_subaru_standard_Forester_XT_A2ZJA00Q.xml` | **2001–2014** | 500 B | `70b7019c58cbdd469be7b50756f06d2c` | ECU / ASAP2 Calibration Map Definition |
+| `ECUFlash_subaru_standard_Forester_XT_A2ZJA10P.xml` | **2001–2014** | 24.9 KB | `c3960f473afa366af609d595b80aea88` | ECU / ASAP2 Calibration Map Definition |
+| `ECUFlash_subaru_standard_Forester_XT_A8DH100F.xml` | **2001–2014** | 25.2 KB | `cc6a9fd1006b3e69cb2c0de0616cee7a` | ECU / ASAP2 Calibration Map Definition |
+| `ECUFlash_subaru_standard_Forester_XT_A8DH100H.xml` | **2001–2014** | 25.4 KB | `b6ae8eec2608c4946d03bbccf69a851c` | ECU / ASAP2 Calibration Map Definition |
+| `ECUFlash_subaru_standard_Forester_XT_A8DH100I.xml` | **2001–2014** | 28.3 KB | `4cf5709c44e8b1328ce6dd44c248f2da` | ECU / ASAP2 Calibration Map Definition |
+| `ECUFlash_subaru_standard_Forester_XT_A8DH100M.xml` | **2001–2014** | 25.2 KB | `d84344d878a3d8bfbf52de83eae473ef` | ECU / ASAP2 Calibration Map Definition |
+| `ECUFlash_subaru_standard_Forester_XT_A8DH100P.xml` | **2001–2014** | 25.4 KB | `8698376ef1d0ac156b5024f3d1c8f36c` | ECU / ASAP2 Calibration Map Definition |
+| `ECUFlash_subaru_standard_Forester_XT_A8DH101D.xml` | **2001–2014** | 28.4 KB | `9493588c94ba5c02ef682d0bf7a25cd8` | ECU / ASAP2 Calibration Map Definition |
+| `ECUFlash_subaru_standard_Forester_XT_A8DH101I.xml` | **2001–2014** | 497 B | `e34e0fdc0f8d5b13cdef475c3ea378ed` | ECU / ASAP2 Calibration Map Definition |
+| `ECUFlash_subaru_standard_Forester_XT_A8DK100D.xml` | **2001–2014** | 28.5 KB | `fd330f53a7ce7978f54a2c095698db64` | ECU / ASAP2 Calibration Map Definition |
+| `ECUFlash_subaru_standard_Forester_XT_A8DK100E.xml` | **2001–2014** | 1.7 KB | `79c2a727b88eee12f1c607ff8d073bad` | ECU / ASAP2 Calibration Map Definition |
+| `ECUFlash_subaru_standard_Forester_XT_A8DK100F.xml` | **2001–2014** | 25.3 KB | `d8e7444c2a941738c67e236ecb1f8ea1` | ECU / ASAP2 Calibration Map Definition |
+| `ECUFlash_subaru_standard_Forester_XT_A8DK100H.xml` | **2001–2014** | 25.5 KB | `b3ed28be9d5844afe6d662181ebf93d9` | ECU / ASAP2 Calibration Map Definition |
+| `ECUFlash_subaru_standard_Forester_XT_A8DK100I.xml` | **2001–2014** | 28.4 KB | `41d36a305e211b9d182668cb645decad` | ECU / ASAP2 Calibration Map Definition |
+| `ECUFlash_subaru_standard_Forester_XT_A8DK100M.xml` | **2001–2014** | 25.3 KB | `a8b9e097be22ec0b48b1ec5ed5e44a52` | ECU / ASAP2 Calibration Map Definition |
+| `ECUFlash_subaru_standard_Forester_XT_A8DK100P.xml` | **2001–2014** | 25.5 KB | `50e07858ad2cef8ebe97bd12d6e828d6` | ECU / ASAP2 Calibration Map Definition |
+| `ECUFlash_subaru_standard_Forester_XT_AZ1G101M.xml` | **2001–2014** | 27.5 KB | `a6b01c9458a14ec39831b726f3301513` | ECU / ASAP2 Calibration Map Definition |
+| `ECUFlash_subaru_standard_Forester_XT_AZ1G101N.xml` | **2001–2014** | 27.7 KB | `21d89a7c19eeeded2bf53c70195834bf` | ECU / ASAP2 Calibration Map Definition |
+| `ECUFlash_subaru_standard_Forester_XT_AZ1G101R.xml` | **2001–2014** | 30.6 KB | `74bca08e20a9dd281c20e1fcbb22cd2e` | ECU / ASAP2 Calibration Map Definition |
+| `ECUFlash_subaru_standard_Forester_XT_AZ1G105L.xml` | **2001–2014** | 28.3 KB | `d06ddcf0e6cbbe53d3673c23f3955e6e` | ECU / ASAP2 Calibration Map Definition |
+| `ECUFlash_subaru_standard_Impreza_2.5RS_E2ZJ101G.xml` | **2001–2014** | 24.8 KB | `a138d0799be7a9c0784e92d100963da0` | ECU / ASAP2 Calibration Map Definition |
+| `ECUFlash_subaru_standard_Impreza_2.5RS_E2ZJ103G.xml` | **2001–2014** | 502 B | `aa11be59b4aeedd72fa2a082ebdecc43` | ECU / ASAP2 Calibration Map Definition |
+| `ECUFlash_subaru_standard_Impreza_2.5RS_E2ZJ111G.xml` | **2001–2014** | 24.6 KB | `1ee375b124874bae3baab928e263718e` | ECU / ASAP2 Calibration Map Definition |
+| `ECUFlash_subaru_standard_Impreza_2.5RS_E2ZJ113G.xml` | **2001–2014** | 502 B | `a3e1bebf0c827f8d4b76615f3546247a` | ECU / ASAP2 Calibration Map Definition |
+| `ECUFlash_subaru_standard_Impreza_2.5RS_E2ZJ121G.xml` | **2001–2014** | 502 B | `84f42736332062ceeabdd2e5ae647b67` | ECU / ASAP2 Calibration Map Definition |
+| `ECUFlash_subaru_standard_Impreza_2.5RS_E2ZJ123G.xml` | **2001–2014** | 502 B | `3904920b449a34fd9ae613b666e968d5` | ECU / ASAP2 Calibration Map Definition |
+| `ECUFlash_subaru_standard_Impreza_2.5RS_E2ZJ133G.xml` | **2001–2014** | 24.6 KB | `6beda16976a11c6741bfee9796ddf01b` | ECU / ASAP2 Calibration Map Definition |
+| `ECUFlash_subaru_standard_Impreza_2.5i_E2UE101L.xml` | **2001–2014** | 27.2 KB | `2b2f22840bdb79b56d73f7c4a8f14489` | ECU / ASAP2 Calibration Map Definition |
+| `ECUFlash_subaru_standard_Impreza_2.5i_E2UE102L.xml` | **2001–2014** | 27.2 KB | `9ed911654279e5be6ae9cd6166483722` | ECU / ASAP2 Calibration Map Definition |
+| `ECUFlash_subaru_standard_Impreza_2.5i_E2UE202L.xml` | **2001–2014** | 27.2 KB | `ac6ce28ba7de75b1e081d11facffb757` | ECU / ASAP2 Calibration Map Definition |
+| `ECUFlash_subaru_standard_Impreza_2.5i_E2VH100C.xml` | **2001–2014** | 28.6 KB | `ac74475f2c05cb52c959c6a26f933fd3` | ECU / ASAP2 Calibration Map Definition |
+| `ECUFlash_subaru_standard_Impreza_2.5i_E2VH101C.xml` | **2001–2014** | 501 B | `b65fcb2a9580f4dc9b0a626b73367c96` | ECU / ASAP2 Calibration Map Definition |
+| `ECUFlash_subaru_standard_Impreza_2.5i_E2VH102C.xml` | **2001–2014** | 28.6 KB | `51b062efa9b2cfb7941a28c33853f5cf` | ECU / ASAP2 Calibration Map Definition |
+| `ECUFlash_subaru_standard_Impreza_2.5i_E2VH111C.xml` | **2001–2014** | 501 B | `bc879b68b9ba56d10fdee8db5115f5a0` | ECU / ASAP2 Calibration Map Definition |
+| `ECUFlash_subaru_standard_Impreza_2.5i_E2VH112C.xml` | **2001–2014** | 501 B | `053c0e631f1932ee2936cdce0e53fb35` | ECU / ASAP2 Calibration Map Definition |
+| `ECUFlash_subaru_standard_Impreza_2.5i_E2VH202C.xml` | **2001–2014** | 28.6 KB | `745087d4b725a16384ecca400cadb9c5` | ECU / ASAP2 Calibration Map Definition |
+| `ECUFlash_subaru_standard_Impreza_2.5i_EZ1E102G.xml` | **2001–2014** | 25.0 KB | `a5da5d69763d9b414228b3f56d1d5eed` | ECU / ASAP2 Calibration Map Definition |
+| `ECUFlash_subaru_standard_Impreza_2.5i_EZ1E102H.xml` | **2001–2014** | 25.1 KB | `649c33679f6cac8258157bb757a1fc7b` | ECU / ASAP2 Calibration Map Definition |
+| `ECUFlash_subaru_standard_Impreza_2.5i_EZ1E401G.xml` | **2001–2014** | 505 B | `25b48fc6ffebfb74107588ee3737865d` | ECU / ASAP2 Calibration Map Definition |
+| `ECUFlash_subaru_standard_Impreza_SGT_A2TB100U.xml` | **2001–2014** | 26.0 KB | `7c24a05dbbdcfb5d6a9fe27d7aeede62` | ECU / ASAP2 Calibration Map Definition |
+| `ECUFlash_subaru_standard_Impreza_SGT_A2TB100V.xml` | **2001–2014** | 26.2 KB | `73126c43c0b51583ac765361d1af6dec` | ECU / ASAP2 Calibration Map Definition |
+| `ECUFlash_subaru_standard_Impreza_SGT_AZ1H101W.xml` | **2001–2014** | 28.1 KB | `329f53521069ffd6ae90d58f267137ad` | ECU / ASAP2 Calibration Map Definition |
+| `ECUFlash_subaru_standard_Impreza_STi_A2UG000J.xml` | **2001–2014** | 31.6 KB | `2fdc45a9801a4fa7678a129ddeaee10d` | ECU / ASAP2 Calibration Map Definition |
+| `ECUFlash_subaru_standard_Impreza_STi_A2UJ000J.xml` | **2001–2014** | 31.6 KB | `1d889d590275095bcd51f59546684454` | ECU / ASAP2 Calibration Map Definition |
+| `ECUFlash_subaru_standard_Impreza_STi_A2ZJ500J.xml` | **2001–2014** | 26.1 KB | `1c246c5e2ac8b68fe2da1277f6b86794` | ECU / ASAP2 Calibration Map Definition |
+| `ECUFlash_subaru_standard_Impreza_STi_A2ZJ700J.xml` | **2001–2014** | 26.1 KB | `c6f79a0986e7921109029bf287fcb179` | ECU / ASAP2 Calibration Map Definition |
+| `ECUFlash_subaru_standard_Impreza_STi_A2ZJ710J.xml` | **2001–2014** | 26.1 KB | `3d93492ac67a08c3816ea14d97376577` | ECU / ASAP2 Calibration Map Definition |
+| `ECUFlash_subaru_standard_Impreza_STi_A2ZJB10J.xml` | **2001–2014** | 26.3 KB | `e57f9c7f56b149f436a781f9c3922668` | ECU / ASAP2 Calibration Map Definition |
+| `ECUFlash_subaru_standard_Impreza_STi_A2ZJB11J.xml` | **2001–2014** | 26.3 KB | `aeb3522ecd6e4f80497ef53617bcb122` | ECU / ASAP2 Calibration Map Definition |
+| `ECUFlash_subaru_standard_Impreza_STi_A2ZJE11J.xml` | **2001–2014** | 26.3 KB | `3368f8d2297b868fcd2b91bc7c73e156` | ECU / ASAP2 Calibration Map Definition |
+| `ECUFlash_subaru_standard_Impreza_STi_A4RG0500.xml` | **2001–2014** | 456 B | `a994f6cccb8b461b7a15c1c52407df32` | ECU / ASAP2 Calibration Map Definition |
+| `ECUFlash_subaru_standard_Impreza_STi_A4RG050N.xml` | **2001–2014** | 456 B | `ad6771340139cb20f496359ae1649919` | ECU / ASAP2 Calibration Map Definition |
+| `ECUFlash_subaru_standard_Impreza_STi_A4RG050R.xml` | **2001–2014** | 456 B | `fe755689d9d17bfbf4ab73029cecc420` | ECU / ASAP2 Calibration Map Definition |
+| `ECUFlash_subaru_standard_Impreza_STi_A4RG051N.xml` | **2001–2014** | 456 B | `d09af23aa5b8802e5aa4e147438291db` | ECU / ASAP2 Calibration Map Definition |
+| `ECUFlash_subaru_standard_Impreza_STi_A4RG052N.xml` | **2001–2014** | 31.1 KB | `c47f805ce77557a0d0596c655c288b2a` | ECU / ASAP2 Calibration Map Definition |
+| `ECUFlash_subaru_standard_Impreza_STi_A4RG060P.xml` | **2001–2014** | 676 B | `a84358bd5393abf82fd493251a6e4019` | ECU / ASAP2 Calibration Map Definition |
+| `ECUFlash_subaru_standard_Impreza_STi_A4RG060Q.xml` | **2001–2014** | 28.1 KB | `c68fe12379f83d592b37b01c76c41599` | ECU / ASAP2 Calibration Map Definition |
+| `ECUFlash_subaru_standard_Impreza_STi_A4RM000H.xml` | **2001–2014** | 453 B | `574e9a90c9e678a5cb822cda1e75e033` | ECU / ASAP2 Calibration Map Definition |
+| `ECUFlash_subaru_standard_Impreza_STi_A4RM100G.xml` | **2001–2014** | 783 B | `e0bcd8fc2feb78b42e2b2c0c7c40bfdc` | ECU / ASAP2 Calibration Map Definition |
+| `ECUFlash_subaru_standard_Impreza_STi_A4RM100H.xml` | **2001–2014** | 27.8 KB | `79d620998aa70f07594f018df56ed849` | ECU / ASAP2 Calibration Map Definition |
+| `ECUFlash_subaru_standard_Impreza_STi_A4RN1000.xml` | **2001–2014** | 988 B | `9c1e56d91c878b1d7bafdfd08dc82d58` | ECU / ASAP2 Calibration Map Definition |
+| `ECUFlash_subaru_standard_Impreza_STi_A4RN2000.xml` | **2000** | 450 B | `218cd7085f50252c5b9cd845b0400528` | ECU / ASAP2 Calibration Map Definition |
+| `ECUFlash_subaru_standard_Impreza_STi_A4RN200H.xml` | **2001–2014** | 27.8 KB | `9fec55e44b0af29e662fd249daa2202d` | ECU / ASAP2 Calibration Map Definition |
+| `ECUFlash_subaru_standard_Impreza_STi_A4RN300G.xml` | **2001–2014** | 28.5 KB | `88a9eb9298913391db494a18c08fbf27` | ECU / ASAP2 Calibration Map Definition |
+| `ECUFlash_subaru_standard_Impreza_STi_A4RN300I.xml` | **2001–2014** | 783 B | `cab0e7c36525a635129f61afa0d403f4` | ECU / ASAP2 Calibration Map Definition |
+| `ECUFlash_subaru_standard_Impreza_STi_A4SD600B.xml` | **2001–2014** | 29.8 KB | `4bea385cad9a403b0b45cd9ed313998e` | ECU / ASAP2 Calibration Map Definition |
+| `ECUFlash_subaru_standard_Impreza_STi_A4SD700B.xml` | **2001–2014** | 29.8 KB | `d50e748b379a69f7a9547ca4af5219fe` | ECU / ASAP2 Calibration Map Definition |
+| `ECUFlash_subaru_standard_Impreza_STi_A4SD800B.xml` | **2001–2014** | 2.0 KB | `22b9b51f03e21193e11469e3369c3946` | ECU / ASAP2 Calibration Map Definition |
+| `ECUFlash_subaru_standard_Impreza_STi_A4SD900B.xml` | **2001–2014** | 29.8 KB | `dc24aa01bf3042bedd73948a79cd8b96` | ECU / ASAP2 Calibration Map Definition |
+| `ECUFlash_subaru_standard_Impreza_STi_A4SDA00P.xml` | **2001–2014** | 568 B | `145f4a45364af7699c7000eeab697393` | ECU / ASAP2 Calibration Map Definition |
+| `ECUFlash_subaru_standard_Impreza_STi_A4SDA00Q.xml` | **2001–2014** | 456 B | `0b04718ac8844ac10701af33ebefe97f` | ECU / ASAP2 Calibration Map Definition |
+| `ECUFlash_subaru_standard_Impreza_STi_A4SDA01B.xml` | **2001–2014** | 456 B | `ebcd470828accb02ab55e547c63dae3b` | ECU / ASAP2 Calibration Map Definition |
+| `ECUFlash_subaru_standard_Impreza_STi_A4SDA01Q.xml` | **2001–2014** | 29.8 KB | `282b3e55fc6239c23bdccbbaaeecf820` | ECU / ASAP2 Calibration Map Definition |
+| `ECUFlash_subaru_standard_Impreza_STi_A4TE001B.xml` | **2001–2014** | 453 B | `949d628467916066a1b8b41e72bb591a` | ECU / ASAP2 Calibration Map Definition |
+| `ECUFlash_subaru_standard_Impreza_STi_A4TE002B.xml` | **2001–2014** | 29.1 KB | `dbc1623f5e1f8dcf1133c88d1dfc4bb0` | ECU / ASAP2 Calibration Map Definition |
+| `ECUFlash_subaru_standard_Impreza_STi_A4TE002C.xml` | **2001–2014** | 453 B | `cfb1010e40dc7128da282cae090206d9` | ECU / ASAP2 Calibration Map Definition |
+| `ECUFlash_subaru_standard_Impreza_STi_A4TE002Q.xml` | **2001–2014** | 29.1 KB | `3c97944778e3892afc0ec893edba265a` | ECU / ASAP2 Calibration Map Definition |
+| `ECUFlash_subaru_standard_Impreza_STi_A4TJ111B.xml` | **2001–2014** | 453 B | `1cbfea95e57fd655d42b77963f148ba6` | ECU / ASAP2 Calibration Map Definition |
+| `ECUFlash_subaru_standard_Impreza_STi_A4TJ111C.xml` | **2001–2014** | 453 B | `6c997d30931f185fe5052b00b1561718` | ECU / ASAP2 Calibration Map Definition |
+| `ECUFlash_subaru_standard_Impreza_STi_A4TJ120S.xml` | **2001–2014** | 453 B | `7f6f2e96d5f52766bfbd142d6d2a850e` | ECU / ASAP2 Calibration Map Definition |
+| `ECUFlash_subaru_standard_Impreza_STi_A4TJ121B.xml` | **2001–2014** | 453 B | `c6413f6fd1829db792892a7e96c5e3d1` | ECU / ASAP2 Calibration Map Definition |
+| `ECUFlash_subaru_standard_Impreza_STi_A4TJ121C.xml` | **2001–2014** | 29.6 KB | `2715eb27958f0a2a0b7d48d78fed1796` | ECU / ASAP2 Calibration Map Definition |
+| `ECUFlash_subaru_standard_Impreza_STi_A4TJ121S.xml` | **2001–2014** | 453 B | `2883f622d16d57f539d3b6e6bf27dab2` | ECU / ASAP2 Calibration Map Definition |
+| `ECUFlash_subaru_standard_Impreza_STi_A4TJ1X00.xml` | **2001–2014** | 29.4 KB | `5976621f79d32292a478266550782ea1` | ECU / ASAP2 Calibration Map Definition |
+| `ECUFlash_subaru_standard_Impreza_STi_A8DG300Z.xml` | **2001–2014** | 25.1 KB | `ce04f969ad4fd0ecb9f1faa094079e6c` | ECU / ASAP2 Calibration Map Definition |
+| `ECUFlash_subaru_standard_Impreza_STi_A8DH200V.xml` | **2001–2014** | 25.2 KB | `b34de8ae89b3d2960fc53e1b3016beec` | ECU / ASAP2 Calibration Map Definition |
+| `ECUFlash_subaru_standard_Impreza_STi_A8DH200Z.xml` | **2001–2014** | 25.2 KB | `9653176699391e2ae52cc6f1d9cff0ab` | ECU / ASAP2 Calibration Map Definition |
+| `ECUFlash_subaru_standard_Impreza_STi_A8DK100V.xml` | **2001–2014** | 25.4 KB | `fdf0eb616d094a8332939655bb5f52ca` | ECU / ASAP2 Calibration Map Definition |
+| `ECUFlash_subaru_standard_Impreza_STi_A8DK100Z.xml` | **2001–2014** | 25.4 KB | `7de15ae88cc5dd5cb3e8293a2928fd45` | ECU / ASAP2 Calibration Map Definition |
+| `ECUFlash_subaru_standard_Impreza_STi_AZ1G200J.xml` | **2001–2014** | 28.4 KB | `c741beaf42074fdfba89b654d0b35592` | ECU / ASAP2 Calibration Map Definition |
+| `ECUFlash_subaru_standard_Impreza_STi_AZ1G201G.xml` | **2001–2014** | 28.7 KB | `c25678f7eb576a9fdcdd6383884b94c3` | ECU / ASAP2 Calibration Map Definition |
+| `ECUFlash_subaru_standard_Impreza_STi_AZ1G201I.xml` | **2001–2014** | 33.0 KB | `a325ddea44fd234f2396a95fb4fd9ea5` | ECU / ASAP2 Calibration Map Definition |
+| `ECUFlash_subaru_standard_Impreza_STi_AZ1G202G.xml` | **2001–2014** | 500 B | `b66ddf6a773c099c5a284a6b64e33d7e` | ECU / ASAP2 Calibration Map Definition |
+| `ECUFlash_subaru_standard_Impreza_STi_AZ1G202I.xml` | **2001–2014** | 504 B | `91255751c2c1400bcfa1f4b9e9273245` | ECU / ASAP2 Calibration Map Definition |
+| `ECUFlash_subaru_standard_Impreza_STi_AZ1G300F.xml` | **2001–2014** | 28.7 KB | `5fd3ecca2f2eb5962dadb3da4cb1eca6` | ECU / ASAP2 Calibration Map Definition |
+| `ECUFlash_subaru_standard_Impreza_STi_AZ1G301F.xml` | **2001–2014** | 500 B | `642d8a616891ede30bcb003e0eeb376e` | ECU / ASAP2 Calibration Map Definition |
+| `ECUFlash_subaru_standard_Impreza_STi_AZ1G500F.xml` | **2001–2014** | 28.9 KB | `39459b5deac3b171abeb407c88e93ff6` | ECU / ASAP2 Calibration Map Definition |
+| `ECUFlash_subaru_standard_Impreza_STi_AZ1G502L.xml` | **2001–2014** | 29.1 KB | `6b3e9063ff9cd504dec0ddd14ad16108` | ECU / ASAP2 Calibration Map Definition |
+| `ECUFlash_subaru_standard_Impreza_STi_AZ1G701I.xml` | **2001–2014** | 32.9 KB | `b84d9849e8ea9c536145910fce8b9cbf` | ECU / ASAP2 Calibration Map Definition |
+| `ECUFlash_subaru_standard_Impreza_STi_Z1G20000.xml` | **2001–2014** | 503 B | `a63e115d323ed7a0b3248e2f8173568b` | ECU / ASAP2 Calibration Map Definition |
+| `ECUFlash_subaru_standard_Impreza_WRX_A4RM100F.xml` | **2001–2014** | 27.7 KB | `6ada25d8f9635e6058edaf489900e203` | ECU / ASAP2 Calibration Map Definition |
+| `ECUFlash_subaru_standard_Impreza_WRX_A4RM200K.xml` | **2001–2014** | 28.4 KB | `b8a549fd36aad8773ad0b0155ea90803` | ECU / ASAP2 Calibration Map Definition |
+| `ECUFlash_subaru_standard_Impreza_WRX_A4SD501A.xml` | **2001–2014** | 29.7 KB | `27bc68006825874187deca3773aee266` | ECU / ASAP2 Calibration Map Definition |
+| `ECUFlash_subaru_standard_Impreza_WRX_A4SD800A.xml` | **2001–2014** | 2.2 KB | `9bc1c137c377bca647d880bfe486f9c7` | ECU / ASAP2 Calibration Map Definition |
+| `ECUFlash_subaru_standard_Impreza_WRX_A4SD900A.xml` | **2001–2014** | 739 B | `125df9df82aebc0f1ef9f0bf542f9faa` | ECU / ASAP2 Calibration Map Definition |
+| `ECUFlash_subaru_standard_Impreza_WRX_A4SE300D.xml` | **1987–1993** | 28.0 KB | `f7ce744af8a90bc9aa13840a87d6e3f0` | ECU / ASAP2 Calibration Map Definition |
+| `ECUFlash_subaru_standard_Impreza_WRX_A4SE700D.xml` | **2001–2014** | 27.7 KB | `0b0c599d48e7be3e947bb5a2e8e1620f` | ECU / ASAP2 Calibration Map Definition |
+| `ECUFlash_subaru_standard_Impreza_WRX_A4SE700I.xml` | **2001–2014** | 27.4 KB | `67ae7a04831e3d7fb5625c066d36b5e8` | ECU / ASAP2 Calibration Map Definition |
+| `ECUFlash_subaru_standard_Impreza_WRX_A4SE900D.xml` | **2006–2013** | 27.7 KB | `2f18549c5f5c8c120cc8a9ec25335a13` | ECU / ASAP2 Calibration Map Definition |
+| `ECUFlash_subaru_standard_Impreza_WRX_A4SE900I.xml` | **2006–2013** | 27.4 KB | `93e4ed8e256b988f2d06fb899f8c1e2b` | ECU / ASAP2 Calibration Map Definition |
+| `ECUFlash_subaru_standard_Impreza_WRX_A4SG900C.xml` | **2001–2014** | 27.5 KB | `556d8e2d01a05c63c156eed3d72ad7a1` | ECU / ASAP2 Calibration Map Definition |
+| `ECUFlash_subaru_standard_Impreza_WRX_A4SGA00C.xml` | **2001–2014** | 27.4 KB | `f8c12fd4b70ce22f02d15dd07f878098` | ECU / ASAP2 Calibration Map Definition |
+| `ECUFlash_subaru_standard_Impreza_WRX_A4SGC00C.xml` | **2001–2014** | 27.4 KB | `cd279385ea964de1e0a490b590487958` | ECU / ASAP2 Calibration Map Definition |
+| `ECUFlash_subaru_standard_Impreza_WRX_A4SGD10C.xml` | **2001–2014** | 27.4 KB | `445e1f3f5511f423cd9a9fdef74301d6` | ECU / ASAP2 Calibration Map Definition |
+| `ECUFlash_subaru_standard_Impreza_WRX_A4SGE00C.xml` | **2001–2014** | 899 B | `2cb3ffc201c4c8293eb159fdded5e604` | ECU / ASAP2 Calibration Map Definition |
+| `ECUFlash_subaru_standard_Impreza_WRX_A4SGE01C.xml` | **2001–2014** | 899 B | `460a3080d8ec9b7b237ea287113f062c` | ECU / ASAP2 Calibration Map Definition |
+| `ECUFlash_subaru_standard_Impreza_WRX_A4TC101K.xml` | **2001–2014** | 2.4 KB | `98a4634a953e705b357c359a0e75ac7f` | ECU / ASAP2 Calibration Map Definition |
+| `ECUFlash_subaru_standard_Impreza_WRX_A4TC101L.xml` | **2001–2014** | 2.4 KB | `36761c2ed5259c138883f73ff16cb8af` | ECU / ASAP2 Calibration Map Definition |
+| `ECUFlash_subaru_standard_Impreza_WRX_A4TC300K.xml` | **2001–2014** | 710 B | `73e856043cf2e95deadf3007889ae159` | ECU / ASAP2 Calibration Map Definition |
+| `ECUFlash_subaru_standard_Impreza_WRX_A4TC300L.xml` | **2001–2014** | 26.3 KB | `5d86cf9393d4d21a07499db449a38c2e` | ECU / ASAP2 Calibration Map Definition |
+| `ECUFlash_subaru_standard_Impreza_WRX_A4TC400L.xml` | **2001–2014** | 1.0 KB | `9152314dc2c5e3194b5577e292e9723f` | ECU / ASAP2 Calibration Map Definition |
+| `ECUFlash_subaru_standard_Impreza_WRX_A4TC401L.xml` | **2001–2014** | 1.0 KB | `3b1de20fcdd2cf5e28508a8349c1a1bc` | ECU / ASAP2 Calibration Map Definition |
+| `ECUFlash_subaru_standard_Impreza_WRX_A4TE0000.xml` | **2001–2014** | 29.0 KB | `9b1cdad2d305508381946e533cd37429` | ECU / ASAP2 Calibration Map Definition |
+| `ECUFlash_subaru_standard_Impreza_WRX_A4TE000A.xml` | **2001–2014** | 29.0 KB | `d160659bf618c5ca369636b8dc6edd38` | ECU / ASAP2 Calibration Map Definition |
+| `ECUFlash_subaru_standard_Impreza_WRX_A4TE001G.xml` | **2001–2014** | 27.3 KB | `e5902985a6bccb52e892452a02e1ac2e` | ECU / ASAP2 Calibration Map Definition |
+| `ECUFlash_subaru_standard_Impreza_WRX_A4TE001I.xml` | **2001–2014** | 29.0 KB | `34d7df01c907d15572860cec36f39fc1` | ECU / ASAP2 Calibration Map Definition |
+| `ECUFlash_subaru_standard_Impreza_WRX_A4TE100G.xml` | **2001–2014** | 2.0 KB | `beff30791ca81f4c791396c3b9c8af93` | ECU / ASAP2 Calibration Map Definition |
+| `ECUFlash_subaru_standard_Impreza_WRX_A4TE200A.xml` | **2001–2014** | 1.9 KB | `25c034a3e4f92d82ecdc9d8b9b56bde7` | ECU / ASAP2 Calibration Map Definition |
+| `ECUFlash_subaru_standard_Impreza_WRX_A4TE3000.xml` | **1987–1993** | 518 B | `b5b978031c95838472f09463e6ecf46b` | ECU / ASAP2 Calibration Map Definition |
+| `ECUFlash_subaru_standard_Impreza_WRX_A4TE300D.xml` | **1987–1993** | 28.0 KB | `3ae58cf848e81707e03f0141b65d0d0f` | ECU / ASAP2 Calibration Map Definition |
+| `ECUFlash_subaru_standard_Impreza_WRX_A4TF300E.xml` | **2001–2014** | 2.1 KB | `b4592e8b8ffefd61c7da35c74e14d237` | ECU / ASAP2 Calibration Map Definition |
+| `ECUFlash_subaru_standard_Impreza_WRX_A4TF300F.xml` | **2001–2014** | 2.1 KB | `00103bdaa51f2de92839d0cd12eea808` | ECU / ASAP2 Calibration Map Definition |
+| `ECUFlash_subaru_standard_Impreza_WRX_A4TF400E.xml` | **2001–2014** | 26.2 KB | `206eac6418e1058bf42332b974d282c3` | ECU / ASAP2 Calibration Map Definition |
+| `ECUFlash_subaru_standard_Impreza_WRX_A4TF500F.xml` | **2001–2014** | 1.9 KB | `5809ceeb8321f7399b944ed12a16e24c` | ECU / ASAP2 Calibration Map Definition |
+| `ECUFlash_subaru_standard_Impreza_WRX_A4TF510E.xml` | **2001–2014** | 2.0 KB | `c20fe427888b4e9d8ae6047941426943` | ECU / ASAP2 Calibration Map Definition |
+| `ECUFlash_subaru_standard_Impreza_WRX_A4TF510F.xml` | **2001–2014** | 2.0 KB | `dec54456361d73d844856b5cb138185f` | ECU / ASAP2 Calibration Map Definition |
+| `ECUFlash_subaru_standard_Impreza_WRX_A4TF520F.xml` | **2001–2014** | 26.2 KB | `9479499452050b67897ce89fb1362169` | ECU / ASAP2 Calibration Map Definition |
+| `ECUFlash_subaru_standard_Impreza_WRX_A4TF7000.xml` | **2001–2014** | 2.8 KB | `f61399d0953103a64c634fa69e41673a` | ECU / ASAP2 Calibration Map Definition |
+| `ECUFlash_subaru_standard_Impreza_WRX_A4TF800E.xml` | **2014–2020** | 2.0 KB | `57ac926b945616e486721174965e55a4` | ECU / ASAP2 Calibration Map Definition |
+| `ECUFlash_subaru_standard_Impreza_WRX_A4TF800F.xml` | **2014–2020** | 26.6 KB | `37f575433a2042aabb4b30c320fa2b3a` | ECU / ASAP2 Calibration Map Definition |
+| `ECUFlash_subaru_standard_Impreza_WRX_A4TF810F.xml` | **2001–2014** | 26.6 KB | `77b3621f87becce6db86be47afee5ccb` | ECU / ASAP2 Calibration Map Definition |
+| `ECUFlash_subaru_standard_Impreza_WRX_A4TH000N.xml` | **2001–2014** | 29.2 KB | `2abb3ec2a4d2ce05f869c38e8297467f` | ECU / ASAP2 Calibration Map Definition |
+| `ECUFlash_subaru_standard_Impreza_WRX_A4TH000O.xml` | **2001–2014** | 1.9 KB | `6f44c1bf7a5d90a0b8877c96e76f5a80` | ECU / ASAP2 Calibration Map Definition |
+| `ECUFlash_subaru_standard_Impreza_WRX_A4TH100H.xml` | **2001–2014** | 29.1 KB | `9bf85caad72cb1394755deeef718f9a0` | ECU / ASAP2 Calibration Map Definition |
+| `ECUFlash_subaru_standard_Impreza_WRX_A4TH100L.xml` | **2001–2014** | 453 B | `da5b671a19c2bdc4613700bf02fab85d` | ECU / ASAP2 Calibration Map Definition |
+| `ECUFlash_subaru_standard_Impreza_WRX_A8DH200O.xml` | **2001–2014** | 25.2 KB | `6b653c69e4fcd2edca97280cb99acbb7` | ECU / ASAP2 Calibration Map Definition |
+| `ECUFlash_subaru_standard_Impreza_WRX_A8DH200U.xml` | **2001–2014** | 497 B | `93066f47c0f11adc8dffef7e9c781f08` | ECU / ASAP2 Calibration Map Definition |
+| `ECUFlash_subaru_standard_Impreza_WRX_A8DH200W.xml` | **2001–2014** | 28.5 KB | `01e753300a6a656d566df2be924fd11d` | ECU / ASAP2 Calibration Map Definition |
+| `ECUFlash_subaru_standard_Impreza_WRX_A8DH200X.xml` | **2001–2014** | 28.4 KB | `caee5a813949fb9ae64046d4e888fd6c` | ECU / ASAP2 Calibration Map Definition |
+| `ECUFlash_subaru_standard_Impreza_WRX_A8DH200Y.xml` | **2001–2014** | 25.2 KB | `d657c2fa9fd2576763eda4b64ccf3466` | ECU / ASAP2 Calibration Map Definition |
+| `ECUFlash_subaru_standard_Impreza_WRX_A8DH201X.xml` | **2001–2014** | 497 B | `21e5f6d21f879f2ce7e7fc777a4e737a` | ECU / ASAP2 Calibration Map Definition |
+| `ECUFlash_subaru_standard_Impreza_WRX_A8DH202X.xml` | **2001–2014** | 497 B | `109077ad32e10f66308005630af0e059` | ECU / ASAP2 Calibration Map Definition |
+| `ECUFlash_subaru_standard_Impreza_WRX_A8DK100K.xml` | **2001–2014** | 496 B | `982a70853849b5c03369b7257195fd6f` | ECU / ASAP2 Calibration Map Definition |
+| `ECUFlash_subaru_standard_Impreza_WRX_A8DK100L.xml` | **2001–2014** | 496 B | `f77fc329487063ac0f509568d4567644` | ECU / ASAP2 Calibration Map Definition |
+| `ECUFlash_subaru_standard_Impreza_WRX_A8DK100O.xml` | **2001–2014** | 25.4 KB | `68e8ce57f2178de7befbd1dcc768d497` | ECU / ASAP2 Calibration Map Definition |
+| `ECUFlash_subaru_standard_Impreza_WRX_A8DK100U.xml` | **2001–2014** | 568 B | `6563da622cff76fd5849041fc78497cd` | ECU / ASAP2 Calibration Map Definition |
+| `ECUFlash_subaru_standard_Impreza_WRX_A8DK100W.xml` | **2001–2014** | 28.7 KB | `94910e13c00e1aedd293979bcb377064` | ECU / ASAP2 Calibration Map Definition |
+| `ECUFlash_subaru_standard_Impreza_WRX_A8DK100X.xml` | **2001–2014** | 28.6 KB | `04ac4ebf41def9215198d6a158a8abfa` | ECU / ASAP2 Calibration Map Definition |
+| `ECUFlash_subaru_standard_Impreza_WRX_A8DK100Y.xml` | **2001–2014** | 25.4 KB | `bbfccec74c07da0d16732587c2ff9078` | ECU / ASAP2 Calibration Map Definition |
+| `ECUFlash_subaru_standard_Impreza_WRX_A8DK101X.xml` | **2001–2014** | 497 B | `7abd188558e9be1eb36fee3a20dddda4` | ECU / ASAP2 Calibration Map Definition |
+| `ECUFlash_subaru_standard_Impreza_WRX_AZ1E400C.xml` | **2001–2014** | 27.7 KB | `2af07c76fb712c344b29ea87a6ee1397` | ECU / ASAP2 Calibration Map Definition |
+| `ECUFlash_subaru_standard_Impreza_WRX_AZ1E400E.xml` | **2001–2014** | 27.5 KB | `fda886bade7910cf8f4215704b152fa9` | ECU / ASAP2 Calibration Map Definition |
+| `ECUFlash_subaru_standard_Impreza_WRX_AZ1E400U.xml` | **2001–2014** | 809 B | `6bc7d3508780bc1b45a905404b96745e` | ECU / ASAP2 Calibration Map Definition |
+| `ECUFlash_subaru_standard_Impreza_WRX_AZ1E401A.xml` | **2001–2014** | 30.3 KB | `504e8981419f2f040f3782160f29d592` | ECU / ASAP2 Calibration Map Definition |
+| `ECUFlash_subaru_standard_Impreza_WRX_AZ1E401B.xml` | **2001–2014** | 30.5 KB | `09572ebd5cbc69c9048df5e426884430` | ECU / ASAP2 Calibration Map Definition |
+| `ECUFlash_subaru_standard_Impreza_WRX_AZ1G400U.xml` | **2001–2014** | 27.7 KB | `8113d39fe81509a836085bd0a9e9e0b5` | ECU / ASAP2 Calibration Map Definition |
+| `ECUFlash_subaru_standard_Impreza_WRX_AZ1G400W.xml` | **2001–2014** | 27.6 KB | `6d9a9edae8f5d7c3024bf5d1a5edfd16` | ECU / ASAP2 Calibration Map Definition |
+| `ECUFlash_subaru_standard_Impreza_WRX_AZ1G400X.xml` | **2001–2014** | 27.5 KB | `62d2b5499c3a1a29cebc086a04af51c4` | ECU / ASAP2 Calibration Map Definition |
+| `ECUFlash_subaru_standard_Impreza_WRX_AZ1G401V.xml` | **2001–2014** | 30.6 KB | `085fab7a59e7ad9d892737066a4d7d61` | ECU / ASAP2 Calibration Map Definition |
+| `ECUFlash_subaru_standard_Legacy(Outback)_GT(XT)_A2TB001C.xml` | **2001–2014** | 30.7 KB | `78db5d0b23c6ff8fc13535778f67bbad` | ECU / ASAP2 Calibration Map Definition |
+| `ECUFlash_subaru_standard_Legacy(Outback)_GT(XT)_A2TB001N.xml` | **2001–2014** | 2.6 KB | `011f593f3282c6844d863e0638978f19` | ECU / ASAP2 Calibration Map Definition |
+| `ECUFlash_subaru_standard_Legacy_2.0_E2ZD308E.xml` | **2001–2014** | 17.6 KB | `2a70fae6fdc30d04cf0e85fb52bbf175` | ECU / ASAP2 Calibration Map Definition |
+| `ECUFlash_subaru_standard_Legacy_2.5i_E2SB001K.xml` | **2001–2014** | 24.4 KB | `6a2deef7fe24421793872389e469e023` | ECU / ASAP2 Calibration Map Definition |
+| `ECUFlash_subaru_standard_Legacy_2.5i_EZ1D105C.xml` | **2001–2014** | 25.2 KB | `65444b542a19044f33d8ffb2812a652c` | ECU / ASAP2 Calibration Map Definition |
+| `ECUFlash_subaru_standard_Legacy_2.5i_EZ1D201D.xml` | **2001–2014** | 25.1 KB | `916a30acc9ff5dbd917b08b97330e9b5` | ECU / ASAP2 Calibration Map Definition |
+| `ECUFlash_subaru_standard_Legacy_2.5i_EZ1D302B.xml` | **2001–2014** | 25.1 KB | `2c1c7da17945484be36a7ab127bb1a35` | ECU / ASAP2 Calibration Map Definition |
+| `ECUFlash_subaru_standard_Legacy_2.5i_EZ1D302C.xml` | **2001–2014** | 25.2 KB | `f9dc986b4c3cb1329c7341d2a7cf3a14` | ECU / ASAP2 Calibration Map Definition |
+| `ECUFlash_subaru_standard_Legacy_2.5i_EZ1D302D.xml` | **2001–2014** | 25.1 KB | `8fd9b0de5a1d613702fa9d4e824f1f34` | ECU / ASAP2 Calibration Map Definition |
+| `ECUFlash_subaru_standard_Legacy_3.0R_D0XJ001R.xml` | **2001–2014** | 20.4 KB | `b95e2e2d247531f23f5c9cdca2b8321e` | ECU / ASAP2 Calibration Map Definition |
+| `ECUFlash_subaru_standard_Legacy_3.0R_D2TB201R.xml` | **2001–2014** | 21.0 KB | `64748b70dced410e79941d670a789043` | ECU / ASAP2 Calibration Map Definition |
+| `ECUFlash_subaru_standard_Legacy_3.0R_D2TC001P.xml` | **2001–2014** | 23.6 KB | `586198d928700ea1aab70c6383922c31` | ECU / ASAP2 Calibration Map Definition |
+| `ECUFlash_subaru_standard_Legacy_3.0R_D2UK001Q.xml` | **2001–2014** | 19.9 KB | `6dd3549df42dc478446d719fcf0f3f1f` | ECU / ASAP2 Calibration Map Definition |
+| `ECUFlash_subaru_standard_Legacy_3.0R_D2WD200A.xml` | **2001–2014** | 18.1 KB | `b816bb309a397f2c0769ef4f084a6603` | ECU / ASAP2 Calibration Map Definition |
+| `ECUFlash_subaru_standard_Legacy_3.0R_D2WD604A.xml` | **2001–2014** | 496 B | `5919975f691e879a6df40818633a41ef` | ECU / ASAP2 Calibration Map Definition |
+| `ECUFlash_subaru_standard_Legacy_3.0R_D2ZU200A.xml` | **2001–2014** | 17.5 KB | `73acf9742f38c3da5dd692089ce3904b` | ECU / ASAP2 Calibration Map Definition |
+| `ECUFlash_subaru_standard_Legacy_3.0R_D2ZZ001E.xml` | **2001–2014** | 19.0 KB | `5f3b503c02af3e967b73469fac7eb47d` | ECU / ASAP2 Calibration Map Definition |
+| `ECUFlash_subaru_standard_Legacy_B4_A4SH701H.xml` | **2001–2014** | 13.9 KB | `31256941654916702e787ecd40563ad4` | ECU / ASAP2 Calibration Map Definition |
+| `ECUFlash_subaru_standard_Legacy_B4_A4SHB00H.xml` | **2001–2014** | 13.9 KB | `1be72c3e58631a23dca88b4d57c9a2f6` | ECU / ASAP2 Calibration Map Definition |
+| `ECUFlash_subaru_standard_Legacy_B4_A4SHC00G.xml` | **2001–2014** | 13.9 KB | `52b8d33438743bd57b364bc7b18f5024` | ECU / ASAP2 Calibration Map Definition |
+| `ECUFlash_subaru_standard_Legacy_B4_A4SHC01G.xml` | **2001–2014** | 13.9 KB | `5cf22bd2931b2f00ea9049b4aa9cf4a2` | ECU / ASAP2 Calibration Map Definition |
+| `ECUFlash_subaru_standard_Legacy_BH_4SLEHB00.xml` | **2001–2014** | 13.9 KB | `912597df598c59c644fd081bfd6f214f` | ECU / ASAP2 Calibration Map Definition |
+| `ECUFlash_subaru_standard_Legacy_BH_A4SH701G.xml` | **2001–2014** | 13.9 KB | `df8566a1e0ee1beff969ab28446581be` | ECU / ASAP2 Calibration Map Definition |
+| `ECUFlash_subaru_standard_Legacy_BH_A4SHB00G.xml` | **2001–2014** | 13.9 KB | `7fb25ab2ded700573ad5214b6b5e8eb0` | ECU / ASAP2 Calibration Map Definition |
+| `ECUFlash_subaru_standard_Legacy_GT_A2PG420A.xml` | **2001–2014** | 28.0 KB | `0dc058a4231485bea5f5684626bb6a01` | ECU / ASAP2 Calibration Map Definition |
+| `ECUFlash_subaru_standard_Legacy_GT_A2SB000A.xml` | **2001–2014** | 28.2 KB | `a79286f13cf4e13d6f8bd9278221dd86` | ECU / ASAP2 Calibration Map Definition |
+| `ECUFlash_subaru_standard_Legacy_GT_A2TB000N.xml` | **2001–2014** | 9.2 KB | `617d6a8997160723bf783d9bad3e9d35` | ECU / ASAP2 Calibration Map Definition |
+| `ECUFlash_subaru_standard_Legacy_GT_A2TB100A.xml` | **2001–2014** | 28.2 KB | `f4fd2aa11413d1b783cdab786c42c5ad` | ECU / ASAP2 Calibration Map Definition |
+| `ECUFlash_subaru_standard_Legacy_GT_A2TB100B.xml` | **2001–2014** | 2.3 KB | `b5d51289379a71d5c372b0117ebfecea` | ECU / ASAP2 Calibration Map Definition |
+| `ECUFlash_subaru_standard_Legacy_GT_A2TB100Y.xml` | **2001–2014** | 28.0 KB | `407004840d9429056ca304b82d0ef26c` | ECU / ASAP2 Calibration Map Definition |
+| `ECUFlash_subaru_standard_Legacy_GT_A2UG000B.xml` | **2001–2014** | 27.5 KB | `8fbdf9e600c63f475b0e18f46136c284` | ECU / ASAP2 Calibration Map Definition |
+| `ECUFlash_subaru_standard_Legacy_GT_A2UG000C.xml` | **2001–2014** | 30.5 KB | `74268dd61a0679e9ec25d1a636ea84ce` | ECU / ASAP2 Calibration Map Definition |
+| `ECUFlash_subaru_standard_Legacy_GT_A2UG000N.xml` | **2001–2014** | 499 B | `8e95aff410593c4e77e03048566e41c6` | ECU / ASAP2 Calibration Map Definition |
+| `ECUFlash_subaru_standard_Legacy_GT_A2UH000A.xml` | **2001–2014** | 27.5 KB | `ba7d81b951167f53092192d0a9389878` | ECU / ASAP2 Calibration Map Definition |
+| `ECUFlash_subaru_standard_Legacy_GT_A2UI000A.xml` | **2001–2014** | 27.5 KB | `3535ab7a51a771f9be4129b388b7362f` | ECU / ASAP2 Calibration Map Definition |
+| `ECUFlash_subaru_standard_Legacy_GT_A2UI001C.xml` | **2001–2014** | 30.6 KB | `d39eb20cd276a5ae3eebe3932faf509f` | ECU / ASAP2 Calibration Map Definition |
+| `ECUFlash_subaru_standard_Legacy_GT_A2WC500C.xml` | **2001–2014** | 26.7 KB | `18bc0c1cb651269032ae16fc07c4c5e6` | ECU / ASAP2 Calibration Map Definition |
+| `ECUFlash_subaru_standard_Legacy_GT_A2WC500N.xml` | **2001–2014** | 26.7 KB | `e2dda28c88efb85f9a2542017e6933c6` | ECU / ASAP2 Calibration Map Definition |
+| `ECUFlash_subaru_standard_Legacy_GT_A2WC510C.xml` | **2001–2014** | 26.6 KB | `6bf649bcf855cafd8f2759225bafa10c` | ECU / ASAP2 Calibration Map Definition |
+| `ECUFlash_subaru_standard_Legacy_GT_A2WC510N.xml` | **2001–2014** | 26.4 KB | `b8ee13bd8c50e7ee71002ddf81757d97` | ECU / ASAP2 Calibration Map Definition |
+| `ECUFlash_subaru_standard_Legacy_GT_A2WC511C.xml` | **2001–2014** | 495 B | `73e1f3da980e9f5bc07d65b1f8ff42b5` | ECU / ASAP2 Calibration Map Definition |
+| `ECUFlash_subaru_standard_Legacy_GT_A2WC511N.xml` | **2001–2014** | 495 B | `9438525b5f2628b7fd3247fbd42efb58` | ECU / ASAP2 Calibration Map Definition |
+| `ECUFlash_subaru_standard_Legacy_GT_A2WC521C.xml` | **2001–2014** | 26.7 KB | `8e009a636c18e5440c3b242ec9cbdd18` | ECU / ASAP2 Calibration Map Definition |
+| `ECUFlash_subaru_standard_Legacy_GT_A2WC521N.xml` | **2001–2014** | 26.6 KB | `6470b38b5f94abf73f55e08e49a2ef69` | ECU / ASAP2 Calibration Map Definition |
+| `ECUFlash_subaru_standard_Legacy_GT_A2WC522N.xml` | **2001–2014** | 495 B | `04f38e07567b993045ee334b8f23a8cf` | ECU / ASAP2 Calibration Map Definition |
+| `ECUFlash_subaru_standard_Legacy_GT_A2WD000A.xml` | **2001–2014** | 494 B | `d873d3df26ad3c16d75c9c0c9a12382d` | ECU / ASAP2 Calibration Map Definition |
+| `ECUFlash_subaru_standard_Legacy_GT_A2WD001A.xml` | **2001–2014** | 22.7 KB | `e04ac3d3d604f6ef9d002dc32f496123` | ECU / ASAP2 Calibration Map Definition |
+| `ECUFlash_subaru_standard_Legacy_GT_A2WD001B.xml` | **2001–2014** | 22.7 KB | `bb7199c7b0446c81e510460c97f67396` | ECU / ASAP2 Calibration Map Definition |
+| `ECUFlash_subaru_standard_Legacy_GT_A2WD010A.xml` | **2001–2014** | 494 B | `81f1669ba07a93a494e5d36fcf7f05fd` | ECU / ASAP2 Calibration Map Definition |
+| `ECUFlash_subaru_standard_Legacy_GT_A2WD010B.xml` | **2001–2014** | 22.4 KB | `f5e8f12f125a250196a6e73253397bb2` | ECU / ASAP2 Calibration Map Definition |
+| `ECUFlash_subaru_standard_Legacy_GT_A2WD012A.xml` | **2001–2014** | 22.5 KB | `ea81c79585c1f3821e07f990f203168c` | ECU / ASAP2 Calibration Map Definition |
+| `ECUFlash_subaru_standard_Legacy_GT_A2WD012B.xml` | **2001–2014** | 494 B | `038b3b7498627e9cf0aa5cf2d037a7e4` | ECU / ASAP2 Calibration Map Definition |
+| `ECUFlash_subaru_standard_Legacy_GT_A2WF200C.xml` | **2001–2014** | 26.7 KB | `97c6119603ce2a505edf74001b819d92` | ECU / ASAP2 Calibration Map Definition |
+| `ECUFlash_subaru_standard_Legacy_GT_A2WF200N.xml` | **2001–2014** | 26.6 KB | `8e211324767fc176e390d1985472b0a6` | ECU / ASAP2 Calibration Map Definition |
+| `ECUFlash_subaru_standard_Legacy_GT_A2ZJ600B.xml` | **2001–2014** | 22.1 KB | `c11b13c1ad4511d602c0d1bfe0ea7cfa` | ECU / ASAP2 Calibration Map Definition |
+| `ECUFlash_subaru_standard_Legacy_GT_A2ZJ601A.xml` | **2001–2014** | 22.1 KB | `c97f91f5ca7a27f42a374723e00cad3a` | ECU / ASAP2 Calibration Map Definition |
+| `ECUFlash_subaru_standard_Legacy_GT_A2ZJ800A.xml` | **2001–2014** | 22.1 KB | `14bce3caf66668e8efe911c1b6dbfac2` | ECU / ASAP2 Calibration Map Definition |
+| `ECUFlash_subaru_standard_Legacy_GT_A2ZJC00B.xml` | **2001–2014** | 22.1 KB | `6a8f3d840734b7fa50e5b80f8ba5932e` | ECU / ASAP2 Calibration Map Definition |
+| `ECUFlash_subaru_standard_Legacy_GT_A2ZJD00A.xml` | **2001–2014** | 494 B | `261e2a6fb1e39fea25f69271d0532ed2` | ECU / ASAP2 Calibration Map Definition |
+| `ECUFlash_subaru_standard_Legacy_GT_A2ZJD00B.xml` | **2001–2014** | 22.1 KB | `a2f421f356c853631ec3e0170798965f` | ECU / ASAP2 Calibration Map Definition |
+| `ECUFlash_subaru_standard_Legacy_GT_A2ZJD01A.xml` | **2001–2014** | 22.1 KB | `8446fa27a25f1b3d8fef8118749a2d33` | ECU / ASAP2 Calibration Map Definition |
+| `ECUFlash_subaru_standard_Legacy_GT_A2ZJD02B.xml` | **2001–2014** | 494 B | `78a38b64bbe1cd38969838942afb8f34` | ECU / ASAP2 Calibration Map Definition |
+| `ECUFlash_subaru_standard_Legacy_GT_spec.B_A2TB000L.xml` | **2001–2014** | 7.0 KB | `e5cb4ee205c757bb01e8e87ac1650037` | ECU / ASAP2 Calibration Map Definition |
+| `ECUFlash_subaru_standard_Legacy_GT_spec.B_A2TB001L.xml` | **2001–2014** | 30.8 KB | `30780ec0ed9f8b7f919fbcd0484920a5` | ECU / ASAP2 Calibration Map Definition |
+| `ECUFlash_subaru_standard_Legacy_GT_spec.B_A2TB100K.xml` | **2001–2014** | 28.1 KB | `c6e28b90460b5d888e1247f434e26d38` | ECU / ASAP2 Calibration Map Definition |
+| `ECUFlash_subaru_standard_Legacy_GT_spec.B_A2UG000L.xml` | **2001–2014** | 30.6 KB | `235295523cef5ed07c67e42557f57054` | ECU / ASAP2 Calibration Map Definition |
+| `ECUFlash_subaru_standard_Legacy_GT_spec.B_A2UI000K.xml` | **2001–2014** | 27.3 KB | `4554415f1d3d6f3d09dce8ae4311afaa` | ECU / ASAP2 Calibration Map Definition |
+| `ECUFlash_subaru_standard_Legacy_GT_spec.B_A2UI001L.xml` | **2001–2014** | 20.1 KB | `ac92a819dd52bd306491e21836e94f87` | ECU / ASAP2 Calibration Map Definition |
+| `ECUFlash_subaru_standard_Liberty_2.5i_E2TB102M.xml` | **2001–2014** | 24.7 KB | `daf8463ec97f135208c4749eae8c8ffb` | ECU / ASAP2 Calibration Map Definition |
+| `ECUFlash_subaru_standard_Liberty_3.0R_D0XJ001M.xml` | **2001–2014** | 19.9 KB | `38398124c30d4cdd4583b9f1fcfc1325` | ECU / ASAP2 Calibration Map Definition |
+| `ECUFlash_subaru_standard_Liberty_3.0R_D0XJ001T.xml` | **2001–2014** | 19.7 KB | `d2a583f2e829285a42d4cf591179cd1e` | ECU / ASAP2 Calibration Map Definition |
+| `ECUFlash_subaru_standard_Liberty_3.0R_D2UH001M.xml` | **2001–2014** | 20.2 KB | `ab7014748c433410910893c4f275c4c0` | ECU / ASAP2 Calibration Map Definition |
+| `ECUFlash_subaru_standard_Liberty_3.0R_D2WD603H.xml` | **2001–2014** | 18.3 KB | `6967455ab99ec9b2e2b975a35120e5de` | ECU / ASAP2 Calibration Map Definition |
+| `ECUFlash_subaru_standard_Liberty_3.0R_D2WD610H.xml` | **2001–2014** | 18.1 KB | `833d6afb1d92d754c196a244fb504508` | ECU / ASAP2 Calibration Map Definition |
+| `ECUFlash_subaru_standard_Liberty_B4_A4SH701K.xml` | **2001–2014** | 13.9 KB | `7d7c56182f997e74b575d2395231e984` | ECU / ASAP2 Calibration Map Definition |
+| `ECUFlash_subaru_standard_Liberty_B4_A4SHA10R.xml` | **2001–2014** | 13.9 KB | `217705010dafc697ab9d8bd06c25d640` | ECU / ASAP2 Calibration Map Definition |
+| `ECUFlash_subaru_standard_Liberty_GT_A2UG001G.xml` | **2001–2014** | 27.5 KB | `477e5a76cc48fb578ac63c766f311b37` | ECU / ASAP2 Calibration Map Definition |
+| `ECUFlash_subaru_standard_Liberty_GT_A2UG002T.xml` | **2001–2014** | 27.6 KB | `8733d3422c678538814d8a9d7788f09f` | ECU / ASAP2 Calibration Map Definition |
+| `ECUFlash_subaru_standard_Liberty_GT_A2UI000Y.xml` | **2001–2014** | 27.5 KB | `f08b3fc682eb2364764b80d36ff4226d` | ECU / ASAP2 Calibration Map Definition |
+| `ECUFlash_subaru_standard_Liberty_GT_A2UI000Z.xml` | **2001–2014** | 27.5 KB | `1b14bc428acafabd93f2141d9ea841cf` | ECU / ASAP2 Calibration Map Definition |
+| `ECUFlash_subaru_standard_Liberty_GT_A2WD001G.xml` | **2001–2014** | 22.7 KB | `adcf7bcf3c386397e6db623f72a1866a` | ECU / ASAP2 Calibration Map Definition |
+| `ECUFlash_subaru_standard_Liberty_GT_A2WD002T.xml` | **2001–2014** | 22.7 KB | `022468fded63167892d698442ff55bf9` | ECU / ASAP2 Calibration Map Definition |
+| `ECUFlash_subaru_standard_Liberty_GT_A2WD010G.xml` | **2001–2014** | 22.7 KB | `a0ba7ac9740edf2f8a5cd8d5574d401a` | ECU / ASAP2 Calibration Map Definition |
+| `ECUFlash_subaru_standard_Liberty_GT_A2WD010T.xml` | **2001–2014** | 22.7 KB | `174c645de6adea7aaf4cb925e31dc605` | ECU / ASAP2 Calibration Map Definition |
+| `ECUFlash_subaru_standard_Liberty_GT_A2WD010Y.xml` | **2001–2014** | 495 B | `06e9561a771d4f022290bc2032dc8403` | ECU / ASAP2 Calibration Map Definition |
+| `ECUFlash_subaru_standard_Liberty_GT_A2WD010Z.xml` | **2001–2014** | 5.8 KB | `f754fd1852dd24e7ad8fd395be556452` | ECU / ASAP2 Calibration Map Definition |
+| `ECUFlash_subaru_standard_Liberty_GT_A2WD012G.xml` | **2001–2014** | 495 B | `0a0b1bfe800b49690b8c83727e210059` | ECU / ASAP2 Calibration Map Definition |
+| `ECUFlash_subaru_standard_Liberty_GT_A2WD012T.xml` | **2001–2014** | 495 B | `e76130d4ea0811475b0c54e432c73512` | ECU / ASAP2 Calibration Map Definition |
+| `ECUFlash_subaru_standard_Liberty_GT_A2ZJ800G.xml` | **2001–2014** | 22.1 KB | `b672081d62e65be2a87b2d41d78fabb1` | ECU / ASAP2 Calibration Map Definition |
+| `ECUFlash_subaru_standard_Liberty_GT_A2ZJC00G.xml` | **2001–2014** | 22.1 KB | `f1cecfc4c47ba422dc83ab7114e6e4a5` | ECU / ASAP2 Calibration Map Definition |
+| `ECUFlash_subaru_standard_Liberty_GT_A2ZJD00G.xml` | **2001–2014** | 495 B | `6f82a8328609fd0a0e62e29a31b85803` | ECU / ASAP2 Calibration Map Definition |
+| `ECUFlash_subaru_standard_Liberty_GT_A2ZJD02G.xml` | **2001–2014** | 22.1 KB | `fbfcf2693dd665aa78e63b9fac38e9d6` | ECU / ASAP2 Calibration Map Definition |
+| `ECUFlash_subaru_standard_Liberty_GT_AE5F301D.xml` | **2001–2014** | 28.3 KB | `8f19598389c58261903c2c92f34a85bb` | ECU / ASAP2 Calibration Map Definition |
+| `ECUFlash_subaru_standard_Outback_2.5i_E2VG222B.xml` | **2001–2014** | 28.5 KB | `209ec9770285c506902191ed379a6607` | ECU / ASAP2 Calibration Map Definition |
+| `ECUFlash_subaru_standard_Outback_2.5i_E2WD500D.xml` | **2001–2014** | 16.5 KB | `a9b716d0ab227ba484a147512781a7b7` | ECU / ASAP2 Calibration Map Definition |
+| `ECUFlash_subaru_standard_Outback_2.5i_E2ZD508C.xml` | **2001–2014** | 17.2 KB | `14b06525faecfb7bcd90b1358d5513c5` | ECU / ASAP2 Calibration Map Definition |
+| `ECUFlash_subaru_standard_Outback_XT_A2SB000Y.xml` | **2001–2014** | 27.4 KB | `013862f2e36cd0b6b5dc70a9598c83eb` | ECU / ASAP2 Calibration Map Definition |
+| `ECUFlash_subaru_standard_Outback_XT_A2WC500R.xml` | **2001–2014** | 496 B | `4c7a77861bdef83acf71785380a10265` | ECU / ASAP2 Calibration Map Definition |
+| `ECUFlash_subaru_standard_Outback_XT_A2WC510R.xml` | **2001–2014** | 496 B | `afcbaddef7ef51cf0a27a527e42b0bc8` | ECU / ASAP2 Calibration Map Definition |
+| `ECUFlash_subaru_standard_Outback_XT_A2WC510S.xml` | **2001–2014** | 496 B | `004ef2ebf29eaa532267a452371d50f2` | ECU / ASAP2 Calibration Map Definition |
+| `ECUFlash_subaru_standard_Outback_XT_A2WC511R.xml` | **2001–2014** | 496 B | `efde1d075fd9ee1f4a51ef729823d9c9` | ECU / ASAP2 Calibration Map Definition |
+| `ECUFlash_subaru_standard_Outback_XT_A2WC521R.xml` | **2001–2014** | 496 B | `2aa1c3b14f4b8689bab11fd0b25866e0` | ECU / ASAP2 Calibration Map Definition |
+| `ECUFlash_subaru_standard_Outback_XT_A2WC522S.xml` | **2001–2014** | 496 B | `2bc260e054da7dc4b8566666fd8b6fdd` | ECU / ASAP2 Calibration Map Definition |
+| `ECUFlash_subaru_standard_Outback_XT_A2WF200R.xml` | **2001–2014** | 26.7 KB | `1d3e26bda43965244382e95e719467b3` | ECU / ASAP2 Calibration Map Definition |
+| `ECUFlash_subaru_standard_Outback_XT_A2WF200S.xml` | **2001–2014** | 496 B | `5602ae3228e29927aef6f6ff2e3fb469` | ECU / ASAP2 Calibration Map Definition |
+| `ECUFlash_subaru_standard_Tribeca_DZ1E402B.xml` | **2001–2014** | 26.1 KB | `39f4751ddbf8257bad72c94023086b01` | ECU / ASAP2 Calibration Map Definition |
+| `ECUFlash_subaru_standard_Tribeca_DZ1G001F.xml` | **2001–2014** | 24.0 KB | `0facf0b970737a4225eef900d56eb947` | ECU / ASAP2 Calibration Map Definition |
+| `EZ1D105C.xml` | **2001–2014** | 25.2 KB | `65444b542a19044f33d8ffb2812a652c` | ECU / ASAP2 Calibration Map Definition |
+| `EZ1D201D.xml` | **2001–2014** | 25.1 KB | `916a30acc9ff5dbd917b08b97330e9b5` | ECU / ASAP2 Calibration Map Definition |
+| `EZ1D302B.xml` | **2001–2014** | 25.1 KB | `2c1c7da17945484be36a7ab127bb1a35` | ECU / ASAP2 Calibration Map Definition |
+| `EZ1D302C.xml` | **2001–2014** | 25.2 KB | `f9dc986b4c3cb1329c7341d2a7cf3a14` | ECU / ASAP2 Calibration Map Definition |
+| `EZ1D302D.xml` | **2001–2014** | 25.1 KB | `8fd9b0de5a1d613702fa9d4e824f1f34` | ECU / ASAP2 Calibration Map Definition |
+| `EZ1E102G.xml` | **2001–2014** | 25.0 KB | `a5da5d69763d9b414228b3f56d1d5eed` | ECU / ASAP2 Calibration Map Definition |
+| `EZ1E102H.xml` | **2001–2014** | 25.1 KB | `649c33679f6cac8258157bb757a1fc7b` | ECU / ASAP2 Calibration Map Definition |
+| `EZ1E401G.xml` | **2001–2014** | 505 B | `25b48fc6ffebfb74107588ee3737865d` | ECU / ASAP2 Calibration Map Definition |
+| `EZ1G107M.xml` | **2001–2014** | 22.5 KB | `e25468233a03fc51a3c211eed3abc1fa` | ECU / ASAP2 Calibration Map Definition |
+| `EZ1G109K.xml` | **2001–2014** | 25.1 KB | `8d9c069411b9fc0d57b78256f7669eb0` | ECU / ASAP2 Calibration Map Definition |
+| `RomRaider_ecu_standard_ecu_defs.xml` | **2001–2014** | 7.46 MB | `70a5dd7f65f15f3fceb2523dad20f5de` | ECU / ASAP2 Calibration Map Definition |
+| `RomRaider_logger_standard_logger.xml` | **2001–2014** | 1.98 MB | `6d17e111b1a019b23c28a548f987740d` | ECU / ASAP2 Calibration Map Definition |
+| `Z1G20000.xml` | **2001–2014** | 503 B | `a63e115d323ed7a0b3248e2f8173568b` | ECU / ASAP2 Calibration Map Definition |
+| `ZA1JS10C_v7.xml` | **2001–2014** | 643.2 KB | `f827b0df64066435b31656b83eff72fb` | ECU / ASAP2 Calibration Map Definition |
+| `ZA1JS20G_v1.xml` | **2001–2014** | 619.4 KB | `86a7c23c4c39c7f20e9791c98551d0da` | ECU / ASAP2 Calibration Map Definition |
+| `ZA1JU01A_v22.xml` | **2001–2014** | 675.7 KB | `f199c5c054bc9c1fdbc490b895b999bb` | ECU / ASAP2 Calibration Map Definition |
+| `ZA1JV00C00G_v36.xml` | **2001–2014** | 689.1 KB | `0b8b4304b2d3ea49eddc7e4fad30bbc2` | ECU / ASAP2 Calibration Map Definition |
+| `cars_def.xml` | **2001–2014** | 45.4 KB | `643157590e188afd6fd58037caded90e` | ECU / ASAP2 Calibration Map Definition |
+| `ecu_defs.xml` | **2001–2014** | 7.46 MB | `b49bd386b68c3f4560593f3e353957fe` | ECU / ASAP2 Calibration Map Definition |
+| `logger.xml` | **2001–2014** | 1.98 MB | `f06e907dbe4763d3e7a36c3337f7e196` | ECU / ASAP2 Calibration Map Definition |
 
 ---
 

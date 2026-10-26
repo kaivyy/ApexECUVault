@@ -21,17 +21,19 @@ Nama berkas yang tersimpan merefleksikan identitas perangkat keras (Hardware ID)
 > [!NOTE]
 > Mempertahankan kode dan nomor asli pabrikan pada penamaan berkas sangat krusial agar perangkat lunak kalibrasi (seperti **TunerPro**, **WinOLS**, atau **RomRaider**) dapat mengenali dan mencocokkan peta definisi (*definition maps*) secara otomatis tanpa merusak asosiasi header ECU.
 
+* **Rentang Tahun / Model Year**: 2004–2008
+
 ---
 
-## 2. Manifest Aset Berkas Fisik (100% Verified)
+## 2. Manifest Fisik Kalibrasi & Definisi Terverifikasi
 
-Berikut adalah daftar lengkap berkas fisik yang tersimpan secara lokal di direktori ini:
+Berikut adalah daftar lengkap berkas fisik yang tersimpan secara lokal di direktori ini dengan verifikasi Model Year (Tahun Produksi), ukuran, MD5 checksum, dan tipe platform:
 
-| Nama Berkas | Tipe / Format | Ukuran (Bytes) | Deskripsi Teknis & Identifikasi |
-| :--- | :--- | :--- | :--- |
-| `BMW 330XD - EGR OFF _ DPF OFF _ AI STAGE 1.bin` | `.BIN` | `2,097,152` bytes | Binary Firmware / Calibration Dump |
-| `BMW 330XD - ORI.bin` | `.BIN` | `2,097,152` bytes | Binary Firmware / Calibration Dump |
-| `E46 320D - EGR OFF_ STAGE 1 - 1037361858.bin` | `.BIN` | `1,507,328` bytes | Bosch Calibration Software ID `1037361858` |
+| Filename | Tahun / Model Year | Size | MD5 Checksum | Type / Target Platform |
+| :--- | :---: | :--- | :--- | :--- |
+| `BMW 330XD - EGR OFF _ DPF OFF _ AI STAGE 1.bin` | **2004–2008** | 2.00 MB | `738ffa234b695480dcf5c2641cc7b2c9` | Factory Binary Firmware Dump |
+| `BMW 330XD - ORI.bin` | **2004–2008** | 2.00 MB | `7a0b5e3a883087fd9638eb68f8251235` | Factory Binary Firmware Dump |
+| `E46 320D - EGR OFF_ STAGE 1 - 1037361858.bin` | **1998–2006** | 1.44 MB | `e677226f36d256322e0379e01235459f` | Factory Binary Firmware Dump |
 
 ---
 

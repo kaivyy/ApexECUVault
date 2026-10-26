@@ -21,18 +21,20 @@ Nama berkas yang tersimpan merefleksikan identitas perangkat keras (Hardware ID)
 > [!NOTE]
 > Mempertahankan kode dan nomor asli pabrikan pada penamaan berkas sangat krusial agar perangkat lunak kalibrasi (seperti **TunerPro**, **WinOLS**, atau **RomRaider**) dapat mengenali dan mencocokkan peta definisi (*definition maps*) secara otomatis tanpa merusak asosiasi header ECU.
 
+* **Rentang Tahun / Model Year**: 2000–2006
+
 ---
 
-## 2. Manifest Aset Berkas Fisik (100% Verified)
+## 2. Manifest Fisik Kalibrasi & Definisi Terverifikasi
 
-Berikut adalah daftar lengkap berkas fisik yang tersimpan secara lokal di direktori ini:
+Berikut adalah daftar lengkap berkas fisik yang tersimpan secara lokal di direktori ini dengan verifikasi Model Year (Tahun Produksi), ukuran, MD5 checksum, dan tipe platform:
 
-| Nama Berkas | Tipe / Format | Ukuran (Bytes) | Deskripsi Teknis & Identifikasi |
-| :--- | :--- | :--- | :--- |
-| `Full 211322001501JD34.bin` | `.BIN` | `524,288` bytes | Binary Firmware / Calibration Dump |
-| `Full 211322001701JD34.bin` | `.BIN` | `524,288` bytes | Binary Firmware / Calibration Dump |
-| `Full 211322002601JD79.bin` | `.BIN` | `524,288` bytes | Binary Firmware / Calibration Dump |
-| `Full 211322002801J429.bin` | `.BIN` | `524,288` bytes | Binary Firmware / Calibration Dump |
+| Filename | Tahun / Model Year | Size | MD5 Checksum | Type / Target Platform |
+| :--- | :---: | :--- | :--- | :--- |
+| `Full 211322001501JD34.bin` | **2000–2006** | 512.0 KB | `f5606365d9be81f904def43c84b30c03` | Factory Binary Firmware Dump |
+| `Full 211322001701JD34.bin` | **2000–2006** | 512.0 KB | `651d349cca7be40e974b8889752aeee1` | Factory Binary Firmware Dump |
+| `Full 211322002601JD79.bin` | **2000–2006** | 512.0 KB | `aca7a700036cfe4ef56346fb9732edb8` | Factory Binary Firmware Dump |
+| `Full 211322002801J429.bin` | **2000–2006** | 512.0 KB | `483bf3eb468ba23b8672023ea8a6fec1` | Factory Binary Firmware Dump |
 
 ---
 

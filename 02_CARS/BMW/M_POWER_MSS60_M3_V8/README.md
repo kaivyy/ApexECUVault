@@ -24,30 +24,32 @@ Nama berkas yang tersimpan merefleksikan identitas perangkat keras (Hardware ID)
 > [!NOTE]
 > Mempertahankan kode dan nomor asli pabrikan pada penamaan berkas sangat krusial agar perangkat lunak kalibrasi (seperti **TunerPro**, **WinOLS**, atau **EcuFlash**) dapat mengenali dan mencocokkan peta definisi (*definition maps*) secara otomatis tanpa merusak asosiasi header ECU.
 
+* **Rentang Tahun / Model Year**: 2007–2013
+
 ---
 
-## 2. Manifest Aset Berkas Fisik (100% Verified)
+## 2. Manifest Fisik Kalibrasi & Definisi Terverifikasi
 
-Berikut adalah daftar lengkap berkas fisik yang tersimpan secara lokal di direktori ini:
+Berikut adalah daftar lengkap berkas fisik yang tersimpan secara lokal di direktori ini dengan verifikasi Model Year (Tahun Produksi), ukuran, MD5 checksum, dan tipe platform:
 
-| Nama Berkas | Tipe / Format | Ukuran (Bytes) | Deskripsi Teknis & Identifikasi |
-| :--- | :--- | :--- | :--- |
-| `IGN_E90_BG11_ECE_HS_008 _530_2_ign_4.hex` | `Intel HEX Calibration Dump` | 5,362,256 | Berkas kalibrasi Intel HEX terstruktur (5,362,256 bytes) untuk kontroler mesin performa tinggi |
-| `IGN_E90_BG11_ECE_HS_009 _530_3_ign_.hex` | `Intel HEX Calibration Dump` | 5,362,256 | Berkas kalibrasi Intel HEX terstruktur (5,362,256 bytes) untuk kontroler mesin performa tinggi |
-| `IGN_E90_BG11_ECE_HS_009 _530_3_ign__1.hex` | `Intel HEX Calibration Dump` | 5,362,256 | Berkas kalibrasi Intel HEX terstruktur (5,362,256 bytes) untuk kontroler mesin performa tinggi |
-| `IGN_E90_BG11_US_HS_008 _530_2_ign.hex` | `Intel HEX Calibration Dump` | 5,362,256 | Berkas kalibrasi Intel HEX terstruktur (5,362,256 bytes) untuk kontroler mesin performa tinggi |
-| `IGN_E90_BG11_US_HS_008 _530_2_ign_1.hex` | `Intel HEX Calibration Dump` | 5,362,256 | Berkas kalibrasi Intel HEX terstruktur (5,362,256 bytes) untuk kontroler mesin performa tinggi |
-| `IGN_E90_BG11_US_HS_011 _530_3_2710_ign_1.hex` | `Intel HEX Calibration Dump` | 5,362,256 | Berkas kalibrasi Intel HEX terstruktur (5,362,256 bytes) untuk kontroler mesin performa tinggi |
-| `IGN_E90_BG11_US_HS_011 _530_3_2710_ign_2.hex` | `Intel HEX Calibration Dump` | 5,362,256 | Berkas kalibrasi Intel HEX terstruktur (5,362,256 bytes) untuk kontroler mesin performa tinggi |
-| `INJ_E90_BG11_ECE_HS_008 _530_2_inj_4.hex` | `Intel HEX Calibration Dump` | 5,362,256 | Berkas kalibrasi Intel HEX terstruktur (5,362,256 bytes) untuk kontroler mesin performa tinggi |
-| `INJ_E90_BG11_ECE_HS_009 _530_3_inj_.hex` | `Intel HEX Calibration Dump` | 5,362,256 | Berkas kalibrasi Intel HEX terstruktur (5,362,256 bytes) untuk kontroler mesin performa tinggi |
-| `INJ_E90_BG11_ECE_HS_009 _530_3_inj__1.hex` | `Intel HEX Calibration Dump` | 5,362,256 | Berkas kalibrasi Intel HEX terstruktur (5,362,256 bytes) untuk kontroler mesin performa tinggi |
-| `INJ_E90_BG11_US_HS_008 _530_2_inj.hex` | `Intel HEX Calibration Dump` | 5,362,256 | Berkas kalibrasi Intel HEX terstruktur (5,362,256 bytes) untuk kontroler mesin performa tinggi |
-| `INJ_E90_BG11_US_HS_008 _530_2_inj_1.hex` | `Intel HEX Calibration Dump` | 5,362,256 | Berkas kalibrasi Intel HEX terstruktur (5,362,256 bytes) untuk kontroler mesin performa tinggi |
-| `INJ_E90_BG11_US_HS_011 _530_3_2710_inj_1.hex` | `Intel HEX Calibration Dump` | 5,362,256 | Berkas kalibrasi Intel HEX terstruktur (5,362,256 bytes) untuk kontroler mesin performa tinggi |
-| `INJ_E90_BG11_US_HS_011 _530_3_2710_inj_2.hex` | `Intel HEX Calibration Dump` | 5,362,256 | Berkas kalibrasi Intel HEX terstruktur (5,362,256 bytes) untuk kontroler mesin performa tinggi |
-| `ign.a2l` | `ASAP2 / A2L Engineering Definition` | 3,143,435 | Definisi tabel kalibrasi resmi standar industri (3,143,435 bytes) untuk pemetaan register memori |
-| `inj.a2l` | `ASAP2 / A2L Engineering Definition` | 4,188,392 | Definisi tabel kalibrasi resmi standar industri (4,188,392 bytes) untuk pemetaan register memori |
+| Filename | Tahun / Model Year | Size | MD5 Checksum | Type / Target Platform |
+| :--- | :---: | :--- | :--- | :--- |
+| `IGN_E90_BG11_ECE_HS_008 _530_2_ign_4.hex` | **2006–2013** | 5.11 MB | `4451f20335aec32dc62f2ecc2901d6f2` | Intel HEX Calibration Firmware |
+| `IGN_E90_BG11_ECE_HS_009 _530_3_ign_.hex` | **2006–2013** | 5.11 MB | `247a98e2367b0443c1231d7a61602f52` | Intel HEX Calibration Firmware |
+| `IGN_E90_BG11_ECE_HS_009 _530_3_ign__1.hex` | **2006–2013** | 5.11 MB | `247a98e2367b0443c1231d7a61602f52` | Intel HEX Calibration Firmware |
+| `IGN_E90_BG11_US_HS_008 _530_2_ign.hex` | **2006–2013** | 5.11 MB | `4451f20335aec32dc62f2ecc2901d6f2` | Intel HEX Calibration Firmware |
+| `IGN_E90_BG11_US_HS_008 _530_2_ign_1.hex` | **2006–2013** | 5.11 MB | `4451f20335aec32dc62f2ecc2901d6f2` | Intel HEX Calibration Firmware |
+| `IGN_E90_BG11_US_HS_011 _530_3_2710_ign_1.hex` | **2006–2013** | 5.11 MB | `553690b2f051ba0f87128c4f3cc13764` | Intel HEX Calibration Firmware |
+| `IGN_E90_BG11_US_HS_011 _530_3_2710_ign_2.hex` | **2006–2013** | 5.11 MB | `b5e7a7ec47530bd6d65d114d2744d732` | Intel HEX Calibration Firmware |
+| `INJ_E90_BG11_ECE_HS_008 _530_2_inj_4.hex` | **2006–2013** | 5.11 MB | `e6b67d65b219a5825d57a0b5215e828f` | Intel HEX Calibration Firmware |
+| `INJ_E90_BG11_ECE_HS_009 _530_3_inj_.hex` | **2006–2013** | 5.11 MB | `e9ccb7c7a970aac780a21e1bb1eaa5e4` | Intel HEX Calibration Firmware |
+| `INJ_E90_BG11_ECE_HS_009 _530_3_inj__1.hex` | **2006–2013** | 5.11 MB | `e9ccb7c7a970aac780a21e1bb1eaa5e4` | Intel HEX Calibration Firmware |
+| `INJ_E90_BG11_US_HS_008 _530_2_inj.hex` | **2006–2013** | 5.11 MB | `e6b67d65b219a5825d57a0b5215e828f` | Intel HEX Calibration Firmware |
+| `INJ_E90_BG11_US_HS_008 _530_2_inj_1.hex` | **2006–2013** | 5.11 MB | `e6b67d65b219a5825d57a0b5215e828f` | Intel HEX Calibration Firmware |
+| `INJ_E90_BG11_US_HS_011 _530_3_2710_inj_1.hex` | **2006–2013** | 5.11 MB | `be9ef94f82f46babd2f6eccf16b2b13c` | Intel HEX Calibration Firmware |
+| `INJ_E90_BG11_US_HS_011 _530_3_2710_inj_2.hex` | **2006–2013** | 5.11 MB | `be9ef94f82f46babd2f6eccf16b2b13c` | Intel HEX Calibration Firmware |
+| `ign.a2l` | **2007–2013** | 3.00 MB | `60868050e5271b20634816729a858e78` | ECU / ASAP2 Calibration Map Definition |
+| `inj.a2l` | **2007–2013** | 3.99 MB | `1ad46d85e8b34d60e8a7c9ed30da6bbc` | ECU / ASAP2 Calibration Map Definition |
 
 ---
 

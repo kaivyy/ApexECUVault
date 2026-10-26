@@ -21,29 +21,31 @@ Nama berkas yang tersimpan merefleksikan identitas perangkat keras (Hardware ID)
 > [!NOTE]
 > Mempertahankan kode dan nomor asli pabrikan pada penamaan berkas sangat krusial agar perangkat lunak kalibrasi (seperti **TunerPro**, **WinOLS**, atau **RomRaider**) dapat mengenali dan mencocokkan peta definisi (*definition maps*) secara otomatis tanpa merusak asosiasi header ECU.
 
+* **Rentang Tahun / Model Year**: 1985–2004
+
 ---
 
-## 2. Manifest Aset Berkas Fisik (100% Verified)
+## 2. Manifest Fisik Kalibrasi & Definisi Terverifikasi
 
-Berikut adalah daftar lengkap berkas fisik yang tersimpan secara lokal di direktori ini:
+Berikut adalah daftar lengkap berkas fisik yang tersimpan secara lokal di direktori ini dengan verifikasi Model Year (Tahun Produksi), ukuran, MD5 checksum, dan tipe platform:
 
-| Nama Berkas | Tipe / Format | Ukuran (Bytes) | Deskripsi Teknis & Identifikasi |
-| :--- | :--- | :--- | :--- |
-| `6DFC.bin` | `.BIN` | `262,144` bytes | Binary Firmware / Calibration Dump |
-| `6DFD.bin` | `.BIN` | `262,144` bytes | Binary Firmware / Calibration Dump |
-| `6DGC.bin` | `.BIN` | `262,144` bytes | Binary Firmware / Calibration Dump |
-| `6DGD.bin` | `.BIN` | `262,144` bytes | Binary Firmware / Calibration Dump |
-| `CBAZA.xdf` | `.XDF` | `317,307` bytes | TunerPro Binary Definition Map |
-| `CDAN4.xdf` | `.XDF` | `172,791` bytes | TunerPro Binary Definition Map |
-| `CRAJ0.xdf` | `.XDF` | `215,714` bytes | TunerPro Binary Definition Map |
-| `Ford_EEC-IV_8SD_Calibration_OEM_ORI.bin` | `.BIN` | `57,344` bytes | Binary Firmware / Calibration Dump |
-| `Ford_EEC-IV_AA_FirstGen1985_Calibration_OEM_ORI.bin` | `.BIN` | `8,192` bytes | Binary Firmware / Calibration Dump |
-| `Ford_EEC-IV_M0M2_Calibration_OEM_ORI.bin` | `.BIN` | `57,344` bytes | Binary Firmware / Calibration Dump |
-| `Ford_EEC-IV_X1L_Calibration_OEM_ORI.bin` | `.BIN` | `57,344` bytes | Binary Firmware / Calibration Dump |
-| `Ford_Mustang_5.0L_FoxBody_Manual_A9L_OEM_ORI.bin` | `.BIN` | `32,768` bytes | Binary Firmware / Calibration Dump |
-| `Ford_Thunderbird_TurboCoupe_MustangSVO_2.3T_LA3_OEM_ORI.bin` | `.BIN` | `32,768` bytes | Binary Firmware / Calibration Dump |
-| `GUFA.xdf` | `.XDF` | `494,970` bytes | TunerPro Binary Definition Map |
-| `GUFB.xdf` | `.XDF` | `496,699` bytes | TunerPro Binary Definition Map |
+| Filename | Tahun / Model Year | Size | MD5 Checksum | Type / Target Platform |
+| :--- | :---: | :--- | :--- | :--- |
+| `6DFC.bin` | **1985–2004** | 256.0 KB | `2767e7e30e0652a9e795cfb5b409e982` | Factory Binary Firmware Dump |
+| `6DFD.bin` | **1985–2004** | 256.0 KB | `cb30e24470eb6d6725792135e5d906d4` | Factory Binary Firmware Dump |
+| `6DGC.bin` | **1985–2004** | 256.0 KB | `113db590ff6234de01d3ef3df75bd96d` | Factory Binary Firmware Dump |
+| `6DGD.bin` | **1985–2004** | 256.0 KB | `90bbde737a318cdfcbb352e22e14c868` | Factory Binary Firmware Dump |
+| `CBAZA.xdf` | **1985–2004** | 309.9 KB | `dc4628312362aa97968951d40fc5891d` | TunerPro Binary Definition Map |
+| `CDAN4.xdf` | **1985–2004** | 168.7 KB | `5e134df0c835951cd23c969d405d9d6c` | TunerPro Binary Definition Map |
+| `CRAJ0.xdf` | **1985–2004** | 210.7 KB | `00a2acf2a4905fd93bf8c95119e4148e` | TunerPro Binary Definition Map |
+| `Ford_EEC-IV_8SD_Calibration_OEM_ORI.bin` | **1985–2004** | 56.0 KB | `a693aa0e93a438ce402f84ce6e1730ae` | Factory Binary Firmware Dump |
+| `Ford_EEC-IV_AA_FirstGen1985_Calibration_OEM_ORI.bin` | **1985** | 8.0 KB | `f0a376de3debc1d7d3bd2b3e419dbf1f` | Factory Binary Firmware Dump |
+| `Ford_EEC-IV_M0M2_Calibration_OEM_ORI.bin` | **1985–2004** | 56.0 KB | `5d9560aa49ba658022bc4770a85382b9` | Factory Binary Firmware Dump |
+| `Ford_EEC-IV_X1L_Calibration_OEM_ORI.bin` | **1985–2004** | 56.0 KB | `d21f5c34b9aa6999d529f7437f97d037` | Factory Binary Firmware Dump |
+| `Ford_Mustang_5.0L_FoxBody_Manual_A9L_OEM_ORI.bin` | **1985–2004** | 32.0 KB | `0a7759f430653e280cbdd3f02d8bf322` | Factory Binary Firmware Dump |
+| `Ford_Thunderbird_TurboCoupe_MustangSVO_2.3T_LA3_OEM_ORI.bin` | **1985–2004** | 32.0 KB | `b1525a5c93dcfac2e3cf7b24ed10521c` | Factory Binary Firmware Dump |
+| `GUFA.xdf` | **1985–2004** | 483.4 KB | `28d3c5bdf66182cff4b39850ebd44814` | TunerPro Binary Definition Map |
+| `GUFB.xdf` | **1985–2004** | 485.1 KB | `f5b62ef9f570031f3f6f79cd05f58e79` | TunerPro Binary Definition Map |
 
 ---
 

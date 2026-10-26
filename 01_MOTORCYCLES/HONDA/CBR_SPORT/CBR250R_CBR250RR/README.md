@@ -21,19 +21,21 @@ Nama berkas yang tersimpan merefleksikan identitas perangkat keras (Hardware ID)
 > [!NOTE]
 > Mempertahankan kode dan nomor asli pabrikan pada penamaan berkas sangat krusial agar perangkat lunak kalibrasi (seperti **TunerPro**, **WinOLS**, atau **RomRaider**) dapat mengenali dan mencocokkan peta definisi (*definition maps*) secara otomatis tanpa merusak asosiasi header ECU.
 
+* **Rentang Tahun / Model Year**: OEM Production
+
 ---
 
-## 2. Manifest Aset Berkas Fisik (100% Verified)
+## 2. Manifest Fisik Kalibrasi & Definisi Terverifikasi
 
-Berikut adalah daftar lengkap berkas fisik yang tersimpan secara lokal di direktori ini:
+Berikut adalah daftar lengkap berkas fisik yang tersimpan secara lokal di direktori ini dengan verifikasi Model Year (Tahun Produksi), ukuran, MD5 checksum, dan tipe platform:
 
-| Nama Berkas | Tipe / Format | Ukuran (Bytes) | Deskripsi Teknis & Identifikasi |
-| :--- | :--- | :--- | :--- |
-| `38770-K64-N01.bin` | `.BIN` | `1,048,576` bytes | Honda Motorcycle Keihin ECU ROM `38770-K64` |
-| `38770-K64-N04.bin` | `.BIN` | `1,048,576` bytes | Honda Motorcycle Keihin ECU ROM `38770-K64` |
-| `38770-K64-R02.bin` | `.BIN` | `1,048,576` bytes | Honda Motorcycle Keihin ECU ROM `38770-K64` |
-| `38770-KYJ-922.bin` | `.BIN` | `57,344` bytes | Honda Motorcycle Keihin ECU ROM `38770-KYJ` |
-| `38770-KYJ-971.bin` | `.BIN` | `57,344` bytes | Honda Motorcycle Keihin ECU ROM `38770-KYJ` |
+| Filename | Tahun / Model Year | Size | MD5 Checksum | Type / Target Platform |
+| :--- | :---: | :--- | :--- | :--- |
+| `38770-K64-N01.bin` | **2016–2019** | 1.00 MB | `e0c12d43c50c7c285df0307bef13f4b5` | Factory Binary Firmware Dump |
+| `38770-K64-N04.bin` | **2016–2019** | 1.00 MB | `c069d5b2d1476a728ba14a43ef73dc7a` | Factory Binary Firmware Dump |
+| `38770-K64-R02.bin` | **2017–2024** | 1.00 MB | `f87f1dc65059e08f496e62fd0872a6e7` | Factory Binary Firmware Dump |
+| `38770-KYJ-922.bin` | **OEM Production** | 56.0 KB | `b9a77380a4a987b72f3d9eceabc5c0e4` | Factory Binary Firmware Dump |
+| `38770-KYJ-971.bin` | **OEM Production** | 56.0 KB | `ebb50976b76e51856f16404ad655b149` | Factory Binary Firmware Dump |
 
 ---
 

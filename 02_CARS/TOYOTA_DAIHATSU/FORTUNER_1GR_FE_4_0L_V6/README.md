@@ -21,19 +21,21 @@ Nama berkas yang tersimpan merefleksikan identitas perangkat keras (Hardware ID)
 > [!NOTE]
 > Mempertahankan kode dan nomor asli pabrikan pada penamaan berkas sangat krusial agar perangkat lunak kalibrasi (seperti **TunerPro**, **WinOLS**, atau **RomRaider**) dapat mengenali dan mencocokkan peta definisi (*definition maps*) secara otomatis tanpa merusak asosiasi header ECU.
 
+* **Rentang Tahun / Model Year**: 2005–2020
+
 ---
 
-## 2. Manifest Aset Berkas Fisik (100% Verified)
+## 2. Manifest Fisik Kalibrasi & Definisi Terverifikasi
 
-Berikut adalah daftar lengkap berkas fisik yang tersimpan secara lokal di direktori ini:
+Berikut adalah daftar lengkap berkas fisik yang tersimpan secara lokal di direktori ini dengan verifikasi Model Year (Tahun Produksi), ukuran, MD5 checksum, dan tipe platform:
 
-| Nama Berkas | Tipe / Format | Ukuran (Bytes) | Deskripsi Teknis & Identifikasi |
-| :--- | :--- | :--- | :--- |
-| `TOYOTA_4RUNNER_FORTUNER_2006_4.0L_V6_1GRFE_89663-35292.bin` | `.BIN` | `393,216` bytes | Toyota / Denso Factory Calibration ID `89663-35292` |
-| `TOYOTA_89663-F0852_1GR.xdf` | `.XDF` | `10,074` bytes | Toyota / Denso Factory Calibration ID `89663-F0852` |
-| `TOYOTA_FJ_CRUISER_FORTUNER_2011_4.0L_V6_1GRFE_89663-YWK01.bin` | `.BIN` | `753,664` bytes | Toyota / Denso Factory Calibration ID `89663-YWK01` |
-| `TOYOTA_FORTUNER_PRADO_LC120_2008_4.0L_V6_1GRFE_89663-60551.bin` | `.BIN` | `753,664` bytes | Toyota / Denso Factory Calibration ID `89663-60551` |
-| `TOYOTA_FORTUNER_PRADO_LC150_2014_4.0L_V6_1GRFE_89663-60E64.bin` | `.BIN` | `1,015,808` bytes | Toyota / Denso Factory Calibration ID `89663-60E64` |
+| Filename | Tahun / Model Year | Size | MD5 Checksum | Type / Target Platform |
+| :--- | :---: | :--- | :--- | :--- |
+| `TOYOTA_4RUNNER_FORTUNER_2006_4.0L_V6_1GRFE_89663-35292.bin` | **2006** | 384.0 KB | `1669b796a63862e27247ef5b65ad7410` | Factory Binary Firmware Dump |
+| `TOYOTA_89663-F0852_1GR.xdf` | **2005–2020** | 9.8 KB | `dd2f881036a4995cd44ae636f78e1db5` | TunerPro Binary Definition Map |
+| `TOYOTA_FJ_CRUISER_FORTUNER_2011_4.0L_V6_1GRFE_89663-YWK01.bin` | **2011** | 736.0 KB | `b95a0ca3d0ed2e095d52b84ff552f1d8` | Factory Binary Firmware Dump |
+| `TOYOTA_FORTUNER_PRADO_LC120_2008_4.0L_V6_1GRFE_89663-60551.bin` | **2008** | 736.0 KB | `3f49683123aaf9dcabdaa8e5f2a03ae7` | Factory Binary Firmware Dump |
+| `TOYOTA_FORTUNER_PRADO_LC150_2014_4.0L_V6_1GRFE_89663-60E64.bin` | **2014** | 992.0 KB | `9b47aa92031ba832eb652c8b2353987b` | Factory Binary Firmware Dump |
 
 ---
 

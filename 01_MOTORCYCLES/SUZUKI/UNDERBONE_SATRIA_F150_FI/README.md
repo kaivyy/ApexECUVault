@@ -21,17 +21,19 @@ Nama berkas yang tersimpan merefleksikan identitas perangkat keras (Hardware ID)
 > [!NOTE]
 > Mempertahankan kode dan nomor asli pabrikan pada penamaan berkas sangat krusial agar perangkat lunak kalibrasi (seperti **TunerPro**, **WinOLS**, atau **RomRaider**) dapat mengenali dan mencocokkan peta definisi (*definition maps*) secara otomatis tanpa merusak asosiasi header ECU.
 
+* **Rentang Tahun / Model Year**: 2016–2024
+
 ---
 
-## 2. Manifest Aset Berkas Fisik (100% Verified)
+## 2. Manifest Fisik Kalibrasi & Definisi Terverifikasi
 
-Berikut adalah daftar lengkap berkas fisik yang tersimpan secara lokal di direktori ini:
+Berikut adalah daftar lengkap berkas fisik yang tersimpan secara lokal di direktori ini dengan verifikasi Model Year (Tahun Produksi), ukuran, MD5 checksum, dan tipe platform:
 
-| Nama Berkas | Tipe / Format | Ukuran (Bytes) | Deskripsi Teknis & Identifikasi |
-| :--- | :--- | :--- | :--- |
-| `GENERATIONAL_32920-23K00_Suzuki_Satria_F150_FI___Raider_R150_FI_Gen_1_2016_2020.xdf` | `.XDF` | `2,557` bytes | TunerPro Binary Definition Map |
-| `GENERATIONAL_32920-23K30_Suzuki_All_New_Satria_F150_FI_Facelift_Euro_4_2021_2026.xdf` | `.XDF` | `2,558` bytes | TunerPro Binary Definition Map |
-| `SUZUKI_32920-23K00_Suzuki_Satria_F150_FI_(23K00).xdf` | `.XDF` | `7,579` bytes | TunerPro Binary Definition Map |
+| Filename | Tahun / Model Year | Size | MD5 Checksum | Type / Target Platform |
+| :--- | :---: | :--- | :--- | :--- |
+| `GENERATIONAL_32920-23K00_Suzuki_Satria_F150_FI___Raider_R150_FI_Gen_1_2016_2020.xdf` | **2016–2020** | 2.5 KB | `217d068ae67e0b20a49232da1b8ae24d` | TunerPro Binary Definition Map |
+| `GENERATIONAL_32920-23K30_Suzuki_All_New_Satria_F150_FI_Facelift_Euro_4_2021_2026.xdf` | **2021–2026** | 2.5 KB | `d744e13d1f3f0b269d20489d98e49279` | TunerPro Binary Definition Map |
+| `SUZUKI_32920-23K00_Suzuki_Satria_F150_FI_(23K00).xdf` | **2016–2024** | 7.4 KB | `ed516776c91a1c28f9b2e973f4ffa862` | TunerPro Binary Definition Map |
 
 ---
 

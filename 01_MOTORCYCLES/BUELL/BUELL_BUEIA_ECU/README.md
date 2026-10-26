@@ -3,16 +3,19 @@
 ## 1. Technical Overview
 Koleksi biner kalibrasi pabrikan OEM dan definisi tuning untuk modul ECU platform BUELL BUEIA ECU.
 
+* **Rentang Tahun / Model Year**: 2002–2010
 * **Total File Terdaftar**: 2 file (100% fisik terverifikasi, Zero Synthetic)
 
 ---
 
 ## 2. Manifest Fisik Kalibrasi & Definisi Terverifikasi
 
-| Filename | Size | MD5 Checksum | Type / Target |
-| :--- | :--- | :--- | :--- |
-| `BUEIA_V5.adx` | 105.4 KB | `a5d251d4dcbf081f6d5509993475e982` | TunerPro ADX Datalogging Definition |
-| `BUEIA_V5.xdf` | 116.0 KB | `00b217769cd8d3802607c3c39d310cbc` | TunerPro Binary Definition Map |
+Berikut adalah daftar lengkap berkas fisik yang tersimpan secara lokal di direktori ini dengan verifikasi Model Year (Tahun Produksi), ukuran, MD5 checksum, dan tipe platform:
+
+| Filename | Tahun / Model Year | Size | MD5 Checksum | Type / Target Platform |
+| :--- | :---: | :--- | :--- | :--- |
+| `BUEIA_V5.adx` | **2002–2010** | 105.4 KB | `a5d251d4dcbf081f6d5509993475e982` | TunerPro ADX Datalogging Definition |
+| `BUEIA_V5.xdf` | **2002–2010** | 116.0 KB | `00b217769cd8d3802607c3c39d310cbc` | TunerPro Binary Definition Map |
 
 ---
 

@@ -21,42 +21,44 @@ Nama berkas yang tersimpan merefleksikan identitas perangkat keras (Hardware ID)
 > [!NOTE]
 > Mempertahankan kode dan nomor asli pabrikan pada penamaan berkas sangat krusial agar perangkat lunak kalibrasi (seperti **TunerPro**, **WinOLS**, atau **RomRaider**) dapat mengenali dan mencocokkan peta definisi (*definition maps*) secara otomatis tanpa merusak asosiasi header ECU.
 
+* **Rentang Tahun / Model Year**: OEM Production
+
 ---
 
-## 2. Manifest Aset Berkas Fisik (100% Verified)
+## 2. Manifest Fisik Kalibrasi & Definisi Terverifikasi
 
-Berikut adalah daftar lengkap berkas fisik yang tersimpan secara lokal di direktori ini:
+Berikut adalah daftar lengkap berkas fisik yang tersimpan secara lokal di direktori ini dengan verifikasi Model Year (Tahun Produksi), ukuran, MD5 checksum, dan tipe platform:
 
-| Nama Berkas | Tipe / Format | Ukuran (Bytes) | Deskripsi Teknis & Identifikasi |
-| :--- | :--- | :--- | :--- |
-| `000010CA3B8C01.xdf` | `.XDF` | `653,063` bytes | BMW DME Flash Calibration ID `000010ca3b8c01` |
-| `000010CA3B8C01_original.bin` | `.BIN` | `4,194,304` bytes | BMW DME Flash Calibration ID `000010ca3b8c01` |
-| `000010CA598C01.xdf` | `.XDF` | `645,472` bytes | BMW DME Flash Calibration ID `000010ca598c01` |
-| `000010CA598C01_original.bin` | `.BIN` | `4,194,304` bytes | BMW DME Flash Calibration ID `000010ca598c01` |
-| `00004ACF0A3204.xdf` | `.XDF` | `668,152` bytes | BMW DME Flash Calibration ID `00004acf0a3204` |
-| `00004ACF0A3204_original.bin` | `.BIN` | `8,388,608` bytes | BMW DME Flash Calibration ID `00004acf0a3204` |
-| `00004ACF147803.xdf` | `.XDF` | `673,911` bytes | BMW DME Flash Calibration ID `00004acf147803` |
-| `00004ACF147803_original.bin` | `.BIN` | `8,388,608` bytes | BMW DME Flash Calibration ID `00004acf147803` |
-| `00004ACF1E6E05.xdf` | `.XDF` | `668,376` bytes | BMW DME Flash Calibration ID `00004acf1e6e05` |
-| `00004ACF1E6E05_original.bin` | `.BIN` | `8,388,608` bytes | BMW DME Flash Calibration ID `00004acf1e6e05` |
-| `00004ACF1E7805.xdf` | `.XDF` | `668,376` bytes | BMW DME Flash Calibration ID `00004acf1e7805` |
-| `00004ACF1E7805_original.bin` | `.BIN` | `8,388,608` bytes | BMW DME Flash Calibration ID `00004acf1e7805` |
-| `00004ACF1E9605.xdf` | `.XDF` | `668,376` bytes | BMW DME Flash Calibration ID `00004acf1e9605` |
-| `00004ACF1E9605_original.bin` | `.BIN` | `8,388,608` bytes | BMW DME Flash Calibration ID `00004acf1e9605` |
-| `00004ACF1EA006.xdf` | `.XDF` | `668,376` bytes | BMW DME Flash Calibration ID `00004acf1ea006` |
-| `00004ACF1EA006_original.bin` | `.BIN` | `8,388,608` bytes | BMW DME Flash Calibration ID `00004acf1ea006` |
-| `00004ACF1EAA05.xdf` | `.XDF` | `668,376` bytes | BMW DME Flash Calibration ID `00004acf1eaa05` |
-| `00004ACF1EAA05_original.bin` | `.BIN` | `8,388,608` bytes | BMW DME Flash Calibration ID `00004acf1eaa05` |
-| `00004ACF1EB405.xdf` | `.XDF` | `668,376` bytes | BMW DME Flash Calibration ID `00004acf1eb405` |
-| `00004ACF1EB405_original.bin` | `.BIN` | `8,388,608` bytes | BMW DME Flash Calibration ID `00004acf1eb405` |
-| `00004ACF286E05.xdf` | `.XDF` | `690,160` bytes | BMW DME Flash Calibration ID `00004acf286e05` |
-| `00004ACF286E05_original.bin` | `.BIN` | `8,388,608` bytes | BMW DME Flash Calibration ID `00004acf286e05` |
-| `00004ACF287806.xdf` | `.XDF` | `690,159` bytes | BMW DME Flash Calibration ID `00004acf287806` |
-| `00004ACF287806_original.bin` | `.BIN` | `8,388,608` bytes | BMW DME Flash Calibration ID `00004acf287806` |
-| `00004ACF288205.xdf` | `.XDF` | `690,159` bytes | BMW DME Flash Calibration ID `00004acf288205` |
-| `00004ACF288205_original.bin` | `.BIN` | `8,388,608` bytes | BMW DME Flash Calibration ID `00004acf288205` |
-| `00004ACF289605.xdf` | `.XDF` | `690,159` bytes | BMW DME Flash Calibration ID `00004acf289605` |
-| `00004ACF289605_original.bin` | `.BIN` | `8,388,608` bytes | BMW DME Flash Calibration ID `00004acf289605` |
+| Filename | Tahun / Model Year | Size | MD5 Checksum | Type / Target Platform |
+| :--- | :---: | :--- | :--- | :--- |
+| `000010CA3B8C01.xdf` | **OEM Production** | 637.8 KB | `861268aff0abe27b2e1e1c0a106039aa` | TunerPro Binary Definition Map |
+| `000010CA3B8C01_original.bin` | **OEM Production** | 4.00 MB | `0dd83e918f3df32d04c462b535ea0d9e` | Factory Binary Firmware Dump |
+| `000010CA598C01.xdf` | **OEM Production** | 630.3 KB | `40b2fb3ad1d325d622f69ae1027eaa8a` | TunerPro Binary Definition Map |
+| `000010CA598C01_original.bin` | **OEM Production** | 4.00 MB | `9cfe95ad86ad74f8151117a24d8f3c7f` | Factory Binary Firmware Dump |
+| `00004ACF0A3204.xdf` | **OEM Production** | 652.5 KB | `e45669d4d52dc60cb6bcc2d4276c0bd1` | TunerPro Binary Definition Map |
+| `00004ACF0A3204_original.bin` | **OEM Production** | 8.00 MB | `1559258c9e0f7fd228e6efa5a999e9c7` | Factory Binary Firmware Dump |
+| `00004ACF147803.xdf` | **OEM Production** | 658.1 KB | `597d4bfdc8ad2fb5efc492f2482aa481` | TunerPro Binary Definition Map |
+| `00004ACF147803_original.bin` | **OEM Production** | 8.00 MB | `4503527b93e6ce592a9b8595622830ab` | Factory Binary Firmware Dump |
+| `00004ACF1E6E05.xdf` | **OEM Production** | 652.7 KB | `2af11ea732261b5db6d559bf829bf15f` | TunerPro Binary Definition Map |
+| `00004ACF1E6E05_original.bin` | **OEM Production** | 8.00 MB | `d0427f59c1135ea4ad7d48258455c94b` | Factory Binary Firmware Dump |
+| `00004ACF1E7805.xdf` | **OEM Production** | 652.7 KB | `d6dc97ead974b74fd3ccac0d6d8a7934` | TunerPro Binary Definition Map |
+| `00004ACF1E7805_original.bin` | **OEM Production** | 8.00 MB | `7f18fe0e6354407fbdf2b5a7133bd19f` | Factory Binary Firmware Dump |
+| `00004ACF1E9605.xdf` | **OEM Production** | 652.7 KB | `8169ad83c416affb11fc9e7850783ad2` | TunerPro Binary Definition Map |
+| `00004ACF1E9605_original.bin` | **OEM Production** | 8.00 MB | `d768576241ff96359ae416d0d9d181f5` | Factory Binary Firmware Dump |
+| `00004ACF1EA006.xdf` | **OEM Production** | 652.7 KB | `81e91047b1b1716abec60567ff716733` | TunerPro Binary Definition Map |
+| `00004ACF1EA006_original.bin` | **OEM Production** | 8.00 MB | `11c6ca46da75524b22523e50ab677bb4` | Factory Binary Firmware Dump |
+| `00004ACF1EAA05.xdf` | **OEM Production** | 652.7 KB | `4df2808f53aa64558113ba51af40cc51` | TunerPro Binary Definition Map |
+| `00004ACF1EAA05_original.bin` | **OEM Production** | 8.00 MB | `975835652e81499e12b19290df85279a` | Factory Binary Firmware Dump |
+| `00004ACF1EB405.xdf` | **OEM Production** | 652.7 KB | `722a52dae76eede311b47d0656f023a1` | TunerPro Binary Definition Map |
+| `00004ACF1EB405_original.bin` | **OEM Production** | 8.00 MB | `9aebadd1dc558eb08cfe0998d774af8e` | Factory Binary Firmware Dump |
+| `00004ACF286E05.xdf` | **OEM Production** | 674.0 KB | `2609741adfc5c4b7d4d2312736597cfa` | TunerPro Binary Definition Map |
+| `00004ACF286E05_original.bin` | **OEM Production** | 8.00 MB | `53973a1ccd7cc1f76a2a62f4ea60c224` | Factory Binary Firmware Dump |
+| `00004ACF287806.xdf` | **OEM Production** | 674.0 KB | `5ef31f1d7441b1f631707ffee1a08f4e` | TunerPro Binary Definition Map |
+| `00004ACF287806_original.bin` | **OEM Production** | 8.00 MB | `4ba04ce3d33efc8b5778600ead64a118` | Factory Binary Firmware Dump |
+| `00004ACF288205.xdf` | **OEM Production** | 674.0 KB | `8009651bb5cd1a1471b66ee685baba4b` | TunerPro Binary Definition Map |
+| `00004ACF288205_original.bin` | **OEM Production** | 8.00 MB | `cc01cfde49cb1b81baf5b87bdbafd43e` | Factory Binary Firmware Dump |
+| `00004ACF289605.xdf` | **OEM Production** | 674.0 KB | `91f1f262280ee2dc0736a85c484b837c` | TunerPro Binary Definition Map |
+| `00004ACF289605_original.bin` | **OEM Production** | 8.00 MB | `4d3d4d8ac5a72be4042a9648e209b05e` | Factory Binary Firmware Dump |
 
 ---
 

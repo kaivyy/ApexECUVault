@@ -21,51 +21,53 @@ Nama berkas yang tersimpan merefleksikan identitas perangkat keras (Hardware ID)
 > [!NOTE]
 > Mempertahankan kode dan nomor asli pabrikan pada penamaan berkas sangat krusial agar perangkat lunak kalibrasi (seperti **TunerPro**, **WinOLS**, atau **RomRaider**) dapat mengenali dan mencocokkan peta definisi (*definition maps*) secara otomatis tanpa merusak asosiasi header ECU.
 
+* **Rentang Tahun / Model Year**: OEM Production
+
 ---
 
-## 2. Manifest Aset Berkas Fisik (100% Verified)
+## 2. Manifest Fisik Kalibrasi & Definisi Terverifikasi
 
-Berikut adalah daftar lengkap berkas fisik yang tersimpan secara lokal di direktori ini:
+Berikut adalah daftar lengkap berkas fisik yang tersimpan secara lokal di direktori ini dengan verifikasi Model Year (Tahun Produksi), ukuran, MD5 checksum, dan tipe platform:
 
-| Nama Berkas | Tipe / Format | Ukuran (Bytes) | Deskripsi Teknis & Identifikasi |
-| :--- | :--- | :--- | :--- |
-| `12202088 - 2001 512k.xdf` | `.XDF` | `632,290` bytes | General Motors Operating System ID `12202088` |
-| `12202088_release.xdf` | `.XDF` | `632,290` bytes | General Motors Operating System ID `12202088` |
-| `12208322 - 2001 512k.xdf` | `.XDF` | `632,290` bytes | General Motors Operating System ID `12208322` |
-| `12208322_release.xdf` | `.XDF` | `632,290` bytes | General Motors Operating System ID `12208322` |
-| `12209203_release.xdf` | `.XDF` | `602,221` bytes | General Motors Operating System ID `12209203` |
-| `12212156_release.xdf` | `.XDF` | `602,206` bytes | General Motors Operating System ID `12212156` |
-| `12216125_TCS.xdf` | `.XDF` | `695` bytes | General Motors Operating System ID `12216125` |
-| `12587603_RC1.xdf` | `.XDF` | `801,440` bytes | General Motors Operating System ID `12587603` |
-| `12587603_release.xdf` | `.XDF` | `632,058` bytes | General Motors Operating System ID `12587603` |
-| `12592433_Beta_metric.xdf` | `.XDF` | `597,935` bytes | General Motors Operating System ID `12592433` |
-| `12592433_beta_imperial.xdf` | `.XDF` | `605,011` bytes | General Motors Operating System ID `12592433` |
-| `12592618_alpha.xdf` | `.XDF` | `27,449` bytes | General Motors Operating System ID `12592618` |
-| `Lean Cruise.xdf` | `.XDF` | `2,032` bytes | TunerPro Binary Definition Map |
-| `No Password - 12587603_release.xdf` | `.XDF` | `631,750` bytes | General Motors Operating System ID `12587603` |
-| `No Password - OS12212156 - 2002 512kB PCM - v5_old.xdf` | `.XDF` | `1,272,938` bytes | General Motors Operating System ID `12212156` |
-| `No Password - Operating System 12202088 - 512Kb PCM - 2001 model year.xdf` | `.XDF` | `620,841` bytes | General Motors Operating System ID `12202088` |
-| `No Password - Operating System 12208322 - 512Kb PCM - 2001 model year.xdf` | `.XDF` | `620,841` bytes | General Motors Operating System ID `12208322` |
-| `No Password - Operating System 12209203 - 512Kb PCM - 2002 model year.xdf` | `.XDF` | `618,128` bytes | General Motors Operating System ID `12209203` |
-| `No Password - Operating System 12216125 - 512Kb PCM - 2002 model year - 5.3L Flex Fuel and 8.1L engines.xdf` | `.XDF` | `643,408` bytes | General Motors Operating System ID `12216125` |
-| `No Password - Operating System 12221588 - 512Kb PCM - Corvette 2001 to 2003 model years.xdf` | `.XDF` | `623,195` bytes | General Motors Operating System ID `12221588` |
-| `No Password - Operating System 12225074 - 512Kb PCM - 2001 to 2004 Holden model years.xdf` | `.XDF` | `618,194` bytes | General Motors Operating System ID `12225074` |
-| `No Password - Operating System 12593358 - 512Kb PCM - Corvette 2001 to 2003 model years.xdf` | `.XDF` | `623,195` bytes | General Motors Operating System ID `12593358` |
-| `No Password - XDF for Operating System 12202088 - 2001 512Kb PCM - Version 5.xdf` | `.XDF` | `632,026` bytes | General Motors Operating System ID `12202088` |
-| `No Password - XDF for Operating System 12208322 - 2001 512Kb PCM - Version 5.xdf` | `.XDF` | `632,026` bytes | General Motors Operating System ID `12208322` |
-| `No Password - __Operating System 12212156 - 512Kb PCM - 2002 model year.xdf` | `.XDF` | `618,112` bytes | General Motors Operating System ID `12212156` |
-| `OS12212156 - 2002 512kB PCM - v5_old.xdf` | `.XDF` | `1,273,255` bytes | General Motors Operating System ID `12212156` |
-| `OS12212156 - 2002 512kB PCM - v6 - no password.xdf` | `.XDF` | `1,687,463` bytes | General Motors Operating System ID `12212156` |
-| `Operating System 12202088 - 512Kb PCM - 2001 model year.xdf` | `.XDF` | `621,149` bytes | General Motors Operating System ID `12202088` |
-| `Operating System 12208322 - 512Kb PCM - 2001 model year.xdf` | `.XDF` | `621,149` bytes | General Motors Operating System ID `12208322` |
-| `Operating System 12209203 - 512Kb PCM - 2002 model year.xdf` | `.XDF` | `618,436` bytes | General Motors Operating System ID `12209203` |
-| `Operating System 12216125 - 512Kb PCM - 2002 model year - 5.3L Flex Fuel and 8.1L engines.xdf` | `.XDF` | `643,716` bytes | General Motors Operating System ID `12216125` |
-| `Operating System 12221588 - 512Kb PCM - Corvette 2001 to 2003 model years.xdf` | `.XDF` | `623,503` bytes | General Motors Operating System ID `12221588` |
-| `Operating System 12225074 - 512Kb PCM - 2001 to 2004 Holden model years.xdf` | `.XDF` | `618,502` bytes | General Motors Operating System ID `12225074` |
-| `Operating System 12593358 - 512Kb PCM - Corvette 2001 to 2003 model years.xdf` | `.XDF` | `623,503` bytes | General Motors Operating System ID `12593358` |
-| `XDF for Operating System 12202088 - 2001 512Kb PCM - Version 5.xdf` | `.XDF` | `632,321` bytes | General Motors Operating System ID `12202088` |
-| `XDF for Operating System 12208322 - 2001 512Kb PCM - Version 5.xdf` | `.XDF` | `632,321` bytes | General Motors Operating System ID `12208322` |
-| `~~Operating System 12212156 - 512Kb PCM - 2002 model year.xdf` | `.XDF` | `618,420` bytes | General Motors Operating System ID `12212156` |
+| Filename | Tahun / Model Year | Size | MD5 Checksum | Type / Target Platform |
+| :--- | :---: | :--- | :--- | :--- |
+| `12202088 - 2001 512k.xdf` | **2001** | 617.5 KB | `f100e3a728d6b40bd1da32c831cfb3be` | TunerPro Binary Definition Map |
+| `12202088_release.xdf` | **OEM Production** | 617.5 KB | `f100e3a728d6b40bd1da32c831cfb3be` | TunerPro Binary Definition Map |
+| `12208322 - 2001 512k.xdf` | **2001** | 617.5 KB | `0742ffff2c2ca927c638c6f546073edd` | TunerPro Binary Definition Map |
+| `12208322_release.xdf` | **1999–2002 (P01)** | 617.5 KB | `0742ffff2c2ca927c638c6f546073edd` | TunerPro Binary Definition Map |
+| `12209203_release.xdf` | **OEM Production** | 588.1 KB | `b706e5a686283cbf25f9cd2dda54f58f` | TunerPro Binary Definition Map |
+| `12212156_release.xdf` | **1999–2002 (P01)** | 588.1 KB | `56f1f73f8e4306b4d97913a794f5ef3f` | TunerPro Binary Definition Map |
+| `12216125_TCS.xdf` | **OEM Production** | 695 B | `7b84d08b2d44a8cdbc61132ef9e7909d` | TunerPro Binary Definition Map |
+| `12587603_RC1.xdf` | **2003–2007 (P59)** | 782.7 KB | `7ca8ac43e3015035e137d442666d4001` | TunerPro Binary Definition Map |
+| `12587603_release.xdf` | **2003–2007 (P59)** | 617.2 KB | `d2d3d2bfc08a93161fd0d4fa5ed0fb6d` | TunerPro Binary Definition Map |
+| `12592433_Beta_metric.xdf` | **OEM Production** | 583.9 KB | `0a29a6bc893c2d5d60ffb31e5809a1de` | TunerPro Binary Definition Map |
+| `12592433_beta_imperial.xdf` | **OEM Production** | 590.8 KB | `a166279e5ea2ecf2ec91b861afa8de34` | TunerPro Binary Definition Map |
+| `12592618_alpha.xdf` | **2003–2007 (P59)** | 26.8 KB | `e57fc5aec165a391b5e266e6985c2a20` | TunerPro Binary Definition Map |
+| `Lean Cruise.xdf` | **OEM Production** | 2.0 KB | `332f189f9f987843c41fdabcdcf70e16` | TunerPro Binary Definition Map |
+| `No Password - 12587603_release.xdf` | **2003–2007 (P59)** | 616.9 KB | `e833ffd09b7dca11c86475bab3874365` | TunerPro Binary Definition Map |
+| `No Password - OS12212156 - 2002 512kB PCM - v5_old.xdf` | **2002** | 1.21 MB | `a2b8e6f719b6e34af1bfbd89f745c772` | TunerPro Binary Definition Map |
+| `No Password - Operating System 12202088 - 512Kb PCM - 2001 model year.xdf` | **2001** | 606.3 KB | `38261c012eced48a87ef11f19ca6f09a` | TunerPro Binary Definition Map |
+| `No Password - Operating System 12208322 - 512Kb PCM - 2001 model year.xdf` | **2001** | 606.3 KB | `d9d3003710592f136071be47bc7460eb` | TunerPro Binary Definition Map |
+| `No Password - Operating System 12209203 - 512Kb PCM - 2002 model year.xdf` | **2002** | 603.6 KB | `51dea8e533753ce283f406a2e8d73dff` | TunerPro Binary Definition Map |
+| `No Password - Operating System 12216125 - 512Kb PCM - 2002 model year - 5.3L Flex Fuel and 8.1L engines.xdf` | **2002** | 628.3 KB | `6ee55c6014c0a2f29b83e7bded617567` | TunerPro Binary Definition Map |
+| `No Password - Operating System 12221588 - 512Kb PCM - Corvette 2001 to 2003 model years.xdf` | **2001** | 608.6 KB | `b75ab649d73afa51f44fb4b71d9669b8` | TunerPro Binary Definition Map |
+| `No Password - Operating System 12225074 - 512Kb PCM - 2001 to 2004 Holden model years.xdf` | **2001** | 603.7 KB | `02fdca5b4b10ef01b508198b6afc9f35` | TunerPro Binary Definition Map |
+| `No Password - Operating System 12593358 - 512Kb PCM - Corvette 2001 to 2003 model years.xdf` | **2001** | 608.6 KB | `5bb6674aacd66dcf843d904594fcf181` | TunerPro Binary Definition Map |
+| `No Password - XDF for Operating System 12202088 - 2001 512Kb PCM - Version 5.xdf` | **2001** | 617.2 KB | `43349e6f23d5d37726adf4f634bad2c3` | TunerPro Binary Definition Map |
+| `No Password - XDF for Operating System 12208322 - 2001 512Kb PCM - Version 5.xdf` | **2001** | 617.2 KB | `0a6661d4585dde4ed86f9d260f9dcbd5` | TunerPro Binary Definition Map |
+| `No Password - __Operating System 12212156 - 512Kb PCM - 2002 model year.xdf` | **2002** | 603.6 KB | `01e0be704ae2073779165d4f49e74957` | TunerPro Binary Definition Map |
+| `OS12212156 - 2002 512kB PCM - v5_old.xdf` | **2002** | 1.21 MB | `8861bf342852f70c17ec097633ed23bf` | TunerPro Binary Definition Map |
+| `OS12212156 - 2002 512kB PCM - v6 - no password.xdf` | **2002** | 1.61 MB | `88b2c67ba7c2599cfdf84b8dc74977f9` | TunerPro Binary Definition Map |
+| `Operating System 12202088 - 512Kb PCM - 2001 model year.xdf` | **2001** | 606.6 KB | `f99672c71efb506d01f650e959b73950` | TunerPro Binary Definition Map |
+| `Operating System 12208322 - 512Kb PCM - 2001 model year.xdf` | **2001** | 606.6 KB | `30fe386c867d20e46ff002f8d2931f32` | TunerPro Binary Definition Map |
+| `Operating System 12209203 - 512Kb PCM - 2002 model year.xdf` | **2002** | 603.9 KB | `adf7d7a532e9ced7f51b13b64b86d6e4` | TunerPro Binary Definition Map |
+| `Operating System 12216125 - 512Kb PCM - 2002 model year - 5.3L Flex Fuel and 8.1L engines.xdf` | **2002** | 628.6 KB | `ec2b10127f423bd88429374760601a3f` | TunerPro Binary Definition Map |
+| `Operating System 12221588 - 512Kb PCM - Corvette 2001 to 2003 model years.xdf` | **2001** | 608.9 KB | `a94e18aeeb905b253062fcf73bf5804c` | TunerPro Binary Definition Map |
+| `Operating System 12225074 - 512Kb PCM - 2001 to 2004 Holden model years.xdf` | **2001** | 604.0 KB | `f089a954397bfb542df9aea77691acde` | TunerPro Binary Definition Map |
+| `Operating System 12593358 - 512Kb PCM - Corvette 2001 to 2003 model years.xdf` | **2001** | 608.9 KB | `15bf8b94a214a8a9c11ec0922cf10f7a` | TunerPro Binary Definition Map |
+| `XDF for Operating System 12202088 - 2001 512Kb PCM - Version 5.xdf` | **2001** | 617.5 KB | `db3d7c39bf507e36e295fba1693340c4` | TunerPro Binary Definition Map |
+| `XDF for Operating System 12208322 - 2001 512Kb PCM - Version 5.xdf` | **2001** | 617.5 KB | `76021fa42e3ba278d27cc2bce687f670` | TunerPro Binary Definition Map |
+| `~~Operating System 12212156 - 512Kb PCM - 2002 model year.xdf` | **2002** | 603.9 KB | `e21ac6618d05b41a41621a153e421d40` | TunerPro Binary Definition Map |
 
 ---
 

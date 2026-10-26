@@ -21,19 +21,21 @@ Nama berkas yang tersimpan merefleksikan identitas perangkat keras (Hardware ID)
 > [!NOTE]
 > Mempertahankan kode dan nomor asli pabrikan pada penamaan berkas sangat krusial agar perangkat lunak kalibrasi (seperti **TunerPro**, **WinOLS**, atau **RomRaider**) dapat mengenali dan mencocokkan peta definisi (*definition maps*) secara otomatis tanpa merusak asosiasi header ECU.
 
+* **Rentang Tahun / Model Year**: 2014–2024
+
 ---
 
-## 2. Manifest Aset Berkas Fisik (100% Verified)
+## 2. Manifest Fisik Kalibrasi & Definisi Terverifikasi
 
-Berikut adalah daftar lengkap berkas fisik yang tersimpan secara lokal di direktori ini:
+Berikut adalah daftar lengkap berkas fisik yang tersimpan secara lokal di direktori ini dengan verifikasi Model Year (Tahun Produksi), ukuran, MD5 checksum, dan tipe platform:
 
-| Nama Berkas | Tipe / Format | Ukuran (Bytes) | Deskripsi Teknis & Identifikasi |
-| :--- | :--- | :--- | :--- |
-| `38770-MJE-G12.bin` | `.BIN` | `262,144` bytes | Honda Motorcycle Keihin ECU ROM `38770-MJE` |
-| `38770-MJE-T15.bin` | `.BIN` | `262,144` bytes | Honda Motorcycle Keihin ECU ROM `38770-MJE` |
-| `38770-MJE-T52.bin` | `.BIN` | `262,144` bytes | Honda Motorcycle Keihin ECU ROM `38770-MJE` |
-| `38770-MJE-TB1.bin` | `.BIN` | `524,288` bytes | Honda Motorcycle Keihin ECU ROM `38770-MJE` |
-| `38770-MKN-T11.bin` | `.BIN` | `524,288` bytes | Honda Motorcycle Keihin ECU ROM `38770-MKN` |
+| Filename | Tahun / Model Year | Size | MD5 Checksum | Type / Target Platform |
+| :--- | :---: | :--- | :--- | :--- |
+| `38770-MJE-G12.bin` | **2014–2024** | 256.0 KB | `134539e2a7a9431f9da839c867813927` | Factory Binary Firmware Dump |
+| `38770-MJE-T15.bin` | **2014–2024** | 256.0 KB | `b8b7ea9f06c042b114f7b1416ae33491` | Factory Binary Firmware Dump |
+| `38770-MJE-T52.bin` | **2014–2024** | 256.0 KB | `98f800be75979405097f194065fa29e3` | Factory Binary Firmware Dump |
+| `38770-MJE-TB1.bin` | **2014–2024** | 512.0 KB | `36cd9fd8f1fb3fe63e9912efc0c7d014` | Factory Binary Firmware Dump |
+| `38770-MKN-T11.bin` | **2014–2024** | 512.0 KB | `5b334c438531a34622ac7d2635d96e33` | Factory Binary Firmware Dump |
 
 ---
 

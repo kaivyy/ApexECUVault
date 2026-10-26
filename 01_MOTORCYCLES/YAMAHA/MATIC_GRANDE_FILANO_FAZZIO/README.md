@@ -21,23 +21,25 @@ Nama berkas yang tersimpan merefleksikan identitas perangkat keras (Hardware ID)
 > [!NOTE]
 > Mempertahankan kode dan nomor asli pabrikan pada penamaan berkas sangat krusial agar perangkat lunak kalibrasi (seperti **TunerPro**, **WinOLS**, atau **RomRaider**) dapat mengenali dan mencocokkan peta definisi (*definition maps*) secara otomatis tanpa merusak asosiasi header ECU.
 
+* **Rentang Tahun / Model Year**: 2018–2024
+
 ---
 
-## 2. Manifest Aset Berkas Fisik (100% Verified)
+## 2. Manifest Fisik Kalibrasi & Definisi Terverifikasi
 
-Berikut adalah daftar lengkap berkas fisik yang tersimpan secara lokal di direktori ini:
+Berikut adalah daftar lengkap berkas fisik yang tersimpan secara lokal di direktori ini dengan verifikasi Model Year (Tahun Produksi), ukuran, MD5 checksum, dan tipe platform:
 
-| Nama Berkas | Tipe / Format | Ukuran (Bytes) | Deskripsi Teknis & Identifikasi |
-| :--- | :--- | :--- | :--- |
-| `GRANDE_B8A0.bin` | `.BIN` | `27,648` bytes | Yamaha Factory Renesas RL78 / Denso ROM |
-| `GRANDE_B8A1-40.bin` | `.BIN` | `27,648` bytes | Yamaha Factory Renesas RL78 / Denso ROM |
-| `GRANDE_B8A1.bin` | `.BIN` | `27,648` bytes | Yamaha Factory Renesas RL78 / Denso ROM |
-| `GRANDE_B8B0.bin` | `.BIN` | `27,648` bytes | Binary Firmware / Calibration Dump |
-| `GRANDE_B8B0_31.bin` | `.BIN` | `27,648` bytes | Binary Firmware / Calibration Dump |
-| `GRANDE_B8B0_THAI.bin` | `.BIN` | `27,648` bytes | Binary Firmware / Calibration Dump |
-| `GRANDE_B8B1_41.bin` | `.BIN` | `27,648` bytes | Binary Firmware / Calibration Dump |
-| `YAMAHA_B8A-H594A-00_Yamaha_Grand_Filano_Hybrid_(B8A0_B8B0).xdf` | `.XDF` | `6,673` bytes | Yamaha Factory Renesas RL78 / Denso ROM |
-| `YAMAHA_BEJ-H594A-00_Yamaha_Fazzio_125_Hybrid_(BEJ0).xdf` | `.XDF` | `6,670` bytes | TunerPro Binary Definition Map |
+| Filename | Tahun / Model Year | Size | MD5 Checksum | Type / Target Platform |
+| :--- | :---: | :--- | :--- | :--- |
+| `GRANDE_B8A0.bin` | **2022–2026** | 27.0 KB | `2cdade228ac30d2096f248eb314cae73` | Factory Binary Firmware Dump |
+| `GRANDE_B8A1-40.bin` | **2022–2026** | 27.0 KB | `788c98fd2280b1b2daa0c4184c244216` | Factory Binary Firmware Dump |
+| `GRANDE_B8A1.bin` | **2022–2026** | 27.0 KB | `eee65a0d8e12393078930a8405685020` | Factory Binary Firmware Dump |
+| `GRANDE_B8B0.bin` | **2018–2024** | 27.0 KB | `b5ae5b01d21999e05f8fe74242fff56f` | Factory Binary Firmware Dump |
+| `GRANDE_B8B0_31.bin` | **2018–2024** | 27.0 KB | `b5ae5b01d21999e05f8fe74242fff56f` | Factory Binary Firmware Dump |
+| `GRANDE_B8B0_THAI.bin` | **2018–2024** | 27.0 KB | `b5ae5b01d21999e05f8fe74242fff56f` | Factory Binary Firmware Dump |
+| `GRANDE_B8B1_41.bin` | **2018–2024** | 27.0 KB | `d5013e9e8047da2846f1b3947b0ec252` | Factory Binary Firmware Dump |
+| `YAMAHA_B8A-H594A-00_Yamaha_Grand_Filano_Hybrid_(B8A0_B8B0).xdf` | **2022–2026** | 6.5 KB | `b66aa6c85862b4d492163f2b0619cc20` | TunerPro Binary Definition Map |
+| `YAMAHA_BEJ-H594A-00_Yamaha_Fazzio_125_Hybrid_(BEJ0).xdf` | **2022–2026** | 6.5 KB | `b64df53f154da843a91173a8a9bd18d7` | TunerPro Binary Definition Map |
 
 ---
 

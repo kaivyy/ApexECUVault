@@ -21,17 +21,19 @@ Nama berkas yang tersimpan merefleksikan identitas perangkat keras (Hardware ID)
 > [!NOTE]
 > Mempertahankan kode dan nomor asli pabrikan pada penamaan berkas sangat krusial agar perangkat lunak kalibrasi (seperti **TunerPro**, **WinOLS**, atau **RomRaider**) dapat mengenali dan mencocokkan peta definisi (*definition maps*) secara otomatis tanpa merusak asosiasi header ECU.
 
+* **Rentang Tahun / Model Year**: OEM Production
+
 ---
 
-## 2. Manifest Aset Berkas Fisik (100% Verified)
+## 2. Manifest Fisik Kalibrasi & Definisi Terverifikasi
 
-Berikut adalah daftar lengkap berkas fisik yang tersimpan secara lokal di direktori ini:
+Berikut adalah daftar lengkap berkas fisik yang tersimpan secara lokal di direktori ini dengan verifikasi Model Year (Tahun Produksi), ukuran, MD5 checksum, dan tipe platform:
 
-| Nama Berkas | Tipe / Format | Ukuran (Bytes) | Deskripsi Teknis & Identifikasi |
-| :--- | :--- | :--- | :--- |
-| `2004 Corvette M6 Stock.bin` | `.BIN` | `1,048,576` bytes | Binary Firmware / Calibration Dump |
-| `No Password - Operating System 12221588 - 512Kb PCM - Corvette 2001 to 2003 model years.xdf` | `.XDF` | `623,195` bytes | General Motors Operating System ID `12221588` |
-| `No Password - Operating System 12593358 - 512Kb PCM - Corvette 2001 to 2003 model years.xdf` | `.XDF` | `623,195` bytes | General Motors Operating System ID `12593358` |
+| Filename | Tahun / Model Year | Size | MD5 Checksum | Type / Target Platform |
+| :--- | :---: | :--- | :--- | :--- |
+| `2004 Corvette M6 Stock.bin` | **2004** | 1.00 MB | `aef67389fbf7981bb6313727282acfe7` | Factory Binary Firmware Dump |
+| `No Password - Operating System 12221588 - 512Kb PCM - Corvette 2001 to 2003 model years.xdf` | **2001** | 608.6 KB | `b8cd1d61d82f330d2be75ee2e70922b0` | TunerPro Binary Definition Map |
+| `No Password - Operating System 12593358 - 512Kb PCM - Corvette 2001 to 2003 model years.xdf` | **2001** | 608.6 KB | `fa07afad7ceb4baef8e77e081ae9a6e9` | TunerPro Binary Definition Map |
 
 ---
 

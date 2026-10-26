@@ -21,17 +21,19 @@ Nama berkas yang tersimpan merefleksikan identitas perangkat keras (Hardware ID)
 > [!NOTE]
 > Mempertahankan kode dan nomor asli pabrikan pada penamaan berkas sangat krusial agar perangkat lunak kalibrasi (seperti **TunerPro**, **WinOLS**, atau **RomRaider**) dapat mengenali dan mencocokkan peta definisi (*definition maps*) secara otomatis tanpa merusak asosiasi header ECU.
 
+* **Rentang Tahun / Model Year**: 2015–2026
+
 ---
 
-## 2. Manifest Aset Berkas Fisik (100% Verified)
+## 2. Manifest Fisik Kalibrasi & Definisi Terverifikasi
 
-Berikut adalah daftar lengkap berkas fisik yang tersimpan secara lokal di direktori ini:
+Berikut adalah daftar lengkap berkas fisik yang tersimpan secara lokal di direktori ini dengan verifikasi Model Year (Tahun Produksi), ukuran, MD5 checksum, dan tipe platform:
 
-| Nama Berkas | Tipe / Format | Ukuran (Bytes) | Deskripsi Teknis & Identifikasi |
-| :--- | :--- | :--- | :--- |
-| `BMW_B58_3.0T_BOSCH_MG1CS003_10SW002828_iRom_Stage2.bin` | `.BIN` | `8,126,464` bytes | BMW B58 3.0T Bosch MG1CS003 DME 8.6 iROM Dump |
-| `BMW_B58_3.0T_BOSCH_MG1CS003_10SW002828_iRom_original.bin` | `.BIN` | `8,126,464` bytes | BMW B58 3.0T Bosch MG1CS003 DME 8.6 iROM Dump |
-| `BMW_B58_MG1CS003_R0C9J772B.xdf` | `.XDF` | `668,872` bytes | TunerPro Binary Definition Map |
+| Filename | Tahun / Model Year | Size | MD5 Checksum | Type / Target Platform |
+| :--- | :---: | :--- | :--- | :--- |
+| `BMW_B58_3.0T_BOSCH_MG1CS003_10SW002828_iRom_Stage2.bin` | **2015–2026** | 7.75 MB | `251f649b87413ec83d01ef7a53bed2af` | Factory Binary Firmware Dump |
+| `BMW_B58_3.0T_BOSCH_MG1CS003_10SW002828_iRom_original.bin` | **2015–2026** | 7.75 MB | `40c3a007f425858e11cd9b0961dd321b` | Factory Binary Firmware Dump |
+| `BMW_B58_MG1CS003_R0C9J772B.xdf` | **2015–2026** | 653.2 KB | `7c635809f81846131ee51073797206d9` | TunerPro Binary Definition Map |
 
 ---
 

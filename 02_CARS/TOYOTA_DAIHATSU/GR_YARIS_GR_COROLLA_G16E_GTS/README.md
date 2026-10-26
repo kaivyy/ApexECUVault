@@ -21,16 +21,18 @@ Nama berkas yang tersimpan merefleksikan identitas perangkat keras (Hardware ID)
 > [!NOTE]
 > Mempertahankan kode dan nomor asli pabrikan pada penamaan berkas sangat krusial agar perangkat lunak kalibrasi (seperti **TunerPro**, **WinOLS**, atau **RomRaider**) dapat mengenali dan mencocokkan peta definisi (*definition maps*) secara otomatis tanpa merusak asosiasi header ECU.
 
+* **Rentang Tahun / Model Year**: 2020–2026
+
 ---
 
-## 2. Manifest Aset Berkas Fisik (100% Verified)
+## 2. Manifest Fisik Kalibrasi & Definisi Terverifikasi
 
-Berikut adalah daftar lengkap berkas fisik yang tersimpan secara lokal di direktori ini:
+Berikut adalah daftar lengkap berkas fisik yang tersimpan secara lokal di direktori ini dengan verifikasi Model Year (Tahun Produksi), ukuran, MD5 checksum, dan tipe platform:
 
-| Nama Berkas | Tipe / Format | Ukuran (Bytes) | Deskripsi Teknis & Identifikasi |
-| :--- | :--- | :--- | :--- |
-| `GENERATIONAL_89663-12C80_Toyota_GR_Corolla_1.6T_G16E-GTS_(2022-2026).xdf` | `.XDF` | `10,148` bytes | Toyota / Denso Factory Calibration ID `89663-12C80` |
-| `GENERATIONAL_89663-52Y10_Toyota_GR_Yaris_1.6T_G16E-GTS_(2020-2026).xdf` | `.XDF` | `10,192` bytes | Toyota / Denso Factory Calibration ID `89663-52Y10` |
+| Filename | Tahun / Model Year | Size | MD5 Checksum | Type / Target Platform |
+| :--- | :---: | :--- | :--- | :--- |
+| `GENERATIONAL_89663-12C80_Toyota_GR_Corolla_1.6T_G16E-GTS_(2022-2026).xdf` | **2022–2026** | 9.9 KB | `d083f7d55a01962f654ef6aea74f6851` | TunerPro Binary Definition Map |
+| `GENERATIONAL_89663-52Y10_Toyota_GR_Yaris_1.6T_G16E-GTS_(2020-2026).xdf` | **2020–2026** | 10.0 KB | `1d361e181bea320ac40e4a2763dbaf77` | TunerPro Binary Definition Map |
 
 ---
 

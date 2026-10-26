@@ -21,18 +21,20 @@ Nama berkas yang tersimpan merefleksikan identitas perangkat keras (Hardware ID)
 > [!NOTE]
 > Mempertahankan kode dan nomor asli pabrikan pada penamaan berkas sangat krusial agar perangkat lunak kalibrasi (seperti **TunerPro**, **WinOLS**, atau **RomRaider**) dapat mengenali dan mencocokkan peta definisi (*definition maps*) secara otomatis tanpa merusak asosiasi header ECU.
 
+* **Rentang Tahun / Model Year**: 2015–2024
+
 ---
 
-## 2. Manifest Aset Berkas Fisik (100% Verified)
+## 2. Manifest Fisik Kalibrasi & Definisi Terverifikasi
 
-Berikut adalah daftar lengkap berkas fisik yang tersimpan secara lokal di direktori ini:
+Berikut adalah daftar lengkap berkas fisik yang tersimpan secara lokal di direktori ini dengan verifikasi Model Year (Tahun Produksi), ukuran, MD5 checksum, dan tipe platform:
 
-| Nama Berkas | Tipe / Format | Ukuran (Bytes) | Deskripsi Teknis & Identifikasi |
-| :--- | :--- | :--- | :--- |
-| `GENERATIONAL_89663-F0110_Toyota_Innova_Reborn_2.4_GD_Clean_Diesel_2015_2022.xdf` | `.XDF` | `1,534` bytes | Toyota / Denso Factory Calibration ID `89663-F0110` |
-| `GENERATIONAL_89663-F0890_FORTUNER_1GD_2_8_Toyota_Fortuner_GR_Sport_2.8_GD_Clean_Diesel_(2022-2026).xdf` | `.XDF` | `5,542` bytes | Toyota / Denso Factory Calibration ID `89663-F0890` |
-| `GENERATIONAL_89663-F0890_Toyota_Fortuner_GR_Sport_2.8_GD_Clean_Diesel_2022_2026.xdf` | `.XDF` | `1,538` bytes | Toyota / Denso Factory Calibration ID `89663-F0890` |
-| `TOYOTA_89663-F0110_2GD.xdf` | `.XDF` | `12,148` bytes | Toyota / Denso Factory Calibration ID `89663-F0110` |
+| Filename | Tahun / Model Year | Size | MD5 Checksum | Type / Target Platform |
+| :--- | :---: | :--- | :--- | :--- |
+| `GENERATIONAL_89663-F0110_Toyota_Innova_Reborn_2.4_GD_Clean_Diesel_2015_2022.xdf` | **2015–2022** | 1.5 KB | `80771c807597416fcb48c245c3a160f0` | TunerPro Binary Definition Map |
+| `GENERATIONAL_89663-F0890_FORTUNER_1GD_2_8_Toyota_Fortuner_GR_Sport_2.8_GD_Clean_Diesel_(2022-2026).xdf` | **2022–2026** | 5.4 KB | `de9fbbe8fec08710276d7dc29bd1cb29` | TunerPro Binary Definition Map |
+| `GENERATIONAL_89663-F0890_Toyota_Fortuner_GR_Sport_2.8_GD_Clean_Diesel_2022_2026.xdf` | **2022–2026** | 1.5 KB | `0eac985b049c6b3078a56cf83afaa524` | TunerPro Binary Definition Map |
+| `TOYOTA_89663-F0110_2GD.xdf` | **2015–2024** | 11.9 KB | `f12bbe2a5654211915b21ca4857e423a` | TunerPro Binary Definition Map |
 
 ---
 

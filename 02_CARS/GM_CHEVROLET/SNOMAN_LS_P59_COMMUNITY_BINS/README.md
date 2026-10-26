@@ -21,32 +21,34 @@ Nama berkas yang tersimpan merefleksikan identitas perangkat keras (Hardware ID)
 > [!NOTE]
 > Mempertahankan kode dan nomor asli pabrikan pada penamaan berkas sangat krusial agar perangkat lunak kalibrasi (seperti **TunerPro**, **WinOLS**, atau **RomRaider**) dapat mengenali dan mencocokkan peta definisi (*definition maps*) secara otomatis tanpa merusak asosiasi header ECU.
 
+* **Rentang Tahun / Model Year**: OEM Production
+
 ---
 
-## 2. Manifest Aset Berkas Fisik (100% Verified)
+## 2. Manifest Fisik Kalibrasi & Definisi Terverifikasi
 
-Berikut adalah daftar lengkap berkas fisik yang tersimpan secara lokal di direktori ini:
+Berikut adalah daftar lengkap berkas fisik yang tersimpan secara lokal di direktori ini dengan verifikasi Model Year (Tahun Produksi), ukuran, MD5 checksum, dan tipe platform:
 
-| Nama Berkas | Tipe / Format | Ukuran (Bytes) | Deskripsi Teknis & Identifikasi |
-| :--- | :--- | :--- | :--- |
-| `04 Chevy 1500 4x2 LM7 12606960.bin` | `.BIN` | `1,048,576` bytes | General Motors Operating System ID `12606960` |
-| `04_hummer_lq4.bin` | `.BIN` | `1,048,576` bytes | Binary Firmware / Calibration Dump |
-| `1997 5.7L LT1 Camaro BTZB M6 Manual.bin` | `.BIN` | `524,288` bytes | Binary Firmware / Calibration Dump |
-| `2004 4.3L LU3 Manual Full Size Truck 4x2 12587603 OS STOCK.bin` | `.BIN` | `1,048,576` bytes | General Motors Operating System ID `12587603` |
-| `2004 4.8L LR4 DBC 4L80E Express Van 12587603 OS STOCK.bin` | `.BIN` | `1,048,576` bytes | General Motors Operating System ID `12587603` |
-| `2004 4.8L LR4 DBW Manual NV3500 4x4 12587603 OS STOCK.bin` | `.BIN` | `1,048,576` bytes | General Motors Operating System ID `12587603` |
-| `2004 5.3L L59 DBW 4L60E 4x4 Flex Fuel 12587603 OS STOCK.bin` | `.BIN` | `1,048,576` bytes | General Motors Operating System ID `12587603` |
-| `2004 5.3L LM4 GMC Envoy 4x4 12587603 OS Stock.bin` | `.BIN` | `1,048,576` bytes | General Motors Operating System ID `12587603` |
-| `2004 6.0L LQ4 DBC 4L80E Express Van 12587603 OS STOCK.bin` | `.BIN` | `1,048,576` bytes | General Motors Operating System ID `12587603` |
-| `2004 6.0L LQ4 DBW 4L65E 4x4 Yukon 12587603 OS STOCK.bin` | `.BIN` | `1,048,576` bytes | General Motors Operating System ID `12587603` |
-| `2004 6.0L LQ4 DBW 4L80E 4x4 12587603 OS STOCK.bin` | `.BIN` | `1,048,576` bytes | General Motors Operating System ID `12587603` |
-| `2004 6.0L LQ4 DBW Manual NV4500 4x4 12587603 OS STOCK.bin` | `.BIN` | `1,048,576` bytes | General Motors Operating System ID `12587603` |
-| `2004 6.0L LQ9 DBW 4L65E AWD Silverado SS 12587603 OS STOCK.bin` | `.BIN` | `1,048,576` bytes | General Motors Operating System ID `12587603` |
-| `2004 Blazer 4.3L (12587603).bin` | `.BIN` | `1,048,576` bytes | General Motors Operating System ID `12587603` |
-| `2004-4.8L-LR4-DBC-4L80E-Express-Van-12587603-OS-STOCK.bin` | `.BIN` | `1,048,576` bytes | General Motors Operating System ID `12587603` |
-| `Escalade 2004 LQ9 6.0_4L60E.bin` | `.BIN` | `1,048,576` bytes | Binary Firmware / Calibration Dump |
-| `LS1A-1998-Fbody.bin` | `.BIN` | `524,288` bytes | Binary Firmware / Calibration Dump |
-| `Stock_2004_GMC_Sierra_1500_4x4_Lm7_4l60e_truck_copy.bin` | `.BIN` | `1,048,576` bytes | Binary Firmware / Calibration Dump |
+| Filename | Tahun / Model Year | Size | MD5 Checksum | Type / Target Platform |
+| :--- | :---: | :--- | :--- | :--- |
+| `04 Chevy 1500 4x2 LM7 12606960.bin` | **2004** | 1.00 MB | `9b0d3cfba355dc0fda0be12cb19af61b` | Factory Binary Firmware Dump |
+| `04_hummer_lq4.bin` | **2004** | 1.00 MB | `e1c4e30c4c941a65f58a64d6e1a77d55` | Factory Binary Firmware Dump |
+| `1997 5.7L LT1 Camaro BTZB M6 Manual.bin` | **1997** | 512.0 KB | `5f5219e67d567ccee3649bc86eae7a54` | Factory Binary Firmware Dump |
+| `2004 4.3L LU3 Manual Full Size Truck 4x2 12587603 OS STOCK.bin` | **2004** | 1.00 MB | `b0679a169f0b7cf19856620f3c70d632` | Factory Binary Firmware Dump |
+| `2004 4.8L LR4 DBC 4L80E Express Van 12587603 OS STOCK.bin` | **2004** | 1.00 MB | `eda61905771f7f65501fe28595c9982f` | Factory Binary Firmware Dump |
+| `2004 4.8L LR4 DBW Manual NV3500 4x4 12587603 OS STOCK.bin` | **2004** | 1.00 MB | `18d80bb8f2f1d122be816512e022fccd` | Factory Binary Firmware Dump |
+| `2004 5.3L L59 DBW 4L60E 4x4 Flex Fuel 12587603 OS STOCK.bin` | **2004** | 1.00 MB | `63324d558a2f79d814c7ed2d51a31f56` | Factory Binary Firmware Dump |
+| `2004 5.3L LM4 GMC Envoy 4x4 12587603 OS Stock.bin` | **2004** | 1.00 MB | `bd9e17fb61c9875bef0fa4da507d71dc` | Factory Binary Firmware Dump |
+| `2004 6.0L LQ4 DBC 4L80E Express Van 12587603 OS STOCK.bin` | **2004** | 1.00 MB | `5ee37365a85e04e5e40ba9aab9bd781c` | Factory Binary Firmware Dump |
+| `2004 6.0L LQ4 DBW 4L65E 4x4 Yukon 12587603 OS STOCK.bin` | **2004** | 1.00 MB | `35bc3d13bda2cb9cbde6865b6b57843b` | Factory Binary Firmware Dump |
+| `2004 6.0L LQ4 DBW 4L80E 4x4 12587603 OS STOCK.bin` | **2004** | 1.00 MB | `88240bba0a02fa90ec0ee231bb618309` | Factory Binary Firmware Dump |
+| `2004 6.0L LQ4 DBW Manual NV4500 4x4 12587603 OS STOCK.bin` | **2004** | 1.00 MB | `e6da1d152e19c9ba9bf70f1c4d3c823a` | Factory Binary Firmware Dump |
+| `2004 6.0L LQ9 DBW 4L65E AWD Silverado SS 12587603 OS STOCK.bin` | **2004** | 1.00 MB | `17c7bbd9aedfaece1fbcb5727e4e543f` | Factory Binary Firmware Dump |
+| `2004 Blazer 4.3L (12587603).bin` | **2004** | 1.00 MB | `f2597cf945592660e8186d4d21b59d1e` | Factory Binary Firmware Dump |
+| `2004-4.8L-LR4-DBC-4L80E-Express-Van-12587603-OS-STOCK.bin` | **2004** | 1.00 MB | `eda61905771f7f65501fe28595c9982f` | Factory Binary Firmware Dump |
+| `Escalade 2004 LQ9 6.0_4L60E.bin` | **2004** | 1.00 MB | `55048d16aff6a212c517def0e14c4f61` | Factory Binary Firmware Dump |
+| `LS1A-1998-Fbody.bin` | **1998** | 512.0 KB | `e6c1a52f75f162cbc645f33447131483` | Factory Binary Firmware Dump |
+| `Stock_2004_GMC_Sierra_1500_4x4_Lm7_4l60e_truck_copy.bin` | **2004** | 1.00 MB | `3f38992de7441771607c1f614e9e6c3b` | Factory Binary Firmware Dump |
 
 ---
 

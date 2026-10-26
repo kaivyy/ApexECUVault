@@ -21,16 +21,18 @@ Nama berkas yang tersimpan merefleksikan identitas perangkat keras (Hardware ID)
 > [!NOTE]
 > Mempertahankan kode dan nomor asli pabrikan pada penamaan berkas sangat krusial agar perangkat lunak kalibrasi (seperti **TunerPro**, **WinOLS**, atau **RomRaider**) dapat mengenali dan mencocokkan peta definisi (*definition maps*) secara otomatis tanpa merusak asosiasi header ECU.
 
+* **Rentang Tahun / Model Year**: 1999–2005
+
 ---
 
-## 2. Manifest Aset Berkas Fisik (100% Verified)
+## 2. Manifest Fisik Kalibrasi & Definisi Terverifikasi
 
-Berikut adalah daftar lengkap berkas fisik yang tersimpan secara lokal di direktori ini:
+Berikut adalah daftar lengkap berkas fisik yang tersimpan secara lokal di direktori ini dengan verifikasi Model Year (Tahun Produksi), ukuran, MD5 checksum, dan tipe platform:
 
-| Nama Berkas | Tipe / Format | Ukuran (Bytes) | Deskripsi Teknis & Identifikasi |
-| :--- | :--- | :--- | :--- |
-| `Ferrari 360 Challenge.bin` | `.BIN` | `524,288` bytes | Binary Firmware / Calibration Dump |
-| `LEFT_Eddie_2004_360Spider_EU.bin` | `.BIN` | `524,288` bytes | Binary Firmware / Calibration Dump |
+| Filename | Tahun / Model Year | Size | MD5 Checksum | Type / Target Platform |
+| :--- | :---: | :--- | :--- | :--- |
+| `Ferrari 360 Challenge.bin` | **1999–2005** | 512.0 KB | `fac78a1c2d7f10b84e7a07636f4d180a` | Factory Binary Firmware Dump |
+| `LEFT_Eddie_2004_360Spider_EU.bin` | **2004** | 512.0 KB | `a994bc6c90379dc0842db725200487c7` | Factory Binary Firmware Dump |
 
 ---
 

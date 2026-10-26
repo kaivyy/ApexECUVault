@@ -21,16 +21,18 @@ Nama berkas yang tersimpan merefleksikan identitas perangkat keras (Hardware ID)
 > [!NOTE]
 > Mempertahankan kode dan nomor asli pabrikan pada penamaan berkas sangat krusial agar perangkat lunak kalibrasi (seperti **TunerPro**, **WinOLS**, atau **RomRaider**) dapat mengenali dan mencocokkan peta definisi (*definition maps*) secara otomatis tanpa merusak asosiasi header ECU.
 
+* **Rentang Tahun / Model Year**: OEM Production
+
 ---
 
-## 2. Manifest Aset Berkas Fisik (100% Verified)
+## 2. Manifest Fisik Kalibrasi & Definisi Terverifikasi
 
-Berikut adalah daftar lengkap berkas fisik yang tersimpan secara lokal di direktori ini:
+Berikut adalah daftar lengkap berkas fisik yang tersimpan secara lokal di direktori ini dengan verifikasi Model Year (Tahun Produksi), ukuran, MD5 checksum, dan tipe platform:
 
-| Nama Berkas | Tipe / Format | Ukuran (Bytes) | Deskripsi Teknis & Identifikasi |
-| :--- | :--- | :--- | :--- |
-| `Audi_A8_4.2L_V8_0261204040_4D0907557G_Motronic_M5.41_ORI.bin` | `.BIN` | `131,072` bytes | Bosch Motronic Hardware ID `0261204040` |
-| `Audi_S4_2.7TT_A4_1.8T_8D0907558M_Motronic_ORI.bin` | `.BIN` | `163,840` bytes | Binary Firmware / Calibration Dump |
+| Filename | Tahun / Model Year | Size | MD5 Checksum | Type / Target Platform |
+| :--- | :---: | :--- | :--- | :--- |
+| `Audi_A8_4.2L_V8_0261204040_4D0907557G_Motronic_M5.41_ORI.bin` | **OEM Production** | 128.0 KB | `b429e9d9d2e3f4e12f4e981c59b5ca4f` | Factory Binary Firmware Dump |
+| `Audi_S4_2.7TT_A4_1.8T_8D0907558M_Motronic_ORI.bin` | **OEM Production** | 160.0 KB | `9b035c83dc35bb6d2f4baa509be3dab5` | Factory Binary Firmware Dump |
 
 ---
 

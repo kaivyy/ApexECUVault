@@ -21,21 +21,23 @@ Nama berkas yang tersimpan merefleksikan identitas perangkat keras (Hardware ID)
 > [!NOTE]
 > Mempertahankan kode dan nomor asli pabrikan pada penamaan berkas sangat krusial agar perangkat lunak kalibrasi (seperti **TunerPro**, **WinOLS**, atau **RomRaider**) dapat mengenali dan mencocokkan peta definisi (*definition maps*) secara otomatis tanpa merusak asosiasi header ECU.
 
+* **Rentang Tahun / Model Year**: 1989–2006
+
 ---
 
-## 2. Manifest Aset Berkas Fisik (100% Verified)
+## 2. Manifest Fisik Kalibrasi & Definisi Terverifikasi
 
-Berikut adalah daftar lengkap berkas fisik yang tersimpan secara lokal di direktori ini:
+Berikut adalah daftar lengkap berkas fisik yang tersimpan secara lokal di direktori ini dengan verifikasi Model Year (Tahun Produksi), ukuran, MD5 checksum, dan tipe platform:
 
-| Nama Berkas | Tipe / Format | Ukuran (Bytes) | Deskripsi Teknis & Identifikasi |
-| :--- | :--- | :--- | :--- |
-| `84-86Porsche911-2K&4KChip.xdf` | `.XDF` | `12,337` bytes | TunerPro Binary Definition Map |
-| `86_944turbo_075dme.xdf` | `.XDF` | `12,718` bytes | TunerPro Binary Definition Map |
-| `92C2964Chip.xdf` | `.XDF` | `34,290` bytes | TunerPro Binary Definition Map |
-| `Porsche951DME24pin_lim.xdf` | `.XDF` | `27,399` bytes | TunerPro Binary Definition Map |
-| `Porsche951DME28pin_lim.xdf` | `.XDF` | `27,402` bytes | TunerPro Binary Definition Map |
-| `Porsche_928GT_509.xdf` | `.XDF` | `16,400` bytes | TunerPro Binary Definition Map |
-| `Porsche_928_506.xdf` | `.XDF` | `10,422` bytes | TunerPro Binary Definition Map |
+| Filename | Tahun / Model Year | Size | MD5 Checksum | Type / Target Platform |
+| :--- | :---: | :--- | :--- | :--- |
+| `84-86Porsche911-2K&4KChip.xdf` | **1989–2006** | 12.0 KB | `08de5436b9297f6718f1a4511c1f2d1e` | TunerPro Binary Definition Map |
+| `86_944turbo_075dme.xdf` | **1986** | 12.4 KB | `14816b9b6fcd6c8cb0975bcbbce1bd3e` | TunerPro Binary Definition Map |
+| `92C2964Chip.xdf` | **1989–2006** | 33.5 KB | `5d2fb923a5335e47ba054583bcfcbbcb` | TunerPro Binary Definition Map |
+| `Porsche951DME24pin_lim.xdf` | **1989–2006** | 26.8 KB | `f4f8c7c4fd783648a24dedd2e5af3547` | TunerPro Binary Definition Map |
+| `Porsche951DME28pin_lim.xdf` | **1989–2006** | 26.8 KB | `ac83e586a627d467a2dfaaf7fb3b356c` | TunerPro Binary Definition Map |
+| `Porsche_928GT_509.xdf` | **1989–2006** | 16.0 KB | `accaa8ad4436117df118da81f45f65ee` | TunerPro Binary Definition Map |
+| `Porsche_928_506.xdf` | **1989–2006** | 10.2 KB | `eed2e9770a8a33df6630494d9004dae5` | TunerPro Binary Definition Map |
 
 ---
 

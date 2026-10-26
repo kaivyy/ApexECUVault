@@ -21,20 +21,22 @@ Nama berkas yang tersimpan merefleksikan identitas perangkat keras (Hardware ID)
 > [!NOTE]
 > Mempertahankan kode dan nomor asli pabrikan pada penamaan berkas sangat krusial agar perangkat lunak kalibrasi (seperti **TunerPro**, **WinOLS**, atau **RomRaider**) dapat mengenali dan mencocokkan peta definisi (*definition maps*) secara otomatis tanpa merusak asosiasi header ECU.
 
+* **Rentang Tahun / Model Year**: 2014–2025
+
 ---
 
-## 2. Manifest Aset Berkas Fisik (100% Verified)
+## 2. Manifest Fisik Kalibrasi & Definisi Terverifikasi
 
-Berikut adalah daftar lengkap berkas fisik yang tersimpan secara lokal di direktori ini:
+Berikut adalah daftar lengkap berkas fisik yang tersimpan secara lokal di direktori ini dengan verifikasi Model Year (Tahun Produksi), ukuran, MD5 checksum, dan tipe platform:
 
-| Nama Berkas | Tipe / Format | Ukuran (Bytes) | Deskripsi Teknis & Identifikasi |
-| :--- | :--- | :--- | :--- |
-| `GENERATIONAL_2PK-E591A-00_Yamaha_YZF-R15_V2_non-VVA_(2014-2016).xdf` | `.XDF` | `5,550` bytes | TunerPro Binary Definition Map |
-| `GENERATIONAL_BDJ-H591A-00_Yamaha_YZF_R15M_V4_2022_2025_CANBUS_QS_TC.xdf` | `.XDF` | `2,545` bytes | TunerPro Binary Definition Map |
-| `YAMAHA_1WD-H591A-00_Yamaha_YZF-R25___MT-25_(1WD_B02).xdf` | `.XDF` | `6,662` bytes | TunerPro Binary Definition Map |
-| `YAMAHA_BBD-H594A-00_Yamaha_YZF-R15_V4___R15M_(BBD).xdf` | `.XDF` | `11,883` bytes | TunerPro Binary Definition Map |
-| `YAMAHA_BK6-H594A-00_Yamaha_YZF-R15_V3_VVA_(BK6).xdf` | `.XDF` | `11,870` bytes | TunerPro Binary Definition Map |
-| `YZF-R125_B5G0.bin` | `.BIN` | `27,648` bytes | Binary Firmware / Calibration Dump |
+| Filename | Tahun / Model Year | Size | MD5 Checksum | Type / Target Platform |
+| :--- | :---: | :--- | :--- | :--- |
+| `GENERATIONAL_2PK-E591A-00_Yamaha_YZF-R15_V2_non-VVA_(2014-2016).xdf` | **2014–2016** | 5.4 KB | `f2c4a72b6790e9fd6624d6e51dba1ba7` | TunerPro Binary Definition Map |
+| `GENERATIONAL_BDJ-H591A-00_Yamaha_YZF_R15M_V4_2022_2025_CANBUS_QS_TC.xdf` | **2022–2025** | 2.5 KB | `cc78fcc3faa88201a34895680ebfa3e1` | TunerPro Binary Definition Map |
+| `YAMAHA_1WD-H591A-00_Yamaha_YZF-R25___MT-25_(1WD_B02).xdf` | **2014–2025** | 6.5 KB | `c4f5474425a0c7b35eaac07b0b411ec4` | TunerPro Binary Definition Map |
+| `YAMAHA_BBD-H594A-00_Yamaha_YZF-R15_V4___R15M_(BBD).xdf` | **2014–2025** | 11.6 KB | `688afd29f60c9f125793df52baafe568` | TunerPro Binary Definition Map |
+| `YAMAHA_BK6-H594A-00_Yamaha_YZF-R15_V3_VVA_(BK6).xdf` | **2017–2021** | 11.6 KB | `722516ce18a2645ea1314beb012997d4` | TunerPro Binary Definition Map |
+| `YZF-R125_B5G0.bin` | **2014–2025** | 27.0 KB | `b96862cf560be96c73a12991d692ccae` | Factory Binary Firmware Dump |
 
 ---
 

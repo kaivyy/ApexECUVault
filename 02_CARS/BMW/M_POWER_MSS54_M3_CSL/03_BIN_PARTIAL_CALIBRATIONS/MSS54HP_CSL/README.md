@@ -21,21 +21,23 @@ Nama berkas yang tersimpan merefleksikan identitas perangkat keras (Hardware ID)
 > [!NOTE]
 > Mempertahankan kode dan nomor asli pabrikan pada penamaan berkas sangat krusial agar perangkat lunak kalibrasi (seperti **TunerPro**, **WinOLS**, atau **RomRaider**) dapat mengenali dan mencocokkan peta definisi (*definition maps*) secara otomatis tanpa merusak asosiasi header ECU.
 
+* **Rentang Tahun / Model Year**: 2000–2006
+
 ---
 
-## 2. Manifest Aset Berkas Fisik (100% Verified)
+## 2. Manifest Fisik Kalibrasi & Definisi Terverifikasi
 
-Berikut adalah daftar lengkap berkas fisik yang tersimpan secara lokal di direktori ini:
+Berikut adalah daftar lengkap berkas fisik yang tersimpan secara lokal di direktori ini dengan verifikasi Model Year (Tahun Produksi), ukuran, MD5 checksum, dan tipe platform:
 
-| Nama Berkas | Tipe / Format | Ukuran (Bytes) | Deskripsi Teknis & Identifikasi |
-| :--- | :--- | :--- | :--- |
-| `211325000301PD71.bin` | `.BIN` | `65,536` bytes | Binary Firmware / Calibration Dump |
-| `211325000401PD11.bin` | `.BIN` | `65,536` bytes | Binary Firmware / Calibration Dump |
-| `211325000401PD1D.bin` | `.BIN` | `65,536` bytes | Binary Firmware / Calibration Dump |
-| `211325000401PD1J.bin` | `.BIN` | `65,536` bytes | Binary Firmware / Calibration Dump |
-| `211325000401PD31.bin` | `.BIN` | `65,536` bytes | Binary Firmware / Calibration Dump |
-| `211325000401PD3D.bin` | `.BIN` | `65,536` bytes | Binary Firmware / Calibration Dump |
-| `211325000401PD3J.bin` | `.BIN` | `65,536` bytes | Binary Firmware / Calibration Dump |
+| Filename | Tahun / Model Year | Size | MD5 Checksum | Type / Target Platform |
+| :--- | :---: | :--- | :--- | :--- |
+| `211325000301PD71.bin` | **2000–2006** | 64.0 KB | `8295fbffbd94f5d23d333acf41024a35` | Factory Binary Firmware Dump |
+| `211325000401PD11.bin` | **2000–2006** | 64.0 KB | `47fbd3394e6b02a13714fd259bb55355` | Factory Binary Firmware Dump |
+| `211325000401PD1D.bin` | **2000–2006** | 64.0 KB | `0e4e5e914f5e6021ebc75c3c73c86927` | Factory Binary Firmware Dump |
+| `211325000401PD1J.bin` | **2000–2006** | 64.0 KB | `cf4802e00ceeb23b8c9fe93194a9a989` | Factory Binary Firmware Dump |
+| `211325000401PD31.bin` | **2000–2006** | 64.0 KB | `b050ca73c00c6d79164cdc3bfa695c87` | Factory Binary Firmware Dump |
+| `211325000401PD3D.bin` | **2000–2006** | 64.0 KB | `582e2e90c787101049fd3c728424e563` | Factory Binary Firmware Dump |
+| `211325000401PD3J.bin` | **2000–2006** | 64.0 KB | `d17c3484f12bf059565b3bb4d8adb4c1` | Factory Binary Firmware Dump |
 
 ---
 

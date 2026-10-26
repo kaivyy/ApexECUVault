@@ -21,17 +21,19 @@ Nama berkas yang tersimpan merefleksikan identitas perangkat keras (Hardware ID)
 > [!NOTE]
 > Mempertahankan kode dan nomor asli pabrikan pada penamaan berkas sangat krusial agar perangkat lunak kalibrasi (seperti **TunerPro**, **WinOLS**, atau **RomRaider**) dapat mengenali dan mencocokkan peta definisi (*definition maps*) secara otomatis tanpa merusak asosiasi header ECU.
 
+* **Rentang Tahun / Model Year**: OEM Production
+
 ---
 
-## 2. Manifest Aset Berkas Fisik (100% Verified)
+## 2. Manifest Fisik Kalibrasi & Definisi Terverifikasi
 
-Berikut adalah daftar lengkap berkas fisik yang tersimpan secara lokal di direktori ini:
+Berikut adalah daftar lengkap berkas fisik yang tersimpan secara lokal di direktori ini dengan verifikasi Model Year (Tahun Produksi), ukuran, MD5 checksum, dan tipe platform:
 
-| Nama Berkas | Tipe / Format | Ukuran (Bytes) | Deskripsi Teknis & Identifikasi |
-| :--- | :--- | :--- | :--- |
-| `'03 Chevy Half T 4x4 6.0L os12593058.bin` | `.BIN` | `1,048,576` bytes | General Motors Operating System ID `12593058` |
-| `'03 K1500 6.0L os12593058.bin` | `.BIN` | `1,048,576` bytes | General Motors Operating System ID `12593058` |
-| `2003_jimmy_5.3_auto_4x4_Stock_OS12593058.bin` | `.BIN` | `1,048,576` bytes | General Motors Operating System ID `12593058` |
+| Filename | Tahun / Model Year | Size | MD5 Checksum | Type / Target Platform |
+| :--- | :---: | :--- | :--- | :--- |
+| `'03 Chevy Half T 4x4 6.0L os12593058.bin` | **2003** | 1.00 MB | `cc49cb8a9060a7cb8d3aafc6cb43d167` | Factory Binary Firmware Dump |
+| `'03 K1500 6.0L os12593058.bin` | **2003** | 1.00 MB | `a0b2eaf5978f8757a35cd1dcd4c88f07` | Factory Binary Firmware Dump |
+| `2003_jimmy_5.3_auto_4x4_Stock_OS12593058.bin` | **2003** | 1.00 MB | `28bcbc5e9d45ee66b552885c778f078b` | Factory Binary Firmware Dump |
 
 ---
 

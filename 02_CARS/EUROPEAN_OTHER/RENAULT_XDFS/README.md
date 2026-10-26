@@ -21,20 +21,22 @@ Nama berkas yang tersimpan merefleksikan identitas perangkat keras (Hardware ID)
 > [!NOTE]
 > Mempertahankan kode dan nomor asli pabrikan pada penamaan berkas sangat krusial agar perangkat lunak kalibrasi (seperti **TunerPro**, **WinOLS**, atau **RomRaider**) dapat mengenali dan mencocokkan peta definisi (*definition maps*) secara otomatis tanpa merusak asosiasi header ECU.
 
+* **Rentang Tahun / Model Year**: 1989–2006
+
 ---
 
-## 2. Manifest Aset Berkas Fisik (100% Verified)
+## 2. Manifest Fisik Kalibrasi & Definisi Terverifikasi
 
-Berikut adalah daftar lengkap berkas fisik yang tersimpan secara lokal di direktori ini:
+Berikut adalah daftar lengkap berkas fisik yang tersimpan secara lokal di direktori ini dengan verifikasi Model Year (Tahun Produksi), ukuran, MD5 checksum, dan tipe platform:
 
-| Nama Berkas | Tipe / Format | Ukuran (Bytes) | Deskripsi Teknis & Identifikasi |
-| :--- | :--- | :--- | :--- |
-| `Clio16S_7494.xdf` | `.XDF` | `13,174` bytes | TunerPro Binary Definition Map |
-| `Clio16S_7852.xdf` | `.XDF` | `13,040` bytes | TunerPro Binary Definition Map |
-| `ClioWilliams_7881.xdf` | `.XDF` | `13,082` bytes | TunerPro Binary Definition Map |
-| `R21T_720D.xdf` | `.XDF` | `12,964` bytes | TunerPro Binary Definition Map |
-| `R25V6_330A.xdf` | `.XDF` | `9,654` bytes | TunerPro Binary Definition Map |
-| `safrane_extended.xdf` | `.XDF` | `14,081` bytes | TunerPro Binary Definition Map |
+| Filename | Tahun / Model Year | Size | MD5 Checksum | Type / Target Platform |
+| :--- | :---: | :--- | :--- | :--- |
+| `Clio16S_7494.xdf` | **1989–2006** | 12.9 KB | `b7584e6d60f3bdca26ef87eb0c9fa740` | TunerPro Binary Definition Map |
+| `Clio16S_7852.xdf` | **1989–2006** | 12.7 KB | `aa5b21dac692b5d4786453b1fb8506c0` | TunerPro Binary Definition Map |
+| `ClioWilliams_7881.xdf` | **1989–2006** | 12.8 KB | `8e0461c426e5d542ddbc7b210f2444cc` | TunerPro Binary Definition Map |
+| `R21T_720D.xdf` | **1989–2006** | 12.7 KB | `403348a3216ed2652a61c8ffc24faaeb` | TunerPro Binary Definition Map |
+| `R25V6_330A.xdf` | **1989–2006** | 9.4 KB | `ee438a57afe2503e89bd13e54e8aa0de` | TunerPro Binary Definition Map |
+| `safrane_extended.xdf` | **1989–2006** | 13.8 KB | `e11deb23144a030751dd76971132ff48` | TunerPro Binary Definition Map |
 
 ---
 

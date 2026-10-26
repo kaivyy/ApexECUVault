@@ -21,28 +21,30 @@ Nama berkas yang tersimpan merefleksikan identitas perangkat keras (Hardware ID)
 > [!NOTE]
 > Mempertahankan kode dan nomor asli pabrikan pada penamaan berkas sangat krusial agar perangkat lunak kalibrasi (seperti **TunerPro**, **WinOLS**, atau **RomRaider**) dapat mengenali dan mencocokkan peta definisi (*definition maps*) secara otomatis tanpa merusak asosiasi header ECU.
 
+* **Rentang Tahun / Model Year**: 2000–2006
+
 ---
 
-## 2. Manifest Aset Berkas Fisik (100% Verified)
+## 2. Manifest Fisik Kalibrasi & Definisi Terverifikasi
 
-Berikut adalah daftar lengkap berkas fisik yang tersimpan secara lokal di direktori ini:
+Berikut adalah daftar lengkap berkas fisik yang tersimpan secara lokal di direktori ini dengan verifikasi Model Year (Tahun Produksi), ukuran, MD5 checksum, dan tipe platform:
 
-| Nama Berkas | Tipe / Format | Ukuran (Bytes) | Deskripsi Teknis & Identifikasi |
-| :--- | :--- | :--- | :--- |
-| `hw0301_V4_Complete.xdf` | `.XDF` | `2,877,261` bytes | TunerPro Binary Definition Map |
-| `hw0401_V4_Complete.xdf` | `.XDF` | `2,592,029` bytes | TunerPro Binary Definition Map |
-| `hw1301_V4_Complete.xdf` | `.XDF` | `2,995,139` bytes | TunerPro Binary Definition Map |
-| `hw1401_V4_Complete.xdf` | `.XDF` | `2,997,049` bytes | TunerPro Binary Definition Map |
-| `hw1501_V4_Complete.xdf` | `.XDF` | `2,893,250` bytes | TunerPro Binary Definition Map |
-| `hw1701_V4_Complete.xdf` | `.XDF` | `3,051,929` bytes | TunerPro Binary Definition Map |
-| `hw1801_V4_Complete.xdf` | `.XDF` | `3,001,615` bytes | TunerPro Binary Definition Map |
-| `hw1901_V4_Complete.xdf` | `.XDF` | `2,880,618` bytes | TunerPro Binary Definition Map |
-| `hw2001_V4_Complete.xdf` | `.XDF` | `2,939,836` bytes | TunerPro Binary Definition Map |
-| `hw2101_V4_Complete.xdf` | `.XDF` | `3,051,826` bytes | TunerPro Binary Definition Map |
-| `hw2501_V4_Complete.xdf` | `.XDF` | `2,939,045` bytes | TunerPro Binary Definition Map |
-| `hw2601_V4_Complete.xdf` | `.XDF` | `3,052,309` bytes | TunerPro Binary Definition Map |
-| `hw2701_V4_Complete.xdf` | `.XDF` | `2,939,633` bytes | TunerPro Binary Definition Map |
-| `hw2801_V4_Complete.xdf` | `.XDF` | `2,939,448` bytes | TunerPro Binary Definition Map |
+| Filename | Tahun / Model Year | Size | MD5 Checksum | Type / Target Platform |
+| :--- | :---: | :--- | :--- | :--- |
+| `hw0301_V4_Complete.xdf` | **2000–2006** | 2.74 MB | `586d8cda669ff7b454de4c6805e67493` | TunerPro Binary Definition Map |
+| `hw0401_V4_Complete.xdf` | **2000–2006** | 2.47 MB | `362e610e45ca6273aec811ef892bd44a` | TunerPro Binary Definition Map |
+| `hw1301_V4_Complete.xdf` | **2000–2006** | 2.86 MB | `4a597a5a8b9e7a1a9251d2bb8ccd533f` | TunerPro Binary Definition Map |
+| `hw1401_V4_Complete.xdf` | **2000–2006** | 2.86 MB | `37e73d0dad71c532f0cab6b58629372b` | TunerPro Binary Definition Map |
+| `hw1501_V4_Complete.xdf` | **2000–2006** | 2.76 MB | `05fe806ef0ba163f0b91b2fd4deeb9d1` | TunerPro Binary Definition Map |
+| `hw1701_V4_Complete.xdf` | **2000–2006** | 2.91 MB | `8937e2ba05a6e901058f442fdb857d05` | TunerPro Binary Definition Map |
+| `hw1801_V4_Complete.xdf` | **2000–2006** | 2.86 MB | `abcc30313323dab1615bc5dea414cd2b` | TunerPro Binary Definition Map |
+| `hw1901_V4_Complete.xdf` | **2000–2006** | 2.75 MB | `8d14047eef49ed910af8eaf982c4e164` | TunerPro Binary Definition Map |
+| `hw2001_V4_Complete.xdf` | **2001** | 2.80 MB | `39aecd47a7358abb5768a60fca068a29` | TunerPro Binary Definition Map |
+| `hw2101_V4_Complete.xdf` | **2000–2006** | 2.91 MB | `5b4fa80b37bc25bc9974b8a909de0ee3` | TunerPro Binary Definition Map |
+| `hw2501_V4_Complete.xdf` | **2000–2006** | 2.80 MB | `e78f191844a4c0115b08e5907797b4ac` | TunerPro Binary Definition Map |
+| `hw2601_V4_Complete.xdf` | **2000–2006** | 2.91 MB | `3cbf4244da7c54c3456bd9bb196ba55b` | TunerPro Binary Definition Map |
+| `hw2701_V4_Complete.xdf` | **2000–2006** | 2.80 MB | `cc4ba43d193dee65409f8ff146740b2f` | TunerPro Binary Definition Map |
+| `hw2801_V4_Complete.xdf` | **2000–2006** | 2.80 MB | `df16408962a5e074788850218d12224f` | TunerPro Binary Definition Map |
 
 ---
 

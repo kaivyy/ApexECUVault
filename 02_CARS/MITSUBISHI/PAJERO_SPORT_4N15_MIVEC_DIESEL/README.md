@@ -21,17 +21,19 @@ Nama berkas yang tersimpan merefleksikan identitas perangkat keras (Hardware ID)
 > [!NOTE]
 > Mempertahankan kode dan nomor asli pabrikan pada penamaan berkas sangat krusial agar perangkat lunak kalibrasi (seperti **TunerPro**, **WinOLS**, atau **RomRaider**) dapat mengenali dan mencocokkan peta definisi (*definition maps*) secara otomatis tanpa merusak asosiasi header ECU.
 
+* **Rentang Tahun / Model Year**: 2016–2024
+
 ---
 
-## 2. Manifest Aset Berkas Fisik (100% Verified)
+## 2. Manifest Fisik Kalibrasi & Definisi Terverifikasi
 
-Berikut adalah daftar lengkap berkas fisik yang tersimpan secara lokal di direktori ini:
+Berikut adalah daftar lengkap berkas fisik yang tersimpan secara lokal di direktori ini dengan verifikasi Model Year (Tahun Produksi), ukuran, MD5 checksum, dan tipe platform:
 
-| Nama Berkas | Tipe / Format | Ukuran (Bytes) | Deskripsi Teknis & Identifikasi |
-| :--- | :--- | :--- | :--- |
-| `GENERATIONAL_1860D124_Mitsubishi_All_New_Pajero_Sport_Dakar_2.4_MIVEC_2016_2025.xdf` | `.XDF` | `1,538` bytes | TunerPro Binary Definition Map |
-| `GENERATIONAL_1860D124_PAJERO_4N15_FACELIFT_Mitsubishi_New_Pajero_Sport_Dakar_Facelift_Gen_3_(2021-2026).xdf` | `.XDF` | `5,539` bytes | TunerPro Binary Definition Map |
-| `MITSUBISHI_1860C027_4N15.xdf` | `.XDF` | `9,660` bytes | TunerPro Binary Definition Map |
+| Filename | Tahun / Model Year | Size | MD5 Checksum | Type / Target Platform |
+| :--- | :---: | :--- | :--- | :--- |
+| `GENERATIONAL_1860D124_Mitsubishi_All_New_Pajero_Sport_Dakar_2.4_MIVEC_2016_2025.xdf` | **2016–2025** | 1.5 KB | `65f19bdbc52ce88d725271ad66922792` | TunerPro Binary Definition Map |
+| `GENERATIONAL_1860D124_PAJERO_4N15_FACELIFT_Mitsubishi_New_Pajero_Sport_Dakar_Facelift_Gen_3_(2021-2026).xdf` | **2021–2026** | 5.4 KB | `c5ed50f43696227dbc1f9ea163d6f4be` | TunerPro Binary Definition Map |
+| `MITSUBISHI_1860C027_4N15.xdf` | **2016–2024** | 9.4 KB | `31165b066e1e6864d48c8bfdbd219d82` | TunerPro Binary Definition Map |
 
 ---
 

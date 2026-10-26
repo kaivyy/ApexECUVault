@@ -21,16 +21,18 @@ Nama berkas yang tersimpan merefleksikan identitas perangkat keras (Hardware ID)
 > [!NOTE]
 > Mempertahankan kode dan nomor asli pabrikan pada penamaan berkas sangat krusial agar perangkat lunak kalibrasi (seperti **TunerPro**, **WinOLS**, atau **RomRaider**) dapat mengenali dan mencocokkan peta definisi (*definition maps*) secara otomatis tanpa merusak asosiasi header ECU.
 
+* **Rentang Tahun / Model Year**: 2008–2015
+
 ---
 
-## 2. Manifest Aset Berkas Fisik (100% Verified)
+## 2. Manifest Fisik Kalibrasi & Definisi Terverifikasi
 
-Berikut adalah daftar lengkap berkas fisik yang tersimpan secara lokal di direktori ini:
+Berikut adalah daftar lengkap berkas fisik yang tersimpan secara lokal di direktori ini dengan verifikasi Model Year (Tahun Produksi), ukuran, MD5 checksum, dan tipe platform:
 
-| Nama Berkas | Tipe / Format | Ukuran (Bytes) | Deskripsi Teknis & Identifikasi |
-| :--- | :--- | :--- | :--- |
-| `GENERATIONAL_1860B554_PAJERO_4D56_VGT_Mitsubishi_Pajero_Sport_2.5_DI-D_Gen_2_VGT_178PS_(2011-2015).xdf` | `.XDF` | `5,537` bytes | TunerPro Binary Definition Map |
-| `MITSUBISHI_1860A867_4D56.xdf` | `.XDF` | `9,636` bytes | TunerPro Binary Definition Map |
+| Filename | Tahun / Model Year | Size | MD5 Checksum | Type / Target Platform |
+| :--- | :---: | :--- | :--- | :--- |
+| `GENERATIONAL_1860B554_PAJERO_4D56_VGT_Mitsubishi_Pajero_Sport_2.5_DI-D_Gen_2_VGT_178PS_(2011-2015).xdf` | **2011–2015** | 5.4 KB | `4142a9c200fe0ad419640e96da0a13d2` | TunerPro Binary Definition Map |
+| `MITSUBISHI_1860A867_4D56.xdf` | **2008–2015** | 9.4 KB | `9f5f815ce0d4327663f749d8f2670c9b` | TunerPro Binary Definition Map |
 
 ---
 

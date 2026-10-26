@@ -13,329 +13,327 @@ Paket direktori `CIVIC_1_8L_2_0L_R18_K20` menyediakan pustaka kalibrasi dan peme
 ### Mengapa Sebagian Berkas Memiliki Nama Berupa Angka / Kode?
 Nama berkas merefleksikan identitas perangkat keras (Hardware ID), versi perangkat lunak (Software ID), atau nomor kalibrasi pabrikan asli (OEM Calibration ID) untuk menjaga kecocokan header pada TunerPro dan alat flasher.
 
+* **Rentang Tahun / Model Year**: 2006–2015
+
 ---
 
-## 2. Manifest Aset Berkas Fisik (100% Verified)
+## 2. Manifest Fisik Kalibrasi & Definisi Terverifikasi
 
-Berikut adalah daftar lengkap berkas fisik yang tersimpan secara lokal di direktori ini:
+Berikut adalah daftar lengkap berkas fisik yang tersimpan secara lokal di direktori ini dengan verifikasi Model Year (Tahun Produksi), ukuran, MD5 checksum, dan tipe platform:
 
-| Nama Berkas | Tipe / Format | Ukuran (Bytes) | Deskripsi Teknis & Identifikasi |
-| :--- | :--- | :--- | :--- |
-| `37805--13-A020_37805--13-A020.xdf` | `.XDF` | `173,829` bytes | TunerPro Binary Definition Map / Parameter Layout |
-| `37805-3050-CVT_37805-3050-CVT.xdf` | `.XDF` | `56,806` bytes | TunerPro Binary Definition Map / Parameter Layout |
-| `37805-5AA-A120_37805-5AA-A120.xdf` | `.XDF` | `105,896` bytes | TunerPro Binary Definition Map / Parameter Layout |
-| `37805-5AF-B420_37805-5AF-B420.xdf` | `.XDF` | `95,229` bytes | TunerPro Binary Definition Map / Parameter Layout |
-| `37805-5AN-CC10_37805-5AN-CC10.xdf` | `.XDF` | `100,337` bytes | TunerPro Binary Definition Map / Parameter Layout |
-| `37805-5BF-A050_37805-5BF-A050.xdf` | `.XDF` | `125,752` bytes | TunerPro Binary Definition Map / Parameter Layout |
-| `37805-5BF-A230_37805-5BF-A230.xdf` | `.XDF` | `120,426` bytes | TunerPro Binary Definition Map / Parameter Layout |
-| `37805-5BF-E030_37805-5BF-E030.xdf` | `.XDF` | `115,900` bytes | TunerPro Binary Definition Map / Parameter Layout |
-| `37805-5G0-A370_37805-5G0-A370.xdf` | `.XDF` | `72,310` bytes | TunerPro Binary Definition Map / Parameter Layout |
-| `37805-5PA-7740_37805-5PA-7740.xdf` | `.XDF` | `41,275` bytes | TunerPro Binary Definition Map / Parameter Layout |
-| `37805-5PA-CC10_37805-5PA-CC10.xdf` | `.XDF` | `42,988` bytes | TunerPro Binary Definition Map / Parameter Layout |
-| `37805-5YF-AD20_37805-5YF-AD20.xdf` | `.XDF` | `50,626` bytes | TunerPro Binary Definition Map / Parameter Layout |
-| `37805-5YF-C420_37805-5YF-C420.xdf` | `.XDF` | `50,626` bytes | TunerPro Binary Definition Map / Parameter Layout |
-| `37805-64A-A540_37805-64A-A540.xdf` | `.XDF` | `118,511` bytes | TunerPro Binary Definition Map / Parameter Layout |
-| `37805-64B-A010_37805-64B-A010.xdf` | `.XDF` | `95,039` bytes | TunerPro Binary Definition Map / Parameter Layout |
-| `37805-64L-J020_37805-64L-J020.xdf` | `.XDF` | `119,620` bytes | TunerPro Binary Definition Map / Parameter Layout |
-| `37805-64L-J530_37805-64L-J530.xdf` | `.XDF` | `119,100` bytes | TunerPro Binary Definition Map / Parameter Layout |
-| `37805-PCX-U120_37805-PCX-U120.xdf` | `.XDF` | `1,568` bytes | TunerPro Binary Definition Map / Parameter Layout |
-| `37805-PHM -A630.rwd_37805-PHM_-A630.rwd.xdf` | `.XDF` | `1,578` bytes | TunerPro Binary Definition Map / Parameter Layout |
-| `37805-PHM-4050.rwd_37805-PHM-4050.rwd.xdf` | `.XDF` | `1,576` bytes | TunerPro Binary Definition Map / Parameter Layout |
-| `37805-PLM-3170.rwd_37805-PLM-3170.rwd.xdf` | `.XDF` | `1,576` bytes | TunerPro Binary Definition Map / Parameter Layout |
-| `37805-PLM-3360_Honda_Civic_2001_DX__LX_1.7L__L4_-_Gas.xdf` | `.XDF` | `1,594` bytes | TunerPro Binary Definition Map / Parameter Layout |
-| `37805-PLM-3390.rwd_37805-PLM-3390.rwd.xdf` | `.XDF` | `1,576` bytes | TunerPro Binary Definition Map / Parameter Layout |
-| `37805-PLM-4050.rwd_37805-PLM-4050.rwd.xdf` | `.XDF` | `1,576` bytes | TunerPro Binary Definition Map / Parameter Layout |
-| `37805-PLM-4170.rwd_37805-PLM-4170.rwd.xdf` | `.XDF` | `1,576` bytes | TunerPro Binary Definition Map / Parameter Layout |
-| `37805-PLM-4260.rwd_37805-PLM-4260.rwd.xdf` | `.XDF` | `1,576` bytes | TunerPro Binary Definition Map / Parameter Layout |
-| `37805-PLM-4390.rwd_37805-PLM-4390.rwd.xdf` | `.XDF` | `1,576` bytes | TunerPro Binary Definition Map / Parameter Layout |
-| `37805-PLM-A150-M1.rwd_37805-PLM-A150-M1.rwd.xdf` | `.XDF` | `1,582` bytes | TunerPro Binary Definition Map / Parameter Layout |
-| `37805-PLM-A760-M1.rwd_37805-PLM-A760-M1.rwd.xdf` | `.XDF` | `1,582` bytes | TunerPro Binary Definition Map / Parameter Layout |
-| `37805-PLM-C150-M1.rwd_37805-PLM-C150-M1.rwd.xdf` | `.XDF` | `1,582` bytes | TunerPro Binary Definition Map / Parameter Layout |
-| `37805-PLM-C760-M1.rwd_37805-PLM-C760-M1.rwd.xdf` | `.XDF` | `1,582` bytes | TunerPro Binary Definition Map / Parameter Layout |
-| `37805-PLR-3150.rwd_37805-PLR-3150.rwd.xdf` | `.XDF` | `1,576` bytes | TunerPro Binary Definition Map / Parameter Layout |
-| `37805-PLR-3170.rwd_37805-PLR-3170.rwd.xdf` | `.XDF` | `1,576` bytes | TunerPro Binary Definition Map / Parameter Layout |
-| `37805-PLR-3360.rwd_37805-PLR-3360.rwd.xdf` | `.XDF` | `1,576` bytes | TunerPro Binary Definition Map / Parameter Layout |
-| `37805-PLR-3390.rwd_37805-PLR-3390.rwd.xdf` | `.XDF` | `1,576` bytes | TunerPro Binary Definition Map / Parameter Layout |
-| `37805-PLR-4050.rwd_37805-PLR-4050.rwd.xdf` | `.XDF` | `1,576` bytes | TunerPro Binary Definition Map / Parameter Layout |
-| `37805-PLR-4170.rwd_37805-PLR-4170.rwd.xdf` | `.XDF` | `1,576` bytes | TunerPro Binary Definition Map / Parameter Layout |
-| `37805-PLR-4260.rwd_37805-PLR-4260.rwd.xdf` | `.XDF` | `1,576` bytes | TunerPro Binary Definition Map / Parameter Layout |
-| `37805-PLR-4390.rwd_37805-PLR-4390.rwd.xdf` | `.XDF` | `1,576` bytes | TunerPro Binary Definition Map / Parameter Layout |
-| `37805-PLR-A130-M1.rwd_37805-PLR-A130-M1.rwd.xdf` | `.XDF` | `1,582` bytes | TunerPro Binary Definition Map / Parameter Layout |
-| `37805-PLR-A750-M1.rwd_37805-PLR-A750-M1.rwd.xdf` | `.XDF` | `1,582` bytes | TunerPro Binary Definition Map / Parameter Layout |
-| `37805-PLR-C130-M1.rwd_37805-PLR-C130-M1.rwd.xdf` | `.XDF` | `1,582` bytes | TunerPro Binary Definition Map / Parameter Layout |
-| `37805-PLR-C750-M1.rwd_37805-PLR-C750-M1.rwd.xdf` | `.XDF` | `1,582` bytes | TunerPro Binary Definition Map / Parameter Layout |
-| `37805-PMM-3170.rwd_37805-PMM-3170.rwd.xdf` | `.XDF` | `1,576` bytes | TunerPro Binary Definition Map / Parameter Layout |
-| `37805-PMM-3390.rwd_37805-PMM-3390.rwd.xdf` | `.XDF` | `1,576` bytes | TunerPro Binary Definition Map / Parameter Layout |
-| `37805-PMM-4050.rwd_37805-PMM-4050.rwd.xdf` | `.XDF` | `1,576` bytes | TunerPro Binary Definition Map / Parameter Layout |
-| `37805-PMM-4170.rwd_37805-PMM-4170.rwd.xdf` | `.XDF` | `1,576` bytes | TunerPro Binary Definition Map / Parameter Layout |
-| `37805-PMM-4260.rwd_37805-PMM-4260.rwd.xdf` | `.XDF` | `1,576` bytes | TunerPro Binary Definition Map / Parameter Layout |
-| `37805-PMM-4390.rwd_37805-PMM-4390.rwd.xdf` | `.XDF` | `1,576` bytes | TunerPro Binary Definition Map / Parameter Layout |
-| `37805-PMP-3050.rwd_37805-PMP-3050.rwd.xdf` | `.XDF` | `1,576` bytes | TunerPro Binary Definition Map / Parameter Layout |
-| `37805-PMP-3060_Honda_Civic_2001_HX_1.7L__L4_-_Gas.xdf` | `.XDF` | `1,590` bytes | TunerPro Binary Definition Map / Parameter Layout |
-| `37805-PMP-3070.rwd_37805-PMP-3070.rwd.xdf` | `.XDF` | `1,576` bytes | TunerPro Binary Definition Map / Parameter Layout |
-| `37805-PMP-3090.rwd_37805-PMP-3090.rwd.xdf` | `.XDF` | `1,576` bytes | TunerPro Binary Definition Map / Parameter Layout |
-| `37805-PMP-4050.rwd_37805-PMP-4050.rwd.xdf` | `.XDF` | `1,576` bytes | TunerPro Binary Definition Map / Parameter Layout |
-| `37805-PMP-4060.rwd_37805-PMP-4060.rwd.xdf` | `.XDF` | `1,576` bytes | TunerPro Binary Definition Map / Parameter Layout |
-| `37805-PMP-4170_Honda_Civic_2003_HX_1.7L__L4_-_Gas.xdf` | `.XDF` | `1,590` bytes | TunerPro Binary Definition Map / Parameter Layout |
-| `37805-PMP-4190_Honda_Civic_2002_HX_1.7L__L4_-_Gas.xdf` | `.XDF` | `1,590` bytes | TunerPro Binary Definition Map / Parameter Layout |
-| `37805-PMP-A130_Honda_Civic_2002_HX_1.7L__L4_-_Gas.xdf` | `.XDF` | `1,590` bytes | TunerPro Binary Definition Map / Parameter Layout |
-| `37805-PMP-A830-M1.rwd_37805-PMP-A830-M1.rwd.xdf` | `.XDF` | `1,582` bytes | TunerPro Binary Definition Map / Parameter Layout |
-| `37805-PMR-3170.rwd_37805-PMR-3170.rwd.xdf` | `.XDF` | `1,576` bytes | TunerPro Binary Definition Map / Parameter Layout |
-| `37805-PMR-3390.rwd_37805-PMR-3390.rwd.xdf` | `.XDF` | `1,576` bytes | TunerPro Binary Definition Map / Parameter Layout |
-| `37805-PMR-4050.rwd_37805-PMR-4050.rwd.xdf` | `.XDF` | `1,576` bytes | TunerPro Binary Definition Map / Parameter Layout |
-| `37805-PMR-4170.rwd_37805-PMR-4170.rwd.xdf` | `.XDF` | `1,576` bytes | TunerPro Binary Definition Map / Parameter Layout |
-| `37805-PMR-4260.rwd_37805-PMR-4260.rwd.xdf` | `.XDF` | `1,576` bytes | TunerPro Binary Definition Map / Parameter Layout |
-| `37805-PMR-4390.rwd_37805-PMR-4390.rwd.xdf` | `.XDF` | `1,576` bytes | TunerPro Binary Definition Map / Parameter Layout |
-| `37805-PMS-A660-M1.rwd_37805-PMS-A660-M1.rwd.xdf` | `.XDF` | `1,582` bytes | TunerPro Binary Definition Map / Parameter Layout |
-| `37805-PMS-A680_Honda_Civic_2003_GX_1.7L__L4_-_CNG.xdf` | `.XDF` | `1,590` bytes | TunerPro Binary Definition Map / Parameter Layout |
-| `37805-PND-3050_Honda_Civic_2004_2005_GX_1.7L__L4_-_CNG.xdf` | `.XDF` | `1,595` bytes | TunerPro Binary Definition Map / Parameter Layout |
-| `37805-PND-3060.rwd_37805-PND-3060.rwd.xdf` | `.XDF` | `1,576` bytes | TunerPro Binary Definition Map / Parameter Layout |
-| `37805-PND-3070.rwd_37805-PND-3070.rwd.xdf` | `.XDF` | `1,576` bytes | TunerPro Binary Definition Map / Parameter Layout |
-| `37805-PNF-A060-M1.rwd_37805-PNF-A060-M1.rwd.xdf` | `.XDF` | `1,582` bytes | TunerPro Binary Definition Map / Parameter Layout |
-| `37805-PPA-3050.rwd_37805-PPA-3050.rwd.xdf` | `.XDF` | `1,576` bytes | TunerPro Binary Definition Map / Parameter Layout |
-| `37805-PPA-3180.rwd_37805-PPA-3180.rwd.xdf` | `.XDF` | `1,576` bytes | TunerPro Binary Definition Map / Parameter Layout |
-| `37805-PPA-4260.rwd_37805-PPA-4260.rwd.xdf` | `.XDF` | `1,576` bytes | TunerPro Binary Definition Map / Parameter Layout |
-| `37805-PRB-3050.rwd_37805-PRB-3050.rwd.xdf` | `.XDF` | `1,576` bytes | TunerPro Binary Definition Map / Parameter Layout |
-| `37805-PRB-A080-M1.rwd_37805-PRB-A080-M1.rwd.xdf` | `.XDF` | `1,582` bytes | TunerPro Binary Definition Map / Parameter Layout |
-| `37805-PVJ-X560-M1.rwd_37805-PVJ-X560-M1.rwd.xdf` | `.XDF` | `1,582` bytes | TunerPro Binary Definition Map / Parameter Layout |
-| `37805-PVJ-X810-M1.rwd_37805-PVJ-X810-M1.rwd.xdf` | `.XDF` | `1,582` bytes | TunerPro Binary Definition Map / Parameter Layout |
-| `37805-PVJ-X910-M1.rwd_37805-PVJ-X910-M1.rwd.xdf` | `.XDF` | `1,582` bytes | TunerPro Binary Definition Map / Parameter Layout |
-| `37805-PVJ-Y530-M1.rwd_37805-PVJ-Y530-M1.rwd.xdf` | `.XDF` | `1,582` bytes | TunerPro Binary Definition Map / Parameter Layout |
-| `37805-PVJ-Y550-M1.rwd_37805-PVJ-Y550-M1.rwd.xdf` | `.XDF` | `1,582` bytes | TunerPro Binary Definition Map / Parameter Layout |
-| `37805-PWG-3050.rwd_37805-PWG-3050.rwd.xdf` | `.XDF` | `1,576` bytes | TunerPro Binary Definition Map / Parameter Layout |
-| `37805-PWG-3060.rwd_37805-PWG-3060.rwd.xdf` | `.XDF` | `1,576` bytes | TunerPro Binary Definition Map / Parameter Layout |
-| `37805-PZA-3050.rwd_37805-PZA-3050.rwd.xdf` | `.XDF` | `1,576` bytes | TunerPro Binary Definition Map / Parameter Layout |
-| `37805-PZA-3280.rwd_37805-PZA-3280.rwd.xdf` | `.XDF` | `1,576` bytes | TunerPro Binary Definition Map / Parameter Layout |
-| `37805-PZA-3290.rwd_37805-PZA-3290.rwd.xdf` | `.XDF` | `1,576` bytes | TunerPro Binary Definition Map / Parameter Layout |
-| `37805-PZA-4060.rwd_37805-PZA-4060.rwd.xdf` | `.XDF` | `1,576` bytes | TunerPro Binary Definition Map / Parameter Layout |
-| `37805-PZA-4280.rwd_37805-PZA-4280.rwd.xdf` | `.XDF` | `1,576` bytes | TunerPro Binary Definition Map / Parameter Layout |
-| `37805-PZA-A170-M1.rwd_37805-PZA-A170-M1.rwd.xdf` | `.XDF` | `1,582` bytes | TunerPro Binary Definition Map / Parameter Layout |
-| `37805-PZA-L150-M1.rwd_37805-PZA-L150-M1.rwd.xdf` | `.XDF` | `1,582` bytes | TunerPro Binary Definition Map / Parameter Layout |
-| `37805-PZD-4160_37805-PZD-4160.xdf` | `.XDF` | `10,063` bytes | TunerPro Binary Definition Map / Parameter Layout |
-| `37805-PZD-A130-M1.rwd_37805-PZD-A130-M1.rwd.xdf` | `.XDF` | `10,077` bytes | TunerPro Binary Definition Map / Parameter Layout |
-| `37805-PZD-A380_37805-PZD-A380.xdf` | `.XDF` | `10,055` bytes | TunerPro Binary Definition Map / Parameter Layout |
-| `37805-R40-A190_37805-R40-A190.xdf` | `.XDF` | `5,007` bytes | TunerPro Binary Definition Map / Parameter Layout |
-| `37805-R40-K130_37805-R40-K130.xdf` | `.XDF` | `5,007` bytes | TunerPro Binary Definition Map / Parameter Layout |
-| `37805-R40-K530_37805-R40-K530.xdf` | `.XDF` | `5,007` bytes | TunerPro Binary Definition Map / Parameter Layout |
-| `37805-R40-K630_37805-R40-K630.xdf` | `.XDF` | `5,007` bytes | TunerPro Binary Definition Map / Parameter Layout |
-| `37805-R40-U530_37805-R40-U530.xdf` | `.XDF` | `5,007` bytes | TunerPro Binary Definition Map / Parameter Layout |
-| `37805-R49-U030_37805-R49-U030.xdf` | `.XDF` | `5,007` bytes | TunerPro Binary Definition Map / Parameter Layout |
-| `37805-R60-M720_37805-R60-M720.xdf` | `.XDF` | `3,887` bytes | TunerPro Binary Definition Map / Parameter Layout |
-| `37805-R60-U550_37805-R60-U550.xdf` | `.XDF` | `3,887` bytes | TunerPro Binary Definition Map / Parameter Layout |
-| `37805-R8A-A560_37805-R8A-A560.xdf` | `.XDF` | `7,214` bytes | TunerPro Binary Definition Map / Parameter Layout |
-| `37805-RBJ-A560_37805-RBJ-A560.xdf` | `.XDF` | `7,212` bytes | TunerPro Binary Definition Map / Parameter Layout |
-| `37805-RBJ-T520_37805-RBJ-T520.xdf` | `.XDF` | `7,212` bytes | TunerPro Binary Definition Map / Parameter Layout |
-| `37805-RC0-M030_37805-RC0-M030.xdf` | `.XDF` | `4,444` bytes | TunerPro Binary Definition Map / Parameter Layout |
-| `37805-RC0-M130_37805-RC0-M130.xdf` | `.XDF` | `4,444` bytes | TunerPro Binary Definition Map / Parameter Layout |
-| `37805-RC0-M530_37805-RC0-M530.xdf` | `.XDF` | `4,444` bytes | TunerPro Binary Definition Map / Parameter Layout |
-| `37805-RC0-M630_37805-RC0-M630.xdf` | `.XDF` | `4,444` bytes | TunerPro Binary Definition Map / Parameter Layout |
-| `37805-RC1-M030_37805-RC1-M030.xdf` | `.XDF` | `4,444` bytes | TunerPro Binary Definition Map / Parameter Layout |
-| `37805-RC1-M540_37805-RC1-M540.xdf` | `.XDF` | `4,444` bytes | TunerPro Binary Definition Map / Parameter Layout |
-| `37805-RC1-P120_37805-RC1-P120.xdf` | `.XDF` | `4,444` bytes | TunerPro Binary Definition Map / Parameter Layout |
-| `37805-RC1-P520_37805-RC1-P520.xdf` | `.XDF` | `4,444` bytes | TunerPro Binary Definition Map / Parameter Layout |
-| `37805-RC1-P720_37805-RC1-P720.xdf` | `.XDF` | `4,444` bytes | TunerPro Binary Definition Map / Parameter Layout |
-| `37805-RCA-3150.rwd_37805-RCA-3150.rwd.xdf` | `.XDF` | `4,452` bytes | TunerPro Binary Definition Map / Parameter Layout |
-| `37805-RCA-3160.rwd_37805-RCA-3160.rwd.xdf` | `.XDF` | `4,452` bytes | TunerPro Binary Definition Map / Parameter Layout |
-| `37805-RCA-A060-M5.rwd_37805-RCA-A060-M5.rwd.xdf` | `.XDF` | `4,458` bytes | TunerPro Binary Definition Map / Parameter Layout |
-| `37805-RCA-A360-M5.rwd_37805-RCA-A360-M5.rwd.xdf` | `.XDF` | `4,458` bytes | TunerPro Binary Definition Map / Parameter Layout |
-| `37805-RCA-A850-M5.rwd_37805-RCA-A850-M5.rwd.xdf` | `.XDF` | `4,458` bytes | TunerPro Binary Definition Map / Parameter Layout |
-| `37805-RCA-A980-M5.rwd_37805-RCA-A980-M5.rwd.xdf` | `.XDF` | `4,458` bytes | TunerPro Binary Definition Map / Parameter Layout |
-| `37805-RCA-K570-M5.rwd_37805-RCA-K570-M5.rwd.xdf` | `.XDF` | `4,458` bytes | TunerPro Binary Definition Map / Parameter Layout |
-| `37805-RCA-K740-M5.rwd_37805-RCA-K740-M5.rwd.xdf` | `.XDF` | `4,458` bytes | TunerPro Binary Definition Map / Parameter Layout |
-| `37805-RCA-K940-M5.rwd_37805-RCA-K940-M5.rwd.xdf` | `.XDF` | `4,458` bytes | TunerPro Binary Definition Map / Parameter Layout |
-| `37805-RCA-L060-M5.rwd_37805-RCA-L060-M5.rwd.xdf` | `.XDF` | `4,458` bytes | TunerPro Binary Definition Map / Parameter Layout |
-| `37805-RCA-L250-M5.rwd_37805-RCA-L250-M5.rwd.xdf` | `.XDF` | `4,458` bytes | TunerPro Binary Definition Map / Parameter Layout |
-| `37805-RCA-L360-M5.rwd_37805-RCA-L360-M5.rwd.xdf` | `.XDF` | `4,458` bytes | TunerPro Binary Definition Map / Parameter Layout |
-| `37805-RCA-L850-M5.rwd_37805-RCA-L850-M5.rwd.xdf` | `.XDF` | `4,458` bytes | TunerPro Binary Definition Map / Parameter Layout |
-| `37805-RCA-L980-M5.rwd_37805-RCA-L980-M5.rwd.xdf` | `.XDF` | `4,458` bytes | TunerPro Binary Definition Map / Parameter Layout |
-| `37805-RCA-M740-M5.rwd_37805-RCA-M740-M5.rwd.xdf` | `.XDF` | `4,458` bytes | TunerPro Binary Definition Map / Parameter Layout |
-| `37805-RCA-M940-M5.rwd_37805-RCA-M940-M5.rwd.xdf` | `.XDF` | `4,458` bytes | TunerPro Binary Definition Map / Parameter Layout |
-| `37805-RCA-X050-M5.rwd_37805-RCA-X050-M5.rwd.xdf` | `.XDF` | `4,458` bytes | TunerPro Binary Definition Map / Parameter Layout |
-| `37805-RCA-X130-M5.rwd_37805-RCA-X130-M5.rwd.xdf` | `.XDF` | `4,458` bytes | TunerPro Binary Definition Map / Parameter Layout |
-| `37805-RCA-X330-M5.rwd_37805-RCA-X330-M5.rwd.xdf` | `.XDF` | `4,458` bytes | TunerPro Binary Definition Map / Parameter Layout |
-| `37805-RCA-X440-M5.rwd_37805-RCA-X440-M5.rwd.xdf` | `.XDF` | `4,458` bytes | TunerPro Binary Definition Map / Parameter Layout |
-| `37805-RCA-X570-M5.rwd_37805-RCA-X570-M5.rwd.xdf` | `.XDF` | `4,458` bytes | TunerPro Binary Definition Map / Parameter Layout |
-| `37805-RCA-X670-M5.rwd_37805-RCA-X670-M5.rwd.xdf` | `.XDF` | `4,458` bytes | TunerPro Binary Definition Map / Parameter Layout |
-| `37805-RCA-X740-M5.rwd_37805-RCA-X740-M5.rwd.xdf` | `.XDF` | `4,458` bytes | TunerPro Binary Definition Map / Parameter Layout |
-| `37805-RCA-X840-M5.rwd_37805-RCA-X840-M5.rwd.xdf` | `.XDF` | `4,458` bytes | TunerPro Binary Definition Map / Parameter Layout |
-| `37805-RCA-X950-M5.rwd_37805-RCA-X950-M5.rwd.xdf` | `.XDF` | `4,458` bytes | TunerPro Binary Definition Map / Parameter Layout |
-| `37805-RCB-U810-M5.rwd_37805-RCB-U810-M5.rwd.xdf` | `.XDF` | `4,458` bytes | TunerPro Binary Definition Map / Parameter Layout |
-| `37805-RCB-Y740-M5.rwd_37805-RCB-Y740-M5.rwd.xdf` | `.XDF` | `4,458` bytes | TunerPro Binary Definition Map / Parameter Layout |
-| `37805-RCE-U820-M5.rwd_37805-RCE-U820-M5.rwd.xdf` | `.XDF` | `4,458` bytes | TunerPro Binary Definition Map / Parameter Layout |
-| `37805-RCJ-3350.rwd_37805-RCJ-3350.rwd.xdf` | `.XDF` | `4,452` bytes | TunerPro Binary Definition Map / Parameter Layout |
-| `37805-RCJ-3360.rwd_37805-RCJ-3360.rwd.xdf` | `.XDF` | `4,452` bytes | TunerPro Binary Definition Map / Parameter Layout |
-| `37805-RCJ-A690-M1.rwd_37805-RCJ-A690-M1.rwd.xdf` | `.XDF` | `4,458` bytes | TunerPro Binary Definition Map / Parameter Layout |
-| `37805-RDA-A070-M1.rwd_37805-RDA-A070-M1.rwd.xdf` | `.XDF` | `4,458` bytes | TunerPro Binary Definition Map / Parameter Layout |
-| `37805-RDA-X630-M1.rwd_37805-RDA-X630-M1.rwd.xdf` | `.XDF` | `9,511` bytes | TunerPro Binary Definition Map / Parameter Layout |
-| `37805-RDA-X750_37805-RDA-X750.xdf` | `.XDF` | `9,497` bytes | TunerPro Binary Definition Map / Parameter Layout |
-| `37805-RDB-A630_37805-RDB-A630.xdf` | `.XDF` | `9,497` bytes | TunerPro Binary Definition Map / Parameter Layout |
-| `37805-RGL-K920_37805-RGL-K920.xdf` | `.XDF` | `8,332` bytes | TunerPro Binary Definition Map / Parameter Layout |
-| `37805-RGL-X560-M1.rwd_37805-RGL-X560-M1.rwd.xdf` | `.XDF` | `8,346` bytes | TunerPro Binary Definition Map / Parameter Layout |
-| `37805-RGL-X730-M1.rwd_37805-RGL-X730-M1.rwd.xdf` | `.XDF` | `8,346` bytes | TunerPro Binary Definition Map / Parameter Layout |
-| `37805-RGL-X830_37805-RGL-X830.xdf` | `.XDF` | `7,770` bytes | TunerPro Binary Definition Map / Parameter Layout |
-| `37805-RGL-X920_37805-RGL-X920.xdf` | `.XDF` | `8,332` bytes | TunerPro Binary Definition Map / Parameter Layout |
-| `37805-RGL-Y560-M1.rwd_37805-RGL-Y560-M1.rwd.xdf` | `.XDF` | `8,346` bytes | TunerPro Binary Definition Map / Parameter Layout |
-| `37805-RGL-Y820_37805-RGL-Y820.xdf` | `.XDF` | `7,770` bytes | TunerPro Binary Definition Map / Parameter Layout |
-| `37805-RGM-A650-M1.rwd_37805-RGM-A650-M1.rwd.xdf` | `.XDF` | `7,784` bytes | TunerPro Binary Definition Map / Parameter Layout |
-| `37805-RJE-3250.rwd_37805-RJE-3250.rwd.xdf` | `.XDF` | `7,778` bytes | TunerPro Binary Definition Map / Parameter Layout |
-| `37805-RJE-A650-M1.rwd_37805-RJE-A650-M1.rwd.xdf` | `.XDF` | `7,784` bytes | TunerPro Binary Definition Map / Parameter Layout |
-| `37805-RJE-K020_37805-RJE-K020.xdf` | `.XDF` | `8,332` bytes | TunerPro Binary Definition Map / Parameter Layout |
-| `37805-RJE-X640_37805-RJE-X640.xdf` | `.XDF` | `8,332` bytes | TunerPro Binary Definition Map / Parameter Layout |
-| `37805-RJE-X730_37805-RJE-X730.xdf` | `.XDF` | `7,776` bytes | TunerPro Binary Definition Map / Parameter Layout |
-| `37805-RK8-N520_37805-RK8-N520.xdf` | `.XDF` | `4,444` bytes | TunerPro Binary Definition Map / Parameter Layout |
-| `37805-RK8-N740_37805-RK8-N740.xdf` | `.XDF` | `4,444` bytes | TunerPro Binary Definition Map / Parameter Layout |
-| `37805-RK8-N840_37805-RK8-N840.xdf` | `.XDF` | `4,444` bytes | TunerPro Binary Definition Map / Parameter Layout |
-| `37805-RKG-X550_37805-RKG-X550.xdf` | `.XDF` | `9,497` bytes | TunerPro Binary Definition Map / Parameter Layout |
-| `37805-RKG-X720_37805-RKG-X720.xdf` | `.XDF` | `7,776` bytes | TunerPro Binary Definition Map / Parameter Layout |
-| `37805-RKG-Y520_37805-RKG-Y520.xdf` | `.XDF` | `9,497` bytes | TunerPro Binary Definition Map / Parameter Layout |
-| `37805-RME-C410_37805-RME-C410.xdf` | `.XDF` | `3,314` bytes | TunerPro Binary Definition Map / Parameter Layout |
-| `37805-RME-C520_37805-RME-C520.xdf` | `.XDF` | `3,314` bytes | TunerPro Binary Definition Map / Parameter Layout |
-| `37805-RME-C720_37805-RME-C720.xdf` | `.XDF` | `3,314` bytes | TunerPro Binary Definition Map / Parameter Layout |
-| `37805-RME-C890_37805-RME-C890.xdf` | `.XDF` | `3,314` bytes | TunerPro Binary Definition Map / Parameter Layout |
-| `37805-RMX-3250_37805-RMX-3250.xdf` | `.XDF` | `2,725` bytes | TunerPro Binary Definition Map / Parameter Layout |
-| `37805-RMX-5070_37805-RMX-5070.xdf` | `.XDF` | `2,725` bytes | TunerPro Binary Definition Map / Parameter Layout |
-| `37805-RMX-5150_37805-RMX-5150.xdf` | `.XDF` | `2,725` bytes | TunerPro Binary Definition Map / Parameter Layout |
-| `37805-RMX-A060_Honda_Civic_1.3_16v_SH7058_1Mb.xdf` | `.XDF` | `2,741` bytes | TunerPro Binary Definition Map / Parameter Layout |
-| `37805-RMX-A130_37805-RMX-A130.xdf` | `.XDF` | `2,725` bytes | TunerPro Binary Definition Map / Parameter Layout |
-| `37805-RMX-X550_37805-RMX-X550.xdf` | `.XDF` | `2,725` bytes | TunerPro Binary Definition Map / Parameter Layout |
-| `37805-RN0-3150_37805-RN0-3150.xdf` | `.XDF` | `7,770` bytes | TunerPro Binary Definition Map / Parameter Layout |
-| `37805-RN0-3160_37805-RN0-3160.xdf` | `.XDF` | `7,770` bytes | TunerPro Binary Definition Map / Parameter Layout |
-| `37805-RN0-A070_37805-RN0-A070.xdf` | `.XDF` | `7,214` bytes | TunerPro Binary Definition Map / Parameter Layout |
-| `37805-RN0-A570_37805-RN0-A570.xdf` | `.XDF` | `7,770` bytes | TunerPro Binary Definition Map / Parameter Layout |
-| `37805-RN0-C050_37805-RN0-C050.xdf` | `.XDF` | `7,214` bytes | TunerPro Binary Definition Map / Parameter Layout |
-| `37805-RN0-C950_37805-RN0-C950.xdf` | `.XDF` | `7,214` bytes | TunerPro Binary Definition Map / Parameter Layout |
-| `37805-RN0-K030_37805-RN0-K030.xdf` | `.XDF` | `7,214` bytes | TunerPro Binary Definition Map / Parameter Layout |
-| `37805-RN0-K130_37805-RN0-K130.xdf` | `.XDF` | `7,214` bytes | TunerPro Binary Definition Map / Parameter Layout |
-| `37805-RN0-M040_37805-RN0-M040.xdf` | `.XDF` | `7,214` bytes | TunerPro Binary Definition Map / Parameter Layout |
-| `37805-RN0-M130_37805-RN0-M130.xdf` | `.XDF` | `7,214` bytes | TunerPro Binary Definition Map / Parameter Layout |
-| `37805-RN0-M830_37805-RN0-M830.xdf` | `.XDF` | `7,214` bytes | TunerPro Binary Definition Map / Parameter Layout |
-| `37805-RN0-M940_37805-RN0-M940.xdf` | `.XDF` | `7,214` bytes | TunerPro Binary Definition Map / Parameter Layout |
-| `37805-RN0-X030_37805-RN0-X030.xdf` | `.XDF` | `7,214` bytes | TunerPro Binary Definition Map / Parameter Layout |
-| `37805-RN0-X560_37805-RN0-X560.xdf` | `.XDF` | `7,770` bytes | TunerPro Binary Definition Map / Parameter Layout |
-| `37805-RN0-X620_37805-RN0-X620.xdf` | `.XDF` | `7,770` bytes | TunerPro Binary Definition Map / Parameter Layout |
-| `37805-RN0-X760_37805-RN0-X760.xdf` | `.XDF` | `7,770` bytes | TunerPro Binary Definition Map / Parameter Layout |
-| `37805-RN0-X820_37805-RN0-X820.xdf` | `.XDF` | `7,770` bytes | TunerPro Binary Definition Map / Parameter Layout |
-| `37805-RN0-X940_37805-RN0-X940.xdf` | `.XDF` | `7,214` bytes | TunerPro Binary Definition Map / Parameter Layout |
-| `37805-RNA-3260_37805-RNA-3260.xdf` | `.XDF` | `3,883` bytes | TunerPro Binary Definition Map / Parameter Layout |
-| `37805-RNA-3290_37805-RNA-3290.xdf` | `.XDF` | `3,883` bytes | TunerPro Binary Definition Map / Parameter Layout |
-| `37805-RNA-3450_37805-RNA-3450.xdf` | `.XDF` | `4,440` bytes | TunerPro Binary Definition Map / Parameter Layout |
-| `37805-RNA-3470_Honda_Civic_2006_DX__EX__LX_1.8L__L4_-_Gas.xdf` | `.XDF` | `4,470` bytes | TunerPro Binary Definition Map / Parameter Layout |
-| `37805-RNA-A150_Honda_Civic_1.8_16v_SH7058_1Mb.xdf` | `.XDF` | `3,899` bytes | TunerPro Binary Definition Map / Parameter Layout |
-| `37805-RNA-A240_37805-RNA-A240.xdf` | `.XDF` | `4,446` bytes | TunerPro Binary Definition Map / Parameter Layout |
-| `37805-RNA-A330_Honda_Civic_2009_2010_EX-L_1.8L_L4_-_Gas.xdf` | `.XDF` | `84,467` bytes | TunerPro Binary Definition Map / Parameter Layout |
-| `37805-RNA-A340_37805-RNA-A340.xdf` | `.XDF` | `4,446` bytes | TunerPro Binary Definition Map / Parameter Layout |
-| `37805-RNA-A680_37805-RNA-A680.xdf` | `.XDF` | `4,440` bytes | TunerPro Binary Definition Map / Parameter Layout |
-| `37805-RNA-A740_Honda_Civic_2007_2008_DX__EX__LX_1.8L__L4_-_Gas___ECU_Honda_.xdf` | `.XDF` | `4,599` bytes | TunerPro Binary Definition Map / Parameter Layout |
-| `37805-RNA-A830_37805-RNA-A830.xdf` | `.XDF` | `79,204` bytes | TunerPro Binary Definition Map / Parameter Layout |
-| `37805-RNA-A830_Honda_Civic_2009_2010_2011_EX-L_1.8L_L4_-_Gas.xdf` | `.XDF` | `79,235` bytes | TunerPro Binary Definition Map / Parameter Layout |
-| `37805-RNA-A840_Honda_Civic_2009_2010_2011_DX__EX__LX__LX-S_1.8L__L4_-_Gas.xdf` | `.XDF` | `4,488` bytes | TunerPro Binary Definition Map / Parameter Layout |
-| `37805-RNA-C130_Honda_Civic_2009_2010_2011_EX-L_1.8L__L4_-_Gas.xdf` | `.XDF` | `3,917` bytes | TunerPro Binary Definition Map / Parameter Layout |
-| `37805-RNA-C240_37805-RNA-C240.xdf` | `.XDF` | `4,446` bytes | TunerPro Binary Definition Map / Parameter Layout |
-| `37805-RNA-C340_37805-RNA-C340.xdf` | `.XDF` | `4,446` bytes | TunerPro Binary Definition Map / Parameter Layout |
-| `37805-RNA-C440_37805-RNA-C440.xdf` | `.XDF` | `4,446` bytes | TunerPro Binary Definition Map / Parameter Layout |
-| `37805-RNA-C640_37805-RNA-C640.xdf` | `.XDF` | `4,440` bytes | TunerPro Binary Definition Map / Parameter Layout |
-| `37805-RNA-C740_37805-RNA-C740.xdf` | `.XDF` | `4,442` bytes | TunerPro Binary Definition Map / Parameter Layout |
-| `37805-RNA-C840_37805-RNA-C840.xdf` | `.XDF` | `4,442` bytes | TunerPro Binary Definition Map / Parameter Layout |
-| `37805-RNA-C910_37805-RNA-C910.xdf` | `.XDF` | `3,883` bytes | TunerPro Binary Definition Map / Parameter Layout |
-| `37805-RNA-K080_37805-RNA-K080.xdf` | `.XDF` | `4,446` bytes | TunerPro Binary Definition Map / Parameter Layout |
-| `37805-RNA-K590_37805-RNA-K590.xdf` | `.XDF` | `4,442` bytes | TunerPro Binary Definition Map / Parameter Layout |
-| `37805-RNA-U720_37805-RNA-U720.xdf` | `.XDF` | `4,442` bytes | TunerPro Binary Definition Map / Parameter Layout |
-| `37805-RNA-U840_37805-RNA-U840.xdf` | `.XDF` | `4,442` bytes | TunerPro Binary Definition Map / Parameter Layout |
-| `37805-RNA-U950_37805-RNA-U950.xdf` | `.XDF` | `4,442` bytes | TunerPro Binary Definition Map / Parameter Layout |
-| `37805-RNA-Y030_37805-RNA-Y030.xdf` | `.XDF` | `3,883` bytes | TunerPro Binary Definition Map / Parameter Layout |
-| `37805-RNA-Y330_37805-RNA-Y330.xdf` | `.XDF` | `3,883` bytes | TunerPro Binary Definition Map / Parameter Layout |
-| `37805-RNA-Y530_37805-RNA-Y530.xdf` | `.XDF` | `3,883` bytes | TunerPro Binary Definition Map / Parameter Layout |
-| `37805-RNA-Y720_37805-RNA-Y720.xdf` | `.XDF` | `3,883` bytes | TunerPro Binary Definition Map / Parameter Layout |
-| `37805-RNA-Y830_37805-RNA-Y830.xdf` | `.XDF` | `3,883` bytes | TunerPro Binary Definition Map / Parameter Layout |
-| `37805-RNB-X040_37805-RNB-X040.xdf` | `.XDF` | `3,883` bytes | TunerPro Binary Definition Map / Parameter Layout |
-| `37805-RNB-X120_37805-RNB-X120.xdf` | `.XDF` | `4,446` bytes | TunerPro Binary Definition Map / Parameter Layout |
-| `37805-RNB-X560_37805-RNB-X560.xdf` | `.XDF` | `3,883` bytes | TunerPro Binary Definition Map / Parameter Layout |
-| `37805-RNB-X620_37805-RNB-X620.xdf` | `.XDF` | `4,442` bytes | TunerPro Binary Definition Map / Parameter Layout |
-| `37805-RND-M030_37805-RND-M030.xdf` | `.XDF` | `4,446` bytes | TunerPro Binary Definition Map / Parameter Layout |
-| `37805-RND-M530_37805-RND-M530.xdf` | `.XDF` | `4,442` bytes | TunerPro Binary Definition Map / Parameter Layout |
-| `37805-RND-M620_37805-RND-M620.xdf` | `.XDF` | `3,883` bytes | TunerPro Binary Definition Map / Parameter Layout |
-| `37805-RND-M720_37805-RND-M720.xdf` | `.XDF` | `3,883` bytes | TunerPro Binary Definition Map / Parameter Layout |
-| `37805-RND-P030_37805-RND-P030.xdf` | `.XDF` | `4,446` bytes | TunerPro Binary Definition Map / Parameter Layout |
-| `37805-RND-P540_37805-RND-P540.xdf` | `.XDF` | `4,442` bytes | TunerPro Binary Definition Map / Parameter Layout |
-| `37805-RND-P740_37805-RND-P740.xdf` | `.XDF` | `4,442` bytes | TunerPro Binary Definition Map / Parameter Layout |
-| `37805-RNE-A550_37805-RNE-A550.xdf` | `.XDF` | `3,883` bytes | TunerPro Binary Definition Map / Parameter Layout |
-| `37805-RNF-U050_Honda_Civic_2006_2007_2008_2009_2010_2011_GX_1.8L__L4_-_CNG.xdf` | `.XDF` | `4,493` bytes | TunerPro Binary Definition Map / Parameter Layout |
-| `37805-RNF-U540_37805-RNF-U540.xdf` | `.XDF` | `4,442` bytes | TunerPro Binary Definition Map / Parameter Layout |
-| `37805-RNF-U730_37805-RNF-U730.xdf` | `.XDF` | `4,442` bytes | TunerPro Binary Definition Map / Parameter Layout |
-| `37805-RNT-U030_37805-RNT-U030.xdf` | `.XDF` | `4,446` bytes | TunerPro Binary Definition Map / Parameter Layout |
-| `37805-RNT-U520_37805-RNT-U520.xdf` | `.XDF` | `3,883` bytes | TunerPro Binary Definition Map / Parameter Layout |
-| `37805-RNV-B030_37805-RNV-B030.xdf` | `.XDF` | `5,006` bytes | TunerPro Binary Definition Map / Parameter Layout |
-| `37805-RNV-B530_37805-RNV-B530.xdf` | `.XDF` | `4,445` bytes | TunerPro Binary Definition Map / Parameter Layout |
-| `37805-RNV-B630_37805-RNV-B630.xdf` | `.XDF` | `4,445` bytes | TunerPro Binary Definition Map / Parameter Layout |
-| `37805-RNV-B730_37805-RNV-B730.xdf` | `.XDF` | `4,445` bytes | TunerPro Binary Definition Map / Parameter Layout |
-| `37805-RNV-M070_37805-RNV-M070.xdf` | `.XDF` | `3,883` bytes | TunerPro Binary Definition Map / Parameter Layout |
-| `37805-RNV-M560_37805-RNV-M560.xdf` | `.XDF` | `3,883` bytes | TunerPro Binary Definition Map / Parameter Layout |
-| `37805-RNV-M660_37805-RNV-M660.xdf` | `.XDF` | `3,883` bytes | TunerPro Binary Definition Map / Parameter Layout |
-| `37805-RNV-R020_37805-RNV-R020.xdf` | `.XDF` | `5,006` bytes | TunerPro Binary Definition Map / Parameter Layout |
-| `37805-RNV-R520_37805-RNV-R520.xdf` | `.XDF` | `5,002` bytes | TunerPro Binary Definition Map / Parameter Layout |
-| `37805-RNV-R620_37805-RNV-R620.xdf` | `.XDF` | `5,002` bytes | TunerPro Binary Definition Map / Parameter Layout |
-| `37805-RNV-R720_37805-RNV-R720.xdf` | `.XDF` | `5,002` bytes | TunerPro Binary Definition Map / Parameter Layout |
-| `37805-RNV-Z020_37805-RNV-Z020.xdf` | `.XDF` | `5,006` bytes | TunerPro Binary Definition Map / Parameter Layout |
-| `37805-RNV-Z520_37805-RNV-Z520.xdf` | `.XDF` | `5,002` bytes | TunerPro Binary Definition Map / Parameter Layout |
-| `37805-RNV-Z620_37805-RNV-Z620.xdf` | `.XDF` | `5,002` bytes | TunerPro Binary Definition Map / Parameter Layout |
-| `37805-RNV-Z720_37805-RNV-Z720.xdf` | `.XDF` | `5,002` bytes | TunerPro Binary Definition Map / Parameter Layout |
-| `37805-RNX-M020_37805-RNX-M020.xdf` | `.XDF` | `4,446` bytes | TunerPro Binary Definition Map / Parameter Layout |
-| `37805-RNX-M520_37805-RNX-M520.xdf` | `.XDF` | `4,442` bytes | TunerPro Binary Definition Map / Parameter Layout |
-| `37805-RNX-M620_37805-RNX-M620.xdf` | `.XDF` | `4,442` bytes | TunerPro Binary Definition Map / Parameter Layout |
-| `37805-RP3-3050_37805-RP3-3050.xdf` | `.XDF` | `4,444` bytes | TunerPro Binary Definition Map / Parameter Layout |
-| `37805-RP3-3070_37805-RP3-3070.xdf` | `.XDF` | `4,444` bytes | TunerPro Binary Definition Map / Parameter Layout |
-| `37805-RP6-X640_37805-RP6-X640.xdf` | `.XDF` | `7,776` bytes | TunerPro Binary Definition Map / Parameter Layout |
-| `37805-RPY-G040_37805-RPY-G040.xdf` | `.XDF` | `99,004` bytes | TunerPro Binary Definition Map / Parameter Layout |
-| `37805-RRA-C040_37805-RRA-C040.xdf` | `.XDF` | `3,842` bytes | TunerPro Binary Definition Map / Parameter Layout |
-| `37805-RRA-C540_37805-RRA-C540.xdf` | `.XDF` | `3,842` bytes | TunerPro Binary Definition Map / Parameter Layout |
-| `37805-RRB-3150_37805-RRB-3150.xdf` | `.XDF` | `3,842` bytes | TunerPro Binary Definition Map / Parameter Layout |
-| `37805-RRB-A090_37805-RRB-A090.xdf` | `.XDF` | `8,891` bytes | TunerPro Binary Definition Map / Parameter Layout |
-| `37805-RRB-K020_Honda_Civic_2007_2008_2009_2010_2011_Si_2.0L__L4_-_Gas.xdf` | `.XDF` | `8,933` bytes | TunerPro Binary Definition Map / Parameter Layout |
-| `37805-RRB-X120_37805-RRB-X120.xdf` | `.XDF` | `8,891` bytes | TunerPro Binary Definition Map / Parameter Layout |
-| `37805-RRD-M120_37805-RRD-M120.xdf` | `.XDF` | `8,891` bytes | TunerPro Binary Definition Map / Parameter Layout |
-| `37805-RRD-M220_Honda_Civic_2.0_16v_SH7058_1Mb.xdf` | `.XDF` | `8,907` bytes | TunerPro Binary Definition Map / Parameter Layout |
-| `37805-RRD-P120_37805-RRD-P120.xdf` | `.XDF` | `8,891` bytes | TunerPro Binary Definition Map / Parameter Layout |
-| `37805-RRH-U020_37805-RRH-U020.xdf` | `.XDF` | `3,842` bytes | TunerPro Binary Definition Map / Parameter Layout |
-| `37805-RRH-U520_37805-RRH-U520.xdf` | `.XDF` | `3,842` bytes | TunerPro Binary Definition Map / Parameter Layout |
-| `37805-RRH-U620_Honda_Civic_2.0_16v_SH7058_1Mb.xdf` | `.XDF` | `3,858` bytes | TunerPro Binary Definition Map / Parameter Layout |
-| `37805-RSP-E020_37805-RSP-E020.xdf` | `.XDF` | `164,224` bytes | TunerPro Binary Definition Map / Parameter Layout |
-| `37805-RTW-3050_37805-RTW-3050.xdf` | `.XDF` | `3,884` bytes | TunerPro Binary Definition Map / Parameter Layout |
-| `37805-RV0-3290_37805-RV0-3290.xdf` | `.XDF` | `7,214` bytes | TunerPro Binary Definition Map / Parameter Layout |
-| `37805-RV0-A580_37805-RV0-A580.xdf` | `.XDF` | `7,214` bytes | TunerPro Binary Definition Map / Parameter Layout |
-| `37805-RV0-X640_37805-RV0-X640.xdf` | `.XDF` | `7,214` bytes | TunerPro Binary Definition Map / Parameter Layout |
-| `37805-RV0-X780_37805-RV0-X780.xdf` | `.XDF` | `7,214` bytes | TunerPro Binary Definition Map / Parameter Layout |
-| `37805-RV0-Y640_37805-RV0-Y640.xdf` | `.XDF` | `7,214` bytes | TunerPro Binary Definition Map / Parameter Layout |
-| `37805-RV0-Y780_37805-RV0-Y780.xdf` | `.XDF` | `7,214` bytes | TunerPro Binary Definition Map / Parameter Layout |
-| `37805-RWC-X560_37805-RWC-X560.xdf` | `.XDF` | `5,004` bytes | TunerPro Binary Definition Map / Parameter Layout |
-| `37805-RWC-X620_37805-RWC-X620.xdf` | `.XDF` | `10,055` bytes | TunerPro Binary Definition Map / Parameter Layout |
-| `37805-RX0-A030_Honda_Civic_2012_Si_2.4L_L4_-_Gas.xdf` | `.XDF` | `117,880` bytes | TunerPro Binary Definition Map / Parameter Layout |
-| `37805-RX0-A140_Honda_Civic_2012_Si_2.4L__L4_-_Gas.xdf` | `.XDF` | `109,265` bytes | TunerPro Binary Definition Map / Parameter Layout |
-| `37805-RX0-A220_Honda_Civic_2013_Si_2.4L__L4_-_Gas.xdf` | `.XDF` | `109,788` bytes | TunerPro Binary Definition Map / Parameter Layout |
-| `37805-RYE-A040_37805-RYE-A040.xdf` | `.XDF` | `7,776` bytes | TunerPro Binary Definition Map / Parameter Layout |
-| `37805-RYE-A140_37805-RYE-A140.xdf` | `.XDF` | `7,776` bytes | TunerPro Binary Definition Map / Parameter Layout |
-| `37805-RYE-X620_37805-RYE-X620.xdf` | `.XDF` | `8,332` bytes | TunerPro Binary Definition Map / Parameter Layout |
-| `37805-RYE-X750_37805-RYE-X750.xdf` | `.XDF` | `7,776` bytes | TunerPro Binary Definition Map / Parameter Layout |
-| `37805-RYE-X830_37805-RYE-X830.xdf` | `.XDF` | `7,776` bytes | TunerPro Binary Definition Map / Parameter Layout |
-| `37805-RYP-A570-M1.rwd_37805-RYP-A570-M1.rwd.xdf` | `.XDF` | `7,790` bytes | TunerPro Binary Definition Map / Parameter Layout |
-| `37805-RYP-A620-M1.rwd_37805-RYP-A620-M1.rwd.xdf` | `.XDF` | `7,790` bytes | TunerPro Binary Definition Map / Parameter Layout |
-| `37805-RZA-K130_37805-RZA-K130.xdf` | `.XDF` | `3,842` bytes | TunerPro Binary Definition Map / Parameter Layout |
-| `37805-RZA-K230_37805-RZA-K230.xdf` | `.XDF` | `3,842` bytes | TunerPro Binary Definition Map / Parameter Layout |
-| `37805-RZA-K320_37805-RZA-K320.xdf` | `.XDF` | `3,842` bytes | TunerPro Binary Definition Map / Parameter Layout |
-| `37805-RZA-K520_37805-RZA-K520.xdf` | `.XDF` | `3,842` bytes | TunerPro Binary Definition Map / Parameter Layout |
-| `37805-RZA-K620_37805-RZA-K620.xdf` | `.XDF` | `3,842` bytes | TunerPro Binary Definition Map / Parameter Layout |
-| `37805-RZA-K720_37805-RZA-K720.xdf` | `.XDF` | `3,842` bytes | TunerPro Binary Definition Map / Parameter Layout |
-| `37805-RZA-K930_37805-RZA-K930.xdf` | `.XDF` | `3,842` bytes | TunerPro Binary Definition Map / Parameter Layout |
-| `37805-RZA-X630_37805-RZA-X630.xdf` | `.XDF` | `3,842` bytes | TunerPro Binary Definition Map / Parameter Layout |
-| `37805-RZA-X830_37805-RZA-X830.xdf` | `.XDF` | `3,842` bytes | TunerPro Binary Definition Map / Parameter Layout |
-| `37805-RZP-M020_37805-RZP-M020.xdf` | `.XDF` | `3,883` bytes | TunerPro Binary Definition Map / Parameter Layout |
-| `37805-RZP-M520_37805-RZP-M520.xdf` | `.XDF` | `3,883` bytes | TunerPro Binary Definition Map / Parameter Layout |
-| `37805-RZP-M720_37805-RZP-M720.xdf` | `.XDF` | `4,440` bytes | TunerPro Binary Definition Map / Parameter Layout |
-| `37805-RZP-M820_37805-RZP-M820.xdf` | `.XDF` | `4,440` bytes | TunerPro Binary Definition Map / Parameter Layout |
-| `HONDA_CIVIC_FB_2012-2015_1.8L_R18Z1_KEIHIN_37805-R1J-A660-M1.rwd` | `.RWD` | `2,031,794` bytes | OEM Firmware Calibration Flash Dump / Binary Package |
-
-### Subdirektori Tambahan
-
-- **`OFFICIAL_CALIBRATION_PACKAGES/`**: Mengelola 482 aset kalibrasi lanjutan.
+| Filename | Tahun / Model Year | Size | MD5 Checksum | Type / Target Platform |
+| :--- | :---: | :--- | :--- | :--- |
+| `37805--13-A020_37805--13-A020.xdf` | **2006–2015** | 169.8 KB | `0c439517c5d521963bb5c424544c925f` | TunerPro Binary Definition Map |
+| `37805-3050-CVT_37805-3050-CVT.xdf` | **2006–2015** | 55.5 KB | `79f3e4d957addb83cdcac4578a7df28f` | TunerPro Binary Definition Map |
+| `37805-5AA-A120_37805-5AA-A120.xdf` | **2006–2015** | 103.4 KB | `dbe7e30f027ff2f0f19575b07c4538a0` | TunerPro Binary Definition Map |
+| `37805-5AF-B420_37805-5AF-B420.xdf` | **2006–2015** | 93.0 KB | `2ba8f7a02d7dd8f7773a2a81c8083238` | TunerPro Binary Definition Map |
+| `37805-5AN-CC10_37805-5AN-CC10.xdf` | **2006–2015** | 98.0 KB | `763da9d4219cb5a7fd81a35637de91c8` | TunerPro Binary Definition Map |
+| `37805-5BF-A050_37805-5BF-A050.xdf` | **2006–2015** | 122.8 KB | `0acf2028e7e0bb48959293b1352a9d16` | TunerPro Binary Definition Map |
+| `37805-5BF-A230_37805-5BF-A230.xdf` | **2006–2015** | 117.6 KB | `301394feedcd11d9d7e54927e59d1b92` | TunerPro Binary Definition Map |
+| `37805-5BF-E030_37805-5BF-E030.xdf` | **2006–2015** | 113.2 KB | `22f697055690c4bab614904683bd2b6a` | TunerPro Binary Definition Map |
+| `37805-5G0-A370_37805-5G0-A370.xdf` | **2006–2015** | 70.6 KB | `da01b2e53d836d738a6cea7bc2bd5caf` | TunerPro Binary Definition Map |
+| `37805-5PA-7740_37805-5PA-7740.xdf` | **2006–2015** | 40.3 KB | `2c10b59478c742049f4fdc46fdf8a3b3` | TunerPro Binary Definition Map |
+| `37805-5PA-CC10_37805-5PA-CC10.xdf` | **2006–2015** | 42.0 KB | `3e86dea6f951ea8b64cb8312b7e96d68` | TunerPro Binary Definition Map |
+| `37805-5YF-AD20_37805-5YF-AD20.xdf` | **2006–2015** | 49.4 KB | `a40e8af2c3751d24edb5b9e00eaea3f9` | TunerPro Binary Definition Map |
+| `37805-5YF-C420_37805-5YF-C420.xdf` | **2006–2015** | 49.4 KB | `645953a4d3fe55c9d83d830b1d7f1b72` | TunerPro Binary Definition Map |
+| `37805-64A-A540_37805-64A-A540.xdf` | **2006–2015** | 115.7 KB | `7203d128bb86757fce9065664c251317` | TunerPro Binary Definition Map |
+| `37805-64B-A010_37805-64B-A010.xdf` | **2006–2015** | 92.8 KB | `232fb7218a6428ffd7530fde1e1f82f6` | TunerPro Binary Definition Map |
+| `37805-64L-J020_37805-64L-J020.xdf` | **2006–2015** | 116.8 KB | `fa78f569336d92326cb2743a13e55e1d` | TunerPro Binary Definition Map |
+| `37805-64L-J530_37805-64L-J530.xdf` | **2006–2015** | 116.3 KB | `096f9a5f8f675177ed32c214f8c4e1cc` | TunerPro Binary Definition Map |
+| `37805-PCX-U120_37805-PCX-U120.xdf` | **2006–2015** | 1.5 KB | `9d203cdb27e4e4dec171310c8ae342c8` | TunerPro Binary Definition Map |
+| `37805-PHM -A630.rwd_37805-PHM_-A630.rwd.xdf` | **2006–2015** | 1.5 KB | `a269faceb0731a1ad207447fc2df3afd` | TunerPro Binary Definition Map |
+| `37805-PHM-4050.rwd_37805-PHM-4050.rwd.xdf` | **2006–2015** | 1.5 KB | `0687478b13c1691054c0762601d9b3c2` | TunerPro Binary Definition Map |
+| `37805-PLM-3170.rwd_37805-PLM-3170.rwd.xdf` | **2006–2015** | 1.5 KB | `782e4fcb16ece96303fa919419c23eca` | TunerPro Binary Definition Map |
+| `37805-PLM-3360_Honda_Civic_2001_DX__LX_1.7L__L4_-_Gas.xdf` | **2001** | 1.6 KB | `ab056de176d9a83e1e883e62ebd42d22` | TunerPro Binary Definition Map |
+| `37805-PLM-3390.rwd_37805-PLM-3390.rwd.xdf` | **2006–2015** | 1.5 KB | `587352edcacb40d75ad7b7775b1724f2` | TunerPro Binary Definition Map |
+| `37805-PLM-4050.rwd_37805-PLM-4050.rwd.xdf` | **2006–2015** | 1.5 KB | `4cf4e72eb7b0aa06afe0c78a72ee2d5d` | TunerPro Binary Definition Map |
+| `37805-PLM-4170.rwd_37805-PLM-4170.rwd.xdf` | **2006–2015** | 1.5 KB | `06815e8d2b56b4795870895cfb0e5a09` | TunerPro Binary Definition Map |
+| `37805-PLM-4260.rwd_37805-PLM-4260.rwd.xdf` | **2006–2015** | 1.5 KB | `0d9f8f8c13560b40f75e11d21bfdbcf5` | TunerPro Binary Definition Map |
+| `37805-PLM-4390.rwd_37805-PLM-4390.rwd.xdf` | **2006–2015** | 1.5 KB | `ed51714d8b26dda1ee4c2d3aee1cfd76` | TunerPro Binary Definition Map |
+| `37805-PLM-A150-M1.rwd_37805-PLM-A150-M1.rwd.xdf` | **2006–2015** | 1.5 KB | `5328ba803911c410172cc107fb71cdb5` | TunerPro Binary Definition Map |
+| `37805-PLM-A760-M1.rwd_37805-PLM-A760-M1.rwd.xdf` | **2006–2015** | 1.5 KB | `b16f570d9e7a3e0ae36904278ae4193f` | TunerPro Binary Definition Map |
+| `37805-PLM-C150-M1.rwd_37805-PLM-C150-M1.rwd.xdf` | **2006–2015** | 1.5 KB | `1b08130bd9d8380713fb409039316d55` | TunerPro Binary Definition Map |
+| `37805-PLM-C760-M1.rwd_37805-PLM-C760-M1.rwd.xdf` | **2006–2015** | 1.5 KB | `37ea40f951f27ec8ec6090afe3975321` | TunerPro Binary Definition Map |
+| `37805-PLR-3150.rwd_37805-PLR-3150.rwd.xdf` | **2006–2015** | 1.5 KB | `9dd254f1aec696aefe4584564946785b` | TunerPro Binary Definition Map |
+| `37805-PLR-3170.rwd_37805-PLR-3170.rwd.xdf` | **2006–2015** | 1.5 KB | `4470814bed9e7cec11423efaaea739d3` | TunerPro Binary Definition Map |
+| `37805-PLR-3360.rwd_37805-PLR-3360.rwd.xdf` | **2006–2015** | 1.5 KB | `30e9a0722b9f6390502c8028735135c8` | TunerPro Binary Definition Map |
+| `37805-PLR-3390.rwd_37805-PLR-3390.rwd.xdf` | **2006–2015** | 1.5 KB | `04dfe9ae223607eb3f14f5e70b07d94a` | TunerPro Binary Definition Map |
+| `37805-PLR-4050.rwd_37805-PLR-4050.rwd.xdf` | **2006–2015** | 1.5 KB | `ec1e78783351081c11f8f1ebf2a61db6` | TunerPro Binary Definition Map |
+| `37805-PLR-4170.rwd_37805-PLR-4170.rwd.xdf` | **2006–2015** | 1.5 KB | `8ac17efc1d7316205218f365044c885d` | TunerPro Binary Definition Map |
+| `37805-PLR-4260.rwd_37805-PLR-4260.rwd.xdf` | **2006–2015** | 1.5 KB | `7f794b1e3e204769300e4711f58c6ba3` | TunerPro Binary Definition Map |
+| `37805-PLR-4390.rwd_37805-PLR-4390.rwd.xdf` | **2006–2015** | 1.5 KB | `a50930455183b9cee689c14ca78945c9` | TunerPro Binary Definition Map |
+| `37805-PLR-A130-M1.rwd_37805-PLR-A130-M1.rwd.xdf` | **2006–2015** | 1.5 KB | `1f8ea70ac5b91557b0459c0b0672bdc2` | TunerPro Binary Definition Map |
+| `37805-PLR-A750-M1.rwd_37805-PLR-A750-M1.rwd.xdf` | **2006–2015** | 1.5 KB | `91f6334169e4208259eca6bac1bc1b91` | TunerPro Binary Definition Map |
+| `37805-PLR-C130-M1.rwd_37805-PLR-C130-M1.rwd.xdf` | **2006–2015** | 1.5 KB | `3bb767eb8c2f63a624b878df3592d87c` | TunerPro Binary Definition Map |
+| `37805-PLR-C750-M1.rwd_37805-PLR-C750-M1.rwd.xdf` | **2006–2015** | 1.5 KB | `e3a3feb8f0b875dcf311946dafb764ec` | TunerPro Binary Definition Map |
+| `37805-PMM-3170.rwd_37805-PMM-3170.rwd.xdf` | **2006–2015** | 1.5 KB | `20914b7a4759812608ef150dd7a2e6cf` | TunerPro Binary Definition Map |
+| `37805-PMM-3390.rwd_37805-PMM-3390.rwd.xdf` | **2006–2015** | 1.5 KB | `9965cf3977056fcf26e8169185fc1fe3` | TunerPro Binary Definition Map |
+| `37805-PMM-4050.rwd_37805-PMM-4050.rwd.xdf` | **2006–2015** | 1.5 KB | `1429e49dfbaa2f55ea6347146bd1b5a2` | TunerPro Binary Definition Map |
+| `37805-PMM-4170.rwd_37805-PMM-4170.rwd.xdf` | **2006–2015** | 1.5 KB | `26242aee34666e614263faf60010626d` | TunerPro Binary Definition Map |
+| `37805-PMM-4260.rwd_37805-PMM-4260.rwd.xdf` | **2006–2015** | 1.5 KB | `ea4b3a6ad418475016c9d4c7c5dadef1` | TunerPro Binary Definition Map |
+| `37805-PMM-4390.rwd_37805-PMM-4390.rwd.xdf` | **2006–2015** | 1.5 KB | `cce23cfd6fe9468665a472e32096ab2b` | TunerPro Binary Definition Map |
+| `37805-PMP-3050.rwd_37805-PMP-3050.rwd.xdf` | **2006–2015** | 1.5 KB | `effc70dddccbe361d4e1f64e80b610a9` | TunerPro Binary Definition Map |
+| `37805-PMP-3060_Honda_Civic_2001_HX_1.7L__L4_-_Gas.xdf` | **2001** | 1.6 KB | `9afb68be5eb2c59cf901108d81f6a1dd` | TunerPro Binary Definition Map |
+| `37805-PMP-3070.rwd_37805-PMP-3070.rwd.xdf` | **2006–2015** | 1.5 KB | `1184818fdd8bb0d97622fedb0d7d7861` | TunerPro Binary Definition Map |
+| `37805-PMP-3090.rwd_37805-PMP-3090.rwd.xdf` | **2006–2015** | 1.5 KB | `364db9d9bf4bcfe01db840e701821046` | TunerPro Binary Definition Map |
+| `37805-PMP-4050.rwd_37805-PMP-4050.rwd.xdf` | **2006–2015** | 1.5 KB | `bf73ca5b28c83125f622032109c9bd76` | TunerPro Binary Definition Map |
+| `37805-PMP-4060.rwd_37805-PMP-4060.rwd.xdf` | **2006–2015** | 1.5 KB | `2500bc0d6170e59145f91ca234f98bb3` | TunerPro Binary Definition Map |
+| `37805-PMP-4170_Honda_Civic_2003_HX_1.7L__L4_-_Gas.xdf` | **2003** | 1.6 KB | `7f5e6aec60717c549f824f48a212656f` | TunerPro Binary Definition Map |
+| `37805-PMP-4190_Honda_Civic_2002_HX_1.7L__L4_-_Gas.xdf` | **2002** | 1.6 KB | `9f8144bcb80740c613f06ccafd397779` | TunerPro Binary Definition Map |
+| `37805-PMP-A130_Honda_Civic_2002_HX_1.7L__L4_-_Gas.xdf` | **2002** | 1.6 KB | `661039b608430947525de2878db45e0b` | TunerPro Binary Definition Map |
+| `37805-PMP-A830-M1.rwd_37805-PMP-A830-M1.rwd.xdf` | **2006–2015** | 1.5 KB | `1c9e3bf63af4a5cf46dd24237049b46d` | TunerPro Binary Definition Map |
+| `37805-PMR-3170.rwd_37805-PMR-3170.rwd.xdf` | **2006–2015** | 1.5 KB | `7a2e23c6a5f2dc2c5f63dde97607039a` | TunerPro Binary Definition Map |
+| `37805-PMR-3390.rwd_37805-PMR-3390.rwd.xdf` | **2006–2015** | 1.5 KB | `e79b01c9965027fb54a6da1097409860` | TunerPro Binary Definition Map |
+| `37805-PMR-4050.rwd_37805-PMR-4050.rwd.xdf` | **2006–2015** | 1.5 KB | `503edd76a1f02b397482dd5ec458e912` | TunerPro Binary Definition Map |
+| `37805-PMR-4170.rwd_37805-PMR-4170.rwd.xdf` | **2006–2015** | 1.5 KB | `0b0108a2eef441199ae6e4a79c3f80d1` | TunerPro Binary Definition Map |
+| `37805-PMR-4260.rwd_37805-PMR-4260.rwd.xdf` | **2006–2015** | 1.5 KB | `c069a9f05b9d93c6cecc398dab6abd52` | TunerPro Binary Definition Map |
+| `37805-PMR-4390.rwd_37805-PMR-4390.rwd.xdf` | **2006–2015** | 1.5 KB | `37bec05c6dc020c38b135aeb15bd0eb7` | TunerPro Binary Definition Map |
+| `37805-PMS-A660-M1.rwd_37805-PMS-A660-M1.rwd.xdf` | **2006–2015** | 1.5 KB | `3b1cb8769cb766a3fb20e219e943b67f` | TunerPro Binary Definition Map |
+| `37805-PMS-A680_Honda_Civic_2003_GX_1.7L__L4_-_CNG.xdf` | **2003** | 1.6 KB | `74ad786be27021d96b250a576c9e5bff` | TunerPro Binary Definition Map |
+| `37805-PND-3050_Honda_Civic_2004_2005_GX_1.7L__L4_-_CNG.xdf` | **2004–2005** | 1.6 KB | `baa46a512a9d2311295a14704c96e711` | TunerPro Binary Definition Map |
+| `37805-PND-3060.rwd_37805-PND-3060.rwd.xdf` | **2006–2015** | 1.5 KB | `f2cdbeba1d41a54cd5c943eb31cd76de` | TunerPro Binary Definition Map |
+| `37805-PND-3070.rwd_37805-PND-3070.rwd.xdf` | **2006–2015** | 1.5 KB | `6ca463b9451c4bf72d16e86137202dcf` | TunerPro Binary Definition Map |
+| `37805-PNF-A060-M1.rwd_37805-PNF-A060-M1.rwd.xdf` | **2006–2015** | 1.5 KB | `a89ce4a3da322f7dc8ed6126f26b33b8` | TunerPro Binary Definition Map |
+| `37805-PPA-3050.rwd_37805-PPA-3050.rwd.xdf` | **2006–2015** | 1.5 KB | `829934b3eb32739c05a115b7a08a456c` | TunerPro Binary Definition Map |
+| `37805-PPA-3180.rwd_37805-PPA-3180.rwd.xdf` | **2006–2015** | 1.5 KB | `942e65dfb37c144f161428722fcc59dd` | TunerPro Binary Definition Map |
+| `37805-PPA-4260.rwd_37805-PPA-4260.rwd.xdf` | **2006–2015** | 1.5 KB | `7f38f976d95dedcd9e482f19b3679243` | TunerPro Binary Definition Map |
+| `37805-PRB-3050.rwd_37805-PRB-3050.rwd.xdf` | **2006–2015** | 1.5 KB | `dc143cf5ac344715ce81a8665a8a5bd8` | TunerPro Binary Definition Map |
+| `37805-PRB-A080-M1.rwd_37805-PRB-A080-M1.rwd.xdf` | **2006–2015** | 1.5 KB | `1f3f7c6673663cc5fc4ef2550ce424dc` | TunerPro Binary Definition Map |
+| `37805-PVJ-X560-M1.rwd_37805-PVJ-X560-M1.rwd.xdf` | **2006–2015** | 1.5 KB | `ba0572e25ca3d80066e75310b3a9d019` | TunerPro Binary Definition Map |
+| `37805-PVJ-X810-M1.rwd_37805-PVJ-X810-M1.rwd.xdf` | **2006–2015** | 1.5 KB | `74720fde271c0e51600ced2d20dde279` | TunerPro Binary Definition Map |
+| `37805-PVJ-X910-M1.rwd_37805-PVJ-X910-M1.rwd.xdf` | **2006–2015** | 1.5 KB | `f4740f7c521616a8c27224b549644250` | TunerPro Binary Definition Map |
+| `37805-PVJ-Y530-M1.rwd_37805-PVJ-Y530-M1.rwd.xdf` | **2006–2015** | 1.5 KB | `a1c7d0be256a6e94becc46f2627f00a3` | TunerPro Binary Definition Map |
+| `37805-PVJ-Y550-M1.rwd_37805-PVJ-Y550-M1.rwd.xdf` | **2006–2015** | 1.5 KB | `919393a47890b8f0e1a4114a0b8cffcc` | TunerPro Binary Definition Map |
+| `37805-PWG-3050.rwd_37805-PWG-3050.rwd.xdf` | **2006–2015** | 1.5 KB | `9f6a2a287fb01911d6c2bba8b6054e86` | TunerPro Binary Definition Map |
+| `37805-PWG-3060.rwd_37805-PWG-3060.rwd.xdf` | **2006–2015** | 1.5 KB | `a494ff5b6049fb4c2e753e5dde1c067f` | TunerPro Binary Definition Map |
+| `37805-PZA-3050.rwd_37805-PZA-3050.rwd.xdf` | **2006–2015** | 1.5 KB | `82869d308ef7dcfca4cc3118631d8c37` | TunerPro Binary Definition Map |
+| `37805-PZA-3280.rwd_37805-PZA-3280.rwd.xdf` | **2006–2015** | 1.5 KB | `b5aa38aee1ddfc65f187a7783b782926` | TunerPro Binary Definition Map |
+| `37805-PZA-3290.rwd_37805-PZA-3290.rwd.xdf` | **2006–2015** | 1.5 KB | `56af059f33ffbc8873a6f2ee824d46d3` | TunerPro Binary Definition Map |
+| `37805-PZA-4060.rwd_37805-PZA-4060.rwd.xdf` | **2006–2015** | 1.5 KB | `4164697c3c8e87f56eb6c3924048c91f` | TunerPro Binary Definition Map |
+| `37805-PZA-4280.rwd_37805-PZA-4280.rwd.xdf` | **2006–2015** | 1.5 KB | `082df5f50074122510d6cdc4e6cc4e10` | TunerPro Binary Definition Map |
+| `37805-PZA-A170-M1.rwd_37805-PZA-A170-M1.rwd.xdf` | **2006–2015** | 1.5 KB | `3b72f2a8d14da05edad8afbcaf5353aa` | TunerPro Binary Definition Map |
+| `37805-PZA-L150-M1.rwd_37805-PZA-L150-M1.rwd.xdf` | **2006–2015** | 1.5 KB | `5ad5f8877a08fa69ebc52dd79132d19d` | TunerPro Binary Definition Map |
+| `37805-PZD-4160_37805-PZD-4160.xdf` | **2006–2015** | 9.8 KB | `20bad70c3419f8a4eaeb56b5e4178bbe` | TunerPro Binary Definition Map |
+| `37805-PZD-A130-M1.rwd_37805-PZD-A130-M1.rwd.xdf` | **2006–2015** | 9.8 KB | `98f8f5442a7f3d48e61cf88eeb43c96b` | TunerPro Binary Definition Map |
+| `37805-PZD-A380_37805-PZD-A380.xdf` | **2006–2015** | 9.8 KB | `7fb187162f649a1520a5b8ecc16500d1` | TunerPro Binary Definition Map |
+| `37805-R40-A190_37805-R40-A190.xdf` | **2006–2015** | 4.9 KB | `88d064e47ea85b986006a29f70edd961` | TunerPro Binary Definition Map |
+| `37805-R40-K130_37805-R40-K130.xdf` | **2006–2015** | 4.9 KB | `4ca1356029d3b70ab6c15e1531b21cbf` | TunerPro Binary Definition Map |
+| `37805-R40-K530_37805-R40-K530.xdf` | **2006–2015** | 4.9 KB | `80db455bc0e67730cf97ba7a361f872e` | TunerPro Binary Definition Map |
+| `37805-R40-K630_37805-R40-K630.xdf` | **2006–2015** | 4.9 KB | `d79774217c5c4f8845abd5400bb79382` | TunerPro Binary Definition Map |
+| `37805-R40-U530_37805-R40-U530.xdf` | **2006–2015** | 4.9 KB | `3494638141d21b6dfb67018f13796c05` | TunerPro Binary Definition Map |
+| `37805-R49-U030_37805-R49-U030.xdf` | **2006–2015** | 4.9 KB | `d533f0d84b4e6f5bd269fba3e0acf2ad` | TunerPro Binary Definition Map |
+| `37805-R60-M720_37805-R60-M720.xdf` | **2006–2015** | 3.8 KB | `06c468e5e800aba12869fe7414f5bc74` | TunerPro Binary Definition Map |
+| `37805-R60-U550_37805-R60-U550.xdf` | **2006–2015** | 3.8 KB | `313157cccf479499e9347069b16141c4` | TunerPro Binary Definition Map |
+| `37805-R8A-A560_37805-R8A-A560.xdf` | **2006–2015** | 7.0 KB | `cd09e08d8601a9af3a2a79cc895ecf4c` | TunerPro Binary Definition Map |
+| `37805-RBJ-A560_37805-RBJ-A560.xdf` | **2006–2015** | 7.0 KB | `6dd84a2500b9394f2f5002ba79ac274c` | TunerPro Binary Definition Map |
+| `37805-RBJ-T520_37805-RBJ-T520.xdf` | **2006–2015** | 7.0 KB | `6b5f7dd5570d8554934d17dd4a0e44bb` | TunerPro Binary Definition Map |
+| `37805-RC0-M030_37805-RC0-M030.xdf` | **2006–2015** | 4.3 KB | `6811de76d4918dd740861c6f29b0da40` | TunerPro Binary Definition Map |
+| `37805-RC0-M130_37805-RC0-M130.xdf` | **2006–2015** | 4.3 KB | `1c095cd9facebfc7d5ee0f7c397b4077` | TunerPro Binary Definition Map |
+| `37805-RC0-M530_37805-RC0-M530.xdf` | **2006–2015** | 4.3 KB | `2e5e5f802b273b90bd828711c11140ea` | TunerPro Binary Definition Map |
+| `37805-RC0-M630_37805-RC0-M630.xdf` | **2006–2015** | 4.3 KB | `499b5bc53580ba9d0095cf70dde6dfbb` | TunerPro Binary Definition Map |
+| `37805-RC1-M030_37805-RC1-M030.xdf` | **2006–2015** | 4.3 KB | `6d60514f2a5c4ba603afd2c2b594d8a7` | TunerPro Binary Definition Map |
+| `37805-RC1-M540_37805-RC1-M540.xdf` | **2006–2015** | 4.3 KB | `5b8efa71da89f6ff69b0b2d70a6326a9` | TunerPro Binary Definition Map |
+| `37805-RC1-P120_37805-RC1-P120.xdf` | **2006–2015** | 4.3 KB | `0c756a036c5d7389dcc2377fdfa33d4c` | TunerPro Binary Definition Map |
+| `37805-RC1-P520_37805-RC1-P520.xdf` | **2006–2015** | 4.3 KB | `c2e1a2521ba070c8d81277e6e7a733f8` | TunerPro Binary Definition Map |
+| `37805-RC1-P720_37805-RC1-P720.xdf` | **2006–2015** | 4.3 KB | `ebd7bcb3c79eb43b2a3b828ab0b1b89b` | TunerPro Binary Definition Map |
+| `37805-RCA-3150.rwd_37805-RCA-3150.rwd.xdf` | **2006–2015** | 4.3 KB | `ed307ab65e7e3de660f888d6251b3174` | TunerPro Binary Definition Map |
+| `37805-RCA-3160.rwd_37805-RCA-3160.rwd.xdf` | **2006–2015** | 4.3 KB | `9b2b232c37a26d57cf2e2d98a5a75fbf` | TunerPro Binary Definition Map |
+| `37805-RCA-A060-M5.rwd_37805-RCA-A060-M5.rwd.xdf` | **2006–2015** | 4.4 KB | `2741f867d2198601671df827a1c8f4e1` | TunerPro Binary Definition Map |
+| `37805-RCA-A360-M5.rwd_37805-RCA-A360-M5.rwd.xdf` | **2006–2015** | 4.4 KB | `69b7ae35aa2108ef7d58e4b60fede62a` | TunerPro Binary Definition Map |
+| `37805-RCA-A850-M5.rwd_37805-RCA-A850-M5.rwd.xdf` | **2006–2015** | 4.4 KB | `6fdfae6f1a0870c99ae736c7812a6694` | TunerPro Binary Definition Map |
+| `37805-RCA-A980-M5.rwd_37805-RCA-A980-M5.rwd.xdf` | **2006–2015** | 4.4 KB | `43015e91dafb5d210ecea0ca82807743` | TunerPro Binary Definition Map |
+| `37805-RCA-K570-M5.rwd_37805-RCA-K570-M5.rwd.xdf` | **2006–2015** | 4.4 KB | `e6371232d14e4d85cd58cc380f1ae4ae` | TunerPro Binary Definition Map |
+| `37805-RCA-K740-M5.rwd_37805-RCA-K740-M5.rwd.xdf` | **2006–2015** | 4.4 KB | `ce5161191f26e68fb41c7fd911c8299f` | TunerPro Binary Definition Map |
+| `37805-RCA-K940-M5.rwd_37805-RCA-K940-M5.rwd.xdf` | **2006–2015** | 4.4 KB | `16e27e1c3c538ce0f943878d9d6de7a0` | TunerPro Binary Definition Map |
+| `37805-RCA-L060-M5.rwd_37805-RCA-L060-M5.rwd.xdf` | **2006–2015** | 4.4 KB | `9035a35637281830af2d2caba6e36af8` | TunerPro Binary Definition Map |
+| `37805-RCA-L250-M5.rwd_37805-RCA-L250-M5.rwd.xdf` | **2006–2015** | 4.4 KB | `7cc094712653aff0d4569c215c6961fb` | TunerPro Binary Definition Map |
+| `37805-RCA-L360-M5.rwd_37805-RCA-L360-M5.rwd.xdf` | **2006–2015** | 4.4 KB | `333aa4bb0bb342499cdd2020986663cc` | TunerPro Binary Definition Map |
+| `37805-RCA-L850-M5.rwd_37805-RCA-L850-M5.rwd.xdf` | **2006–2015** | 4.4 KB | `163c77348a422607081546d85f962de1` | TunerPro Binary Definition Map |
+| `37805-RCA-L980-M5.rwd_37805-RCA-L980-M5.rwd.xdf` | **2006–2015** | 4.4 KB | `f10a40103d6d71523098c2cf1f6498e2` | TunerPro Binary Definition Map |
+| `37805-RCA-M740-M5.rwd_37805-RCA-M740-M5.rwd.xdf` | **2006–2015** | 4.4 KB | `c21ad773abfd79164f6d3bccbafdb997` | TunerPro Binary Definition Map |
+| `37805-RCA-M940-M5.rwd_37805-RCA-M940-M5.rwd.xdf` | **2006–2015** | 4.4 KB | `17feab9ad6055017c20141c66c5362dd` | TunerPro Binary Definition Map |
+| `37805-RCA-X050-M5.rwd_37805-RCA-X050-M5.rwd.xdf` | **2006–2015** | 4.4 KB | `d1a4c2eedb41d44639f85f5f7efcc3c2` | TunerPro Binary Definition Map |
+| `37805-RCA-X130-M5.rwd_37805-RCA-X130-M5.rwd.xdf` | **2006–2015** | 4.4 KB | `0955478b696a356ca3e0649d0d2f871b` | TunerPro Binary Definition Map |
+| `37805-RCA-X330-M5.rwd_37805-RCA-X330-M5.rwd.xdf` | **2006–2015** | 4.4 KB | `ccfbcbe7466519487dea48c642e45b54` | TunerPro Binary Definition Map |
+| `37805-RCA-X440-M5.rwd_37805-RCA-X440-M5.rwd.xdf` | **2006–2015** | 4.4 KB | `2b35e446a620a2e33497d5c5560c5f0c` | TunerPro Binary Definition Map |
+| `37805-RCA-X570-M5.rwd_37805-RCA-X570-M5.rwd.xdf` | **2006–2015** | 4.4 KB | `54035969809b12967e75a34e2dfb8d92` | TunerPro Binary Definition Map |
+| `37805-RCA-X670-M5.rwd_37805-RCA-X670-M5.rwd.xdf` | **2006–2015** | 4.4 KB | `f49fdbf36f710bc27cad7a7e19127d85` | TunerPro Binary Definition Map |
+| `37805-RCA-X740-M5.rwd_37805-RCA-X740-M5.rwd.xdf` | **2006–2015** | 4.4 KB | `4caac81718b681d560a0dc97bac65a7f` | TunerPro Binary Definition Map |
+| `37805-RCA-X840-M5.rwd_37805-RCA-X840-M5.rwd.xdf` | **2006–2015** | 4.4 KB | `d48e9d7b79274319052d238d415f48ad` | TunerPro Binary Definition Map |
+| `37805-RCA-X950-M5.rwd_37805-RCA-X950-M5.rwd.xdf` | **2006–2015** | 4.4 KB | `128b7b680f9a44686574cb5a7930e49b` | TunerPro Binary Definition Map |
+| `37805-RCB-U810-M5.rwd_37805-RCB-U810-M5.rwd.xdf` | **2006–2015** | 4.4 KB | `e21f6e5bce1017b8b19880c4e7fa7c6c` | TunerPro Binary Definition Map |
+| `37805-RCB-Y740-M5.rwd_37805-RCB-Y740-M5.rwd.xdf` | **2006–2015** | 4.4 KB | `ee4237c65ed126412726cbbc72a5789f` | TunerPro Binary Definition Map |
+| `37805-RCE-U820-M5.rwd_37805-RCE-U820-M5.rwd.xdf` | **2006–2015** | 4.4 KB | `74cc25a05cc30e332b96cdae6007be0e` | TunerPro Binary Definition Map |
+| `37805-RCJ-3350.rwd_37805-RCJ-3350.rwd.xdf` | **2006–2015** | 4.3 KB | `503027b35d55fadd4150aa11b3381823` | TunerPro Binary Definition Map |
+| `37805-RCJ-3360.rwd_37805-RCJ-3360.rwd.xdf` | **2006–2015** | 4.3 KB | `175335a53401613fcd15f30ea5a6a3d4` | TunerPro Binary Definition Map |
+| `37805-RCJ-A690-M1.rwd_37805-RCJ-A690-M1.rwd.xdf` | **2006–2015** | 4.4 KB | `3ca3d62231aef4492f84efde4fa917d9` | TunerPro Binary Definition Map |
+| `37805-RDA-A070-M1.rwd_37805-RDA-A070-M1.rwd.xdf` | **2006–2015** | 4.4 KB | `1ac67df12f6c73fee8c40d58ea64362f` | TunerPro Binary Definition Map |
+| `37805-RDA-X630-M1.rwd_37805-RDA-X630-M1.rwd.xdf` | **2006–2015** | 9.3 KB | `52290adc56660c8ce7ad07109680462a` | TunerPro Binary Definition Map |
+| `37805-RDA-X750_37805-RDA-X750.xdf` | **2006–2015** | 9.3 KB | `551abe2be57681755bf114d8658af4fb` | TunerPro Binary Definition Map |
+| `37805-RDB-A630_37805-RDB-A630.xdf` | **2006–2015** | 9.3 KB | `3f95c515359262b692a11bfdabcfd58b` | TunerPro Binary Definition Map |
+| `37805-RGL-K920_37805-RGL-K920.xdf` | **2006–2015** | 8.1 KB | `be62820126ad87d49a7cf397afcb0f17` | TunerPro Binary Definition Map |
+| `37805-RGL-X560-M1.rwd_37805-RGL-X560-M1.rwd.xdf` | **2006–2015** | 8.2 KB | `cbc10792dc0e10c44a42bdb454ad0298` | TunerPro Binary Definition Map |
+| `37805-RGL-X730-M1.rwd_37805-RGL-X730-M1.rwd.xdf` | **2006–2015** | 8.2 KB | `41a493413a45d7de9de3f20d68ef3112` | TunerPro Binary Definition Map |
+| `37805-RGL-X830_37805-RGL-X830.xdf` | **2006–2015** | 7.6 KB | `b992ab7c5eede387c7ca7f5b199224cf` | TunerPro Binary Definition Map |
+| `37805-RGL-X920_37805-RGL-X920.xdf` | **2006–2015** | 8.1 KB | `8c120e4e84aab802b55107ab5ab59755` | TunerPro Binary Definition Map |
+| `37805-RGL-Y560-M1.rwd_37805-RGL-Y560-M1.rwd.xdf` | **2006–2015** | 8.2 KB | `a7389bed4865ee9ab799ef9b9439cec0` | TunerPro Binary Definition Map |
+| `37805-RGL-Y820_37805-RGL-Y820.xdf` | **2006–2015** | 7.6 KB | `313864c8532024ba0e17dfcdc47f135f` | TunerPro Binary Definition Map |
+| `37805-RGM-A650-M1.rwd_37805-RGM-A650-M1.rwd.xdf` | **2006–2015** | 7.6 KB | `72a03843a75434210584c220c0c4eba6` | TunerPro Binary Definition Map |
+| `37805-RJE-3250.rwd_37805-RJE-3250.rwd.xdf` | **2006–2015** | 7.6 KB | `9a89a5e0c221025c6bf7cc4fe8af32f0` | TunerPro Binary Definition Map |
+| `37805-RJE-A650-M1.rwd_37805-RJE-A650-M1.rwd.xdf` | **2006–2015** | 7.6 KB | `382e4886795f95049c075cd128469999` | TunerPro Binary Definition Map |
+| `37805-RJE-K020_37805-RJE-K020.xdf` | **2006–2015** | 8.1 KB | `502f0e512c0b6a76a32b9dd08cdffdc4` | TunerPro Binary Definition Map |
+| `37805-RJE-X640_37805-RJE-X640.xdf` | **2006–2015** | 8.1 KB | `543a27a07701302687e3d220e142df59` | TunerPro Binary Definition Map |
+| `37805-RJE-X730_37805-RJE-X730.xdf` | **2006–2015** | 7.6 KB | `114b4e62b702510256f6f5f62692b9b3` | TunerPro Binary Definition Map |
+| `37805-RK8-N520_37805-RK8-N520.xdf` | **2006–2015** | 4.3 KB | `1b4d8835767f728ac1301f1158d864cb` | TunerPro Binary Definition Map |
+| `37805-RK8-N740_37805-RK8-N740.xdf` | **2006–2015** | 4.3 KB | `ad9e116cc8a00a5f252ee46bdff7c3ad` | TunerPro Binary Definition Map |
+| `37805-RK8-N840_37805-RK8-N840.xdf` | **2006–2015** | 4.3 KB | `768fdd7e1ba427b0d8ab48060963533c` | TunerPro Binary Definition Map |
+| `37805-RKG-X550_37805-RKG-X550.xdf` | **2006–2015** | 9.3 KB | `579f286a8fee73680840a9f5f0739a4e` | TunerPro Binary Definition Map |
+| `37805-RKG-X720_37805-RKG-X720.xdf` | **2006–2015** | 7.6 KB | `e5971af6681859162dfbaabd5f872122` | TunerPro Binary Definition Map |
+| `37805-RKG-Y520_37805-RKG-Y520.xdf` | **2006–2015** | 9.3 KB | `78a7515e39cbf0745a781f55ef24bd33` | TunerPro Binary Definition Map |
+| `37805-RME-C410_37805-RME-C410.xdf` | **2006–2015** | 3.2 KB | `53c57f8592f31baea9bab31a932a9b5e` | TunerPro Binary Definition Map |
+| `37805-RME-C520_37805-RME-C520.xdf` | **2006–2015** | 3.2 KB | `f187d8b7ac6f66284ef5d44bd2b2e0b2` | TunerPro Binary Definition Map |
+| `37805-RME-C720_37805-RME-C720.xdf` | **2006–2015** | 3.2 KB | `0fc51c37264054d57626c6218c832db2` | TunerPro Binary Definition Map |
+| `37805-RME-C890_37805-RME-C890.xdf` | **2006–2015** | 3.2 KB | `1c867c7d0801e065030f3cd23c1fb1ba` | TunerPro Binary Definition Map |
+| `37805-RMX-3250_37805-RMX-3250.xdf` | **2006–2015** | 2.7 KB | `ec0b8e22b377c9def2ca1155896d63bd` | TunerPro Binary Definition Map |
+| `37805-RMX-5070_37805-RMX-5070.xdf` | **2006–2015** | 2.7 KB | `d461a94a7fee3af9e99e1f338fe91400` | TunerPro Binary Definition Map |
+| `37805-RMX-5150_37805-RMX-5150.xdf` | **2006–2015** | 2.7 KB | `a9719e065ad22ff45e771db3aede7e9f` | TunerPro Binary Definition Map |
+| `37805-RMX-A060_Honda_Civic_1.3_16v_SH7058_1Mb.xdf` | **2006–2015** | 2.7 KB | `3d0e5ef885f7cee81ca790cf022c27ce` | TunerPro Binary Definition Map |
+| `37805-RMX-A130_37805-RMX-A130.xdf` | **2006–2015** | 2.7 KB | `7262b01d83434f1a51a5c3df442d9e49` | TunerPro Binary Definition Map |
+| `37805-RMX-X550_37805-RMX-X550.xdf` | **2006–2015** | 2.7 KB | `1d4e3b7bd5c20a9a4ebcdf02b2729881` | TunerPro Binary Definition Map |
+| `37805-RN0-3150_37805-RN0-3150.xdf` | **2006–2015** | 7.6 KB | `9d121f1f4f36538098c2f6c3e32b37c5` | TunerPro Binary Definition Map |
+| `37805-RN0-3160_37805-RN0-3160.xdf` | **2006–2015** | 7.6 KB | `cf90938eeb7b6c5b74c89167729be10a` | TunerPro Binary Definition Map |
+| `37805-RN0-A070_37805-RN0-A070.xdf` | **2006–2015** | 7.0 KB | `1a218f6b5f2f76d9571c160321febc96` | TunerPro Binary Definition Map |
+| `37805-RN0-A570_37805-RN0-A570.xdf` | **2006–2015** | 7.6 KB | `bb3f2163fd6b85fac1e2382a7e97d122` | TunerPro Binary Definition Map |
+| `37805-RN0-C050_37805-RN0-C050.xdf` | **2006–2015** | 7.0 KB | `043d598f7013b68bd842c0d2dc8a55ab` | TunerPro Binary Definition Map |
+| `37805-RN0-C950_37805-RN0-C950.xdf` | **2006–2015** | 7.0 KB | `6645b2858b4bde87e8f51d215a49f5a3` | TunerPro Binary Definition Map |
+| `37805-RN0-K030_37805-RN0-K030.xdf` | **2006–2015** | 7.0 KB | `01ede4c08afea77a61156592adeae206` | TunerPro Binary Definition Map |
+| `37805-RN0-K130_37805-RN0-K130.xdf` | **2006–2015** | 7.0 KB | `9034b0d243be751ec805a27ff8821bf3` | TunerPro Binary Definition Map |
+| `37805-RN0-M040_37805-RN0-M040.xdf` | **2006–2015** | 7.0 KB | `eee9c595e9de485b46b312a1b9d4b8ee` | TunerPro Binary Definition Map |
+| `37805-RN0-M130_37805-RN0-M130.xdf` | **2006–2015** | 7.0 KB | `d120e666e18ec11903059f1064b97854` | TunerPro Binary Definition Map |
+| `37805-RN0-M830_37805-RN0-M830.xdf` | **2006–2015** | 7.0 KB | `04fa2d29676e3be5e2d1a4b7849d4c78` | TunerPro Binary Definition Map |
+| `37805-RN0-M940_37805-RN0-M940.xdf` | **2006–2015** | 7.0 KB | `cf128e1b5c2b73983ae71f1e2569ca76` | TunerPro Binary Definition Map |
+| `37805-RN0-X030_37805-RN0-X030.xdf` | **2006–2015** | 7.0 KB | `b4b7c5b5d85ba13004928784a5ae472c` | TunerPro Binary Definition Map |
+| `37805-RN0-X560_37805-RN0-X560.xdf` | **2006–2015** | 7.6 KB | `8733e9031a9050aa9dbccd11b2e45ab4` | TunerPro Binary Definition Map |
+| `37805-RN0-X620_37805-RN0-X620.xdf` | **2006–2015** | 7.6 KB | `565663b770e044abd4cb62fd6c1e5a0c` | TunerPro Binary Definition Map |
+| `37805-RN0-X760_37805-RN0-X760.xdf` | **2006–2015** | 7.6 KB | `0ff5b3e28745b080f38eadd1b128b479` | TunerPro Binary Definition Map |
+| `37805-RN0-X820_37805-RN0-X820.xdf` | **2006–2015** | 7.6 KB | `3e79d7f4242ac9e59577c56f313ec837` | TunerPro Binary Definition Map |
+| `37805-RN0-X940_37805-RN0-X940.xdf` | **2006–2015** | 7.0 KB | `3aa0fb52ccffcb138b316c407363033f` | TunerPro Binary Definition Map |
+| `37805-RNA-3260_37805-RNA-3260.xdf` | **2006–2015** | 3.8 KB | `1d909aadafe0ffef0c576d1bad81adca` | TunerPro Binary Definition Map |
+| `37805-RNA-3290_37805-RNA-3290.xdf` | **2006–2015** | 3.8 KB | `0457dc2728f850e98fb1e7b302d7622f` | TunerPro Binary Definition Map |
+| `37805-RNA-3450_37805-RNA-3450.xdf` | **2006–2015** | 4.3 KB | `6831a6545ec2a7d2a64c64cacec9a95d` | TunerPro Binary Definition Map |
+| `37805-RNA-3470_Honda_Civic_2006_DX__EX__LX_1.8L__L4_-_Gas.xdf` | **2006** | 4.4 KB | `1fe513b2de9275e90d05d98d1308d652` | TunerPro Binary Definition Map |
+| `37805-RNA-A150_Honda_Civic_1.8_16v_SH7058_1Mb.xdf` | **2006–2015** | 3.8 KB | `3c9753fcfda858fa183af51896bf2c19` | TunerPro Binary Definition Map |
+| `37805-RNA-A240_37805-RNA-A240.xdf` | **2006–2015** | 4.3 KB | `6a36972a49c8de68521b642703c62541` | TunerPro Binary Definition Map |
+| `37805-RNA-A330_Honda_Civic_2009_2010_EX-L_1.8L_L4_-_Gas.xdf` | **2009–2010** | 82.5 KB | `a125c76f3b9a5b7804a2b37ab68dbe88` | TunerPro Binary Definition Map |
+| `37805-RNA-A340_37805-RNA-A340.xdf` | **2006–2015** | 4.3 KB | `5a23e76d8ac9fc9cbf906d58aaf77853` | TunerPro Binary Definition Map |
+| `37805-RNA-A680_37805-RNA-A680.xdf` | **2006–2015** | 4.3 KB | `13b6d729f1a17c4015ad6cb340b908a9` | TunerPro Binary Definition Map |
+| `37805-RNA-A740_Honda_Civic_2007_2008_DX__EX__LX_1.8L__L4_-_Gas___ECU_Honda_.xdf` | **2007–2008** | 4.5 KB | `270045df13f2400176ec7cfc0467c767` | TunerPro Binary Definition Map |
+| `37805-RNA-A830_37805-RNA-A830.xdf` | **2006–2015** | 77.3 KB | `38b24f42b98ff9fcda89086eec9970dc` | TunerPro Binary Definition Map |
+| `37805-RNA-A830_Honda_Civic_2009_2010_2011_EX-L_1.8L_L4_-_Gas.xdf` | **2009–2010** | 77.4 KB | `ed08b232e94ffdff53d087b44a39fdcd` | TunerPro Binary Definition Map |
+| `37805-RNA-A840_Honda_Civic_2009_2010_2011_DX__EX__LX__LX-S_1.8L__L4_-_Gas.xdf` | **2009–2010** | 4.4 KB | `dc7e5eea50d7a239ef21d15cbd4c119e` | TunerPro Binary Definition Map |
+| `37805-RNA-C130_Honda_Civic_2009_2010_2011_EX-L_1.8L__L4_-_Gas.xdf` | **2009–2010** | 3.8 KB | `3e4188177234bfa34e35fb34ee597336` | TunerPro Binary Definition Map |
+| `37805-RNA-C240_37805-RNA-C240.xdf` | **2006–2015** | 4.3 KB | `c33e9dc6b148a68a0b5e6a341ebeb965` | TunerPro Binary Definition Map |
+| `37805-RNA-C340_37805-RNA-C340.xdf` | **2006–2015** | 4.3 KB | `636abb59b2b378952f7d14d8c4955b33` | TunerPro Binary Definition Map |
+| `37805-RNA-C440_37805-RNA-C440.xdf` | **2006–2015** | 4.3 KB | `69b953059dcd23c7782e2124b412bfeb` | TunerPro Binary Definition Map |
+| `37805-RNA-C640_37805-RNA-C640.xdf` | **2006–2015** | 4.3 KB | `d9e766b7e2c042fcdee0ead0f3b728df` | TunerPro Binary Definition Map |
+| `37805-RNA-C740_37805-RNA-C740.xdf` | **2006–2015** | 4.3 KB | `c5dc9abdf6cb5859a255475fce1f0c80` | TunerPro Binary Definition Map |
+| `37805-RNA-C840_37805-RNA-C840.xdf` | **2006–2015** | 4.3 KB | `a5dacd594daf9cae80e5a338c7f89adf` | TunerPro Binary Definition Map |
+| `37805-RNA-C910_37805-RNA-C910.xdf` | **2006–2015** | 3.8 KB | `9a9be952da8be36d1671b66d49af688c` | TunerPro Binary Definition Map |
+| `37805-RNA-K080_37805-RNA-K080.xdf` | **2006–2015** | 4.3 KB | `bd1762407481be47f40f7bb6896369e7` | TunerPro Binary Definition Map |
+| `37805-RNA-K590_37805-RNA-K590.xdf` | **2015–2021** | 4.3 KB | `5f2c9932105ca67b6d1917cbfdb168ff` | TunerPro Binary Definition Map |
+| `37805-RNA-U720_37805-RNA-U720.xdf` | **2006–2015** | 4.3 KB | `5d28f41f39d60d57c52069284834f3dc` | TunerPro Binary Definition Map |
+| `37805-RNA-U840_37805-RNA-U840.xdf` | **2006–2015** | 4.3 KB | `44d24a5f1b86a24c958d487f2f2000d7` | TunerPro Binary Definition Map |
+| `37805-RNA-U950_37805-RNA-U950.xdf` | **2006–2015** | 4.3 KB | `78213ea03be1e76172aae5e23f1dcf91` | TunerPro Binary Definition Map |
+| `37805-RNA-Y030_37805-RNA-Y030.xdf` | **2006–2015** | 3.8 KB | `368986a5f8206f4dcdc406c1f9b35980` | TunerPro Binary Definition Map |
+| `37805-RNA-Y330_37805-RNA-Y330.xdf` | **2006–2015** | 3.8 KB | `b2703ed0c10f9f1ba4db62ff6e460819` | TunerPro Binary Definition Map |
+| `37805-RNA-Y530_37805-RNA-Y530.xdf` | **2006–2015** | 3.8 KB | `5bc7aa4027b727bca63bb689d5ea81ad` | TunerPro Binary Definition Map |
+| `37805-RNA-Y720_37805-RNA-Y720.xdf` | **2006–2015** | 3.8 KB | `3ce0418c2fd41ed608940e215686573c` | TunerPro Binary Definition Map |
+| `37805-RNA-Y830_37805-RNA-Y830.xdf` | **2006–2015** | 3.8 KB | `fa5d4c3e217c568910aaf25557d0651e` | TunerPro Binary Definition Map |
+| `37805-RNB-X040_37805-RNB-X040.xdf` | **2006–2015** | 3.8 KB | `ad69697838b4e4a92d29dbc635a178ca` | TunerPro Binary Definition Map |
+| `37805-RNB-X120_37805-RNB-X120.xdf` | **2006–2015** | 4.3 KB | `8e6c0bd3e5aebd3bc140935d629e2d6f` | TunerPro Binary Definition Map |
+| `37805-RNB-X560_37805-RNB-X560.xdf` | **2006–2015** | 3.8 KB | `c279c724ae33b74df5b81815a40b9e6f` | TunerPro Binary Definition Map |
+| `37805-RNB-X620_37805-RNB-X620.xdf` | **2006–2015** | 4.3 KB | `ea77387eb0ebff00d815c8dfa5a081c8` | TunerPro Binary Definition Map |
+| `37805-RND-M030_37805-RND-M030.xdf` | **2006–2015** | 4.3 KB | `b4e881e0260b3cc368b047db7fe1f40f` | TunerPro Binary Definition Map |
+| `37805-RND-M530_37805-RND-M530.xdf` | **2006–2015** | 4.3 KB | `c63f678caa57a96b7ea4418434879806` | TunerPro Binary Definition Map |
+| `37805-RND-M620_37805-RND-M620.xdf` | **2006–2015** | 3.8 KB | `d9b1cfb5ac13df897ab883de2352ffe9` | TunerPro Binary Definition Map |
+| `37805-RND-M720_37805-RND-M720.xdf` | **2006–2015** | 3.8 KB | `697b9e8b2e1cdd300da30e6a65b65273` | TunerPro Binary Definition Map |
+| `37805-RND-P030_37805-RND-P030.xdf` | **2006–2015** | 4.3 KB | `abeda8f15336c6c5062ad44051df7312` | TunerPro Binary Definition Map |
+| `37805-RND-P540_37805-RND-P540.xdf` | **2006–2015** | 4.3 KB | `c8057e54b90d574e5d50defa65670509` | TunerPro Binary Definition Map |
+| `37805-RND-P740_37805-RND-P740.xdf` | **2006–2015** | 4.3 KB | `f400195996e6023d82d79470b895b019` | TunerPro Binary Definition Map |
+| `37805-RNE-A550_37805-RNE-A550.xdf` | **2006–2015** | 3.8 KB | `7c8be32d533a79c8f05ecaadfe8ba10e` | TunerPro Binary Definition Map |
+| `37805-RNF-U050_Honda_Civic_2006_2007_2008_2009_2010_2011_GX_1.8L__L4_-_CNG.xdf` | **2006–2007** | 4.4 KB | `bde9391c2f1fc88b69154b2ae5a2d2c1` | TunerPro Binary Definition Map |
+| `37805-RNF-U540_37805-RNF-U540.xdf` | **2006–2015** | 4.3 KB | `5ce2d5904e85c24beb41b576cffbc3af` | TunerPro Binary Definition Map |
+| `37805-RNF-U730_37805-RNF-U730.xdf` | **2006–2015** | 4.3 KB | `687e9e67fe900a2fed9a18998cd33c07` | TunerPro Binary Definition Map |
+| `37805-RNT-U030_37805-RNT-U030.xdf` | **2006–2015** | 4.3 KB | `37614bd6be55e19eeb6e5024238454ff` | TunerPro Binary Definition Map |
+| `37805-RNT-U520_37805-RNT-U520.xdf` | **2006–2015** | 3.8 KB | `e45b3a296a9a28164446df8ad306d1f9` | TunerPro Binary Definition Map |
+| `37805-RNV-B030_37805-RNV-B030.xdf` | **2006–2015** | 4.9 KB | `b6671864a506ccf28cc0ef598107217f` | TunerPro Binary Definition Map |
+| `37805-RNV-B530_37805-RNV-B530.xdf` | **2006–2015** | 4.3 KB | `bbe56c732fd8d1e83258191c974cae8f` | TunerPro Binary Definition Map |
+| `37805-RNV-B630_37805-RNV-B630.xdf` | **2006–2015** | 4.3 KB | `ee24b75288f0cdca1383306efae9298b` | TunerPro Binary Definition Map |
+| `37805-RNV-B730_37805-RNV-B730.xdf` | **2006–2015** | 4.3 KB | `620fe787e71c363f83bcfdbb59e9543d` | TunerPro Binary Definition Map |
+| `37805-RNV-M070_37805-RNV-M070.xdf` | **2006–2015** | 3.8 KB | `c496f36d718c70a64ca1ae483d54c986` | TunerPro Binary Definition Map |
+| `37805-RNV-M560_37805-RNV-M560.xdf` | **2006–2015** | 3.8 KB | `1434acce7855b891b2623871cad7e40a` | TunerPro Binary Definition Map |
+| `37805-RNV-M660_37805-RNV-M660.xdf` | **2006–2015** | 3.8 KB | `8206f0a54a6728a83e07358e84395237` | TunerPro Binary Definition Map |
+| `37805-RNV-R020_37805-RNV-R020.xdf` | **2006–2015** | 4.9 KB | `6445ca288674738f292b0685465ef548` | TunerPro Binary Definition Map |
+| `37805-RNV-R520_37805-RNV-R520.xdf` | **2006–2015** | 4.9 KB | `808e200417a49f35718fb5668d568544` | TunerPro Binary Definition Map |
+| `37805-RNV-R620_37805-RNV-R620.xdf` | **2006–2015** | 4.9 KB | `78c20682b9f705352681946ed51b112d` | TunerPro Binary Definition Map |
+| `37805-RNV-R720_37805-RNV-R720.xdf` | **2006–2015** | 4.9 KB | `c76f901f765bab9b9064c20ff59ab450` | TunerPro Binary Definition Map |
+| `37805-RNV-Z020_37805-RNV-Z020.xdf` | **2006–2015** | 4.9 KB | `448f108463c8b7ea4a970fdf19dfffed` | TunerPro Binary Definition Map |
+| `37805-RNV-Z520_37805-RNV-Z520.xdf` | **2006–2015** | 4.9 KB | `f4932d9624ae9d4cf5227ac562af3b3e` | TunerPro Binary Definition Map |
+| `37805-RNV-Z620_37805-RNV-Z620.xdf` | **2006–2015** | 4.9 KB | `939f6d1a9261009aa61dca8ce754de20` | TunerPro Binary Definition Map |
+| `37805-RNV-Z720_37805-RNV-Z720.xdf` | **2006–2015** | 4.9 KB | `b1bb705303469e9502d16d48dd1ca134` | TunerPro Binary Definition Map |
+| `37805-RNX-M020_37805-RNX-M020.xdf` | **2006–2015** | 4.3 KB | `9748ef29bcb88c5cec7aa49e22e632f3` | TunerPro Binary Definition Map |
+| `37805-RNX-M520_37805-RNX-M520.xdf` | **2006–2015** | 4.3 KB | `eb9683a369ef6b1f246024f70c21e5b0` | TunerPro Binary Definition Map |
+| `37805-RNX-M620_37805-RNX-M620.xdf` | **2006–2015** | 4.3 KB | `1b9339e49392fea85a5c7fda3a499d3d` | TunerPro Binary Definition Map |
+| `37805-RP3-3050_37805-RP3-3050.xdf` | **2006–2015** | 4.3 KB | `b9b81d3544fe6431a804eac9cf903161` | TunerPro Binary Definition Map |
+| `37805-RP3-3070_37805-RP3-3070.xdf` | **2006–2015** | 4.3 KB | `5ba262141b7000b843b44038d7c8d12d` | TunerPro Binary Definition Map |
+| `37805-RP6-X640_37805-RP6-X640.xdf` | **2006–2015** | 7.6 KB | `da342ade84bc7ac0ef0c2d481b9119d3` | TunerPro Binary Definition Map |
+| `37805-RPY-G040_37805-RPY-G040.xdf` | **2006–2015** | 96.7 KB | `dca45ec5060f07fc3743b81c7cc34734` | TunerPro Binary Definition Map |
+| `37805-RRA-C040_37805-RRA-C040.xdf` | **2006–2015** | 3.8 KB | `2fae135f8d69f9b0651b9a02feb1bafc` | TunerPro Binary Definition Map |
+| `37805-RRA-C540_37805-RRA-C540.xdf` | **2006–2015** | 3.8 KB | `adc96aa808f654d01d7a6414593e0f35` | TunerPro Binary Definition Map |
+| `37805-RRB-3150_37805-RRB-3150.xdf` | **2006–2015** | 3.8 KB | `6c53e4587f56ccd014ae209476dd11ec` | TunerPro Binary Definition Map |
+| `37805-RRB-A090_37805-RRB-A090.xdf` | **2006–2015** | 8.7 KB | `8c5f7dd338a04d481f83cc501ab64961` | TunerPro Binary Definition Map |
+| `37805-RRB-K020_Honda_Civic_2007_2008_2009_2010_2011_Si_2.0L__L4_-_Gas.xdf` | **2007–2008** | 8.7 KB | `149c9ff805683c8a26823ca840d31544` | TunerPro Binary Definition Map |
+| `37805-RRB-X120_37805-RRB-X120.xdf` | **2006–2015** | 8.7 KB | `ea3f9df4de0c6109b401c83e97220c7d` | TunerPro Binary Definition Map |
+| `37805-RRD-M120_37805-RRD-M120.xdf` | **2006–2015** | 8.7 KB | `2764cbbe8d88d674e9bf12dd3f871d6f` | TunerPro Binary Definition Map |
+| `37805-RRD-M220_Honda_Civic_2.0_16v_SH7058_1Mb.xdf` | **2006–2015** | 8.7 KB | `a4daa3c6ba88a40e9bdc7d844d028835` | TunerPro Binary Definition Map |
+| `37805-RRD-P120_37805-RRD-P120.xdf` | **2006–2015** | 8.7 KB | `a73b973a412706e2479634bac684ae2d` | TunerPro Binary Definition Map |
+| `37805-RRH-U020_37805-RRH-U020.xdf` | **2006–2015** | 3.8 KB | `5e1d972d7d518245d12b2c07e5247e67` | TunerPro Binary Definition Map |
+| `37805-RRH-U520_37805-RRH-U520.xdf` | **2006–2015** | 3.8 KB | `ea12fe975e0f811b691d80cef50fb533` | TunerPro Binary Definition Map |
+| `37805-RRH-U620_Honda_Civic_2.0_16v_SH7058_1Mb.xdf` | **2006–2015** | 3.8 KB | `4242079a062d8cbf843b872d445c120e` | TunerPro Binary Definition Map |
+| `37805-RSP-E020_37805-RSP-E020.xdf` | **2006–2015** | 160.4 KB | `d6ea62e2d4d93e9d7fb43f4059a36459` | TunerPro Binary Definition Map |
+| `37805-RTW-3050_37805-RTW-3050.xdf` | **2006–2015** | 3.8 KB | `2b8b1a513bef154c27449c4b597da1b4` | TunerPro Binary Definition Map |
+| `37805-RV0-3290_37805-RV0-3290.xdf` | **2006–2015** | 7.0 KB | `c412f778f2243343d07a9b6819b8dd4c` | TunerPro Binary Definition Map |
+| `37805-RV0-A580_37805-RV0-A580.xdf` | **2006–2015** | 7.0 KB | `56d0ff990be204f9851efe3f601a498c` | TunerPro Binary Definition Map |
+| `37805-RV0-X640_37805-RV0-X640.xdf` | **2006–2015** | 7.0 KB | `e0d8e54c15a17842c0c4b20fe7be0a3e` | TunerPro Binary Definition Map |
+| `37805-RV0-X780_37805-RV0-X780.xdf` | **2006–2015** | 7.0 KB | `00aec4f38ba6fb0b750340d5777e7d47` | TunerPro Binary Definition Map |
+| `37805-RV0-Y640_37805-RV0-Y640.xdf` | **2006–2015** | 7.0 KB | `64563467714847c6cdeef25cd328ffb1` | TunerPro Binary Definition Map |
+| `37805-RV0-Y780_37805-RV0-Y780.xdf` | **2006–2015** | 7.0 KB | `0d976257e53b1a8802b627b574772715` | TunerPro Binary Definition Map |
+| `37805-RWC-X560_37805-RWC-X560.xdf` | **2006–2015** | 4.9 KB | `e9ecfa71b7526f9d40534e7491dceb49` | TunerPro Binary Definition Map |
+| `37805-RWC-X620_37805-RWC-X620.xdf` | **2006–2015** | 9.8 KB | `9de09d65d07ac8fd6c0e79524cc91761` | TunerPro Binary Definition Map |
+| `37805-RX0-A030_Honda_Civic_2012_Si_2.4L_L4_-_Gas.xdf` | **2012** | 115.1 KB | `bb96d9084ea5fd93716537476a4b4f3d` | TunerPro Binary Definition Map |
+| `37805-RX0-A140_Honda_Civic_2012_Si_2.4L__L4_-_Gas.xdf` | **2012** | 106.7 KB | `c9cb31be85e0d3af050f25a28956f55f` | TunerPro Binary Definition Map |
+| `37805-RX0-A220_Honda_Civic_2013_Si_2.4L__L4_-_Gas.xdf` | **2013** | 107.2 KB | `d9e5b6bb19304466d721176369aec40f` | TunerPro Binary Definition Map |
+| `37805-RYE-A040_37805-RYE-A040.xdf` | **2006–2015** | 7.6 KB | `ae9ab1032f03c452c32748a69dce8b0c` | TunerPro Binary Definition Map |
+| `37805-RYE-A140_37805-RYE-A140.xdf` | **2006–2015** | 7.6 KB | `02e524925729f96537d1ce3b8f80ccd2` | TunerPro Binary Definition Map |
+| `37805-RYE-X620_37805-RYE-X620.xdf` | **2006–2015** | 8.1 KB | `035650a151c0b72b57416c62bb0d030b` | TunerPro Binary Definition Map |
+| `37805-RYE-X750_37805-RYE-X750.xdf` | **2006–2015** | 7.6 KB | `29d51a22264b0c1b7baef66801670d6e` | TunerPro Binary Definition Map |
+| `37805-RYE-X830_37805-RYE-X830.xdf` | **2006–2015** | 7.6 KB | `abd2e6c15e5ed261ede3657ec390bff4` | TunerPro Binary Definition Map |
+| `37805-RYP-A570-M1.rwd_37805-RYP-A570-M1.rwd.xdf` | **2006–2015** | 7.6 KB | `063fe9842c088e0ad9ab6fac94a64d98` | TunerPro Binary Definition Map |
+| `37805-RYP-A620-M1.rwd_37805-RYP-A620-M1.rwd.xdf` | **2006–2015** | 7.6 KB | `a05e624cb69cccabb1c18b66f6dae787` | TunerPro Binary Definition Map |
+| `37805-RZA-K130_37805-RZA-K130.xdf` | **2006–2015** | 3.8 KB | `b0f64bfedd4841a9f7e6ad06b672c087` | TunerPro Binary Definition Map |
+| `37805-RZA-K230_37805-RZA-K230.xdf` | **2006–2015** | 3.8 KB | `9a59f49a801911a5586913e67fd914af` | TunerPro Binary Definition Map |
+| `37805-RZA-K320_37805-RZA-K320.xdf` | **2006–2015** | 3.8 KB | `d7c6d9a85d97407ce8d0541391db012e` | TunerPro Binary Definition Map |
+| `37805-RZA-K520_37805-RZA-K520.xdf` | **2006–2015** | 3.8 KB | `3796e41eb99d8c55f51ad63319028ea4` | TunerPro Binary Definition Map |
+| `37805-RZA-K620_37805-RZA-K620.xdf` | **2006–2015** | 3.8 KB | `cd98d663f5197fc74b9f7adb1e8b359c` | TunerPro Binary Definition Map |
+| `37805-RZA-K720_37805-RZA-K720.xdf` | **2006–2015** | 3.8 KB | `be42d790ab000169628cbb925d36f9a5` | TunerPro Binary Definition Map |
+| `37805-RZA-K930_37805-RZA-K930.xdf` | **2006–2015** | 3.8 KB | `eb2313ad258aafb95df92d90873c95eb` | TunerPro Binary Definition Map |
+| `37805-RZA-X630_37805-RZA-X630.xdf` | **2006–2015** | 3.8 KB | `c42846c73a5318adeb650613891cdff6` | TunerPro Binary Definition Map |
+| `37805-RZA-X830_37805-RZA-X830.xdf` | **2006–2015** | 3.8 KB | `9ef4b9533a60024fb2411649965bff07` | TunerPro Binary Definition Map |
+| `37805-RZP-M020_37805-RZP-M020.xdf` | **2006–2015** | 3.8 KB | `8e7c6d9ff3bba80344e53a0daa8867f2` | TunerPro Binary Definition Map |
+| `37805-RZP-M520_37805-RZP-M520.xdf` | **2006–2015** | 3.8 KB | `7ee1d3116503af32e61cff1eedc6dbd7` | TunerPro Binary Definition Map |
+| `37805-RZP-M720_37805-RZP-M720.xdf` | **2006–2015** | 4.3 KB | `cfda1ff3a93e14d1b11bf8aa54392ac6` | TunerPro Binary Definition Map |
+| `37805-RZP-M820_37805-RZP-M820.xdf` | **2006–2015** | 4.3 KB | `471730758d7cabbe586b480bef4baedc` | TunerPro Binary Definition Map |
+| `HONDA_CIVIC_FB_2012-2015_1.8L_R18Z1_KEIHIN_37805-R1J-A660-M1.rwd` | **2012–2015** | 1.94 MB | `a28c6c29ed5b921cf7e669586d4edc78` | Factory Binary Firmware Dump |
 
 ---
 

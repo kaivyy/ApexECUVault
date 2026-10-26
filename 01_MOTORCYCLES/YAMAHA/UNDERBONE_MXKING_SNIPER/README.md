@@ -21,17 +21,19 @@ Nama berkas yang tersimpan merefleksikan identitas perangkat keras (Hardware ID)
 > [!NOTE]
 > Mempertahankan kode dan nomor asli pabrikan pada penamaan berkas sangat krusial agar perangkat lunak kalibrasi (seperti **TunerPro**, **WinOLS**, atau **RomRaider**) dapat mengenali dan mencocokkan peta definisi (*definition maps*) secara otomatis tanpa merusak asosiasi header ECU.
 
+* **Rentang Tahun / Model Year**: 2015–2023
+
 ---
 
-## 2. Manifest Aset Berkas Fisik (100% Verified)
+## 2. Manifest Fisik Kalibrasi & Definisi Terverifikasi
 
-Berikut adalah daftar lengkap berkas fisik yang tersimpan secara lokal di direktori ini:
+Berikut adalah daftar lengkap berkas fisik yang tersimpan secara lokal di direktori ini dengan verifikasi Model Year (Tahun Produksi), ukuran, MD5 checksum, dan tipe platform:
 
-| Nama Berkas | Tipe / Format | Ukuran (Bytes) | Deskripsi Teknis & Identifikasi |
-| :--- | :--- | :--- | :--- |
-| `YAMAHA_MX_KING_150_GEN1_2015-2018_2PV1.bin` | `.BIN` | `27,648` bytes | Yamaha Factory Renesas RL78 / Denso ROM |
-| `YAMAHA_MX_KING_150_GEN2_LED_2019-2022_B5V0.bin` | `.BIN` | `27,648` bytes | Yamaha Factory Renesas RL78 / Denso ROM |
-| `YAMAHA_MX_KING_150_SPECIAL_DOXOU_BKV1.bin` | `.BIN` | `27,648` bytes | Yamaha Factory Renesas RL78 / Denso ROM |
+| Filename | Tahun / Model Year | Size | MD5 Checksum | Type / Target Platform |
+| :--- | :---: | :--- | :--- | :--- |
+| `YAMAHA_MX_KING_150_GEN1_2015-2018_2PV1.bin` | **2015–2018** | 27.0 KB | `a705f0587831fe9525ce4872b64cdc95` | Factory Binary Firmware Dump |
+| `YAMAHA_MX_KING_150_GEN2_LED_2019-2022_B5V0.bin` | **2019–2022** | 27.0 KB | `81449ab4c9756c72adbe6a646fa49d0c` | Factory Binary Firmware Dump |
+| `YAMAHA_MX_KING_150_SPECIAL_DOXOU_BKV1.bin` | **2015–2023** | 27.0 KB | `cbf24c22b2ad23c6923247b7dbfbd53f` | Factory Binary Firmware Dump |
 
 ---
 

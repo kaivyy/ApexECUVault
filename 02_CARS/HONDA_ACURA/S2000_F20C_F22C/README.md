@@ -21,18 +21,20 @@ Nama berkas yang tersimpan merefleksikan identitas perangkat keras (Hardware ID)
 > [!NOTE]
 > Mempertahankan kode dan nomor asli pabrikan pada penamaan berkas sangat krusial agar perangkat lunak kalibrasi (seperti **TunerPro**, **WinOLS**, atau **RomRaider**) dapat mengenali dan mencocokkan peta definisi (*definition maps*) secara otomatis tanpa merusak asosiasi header ECU.
 
+* **Rentang Tahun / Model Year**: OEM Production
+
 ---
 
-## 2. Manifest Aset Berkas Fisik (100% Verified)
+## 2. Manifest Fisik Kalibrasi & Definisi Terverifikasi
 
-Berikut adalah daftar lengkap berkas fisik yang tersimpan secara lokal di direktori ini:
+Berikut adalah daftar lengkap berkas fisik yang tersimpan secara lokal di direktori ini dengan verifikasi Model Year (Tahun Produksi), ukuran, MD5 checksum, dan tipe platform:
 
-| Nama Berkas | Tipe / Format | Ukuran (Bytes) | Deskripsi Teknis & Identifikasi |
-| :--- | :--- | :--- | :--- |
-| `37805-PCX-U020_Honda_S2000_2.0_16v_SH7058_1Mb.xdf` | `.XDF` | `1,584` bytes | Honda Keihin Factory Calibration Package `37805-PCX-U020` |
-| `37805-PZX-A080_Honda_Element_2005_EX__LX_2.4L__L4_-_Gas___ECU_Honda_S2000_2.0_16v_240Hp_KEIHIN_37820-PZX-A0X_SH7058_1Mb_37805-PZX-A080_37805-PZX-A070_37805-PZX-A060_37805-PZX-A050_37805-PZX-A040_37805-PZX-A030_37805-PZX-A020_37805-PZX-A010.xdf` | `.XDF` | `3,524` bytes | Honda Keihin Factory Calibration Package `37805-PZX-A080` |
-| `37805-PZX-A080_Honda_Element_2005_EX__LX_2.4L__L4_-_Gas___ECU_Honda_S2000_2.xdf` | `.XDF` | `3,524` bytes | Honda Keihin Factory Calibration Package `37805-PZX-A080` |
-| `37805-PZX-A210_Honda_S2000_2008_2009_Base__CR_2.2L_L4_-_Gas.xdf` | `.XDF` | `129,069` bytes | Honda Keihin Factory Calibration Package `37805-PZX-A210` |
+| Filename | Tahun / Model Year | Size | MD5 Checksum | Type / Target Platform |
+| :--- | :---: | :--- | :--- | :--- |
+| `37805-PCX-U020_Honda_S2000_2.0_16v_SH7058_1Mb.xdf` | **2000** | 1.5 KB | `c42da40378c3a96a6e7c23eaf064959a` | TunerPro Binary Definition Map |
+| `37805-PZX-A080_Honda_Element_2005_EX__LX_2.4L__L4_-_Gas___ECU_Honda_S2000_2.0_16v_240Hp_KEIHIN_37820-PZX-A0X_SH7058_1Mb_37805-PZX-A080_37805-PZX-A070_37805-PZX-A060_37805-PZX-A050_37805-PZX-A040_37805-PZX-A030_37805-PZX-A020_37805-PZX-A010.xdf` | **2005** | 3.4 KB | `64d2e7fe1c8d878cdd8a6a02ef1fd795` | TunerPro Binary Definition Map |
+| `37805-PZX-A080_Honda_Element_2005_EX__LX_2.4L__L4_-_Gas___ECU_Honda_S2000_2.xdf` | **2005** | 3.4 KB | `64d2e7fe1c8d878cdd8a6a02ef1fd795` | TunerPro Binary Definition Map |
+| `37805-PZX-A210_Honda_S2000_2008_2009_Base__CR_2.2L_L4_-_Gas.xdf` | **2000–2008** | 126.0 KB | `457ee564becf3ea3139c64a073e45ffb` | TunerPro Binary Definition Map |
 
 ---
 

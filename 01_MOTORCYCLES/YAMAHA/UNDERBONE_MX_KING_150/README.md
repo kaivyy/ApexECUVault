@@ -21,23 +21,25 @@ Nama berkas yang tersimpan merefleksikan identitas perangkat keras (Hardware ID)
 > [!NOTE]
 > Mempertahankan kode dan nomor asli pabrikan pada penamaan berkas sangat krusial agar perangkat lunak kalibrasi (seperti **TunerPro**, **WinOLS**, atau **RomRaider**) dapat mengenali dan mencocokkan peta definisi (*definition maps*) secara otomatis tanpa merusak asosiasi header ECU.
 
+* **Rentang Tahun / Model Year**: 2015–2023
+
 ---
 
-## 2. Manifest Aset Berkas Fisik (100% Verified)
+## 2. Manifest Fisik Kalibrasi & Definisi Terverifikasi
 
-Berikut adalah daftar lengkap berkas fisik yang tersimpan secara lokal di direktori ini:
+Berikut adalah daftar lengkap berkas fisik yang tersimpan secara lokal di direktori ini dengan verifikasi Model Year (Tahun Produksi), ukuran, MD5 checksum, dan tipe platform:
 
-| Nama Berkas | Tipe / Format | Ukuran (Bytes) | Deskripsi Teknis & Identifikasi |
-| :--- | :--- | :--- | :--- |
-| `GENERATIONAL_B5V-H591A-00_Yamaha_Exciter_155_VVA___Sniper_155_V3_SmartKey_2021_2025.xdf` | `.XDF` | `2,561` bytes | Yamaha Factory Renesas RL78 / Denso ROM |
-| `GENERATIONAL_B5V-H591A-10_Yamaha_Exciter_155_VVA___Sniper_155_V3_Standard_Key_2021_2025.xdf` | `.XDF` | `2,565` bytes | Yamaha Factory Renesas RL78 / Denso ROM |
-| `GENERATIONAL_BNV-H591A-01_Yamaha_Sniper_155_V4_VVA_SmartKey_2023_2025.xdf` | `.XDF` | `2,547` bytes | TunerPro Binary Definition Map |
-| `MX_KING_2PV1.bin` | `.BIN` | `27,648` bytes | Yamaha Factory Renesas RL78 / Denso ROM |
-| `MX_KING_B5V0.bin` | `.BIN` | `27,648` bytes | Yamaha Factory Renesas RL78 / Denso ROM |
-| `MX_KING_BKV1.bin` | `.BIN` | `27,648` bytes | Yamaha Factory Renesas RL78 / Denso ROM |
-| `YAMAHA_2PV-H591A-00_Yamaha_MX_King_150_V1_(2PV0).xdf` | `.XDF` | `6,683` bytes | Yamaha Factory Renesas RL78 / Denso ROM |
-| `YAMAHA_B5V-H591A-00_Yamaha_MX_King_150_V2_LED_(B5V0).xdf` | `.XDF` | `6,668` bytes | Yamaha Factory Renesas RL78 / Denso ROM |
-| `YAMAHA_BKV-H591A-10_Yamaha_MX_King_150_(BKV1).xdf` | `.XDF` | `6,663` bytes | Yamaha Factory Renesas RL78 / Denso ROM |
+| Filename | Tahun / Model Year | Size | MD5 Checksum | Type / Target Platform |
+| :--- | :---: | :--- | :--- | :--- |
+| `GENERATIONAL_B5V-H591A-00_Yamaha_Exciter_155_VVA___Sniper_155_V3_SmartKey_2021_2025.xdf` | **2021–2025** | 2.5 KB | `bd57c17363976768f3ea699ca8d8dbd1` | TunerPro Binary Definition Map |
+| `GENERATIONAL_B5V-H591A-10_Yamaha_Exciter_155_VVA___Sniper_155_V3_Standard_Key_2021_2025.xdf` | **2021–2025** | 2.5 KB | `f1f508dc7e501e6d939f2adf1d9e768d` | TunerPro Binary Definition Map |
+| `GENERATIONAL_BNV-H591A-01_Yamaha_Sniper_155_V4_VVA_SmartKey_2023_2025.xdf` | **2023–2025** | 2.5 KB | `21a149f69e3590fee5a62abf56d8618d` | TunerPro Binary Definition Map |
+| `MX_KING_2PV1.bin` | **2015–2023** | 27.0 KB | `a705f0587831fe9525ce4872b64cdc95` | Factory Binary Firmware Dump |
+| `MX_KING_B5V0.bin` | **2015–2023** | 27.0 KB | `81449ab4c9756c72adbe6a646fa49d0c` | Factory Binary Firmware Dump |
+| `MX_KING_BKV1.bin` | **2015–2023** | 27.0 KB | `cbf24c22b2ad23c6923247b7dbfbd53f` | Factory Binary Firmware Dump |
+| `YAMAHA_2PV-H591A-00_Yamaha_MX_King_150_V1_(2PV0).xdf` | **2015–2023** | 6.5 KB | `53734ac043c55586c373eb282464ad6f` | TunerPro Binary Definition Map |
+| `YAMAHA_B5V-H591A-00_Yamaha_MX_King_150_V2_LED_(B5V0).xdf` | **2015–2023** | 6.5 KB | `0235d7e17b94f00105b57e81b3a7666b` | TunerPro Binary Definition Map |
+| `YAMAHA_BKV-H591A-10_Yamaha_MX_King_150_(BKV1).xdf` | **2015–2023** | 6.5 KB | `a43267663c315a96a4c625e7c707583a` | TunerPro Binary Definition Map |
 
 ---
 

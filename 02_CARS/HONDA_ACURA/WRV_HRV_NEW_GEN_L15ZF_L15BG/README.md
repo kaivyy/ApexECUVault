@@ -21,16 +21,18 @@ Nama berkas yang tersimpan merefleksikan identitas perangkat keras (Hardware ID)
 > [!NOTE]
 > Mempertahankan kode dan nomor asli pabrikan pada penamaan berkas sangat krusial agar perangkat lunak kalibrasi (seperti **TunerPro**, **WinOLS**, atau **RomRaider**) dapat mengenali dan mencocokkan peta definisi (*definition maps*) secara otomatis tanpa merusak asosiasi header ECU.
 
+* **Rentang Tahun / Model Year**: OEM Production
+
 ---
 
-## 2. Manifest Aset Berkas Fisik (100% Verified)
+## 2. Manifest Fisik Kalibrasi & Definisi Terverifikasi
 
-Berikut adalah daftar lengkap berkas fisik yang tersimpan secara lokal di direktori ini:
+Berikut adalah daftar lengkap berkas fisik yang tersimpan secara lokal di direktori ini dengan verifikasi Model Year (Tahun Produksi), ukuran, MD5 checksum, dan tipe platform:
 
-| Nama Berkas | Tipe / Format | Ukuran (Bytes) | Deskripsi Teknis & Identifikasi |
-| :--- | :--- | :--- | :--- |
-| `GENERATIONAL_37820-63R-N01_Honda_WR-V_1.5_DOHC_i-VTEC_(2022-2026).xdf` | `.XDF` | `14,481` bytes | Honda OBD1/OBD2 ECU Hardware Code `37820-63R` |
-| `GENERATIONAL_37820-64A-A01_Honda_HR-V_RS_1.5_VTEC_Turbo_(2022-2026).xdf` | `.XDF` | `12,060` bytes | Honda OBD1/OBD2 ECU Hardware Code `37820-64A` |
+| Filename | Tahun / Model Year | Size | MD5 Checksum | Type / Target Platform |
+| :--- | :---: | :--- | :--- | :--- |
+| `GENERATIONAL_37820-63R-N01_Honda_WR-V_1.5_DOHC_i-VTEC_(2022-2026).xdf` | **2022–2026** | 14.1 KB | `648657597d0edb9e3d64085f278f0330` | TunerPro Binary Definition Map |
+| `GENERATIONAL_37820-64A-A01_Honda_HR-V_RS_1.5_VTEC_Turbo_(2022-2026).xdf` | **2022–2026** | 11.8 KB | `3d80da981f8b16ed9da74bae009639f5` | TunerPro Binary Definition Map |
 
 ---
 

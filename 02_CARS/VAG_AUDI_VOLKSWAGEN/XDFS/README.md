@@ -21,19 +21,21 @@ Nama berkas yang tersimpan merefleksikan identitas perangkat keras (Hardware ID)
 > [!NOTE]
 > Mempertahankan kode dan nomor asli pabrikan pada penamaan berkas sangat krusial agar perangkat lunak kalibrasi (seperti **TunerPro**, **WinOLS**, atau **RomRaider**) dapat mengenali dan mencocokkan peta definisi (*definition maps*) secara otomatis tanpa merusak asosiasi header ECU.
 
+* **Rentang Tahun / Model Year**: 1989–2006
+
 ---
 
-## 2. Manifest Aset Berkas Fisik (100% Verified)
+## 2. Manifest Fisik Kalibrasi & Definisi Terverifikasi
 
-Berikut adalah daftar lengkap berkas fisik yang tersimpan secara lokal di direktori ini:
+Berikut adalah daftar lengkap berkas fisik yang tersimpan secara lokal di direktori ini dengan verifikasi Model Year (Tahun Produksi), ukuran, MD5 checksum, dan tipe platform:
 
-| Nama Berkas | Tipe / Format | Ukuran (Bytes) | Deskripsi Teknis & Identifikasi |
-| :--- | :--- | :--- | :--- |
-| `8D0907551M-20190711.xdf` | `.XDF` | `503,633` bytes | TunerPro Binary Definition Map |
-| `Golf_VR6_ecu117_soft529.xdf` | `.XDF` | `28,281` bytes | TunerPro Binary Definition Map |
-| `Golf_VR6_ecu219_soft109.xdf` | `.XDF` | `25,949` bytes | TunerPro Binary Definition Map |
-| `Golf_VR6_ecu496_soft205.xdf` | `.XDF` | `24,704` bytes | TunerPro Binary Definition Map |
-| `VW_OBD1_ABA.xdf` | `.XDF` | `55,510` bytes | TunerPro Binary Definition Map |
+| Filename | Tahun / Model Year | Size | MD5 Checksum | Type / Target Platform |
+| :--- | :---: | :--- | :--- | :--- |
+| `8D0907551M-20190711.xdf` | **1989–2006** | 491.8 KB | `7df7ce24a3cea3ad5215b51ab89a417f` | TunerPro Binary Definition Map |
+| `Golf_VR6_ecu117_soft529.xdf` | **1989–2006** | 27.6 KB | `7cbe4b10860d1d40f087ac2d655a4bcf` | TunerPro Binary Definition Map |
+| `Golf_VR6_ecu219_soft109.xdf` | **1989–2006** | 25.3 KB | `93c2f128474ea3f5af2045256d221f45` | TunerPro Binary Definition Map |
+| `Golf_VR6_ecu496_soft205.xdf` | **1989–2006** | 24.1 KB | `5f9424238e7691caa0a70a003a400e40` | TunerPro Binary Definition Map |
+| `VW_OBD1_ABA.xdf` | **1989–2006** | 54.2 KB | `3d12dbe4f2803cc59ce072881ab97d8a` | TunerPro Binary Definition Map |
 
 ---
 

@@ -21,18 +21,20 @@ Nama berkas yang tersimpan merefleksikan identitas perangkat keras (Hardware ID)
 > [!NOTE]
 > Mempertahankan kode dan nomor asli pabrikan pada penamaan berkas sangat krusial agar perangkat lunak kalibrasi (seperti **TunerPro**, **WinOLS**, atau **RomRaider**) dapat mengenali dan mencocokkan peta definisi (*definition maps*) secara otomatis tanpa merusak asosiasi header ECU.
 
+* **Rentang Tahun / Model Year**: 2000–2006
+
 ---
 
-## 2. Manifest Aset Berkas Fisik (100% Verified)
+## 2. Manifest Fisik Kalibrasi & Definisi Terverifikasi
 
-Berikut adalah daftar lengkap berkas fisik yang tersimpan secara lokal di direktori ini:
+Berikut adalah daftar lengkap berkas fisik yang tersimpan secara lokal di direktori ini dengan verifikasi Model Year (Tahun Produksi), ukuran, MD5 checksum, dan tipe platform:
 
-| Nama Berkas | Tipe / Format | Ukuran (Bytes) | Deskripsi Teknis & Identifikasi |
-| :--- | :--- | :--- | :--- |
-| `Full 211323000401PD11_PAFFY.bin` | `.BIN` | `1,048,576` bytes | Binary Firmware / Calibration Dump |
-| `Full 211323000401PD31_TERRA.bin` | `.BIN` | `1,048,576` bytes | Binary Firmware / Calibration Dump |
-| `Partial 211323000401PD11 MANUAL.bin` | `.BIN` | `65,536` bytes | Binary Firmware / Calibration Dump |
-| `Partial 211323000401PD11 SMG.bin` | `.BIN` | `65,536` bytes | Binary Firmware / Calibration Dump |
+| Filename | Tahun / Model Year | Size | MD5 Checksum | Type / Target Platform |
+| :--- | :---: | :--- | :--- | :--- |
+| `Full 211323000401PD11_PAFFY.bin` | **2000–2006** | 1.00 MB | `81c986701f0fa72167bb812611ab364c` | Factory Binary Firmware Dump |
+| `Full 211323000401PD31_TERRA.bin` | **2000–2006** | 1.00 MB | `9ae79d8d5ff3a5595d0d47c11e0c2e4d` | Factory Binary Firmware Dump |
+| `Partial 211323000401PD11 MANUAL.bin` | **2000–2006** | 64.0 KB | `498a0353f5510ac35855333e40eb4afb` | Factory Binary Firmware Dump |
+| `Partial 211323000401PD11 SMG.bin` | **2000–2006** | 64.0 KB | `3795bf3188a01b85d5141e33da8e9386` | Factory Binary Firmware Dump |
 
 ---
 

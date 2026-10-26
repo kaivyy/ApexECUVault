@@ -21,16 +21,20 @@ Nama berkas yang tersimpan merefleksikan identitas perangkat keras (Hardware ID)
 > [!NOTE]
 > Mempertahankan kode dan nomor asli pabrikan pada penamaan berkas sangat krusial agar perangkat lunak kalibrasi (seperti **TunerPro**, **WinOLS**, atau **RomRaider**) dapat mengenali dan mencocokkan peta definisi (*definition maps*) secara otomatis tanpa merusak asosiasi header ECU.
 
+* **Rentang Tahun / Model Year**: 2008–2015
+
 ---
 
-## 2. Manifest Aset Berkas Fisik (100% Verified)
+## 2. Manifest Fisik Kalibrasi & Definisi Terverifikasi
 
-Berikut adalah daftar lengkap berkas fisik yang tersimpan secara lokal di direktori ini:
+Berikut adalah daftar lengkap berkas fisik yang tersimpan secara lokal di direktori ini dengan verifikasi Model Year (Tahun Produksi), ukuran, MD5 checksum, dan tipe platform:
 
-| Nama Berkas | Tipe / Format | Ukuran (Bytes) | Deskripsi Teknis & Identifikasi |
-| :--- | :--- | :--- | :--- |
-| `edc17cp14-new.MPC` | `.MPC` | `2,097,152` bytes | Original Hardware Read Dump |
-| `edc17cp14-old.MPC` | `.MPC` | `2,097,152` bytes | Original Hardware Read Dump |
+| Filename | Tahun / Model Year | Size | MD5 Checksum | Type / Target Platform |
+| :--- | :---: | :--- | :--- | :--- |
+| `edc17cp14-new.FLS` | **2008–2015** | 2.00 MB | `eba89469dabaf0244da3678cc792152a` | Raw Flash Memory Firmware Dump |
+| `edc17cp14-new.MPC` | **2008–2015** | 2.00 MB | `4805671e79e3575fbb8d8dede3d5b528` | ECU Calibration Asset |
+| `edc17cp14-old.FLS` | **2008–2015** | 2.00 MB | `eba89469dabaf0244da3678cc792152a` | Raw Flash Memory Firmware Dump |
+| `edc17cp14-old.MPC` | **2008–2015** | 2.00 MB | `f0430b05d3f74898167d5dbe83be893e` | ECU Calibration Asset |
 
 ---
 

@@ -21,17 +21,19 @@ Nama berkas yang tersimpan merefleksikan identitas perangkat keras (Hardware ID)
 > [!NOTE]
 > Mempertahankan kode dan nomor asli pabrikan pada penamaan berkas sangat krusial agar perangkat lunak kalibrasi (seperti **TunerPro**, **WinOLS**, atau **RomRaider**) dapat mengenali dan mencocokkan peta definisi (*definition maps*) secara otomatis tanpa merusak asosiasi header ECU.
 
+* **Rentang Tahun / Model Year**: OEM Production
+
 ---
 
-## 2. Manifest Aset Berkas Fisik (100% Verified)
+## 2. Manifest Fisik Kalibrasi & Definisi Terverifikasi
 
-Berikut adalah daftar lengkap berkas fisik yang tersimpan secara lokal di direktori ini:
+Berikut adalah daftar lengkap berkas fisik yang tersimpan secara lokal di direktori ini dengan verifikasi Model Year (Tahun Produksi), ukuran, MD5 checksum, dan tipe platform:
 
-| Nama Berkas | Tipe / Format | Ukuran (Bytes) | Deskripsi Teknis & Identifikasi |
-| :--- | :--- | :--- | :--- |
-| `GENERATIONAL_LR141852_Land_Rover_Defender_P300_2.0T_Ingenium_(2020-2026).xdf` | `.XDF` | `12,131` bytes | TunerPro Binary Definition Map |
-| `GENERATIONAL_LR148921_Land_Rover_Defender_P400_3.0_MHEV_(2020-2026).xdf` | `.XDF` | `10,118` bytes | TunerPro Binary Definition Map |
-| `GENERATIONAL_LR156230_Land_Rover_Defender_D300_3.0D_Ingenium_(2020-2026).xdf` | `.XDF` | `10,098` bytes | TunerPro Binary Definition Map |
+| Filename | Tahun / Model Year | Size | MD5 Checksum | Type / Target Platform |
+| :--- | :---: | :--- | :--- | :--- |
+| `GENERATIONAL_LR141852_Land_Rover_Defender_P300_2.0T_Ingenium_(2020-2026).xdf` | **2020–2026** | 11.8 KB | `247919f80a4ceb70421da6a4f4e7bd3b` | TunerPro Binary Definition Map |
+| `GENERATIONAL_LR148921_Land_Rover_Defender_P400_3.0_MHEV_(2020-2026).xdf` | **2020–2026** | 9.9 KB | `b57f948ca4cf5895fa7776020a677686` | TunerPro Binary Definition Map |
+| `GENERATIONAL_LR156230_Land_Rover_Defender_D300_3.0D_Ingenium_(2020-2026).xdf` | **2020–2026** | 9.9 KB | `8717ba7e5d3455bfa27c33bd7ab4de7c` | TunerPro Binary Definition Map |
 
 ---
 

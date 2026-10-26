@@ -13,16 +13,18 @@ Paket direktori `YARIS_CROSS_VELOZ_2NR_VE` menyediakan pustaka kalibrasi dan pem
 ### Mengapa Sebagian Berkas Memiliki Nama Berupa Angka / Kode?
 Nama berkas merefleksikan identitas perangkat keras (Hardware ID), versi perangkat lunak (Software ID), atau nomor kalibrasi pabrikan asli (OEM Calibration ID) untuk menjaga kecocokan header pada TunerPro dan alat flasher.
 
+* **Rentang Tahun / Model Year**: 2021–2026
+
 ---
 
-## 2. Manifest Aset Berkas Fisik (100% Verified)
+## 2. Manifest Fisik Kalibrasi & Definisi Terverifikasi
 
-Berikut adalah daftar lengkap berkas fisik yang tersimpan secara lokal di direktori ini:
+Berikut adalah daftar lengkap berkas fisik yang tersimpan secara lokal di direktori ini dengan verifikasi Model Year (Tahun Produksi), ukuran, MD5 checksum, dan tipe platform:
 
-| Nama Berkas | Tipe / Format | Ukuran (Bytes) | Deskripsi Teknis & Identifikasi |
-| :--- | :--- | :--- | :--- |
-| `GENERATIONAL_89661-BZ890_Toyota_Veloz_Yaris_Cross_1.5_2NR-VE_(2022-2026).xdf` | `.XDF` | `10,061` bytes | TunerPro Binary Definition Map / Parameter Layout |
-| `TOYOTA_RH850_P1M_E_SECOC_8965B4512000.bin` | `.BIN` | `1,081,344` bytes | OEM Firmware Calibration Flash Dump / Binary Package |
+| Filename | Tahun / Model Year | Size | MD5 Checksum | Type / Target Platform |
+| :--- | :---: | :--- | :--- | :--- |
+| `GENERATIONAL_89661-BZ890_Toyota_Veloz_Yaris_Cross_1.5_2NR-VE_(2022-2026).xdf` | **2022–2026** | 9.8 KB | `738019aa8cdd9d21955f14917e684680` | TunerPro Binary Definition Map |
+| `TOYOTA_RH850_P1M_E_SECOC_8965B4512000.bin` | **2021–2026** | 1.03 MB | `3103365afb866467c005e47ba478970c` | Factory Binary Firmware Dump |
 
 ---
 

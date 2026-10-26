@@ -21,27 +21,29 @@ Nama berkas yang tersimpan merefleksikan identitas perangkat keras (Hardware ID)
 > [!NOTE]
 > Mempertahankan kode dan nomor asli pabrikan pada penamaan berkas sangat krusial agar perangkat lunak kalibrasi (seperti **TunerPro**, **WinOLS**, atau **RomRaider**) dapat mengenali dan mencocokkan peta definisi (*definition maps*) secara otomatis tanpa merusak asosiasi header ECU.
 
+* **Rentang Tahun / Model Year**: 2011–2018
+
 ---
 
-## 2. Manifest Aset Berkas Fisik (100% Verified)
+## 2. Manifest Fisik Kalibrasi & Definisi Terverifikasi
 
-Berikut adalah daftar lengkap berkas fisik yang tersimpan secara lokal di direktori ini:
+Berikut adalah daftar lengkap berkas fisik yang tersimpan secara lokal di direktori ini dengan verifikasi Model Year (Tahun Produksi), ukuran, MD5 checksum, dan tipe platform:
 
-| Nama Berkas | Tipe / Format | Ukuran (Bytes) | Deskripsi Teknis & Identifikasi |
-| :--- | :--- | :--- | :--- |
-| `FORD_EVEREST_2016_3.2L_TDCI_CONTINENTAL_SID209_EB3A-12B684-FC.mpc` | `.MPC` | `4,194,304` bytes | Original Hardware Read Dump |
-| `FORD_RANGER_T6_2016_2.2L_TDCI_CONTINENTAL_SID209.ori` | `.ORI` | `4,194,304` bytes | Original Hardware Read Dump |
-| `Ford-2012-Focus-mk3-2-0-160hp-quantum-red.MOD` | `.MOD` | `2,097,152` bytes | Calibrated / Modified Binary Stage |
-| `Ford-ranger-2-2-SID209-mod-egr.MOD` | `.MOD` | `4,194,304` bytes | Calibrated / Modified Binary Stage |
-| `Ford_2012_Focus_RACE_Ryutech.MOD` | `.MOD` | `2,097,152` bytes | Calibrated / Modified Binary Stage |
-| `Ford_2012_Focus_mk3_2_0_160hp.ori` | `.ORI` | `2,097,152` bytes | Original Hardware Read Dump |
-| `Ford_2012_Focus_mk3_2_0_160hp_Chattrin_tune1.MOD` | `.MOD` | `2,097,152` bytes | Calibrated / Modified Binary Stage |
-| `Ford_2012_Focus_mk3_2_0_160hp_stage1.mod` | `.MOD` | `2,097,152` bytes | Calibrated / Modified Binary Stage |
-| `Ford_2012_Focus_mk3_2_0_160hp_stage1_ver_2.MOD` | `.MOD` | `2,097,152` bytes | Calibrated / Modified Binary Stage |
-| `Ford_2016_ranger_2_2_SID209.ORI` | `.ORI` | `4,194,304` bytes | Original Hardware Read Dump |
-| `Ford_everest_3_2_HW-EB3A-12B684-FC-mod-egr.MOD` | `.MOD` | `4,194,304` bytes | Calibrated / Modified Binary Stage |
-| `Ford_everest_3_2_HW-EB3A-12B684-FC.MPC` | `.MPC` | `4,194,304` bytes | Original Hardware Read Dump |
-| `ford_backup.ori` | `.ORI` | `2,097,152` bytes | Original Hardware Read Dump |
+| Filename | Tahun / Model Year | Size | MD5 Checksum | Type / Target Platform |
+| :--- | :---: | :--- | :--- | :--- |
+| `FORD_EVEREST_2016_3.2L_TDCI_CONTINENTAL_SID209_EB3A-12B684-FC.mpc` | **2016** | 4.00 MB | `2861893e88025483ed45712aaeca68e9` | ECU Calibration Asset |
+| `FORD_RANGER_T6_2016_2.2L_TDCI_CONTINENTAL_SID209.ori` | **2016** | 4.00 MB | `af230bd8146f85d744d91f47d8763777` | Factory Binary Firmware Dump |
+| `Ford-2012-Focus-mk3-2-0-160hp-quantum-red.MOD` | **2012** | 2.00 MB | `d430216fb1796d6dec8c0e66d5f06410` | ECU Calibration Asset |
+| `Ford-ranger-2-2-SID209-mod-egr.MOD` | **2011–2018** | 4.00 MB | `b141eb0983842ee45c25e51743ce7a66` | ECU Calibration Asset |
+| `Ford_2012_Focus_RACE_Ryutech.MOD` | **2012** | 2.00 MB | `710a99f9c4ee75402a5bb539c33b77e4` | ECU Calibration Asset |
+| `Ford_2012_Focus_mk3_2_0_160hp.ori` | **2012** | 2.00 MB | `9bcbc52e9e930e68a52f2d3b27a0b1aa` | Factory Binary Firmware Dump |
+| `Ford_2012_Focus_mk3_2_0_160hp_Chattrin_tune1.MOD` | **2012** | 2.00 MB | `c053b2cbac93904d10aa7cb67021f4d5` | ECU Calibration Asset |
+| `Ford_2012_Focus_mk3_2_0_160hp_stage1.mod` | **2012** | 2.00 MB | `421d09e1f5e3eaf9a4bf8a0b21be3a1c` | ECU Calibration Asset |
+| `Ford_2012_Focus_mk3_2_0_160hp_stage1_ver_2.MOD` | **2012** | 2.00 MB | `01d6fc1e1030b9b132b898a2b4ccd507` | ECU Calibration Asset |
+| `Ford_2016_ranger_2_2_SID209.ORI` | **2016** | 4.00 MB | `af230bd8146f85d744d91f47d8763777` | Factory Binary Firmware Dump |
+| `Ford_everest_3_2_HW-EB3A-12B684-FC-mod-egr.MOD` | **2011–2018** | 4.00 MB | `0ae8a3a32128697a4b226ad6b80b4bfa` | ECU Calibration Asset |
+| `Ford_everest_3_2_HW-EB3A-12B684-FC.MPC` | **2011–2018** | 4.00 MB | `2861893e88025483ed45712aaeca68e9` | ECU Calibration Asset |
+| `ford_backup.ori` | **2011–2018** | 2.00 MB | `9bcbc52e9e930e68a52f2d3b27a0b1aa` | Factory Binary Firmware Dump |
 
 ---
 

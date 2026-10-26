@@ -5,18 +5,21 @@ Koleksi dump biner EPROM pabrikan asli (stock) dan modifikasi kalibrasi untuk me
 
 * **Hardware / ECU**: Bosch Motronic M2.3.2 (Dual DIP EPROM: 27C256/87C257 32KB & 27C512 64KB)
 * **Metode Flashing & Antarmuka**: Socketing EPROM programmer (TL866II Plus / T48) atau CobraRTP MotronicRT dual channel.
+* **Rentang Tahun / Model Year**: 1991–1997
 * **Total File Terdaftar**: 4 file (100% fisik terverifikasi, Zero Synthetic)
 
 ---
 
 ## 2. Manifest Fisik Kalibrasi & Definisi Terverifikasi
 
-| Filename | Size | MD5 Checksum | Type / Target |
-| :--- | :--- | :--- | :--- |
-| `bigturbo_WMI_27c512.bin` | 64.0 KB | `416e5f10ac4ebbc33a3ff9293ca9ca5f` | Raw Binary Firmware / Dump |
-| `bigturbo_WMI_87c257.bin` | 32.0 KB | `9ffa47b5d495e70b28c36c8f01329862` | Raw Binary Firmware / Dump |
-| `stock_AANABY_27c512.bin` | 64.0 KB | `6aa9cb08d0d27ce9adfa7f44be6f6f7a` | Raw Binary Firmware / Dump |
-| `stock_AANABY_87c257.bin` | 32.0 KB | `a94c0fddcb4a353043773a3a45347cd7` | Raw Binary Firmware / Dump |
+Berikut adalah daftar lengkap berkas fisik yang tersimpan secara lokal di direktori ini dengan verifikasi Model Year (Tahun Produksi), ukuran, MD5 checksum, dan tipe platform:
+
+| Filename | Tahun / Model Year | Size | MD5 Checksum | Type / Target Platform |
+| :--- | :---: | :--- | :--- | :--- |
+| `bigturbo_WMI_27c512.bin` | **1991–1997** | 64.0 KB | `416e5f10ac4ebbc33a3ff9293ca9ca5f` | Factory Binary Firmware Dump |
+| `bigturbo_WMI_87c257.bin` | **1991–1997** | 32.0 KB | `9ffa47b5d495e70b28c36c8f01329862` | Factory Binary Firmware Dump |
+| `stock_AANABY_27c512.bin` | **1991–1997** | 64.0 KB | `6aa9cb08d0d27ce9adfa7f44be6f6f7a` | Factory Binary Firmware Dump |
+| `stock_AANABY_87c257.bin` | **1991–1997** | 32.0 KB | `a94c0fddcb4a353043773a3a45347cd7` | Factory Binary Firmware Dump |
 
 ---
 

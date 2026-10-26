@@ -21,23 +21,25 @@ Nama berkas yang tersimpan merefleksikan identitas perangkat keras (Hardware ID)
 > [!NOTE]
 > Mempertahankan kode dan nomor asli pabrikan pada penamaan berkas sangat krusial agar perangkat lunak kalibrasi (seperti **TunerPro**, **WinOLS**, atau **RomRaider**) dapat mengenali dan mencocokkan peta definisi (*definition maps*) secara otomatis tanpa merusak asosiasi header ECU.
 
+* **Rentang Tahun / Model Year**: OEM Production
+
 ---
 
-## 2. Manifest Aset Berkas Fisik (100% Verified)
+## 2. Manifest Fisik Kalibrasi & Definisi Terverifikasi
 
-Berikut adalah daftar lengkap berkas fisik yang tersimpan secara lokal di direktori ini:
+Berikut adalah daftar lengkap berkas fisik yang tersimpan secara lokal di direktori ini dengan verifikasi Model Year (Tahun Produksi), ukuran, MD5 checksum, dan tipe platform:
 
-| Nama Berkas | Tipe / Format | Ukuran (Bytes) | Deskripsi Teknis & Identifikasi |
-| :--- | :--- | :--- | :--- |
-| `'03 Chevy 1500 4x4 LM7 os12579405.bin` | `.BIN` | `1,048,576` bytes | General Motors Operating System ID `12579405` |
-| `'03 Chevy 4x2  6.0L os12579405.bin` | `.BIN` | `1,048,576` bytes | General Motors Operating System ID `12579405` |
-| `'03 Chevy Half 4x2 6.0 LQ4 os12579405.bin` | `.BIN` | `1,048,576` bytes | General Motors Operating System ID `12579405` |
-| `'03 Chevy MPV Half T 4x2 4.8 LR4 os12579405.bin` | `.BIN` | `1,048,576` bytes | General Motors Operating System ID `12579405` |
-| `'03 K1500 6.0L os12579405.bin` | `.BIN` | `1,048,576` bytes | General Motors Operating System ID `12579405` |
-| `03 Chevy 1500 4x2 6.0 LQ4 12579405.bin` | `.BIN` | `1,048,576` bytes | General Motors Operating System ID `12579405` |
-| `03 Chevy 2500 4x2 6.0 LQ4 os12579405.bin` | `.BIN` | `1,048,576` bytes | General Motors Operating System ID `12579405` |
-| `2003 Express Van 6.0 DBC 4L80E OS 12579405.bin` | `.BIN` | `1,048,576` bytes | General Motors Operating System ID `12579405` |
-| `2003SuburbanDBW5.3FlexFuel_OS12579405.bin` | `.BIN` | `1,048,576` bytes | General Motors Operating System ID `12579405` |
+| Filename | Tahun / Model Year | Size | MD5 Checksum | Type / Target Platform |
+| :--- | :---: | :--- | :--- | :--- |
+| `'03 Chevy 1500 4x4 LM7 os12579405.bin` | **2003** | 1.00 MB | `eb3a08402aab9a3a966b727cf2a143d0` | Factory Binary Firmware Dump |
+| `'03 Chevy 4x2  6.0L os12579405.bin` | **2003** | 1.00 MB | `60e49dc54dbaa4a98b32f7cb86d6c8ce` | Factory Binary Firmware Dump |
+| `'03 Chevy Half 4x2 6.0 LQ4 os12579405.bin` | **2003** | 1.00 MB | `f379160f2dccfbc69aace87b365cb3f5` | Factory Binary Firmware Dump |
+| `'03 Chevy MPV Half T 4x2 4.8 LR4 os12579405.bin` | **2003** | 1.00 MB | `493de6a6380a12b2b27ce4e3a8ceded0` | Factory Binary Firmware Dump |
+| `'03 K1500 6.0L os12579405.bin` | **2003** | 1.00 MB | `a100ec03bc95a254fea9faac408d6db0` | Factory Binary Firmware Dump |
+| `03 Chevy 1500 4x2 6.0 LQ4 12579405.bin` | **2003** | 1.00 MB | `57e4fd16cde97f980c125f8fde7033b8` | Factory Binary Firmware Dump |
+| `03 Chevy 2500 4x2 6.0 LQ4 os12579405.bin` | **2003** | 1.00 MB | `3a99b53916bb6ab40bac6ae4abb5b830` | Factory Binary Firmware Dump |
+| `2003 Express Van 6.0 DBC 4L80E OS 12579405.bin` | **2003** | 1.00 MB | `8620ae325bc9afe5db9a5e6b410d336c` | Factory Binary Firmware Dump |
+| `2003SuburbanDBW5.3FlexFuel_OS12579405.bin` | **2003** | 1.00 MB | `5bbd0f37deb8a58753c0e7256e46f298` | Factory Binary Firmware Dump |
 
 ---
 

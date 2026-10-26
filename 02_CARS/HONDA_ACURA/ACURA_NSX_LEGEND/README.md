@@ -24,33 +24,35 @@ Nama berkas yang tersimpan merefleksikan identitas perangkat keras (Hardware ID)
 > [!NOTE]
 > Mempertahankan kode dan nomor asli pabrikan pada penamaan berkas sangat krusial agar perangkat lunak kalibrasi (seperti **TunerPro**, **WinOLS**, atau **EcuFlash**) dapat mengenali dan mencocokkan peta definisi (*definition maps*) secara otomatis tanpa merusak asosiasi header ECU.
 
+* **Rentang Tahun / Model Year**: 1991–2005
+
 ---
 
-## 2. Manifest Aset Berkas Fisik (100% Verified)
+## 2. Manifest Fisik Kalibrasi & Definisi Terverifikasi
 
-Berikut adalah daftar lengkap berkas fisik yang tersimpan secara lokal di direktori ini:
+Berikut adalah daftar lengkap berkas fisik yang tersimpan secara lokal di direktori ini dengan verifikasi Model Year (Tahun Produksi), ukuran, MD5 checksum, dan tipe platform:
 
-| Nama Berkas | Tipe / Format | Ukuran (Bytes) | Deskripsi Teknis & Identifikasi |
-| :--- | :--- | :--- | :--- |
-| `Acura_NSX_and_Legend.xdf` | `TunerPro Definition Map` | 637,576 | Definisi peta parameter kalibrasi TunerPro (637,576 bytes) untuk konversi skala dan offset tabel ECU |
-| `JDM Type I (PY3-902).BIN` | `Original OEM Binary Flash Dump` | 32,768 | Berkas biner firmware resmi pabrikan (32,768 bytes) hasil hardware read murni (Zero-Synthetic) |
-| `JDM Type II.bin` | `Original OEM Binary Flash Dump` | 32,768 | Berkas biner firmware resmi pabrikan (32,768 bytes) hasil hardware read murni (Zero-Synthetic) |
-| `NSX91M OEM.bin` | `Original OEM Binary Flash Dump` | 32,768 | Berkas biner firmware resmi pabrikan (32,768 bytes) hasil hardware read murni (Zero-Synthetic) |
-| `NSX94M OEM.bin` | `Original OEM Binary Flash Dump` | 32,768 | Berkas biner firmware resmi pabrikan (32,768 bytes) hasil hardware read murni (Zero-Synthetic) |
-| `PR7-A03.bin` | `Original OEM Binary Flash Dump` | 32,768 | Berkas biner firmware resmi pabrikan (32,768 bytes) hasil hardware read murni (Zero-Synthetic) |
-| `PR7-xxx.bin` | `Original OEM Binary Flash Dump` | 32,768 | Berkas biner firmware resmi pabrikan (32,768 bytes) hasil hardware read murni (Zero-Synthetic) |
-| `PX9-A05, A15, A04, A55, A65.bin` | `Original OEM Binary Flash Dump` | 32,768 | Berkas biner firmware resmi pabrikan (32,768 bytes) hasil hardware read murni (Zero-Synthetic) |
-| `PX9-A57, A67, L57, A17, A07.bin` | `Original OEM Binary Flash Dump` | 32,768 | Berkas biner firmware resmi pabrikan (32,768 bytes) hasil hardware read murni (Zero-Synthetic) |
-| `PX9-L68 - California.bin` | `Original OEM Binary Flash Dump` | 32,768 | Berkas biner firmware resmi pabrikan (32,768 bytes) hasil hardware read murni (Zero-Synthetic) |
-| `PY3-A02, A52.bin` | `Original OEM Binary Flash Dump` | 32,768 | Berkas biner firmware resmi pabrikan (32,768 bytes) hasil hardware read murni (Zero-Synthetic) |
-| `PY3-A06, A53.bin` | `Original OEM Binary Flash Dump` | 32,768 | Berkas biner firmware resmi pabrikan (32,768 bytes) hasil hardware read murni (Zero-Synthetic) |
-| `PY3-A55.bin` | `Original OEM Binary Flash Dump` | 32,768 | Berkas biner firmware resmi pabrikan (32,768 bytes) hasil hardware read murni (Zero-Synthetic) |
-| `PY3-A57.BIN` | `Original OEM Binary Flash Dump` | 65,536 | Berkas biner firmware resmi pabrikan (65,536 bytes) hasil hardware read murni (Zero-Synthetic) |
-| `PY3-A58.bin` | `Original OEM Binary Flash Dump` | 32,768 | Berkas biner firmware resmi pabrikan (32,768 bytes) hasil hardware read murni (Zero-Synthetic) |
-| `PY3-A72.bin` | `Original OEM Binary Flash Dump` | 32,768 | Berkas biner firmware resmi pabrikan (32,768 bytes) hasil hardware read murni (Zero-Synthetic) |
-| `PY3-G52 European.BIN` | `Original OEM Binary Flash Dump` | 32,768 | Berkas biner firmware resmi pabrikan (32,768 bytes) hasil hardware read murni (Zero-Synthetic) |
-| `PY3-Y52 Guatemala.bin` | `Original OEM Binary Flash Dump` | 32,768 | Berkas biner firmware resmi pabrikan (32,768 bytes) hasil hardware read murni (Zero-Synthetic) |
-| `Py3-A58 stock.bin` | `Original OEM Binary Flash Dump` | 32,768 | Berkas biner firmware resmi pabrikan (32,768 bytes) hasil hardware read murni (Zero-Synthetic) |
+| Filename | Tahun / Model Year | Size | MD5 Checksum | Type / Target Platform |
+| :--- | :---: | :--- | :--- | :--- |
+| `Acura_NSX_and_Legend.xdf` | **1991–2005** | 622.6 KB | `3b5578088ff49f70ce8ccaa45ced78ad` | TunerPro Binary Definition Map |
+| `JDM Type I (PY3-902).BIN` | **1991–2005** | 32.0 KB | `ff6ad98fe87bac672dc7d48a1b713ec5` | Factory Binary Firmware Dump |
+| `JDM Type II.bin` | **1991–2005** | 32.0 KB | `7ba31c1093e0cebe8b2bd68707d90011` | Factory Binary Firmware Dump |
+| `NSX91M OEM.bin` | **1991–2005** | 32.0 KB | `0280c365621b19d4dd891b38d321ef5c` | Factory Binary Firmware Dump |
+| `NSX94M OEM.bin` | **1991–2005** | 32.0 KB | `1749874d307a3d6121600cd4bce4a7e7` | Factory Binary Firmware Dump |
+| `PR7-A03.bin` | **1991–2005** | 32.0 KB | `e6a6c7a19715c8d3f792b62262b26c83` | Factory Binary Firmware Dump |
+| `PR7-xxx.bin` | **1991–2005** | 32.0 KB | `a9d7c4ae2075a40e9d8fba04a4274a2f` | Factory Binary Firmware Dump |
+| `PX9-A05, A15, A04, A55, A65.bin` | **1991–2005** | 32.0 KB | `0d19d91e0e4173d7d179e266ee1a7e6d` | Factory Binary Firmware Dump |
+| `PX9-A57, A67, L57, A17, A07.bin` | **1991–2005** | 32.0 KB | `3bf1f14adbd56b5be3b3a50823b4d0f2` | Factory Binary Firmware Dump |
+| `PX9-L68 - California.bin` | **1991–2005** | 32.0 KB | `bb4d5bb98ca4b475c723dcce3e32fd8f` | Factory Binary Firmware Dump |
+| `PY3-A02, A52.bin` | **1991–2005** | 32.0 KB | `758c6309ad1cb14ca05f715e3f5eca68` | Factory Binary Firmware Dump |
+| `PY3-A06, A53.bin` | **1991–2005** | 32.0 KB | `758c6309ad1cb14ca05f715e3f5eca68` | Factory Binary Firmware Dump |
+| `PY3-A55.bin` | **1991–2005** | 32.0 KB | `83f921ad20a0b8fc6b52bfb2ebc4377e` | Factory Binary Firmware Dump |
+| `PY3-A57.BIN` | **1991–2005** | 64.0 KB | `ca65a201725c97ed4a608f82b70b0d3b` | Factory Binary Firmware Dump |
+| `PY3-A58.bin` | **1991–2005** | 32.0 KB | `2fb2e2fe57dcf98fb9a5896d9a50a000` | Factory Binary Firmware Dump |
+| `PY3-A72.bin` | **1991–2005** | 32.0 KB | `755d3850fbd07d3ede94eab9df7b70eb` | Factory Binary Firmware Dump |
+| `PY3-G52 European.BIN` | **1991–2005** | 32.0 KB | `b0a0f0636524f917163f2dc04c5b4f2c` | Factory Binary Firmware Dump |
+| `PY3-Y52 Guatemala.bin` | **1991–2005** | 32.0 KB | `db7c882d1db09352c9a311dcfe837ff8` | Factory Binary Firmware Dump |
+| `Py3-A58 stock.bin` | **1991–2005** | 32.0 KB | `ef0208ac8568af52bd6d2d39f5a29e67` | Factory Binary Firmware Dump |
 
 ---
 

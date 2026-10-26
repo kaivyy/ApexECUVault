@@ -21,22 +21,24 @@ Nama berkas yang tersimpan merefleksikan identitas perangkat keras (Hardware ID)
 > [!NOTE]
 > Mempertahankan kode dan nomor asli pabrikan pada penamaan berkas sangat krusial agar perangkat lunak kalibrasi (seperti **TunerPro**, **WinOLS**, atau **RomRaider**) dapat mengenali dan mencocokkan peta definisi (*definition maps*) secara otomatis tanpa merusak asosiasi header ECU.
 
+* **Rentang Tahun / Model Year**: OEM Production
+
 ---
 
-## 2. Manifest Aset Berkas Fisik (100% Verified)
+## 2. Manifest Fisik Kalibrasi & Definisi Terverifikasi
 
-Berikut adalah daftar lengkap berkas fisik yang tersimpan secara lokal di direktori ini:
+Berikut adalah daftar lengkap berkas fisik yang tersimpan secara lokal di direktori ini dengan verifikasi Model Year (Tahun Produksi), ukuran, MD5 checksum, dan tipe platform:
 
-| Nama Berkas | Tipe / Format | Ukuran (Bytes) | Deskripsi Teknis & Identifikasi |
-| :--- | :--- | :--- | :--- |
-| `CBAZA.xdf` | `.XDF` | `317,307` bytes | TunerPro Binary Definition Map |
-| `CDAN4.xdf` | `.XDF` | `172,791` bytes | TunerPro Binary Definition Map |
-| `CRAJ0.xdf` | `.XDF` | `215,714` bytes | TunerPro Binary Definition Map |
-| `GENERATIONAL_CR3A-12A650-B_Ford_Mustang_GT_5.0_Coyote_Gen1_2011_2014.xdf` | `.XDF` | `3,095` bytes | TunerPro Binary Definition Map |
-| `GENERATIONAL_FR3A-12A650-C_Ford_Mustang_2.3L_EcoBoost_2015_2023.xdf` | `.XDF` | `3,090` bytes | TunerPro Binary Definition Map |
-| `GENERATIONAL_JR3A-12A650-A_Ford_Mustang_GT_5.0_Coyote_Gen3_2018_2023.xdf` | `.XDF` | `3,095` bytes | TunerPro Binary Definition Map |
-| `GUFA.xdf` | `.XDF` | `494,970` bytes | TunerPro Binary Definition Map |
-| `GUFB.xdf` | `.XDF` | `496,699` bytes | TunerPro Binary Definition Map |
+| Filename | Tahun / Model Year | Size | MD5 Checksum | Type / Target Platform |
+| :--- | :---: | :--- | :--- | :--- |
+| `CBAZA.xdf` | **OEM Production** | 309.9 KB | `dc4628312362aa97968951d40fc5891d` | TunerPro Binary Definition Map |
+| `CDAN4.xdf` | **OEM Production** | 168.7 KB | `5e134df0c835951cd23c969d405d9d6c` | TunerPro Binary Definition Map |
+| `CRAJ0.xdf` | **OEM Production** | 210.7 KB | `00a2acf2a4905fd93bf8c95119e4148e` | TunerPro Binary Definition Map |
+| `GENERATIONAL_CR3A-12A650-B_Ford_Mustang_GT_5.0_Coyote_Gen1_2011_2014.xdf` | **2011–2014** | 3.0 KB | `dc68a2105d651c774b5b4d85e75f76ce` | TunerPro Binary Definition Map |
+| `GENERATIONAL_FR3A-12A650-C_Ford_Mustang_2.3L_EcoBoost_2015_2023.xdf` | **2015–2023** | 3.0 KB | `727b97d54c93eff21e8394e7e8161a9c` | TunerPro Binary Definition Map |
+| `GENERATIONAL_JR3A-12A650-A_Ford_Mustang_GT_5.0_Coyote_Gen3_2018_2023.xdf` | **2018–2023** | 3.0 KB | `9f050604ecdcb1d103c66d05f61ff128` | TunerPro Binary Definition Map |
+| `GUFA.xdf` | **OEM Production** | 483.4 KB | `28d3c5bdf66182cff4b39850ebd44814` | TunerPro Binary Definition Map |
+| `GUFB.xdf` | **OEM Production** | 485.1 KB | `f5b62ef9f570031f3f6f79cd05f58e79` | TunerPro Binary Definition Map |
 
 ---
 

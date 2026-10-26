@@ -21,18 +21,20 @@ Nama berkas yang tersimpan merefleksikan identitas perangkat keras (Hardware ID)
 > [!NOTE]
 > Mempertahankan kode dan nomor asli pabrikan pada penamaan berkas sangat krusial agar perangkat lunak kalibrasi (seperti **TunerPro**, **WinOLS**, atau **RomRaider**) dapat mengenali dan mencocokkan peta definisi (*definition maps*) secara otomatis tanpa merusak asosiasi header ECU.
 
+* **Rentang Tahun / Model Year**: 2013–2024
+
 ---
 
-## 2. Manifest Aset Berkas Fisik (100% Verified)
+## 2. Manifest Fisik Kalibrasi & Definisi Terverifikasi
 
-Berikut adalah daftar lengkap berkas fisik yang tersimpan secara lokal di direktori ini:
+Berikut adalah daftar lengkap berkas fisik yang tersimpan secara lokal di direktori ini dengan verifikasi Model Year (Tahun Produksi), ukuran, MD5 checksum, dan tipe platform:
 
-| Nama Berkas | Tipe / Format | Ukuran (Bytes) | Deskripsi Teknis & Identifikasi |
-| :--- | :--- | :--- | :--- |
-| `GENERATIONAL_21175-0810_Kawasaki_Ninja_250_FI_Gen_1_2013_2017_32PS.xdf` | `.XDF` | `2,544` bytes | TunerPro Binary Definition Map |
-| `GENERATIONAL_21175-1339_Kawasaki_New_Ninja_250_Gen_2_2018_2025_39PS.xdf` | `.XDF` | `2,545` bytes | TunerPro Binary Definition Map |
-| `KAWASAKI_21175-0810_Kawasaki_Ninja_250_FI___Z250_(EX250L).xdf` | `.XDF` | `9,635` bytes | TunerPro Binary Definition Map |
-| `KAWASAKI_21175-1323_Kawasaki_Ninja_250_New_Facelift_(EX250P).xdf` | `.XDF` | `9,640` bytes | TunerPro Binary Definition Map |
+| Filename | Tahun / Model Year | Size | MD5 Checksum | Type / Target Platform |
+| :--- | :---: | :--- | :--- | :--- |
+| `GENERATIONAL_21175-0810_Kawasaki_Ninja_250_FI_Gen_1_2013_2017_32PS.xdf` | **2013–2017** | 2.5 KB | `35faa75362c61689380f4cf7305334f0` | TunerPro Binary Definition Map |
+| `GENERATIONAL_21175-1339_Kawasaki_New_Ninja_250_Gen_2_2018_2025_39PS.xdf` | **2018–2025** | 2.5 KB | `121210dc08dcc7c520f5643602935cb1` | TunerPro Binary Definition Map |
+| `KAWASAKI_21175-0810_Kawasaki_Ninja_250_FI___Z250_(EX250L).xdf` | **2013–2024** | 9.4 KB | `ffed4bb2e6e673c338012312bcff9257` | TunerPro Binary Definition Map |
+| `KAWASAKI_21175-1323_Kawasaki_Ninja_250_New_Facelift_(EX250P).xdf` | **2013–2024** | 9.4 KB | `fc35dac0a402beb90bc505d001521d2c` | TunerPro Binary Definition Map |
 
 ---
 

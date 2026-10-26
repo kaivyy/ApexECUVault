@@ -21,21 +21,23 @@ Nama berkas yang tersimpan merefleksikan identitas perangkat keras (Hardware ID)
 > [!NOTE]
 > Mempertahankan kode dan nomor asli pabrikan pada penamaan berkas sangat krusial agar perangkat lunak kalibrasi (seperti **TunerPro**, **WinOLS**, atau **RomRaider**) dapat mengenali dan mencocokkan peta definisi (*definition maps*) secara otomatis tanpa merusak asosiasi header ECU.
 
+* **Rentang Tahun / Model Year**: OEM Production
+
 ---
 
-## 2. Manifest Aset Berkas Fisik (100% Verified)
+## 2. Manifest Fisik Kalibrasi & Definisi Terverifikasi
 
-Berikut adalah daftar lengkap berkas fisik yang tersimpan secara lokal di direktori ini:
+Berikut adalah daftar lengkap berkas fisik yang tersimpan secara lokal di direktori ini dengan verifikasi Model Year (Tahun Produksi), ukuran, MD5 checksum, dan tipe platform:
 
-| Nama Berkas | Tipe / Format | Ukuran (Bytes) | Deskripsi Teknis & Identifikasi |
-| :--- | :--- | :--- | :--- |
-| `'02 Chevy 2500 4x4 8.1 L18 os12216125 (1).bin` | `.BIN` | `524,288` bytes | General Motors Operating System ID `12216125` |
-| `'02 Chevy 2500 4x4 8.1 L18 os12216125.bin` | `.BIN` | `524,288` bytes | General Motors Operating System ID `12216125` |
-| `'02 Chevy K1500 5.3L os12216125 (1).bin` | `.BIN` | `524,288` bytes | General Motors Operating System ID `12216125` |
-| `2002 1500 5.3 12216125.bin` | `.BIN` | `524,288` bytes | General Motors Operating System ID `12216125` |
-| `2002 4.8L LR4 4x2 1-2T MANUAL TRANS os12212156.bin` | `.BIN` | `524,288` bytes | General Motors Operating System ID `12212156` |
-| `2002 5.3L 2wd Stock DBC No EGR 12212156.bin` | `.BIN` | `524,288` bytes | General Motors Operating System ID `12212156` |
-| `2002 5.3L Flex 2wd with Traction Stock 12216125.bin` | `.BIN` | `524,288` bytes | General Motors Operating System ID `12216125` |
+| Filename | Tahun / Model Year | Size | MD5 Checksum | Type / Target Platform |
+| :--- | :---: | :--- | :--- | :--- |
+| `'02 Chevy 2500 4x4 8.1 L18 os12216125 (1).bin` | **2002** | 512.0 KB | `f41649ab0448db95db40f7661fcb21fc` | Factory Binary Firmware Dump |
+| `'02 Chevy 2500 4x4 8.1 L18 os12216125.bin` | **2002** | 512.0 KB | `f41649ab0448db95db40f7661fcb21fc` | Factory Binary Firmware Dump |
+| `'02 Chevy K1500 5.3L os12216125 (1).bin` | **2002** | 512.0 KB | `57b8a2bbed76b86b16295c48b0f2a8a7` | Factory Binary Firmware Dump |
+| `2002 1500 5.3 12216125.bin` | **2002** | 512.0 KB | `3546d82cd8c5216cde4307c3c88d2d50` | Factory Binary Firmware Dump |
+| `2002 4.8L LR4 4x2 1-2T MANUAL TRANS os12212156.bin` | **2002** | 512.0 KB | `177a2bfd1a26006e2378618dc6a9374a` | Factory Binary Firmware Dump |
+| `2002 5.3L 2wd Stock DBC No EGR 12212156.bin` | **2002** | 512.0 KB | `6694c5961f93de2f8f0130647603e7ec` | Factory Binary Firmware Dump |
+| `2002 5.3L Flex 2wd with Traction Stock 12216125.bin` | **2002** | 512.0 KB | `42e83a12d3f370a1ad1ee934363de924` | Factory Binary Firmware Dump |
 
 ---
 

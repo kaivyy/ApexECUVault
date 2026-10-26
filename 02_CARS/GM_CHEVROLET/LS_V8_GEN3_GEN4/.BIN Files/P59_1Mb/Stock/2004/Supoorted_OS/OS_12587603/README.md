@@ -21,22 +21,24 @@ Nama berkas yang tersimpan merefleksikan identitas perangkat keras (Hardware ID)
 > [!NOTE]
 > Mempertahankan kode dan nomor asli pabrikan pada penamaan berkas sangat krusial agar perangkat lunak kalibrasi (seperti **TunerPro**, **WinOLS**, atau **RomRaider**) dapat mengenali dan mencocokkan peta definisi (*definition maps*) secara otomatis tanpa merusak asosiasi header ECU.
 
+* **Rentang Tahun / Model Year**: OEM Production
+
 ---
 
-## 2. Manifest Aset Berkas Fisik (100% Verified)
+## 2. Manifest Fisik Kalibrasi & Definisi Terverifikasi
 
-Berikut adalah daftar lengkap berkas fisik yang tersimpan secara lokal di direktori ini:
+Berikut adalah daftar lengkap berkas fisik yang tersimpan secara lokal di direktori ini dengan verifikasi Model Year (Tahun Produksi), ukuran, MD5 checksum, dan tipe platform:
 
-| Nama Berkas | Tipe / Format | Ukuran (Bytes) | Deskripsi Teknis & Identifikasi |
-| :--- | :--- | :--- | :--- |
-| `'04 Chevy MPV  4x4 Half Ton LM7 os12587603.bin` | `.BIN` | `1,048,576` bytes | General Motors Operating System ID `12587603` |
-| `'04 GMC 1T 4x4 8.1 L18 os12587603.bin` | `.BIN` | `1,048,576` bytes | General Motors Operating System ID `12587603` |
-| `2004 2500 LQ4 Auto 2wd stock OS12587603.bin` | `.BIN` | `1,048,576` bytes | General Motors Operating System ID `12587603` |
-| `2004 Corvette M6 Stock.bin` | `.BIN` | `1,048,576` bytes | Binary Firmware / Calibration Dump |
-| `2004 Escalade 5.3AutoStock OS12587603.bin` | `.BIN` | `1,048,576` bytes | General Motors Operating System ID `12587603` |
-| `C1500_5.3L_OS12587603.bin` | `.BIN` | `1,048,576` bytes | General Motors Operating System ID `12587603` |
-| `Chevy_1500_4x2_LM7 _OS12587603.bin` | `.BIN` | `1,048,576` bytes | General Motors Operating System ID `12587603` |
-| `Chevy_1500_4x4_MPV_L59_12587603.bin` | `.BIN` | `1,048,576` bytes | General Motors Operating System ID `12587603` |
+| Filename | Tahun / Model Year | Size | MD5 Checksum | Type / Target Platform |
+| :--- | :---: | :--- | :--- | :--- |
+| `'04 Chevy MPV  4x4 Half Ton LM7 os12587603.bin` | **2004** | 1.00 MB | `07cfa958303ce233016c29c5d9983dcb` | Factory Binary Firmware Dump |
+| `'04 GMC 1T 4x4 8.1 L18 os12587603.bin` | **2004** | 1.00 MB | `52d7d7c7d6de397b5e7d86f83d4658d0` | Factory Binary Firmware Dump |
+| `2004 2500 LQ4 Auto 2wd stock OS12587603.bin` | **2004** | 1.00 MB | `59698a2f43fc1bd1c080ef9e65bbc7bc` | Factory Binary Firmware Dump |
+| `2004 Corvette M6 Stock.bin` | **2004** | 1.00 MB | `aef67389fbf7981bb6313727282acfe7` | Factory Binary Firmware Dump |
+| `2004 Escalade 5.3AutoStock OS12587603.bin` | **2004** | 1.00 MB | `a01110a0bd863433c5129748d54b613f` | Factory Binary Firmware Dump |
+| `C1500_5.3L_OS12587603.bin` | **2003–2007 (P59)** | 1.00 MB | `d093d51c6966f57825d77d158f8b9e4c` | Factory Binary Firmware Dump |
+| `Chevy_1500_4x2_LM7 _OS12587603.bin` | **2003–2007 (P59)** | 1.00 MB | `a88e7062f3019e59b12314f56ed985d0` | Factory Binary Firmware Dump |
+| `Chevy_1500_4x4_MPV_L59_12587603.bin` | **2003–2007 (P59)** | 1.00 MB | `1428a0038c2a3385befca2350796017c` | Factory Binary Firmware Dump |
 
 ---
 

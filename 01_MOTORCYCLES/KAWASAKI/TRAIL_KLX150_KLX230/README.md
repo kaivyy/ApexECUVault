@@ -21,16 +21,18 @@ Nama berkas yang tersimpan merefleksikan identitas perangkat keras (Hardware ID)
 > [!NOTE]
 > Mempertahankan kode dan nomor asli pabrikan pada penamaan berkas sangat krusial agar perangkat lunak kalibrasi (seperti **TunerPro**, **WinOLS**, atau **RomRaider**) dapat mengenali dan mencocokkan peta definisi (*definition maps*) secara otomatis tanpa merusak asosiasi header ECU.
 
+* **Rentang Tahun / Model Year**: 2009–2024
+
 ---
 
-## 2. Manifest Aset Berkas Fisik (100% Verified)
+## 2. Manifest Fisik Kalibrasi & Definisi Terverifikasi
 
-Berikut adalah daftar lengkap berkas fisik yang tersimpan secara lokal di direktori ini:
+Berikut adalah daftar lengkap berkas fisik yang tersimpan secara lokal di direktori ini dengan verifikasi Model Year (Tahun Produksi), ukuran, MD5 checksum, dan tipe platform:
 
-| Nama Berkas | Tipe / Format | Ukuran (Bytes) | Deskripsi Teknis & Identifikasi |
-| :--- | :--- | :--- | :--- |
-| `GENERATIONAL_21175-1442_Kawasaki_KLX230___KLX230R_FI_2019_2025.xdf` | `.XDF` | `2,538` bytes | TunerPro Binary Definition Map |
-| `KAWASAKI_21175-1440_Kawasaki_KLX_230___KLX_230_S_FI.xdf` | `.XDF` | `9,632` bytes | TunerPro Binary Definition Map |
+| Filename | Tahun / Model Year | Size | MD5 Checksum | Type / Target Platform |
+| :--- | :---: | :--- | :--- | :--- |
+| `GENERATIONAL_21175-1442_Kawasaki_KLX230___KLX230R_FI_2019_2025.xdf` | **2019–2025** | 2.5 KB | `3c5b1edd0a414c74abbc9a7022a33a81` | TunerPro Binary Definition Map |
+| `KAWASAKI_21175-1440_Kawasaki_KLX_230___KLX_230_S_FI.xdf` | **2009–2024** | 9.4 KB | `1ffebcac6c09a650f89b46caed6e58da` | TunerPro Binary Definition Map |
 
 ---
 

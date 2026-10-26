@@ -21,17 +21,19 @@ Nama berkas yang tersimpan merefleksikan identitas perangkat keras (Hardware ID)
 > [!NOTE]
 > Mempertahankan kode dan nomor asli pabrikan pada penamaan berkas sangat krusial agar perangkat lunak kalibrasi (seperti **TunerPro**, **WinOLS**, atau **RomRaider**) dapat mengenali dan mencocokkan peta definisi (*definition maps*) secara otomatis tanpa merusak asosiasi header ECU.
 
+* **Rentang Tahun / Model Year**: 1995–1998
+
 ---
 
-## 2. Manifest Aset Berkas Fisik (100% Verified)
+## 2. Manifest Fisik Kalibrasi & Definisi Terverifikasi
 
-Berikut adalah daftar lengkap berkas fisik yang tersimpan secara lokal di direktori ini:
+Berikut adalah daftar lengkap berkas fisik yang tersimpan secara lokal di direktori ini dengan verifikasi Model Year (Tahun Produksi), ukuran, MD5 checksum, dan tipe platform:
 
-| Nama Berkas | Tipe / Format | Ukuran (Bytes) | Deskripsi Teknis & Identifikasi |
-| :--- | :--- | :--- | :--- |
-| `993 3.6 Biturbo 1995 hw0261204377 sw357098.bin` | `.BIN` | `131,072` bytes | Bosch Motronic Hardware ID `0261204377` |
-| `Porsche 933 3.6T 408HP 99361868285 0261204377 355728.bin` | `.BIN` | `131,072` bytes | Bosch Motronic Hardware ID `0261204377` |
-| `TunerPro BRO Por 993 Turbo MAF only.xdf` | `.XDF` | `30,839` bytes | TunerPro Binary Definition Map |
+| Filename | Tahun / Model Year | Size | MD5 Checksum | Type / Target Platform |
+| :--- | :---: | :--- | :--- | :--- |
+| `993 3.6 Biturbo 1995 hw0261204377 sw357098.bin` | **1995** | 128.0 KB | `8bf85f98e22a12ee4a1e78d3aece4fab` | Factory Binary Firmware Dump |
+| `Porsche 933 3.6T 408HP 99361868285 0261204377 355728.bin` | **1995–1998** | 128.0 KB | `b613cc0432480d8f66823d610b04ab64` | Factory Binary Firmware Dump |
+| `TunerPro BRO Por 993 Turbo MAF only.xdf` | **1995–1998** | 30.1 KB | `d86061426147b757dfce9d7a3b06b8a0` | TunerPro Binary Definition Map |
 
 ---
 

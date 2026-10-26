@@ -21,28 +21,30 @@ Nama berkas yang tersimpan merefleksikan identitas perangkat keras (Hardware ID)
 > [!NOTE]
 > Mempertahankan kode dan nomor asli pabrikan pada penamaan berkas sangat krusial agar perangkat lunak kalibrasi (seperti **TunerPro**, **WinOLS**, atau **RomRaider**) dapat mengenali dan mencocokkan peta definisi (*definition maps*) secara otomatis tanpa merusak asosiasi header ECU.
 
+* **Rentang Tahun / Model Year**: 2015–2026
+
 ---
 
-## 2. Manifest Aset Berkas Fisik (100% Verified)
+## 2. Manifest Fisik Kalibrasi & Definisi Terverifikasi
 
-Berikut adalah daftar lengkap berkas fisik yang tersimpan secara lokal di direktori ini:
+Berikut adalah daftar lengkap berkas fisik yang tersimpan secara lokal di direktori ini dengan verifikasi Model Year (Tahun Produksi), ukuran, MD5 checksum, dan tipe platform:
 
-| Nama Berkas | Tipe / Format | Ukuran (Bytes) | Deskripsi Teknis & Identifikasi |
-| :--- | :--- | :--- | :--- |
-| `F4C9G577B_5c64-010_090_007.ImperialUnits.xdf` | `.XDF` | `1,012,037` bytes | TunerPro Binary Definition Map |
-| `F4C9G595B_5c64-010_100_005.ImperialUnits.xdf` | `.XDF` | `1,012,037` bytes | TunerPro Binary Definition Map |
-| `F4C9G5F5B_5c64-010_130_005.ImperialUnits.xdf` | `.XDF` | `1,012,037` bytes | TunerPro Binary Definition Map |
-| `F4C9G5H5B_5c64-010_140_005.ImperialUnits.xdf` | `.XDF` | `1,012,037` bytes | TunerPro Binary Definition Map |
-| `F4C9L8A6B_5c64-020_050_006.ImperialUnits.xdf` | `.XDF` | `1,033,480` bytes | TunerPro Binary Definition Map |
-| `F4C9L8C5B_5c64-020_060_005.ImperialUnits.xdf` | `.XDF` | `1,033,480` bytes | TunerPro Binary Definition Map |
-| `F4C9L8E6B_5c64-020_070_006.ImperialUnits.xdf` | `.XDF` | `1,033,480` bytes | TunerPro Binary Definition Map |
-| `F4C9L8G7B_5c64-020_080_007.ImperialUnits.xdf` | `.XDF` | `1,033,480` bytes | TunerPro Binary Definition Map |
-| `F4C9L8J5B_5c64-020_090_005.ImperialUnits.xdf` | `.XDF` | `1,033,480` bytes | TunerPro Binary Definition Map |
-| `F4C9L8N6B_5c64-020_110_006.ImperialUnits.xdf` | `.XDF` | `1,033,480` bytes | TunerPro Binary Definition Map |
-| `F4C9L8R5B_5c64-020_130_005.ImperialUnits.xdf` | `.XDF` | `1,033,480` bytes | TunerPro Binary Definition Map |
-| `F4C9L8R6B_5c64-020_135_006.ImperialUnits.xdf` | `.XDF` | `1,033,480` bytes | TunerPro Binary Definition Map |
-| `F4C9L8Y8B_5c64-020_200_008.ImperialUnits.xdf` | `.XDF` | `1,033,480` bytes | TunerPro Binary Definition Map |
-| `F4C9LU16B_aed2-020_060_006.ImperialUnits.xdf` | `.XDF` | `1,033,480` bytes | TunerPro Binary Definition Map |
+| Filename | Tahun / Model Year | Size | MD5 Checksum | Type / Target Platform |
+| :--- | :---: | :--- | :--- | :--- |
+| `F4C9G577B_5c64-010_090_007.ImperialUnits.xdf` | **2015–2026** | 988.3 KB | `1493729dc786aed92e6c85519fe94a9f` | TunerPro Binary Definition Map |
+| `F4C9G595B_5c64-010_100_005.ImperialUnits.xdf` | **2015–2026** | 988.3 KB | `1493729dc786aed92e6c85519fe94a9f` | TunerPro Binary Definition Map |
+| `F4C9G5F5B_5c64-010_130_005.ImperialUnits.xdf` | **2015–2026** | 988.3 KB | `f8c5f4aeb4bd5352a72bf3aca07fb71e` | TunerPro Binary Definition Map |
+| `F4C9G5H5B_5c64-010_140_005.ImperialUnits.xdf` | **2015–2026** | 988.3 KB | `db7387f6c5444fefa867fb37ff86d5a8` | TunerPro Binary Definition Map |
+| `F4C9L8A6B_5c64-020_050_006.ImperialUnits.xdf` | **2015–2026** | 1009.3 KB | `ec6e8d363c9fce6eeb4449ce67580b4f` | TunerPro Binary Definition Map |
+| `F4C9L8C5B_5c64-020_060_005.ImperialUnits.xdf` | **2015–2026** | 1009.3 KB | `59b6044785f12373de4123548df0a0c8` | TunerPro Binary Definition Map |
+| `F4C9L8E6B_5c64-020_070_006.ImperialUnits.xdf` | **2015–2026** | 1009.3 KB | `9c5031213ee1da018fa18b72d13c684e` | TunerPro Binary Definition Map |
+| `F4C9L8G7B_5c64-020_080_007.ImperialUnits.xdf` | **2015–2026** | 1009.3 KB | `920d1257ef4e6899a1f9b2985771a794` | TunerPro Binary Definition Map |
+| `F4C9L8J5B_5c64-020_090_005.ImperialUnits.xdf` | **2015–2026** | 1009.3 KB | `5de1a7725792b0dd5a9dcb55a719e32b` | TunerPro Binary Definition Map |
+| `F4C9L8N6B_5c64-020_110_006.ImperialUnits.xdf` | **2015–2026** | 1009.3 KB | `f77e4818b319f80677236fd549d7d647` | TunerPro Binary Definition Map |
+| `F4C9L8R5B_5c64-020_130_005.ImperialUnits.xdf` | **2015–2026** | 1009.3 KB | `276e45939ede1e3da7db5d941f6b8ccf` | TunerPro Binary Definition Map |
+| `F4C9L8R6B_5c64-020_135_006.ImperialUnits.xdf` | **2015–2026** | 1009.3 KB | `276e45939ede1e3da7db5d941f6b8ccf` | TunerPro Binary Definition Map |
+| `F4C9L8Y8B_5c64-020_200_008.ImperialUnits.xdf` | **2015–2026** | 1009.3 KB | `1fd69f67aa63fedd1ec0abf2fd988504` | TunerPro Binary Definition Map |
+| `F4C9LU16B_aed2-020_060_006.ImperialUnits.xdf` | **2015–2026** | 1009.3 KB | `9faa48350ff4b9e6271289ed5c15ebf3` | TunerPro Binary Definition Map |
 
 ---
 

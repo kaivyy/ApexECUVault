@@ -21,41 +21,43 @@ Nama berkas yang tersimpan merefleksikan identitas perangkat keras (Hardware ID)
 > [!NOTE]
 > Mempertahankan kode dan nomor asli pabrikan pada penamaan berkas sangat krusial agar perangkat lunak kalibrasi (seperti **TunerPro**, **WinOLS**, atau **RomRaider**) dapat mengenali dan mencocokkan peta definisi (*definition maps*) secara otomatis tanpa merusak asosiasi header ECU.
 
+* **Rentang Tahun / Model Year**: 2015–2026
+
 ---
 
-## 2. Manifest Aset Berkas Fisik (100% Verified)
+## 2. Manifest Fisik Kalibrasi & Definisi Terverifikasi
 
-Berikut adalah daftar lengkap berkas fisik yang tersimpan secara lokal di direktori ini:
+Berikut adalah daftar lengkap berkas fisik yang tersimpan secara lokal di direktori ini dengan verifikasi Model Year (Tahun Produksi), ukuran, MD5 checksum, dan tipe platform:
 
-| Nama Berkas | Tipe / Format | Ukuran (Bytes) | Deskripsi Teknis & Identifikasi |
-| :--- | :--- | :--- | :--- |
-| `R0C9J8B2B_3081-080_017_002_v7.3.3.MetricUnits.xdf` | `.XDF` | `2,964,458` bytes | TunerPro Binary Definition Map |
-| `R0C9J8D2B_3081-080_021_002_v7.3.3.MetricUnits.xdf` | `.XDF` | `2,964,449` bytes | TunerPro Binary Definition Map |
-| `R0C9J8I2B_3081-080_029_002_v7.3.3.MetricUnits.xdf` | `.XDF` | `2,964,449` bytes | TunerPro Binary Definition Map |
-| `R0C9J8I3B_3081-080_029_003_v7.3.3.MetricUnits.xdf` | `.XDF` | `2,964,449` bytes | TunerPro Binary Definition Map |
-| `R0C9J8I4B_3081-080_029_004_v7.3.3.MetricUnits.xdf` | `.XDF` | `2,964,449` bytes | TunerPro Binary Definition Map |
-| `R0C9J962B_3081-090_010_002_v7.3.3.MetricUnits.xdf` | `.XDF` | `2,964,449` bytes | TunerPro Binary Definition Map |
-| `R0C9J9E3B_3081-090_020_003_v7.3.3.MetricUnits.xdf` | `.XDF` | `2,964,449` bytes | TunerPro Binary Definition Map |
-| `R0C9J9E4B_3081-090_020_004_v7.3.3.MetricUnits.xdf` | `.XDF` | `2,964,449` bytes | TunerPro Binary Definition Map |
-| `R0C9JA05B_3081-090_025_005_v7.3.3.MetricUnits.xdf` | `.XDF` | `2,964,449` bytes | TunerPro Binary Definition Map |
-| `R0C9JA15B_3081-090_030_005_v7.3.3.MetricUnits.xdf` | `.XDF` | `2,964,449` bytes | TunerPro Binary Definition Map |
-| `R0C9JC05B_3081-090_050_005_v7.3.3.MetricUnits.xdf` | `.XDF` | `2,964,449` bytes | TunerPro Binary Definition Map |
-| `R0C9JD06B_3081-090_060_006_v7.3.3.MetricUnits.xdf` | `.XDF` | `2,964,449` bytes | TunerPro Binary Definition Map |
-| `R0C9JE15B_3081-090_080_005_v7.3.3.MetricUnits.xdf` | `.XDF` | `2,964,449` bytes | TunerPro Binary Definition Map |
-| `R1C9I562B_3076-050_006_002_v7.3.3.MetricUnits.xdf` | `.XDF` | `2,871,542` bytes | TunerPro Binary Definition Map |
-| `R1C9J8B2B_3076-080_017_002_v7.3.3.MetricUnits.xdf` | `.XDF` | `2,964,822` bytes | TunerPro Binary Definition Map |
-| `R1C9J8B3B_3076-080_017_003_v7.3.3.MetricUnits.xdf` | `.XDF` | `2,964,822` bytes | TunerPro Binary Definition Map |
-| `R1C9J8D3B_3076-080_018_003_v7.3.3.MetricUnits.xdf` | `.XDF` | `2,964,822` bytes | TunerPro Binary Definition Map |
-| `R1C9J8I2B_3076-080_029_002_v7.3.3.MetricUnits.xdf` | `.XDF` | `2,964,822` bytes | TunerPro Binary Definition Map |
-| `R1C9J8I7B_3076-080_029_007_v7.3.3.MetricUnits.xdf` | `.XDF` | `2,964,822` bytes | TunerPro Binary Definition Map |
-| `R1C9J962B_3076-090_010_002_v7.3.3.MetricUnits.xdf` | `.XDF` | `2,964,822` bytes | TunerPro Binary Definition Map |
-| `R1C9J9E3B_3076-090_020_003_v7.3.3.MetricUnits.xdf` | `.XDF` | `2,964,822` bytes | TunerPro Binary Definition Map |
-| `R1C9J9E5B_3076-090_020_005_v7.3.3.MetricUnits.xdf` | `.XDF` | `2,964,822` bytes | TunerPro Binary Definition Map |
-| `R1C9J9E7B_3076-090_020_007_v7.3.3.MetricUnits.xdf` | `.XDF` | `2,964,822` bytes | TunerPro Binary Definition Map |
-| `R1C9JA05B_3076-090_025_005_v7.3.3.MetricUnits.xdf` | `.XDF` | `2,964,822` bytes | TunerPro Binary Definition Map |
-| `R1C9JC05B_3076-090_050_005_v7.3.3.MetricUnits.xdf` | `.XDF` | `2,964,822` bytes | TunerPro Binary Definition Map |
-| `R1C9JD06B_3076-090_060_006_v7.3.3.MetricUnits.xdf` | `.XDF` | `2,964,822` bytes | TunerPro Binary Definition Map |
-| `R1C9JE15B_3076-090_080_005_v7.3.3.MetricUnits.xdf` | `.XDF` | `2,964,822` bytes | TunerPro Binary Definition Map |
+| Filename | Tahun / Model Year | Size | MD5 Checksum | Type / Target Platform |
+| :--- | :---: | :--- | :--- | :--- |
+| `R0C9J8B2B_3081-080_017_002_v7.3.3.MetricUnits.xdf` | **2015–2026** | 2.83 MB | `4ac2216e0aa578aa2fd17f09f79cc0fe` | TunerPro Binary Definition Map |
+| `R0C9J8D2B_3081-080_021_002_v7.3.3.MetricUnits.xdf` | **2015–2026** | 2.83 MB | `f656e22b0a33966d9c7384d9e1c487bd` | TunerPro Binary Definition Map |
+| `R0C9J8I2B_3081-080_029_002_v7.3.3.MetricUnits.xdf` | **2015–2026** | 2.83 MB | `d1fa375892d741f6e71559ebdf6a650f` | TunerPro Binary Definition Map |
+| `R0C9J8I3B_3081-080_029_003_v7.3.3.MetricUnits.xdf` | **2015–2026** | 2.83 MB | `d1fa375892d741f6e71559ebdf6a650f` | TunerPro Binary Definition Map |
+| `R0C9J8I4B_3081-080_029_004_v7.3.3.MetricUnits.xdf` | **2015–2026** | 2.83 MB | `d1fa375892d741f6e71559ebdf6a650f` | TunerPro Binary Definition Map |
+| `R0C9J962B_3081-090_010_002_v7.3.3.MetricUnits.xdf` | **2015–2026** | 2.83 MB | `b6761e3ba9243e1d8a1cc85eb9cf9099` | TunerPro Binary Definition Map |
+| `R0C9J9E3B_3081-090_020_003_v7.3.3.MetricUnits.xdf` | **2015–2026** | 2.83 MB | `ee291db344ffb07b02655292e0334c98` | TunerPro Binary Definition Map |
+| `R0C9J9E4B_3081-090_020_004_v7.3.3.MetricUnits.xdf` | **2015–2026** | 2.83 MB | `676c3d8abf21465416546a3fc0b95263` | TunerPro Binary Definition Map |
+| `R0C9JA05B_3081-090_025_005_v7.3.3.MetricUnits.xdf` | **2015–2026** | 2.83 MB | `ed90498c9efc6337011c3e7e5a341718` | TunerPro Binary Definition Map |
+| `R0C9JA15B_3081-090_030_005_v7.3.3.MetricUnits.xdf` | **2015–2026** | 2.83 MB | `45988f361b0f2d640de8c26d4301d7ba` | TunerPro Binary Definition Map |
+| `R0C9JC05B_3081-090_050_005_v7.3.3.MetricUnits.xdf` | **2015–2026** | 2.83 MB | `873db837b5bbcc3c7bb0118adb017f2e` | TunerPro Binary Definition Map |
+| `R0C9JD06B_3081-090_060_006_v7.3.3.MetricUnits.xdf` | **2015–2026** | 2.83 MB | `648f820df55d8728f01fdf211d11f2af` | TunerPro Binary Definition Map |
+| `R0C9JE15B_3081-090_080_005_v7.3.3.MetricUnits.xdf` | **2015–2026** | 2.83 MB | `fe028b9253f12430786ce7e81d0f80ea` | TunerPro Binary Definition Map |
+| `R1C9I562B_3076-050_006_002_v7.3.3.MetricUnits.xdf` | **2015–2026** | 2.74 MB | `2e9f2aec87af503d058f6e6dab001d10` | TunerPro Binary Definition Map |
+| `R1C9J8B2B_3076-080_017_002_v7.3.3.MetricUnits.xdf` | **2015–2026** | 2.83 MB | `8805fa0b86e001926c2ae407dafb6b23` | TunerPro Binary Definition Map |
+| `R1C9J8B3B_3076-080_017_003_v7.3.3.MetricUnits.xdf` | **2015–2026** | 2.83 MB | `8805fa0b86e001926c2ae407dafb6b23` | TunerPro Binary Definition Map |
+| `R1C9J8D3B_3076-080_018_003_v7.3.3.MetricUnits.xdf` | **2015–2026** | 2.83 MB | `8805fa0b86e001926c2ae407dafb6b23` | TunerPro Binary Definition Map |
+| `R1C9J8I2B_3076-080_029_002_v7.3.3.MetricUnits.xdf` | **2015–2026** | 2.83 MB | `c64293024f429d8a0663673867bc62d4` | TunerPro Binary Definition Map |
+| `R1C9J8I7B_3076-080_029_007_v7.3.3.MetricUnits.xdf` | **2015–2026** | 2.83 MB | `c64293024f429d8a0663673867bc62d4` | TunerPro Binary Definition Map |
+| `R1C9J962B_3076-090_010_002_v7.3.3.MetricUnits.xdf` | **2015–2026** | 2.83 MB | `dbd91b3ade92f77fa391923d3ab1f25f` | TunerPro Binary Definition Map |
+| `R1C9J9E3B_3076-090_020_003_v7.3.3.MetricUnits.xdf` | **2015–2026** | 2.83 MB | `3677256f153da2a14dc829d9c92d1b8f` | TunerPro Binary Definition Map |
+| `R1C9J9E5B_3076-090_020_005_v7.3.3.MetricUnits.xdf` | **2015–2026** | 2.83 MB | `d8990d8a05953c12cd1edaa1bb070147` | TunerPro Binary Definition Map |
+| `R1C9J9E7B_3076-090_020_007_v7.3.3.MetricUnits.xdf` | **2015–2026** | 2.83 MB | `3677256f153da2a14dc829d9c92d1b8f` | TunerPro Binary Definition Map |
+| `R1C9JA05B_3076-090_025_005_v7.3.3.MetricUnits.xdf` | **2015–2026** | 2.83 MB | `83e3613349675a105a0805e84a1a734c` | TunerPro Binary Definition Map |
+| `R1C9JC05B_3076-090_050_005_v7.3.3.MetricUnits.xdf` | **2015–2026** | 2.83 MB | `9f13a1bf5a76976c3d16f8d24fd8c81f` | TunerPro Binary Definition Map |
+| `R1C9JD06B_3076-090_060_006_v7.3.3.MetricUnits.xdf` | **2015–2026** | 2.83 MB | `25139845f06ba0913147cbbcedaac04f` | TunerPro Binary Definition Map |
+| `R1C9JE15B_3076-090_080_005_v7.3.3.MetricUnits.xdf` | **2015–2026** | 2.83 MB | `7c78d3b2216e9052e480d68d52271dc5` | TunerPro Binary Definition Map |
 
 ---
 

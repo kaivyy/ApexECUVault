@@ -21,20 +21,22 @@ Nama berkas yang tersimpan merefleksikan identitas perangkat keras (Hardware ID)
 > [!NOTE]
 > Mempertahankan kode dan nomor asli pabrikan pada penamaan berkas sangat krusial agar perangkat lunak kalibrasi (seperti **TunerPro**, **WinOLS**, atau **RomRaider**) dapat mengenali dan mencocokkan peta definisi (*definition maps*) secara otomatis tanpa merusak asosiasi header ECU.
 
+* **Rentang Tahun / Model Year**: 2020–2024
+
 ---
 
-## 2. Manifest Aset Berkas Fisik (100% Verified)
+## 2. Manifest Fisik Kalibrasi & Definisi Terverifikasi
 
-Berikut adalah daftar lengkap berkas fisik yang tersimpan secara lokal di direktori ini:
+Berikut adalah daftar lengkap berkas fisik yang tersimpan secara lokal di direktori ini dengan verifikasi Model Year (Tahun Produksi), ukuran, MD5 checksum, dan tipe platform:
 
-| Nama Berkas | Tipe / Format | Ukuran (Bytes) | Deskripsi Teknis & Identifikasi |
-| :--- | :--- | :--- | :--- |
-| `AEROX  BBP-H594A-01.bin` | `.BIN` | `1,048,576` bytes | Yamaha Factory Renesas RL78 / Denso ROM |
-| `New Aerox  --  BBP-H594A-11.bin` | `.BIN` | `1,048,576` bytes | Yamaha Factory Renesas RL78 / Denso ROM |
-| `YAMAHA_AEROX_155_VVA_2020_BBP-H594A-01.bin` | `.BIN` | `1,048,576` bytes | Yamaha Factory Renesas RL78 / Denso ROM |
-| `YAMAHA_AEROX_155_VVA_2020_BBP-H594A-01.xdf` | `.XDF` | `75,632` bytes | Yamaha Factory Renesas RL78 / Denso ROM |
-| `YAMAHA_ALL_NEW_AEROX_CONNECTED_155_VVA_2021-2024_BBP-H594A-11.bin` | `.BIN` | `1,048,576` bytes | Yamaha Factory Renesas RL78 / Denso ROM |
-| `YAMAHA_ALL_NEW_AEROX_CONNECTED_155_VVA_2021-2024_BBP-H594A-11.xdf` | `.XDF` | `75,632` bytes | Yamaha Factory Renesas RL78 / Denso ROM |
+| Filename | Tahun / Model Year | Size | MD5 Checksum | Type / Target Platform |
+| :--- | :---: | :--- | :--- | :--- |
+| `AEROX  BBP-H594A-01.bin` | **2020–2021** | 1.00 MB | `6c914cceec621a8c3ac232b9a0efa1b8` | Factory Binary Firmware Dump |
+| `New Aerox  --  BBP-H594A-11.bin` | **2021–2024** | 1.00 MB | `f12768cffd6016308bca2e3dfa350a3f` | Factory Binary Firmware Dump |
+| `YAMAHA_AEROX_155_VVA_2020_BBP-H594A-01.bin` | **2020** | 1.00 MB | `6c914cceec621a8c3ac232b9a0efa1b8` | Factory Binary Firmware Dump |
+| `YAMAHA_AEROX_155_VVA_2020_BBP-H594A-01.xdf` | **2020** | 73.9 KB | `e419411bc9f6a42c6a7dfe0c3710dc0f` | TunerPro Binary Definition Map |
+| `YAMAHA_ALL_NEW_AEROX_CONNECTED_155_VVA_2021-2024_BBP-H594A-11.bin` | **2021–2024** | 1.00 MB | `f12768cffd6016308bca2e3dfa350a3f` | Factory Binary Firmware Dump |
+| `YAMAHA_ALL_NEW_AEROX_CONNECTED_155_VVA_2021-2024_BBP-H594A-11.xdf` | **2021–2024** | 73.9 KB | `444031e7517a39a00ee74233f381d82e` | TunerPro Binary Definition Map |
 
 ---
 

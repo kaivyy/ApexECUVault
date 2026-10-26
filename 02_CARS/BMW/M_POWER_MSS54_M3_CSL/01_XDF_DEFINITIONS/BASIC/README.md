@@ -21,29 +21,31 @@ Nama berkas yang tersimpan merefleksikan identitas perangkat keras (Hardware ID)
 > [!NOTE]
 > Mempertahankan kode dan nomor asli pabrikan pada penamaan berkas sangat krusial agar perangkat lunak kalibrasi (seperti **TunerPro**, **WinOLS**, atau **RomRaider**) dapat mengenali dan mencocokkan peta definisi (*definition maps*) secara otomatis tanpa merusak asosiasi header ECU.
 
+* **Rentang Tahun / Model Year**: 2000–2006
+
 ---
 
-## 2. Manifest Aset Berkas Fisik (100% Verified)
+## 2. Manifest Fisik Kalibrasi & Definisi Terverifikasi
 
-Berikut adalah daftar lengkap berkas fisik yang tersimpan secara lokal di direktori ini:
+Berikut adalah daftar lengkap berkas fisik yang tersimpan secara lokal di direktori ini dengan verifikasi Model Year (Tahun Produksi), ukuran, MD5 checksum, dan tipe platform:
 
-| Nama Berkas | Tipe / Format | Ukuran (Bytes) | Deskripsi Teknis & Identifikasi |
-| :--- | :--- | :--- | :--- |
-| `hw0301_V4_Basic.xdf` | `.XDF` | `751,243` bytes | TunerPro Binary Definition Map |
-| `hw0401_V4_Basic.xdf` | `.XDF` | `778,215` bytes | TunerPro Binary Definition Map |
-| `hw1101_V4_Basic.xdf` | `.XDF` | `754,012` bytes | TunerPro Binary Definition Map |
-| `hw1301_V4_Basic.xdf` | `.XDF` | `778,297` bytes | TunerPro Binary Definition Map |
-| `hw1401_V4_Basic.xdf` | `.XDF` | `778,737` bytes | TunerPro Binary Definition Map |
-| `hw1501_V4_Basic.xdf` | `.XDF` | `754,588` bytes | TunerPro Binary Definition Map |
-| `hw1701_V4_Basic.xdf` | `.XDF` | `778,726` bytes | TunerPro Binary Definition Map |
-| `hw1801_V4_Basic.xdf` | `.XDF` | `778,793` bytes | TunerPro Binary Definition Map |
-| `hw1901_V4_Basic.xdf` | `.XDF` | `754,508` bytes | TunerPro Binary Definition Map |
-| `hw2001_V4_Basic.xdf` | `.XDF` | `783,275` bytes | TunerPro Binary Definition Map |
-| `hw2101_V4_Basic.xdf` | `.XDF` | `778,724` bytes | TunerPro Binary Definition Map |
-| `hw2501_V4_Basic.xdf` | `.XDF` | `754,421` bytes | TunerPro Binary Definition Map |
-| `hw2601_V4_Basic.xdf` | `.XDF` | `778,943` bytes | TunerPro Binary Definition Map |
-| `hw2701_V4_Basic.xdf` | `.XDF` | `754,578` bytes | TunerPro Binary Definition Map |
-| `hw2801_V4_Basic.xdf` | `.XDF` | `754,327` bytes | TunerPro Binary Definition Map |
+| Filename | Tahun / Model Year | Size | MD5 Checksum | Type / Target Platform |
+| :--- | :---: | :--- | :--- | :--- |
+| `hw0301_V4_Basic.xdf` | **2000–2006** | 733.6 KB | `f657c8bb67fda179b1b5af4f0291332f` | TunerPro Binary Definition Map |
+| `hw0401_V4_Basic.xdf` | **2000–2006** | 760.0 KB | `cb67036d9362b34d4f2f0712dd0e915b` | TunerPro Binary Definition Map |
+| `hw1101_V4_Basic.xdf` | **2000–2006** | 736.3 KB | `f1bd6d5ab29b59806fcc65dd2c5c0e8d` | TunerPro Binary Definition Map |
+| `hw1301_V4_Basic.xdf` | **2000–2006** | 760.1 KB | `8957e34b904a7bd893ecc4312f1250f3` | TunerPro Binary Definition Map |
+| `hw1401_V4_Basic.xdf` | **2000–2006** | 760.5 KB | `c5d815950210f8014153c489734ac7dd` | TunerPro Binary Definition Map |
+| `hw1501_V4_Basic.xdf` | **2000–2006** | 736.9 KB | `2b5e7334cd32ed40be8b6264da33f0cb` | TunerPro Binary Definition Map |
+| `hw1701_V4_Basic.xdf` | **2000–2006** | 760.5 KB | `3bf0e42df2ae621a34acb013a5386f17` | TunerPro Binary Definition Map |
+| `hw1801_V4_Basic.xdf` | **2000–2006** | 760.5 KB | `749cbe3cf080d03a194865298ea26da1` | TunerPro Binary Definition Map |
+| `hw1901_V4_Basic.xdf` | **2000–2006** | 736.8 KB | `01f1cc26d4c6747bf0eaae488be9ab0d` | TunerPro Binary Definition Map |
+| `hw2001_V4_Basic.xdf` | **2001** | 764.9 KB | `b13805cc6cd2ec68754572d528b59fc6` | TunerPro Binary Definition Map |
+| `hw2101_V4_Basic.xdf` | **2000–2006** | 760.5 KB | `ca24e50075ce7f09c3ebd52431928afb` | TunerPro Binary Definition Map |
+| `hw2501_V4_Basic.xdf` | **2000–2006** | 736.7 KB | `95cff077e593052e032988d76ba44cda` | TunerPro Binary Definition Map |
+| `hw2601_V4_Basic.xdf` | **2000–2006** | 760.7 KB | `3c57c8ac98d8e7f68f12d8af62a2d4c4` | TunerPro Binary Definition Map |
+| `hw2701_V4_Basic.xdf` | **2000–2006** | 736.9 KB | `2aab5e40809d4bd57c047eb4696ad1e1` | TunerPro Binary Definition Map |
+| `hw2801_V4_Basic.xdf` | **2000–2006** | 736.6 KB | `82c461efc48f9a463b2208f68bed0ca0` | TunerPro Binary Definition Map |
 
 ---
 

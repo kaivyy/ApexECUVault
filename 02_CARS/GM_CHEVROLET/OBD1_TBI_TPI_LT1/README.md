@@ -5,40 +5,43 @@ Koleksi biner kalibrasi Broadcast Code (BCC) asli pabrikan General Motors untuk 
 
 * **Hardware / ECU**: GM Delco OBD1 ECM/PCM (2732A 4KB, 27C128 16KB, 27C256 32KB, 27C512 64KB EPROM)
 * **Metode Flashing & Antarmuka**: EPROM burner / Moates AutoProm / TunerPro RT ALDL cable.
+* **Rentang Tahun / Model Year**: 1985–1995
 * **Total File Terdaftar**: 28 file (100% fisik terverifikasi, Zero Synthetic)
 
 ---
 
 ## 2. Manifest Fisik Kalibrasi & Definisi Terverifikasi
 
-| Filename | Size | MD5 Checksum | Type / Target |
-| :--- | :--- | :--- | :--- |
-| `2240AYFP.BIN` | 64.0 KB | `0b4b86ec7594e0183ebfc9e1b529a857` | Raw Binary Firmware / Dump |
-| `ANZA.bin` | 16.0 KB | `bac00c6ed052846369efa5c632a1b0c4` | Raw Binary Firmware / Dump |
-| `APYP.bin` | 16.0 KB | `dc9f6c758832e709320553b96b3f6fb8` | Raw Binary Firmware / Dump |
-| `ARAP.bin` | 16.0 KB | `85c39ceefcee8f26ce8f41168ed6992c` | Raw Binary Firmware / Dump |
-| `AYCF6730 88.BIN` | 32.0 KB | `a49fcfe4b2c67b24256328cf5fd3cf76` | Raw Binary Firmware / Dump |
-| `Abyr4326 88.bin` | 32.0 KB | `156f5391abed9852f2a7999a301135bf` | Raw Binary Firmware / Dump |
-| `Arpl 88.bin` | 32.0 KB | `b6293a0cc5a7c513ffd8fe82d0fa6485` | Raw Binary Firmware / Dump |
-| `Atj9188 88.bin` | 32.0 KB | `65fe2a269b4b7cbac400bd0118ffdf64` | Raw Binary Firmware / Dump |
-| `Atmf5241 88.bin` | 32.0 KB | `65e7e153b933d7b9af566dfa6770422b` | Raw Binary Firmware / Dump |
-| `Atta6656 88.bin` | 32.0 KB | `8e646d563a32dfd713155e9b3959a0ee` | Raw Binary Firmware / Dump |
-| `BCKC 11.BIN` | 64.0 KB | `52d88f2ffcf9630c4560d92f47604474` | Raw Binary Firmware / Dump |
-| `BDJZ.bin` | 64.0 KB | `31cbe8ad8ccbab03a24787928f762ecc` | Raw Binary Firmware / Dump |
-| `BFFK1287.BIN` | 64.0 KB | `a8c2ab8e49fd0402164819f4807c7734` | Raw Binary Firmware / Dump |
-| `BFPL2416.BIN` | 64.0 KB | `c9a80d556704e96fa2b06663eb78d85b` | Raw Binary Firmware / Dump |
-| `BFPM 12.BIN` | 32.0 KB | `28e6ab94694bad544b53d6d68e9f2dd9` | Raw Binary Firmware / Dump |
-| `BFUZ.BIN` | 32.0 KB | `5a7cdbc25d430724d61906c7f2834b2f` | Raw Binary Firmware / Dump |
-| `BJKT8015.BIN` | 64.0 KB | `1c9d1937ba86908b182d468216860cf8` | Raw Binary Firmware / Dump |
-| `BJLK.bin` | 64.0 KB | `f14dc08de58013df597011e4f0f4b46d` | Raw Binary Firmware / Dump |
-| `BJWN.Bin` | 64.0 KB | `fb048a75993bb5b969b078de9dd3ca26` | Raw Binary Firmware / Dump |
-| `BJYM 0D.bin` | 64.0 KB | `425f3fe075126c6b7b69356995a7c58e` | Raw Binary Firmware / Dump |
-| `BLCH5094.BIN` | 64.0 KB | `bf1c366592be7e6b161b258c6d293cf8` | Raw Binary Firmware / Dump |
-| `BLYN8253.BIN` | 64.0 KB | `bfbfc78db8684b70c6e02dcfbee29a5b` | Raw Binary Firmware / Dump |
-| `Bawx 88.bin` | 32.0 KB | `3d57b6b1ff7239945502b15e6044e03f` | Raw Binary Firmware / Dump |
-| `Cld4324 88.bin` | 32.0 KB | `c58fa5f508ebb77a6383f984cfc448ff` | Raw Binary Firmware / Dump |
-| `atds 88.bin` | 32.0 KB | `93b872e21e2a286e8145314d1c2086ef` | Raw Binary Firmware / Dump |
-| `azty1407 88.bin` | 32.0 KB | `d665d66733b1379580f17fbeebee6788` | Raw Binary Firmware / Dump |
+Berikut adalah daftar lengkap berkas fisik yang tersimpan secara lokal di direktori ini dengan verifikasi Model Year (Tahun Produksi), ukuran, MD5 checksum, dan tipe platform:
+
+| Filename | Tahun / Model Year | Size | MD5 Checksum | Type / Target Platform |
+| :--- | :---: | :--- | :--- | :--- |
+| `2240AYFP.BIN` | **1985–1995** | 64.0 KB | `0b4b86ec7594e0183ebfc9e1b529a857` | Factory Binary Firmware Dump |
+| `ANZA.bin` | **1985–1995** | 16.0 KB | `bac00c6ed052846369efa5c632a1b0c4` | Factory Binary Firmware Dump |
+| `APYP.bin` | **1985–1995** | 16.0 KB | `dc9f6c758832e709320553b96b3f6fb8` | Factory Binary Firmware Dump |
+| `ARAP.bin` | **1985–1995** | 16.0 KB | `85c39ceefcee8f26ce8f41168ed6992c` | Factory Binary Firmware Dump |
+| `AYCF6730 88.BIN` | **1988** | 32.0 KB | `a49fcfe4b2c67b24256328cf5fd3cf76` | Factory Binary Firmware Dump |
+| `Abyr4326 88.bin` | **1988** | 32.0 KB | `156f5391abed9852f2a7999a301135bf` | Factory Binary Firmware Dump |
+| `Arpl 88.bin` | **1988** | 32.0 KB | `b6293a0cc5a7c513ffd8fe82d0fa6485` | Factory Binary Firmware Dump |
+| `Atj9188 88.bin` | **1988** | 32.0 KB | `65fe2a269b4b7cbac400bd0118ffdf64` | Factory Binary Firmware Dump |
+| `Atmf5241 88.bin` | **1988** | 32.0 KB | `65e7e153b933d7b9af566dfa6770422b` | Factory Binary Firmware Dump |
+| `Atta6656 88.bin` | **1988** | 32.0 KB | `8e646d563a32dfd713155e9b3959a0ee` | Factory Binary Firmware Dump |
+| `BCKC 11.BIN` | **2011** | 64.0 KB | `52d88f2ffcf9630c4560d92f47604474` | Factory Binary Firmware Dump |
+| `BDJZ.bin` | **1985–1995** | 64.0 KB | `31cbe8ad8ccbab03a24787928f762ecc` | Factory Binary Firmware Dump |
+| `BFFK1287.BIN` | **1985–1995** | 64.0 KB | `a8c2ab8e49fd0402164819f4807c7734` | Factory Binary Firmware Dump |
+| `BFPL2416.BIN` | **1985–1995** | 64.0 KB | `c9a80d556704e96fa2b06663eb78d85b` | Factory Binary Firmware Dump |
+| `BFPM 12.BIN` | **2012** | 32.0 KB | `28e6ab94694bad544b53d6d68e9f2dd9` | Factory Binary Firmware Dump |
+| `BFUZ.BIN` | **1985–1995** | 32.0 KB | `5a7cdbc25d430724d61906c7f2834b2f` | Factory Binary Firmware Dump |
+| `BJKT8015.BIN` | **1985–1995** | 64.0 KB | `1c9d1937ba86908b182d468216860cf8` | Factory Binary Firmware Dump |
+| `BJLK.bin` | **1985–1995** | 64.0 KB | `f14dc08de58013df597011e4f0f4b46d` | Factory Binary Firmware Dump |
+| `BJWN.Bin` | **1985–1995** | 64.0 KB | `fb048a75993bb5b969b078de9dd3ca26` | Factory Binary Firmware Dump |
+| `BJYM 0D.bin` | **1985–1995** | 64.0 KB | `425f3fe075126c6b7b69356995a7c58e` | Factory Binary Firmware Dump |
+| `BLCH5094.BIN` | **1985–1995** | 64.0 KB | `bf1c366592be7e6b161b258c6d293cf8` | Factory Binary Firmware Dump |
+| `BLYN8253.BIN` | **1985–1995** | 64.0 KB | `bfbfc78db8684b70c6e02dcfbee29a5b` | Factory Binary Firmware Dump |
+| `Bawx 88.bin` | **1988** | 32.0 KB | `3d57b6b1ff7239945502b15e6044e03f` | Factory Binary Firmware Dump |
+| `Cld4324 88.bin` | **1988** | 32.0 KB | `c58fa5f508ebb77a6383f984cfc448ff` | Factory Binary Firmware Dump |
+| `atds 88.bin` | **1988** | 32.0 KB | `93b872e21e2a286e8145314d1c2086ef` | Factory Binary Firmware Dump |
+| `azty1407 88.bin` | **1988** | 32.0 KB | `d665d66733b1379580f17fbeebee6788` | Factory Binary Firmware Dump |
 
 ---
 

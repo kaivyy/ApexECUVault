@@ -13,17 +13,19 @@ Paket direktori `BRIO_1_2L_L12B` menyediakan pustaka kalibrasi dan pemetaan ECU 
 ### Mengapa Sebagian Berkas Memiliki Nama Berupa Angka / Kode?
 Nama berkas merefleksikan identitas perangkat keras (Hardware ID), versi perangkat lunak (Software ID), atau nomor kalibrasi pabrikan asli (OEM Calibration ID) untuk menjaga kecocokan header pada TunerPro dan alat flasher.
 
+* **Rentang Tahun / Model Year**: OEM Production
+
 ---
 
-## 2. Manifest Aset Berkas Fisik (100% Verified)
+## 2. Manifest Fisik Kalibrasi & Definisi Terverifikasi
 
-Berikut adalah daftar lengkap berkas fisik yang tersimpan secara lokal di direktori ini:
+Berikut adalah daftar lengkap berkas fisik yang tersimpan secara lokal di direktori ini dengan verifikasi Model Year (Tahun Produksi), ukuran, MD5 checksum, dan tipe platform:
 
-| Nama Berkas | Tipe / Format | Ukuran (Bytes) | Deskripsi Teknis & Identifikasi |
-| :--- | :--- | :--- | :--- |
-| `37805-RSJ-E010-M1.rwd` | `.RWD` | `1,015,866` bytes | OEM Firmware Calibration Flash Dump / Binary Package |
-| `37805-RSJ-E210-M1.rwd` | `.RWD` | `1,015,866` bytes | OEM Firmware Calibration Flash Dump / Binary Package |
-| `HONDA_37805-RSJ-J51_BRIO.xdf` | `.XDF` | `12,131` bytes | TunerPro Binary Definition Map / Parameter Layout |
+| Filename | Tahun / Model Year | Size | MD5 Checksum | Type / Target Platform |
+| :--- | :---: | :--- | :--- | :--- |
+| `37805-RSJ-E010-M1.rwd` | **OEM Production** | 992.1 KB | `6bc97aa2b565ffc974c872a34a72ad00` | Factory Binary Firmware Dump |
+| `37805-RSJ-E210-M1.rwd` | **OEM Production** | 992.1 KB | `01c9492e98557e1e90f817cccd7c1e13` | Factory Binary Firmware Dump |
+| `HONDA_37805-RSJ-J51_BRIO.xdf` | **OEM Production** | 11.8 KB | `7c01901fcafa966d4892da7349d88752` | TunerPro Binary Definition Map |
 
 ---
 

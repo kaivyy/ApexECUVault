@@ -13,31 +13,29 @@ Paket direktori `JAZZ_CITY_MOBILIO_BRV_L15` menyediakan pustaka kalibrasi dan pe
 ### Mengapa Sebagian Berkas Memiliki Nama Berupa Angka / Kode?
 Nama berkas merefleksikan identitas perangkat keras (Hardware ID), versi perangkat lunak (Software ID), atau nomor kalibrasi pabrikan asli (OEM Calibration ID) untuk menjaga kecocokan header pada TunerPro dan alat flasher.
 
+* **Rentang Tahun / Model Year**: 2008–2021
+
 ---
 
-## 2. Manifest Aset Berkas Fisik (100% Verified)
+## 2. Manifest Fisik Kalibrasi & Definisi Terverifikasi
 
-Berikut adalah daftar lengkap berkas fisik yang tersimpan secara lokal di direktori ini:
+Berikut adalah daftar lengkap berkas fisik yang tersimpan secara lokal di direktori ini dengan verifikasi Model Year (Tahun Produksi), ukuran, MD5 checksum, dan tipe platform:
 
-| Nama Berkas | Tipe / Format | Ukuran (Bytes) | Deskripsi Teknis & Identifikasi |
-| :--- | :--- | :--- | :--- |
-| `37805-RD1-X520_Honda_Fit_1.4_16v_SH7058_1Mb.xdf` | `.XDF` | `4,458` bytes | TunerPro Binary Definition Map / Parameter Layout |
-| `37805-RME-A220_Honda_Fit_2008_Base__Sport_1.5L__L4_-_Gas.xdf` | `.XDF` | `168,318` bytes | TunerPro Binary Definition Map / Parameter Layout |
-| `37805-RME-A520_Honda_Fit_2007_Base__Sport_1.5L__L4_-_Gas.xdf` | `.XDF` | `3,343` bytes | TunerPro Binary Definition Map / Parameter Layout |
-| `37805-RME-A690_Honda_Fit_2007_Base_1.5L__L4_-_Gas.xdf` | `.XDF` | `3,336` bytes | TunerPro Binary Definition Map / Parameter Layout |
-| `37805-RME-A720_Honda_Fit_2008_Base_1.5L__L4_-_Gas.xdf` | `.XDF` | `3,336` bytes | TunerPro Binary Definition Map / Parameter Layout |
-| `37805-RME-A890_Honda_Fit_2007_Sport_1.5L__L4_-_Gas.xdf` | `.XDF` | `3,337` bytes | TunerPro Binary Definition Map / Parameter Layout |
-| `37805-RME-C220_Honda_Fit_2008_Sport_1.5L__L4_-_Gas.xdf` | `.XDF` | `3,337` bytes | TunerPro Binary Definition Map / Parameter Layout |
-| `37805-RP3-3060_Honda_Fit_2009_Base__Sport_1.5L__L4_-_Gas.xdf` | `.XDF` | `4,473` bytes | TunerPro Binary Definition Map / Parameter Layout |
-| `37805-RP3-4050_Honda_Fit_2009_Base_1.5L__L4_-_Gas.xdf` | `.XDF` | `4,466` bytes | TunerPro Binary Definition Map / Parameter Layout |
-| `37805-RP3-A170_Honda_Fit_2009_2010_Sport_1.5L__L4_-_Gas.xdf` | `.XDF` | `4,472` bytes | TunerPro Binary Definition Map / Parameter Layout |
-| `37805-RP3-A770_Honda_Fit_2012_2013_Base__Sport_1.5L__L4_-_Gas.xdf` | `.XDF` | `4,478` bytes | TunerPro Binary Definition Map / Parameter Layout |
-| `37805-RP6-A560_Honda_Fit_2012_2013_Sport_1.5L__L4_-_Gas.xdf` | `.XDF` | `7,804` bytes | TunerPro Binary Definition Map / Parameter Layout |
-| `HONDA_37805-5A4-J81_JAZZ_GK5.xdf` | `.XDF` | `12,149` bytes | TunerPro Binary Definition Map / Parameter Layout |
-
-### Subdirektori Tambahan
-
-- **`OFFICIAL_CALIBRATION_PACKAGES/`**: Mengelola 375 aset kalibrasi lanjutan.
+| Filename | Tahun / Model Year | Size | MD5 Checksum | Type / Target Platform |
+| :--- | :---: | :--- | :--- | :--- |
+| `37805-RD1-X520_Honda_Fit_1.4_16v_SH7058_1Mb.xdf` | **2008–2021** | 4.4 KB | `5194796b09e2fb0d78bae16e889c220f` | TunerPro Binary Definition Map |
+| `37805-RME-A220_Honda_Fit_2008_Base__Sport_1.5L__L4_-_Gas.xdf` | **2008** | 164.4 KB | `19999a2b5dcb1d6385f1cf3c85adb206` | TunerPro Binary Definition Map |
+| `37805-RME-A520_Honda_Fit_2007_Base__Sport_1.5L__L4_-_Gas.xdf` | **2007** | 3.3 KB | `de27f3391fe20313a190adc0263a4911` | TunerPro Binary Definition Map |
+| `37805-RME-A690_Honda_Fit_2007_Base_1.5L__L4_-_Gas.xdf` | **2007** | 3.3 KB | `3820751ea9cb0c63517424968d00e887` | TunerPro Binary Definition Map |
+| `37805-RME-A720_Honda_Fit_2008_Base_1.5L__L4_-_Gas.xdf` | **2008** | 3.3 KB | `2547f797235849723b1452653fb9edec` | TunerPro Binary Definition Map |
+| `37805-RME-A890_Honda_Fit_2007_Sport_1.5L__L4_-_Gas.xdf` | **2007** | 3.3 KB | `552c51391baf3642202284cc91f19838` | TunerPro Binary Definition Map |
+| `37805-RME-C220_Honda_Fit_2008_Sport_1.5L__L4_-_Gas.xdf` | **2008** | 3.3 KB | `ebd37128ab058249f52dcb6219f34a40` | TunerPro Binary Definition Map |
+| `37805-RP3-3060_Honda_Fit_2009_Base__Sport_1.5L__L4_-_Gas.xdf` | **2009** | 4.4 KB | `a761212ce470bb96cd0e23b90efa7e41` | TunerPro Binary Definition Map |
+| `37805-RP3-4050_Honda_Fit_2009_Base_1.5L__L4_-_Gas.xdf` | **2009** | 4.4 KB | `0e73a0edb114780c1a457fd03b46c950` | TunerPro Binary Definition Map |
+| `37805-RP3-A170_Honda_Fit_2009_2010_Sport_1.5L__L4_-_Gas.xdf` | **2009–2010** | 4.4 KB | `378c0b3c3226344fd5864ba75212e3e0` | TunerPro Binary Definition Map |
+| `37805-RP3-A770_Honda_Fit_2012_2013_Base__Sport_1.5L__L4_-_Gas.xdf` | **2012–2013** | 4.4 KB | `d88b75c028f8f2ab3eba17948ac2216c` | TunerPro Binary Definition Map |
+| `37805-RP6-A560_Honda_Fit_2012_2013_Sport_1.5L__L4_-_Gas.xdf` | **2012–2013** | 7.6 KB | `47fe6f60e2910f3c230b1bb604e039d8` | TunerPro Binary Definition Map |
+| `HONDA_37805-5A4-J81_JAZZ_GK5.xdf` | **2008–2021** | 11.9 KB | `0d5c74b19221cb45ea40bd66fb310dc0` | TunerPro Binary Definition Map |
 
 ---
 

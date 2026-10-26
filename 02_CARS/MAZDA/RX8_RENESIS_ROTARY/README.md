@@ -21,17 +21,19 @@ Nama berkas yang tersimpan merefleksikan identitas perangkat keras (Hardware ID)
 > [!NOTE]
 > Mempertahankan kode dan nomor asli pabrikan pada penamaan berkas sangat krusial agar perangkat lunak kalibrasi (seperti **TunerPro**, **WinOLS**, atau **RomRaider**) dapat mengenali dan mencocokkan peta definisi (*definition maps*) secara otomatis tanpa merusak asosiasi header ECU.
 
+* **Rentang Tahun / Model Year**: OEM Production
+
 ---
 
-## 2. Manifest Aset Berkas Fisik (100% Verified)
+## 2. Manifest Fisik Kalibrasi & Definisi Terverifikasi
 
-Berikut adalah daftar lengkap berkas fisik yang tersimpan secara lokal di direktori ini:
+Berikut adalah daftar lengkap berkas fisik yang tersimpan secara lokal di direktori ini dengan verifikasi Model Year (Tahun Produksi), ukuran, MD5 checksum, dan tipe platform:
 
-| Nama Berkas | Tipe / Format | Ukuran (Bytes) | Deskripsi Teknis & Identifikasi |
-| :--- | :--- | :--- | :--- |
-| `logger_rx8_defs.xml` | `.XML` | `13,720` bytes | RomRaider / EcuFlash XML Definition |
-| `rx8_defs.xml` | `.XML` | `1,724,379` bytes | RomRaider / EcuFlash XML Definition |
-| `rx8_defs_N3ZHEC_fixed.xml` | `.XML` | `1,724,537` bytes | RomRaider / EcuFlash XML Definition |
+| Filename | Tahun / Model Year | Size | MD5 Checksum | Type / Target Platform |
+| :--- | :---: | :--- | :--- | :--- |
+| `logger_rx8_defs.xml` | **OEM Production** | 13.4 KB | `67c8fbcb84f42e431c8a5227881b3f8c` | ECU / ASAP2 Calibration Map Definition |
+| `rx8_defs.xml` | **OEM Production** | 1.64 MB | `bef723a2422f2afe9eb75a62eb3272b7` | ECU / ASAP2 Calibration Map Definition |
+| `rx8_defs_N3ZHEC_fixed.xml` | **OEM Production** | 1.64 MB | `8b5e5a3348e886a42906c1810ffa6612` | ECU / ASAP2 Calibration Map Definition |
 
 ---
 

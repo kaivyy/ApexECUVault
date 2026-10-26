@@ -21,23 +21,25 @@ Nama berkas yang tersimpan merefleksikan identitas perangkat keras (Hardware ID)
 > [!NOTE]
 > Mempertahankan kode dan nomor asli pabrikan pada penamaan berkas sangat krusial agar perangkat lunak kalibrasi (seperti **TunerPro**, **WinOLS**, atau **RomRaider**) dapat mengenali dan mencocokkan peta definisi (*definition maps*) secara otomatis tanpa merusak asosiasi header ECU.
 
+* **Rentang Tahun / Model Year**: 1993–2026
+
 ---
 
-## 2. Manifest Aset Berkas Fisik (100% Verified)
+## 2. Manifest Fisik Kalibrasi & Definisi Terverifikasi
 
-Berikut adalah daftar lengkap berkas fisik yang tersimpan secara lokal di direktori ini:
+Berikut adalah daftar lengkap berkas fisik yang tersimpan secara lokal di direktori ini dengan verifikasi Model Year (Tahun Produksi), ukuran, MD5 checksum, dan tipe platform:
 
-| Nama Berkas | Tipe / Format | Ukuran (Bytes) | Deskripsi Teknis & Identifikasi |
-| :--- | :--- | :--- | :--- |
-| `GENERATIONAL_89661-14370_Toyota_Supra_MK3_JZA70_1JZ-GTE_TwinTurbo_1990_1993.xdf` | `.XDF` | `7,371` bytes | TunerPro Binary Definition Map |
-| `GENERATIONAL_89661-14480_Toyota_Supra_JZA80_2JZ-GTE_TwinTurbo_JDM_MT_1993_1997.xdf` | `.XDF` | `7,374` bytes | TunerPro Binary Definition Map |
-| `GENERATIONAL_89661-14560_Toyota_Supra_JZA80_2JZ-GTE_TwinTurbo_USDM_MT_550cc_1993_1998.xdf` | `.XDF` | `7,381` bytes | TunerPro Binary Definition Map |
-| `GENERATIONAL_89661-14830_Toyota_Supra_JZA80_2JZ-GTE_VVTi_6MT_1997_2002.xdf` | `.XDF` | `8,146` bytes | TunerPro Binary Definition Map |
-| `GENERATIONAL_89661-14840_Toyota_Supra_JZA80_2JZ-GTE_VVTi_AT_1997_2002.xdf` | `.XDF` | `8,145` bytes | TunerPro Binary Definition Map |
-| `GENERATIONAL_89661-22810_Toyota_Chaser_JZX100_1JZ-GTE_VVTi_MT_1996_2001.xdf` | `.XDF` | `7,757` bytes | TunerPro Binary Definition Map |
-| `GENERATIONAL_B48B20_Toyota_GR_Supra_A90_2.0T_Bosch_MG1CS024_2020_2024.xdf` | `.XDF` | `8,929` bytes | TunerPro Binary Definition Map |
-| `GENERATIONAL_B58B30O1_Toyota_GR_Supra_A90_3.0T_Facelift_MG1CS024_2021_2024.xdf` | `.XDF` | `8,934` bytes | TunerPro Binary Definition Map |
-| `GENERATIONAL_B58B30_Toyota_GR_Supra_A90_3.0T_Bosch_MG1CS024_2019_2020.xdf` | `.XDF` | `8,929` bytes | TunerPro Binary Definition Map |
+| Filename | Tahun / Model Year | Size | MD5 Checksum | Type / Target Platform |
+| :--- | :---: | :--- | :--- | :--- |
+| `GENERATIONAL_89661-14370_Toyota_Supra_MK3_JZA70_1JZ-GTE_TwinTurbo_1990_1993.xdf` | **1990–1993** | 7.2 KB | `dcfc32cce4f7ca510756507923043e14` | TunerPro Binary Definition Map |
+| `GENERATIONAL_89661-14480_Toyota_Supra_JZA80_2JZ-GTE_TwinTurbo_JDM_MT_1993_1997.xdf` | **1993–1997** | 7.2 KB | `088a1b96eb269b51e19efa47a7af9d6f` | TunerPro Binary Definition Map |
+| `GENERATIONAL_89661-14560_Toyota_Supra_JZA80_2JZ-GTE_TwinTurbo_USDM_MT_550cc_1993_1998.xdf` | **1993–1998** | 7.2 KB | `8ead3e202e5c157026e1b79724c91d0b` | TunerPro Binary Definition Map |
+| `GENERATIONAL_89661-14830_Toyota_Supra_JZA80_2JZ-GTE_VVTi_6MT_1997_2002.xdf` | **1997–2002** | 8.0 KB | `453af333e4e494d72b6676e6e2383b5a` | TunerPro Binary Definition Map |
+| `GENERATIONAL_89661-14840_Toyota_Supra_JZA80_2JZ-GTE_VVTi_AT_1997_2002.xdf` | **1997–2002** | 8.0 KB | `463d57010fa4631c018422d5aa58cb23` | TunerPro Binary Definition Map |
+| `GENERATIONAL_89661-22810_Toyota_Chaser_JZX100_1JZ-GTE_VVTi_MT_1996_2001.xdf` | **1996–2001** | 7.6 KB | `79fd43ed238ec84113dfb7eb68e7a549` | TunerPro Binary Definition Map |
+| `GENERATIONAL_B48B20_Toyota_GR_Supra_A90_2.0T_Bosch_MG1CS024_2020_2024.xdf` | **2020–2024** | 8.7 KB | `4b28f4dbcdb4c42bd8b45b60029550a3` | TunerPro Binary Definition Map |
+| `GENERATIONAL_B58B30O1_Toyota_GR_Supra_A90_3.0T_Facelift_MG1CS024_2021_2024.xdf` | **2021–2024** | 8.7 KB | `f1b4387258c3f76b85c2fa90c848c4d2` | TunerPro Binary Definition Map |
+| `GENERATIONAL_B58B30_Toyota_GR_Supra_A90_3.0T_Bosch_MG1CS024_2019_2020.xdf` | **2019–2020** | 8.7 KB | `0ed9be13fcdca8985b29684bb19bec7b` | TunerPro Binary Definition Map |
 
 ---
 

@@ -21,20 +21,22 @@ Nama berkas yang tersimpan merefleksikan identitas perangkat keras (Hardware ID)
 > [!NOTE]
 > Mempertahankan kode dan nomor asli pabrikan pada penamaan berkas sangat krusial agar perangkat lunak kalibrasi (seperti **TunerPro**, **WinOLS**, atau **RomRaider**) dapat mengenali dan mencocokkan peta definisi (*definition maps*) secara otomatis tanpa merusak asosiasi header ECU.
 
+* **Rentang Tahun / Model Year**: 2000–2006
+
 ---
 
-## 2. Manifest Aset Berkas Fisik (100% Verified)
+## 2. Manifest Fisik Kalibrasi & Definisi Terverifikasi
 
-Berikut adalah daftar lengkap berkas fisik yang tersimpan secara lokal di direktori ini:
+Berikut adalah daftar lengkap berkas fisik yang tersimpan secara lokal di direktori ini dengan verifikasi Model Year (Tahun Produksi), ukuran, MD5 checksum, dan tipe platform:
 
-| Nama Berkas | Tipe / Format | Ukuran (Bytes) | Deskripsi Teknis & Identifikasi |
-| :--- | :--- | :--- | :--- |
-| `Full 211325000401PD11 Std EOBD (European OBD).bin` | `.BIN` | `1,048,576` bytes | Binary Firmware / Calibration Dump |
-| `Full 211325000401PD1D Std No EOBD.bin` | `.BIN` | `1,048,576` bytes | Binary Firmware / Calibration Dump |
-| `Full 211325000401PD1J Jap.bin` | `.BIN` | `1,048,576` bytes | Binary Firmware / Calibration Dump |
-| `Full 211325000401PD31 EOBD (European OBD) No Vmax.bin` | `.BIN` | `1,048,576` bytes | Binary Firmware / Calibration Dump |
-| `Full 211325000401PD3D No EOBD delimited.bin` | `.BIN` | `1,048,576` bytes | Binary Firmware / Calibration Dump |
-| `Full 211325000401PD3J Jap Delimit.bin` | `.BIN` | `1,048,576` bytes | Binary Firmware / Calibration Dump |
+| Filename | Tahun / Model Year | Size | MD5 Checksum | Type / Target Platform |
+| :--- | :---: | :--- | :--- | :--- |
+| `Full 211325000401PD11 Std EOBD (European OBD).bin` | **2000–2006** | 1.00 MB | `043f2d193af16bc281ea05694de94acb` | Factory Binary Firmware Dump |
+| `Full 211325000401PD1D Std No EOBD.bin` | **2000–2006** | 1.00 MB | `111567430712c6c7a9a936fa94603912` | Factory Binary Firmware Dump |
+| `Full 211325000401PD1J Jap.bin` | **2000–2006** | 1.00 MB | `c32cf60d48c1796b00345758c625f253` | Factory Binary Firmware Dump |
+| `Full 211325000401PD31 EOBD (European OBD) No Vmax.bin` | **2000–2006** | 1.00 MB | `6126c46a8798ce45e3d17c7426356d50` | Factory Binary Firmware Dump |
+| `Full 211325000401PD3D No EOBD delimited.bin` | **2000–2006** | 1.00 MB | `ece640828100f5476992b3f1e211125d` | Factory Binary Firmware Dump |
+| `Full 211325000401PD3J Jap Delimit.bin` | **2000–2006** | 1.00 MB | `699672a7bc3c6edf4383d5c84780a9f4` | Factory Binary Firmware Dump |
 
 ---
 

@@ -21,18 +21,20 @@ Nama berkas yang tersimpan merefleksikan identitas perangkat keras (Hardware ID)
 > [!NOTE]
 > Mempertahankan kode dan nomor asli pabrikan pada penamaan berkas sangat krusial agar perangkat lunak kalibrasi (seperti **TunerPro**, **WinOLS**, atau **RomRaider**) dapat mengenali dan mencocokkan peta definisi (*definition maps*) secara otomatis tanpa merusak asosiasi header ECU.
 
+* **Rentang Tahun / Model Year**: 2006–2010
+
 ---
 
-## 2. Manifest Aset Berkas Fisik (100% Verified)
+## 2. Manifest Fisik Kalibrasi & Definisi Terverifikasi
 
-Berikut adalah daftar lengkap berkas fisik yang tersimpan secara lokal di direktori ini:
+Berikut adalah daftar lengkap berkas fisik yang tersimpan secara lokal di direktori ini dengan verifikasi Model Year (Tahun Produksi), ukuran, MD5 checksum, dan tipe platform:
 
-| Nama Berkas | Tipe / Format | Ukuran (Bytes) | Deskripsi Teknis & Identifikasi |
-| :--- | :--- | :--- | :--- |
-| `I8A0S Custom.xdf` | `.XDF` | `1,087,138` bytes | TunerPro Binary Definition Map |
-| `I8A0S Legacy Custom.xdf` | `.XDF` | `804,687` bytes | TunerPro Binary Definition Map |
-| `I8A0S_MapSwitchBase.bin` | `.BIN` | `2,097,152` bytes | Binary Firmware / Calibration Dump |
-| `I8A0S_original.bin` | `.BIN` | `2,097,152` bytes | Binary Firmware / Calibration Dump |
+| Filename | Tahun / Model Year | Size | MD5 Checksum | Type / Target Platform |
+| :--- | :---: | :--- | :--- | :--- |
+| `I8A0S Custom.xdf` | **2006–2010** | 1.04 MB | `b94b48a76da0171f0337a481a922f57f` | TunerPro Binary Definition Map |
+| `I8A0S Legacy Custom.xdf` | **2006–2010** | 785.8 KB | `0dbab1e26ac52e94396559beb22c8441` | TunerPro Binary Definition Map |
+| `I8A0S_MapSwitchBase.bin` | **2006–2010** | 2.00 MB | `8a86b378007d508f7e6aef99199c0787` | Factory Binary Firmware Dump |
+| `I8A0S_original.bin` | **2006–2010** | 2.00 MB | `b13d862b98e7ab3a9db9630287ca8f89` | Factory Binary Firmware Dump |
 
 ---
 

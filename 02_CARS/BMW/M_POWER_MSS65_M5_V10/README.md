@@ -3,17 +3,20 @@
 ## 1. Technical Overview
 Koleksi biner kalibrasi pabrikan OEM dan definisi tuning untuk modul ECU platform M POWER MSS65 M5 V10.
 
+* **Rentang Tahun / Model Year**: 2005–2010
 * **Total File Terdaftar**: 3 file (100% fisik terverifikasi, Zero Synthetic)
 
 ---
 
 ## 2. Manifest Fisik Kalibrasi & Definisi Terverifikasi
 
-| Filename | Size | MD5 Checksum | Type / Target |
-| :--- | :--- | :--- | :--- |
-| `IGN.A2L` | 640.3 KB | `8234c0cae14b51ffbe469e7cf7d1cc6e` | ECU / ASAP2 Calibration Map Definition |
-| `INJ.A2L` | 522.1 KB | `8162476abac09c5b7cdc7d7ea57eb7cf` | ECU / ASAP2 Calibration Map Definition |
-| `SMG_Release.xdf` | 1.0 KB | `6b84491886acc5d33c165d95361defc7` | TunerPro Binary Definition Map |
+Berikut adalah daftar lengkap berkas fisik yang tersimpan secara lokal di direktori ini dengan verifikasi Model Year (Tahun Produksi), ukuran, MD5 checksum, dan tipe platform:
+
+| Filename | Tahun / Model Year | Size | MD5 Checksum | Type / Target Platform |
+| :--- | :---: | :--- | :--- | :--- |
+| `IGN.A2L` | **2005–2010** | 640.3 KB | `8234c0cae14b51ffbe469e7cf7d1cc6e` | ECU / ASAP2 Calibration Map Definition |
+| `INJ.A2L` | **2005–2010** | 522.1 KB | `8162476abac09c5b7cdc7d7ea57eb7cf` | ECU / ASAP2 Calibration Map Definition |
+| `SMG_Release.xdf` | **2005–2010** | 1.0 KB | `6b84491886acc5d33c165d95361defc7` | TunerPro Binary Definition Map |
 
 ---
 

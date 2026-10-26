@@ -21,17 +21,19 @@ Nama berkas yang tersimpan merefleksikan identitas perangkat keras (Hardware ID)
 > [!NOTE]
 > Mempertahankan kode dan nomor asli pabrikan pada penamaan berkas sangat krusial agar perangkat lunak kalibrasi (seperti **TunerPro**, **WinOLS**, atau **RomRaider**) dapat mengenali dan mencocokkan peta definisi (*definition maps*) secara otomatis tanpa merusak asosiasi header ECU.
 
+* **Rentang Tahun / Model Year**: 2006–2021
+
 ---
 
-## 2. Manifest Aset Berkas Fisik (100% Verified)
+## 2. Manifest Fisik Kalibrasi & Definisi Terverifikasi
 
-Berikut adalah daftar lengkap berkas fisik yang tersimpan secara lokal di direktori ini:
+Berikut adalah daftar lengkap berkas fisik yang tersimpan secara lokal di direktori ini dengan verifikasi Model Year (Tahun Produksi), ukuran, MD5 checksum, dan tipe platform:
 
-| Nama Berkas | Tipe / Format | Ukuran (Bytes) | Deskripsi Teknis & Identifikasi |
-| :--- | :--- | :--- | :--- |
-| `TOYOTA_89560-BZxxx_AVANZA.xdf` | `.XDF` | `10,086` bytes | Daihatsu / Denso Engine Management ID `89560-BZxxx` |
-| `TOYOTA_AVANZA_AURIS_2016_1.3L_DUAL_VVTI_1NRFE_89663-52J01.bin` | `.BIN` | `753,664` bytes | Toyota / Denso Factory Calibration ID `89663-52J01` |
-| `TOYOTA_AVANZA_COROLLA_2015_1.3L_DUAL_VVTI_1NRFE_89663-02E73.bin` | `.BIN` | `1,015,808` bytes | Toyota / Denso Factory Calibration ID `89663-02E73` |
+| Filename | Tahun / Model Year | Size | MD5 Checksum | Type / Target Platform |
+| :--- | :---: | :--- | :--- | :--- |
+| `TOYOTA_89560-BZxxx_AVANZA.xdf` | **2006–2021** | 9.8 KB | `7de0ad35ff80d6796906b9820357ef5b` | TunerPro Binary Definition Map |
+| `TOYOTA_AVANZA_AURIS_2016_1.3L_DUAL_VVTI_1NRFE_89663-52J01.bin` | **2016** | 736.0 KB | `ecfa3c713447b1b1229dfe9ebf40de4c` | Factory Binary Firmware Dump |
+| `TOYOTA_AVANZA_COROLLA_2015_1.3L_DUAL_VVTI_1NRFE_89663-02E73.bin` | **2015** | 992.0 KB | `01c750bb362506d8026022a952303b60` | Factory Binary Firmware Dump |
 
 ---
 

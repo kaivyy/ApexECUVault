@@ -21,18 +21,20 @@ Nama berkas yang tersimpan merefleksikan identitas perangkat keras (Hardware ID)
 > [!NOTE]
 > Mempertahankan kode dan nomor asli pabrikan pada penamaan berkas sangat krusial agar perangkat lunak kalibrasi (seperti **TunerPro**, **WinOLS**, atau **RomRaider**) dapat mengenali dan mencocokkan peta definisi (*definition maps*) secara otomatis tanpa merusak asosiasi header ECU.
 
+* **Rentang Tahun / Model Year**: 2000–2006
+
 ---
 
-## 2. Manifest Aset Berkas Fisik (100% Verified)
+## 2. Manifest Fisik Kalibrasi & Definisi Terverifikasi
 
-Berikut adalah daftar lengkap berkas fisik yang tersimpan secara lokal di direktori ini:
+Berikut adalah daftar lengkap berkas fisik yang tersimpan secara lokal di direktori ini dengan verifikasi Model Year (Tahun Produksi), ukuran, MD5 checksum, dan tipe platform:
 
-| Nama Berkas | Tipe / Format | Ukuran (Bytes) | Deskripsi Teknis & Identifikasi |
-| :--- | :--- | :--- | :--- |
-| `52_508a2lform.bin` | `.BIN` | `32,768` bytes | Binary Firmware / Calibration Dump |
-| `52_508galform.bin` | `.BIN` | `32,768` bytes | Binary Firmware / Calibration Dump |
-| `XDFoutA2LV3_hw0901_V3_Complete.xdf` | `.XDF` | `2,867,710` bytes | TunerPro Binary Definition Map |
-| `XDFoutBFMV3_hw0901_V3_Complete.xdf` | `.XDF` | `2,886,335` bytes | TunerPro Binary Definition Map |
+| Filename | Tahun / Model Year | Size | MD5 Checksum | Type / Target Platform |
+| :--- | :---: | :--- | :--- | :--- |
+| `52_508a2lform.bin` | **2000–2006** | 32.0 KB | `69d31cc53a6735aff71bec0399016e78` | Factory Binary Firmware Dump |
+| `52_508galform.bin` | **2000–2006** | 32.0 KB | `3054c929b62f349d11d2f221bdf5b46d` | Factory Binary Firmware Dump |
+| `XDFoutA2LV3_hw0901_V3_Complete.xdf` | **2000–2006** | 2.73 MB | `dbca7f43caaec9511ba7b35d682b28c2` | TunerPro Binary Definition Map |
+| `XDFoutBFMV3_hw0901_V3_Complete.xdf` | **2000–2006** | 2.75 MB | `4ebd6ba8ccc90163665e3845bb1c97a9` | TunerPro Binary Definition Map |
 
 ---
 

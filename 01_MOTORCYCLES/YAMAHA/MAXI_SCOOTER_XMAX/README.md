@@ -21,16 +21,18 @@ Nama berkas yang tersimpan merefleksikan identitas perangkat keras (Hardware ID)
 > [!NOTE]
 > Mempertahankan kode dan nomor asli pabrikan pada penamaan berkas sangat krusial agar perangkat lunak kalibrasi (seperti **TunerPro**, **WinOLS**, atau **RomRaider**) dapat mengenali dan mencocokkan peta definisi (*definition maps*) secara otomatis tanpa merusak asosiasi header ECU.
 
+* **Rentang Tahun / Model Year**: 2017–2026
+
 ---
 
-## 2. Manifest Aset Berkas Fisik (100% Verified)
+## 2. Manifest Fisik Kalibrasi & Definisi Terverifikasi
 
-Berikut adalah daftar lengkap berkas fisik yang tersimpan secara lokal di direktori ini:
+Berikut adalah daftar lengkap berkas fisik yang tersimpan secara lokal di direktori ini dengan verifikasi Model Year (Tahun Produksi), ukuran, MD5 checksum, dan tipe platform:
 
-| Nama Berkas | Tipe / Format | Ukuran (Bytes) | Deskripsi Teknis & Identifikasi |
-| :--- | :--- | :--- | :--- |
-| `GENERATIONAL_B5X-H591A-00_Yamaha_New_XMAX_250___300_Connected_Tech_MAX_2023_2026.xdf` | `.XDF` | `2,556` bytes | TunerPro Binary Definition Map |
-| `GENERATIONAL_B74-H591A-01_Yamaha_XMAX_250___300_Gen_1_2017_2022.xdf` | `.XDF` | `2,539` bytes | TunerPro Binary Definition Map |
+| Filename | Tahun / Model Year | Size | MD5 Checksum | Type / Target Platform |
+| :--- | :---: | :--- | :--- | :--- |
+| `GENERATIONAL_B5X-H591A-00_Yamaha_New_XMAX_250___300_Connected_Tech_MAX_2023_2026.xdf` | **2023–2026** | 2.5 KB | `40c906a54c7181c0e982c8eacf586738` | TunerPro Binary Definition Map |
+| `GENERATIONAL_B74-H591A-01_Yamaha_XMAX_250___300_Gen_1_2017_2022.xdf` | **2017–2022** | 2.5 KB | `9d7a78425411fb24672fd6b9b0442028` | TunerPro Binary Definition Map |
 
 ---
 

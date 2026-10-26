@@ -21,23 +21,25 @@ Nama berkas yang tersimpan merefleksikan identitas perangkat keras (Hardware ID)
 > [!NOTE]
 > Mempertahankan kode dan nomor asli pabrikan pada penamaan berkas sangat krusial agar perangkat lunak kalibrasi (seperti **TunerPro**, **WinOLS**, atau **RomRaider**) dapat mengenali dan mencocokkan peta definisi (*definition maps*) secara otomatis tanpa merusak asosiasi header ECU.
 
+* **Rentang Tahun / Model Year**: 2013–2023
+
 ---
 
-## 2. Manifest Aset Berkas Fisik (100% Verified)
+## 2. Manifest Fisik Kalibrasi & Definisi Terverifikasi
 
-Berikut adalah daftar lengkap berkas fisik yang tersimpan secara lokal di direktori ini:
+Berikut adalah daftar lengkap berkas fisik yang tersimpan secara lokal di direktori ini dengan verifikasi Model Year (Tahun Produksi), ukuran, MD5 checksum, dan tipe platform:
 
-| Nama Berkas | Tipe / Format | Ukuran (Bytes) | Deskripsi Teknis & Identifikasi |
-| :--- | :--- | :--- | :--- |
-| `38770-MGZ-A03.bin` | `.BIN` | `262,144` bytes | Honda Motorcycle Keihin ECU ROM `38770-MGZ` |
-| `38770-MGZ-C02.bin` | `.BIN` | `262,144` bytes | Honda Motorcycle Keihin ECU ROM `38770-MGZ` |
-| `38770-MGZ-C03.bin` | `.BIN` | `262,144` bytes | Honda Motorcycle Keihin ECU ROM `38770-MGZ` |
-| `38770-MGZ-D02.bin` | `.BIN` | `262,144` bytes | Honda Motorcycle Keihin ECU ROM `38770-MGZ` |
-| `38770-MGZ.xdf` | `.XDF` | `27,593` bytes | Honda Motorcycle Keihin ECU ROM `38770-MGZ` |
-| `38770-MJW-AQ1.bin` | `.BIN` | `262,144` bytes | Honda Motorcycle Keihin ECU ROM `38770-MJW` |
-| `38770-MJW-DR1.bin` | `.BIN` | `262,144` bytes | Honda Motorcycle Keihin ECU ROM `38770-MJW` |
-| `38770-MJW-T11.bin` | `.BIN` | `262,144` bytes | Honda Motorcycle Keihin ECU ROM `38770-MJW` |
-| `38770-MJW.xdf` | `.XDF` | `73,399` bytes | Honda Motorcycle Keihin ECU ROM `38770-MJW` |
+| Filename | Tahun / Model Year | Size | MD5 Checksum | Type / Target Platform |
+| :--- | :---: | :--- | :--- | :--- |
+| `38770-MGZ-A03.bin` | **2013–2023** | 256.0 KB | `f6a6d9cebc04702d2b2b6ea9e79285fb` | Factory Binary Firmware Dump |
+| `38770-MGZ-C02.bin` | **2013–2023** | 256.0 KB | `40e29ed018bf30a2f0d4c67a6111cbd4` | Factory Binary Firmware Dump |
+| `38770-MGZ-C03.bin` | **2013–2023** | 256.0 KB | `f6ecaefc0067babc704fa442e54d7184` | Factory Binary Firmware Dump |
+| `38770-MGZ-D02.bin` | **2013–2023** | 256.0 KB | `541fbc35987007aa9834cd070d71cab6` | Factory Binary Firmware Dump |
+| `38770-MGZ.xdf` | **2013–2023** | 26.9 KB | `e35c3132febb369200d7a54bbe120e87` | TunerPro Binary Definition Map |
+| `38770-MJW-AQ1.bin` | **2013–2023** | 256.0 KB | `5b69fdd34ab97f0546e87b12a2613242` | Factory Binary Firmware Dump |
+| `38770-MJW-DR1.bin` | **2013–2023** | 256.0 KB | `1827b58adfcdb7cf7fb89a4b07ebae41` | Factory Binary Firmware Dump |
+| `38770-MJW-T11.bin` | **2013–2023** | 256.0 KB | `16d661c881f6d4694eedb0aab93cfab3` | Factory Binary Firmware Dump |
+| `38770-MJW.xdf` | **2013–2023** | 71.7 KB | `8e5d477d5a174cc1f394ccbadb209698` | TunerPro Binary Definition Map |
 
 ---
 

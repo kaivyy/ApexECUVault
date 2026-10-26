@@ -21,17 +21,19 @@ Nama berkas yang tersimpan merefleksikan identitas perangkat keras (Hardware ID)
 > [!NOTE]
 > Mempertahankan kode dan nomor asli pabrikan pada penamaan berkas sangat krusial agar perangkat lunak kalibrasi (seperti **TunerPro**, **WinOLS**, atau **RomRaider**) dapat mengenali dan mencocokkan peta definisi (*definition maps*) secara otomatis tanpa merusak asosiasi header ECU.
 
+* **Rentang Tahun / Model Year**: 1992–1999
+
 ---
 
-## 2. Manifest Aset Berkas Fisik (100% Verified)
+## 2. Manifest Fisik Kalibrasi & Definisi Terverifikasi
 
-Berikut adalah daftar lengkap berkas fisik yang tersimpan secara lokal di direktori ini:
+Berikut adalah daftar lengkap berkas fisik yang tersimpan secara lokal di direktori ini dengan verifikasi Model Year (Tahun Produksi), ukuran, MD5 checksum, dan tipe platform:
 
-| Nama Berkas | Tipe / Format | Ukuran (Bytes) | Deskripsi Teknis & Identifikasi |
-| :--- | :--- | :--- | :--- |
-| `BMW E36 325i 192HP 0261200413 357623.bin` | `.BIN` | `65,536` bytes | Bosch Motronic Hardware ID `0261200413` |
-| `BMW E36 M3 0261200506 357965.bin` | `.BIN` | `65,536` bytes | Bosch Motronic Hardware ID `0261200506` |
-| `M3.3.1 ECU Definitions.xml` | `.XML` | `41,688` bytes | RomRaider / EcuFlash XML Definition |
+| Filename | Tahun / Model Year | Size | MD5 Checksum | Type / Target Platform |
+| :--- | :---: | :--- | :--- | :--- |
+| `BMW E36 325i 192HP 0261200413 357623.bin` | **1992–1999** | 64.0 KB | `4e7945b096b224ba1783a41104ecdc60` | Factory Binary Firmware Dump |
+| `BMW E36 M3 0261200506 357965.bin` | **1992–1999** | 64.0 KB | `944d7641c3bd2cfd26c2dc355b85a682` | Factory Binary Firmware Dump |
+| `M3.3.1 ECU Definitions.xml` | **1992–1999** | 40.7 KB | `8296b13007da339592685b9a5f9d3ccd` | ECU / ASAP2 Calibration Map Definition |
 
 ---
 

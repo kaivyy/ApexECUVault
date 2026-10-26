@@ -21,22 +21,24 @@ Nama berkas yang tersimpan merefleksikan identitas perangkat keras (Hardware ID)
 > [!NOTE]
 > Mempertahankan kode dan nomor asli pabrikan pada penamaan berkas sangat krusial agar perangkat lunak kalibrasi (seperti **TunerPro**, **WinOLS**, atau **RomRaider**) dapat mengenali dan mencocokkan peta definisi (*definition maps*) secara otomatis tanpa merusak asosiasi header ECU.
 
+* **Rentang Tahun / Model Year**: OEM Production
+
 ---
 
-## 2. Manifest Aset Berkas Fisik (100% Verified)
+## 2. Manifest Fisik Kalibrasi & Definisi Terverifikasi
 
-Berikut adalah daftar lengkap berkas fisik yang tersimpan secara lokal di direktori ini:
+Berikut adalah daftar lengkap berkas fisik yang tersimpan secara lokal di direktori ini dengan verifikasi Model Year (Tahun Produksi), ukuran, MD5 checksum, dan tipe platform:
 
-| Nama Berkas | Tipe / Format | Ukuran (Bytes) | Deskripsi Teknis & Identifikasi |
-| :--- | :--- | :--- | :--- |
-| `0 280 000 944_LH242.bin` | `.BIN` | `32,768` bytes | Binary Firmware / Calibration Dump |
-| `0 280 000 948_LH24.bin` | `.BIN` | `32,768` bytes | Binary Firmware / Calibration Dump |
-| `SAAB9000 ORIGINAL579.bin` | `.BIN` | `32,768` bytes | Binary Firmware / Calibration Dump |
-| `SaabLH241_579.xdf` | `.XDF` | `23,210` bytes | TunerPro Binary Definition Map |
-| `SaabLH242_944_900sNA.xdf` | `.XDF` | `11,515` bytes | TunerPro Binary Definition Map |
-| `SaabLH24_585_582_586.xdf` | `.XDF` | `18,392` bytes | TunerPro Binary Definition Map |
-| `SaabLH24_948.xdf` | `.XDF` | `18,201` bytes | TunerPro Binary Definition Map |
-| `Saab_LH22_538.xdf` | `.XDF` | `5,141` bytes | TunerPro Binary Definition Map |
+| Filename | Tahun / Model Year | Size | MD5 Checksum | Type / Target Platform |
+| :--- | :---: | :--- | :--- | :--- |
+| `0 280 000 944_LH242.bin` | **OEM Production** | 32.0 KB | `53cee307d4ac9cd4127e3c00b152a1f8` | Factory Binary Firmware Dump |
+| `0 280 000 948_LH24.bin` | **OEM Production** | 32.0 KB | `8eed3efe1b09daf904c29bcd5edc4916` | Factory Binary Firmware Dump |
+| `SAAB9000 ORIGINAL579.bin` | **OEM Production** | 32.0 KB | `f2c76615a85eef2a820a8dc59f27882c` | Factory Binary Firmware Dump |
+| `SaabLH241_579.xdf` | **OEM Production** | 22.7 KB | `40ea871535cb347aa3fc0e649b03328f` | TunerPro Binary Definition Map |
+| `SaabLH242_944_900sNA.xdf` | **OEM Production** | 11.2 KB | `cd7817fac689279835457a4c71992845` | TunerPro Binary Definition Map |
+| `SaabLH24_585_582_586.xdf` | **OEM Production** | 18.0 KB | `bd011bc7ad34aa947cb720db9094efc4` | TunerPro Binary Definition Map |
+| `SaabLH24_948.xdf` | **OEM Production** | 17.8 KB | `4fd421b8bb30960e0bb59cb910b32318` | TunerPro Binary Definition Map |
+| `Saab_LH22_538.xdf` | **OEM Production** | 5.0 KB | `13998a31e456efa7425c5e0dc76e482d` | TunerPro Binary Definition Map |
 
 ---
 

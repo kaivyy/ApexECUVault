@@ -24,19 +24,21 @@ Nama berkas yang tersimpan merefleksikan identitas perangkat keras (Hardware ID)
 > [!NOTE]
 > Mempertahankan kode dan nomor asli pabrikan pada penamaan berkas sangat krusial agar perangkat lunak kalibrasi (seperti **TunerPro**, **WinOLS**, atau **BusaECUeditor**) dapat mengenali dan mencocokkan peta definisi (*definition maps*) secara otomatis tanpa merusak asosiasi header ECU.
 
+* **Rentang Tahun / Model Year**: 2008–2010
+
 ---
 
-## 2. Manifest Aset Berkas Fisik (100% Verified)
+## 2. Manifest Fisik Kalibrasi & Definisi Terverifikasi
 
-Berikut adalah daftar lengkap berkas fisik yang tersimpan secara lokal di direktori ini:
+Berikut adalah daftar lengkap berkas fisik yang tersimpan secara lokal di direktori ini dengan verifikasi Model Year (Tahun Produksi), ukuran, MD5 checksum, dan tipe platform:
 
-| Nama Berkas | Tipe / Format | Ukuran (Bytes) | Deskripsi Teknis & Identifikasi |
-| :--- | :--- | :--- | :--- |
-| `G750K9.bin` | `Original OEM Binary Flash Dump` | 1,048,576 | Berkas biner firmware resmi pabrikan (1,048,576 bytes) hasil hardware read murni (Zero-Synthetic) |
-| `G750K9G.bin` | `Original OEM Binary Flash Dump` | 1,048,576 | Berkas biner firmware resmi pabrikan (1,048,576 bytes) hasil hardware read murni (Zero-Synthetic) |
-| `GENERATIONAL_32920-01H00_Suzuki_GSX_R600_K6_K7_2006_2007_125PS.xdf` | `TunerPro Definition Map` | 1,812 | Definisi peta parameter kalibrasi TunerPro (1,812 bytes) untuk konversi skala dan offset tabel ECU |
-| `GENERATIONAL_32920-14J00_Suzuki_GSX_R600_L1_L9_Showa_BPF_2011_2020_126PS.xdf` | `TunerPro Definition Map` | 1,822 | Definisi peta parameter kalibrasi TunerPro (1,822 bytes) untuk konversi skala dan offset tabel ECU |
-| `GENERATIONAL_32920-14J50_Suzuki_GSX_R750_L1_L9_2011_2020_150PS.xdf` | `TunerPro Definition Map` | 1,812 | Definisi peta parameter kalibrasi TunerPro (1,812 bytes) untuk konversi skala dan offset tabel ECU |
+| Filename | Tahun / Model Year | Size | MD5 Checksum | Type / Target Platform |
+| :--- | :---: | :--- | :--- | :--- |
+| `G750K9.bin` | **2008–2010** | 1.00 MB | `16240ffff6d744307f3087c33d472172` | Factory Binary Firmware Dump |
+| `G750K9G.bin` | **2008–2010** | 1.00 MB | `5bf7e3c900851a94288489bbd8eee696` | Factory Binary Firmware Dump |
+| `GENERATIONAL_32920-01H00_Suzuki_GSX_R600_K6_K7_2006_2007_125PS.xdf` | **2006–2007** | 1.8 KB | `2d1e8330b5a02497dd6fd634ab1cc21d` | TunerPro Binary Definition Map |
+| `GENERATIONAL_32920-14J00_Suzuki_GSX_R600_L1_L9_Showa_BPF_2011_2020_126PS.xdf` | **2011–2020** | 1.8 KB | `4eddf667010876f481b966a79fa9321d` | TunerPro Binary Definition Map |
+| `GENERATIONAL_32920-14J50_Suzuki_GSX_R750_L1_L9_2011_2020_150PS.xdf` | **2011–2020** | 1.8 KB | `833eb20d7488a7cf87528d5baea75111` | TunerPro Binary Definition Map |
 
 ---
 

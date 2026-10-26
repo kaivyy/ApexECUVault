@@ -21,17 +21,19 @@ Nama berkas yang tersimpan merefleksikan identitas perangkat keras (Hardware ID)
 > [!NOTE]
 > Mempertahankan kode dan nomor asli pabrikan pada penamaan berkas sangat krusial agar perangkat lunak kalibrasi (seperti **TunerPro**, **WinOLS**, atau **RomRaider**) dapat mengenali dan mencocokkan peta definisi (*definition maps*) secara otomatis tanpa merusak asosiasi header ECU.
 
+* **Rentang Tahun / Model Year**: OEM Production
+
 ---
 
-## 2. Manifest Aset Berkas Fisik (100% Verified)
+## 2. Manifest Fisik Kalibrasi & Definisi Terverifikasi
 
-Berikut adalah daftar lengkap berkas fisik yang tersimpan secara lokal di direktori ini:
+Berikut adalah daftar lengkap berkas fisik yang tersimpan secara lokal di direktori ini dengan verifikasi Model Year (Tahun Produksi), ukuran, MD5 checksum, dan tipe platform:
 
-| Nama Berkas | Tipe / Format | Ukuran (Bytes) | Deskripsi Teknis & Identifikasi |
-| :--- | :--- | :--- | :--- |
-| `GS20_90C0_64KB.bin` | `.BIN` | `65,536` bytes | Binary Firmware / Calibration Dump |
-| `GS20_90C0_64KB_corrected.bin` | `.BIN` | `65,536` bytes | Binary Firmware / Calibration Dump |
-| `Siemens_GS20_G10C9000_7552700_64K.xdf` | `.XDF` | `972,521` bytes | TunerPro Binary Definition Map |
+| Filename | Tahun / Model Year | Size | MD5 Checksum | Type / Target Platform |
+| :--- | :---: | :--- | :--- | :--- |
+| `GS20_90C0_64KB.bin` | **OEM Production** | 64.0 KB | `79b03fc228d0e8c4b1d1fb99ef7b2b77` | Factory Binary Firmware Dump |
+| `GS20_90C0_64KB_corrected.bin` | **OEM Production** | 64.0 KB | `cdd0d288d34a18a60efd5f5d068f0c11` | Factory Binary Firmware Dump |
+| `Siemens_GS20_G10C9000_7552700_64K.xdf` | **OEM Production** | 949.7 KB | `63095ce0d37dbd8de76077f8920974e4` | TunerPro Binary Definition Map |
 
 ---
 

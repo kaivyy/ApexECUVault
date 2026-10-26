@@ -21,16 +21,18 @@ Nama berkas yang tersimpan merefleksikan identitas perangkat keras (Hardware ID)
 > [!NOTE]
 > Mempertahankan kode dan nomor asli pabrikan pada penamaan berkas sangat krusial agar perangkat lunak kalibrasi (seperti **TunerPro**, **WinOLS**, atau **RomRaider**) dapat mengenali dan mencocokkan peta definisi (*definition maps*) secara otomatis tanpa merusak asosiasi header ECU.
 
+* **Rentang Tahun / Model Year**: 2017–2024
+
 ---
 
-## 2. Manifest Aset Berkas Fisik (100% Verified)
+## 2. Manifest Fisik Kalibrasi & Definisi Terverifikasi
 
-Berikut adalah daftar lengkap berkas fisik yang tersimpan secara lokal di direktori ini:
+Berikut adalah daftar lengkap berkas fisik yang tersimpan secara lokal di direktori ini dengan verifikasi Model Year (Tahun Produksi), ukuran, MD5 checksum, dan tipe platform:
 
-| Nama Berkas | Tipe / Format | Ukuran (Bytes) | Deskripsi Teknis & Identifikasi |
-| :--- | :--- | :--- | :--- |
-| `GENERATIONAL_32920-23K20_Suzuki_GSX_R150_Keyless_Ignition_2017_2025.xdf` | `.XDF` | `2,545` bytes | TunerPro Binary Definition Map |
-| `SUZUKI_32920-23K10_Suzuki_GSX-R150___GSX-S150_(23K10).xdf` | `.XDF` | `7,589` bytes | TunerPro Binary Definition Map |
+| Filename | Tahun / Model Year | Size | MD5 Checksum | Type / Target Platform |
+| :--- | :---: | :--- | :--- | :--- |
+| `GENERATIONAL_32920-23K20_Suzuki_GSX_R150_Keyless_Ignition_2017_2025.xdf` | **2017–2025** | 2.5 KB | `01603fdc66c6dee499d179f26545710f` | TunerPro Binary Definition Map |
+| `SUZUKI_32920-23K10_Suzuki_GSX-R150___GSX-S150_(23K10).xdf` | **2017–2024** | 7.4 KB | `6f256f01b9a3b8aee1d8e4a3fd4c7861` | TunerPro Binary Definition Map |
 
 ---
 

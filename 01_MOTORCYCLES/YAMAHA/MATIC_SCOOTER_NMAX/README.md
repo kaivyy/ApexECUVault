@@ -21,17 +21,19 @@ Nama berkas yang tersimpan merefleksikan identitas perangkat keras (Hardware ID)
 > [!NOTE]
 > Mempertahankan kode dan nomor asli pabrikan pada penamaan berkas sangat krusial agar perangkat lunak kalibrasi (seperti **TunerPro**, **WinOLS**, atau **RomRaider**) dapat mengenali dan mencocokkan peta definisi (*definition maps*) secara otomatis tanpa merusak asosiasi header ECU.
 
+* **Rentang Tahun / Model Year**: 2015–2024
+
 ---
 
-## 2. Manifest Aset Berkas Fisik (100% Verified)
+## 2. Manifest Fisik Kalibrasi & Definisi Terverifikasi
 
-Berikut adalah daftar lengkap berkas fisik yang tersimpan secara lokal di direktori ini:
+Berikut adalah daftar lengkap berkas fisik yang tersimpan secara lokal di direktori ini dengan verifikasi Model Year (Tahun Produksi), ukuran, MD5 checksum, dan tipe platform:
 
-| Nama Berkas | Tipe / Format | Ukuran (Bytes) | Deskripsi Teknis & Identifikasi |
-| :--- | :--- | :--- | :--- |
-| `GENERATIONAL_BLS-H594A-00_Yamaha_NMAX_155_Gen_3_TURBO___Tech_MAX_YECVT_(2024-2026).xdf` | `.XDF` | `5,609` bytes | TunerPro Binary Definition Map |
-| `YAMAHA_2DP-H591A-00_Yamaha_NMAX_155_Old_(2DP).xdf` | `.XDF` | `11,877` bytes | TunerPro Binary Definition Map |
-| `YAMAHA_B6H-H594A-00_Yamaha_All_New_NMAX_155_Connected_(B6H).xdf` | `.XDF` | `11,890` bytes | TunerPro Binary Definition Map |
+| Filename | Tahun / Model Year | Size | MD5 Checksum | Type / Target Platform |
+| :--- | :---: | :--- | :--- | :--- |
+| `GENERATIONAL_BLS-H594A-00_Yamaha_NMAX_155_Gen_3_TURBO___Tech_MAX_YECVT_(2024-2026).xdf` | **2024–2026** | 5.5 KB | `557293c736ce539b7094c40d5adc57ac` | TunerPro Binary Definition Map |
+| `YAMAHA_2DP-H591A-00_Yamaha_NMAX_155_Old_(2DP).xdf` | **2015–2024** | 11.6 KB | `adf3fab94a1ed95691e608057c749222` | TunerPro Binary Definition Map |
+| `YAMAHA_B6H-H594A-00_Yamaha_All_New_NMAX_155_Connected_(B6H).xdf` | **2020–2024** | 11.6 KB | `9dcc715d16a12074391e86f68c10175a` | TunerPro Binary Definition Map |
 
 ---
 

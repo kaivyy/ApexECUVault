@@ -21,19 +21,21 @@ Nama berkas yang tersimpan merefleksikan identitas perangkat keras (Hardware ID)
 > [!NOTE]
 > Mempertahankan kode dan nomor asli pabrikan pada penamaan berkas sangat krusial agar perangkat lunak kalibrasi (seperti **TunerPro**, **WinOLS**, atau **RomRaider**) dapat mengenali dan mencocokkan peta definisi (*definition maps*) secara otomatis tanpa merusak asosiasi header ECU.
 
+* **Rentang Tahun / Model Year**: 2006–2024
+
 ---
 
-## 2. Manifest Aset Berkas Fisik (100% Verified)
+## 2. Manifest Fisik Kalibrasi & Definisi Terverifikasi
 
-Berikut adalah daftar lengkap berkas fisik yang tersimpan secara lokal di direktori ini:
+Berikut adalah daftar lengkap berkas fisik yang tersimpan secara lokal di direktori ini dengan verifikasi Model Year (Tahun Produksi), ukuran, MD5 checksum, dan tipe platform:
 
-| Nama Berkas | Tipe / Format | Ukuran (Bytes) | Deskripsi Teknis & Identifikasi |
-| :--- | :--- | :--- | :--- |
-| `GENERATIONAL_1RC-8591A-00_Yamaha_MT_09___FZ_09_Gen_1_2014_2016_115PS.xdf` | `.XDF` | `1,818` bytes | TunerPro Binary Definition Map |
-| `GENERATIONAL_1WS-8591A-00_Yamaha_MT_07___Tenere_700___XSR_700_2014_2020_74.8PS.xdf` | `.XDF` | `1,828` bytes | TunerPro Binary Definition Map |
-| `GENERATIONAL_2CR-8591A-00_Yamaha_YZF_R1_Crossplane_CP4_2015_2019_200PS.xdf` | `.XDF` | `1,820` bytes | TunerPro Binary Definition Map |
-| `GENERATIONAL_B7N-8591A-00_Yamaha_All_New_MT_09___SP_Gen_3_890cc_2021_2026_119PS.xdf` | `.XDF` | `1,829` bytes | TunerPro Binary Definition Map |
-| `GENERATIONAL_BN6-8591A-00_Yamaha_YZF_R6_2017_2024_118.4PS.xdf` | `.XDF` | `1,807` bytes | TunerPro Binary Definition Map |
+| Filename | Tahun / Model Year | Size | MD5 Checksum | Type / Target Platform |
+| :--- | :---: | :--- | :--- | :--- |
+| `GENERATIONAL_1RC-8591A-00_Yamaha_MT_09___FZ_09_Gen_1_2014_2016_115PS.xdf` | **2014–2016** | 1.8 KB | `8bb89fce57fff42dfa4d164ed09d8713` | TunerPro Binary Definition Map |
+| `GENERATIONAL_1WS-8591A-00_Yamaha_MT_07___Tenere_700___XSR_700_2014_2020_74.8PS.xdf` | **2014–2020** | 1.8 KB | `b9ac9ff957a182b90b8d06daed00e57c` | TunerPro Binary Definition Map |
+| `GENERATIONAL_2CR-8591A-00_Yamaha_YZF_R1_Crossplane_CP4_2015_2019_200PS.xdf` | **2015–2019** | 1.8 KB | `e9d355dfe093305d9e86be137b1dc4a7` | TunerPro Binary Definition Map |
+| `GENERATIONAL_B7N-8591A-00_Yamaha_All_New_MT_09___SP_Gen_3_890cc_2021_2026_119PS.xdf` | **2021–2026** | 1.8 KB | `bfc0621c127aa6f1a0bcf035647e7220` | TunerPro Binary Definition Map |
+| `GENERATIONAL_BN6-8591A-00_Yamaha_YZF_R6_2017_2024_118.4PS.xdf` | **2017–2024** | 1.8 KB | `7ecfe958067f650c519bb4063395e900` | TunerPro Binary Definition Map |
 
 ---
 

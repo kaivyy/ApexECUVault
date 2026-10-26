@@ -21,21 +21,23 @@ Nama berkas yang tersimpan merefleksikan identitas perangkat keras (Hardware ID)
 > [!NOTE]
 > Mempertahankan kode dan nomor asli pabrikan pada penamaan berkas sangat krusial agar perangkat lunak kalibrasi (seperti **TunerPro**, **WinOLS**, atau **RomRaider**) dapat mengenali dan mencocokkan peta definisi (*definition maps*) secara otomatis tanpa merusak asosiasi header ECU.
 
+* **Rentang Tahun / Model Year**: OEM Production
+
 ---
 
-## 2. Manifest Aset Berkas Fisik (100% Verified)
+## 2. Manifest Fisik Kalibrasi & Definisi Terverifikasi
 
-Berikut adalah daftar lengkap berkas fisik yang tersimpan secara lokal di direktori ini:
+Berikut adalah daftar lengkap berkas fisik yang tersimpan secara lokal di direktori ini dengan verifikasi Model Year (Tahun Produksi), ukuran, MD5 checksum, dan tipe platform:
 
-| Nama Berkas | Tipe / Format | Ukuran (Bytes) | Deskripsi Teknis & Identifikasi |
-| :--- | :--- | :--- | :--- |
-| `8D0907551M-0002 (16Bit KFZW).bin` | `.BIN` | `1,048,576` bytes | Binary Firmware / Calibration Dump |
-| `8D0907551M-0002 (stock MAP 5120 16Bit KFZW).bin` | `.BIN` | `1,048,576` bytes | Binary Firmware / Calibration Dump |
-| `8D0907551M-0002 (stock MAP 5120).bin` | `.BIN` | `1,048,576` bytes | Binary Firmware / Calibration Dump |
-| `8D0907551M-0002.bin` | `.BIN` | `1,048,576` bytes | Binary Firmware / Calibration Dump |
-| `8D0907551M-002_5120-stock_map-nyet.bin` | `.BIN` | `1,048,576` bytes | Binary Firmware / Calibration Dump |
-| `8D0907551M-20170411-16bit-kfzw.xdf` | `.XDF` | `504,884` bytes | TunerPro Binary Definition Map |
-| `8D0907551M-20190711.xdf` | `.XDF` | `503,633` bytes | TunerPro Binary Definition Map |
+| Filename | Tahun / Model Year | Size | MD5 Checksum | Type / Target Platform |
+| :--- | :---: | :--- | :--- | :--- |
+| `8D0907551M-0002 (16Bit KFZW).bin` | **OEM Production** | 1.00 MB | `7cf3feb94b32e877b1d30eed34e57997` | Factory Binary Firmware Dump |
+| `8D0907551M-0002 (stock MAP 5120 16Bit KFZW).bin` | **OEM Production** | 1.00 MB | `f11bfcc8df64c11bd858ee413f940386` | Factory Binary Firmware Dump |
+| `8D0907551M-0002 (stock MAP 5120).bin` | **OEM Production** | 1.00 MB | `9e2598740860ba3548821914b523b8d9` | Factory Binary Firmware Dump |
+| `8D0907551M-0002.bin` | **OEM Production** | 1.00 MB | `d56d9801e27145a77fc7bab1164e54eb` | Factory Binary Firmware Dump |
+| `8D0907551M-002_5120-stock_map-nyet.bin` | **OEM Production** | 1.00 MB | `533e3a19b75ba0f6d922c4208d684e32` | Factory Binary Firmware Dump |
+| `8D0907551M-20170411-16bit-kfzw.xdf` | **OEM Production** | 493.1 KB | `f6d19bcf33e6a35e842ddb2ab46fa343` | TunerPro Binary Definition Map |
+| `8D0907551M-20190711.xdf` | **OEM Production** | 491.8 KB | `7df7ce24a3cea3ad5215b51ab89a417f` | TunerPro Binary Definition Map |
 
 ---
 

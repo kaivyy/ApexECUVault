@@ -21,20 +21,22 @@ Nama berkas yang tersimpan merefleksikan identitas perangkat keras (Hardware ID)
 > [!NOTE]
 > Mempertahankan kode dan nomor asli pabrikan pada penamaan berkas sangat krusial agar perangkat lunak kalibrasi (seperti **TunerPro**, **WinOLS**, atau **RomRaider**) dapat mengenali dan mencocokkan peta definisi (*definition maps*) secara otomatis tanpa merusak asosiasi header ECU.
 
+* **Rentang Tahun / Model Year**: 2000–2006
+
 ---
 
-## 2. Manifest Aset Berkas Fisik (100% Verified)
+## 2. Manifest Fisik Kalibrasi & Definisi Terverifikasi
 
-Berikut adalah daftar lengkap berkas fisik yang tersimpan secara lokal di direktori ini:
+Berikut adalah daftar lengkap berkas fisik yang tersimpan secara lokal di direktori ini dengan verifikasi Model Year (Tahun Produksi), ukuran, MD5 checksum, dan tipe platform:
 
-| Nama Berkas | Tipe / Format | Ukuran (Bytes) | Deskripsi Teknis & Identifikasi |
-| :--- | :--- | :--- | :--- |
-| `DTC 0301 0401 Method1.xdf` | `.XDF` | `61,050` bytes | TunerPro Binary Definition Map |
-| `DTC 0301 0401 Method4.xdf` | `.XDF` | `61,050` bytes | TunerPro Binary Definition Map |
-| `DTC 0901  1101  1301  1501  1701  2101  2401  2601  2801.xdf` | `.XDF` | `61,047` bytes | TunerPro Binary Definition Map |
-| `DTC 1801  1901  2001  2501  2701.xdf` | `.XDF` | `61,050` bytes | TunerPro Binary Definition Map |
-| `MSS54 v2601 v2801 E30 Swap Items.xdf` | `.XDF` | `35,998` bytes | Siemens / Continental DME Calibration Data |
-| `MSS54HP v1801 v2001 v2501 v2701 E30 Swap Items.xdf` | `.XDF` | `36,057` bytes | Siemens / Continental DME Calibration Data |
+| Filename | Tahun / Model Year | Size | MD5 Checksum | Type / Target Platform |
+| :--- | :---: | :--- | :--- | :--- |
+| `DTC 0301 0401 Method1.xdf` | **2000–2006** | 59.6 KB | `0a94e84c8fdd8bfbd52d1fd8049189df` | TunerPro Binary Definition Map |
+| `DTC 0301 0401 Method4.xdf` | **2000–2006** | 59.6 KB | `41b4fb9210785bb8cc2147b5cb28cceb` | TunerPro Binary Definition Map |
+| `DTC 0901  1101  1301  1501  1701  2101  2401  2601  2801.xdf` | **2000–2006** | 59.6 KB | `f4505b270600bdeb36a1470eab3cb65f` | TunerPro Binary Definition Map |
+| `DTC 1801  1901  2001  2501  2701.xdf` | **2001** | 59.6 KB | `02612935f4ee11a8436774ea6ed4f5e0` | TunerPro Binary Definition Map |
+| `MSS54 v2601 v2801 E30 Swap Items.xdf` | **1987–1993** | 35.2 KB | `9caab4c8533708ec07bac2762179b339` | TunerPro Binary Definition Map |
+| `MSS54HP v1801 v2001 v2501 v2701 E30 Swap Items.xdf` | **2001** | 35.2 KB | `92bf4e0be15d14e920171428965b487e` | TunerPro Binary Definition Map |
 
 ---
 

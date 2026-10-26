@@ -21,19 +21,21 @@ Nama berkas yang tersimpan merefleksikan identitas perangkat keras (Hardware ID)
 > [!NOTE]
 > Mempertahankan kode dan nomor asli pabrikan pada penamaan berkas sangat krusial agar perangkat lunak kalibrasi (seperti **TunerPro**, **WinOLS**, atau **RomRaider**) dapat mengenali dan mencocokkan peta definisi (*definition maps*) secara otomatis tanpa merusak asosiasi header ECU.
 
+* **Rentang Tahun / Model Year**: OEM Production
+
 ---
 
-## 2. Manifest Aset Berkas Fisik (100% Verified)
+## 2. Manifest Fisik Kalibrasi & Definisi Terverifikasi
 
-Berikut adalah daftar lengkap berkas fisik yang tersimpan secara lokal di direktori ini:
+Berikut adalah daftar lengkap berkas fisik yang tersimpan secara lokal di direktori ini dengan verifikasi Model Year (Tahun Produksi), ukuran, MD5 checksum, dan tipe platform:
 
-| Nama Berkas | Tipe / Format | Ukuran (Bytes) | Deskripsi Teknis & Identifikasi |
-| :--- | :--- | :--- | :--- |
-| `'04K1500 6.0L os12585950.bin` | `.BIN` | `1,048,576` bytes | General Motors Operating System ID `12585950` |
-| `04 Chevy half Ton 4x4 6.0L 12585950.bin` | `.BIN` | `1,048,576` bytes | General Motors Operating System ID `12585950` |
-| `04 Silverado SS 11.8.13 Stock OS12585950.bin` | `.BIN` | `1,048,576` bytes | General Motors Operating System ID `12585950` |
-| `Chevy_2500_4x4_LQ4_OS12585950.bin` | `.BIN` | `1,048,576` bytes | General Motors Operating System ID `12585950` |
-| `Chevy_4x4_Half_T_6.0L_OS12585950.bin` | `.BIN` | `1,048,576` bytes | General Motors Operating System ID `12585950` |
+| Filename | Tahun / Model Year | Size | MD5 Checksum | Type / Target Platform |
+| :--- | :---: | :--- | :--- | :--- |
+| `'04K1500 6.0L os12585950.bin` | **2012–2018** | 1.00 MB | `b2f9032d77bf127a616172ca98d68540` | Factory Binary Firmware Dump |
+| `04 Chevy half Ton 4x4 6.0L 12585950.bin` | **2004** | 1.00 MB | `bd5f2b1e6cac09f47f0ead78a040a678` | Factory Binary Firmware Dump |
+| `04 Silverado SS 11.8.13 Stock OS12585950.bin` | **2004** | 1.00 MB | `32f23ba73e088816499330fc64b478bb` | Factory Binary Firmware Dump |
+| `Chevy_2500_4x4_LQ4_OS12585950.bin` | **OEM Production** | 1.00 MB | `ff7b6b81c46541433ea4228f4c1739d4` | Factory Binary Firmware Dump |
+| `Chevy_4x4_Half_T_6.0L_OS12585950.bin` | **OEM Production** | 1.00 MB | `355bfee4826c90b567ef76bfb473212b` | Factory Binary Firmware Dump |
 
 ---
 

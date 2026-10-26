@@ -21,19 +21,21 @@ Nama berkas yang tersimpan merefleksikan identitas perangkat keras (Hardware ID)
 > [!NOTE]
 > Mempertahankan kode dan nomor asli pabrikan pada penamaan berkas sangat krusial agar perangkat lunak kalibrasi (seperti **TunerPro**, **WinOLS**, atau **RomRaider**) dapat mengenali dan mencocokkan peta definisi (*definition maps*) secara otomatis tanpa merusak asosiasi header ECU.
 
+* **Rentang Tahun / Model Year**: 2004–2024
+
 ---
 
-## 2. Manifest Aset Berkas Fisik (100% Verified)
+## 2. Manifest Fisik Kalibrasi & Definisi Terverifikasi
 
-Berikut adalah daftar lengkap berkas fisik yang tersimpan secara lokal di direktori ini:
+Berikut adalah daftar lengkap berkas fisik yang tersimpan secara lokal di direktori ini dengan verifikasi Model Year (Tahun Produksi), ukuran, MD5 checksum, dan tipe platform:
 
-| Nama Berkas | Tipe / Format | Ukuran (Bytes) | Deskripsi Teknis & Identifikasi |
-| :--- | :--- | :--- | :--- |
-| `GENERATIONAL_21175-0744_Kawasaki_Ninja_ZX_6R_636_Gen_4_2013_2018_131PS.xdf` | `.XDF` | `1,820` bytes | TunerPro Binary Definition Map |
-| `GENERATIONAL_21175-0822_Kawasaki_Ninja_ZX_10R_Gen_4_2011_2015_200PS.xdf` | `.XDF` | `1,817` bytes | TunerPro Binary Definition Map |
-| `GENERATIONAL_21175-1153_Kawasaki_Ninja_ZX_10R_Gen_5___RR_2016_2020_203PS.xdf` | `.XDF` | `1,822` bytes | TunerPro Binary Definition Map |
-| `GENERATIONAL_21175-1636_Kawasaki_All_New_Ninja_ZX_10R_Gen_6_Facelift_2021_2026_203PS.xdf` | `.XDF` | `1,834` bytes | TunerPro Binary Definition Map |
-| `KAWASAKI_21175-0920_Kawasaki_Ninja_ZX-6R_636_(ZX636R).xdf` | `.XDF` | `9,632` bytes | TunerPro Binary Definition Map |
+| Filename | Tahun / Model Year | Size | MD5 Checksum | Type / Target Platform |
+| :--- | :---: | :--- | :--- | :--- |
+| `GENERATIONAL_21175-0744_Kawasaki_Ninja_ZX_6R_636_Gen_4_2013_2018_131PS.xdf` | **2013–2018** | 1.8 KB | `f291a39d3eb61d748227374d31e5b2d2` | TunerPro Binary Definition Map |
+| `GENERATIONAL_21175-0822_Kawasaki_Ninja_ZX_10R_Gen_4_2011_2015_200PS.xdf` | **2011–2015** | 1.8 KB | `26a4dfff03d821d31b907ade6a970901` | TunerPro Binary Definition Map |
+| `GENERATIONAL_21175-1153_Kawasaki_Ninja_ZX_10R_Gen_5___RR_2016_2020_203PS.xdf` | **2016–2020** | 1.8 KB | `54af0a97867beb2ef09fbd7b2dc1ca3c` | TunerPro Binary Definition Map |
+| `GENERATIONAL_21175-1636_Kawasaki_All_New_Ninja_ZX_10R_Gen_6_Facelift_2021_2026_203PS.xdf` | **2021–2026** | 1.8 KB | `0b813e2e76028b21a7747eb2072dffee` | TunerPro Binary Definition Map |
+| `KAWASAKI_21175-0920_Kawasaki_Ninja_ZX-6R_636_(ZX636R).xdf` | **2004–2024** | 9.4 KB | `b1c61e9dafb3ba602a1234d3e80f6c3b` | TunerPro Binary Definition Map |
 
 ---
 

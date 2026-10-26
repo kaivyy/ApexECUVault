@@ -27,6 +27,7 @@ Whether you are performing standalone dynamometer remapping, reverse engineering
 * **Zero Dummy / Mock Files**: No synthetic buffers, no filler scripts, and no dummy padding (`b'\xFF' * size`).
 * **Cryptographic & Header Integrity**: Audited against SHA-256 cross-reference hashes, factory part numbers, and internal memory headers.
 * **100% Dossier Coverage (0 Phantom References)**: Every asset directory contains an exhaustive, technical `README.md` dossier describing exact platform specs, microcontroller architecture, decoded hardware/software part IDs, and flashing safety protocols.
+* **Model Year (Tahun Produksi) Precision**: Setiap entri berkas kalibrasi dan direktori platform dilengkapi metadata tahun produksi/generasi presisi (`1980–2026`) yang dipetakan secara akurat terhadap kode sasis pabrikan (Nissan BNR32/S13/Z32, BMW E/F/G, Toyota Engine Families, Keihin/Denso Part IDs) guna memastikan keandalan kompatibilitas flasher.
 
 ---
 

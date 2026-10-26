@@ -21,20 +21,27 @@ Nama berkas yang tersimpan merefleksikan identitas perangkat keras (Hardware ID)
 > [!NOTE]
 > Mempertahankan kode dan nomor asli pabrikan pada penamaan berkas sangat krusial agar perangkat lunak kalibrasi (seperti **TunerPro**, **WinOLS**, atau **RomRaider**) dapat mengenali dan mencocokkan peta definisi (*definition maps*) secara otomatis tanpa merusak asosiasi header ECU.
 
+* **Rentang Tahun / Model Year**: 2006–2019
+
 ---
 
-## 2. Manifest Aset Berkas Fisik (100% Verified)
+## 2. Manifest Fisik Kalibrasi & Definisi Terverifikasi
 
-Berikut adalah daftar lengkap berkas fisik yang tersimpan secara lokal di direktori ini:
+Berikut adalah daftar lengkap berkas fisik yang tersimpan secara lokal di direktori ini dengan verifikasi Model Year (Tahun Produksi), ukuran, MD5 checksum, dan tipe platform:
 
-| Nama Berkas | Tipe / Format | Ukuran (Bytes) | Deskripsi Teknis & Identifikasi |
-| :--- | :--- | :--- | :--- |
-| `TOYOTA_89663-52xxx_VIOS.xdf` | `.XDF` | `10,061` bytes | Toyota / Denso Factory Calibration ID `89663-52xxx` |
-| `TOYOTA_VIOS_YARIS_GEN2_2008_1.5L_1NZFE_MANUAL_89663-52E91.bin` | `.BIN` | `507,904` bytes | Toyota / Denso Factory Calibration ID `89663-52E91` |
-| `TOYOTA_VIOS_YARIS_GEN2_2009_1.5L_1NZFE_AUTO_89663-52F01.bin` | `.BIN` | `753,664` bytes | Toyota / Denso Factory Calibration ID `89663-52F01` |
-| `TOYOTA_VIOS_YARIS_GEN2_2010_1.5L_1NZFE_AUTO_89663-52F11.bin` | `.BIN` | `753,664` bytes | Toyota / Denso Factory Calibration ID `89663-52F11` |
-| `TOYOTA_VIOS_YARIS_GEN3_2014_1.5L_1NZFE_AUTO_89663-52D30.bin` | `.BIN` | `753,664` bytes | Toyota / Denso Factory Calibration ID `89663-52D30` |
-| `TOYOTA_YARIS_VIOS_1.3L_2SZFE_89663-52823.bin` | `.BIN` | `753,664` bytes | Toyota / Denso Factory Calibration ID `89663-52823` |
+| Filename | Tahun / Model Year | Size | MD5 Checksum | Type / Target Platform |
+| :--- | :---: | :--- | :--- | :--- |
+| `89663-52823.bin` | **2006–2016** | 736.0 KB | `58eb8851d161037aecc21a423593e560` | Factory Binary (Toyota Yaris 1.3 2SZFE) |
+| `89663-52D30.bin` | **2006–2016** | 736.0 KB | `c32b1805eb056aa93989bbe2f9b83641` | Factory Binary (Toyota Yaris 1.5 1NZFE) |
+| `89663-52E91.bin` | **2006–2016** | 496.0 KB | `3ec27ed7072bdfe5d8af8444e6e20439` | Factory Binary (Toyota Yaris 1.5 1NZFE) |
+| `89663-52F01.bin` | **2006–2016** | 736.0 KB | `9f6ea82eefc59cdbf38a4fb4095af37e` | Factory Binary (Toyota Yaris 1.5 1NZFE) |
+| `89663-52F11.bin` | **2006–2016** | 736.0 KB | `63bd0bc11779249583fd41e5d336a15a` | Factory Binary (Toyota Yaris 1.5 1NZFE) |
+| `TOYOTA_89663-52xxx_VIOS.xdf` | **2006–2019** | 9.8 KB | `9b770c086209f131f29661b69aa6890b` | TunerPro Binary Definition Map |
+| `TOYOTA_VIOS_YARIS_GEN2_2008_1.5L_1NZFE_MANUAL_89663-52E91.bin` | **2008** | 496.0 KB | `3ec27ed7072bdfe5d8af8444e6e20439` | Factory Binary Firmware Dump |
+| `TOYOTA_VIOS_YARIS_GEN2_2009_1.5L_1NZFE_AUTO_89663-52F01.bin` | **2009** | 736.0 KB | `9f6ea82eefc59cdbf38a4fb4095af37e` | Factory Binary Firmware Dump |
+| `TOYOTA_VIOS_YARIS_GEN2_2010_1.5L_1NZFE_AUTO_89663-52F11.bin` | **2010** | 736.0 KB | `63bd0bc11779249583fd41e5d336a15a` | Factory Binary Firmware Dump |
+| `TOYOTA_VIOS_YARIS_GEN3_2014_1.5L_1NZFE_AUTO_89663-52D30.bin` | **2014** | 736.0 KB | `c32b1805eb056aa93989bbe2f9b83641` | Factory Binary Firmware Dump |
+| `TOYOTA_YARIS_VIOS_1.3L_2SZFE_89663-52823.bin` | **2006–2019** | 736.0 KB | `58eb8851d161037aecc21a423593e560` | Factory Binary Firmware Dump |
 
 ---
 

@@ -21,18 +21,20 @@ Nama berkas yang tersimpan merefleksikan identitas perangkat keras (Hardware ID)
 > [!NOTE]
 > Mempertahankan kode dan nomor asli pabrikan pada penamaan berkas sangat krusial agar perangkat lunak kalibrasi (seperti **TunerPro**, **WinOLS**, atau **RomRaider**) dapat mengenali dan mencocokkan peta definisi (*definition maps*) secara otomatis tanpa merusak asosiasi header ECU.
 
+* **Rentang Tahun / Model Year**: 2005–2006
+
 ---
 
-## 2. Manifest Aset Berkas Fisik (100% Verified)
+## 2. Manifest Fisik Kalibrasi & Definisi Terverifikasi
 
-Berikut adalah daftar lengkap berkas fisik yang tersimpan secara lokal di direktori ini:
+Berikut adalah daftar lengkap berkas fisik yang tersimpan secara lokal di direktori ini dengan verifikasi Model Year (Tahun Produksi), ukuran, MD5 checksum, dan tipe platform:
 
-| Nama Berkas | Tipe / Format | Ukuran (Bytes) | Deskripsi Teknis & Identifikasi |
-| :--- | :--- | :--- | :--- |
-| `32920-41G00.bin` | `.BIN` | `262,144` bytes | Binary Firmware / Calibration Dump |
-| `32920-41G00.xdf` | `.XDF` | `237,225` bytes | TunerPro Binary Definition Map |
-| `STOCK_ORIGINAL_32920-41G00_Suzuki_GSXR1000_K5_K6_(2005-2006).bin` | `.BIN` | `262,144` bytes | Binary Firmware / Calibration Dump |
-| `STOCK_ORIGINAL_32920-41G00_Suzuki_GSXR1000_K5_K6_(2005-2006).xdf` | `.XDF` | `237,225` bytes | TunerPro Binary Definition Map |
+| Filename | Tahun / Model Year | Size | MD5 Checksum | Type / Target Platform |
+| :--- | :---: | :--- | :--- | :--- |
+| `32920-41G00.bin` | **2005–2006** | 256.0 KB | `4765d21a6cbdfd53b2a963bae584cd98` | Factory Binary Firmware Dump |
+| `32920-41G00.xdf` | **2005–2006** | 231.7 KB | `953e550e6ab6151e0c18a6a28f5e61a5` | TunerPro Binary Definition Map |
+| `STOCK_ORIGINAL_32920-41G00_Suzuki_GSXR1000_K5_K6_(2005-2006).bin` | **2005–2006** | 256.0 KB | `4765d21a6cbdfd53b2a963bae584cd98` | Factory Binary Firmware Dump |
+| `STOCK_ORIGINAL_32920-41G00_Suzuki_GSXR1000_K5_K6_(2005-2006).xdf` | **2005–2006** | 231.7 KB | `953e550e6ab6151e0c18a6a28f5e61a5` | TunerPro Binary Definition Map |
 
 ---
 

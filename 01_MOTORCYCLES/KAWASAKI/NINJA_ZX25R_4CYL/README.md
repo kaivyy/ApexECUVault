@@ -21,17 +21,19 @@ Nama berkas yang tersimpan merefleksikan identitas perangkat keras (Hardware ID)
 > [!NOTE]
 > Mempertahankan kode dan nomor asli pabrikan pada penamaan berkas sangat krusial agar perangkat lunak kalibrasi (seperti **TunerPro**, **WinOLS**, atau **RomRaider**) dapat mengenali dan mencocokkan peta definisi (*definition maps*) secara otomatis tanpa merusak asosiasi header ECU.
 
+* **Rentang Tahun / Model Year**: 2020–2026
+
 ---
 
-## 2. Manifest Aset Berkas Fisik (100% Verified)
+## 2. Manifest Fisik Kalibrasi & Definisi Terverifikasi
 
-Berikut adalah daftar lengkap berkas fisik yang tersimpan secara lokal di direktori ini:
+Berikut adalah daftar lengkap berkas fisik yang tersimpan secara lokal di direktori ini dengan verifikasi Model Year (Tahun Produksi), ukuran, MD5 checksum, dan tipe platform:
 
-| Nama Berkas | Tipe / Format | Ukuran (Bytes) | Deskripsi Teknis & Identifikasi |
-| :--- | :--- | :--- | :--- |
-| `GENERATIONAL_21175-1563_Kawasaki_Ninja_ZX_25R_Gen_1_2020_2022_51PS.xdf` | `.XDF` | `2,544` bytes | TunerPro Binary Definition Map |
-| `GENERATIONAL_21175-1798_Kawasaki_Ninja_ZX_25RR___SE_Gen_2_TFT_2023_2026.xdf` | `.XDF` | `2,549` bytes | TunerPro Binary Definition Map |
-| `KAWASAKI_21175-1560_Kawasaki_Ninja_ZX-25R_4-Cylinder_(ZX250E).xdf` | `.XDF` | `9,643` bytes | TunerPro Binary Definition Map |
+| Filename | Tahun / Model Year | Size | MD5 Checksum | Type / Target Platform |
+| :--- | :---: | :--- | :--- | :--- |
+| `GENERATIONAL_21175-1563_Kawasaki_Ninja_ZX_25R_Gen_1_2020_2022_51PS.xdf` | **2020–2022** | 2.5 KB | `a58d008410e7720e3c5580eae211600a` | TunerPro Binary Definition Map |
+| `GENERATIONAL_21175-1798_Kawasaki_Ninja_ZX_25RR___SE_Gen_2_TFT_2023_2026.xdf` | **2023–2026** | 2.5 KB | `f7362480ffd6caf154cdf0cb31604eba` | TunerPro Binary Definition Map |
+| `KAWASAKI_21175-1560_Kawasaki_Ninja_ZX-25R_4-Cylinder_(ZX250E).xdf` | **2020–2026** | 9.4 KB | `6746ded94ecafef4f5ce185e7d464890` | TunerPro Binary Definition Map |
 
 ---
 

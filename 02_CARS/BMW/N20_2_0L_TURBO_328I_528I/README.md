@@ -21,26 +21,28 @@ Nama berkas yang tersimpan merefleksikan identitas perangkat keras (Hardware ID)
 > [!NOTE]
 > Mempertahankan kode dan nomor asli pabrikan pada penamaan berkas sangat krusial agar perangkat lunak kalibrasi (seperti **TunerPro**, **WinOLS**, atau **RomRaider**) dapat mengenali dan mencocokkan peta definisi (*definition maps*) secara otomatis tanpa merusak asosiasi header ECU.
 
+* **Rentang Tahun / Model Year**: 2011–2017
+
 ---
 
-## 2. Manifest Aset Berkas Fisik (100% Verified)
+## 2. Manifest Fisik Kalibrasi & Definisi Terverifikasi
 
-Berikut adalah daftar lengkap berkas fisik yang tersimpan secara lokal di direktori ini:
+Berikut adalah daftar lengkap berkas fisik yang tersimpan secara lokal di direktori ini dengan verifikasi Model Year (Tahun Produksi), ukuran, MD5 checksum, dan tipe platform:
 
-| Nama Berkas | Tipe / Format | Ukuran (Bytes) | Deskripsi Teknis & Identifikasi |
-| :--- | :--- | :--- | :--- |
-| `00000ABF3BA001_n20o1_original.bin` | `.BIN` | `4,194,304` bytes | BMW DME Flash Calibration ID `00000abf3ba001` |
-| `00000ABF3BA001_original.bin` | `.BIN` | `4,194,304` bytes | BMW DME Flash Calibration ID `00000abf3ba001` |
-| `0000113D3BA001_n20o1_original.bin` | `.BIN` | `4,194,304` bytes | BMW DME Flash Calibration ID `0000113d3ba001` |
-| `0000113D3BA001_original.bin` | `.BIN` | `4,194,304` bytes | BMW DME Flash Calibration ID `0000113d3ba001` |
-| `000013E713AA01_n20o1_original.bin` | `.BIN` | `4,194,304` bytes | BMW DME Flash Calibration ID `000013e713aa01` |
-| `000013E713AA01_original.bin` | `.BIN` | `4,194,304` bytes | BMW DME Flash Calibration ID `000013e713aa01` |
-| `000019A813AA01_n20o1_original.bin` | `.BIN` | `4,194,304` bytes | BMW DME Flash Calibration ID `000019a813aa01` |
-| `000019A813AA01_original.bin` | `.BIN` | `4,194,304` bytes | BMW DME Flash Calibration ID `000019a813aa01` |
-| `00001BC91D9601_n20o1_original.bin` | `.BIN` | `4,194,304` bytes | BMW DME Flash Calibration ID `00001bc91d9601` |
-| `00001BC91D9601_original.bin` | `.BIN` | `4,194,304` bytes | BMW DME Flash Calibration ID `00001bc91d9601` |
-| `00001C9F1D9601_n20o1_original.bin` | `.BIN` | `4,194,304` bytes | BMW DME Flash Calibration ID `00001c9f1d9601` |
-| `00001C9F1D9601_original.bin` | `.BIN` | `4,194,304` bytes | BMW DME Flash Calibration ID `00001c9f1d9601` |
+| Filename | Tahun / Model Year | Size | MD5 Checksum | Type / Target Platform |
+| :--- | :---: | :--- | :--- | :--- |
+| `00000ABF3BA001_n20o1_original.bin` | **2011–2017** | 4.00 MB | `5687afc10dc179d450144940c3ff6b67` | Factory Binary Firmware Dump |
+| `00000ABF3BA001_original.bin` | **2011–2017** | 4.00 MB | `2e98a51eae98cd164df41a459065c77a` | Factory Binary Firmware Dump |
+| `0000113D3BA001_n20o1_original.bin` | **2011–2017** | 4.00 MB | `d41efa5e96d319f543e4095ec8698b9c` | Factory Binary Firmware Dump |
+| `0000113D3BA001_original.bin` | **2011–2017** | 4.00 MB | `6a761f89406c1877f908d54c9c63643f` | Factory Binary Firmware Dump |
+| `000013E713AA01_n20o1_original.bin` | **2011–2017** | 4.00 MB | `25e81bbc76f11d2588c6124e7128585a` | Factory Binary Firmware Dump |
+| `000013E713AA01_original.bin` | **2011–2017** | 4.00 MB | `e32bf56d3e0fad8cf8c0f26b03bb24ca` | Factory Binary Firmware Dump |
+| `000019A813AA01_n20o1_original.bin` | **2011–2017** | 4.00 MB | `ed829b922c1cf74634035f9251cfbcbe` | Factory Binary Firmware Dump |
+| `000019A813AA01_original.bin` | **2011–2017** | 4.00 MB | `719221dce7d4e833fac8b0695a5adbd6` | Factory Binary Firmware Dump |
+| `00001BC91D9601_n20o1_original.bin` | **2011–2017** | 4.00 MB | `492dd4e3da430c6a61b8ebed77245de3` | Factory Binary Firmware Dump |
+| `00001BC91D9601_original.bin` | **2011–2017** | 4.00 MB | `016b16866faed4a13b83b9cc54b7adcd` | Factory Binary Firmware Dump |
+| `00001C9F1D9601_n20o1_original.bin` | **2011–2017** | 4.00 MB | `ccda51f278928f4edbbd170ff9f33426` | Factory Binary Firmware Dump |
+| `00001C9F1D9601_original.bin` | **2011–2017** | 4.00 MB | `57ffa57f20ff903a39677996d044129b` | Factory Binary Firmware Dump |
 
 ---
 

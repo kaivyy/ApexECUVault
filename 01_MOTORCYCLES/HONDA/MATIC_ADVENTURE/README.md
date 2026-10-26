@@ -21,17 +21,19 @@ Nama berkas yang tersimpan merefleksikan identitas perangkat keras (Hardware ID)
 > [!NOTE]
 > Mempertahankan kode dan nomor asli pabrikan pada penamaan berkas sangat krusial agar perangkat lunak kalibrasi (seperti **TunerPro**, **WinOLS**, atau **RomRaider**) dapat mengenali dan mencocokkan peta definisi (*definition maps*) secara otomatis tanpa merusak asosiasi header ECU.
 
+* **Rentang Tahun / Model Year**: 2019–2026
+
 ---
 
-## 2. Manifest Aset Berkas Fisik (100% Verified)
+## 2. Manifest Fisik Kalibrasi & Definisi Terverifikasi
 
-Berikut adalah daftar lengkap berkas fisik yang tersimpan secara lokal di direktori ini:
+Berikut adalah daftar lengkap berkas fisik yang tersimpan secara lokal di direktori ini dengan verifikasi Model Year (Tahun Produksi), ukuran, MD5 checksum, dan tipe platform:
 
-| Nama Berkas | Tipe / Format | Ukuran (Bytes) | Deskripsi Teknis & Identifikasi |
-| :--- | :--- | :--- | :--- |
-| `38770-KYT-901.bin` | `.BIN` | `57,344` bytes | Honda Motorcycle Keihin ECU ROM `38770-KYT` |
-| `38770-MKH-D22.bin` | `.BIN` | `524,288` bytes | Honda Motorcycle Keihin ECU ROM `38770-MKH` |
-| `38770-MKH-D42.bin` | `.BIN` | `524,288` bytes | Honda Motorcycle Keihin ECU ROM `38770-MKH` |
+| Filename | Tahun / Model Year | Size | MD5 Checksum | Type / Target Platform |
+| :--- | :---: | :--- | :--- | :--- |
+| `38770-KYT-901.bin` | **2019–2026** | 56.0 KB | `2c4b1f41ef4bb9d110cc2feaa8a6f744` | Factory Binary Firmware Dump |
+| `38770-MKH-D22.bin` | **2019–2026** | 512.0 KB | `8601ef381db3cf63228c81556f68ee0b` | Factory Binary Firmware Dump |
+| `38770-MKH-D42.bin` | **2019–2026** | 512.0 KB | `8601ef381db3cf63228c81556f68ee0b` | Factory Binary Firmware Dump |
 
 ---
 

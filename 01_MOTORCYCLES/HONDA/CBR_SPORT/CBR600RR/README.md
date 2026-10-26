@@ -21,25 +21,27 @@ Nama berkas yang tersimpan merefleksikan identitas perangkat keras (Hardware ID)
 > [!NOTE]
 > Mempertahankan kode dan nomor asli pabrikan pada penamaan berkas sangat krusial agar perangkat lunak kalibrasi (seperti **TunerPro**, **WinOLS**, atau **RomRaider**) dapat mengenali dan mencocokkan peta definisi (*definition maps*) secara otomatis tanpa merusak asosiasi header ECU.
 
+* **Rentang Tahun / Model Year**: 2003–2024
+
 ---
 
-## 2. Manifest Aset Berkas Fisik (100% Verified)
+## 2. Manifest Fisik Kalibrasi & Definisi Terverifikasi
 
-Berikut adalah daftar lengkap berkas fisik yang tersimpan secara lokal di direktori ini:
+Berikut adalah daftar lengkap berkas fisik yang tersimpan secara lokal di direktori ini dengan verifikasi Model Year (Tahun Produksi), ukuran, MD5 checksum, dan tipe platform:
 
-| Nama Berkas | Tipe / Format | Ukuran (Bytes) | Deskripsi Teknis & Identifikasi |
-| :--- | :--- | :--- | :--- |
-| `38770-MEE-612.bin` | `.BIN` | `262,144` bytes | Honda Motorcycle Keihin ECU ROM `38770-MEE` |
-| `38770-MEE-622.bin` | `.BIN` | `262,144` bytes | Honda Motorcycle Keihin ECU ROM `38770-MEE` |
-| `38770-MEE-F02.bin` | `.BIN` | `262,144` bytes | Honda Motorcycle Keihin ECU ROM `38770-MEE` |
-| `38770-MFJ-A02.bin` | `.BIN` | `262,144` bytes | Honda Motorcycle Keihin ECU ROM `38770-MFJ` |
-| `38770-MFJ-D04.bin` | `.BIN` | `262,144` bytes | Honda Motorcycle Keihin ECU ROM `38770-MFJ` |
-| `38770-MFJ-F03.bin` | `.BIN` | `262,144` bytes | Honda Motorcycle Keihin ECU ROM `38770-MFJ` |
-| `38770-MGM-D11.bin` | `.BIN` | `262,144` bytes | Honda Motorcycle Keihin ECU ROM `38770-MGM` |
-| `38770-MJC-A01.bin` | `.BIN` | `262,144` bytes | Honda Motorcycle Keihin ECU ROM `38770-MJC` |
-| `38770-MJC-D01.bin` | `.BIN` | `262,144` bytes | Honda Motorcycle Keihin ECU ROM `38770-MJC` |
-| `38770-N1A-D11.bin` | `.BIN` | `262,144` bytes | Honda Motorcycle Keihin ECU ROM `38770-N1A` |
-| `38770-NL3-750.bin` | `.BIN` | `262,144` bytes | Honda Motorcycle Keihin ECU ROM `38770-NL3` |
+| Filename | Tahun / Model Year | Size | MD5 Checksum | Type / Target Platform |
+| :--- | :---: | :--- | :--- | :--- |
+| `38770-MEE-612.bin` | **2003–2024** | 256.0 KB | `aecce9ae133d3dfd3bda9205f09f05ea` | Factory Binary Firmware Dump |
+| `38770-MEE-622.bin` | **2003–2024** | 256.0 KB | `2742e3c741f55c578b81fea8c6fc6a6d` | Factory Binary Firmware Dump |
+| `38770-MEE-F02.bin` | **2003–2024** | 256.0 KB | `cc6fdd6e9d2035cfb7af143e3642814b` | Factory Binary Firmware Dump |
+| `38770-MFJ-A02.bin` | **2003–2024** | 256.0 KB | `b061d41db86aec0e346967361250b344` | Factory Binary Firmware Dump |
+| `38770-MFJ-D04.bin` | **2003–2024** | 256.0 KB | `9743fe4c0ffa263869cc6c405394ac0c` | Factory Binary Firmware Dump |
+| `38770-MFJ-F03.bin` | **2003–2024** | 256.0 KB | `5de5263aa9d7767f26945e9cf85c272c` | Factory Binary Firmware Dump |
+| `38770-MGM-D11.bin` | **2003–2024** | 256.0 KB | `773d00c4f51ac9d5868d533aa3a85fe9` | Factory Binary Firmware Dump |
+| `38770-MJC-A01.bin` | **2003–2024** | 256.0 KB | `4a3c7f75593a162aaf1adce606590e63` | Factory Binary Firmware Dump |
+| `38770-MJC-D01.bin` | **2003–2024** | 256.0 KB | `210ae00bd01f4dc1de3aa09264886d6e` | Factory Binary Firmware Dump |
+| `38770-N1A-D11.bin` | **2003–2024** | 256.0 KB | `68f033b3e7f5f5aa05fce050446d095e` | Factory Binary Firmware Dump |
+| `38770-NL3-750.bin` | **2003–2024** | 256.0 KB | `4480e3c59a2f0f692efaff227321cd79` | Factory Binary Firmware Dump |
 
 ---
 

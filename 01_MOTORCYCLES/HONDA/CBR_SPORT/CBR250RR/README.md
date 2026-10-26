@@ -21,20 +21,22 @@ Nama berkas yang tersimpan merefleksikan identitas perangkat keras (Hardware ID)
 > [!NOTE]
 > Mempertahankan kode dan nomor asli pabrikan pada penamaan berkas sangat krusial agar perangkat lunak kalibrasi (seperti **TunerPro**, **WinOLS**, atau **RomRaider**) dapat mengenali dan mencocokkan peta definisi (*definition maps*) secara otomatis tanpa merusak asosiasi header ECU.
 
+* **Rentang Tahun / Model Year**: 2016–2026
+
 ---
 
-## 2. Manifest Aset Berkas Fisik (100% Verified)
+## 2. Manifest Fisik Kalibrasi & Definisi Terverifikasi
 
-Berikut adalah daftar lengkap berkas fisik yang tersimpan secara lokal di direktori ini:
+Berikut adalah daftar lengkap berkas fisik yang tersimpan secara lokal di direktori ini dengan verifikasi Model Year (Tahun Produksi), ukuran, MD5 checksum, dan tipe platform:
 
-| Nama Berkas | Tipe / Format | Ukuran (Bytes) | Deskripsi Teknis & Identifikasi |
-| :--- | :--- | :--- | :--- |
-| `38770-K64-N01.bin` | `.BIN` | `1,048,576` bytes | Honda Motorcycle Keihin ECU ROM `38770-K64` |
-| `38770-K64-R02.bin` | `.BIN` | `1,048,576` bytes | Honda Motorcycle Keihin ECU ROM `38770-K64` |
-| `CBR250RR-38770-K64-N04_BIN.bin` | `.BIN` | `1,048,576` bytes | Honda Motorcycle Keihin ECU ROM `38770-K64` |
-| `CBR250RR-38770-K64-ND1_BIN.bin` | `.BIN` | `1,048,576` bytes | Honda Motorcycle Keihin ECU ROM `38770-K64` |
-| `CBR250RR_38770-K64-N04_PUBLIC_v1.xdf` | `.XDF` | `91,162` bytes | Honda Motorcycle Keihin ECU ROM `38770-K64` |
-| `CBR250RR_38770-K64-ND1_PUBLIC_v1.xdf` | `.XDF` | `85,273` bytes | Honda Motorcycle Keihin ECU ROM `38770-K64` |
+| Filename | Tahun / Model Year | Size | MD5 Checksum | Type / Target Platform |
+| :--- | :---: | :--- | :--- | :--- |
+| `38770-K64-N01.bin` | **2016–2019** | 1.00 MB | `e0c12d43c50c7c285df0307bef13f4b5` | Factory Binary Firmware Dump |
+| `38770-K64-R02.bin` | **2017–2024** | 1.00 MB | `f87f1dc65059e08f496e62fd0872a6e7` | Factory Binary Firmware Dump |
+| `CBR250RR-38770-K64-N04_BIN.bin` | **2016–2019** | 1.00 MB | `c069d5b2d1476a728ba14a43ef73dc7a` | Factory Binary Firmware Dump |
+| `CBR250RR-38770-K64-ND1_BIN.bin` | **2020–2022** | 1.00 MB | `5c616504f3b6306adff2ad04a17ab68c` | Factory Binary Firmware Dump |
+| `CBR250RR_38770-K64-N04_PUBLIC_v1.xdf` | **2016–2019** | 89.0 KB | `8beae407f19171868ea92c8f56748426` | TunerPro Binary Definition Map |
+| `CBR250RR_38770-K64-ND1_PUBLIC_v1.xdf` | **2020–2022** | 83.3 KB | `cb0b660f54754f38efbc1ad750aa4967` | TunerPro Binary Definition Map |
 
 ---
 

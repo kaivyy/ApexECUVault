@@ -21,56 +21,58 @@ Nama berkas yang tersimpan merefleksikan identitas perangkat keras (Hardware ID)
 > [!NOTE]
 > Mempertahankan kode dan nomor asli pabrikan pada penamaan berkas sangat krusial agar perangkat lunak kalibrasi (seperti **TunerPro**, **WinOLS**, atau **RomRaider**) dapat mengenali dan mencocokkan peta definisi (*definition maps*) secara otomatis tanpa merusak asosiasi header ECU.
 
+* **Rentang Tahun / Model Year**: 2015–2026
+
 ---
 
-## 2. Manifest Aset Berkas Fisik (100% Verified)
+## 2. Manifest Fisik Kalibrasi & Definisi Terverifikasi
 
-Berikut adalah daftar lengkap berkas fisik yang tersimpan secara lokal di direktori ini:
+Berikut adalah daftar lengkap berkas fisik yang tersimpan secara lokal di direktori ini dengan verifikasi Model Year (Tahun Produksi), ukuran, MD5 checksum, dan tipe platform:
 
-| Nama Berkas | Tipe / Format | Ukuran (Bytes) | Deskripsi Teknis & Identifikasi |
-| :--- | :--- | :--- | :--- |
-| `R4C9F4E6B_5d55-040_150_006_v7.2.2.xdf` | `.XDF` | `1,380,909` bytes | TunerPro Binary Definition Map |
-| `R4C9F4K6B_5d55-040_170_006_v7.2.2.xdf` | `.XDF` | `1,380,909` bytes | TunerPro Binary Definition Map |
-| `R4C9F4N5B_5d55-040_180_005_v7.2.2.xdf` | `.XDF` | `1,380,909` bytes | TunerPro Binary Definition Map |
-| `R4C9F4P7B_5d55-040_190_007_v7.2.2.xdf` | `.XDF` | `1,380,909` bytes | TunerPro Binary Definition Map |
-| `R4C9F4P9B_5d55-040_190_009_v7.2.2.xdf` | `.XDF` | `1,380,909` bytes | TunerPro Binary Definition Map |
-| `R4C9H5C5B_5d55-050_140_005_v7.2.2.xdf` | `.XDF` | `1,387,460` bytes | TunerPro Binary Definition Map |
-| `R4C9H5I5B_5d55-050_160_005_v7.2.2.xdf` | `.XDF` | `1,387,460` bytes | TunerPro Binary Definition Map |
-| `R4C9H5K5B_5d55-050_170_005_v7.2.2.xdf` | `.XDF` | `1,387,460` bytes | TunerPro Binary Definition Map |
-| `R4C9H5N6B_5d55-050_180_006_v7.2.2.xdf` | `.XDF` | `1,387,460` bytes | TunerPro Binary Definition Map |
-| `R4C9H5P7B_5d55-050_190_007_v7.2.2.xdf` | `.XDF` | `1,387,460` bytes | TunerPro Binary Definition Map |
-| `R4C9H5P9B_5d55-050_190_009_v7.2.2.xdf` | `.XDF` | `1,387,460` bytes | TunerPro Binary Definition Map |
-| `R4C9H5S8B_5d55-050_200_008_v7.2.2.xdf` | `.XDF` | `1,387,460` bytes | TunerPro Binary Definition Map |
-| `R4C9H5V5B_5d55-050_220_005_v7.2.2.xdf` | `.XDF` | `1,387,460` bytes | TunerPro Binary Definition Map |
-| `R4C9H695B_5d55-060_100_005_v7.2.2.xdf` | `.XDF` | `1,387,460` bytes | TunerPro Binary Definition Map |
-| `R4C9H6B5B_5d55-060_110_005_v7.2.2.xdf` | `.XDF` | `1,387,460` bytes | TunerPro Binary Definition Map |
-| `R4C9H6D7B_5d55-060_120_007_v7.2.2.xdf` | `.XDF` | `1,387,460` bytes | TunerPro Binary Definition Map |
-| `R4C9H6H7B_5d55-060_130_007_v7.2.2.xdf` | `.XDF` | `1,387,460` bytes | TunerPro Binary Definition Map |
-| `R4C9H6K5B_5d55-060_140_005_v7.2.2.xdf` | `.XDF` | `1,387,460` bytes | TunerPro Binary Definition Map |
-| `R4C9H6N7B_5d55-060_150_007_v7.2.2.xdf` | `.XDF` | `1,387,460` bytes | TunerPro Binary Definition Map |
-| `R4C9H6P7B_5d55-060_160_007_v7.2.2.xdf` | `.XDF` | `1,387,460` bytes | TunerPro Binary Definition Map |
-| `R4C9H6P9B_5d55-060_160_009_v7.2.2.xdf` | `.XDF` | `1,387,460` bytes | TunerPro Binary Definition Map |
-| `R4C9H6S8B_5d55-060_170_008_v7.2.2.xdf` | `.XDF` | `1,387,460` bytes | TunerPro Binary Definition Map |
-| `R4C9H6V5B_5d55-060_190_005_v7.2.2.xdf` | `.XDF` | `1,387,460` bytes | TunerPro Binary Definition Map |
-| `R4C9J718B_5d55-070_030_008_v7.2.2.xdf` | `.XDF` | `1,390,005` bytes | TunerPro Binary Definition Map |
-| `R4C9J755B_5d55-070_040_005_v7.2.2.xdf` | `.XDF` | `1,390,005` bytes | TunerPro Binary Definition Map |
-| `R4C9J756B_5d55-070_040_006_v7.2.2.xdf` | `.XDF` | `1,390,005` bytes | TunerPro Binary Definition Map |
-| `R4C9J758B_5d55-070_050_008_v7.2.2.xdf` | `.XDF` | `1,390,005` bytes | TunerPro Binary Definition Map |
-| `R4C9J797B_5d55-070_060_007_v7.2.2.xdf` | `.XDF` | `1,390,005` bytes | TunerPro Binary Definition Map |
-| `R4C9J7A5B_5d55-070_070_005_v7.2.2.xdf` | `.XDF` | `1,390,005` bytes | TunerPro Binary Definition Map |
-| `R4C9J7N5B_5d55-070_080_005_v7.2.2.xdf` | `.XDF` | `1,390,005` bytes | TunerPro Binary Definition Map |
-| `R4C9J7P7B_5d55-070_090_007_v7.2.2.xdf` | `.XDF` | `1,390,005` bytes | TunerPro Binary Definition Map |
-| `R4C9J7P9B_5d55-070_090_009_v7.2.2.xdf` | `.XDF` | `1,390,005` bytes | TunerPro Binary Definition Map |
-| `R4C9J7S8B_5d55-070_100_008_v7.2.2.xdf` | `.XDF` | `1,390,005` bytes | TunerPro Binary Definition Map |
-| `R4C9J7V5B_5d55-070_120_005_v7.2.2.xdf` | `.XDF` | `1,390,005` bytes | TunerPro Binary Definition Map |
-| `R4C9L857B_5d55-080_040_007_v7.2.2.xdf` | `.XDF` | `1,378,820` bytes | TunerPro Binary Definition Map |
-| `R4C9L875B_5d55-080_055_005_v7.2.2.xdf` | `.XDF` | `1,378,820` bytes | TunerPro Binary Definition Map |
-| `R4C9L8N5B_5d55-080_060_005_v7.2.2.xdf` | `.XDF` | `1,378,820` bytes | TunerPro Binary Definition Map |
-| `R4C9L8P7B_5d55-080_072_007_v7.2.2.xdf` | `.XDF` | `1,378,820` bytes | TunerPro Binary Definition Map |
-| `R4C9L8P9B_5d55-080_072_009_v7.2.2.xdf` | `.XDF` | `1,378,820` bytes | TunerPro Binary Definition Map |
-| `R4C9L8PCB_5d55-080_072_012_v7.2.2.xdf` | `.XDF` | `1,378,820` bytes | TunerPro Binary Definition Map |
-| `R4C9L8S8B_5d55-080_080_008_v7.2.2.xdf` | `.XDF` | `1,378,820` bytes | TunerPro Binary Definition Map |
-| `R4C9L8V6B_5d55-080_100_006_v7.2.2.xdf` | `.XDF` | `1,378,820` bytes | TunerPro Binary Definition Map |
+| Filename | Tahun / Model Year | Size | MD5 Checksum | Type / Target Platform |
+| :--- | :---: | :--- | :--- | :--- |
+| `R4C9F4E6B_5d55-040_150_006_v7.2.2.xdf` | **2015–2026** | 1.32 MB | `1ba5ceb069c9ca415b1078d661713ef5` | TunerPro Binary Definition Map |
+| `R4C9F4K6B_5d55-040_170_006_v7.2.2.xdf` | **2015–2026** | 1.32 MB | `e3007490fc28790b59e51c0802ad5d17` | TunerPro Binary Definition Map |
+| `R4C9F4N5B_5d55-040_180_005_v7.2.2.xdf` | **2015–2026** | 1.32 MB | `171cae551f8aa8607fb78e2ab30f901c` | TunerPro Binary Definition Map |
+| `R4C9F4P7B_5d55-040_190_007_v7.2.2.xdf` | **2015–2026** | 1.32 MB | `171cae551f8aa8607fb78e2ab30f901c` | TunerPro Binary Definition Map |
+| `R4C9F4P9B_5d55-040_190_009_v7.2.2.xdf` | **2015–2026** | 1.32 MB | `171cae551f8aa8607fb78e2ab30f901c` | TunerPro Binary Definition Map |
+| `R4C9H5C5B_5d55-050_140_005_v7.2.2.xdf` | **2015–2026** | 1.32 MB | `ed7e2c0fa644b1d086c0d32aa96534b0` | TunerPro Binary Definition Map |
+| `R4C9H5I5B_5d55-050_160_005_v7.2.2.xdf` | **2015–2026** | 1.32 MB | `b0fa6e50bc13b4330bea199cbbc11f8f` | TunerPro Binary Definition Map |
+| `R4C9H5K5B_5d55-050_170_005_v7.2.2.xdf` | **2015–2026** | 1.32 MB | `51a9fbebd2c4b12b202667e4a2572901` | TunerPro Binary Definition Map |
+| `R4C9H5N6B_5d55-050_180_006_v7.2.2.xdf` | **2015–2026** | 1.32 MB | `84fd9f0f9ef3a8f5ff882cece977e808` | TunerPro Binary Definition Map |
+| `R4C9H5P7B_5d55-050_190_007_v7.2.2.xdf` | **2015–2026** | 1.32 MB | `6fc50b54c19ad6d728c313c1cacb20ba` | TunerPro Binary Definition Map |
+| `R4C9H5P9B_5d55-050_190_009_v7.2.2.xdf` | **2015–2026** | 1.32 MB | `6fc50b54c19ad6d728c313c1cacb20ba` | TunerPro Binary Definition Map |
+| `R4C9H5S8B_5d55-050_200_008_v7.2.2.xdf` | **2015–2026** | 1.32 MB | `d949ef291cd36d2baa4c1e6fbd1826b4` | TunerPro Binary Definition Map |
+| `R4C9H5V5B_5d55-050_220_005_v7.2.2.xdf` | **2015–2026** | 1.32 MB | `febb80b9deb9029caa4985398f8c634f` | TunerPro Binary Definition Map |
+| `R4C9H695B_5d55-060_100_005_v7.2.2.xdf` | **2015–2026** | 1.32 MB | `5f0e33dc41cbc50a17b0df7ad817111e` | TunerPro Binary Definition Map |
+| `R4C9H6B5B_5d55-060_110_005_v7.2.2.xdf` | **2015–2026** | 1.32 MB | `014ba3747c4d7fdaf9240b60edac6000` | TunerPro Binary Definition Map |
+| `R4C9H6D7B_5d55-060_120_007_v7.2.2.xdf` | **2015–2026** | 1.32 MB | `28a195f787a62a4ce9a393696152cdce` | TunerPro Binary Definition Map |
+| `R4C9H6H7B_5d55-060_130_007_v7.2.2.xdf` | **2015–2026** | 1.32 MB | `b431b348b2c0bcef87a9ad6d522f865a` | TunerPro Binary Definition Map |
+| `R4C9H6K5B_5d55-060_140_005_v7.2.2.xdf` | **2015–2026** | 1.32 MB | `92ef0472d9b01d12440a3cf857fc85e4` | TunerPro Binary Definition Map |
+| `R4C9H6N7B_5d55-060_150_007_v7.2.2.xdf` | **2015–2026** | 1.32 MB | `d70536740f9cd2dbe01b5b8d9a28e402` | TunerPro Binary Definition Map |
+| `R4C9H6P7B_5d55-060_160_007_v7.2.2.xdf` | **2015–2026** | 1.32 MB | `981ee57abcb6089aa235a8483c32284e` | TunerPro Binary Definition Map |
+| `R4C9H6P9B_5d55-060_160_009_v7.2.2.xdf` | **2015–2026** | 1.32 MB | `981ee57abcb6089aa235a8483c32284e` | TunerPro Binary Definition Map |
+| `R4C9H6S8B_5d55-060_170_008_v7.2.2.xdf` | **2015–2026** | 1.32 MB | `5d0f6ca9e2cc43360743537e1ac817be` | TunerPro Binary Definition Map |
+| `R4C9H6V5B_5d55-060_190_005_v7.2.2.xdf` | **2015–2026** | 1.32 MB | `2d93c39981fa62d5989a7f9f7d2d39c4` | TunerPro Binary Definition Map |
+| `R4C9J718B_5d55-070_030_008_v7.2.2.xdf` | **2015–2026** | 1.33 MB | `871381e0ec2460cd83296ba2f68159e8` | TunerPro Binary Definition Map |
+| `R4C9J755B_5d55-070_040_005_v7.2.2.xdf` | **2015–2026** | 1.33 MB | `c5be19c6672c55cf0f635a6b4b23c1e0` | TunerPro Binary Definition Map |
+| `R4C9J756B_5d55-070_040_006_v7.2.2.xdf` | **2015–2026** | 1.33 MB | `7ca63c1b90c142e6734d79bc3c3b3018` | TunerPro Binary Definition Map |
+| `R4C9J758B_5d55-070_050_008_v7.2.2.xdf` | **2015–2026** | 1.33 MB | `a5a5f47b47c468d403a538ff3c6764f6` | TunerPro Binary Definition Map |
+| `R4C9J797B_5d55-070_060_007_v7.2.2.xdf` | **2015–2026** | 1.33 MB | `b140748db4055ffbd5132d67025a1525` | TunerPro Binary Definition Map |
+| `R4C9J7A5B_5d55-070_070_005_v7.2.2.xdf` | **2015–2026** | 1.33 MB | `b140748db4055ffbd5132d67025a1525` | TunerPro Binary Definition Map |
+| `R4C9J7N5B_5d55-070_080_005_v7.2.2.xdf` | **2015–2026** | 1.33 MB | `637d74eaadf5b37e298a3ad9650637e7` | TunerPro Binary Definition Map |
+| `R4C9J7P7B_5d55-070_090_007_v7.2.2.xdf` | **2015–2026** | 1.33 MB | `f55fcff93d03427f43c1d2da8170d357` | TunerPro Binary Definition Map |
+| `R4C9J7P9B_5d55-070_090_009_v7.2.2.xdf` | **2015–2026** | 1.33 MB | `f55fcff93d03427f43c1d2da8170d357` | TunerPro Binary Definition Map |
+| `R4C9J7S8B_5d55-070_100_008_v7.2.2.xdf` | **2015–2026** | 1.33 MB | `44efa7322f766d80a1345feed48c6ee6` | TunerPro Binary Definition Map |
+| `R4C9J7V5B_5d55-070_120_005_v7.2.2.xdf` | **2015–2026** | 1.33 MB | `6e0ec12a7134bcf9af4db953fc352b22` | TunerPro Binary Definition Map |
+| `R4C9L857B_5d55-080_040_007_v7.2.2.xdf` | **2015–2026** | 1.31 MB | `366e2da5e10ee409efaab60ed954d602` | TunerPro Binary Definition Map |
+| `R4C9L875B_5d55-080_055_005_v7.2.2.xdf` | **2015–2026** | 1.31 MB | `c8cd33c95fa5cbd288b4890401e10592` | TunerPro Binary Definition Map |
+| `R4C9L8N5B_5d55-080_060_005_v7.2.2.xdf` | **2015–2026** | 1.31 MB | `ed13bc1893dead6c78cdeac199b09d34` | TunerPro Binary Definition Map |
+| `R4C9L8P7B_5d55-080_072_007_v7.2.2.xdf` | **2015–2026** | 1.31 MB | `d279ffa50705b16aebcdd3cd0a2874af` | TunerPro Binary Definition Map |
+| `R4C9L8P9B_5d55-080_072_009_v7.2.2.xdf` | **2015–2026** | 1.31 MB | `d279ffa50705b16aebcdd3cd0a2874af` | TunerPro Binary Definition Map |
+| `R4C9L8PCB_5d55-080_072_012_v7.2.2.xdf` | **2015–2026** | 1.31 MB | `e70740f558e2d3a7b6b22566700a8a5c` | TunerPro Binary Definition Map |
+| `R4C9L8S8B_5d55-080_080_008_v7.2.2.xdf` | **2015–2026** | 1.31 MB | `d79d30ef2f1f18e9793f982a6eb059a7` | TunerPro Binary Definition Map |
+| `R4C9L8V6B_5d55-080_100_006_v7.2.2.xdf` | **2015–2026** | 1.31 MB | `cc53615a8790da7ce6a12f9ec03113ab` | TunerPro Binary Definition Map |
 
 ---
 

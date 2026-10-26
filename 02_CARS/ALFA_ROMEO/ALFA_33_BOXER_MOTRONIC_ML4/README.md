@@ -24,17 +24,19 @@ Nama berkas yang tersimpan merefleksikan identitas perangkat keras (Hardware ID)
 > [!NOTE]
 > Mempertahankan kode dan nomor asli pabrikan pada penamaan berkas sangat krusial agar perangkat lunak kalibrasi (seperti **TunerPro**, **WinOLS**, atau **EcuFlash**) dapat mengenali dan mencocokkan peta definisi (*definition maps*) secara otomatis tanpa merusak asosiasi header ECU.
 
+* **Rentang Tahun / Model Year**: 1990–1994
+
 ---
 
-## 2. Manifest Aset Berkas Fisik (100% Verified)
+## 2. Manifest Fisik Kalibrasi & Definisi Terverifikasi
 
-Berikut adalah daftar lengkap berkas fisik yang tersimpan secara lokal di direktori ini:
+Berikut adalah daftar lengkap berkas fisik yang tersimpan secara lokal di direktori ini dengan verifikasi Model Year (Tahun Produksi), ukuran, MD5 checksum, dan tipe platform:
 
-| Nama Berkas | Tipe / Format | Ukuran (Bytes) | Deskripsi Teknis & Identifikasi |
-| :--- | :--- | :--- | :--- |
-| `33.xdf` | `TunerPro Definition Map` | 263,039 | Definisi peta parameter kalibrasi TunerPro (263,039 bytes) untuk konversi skala dan offset tabel ECU |
-| `Alfa_33_142.bin` | `Original OEM Binary Flash Dump` | 32,768 | Berkas biner firmware resmi pabrikan (32,768 bytes) hasil hardware read murni (Zero-Synthetic) |
-| `Alfa_33_147.bin` | `Original OEM Binary Flash Dump` | 32,768 | Berkas biner firmware resmi pabrikan (32,768 bytes) hasil hardware read murni (Zero-Synthetic) |
+| Filename | Tahun / Model Year | Size | MD5 Checksum | Type / Target Platform |
+| :--- | :---: | :--- | :--- | :--- |
+| `33.xdf` | **1990–1994** | 256.9 KB | `2b7db8bd69600f856b4e40507d3f7e9c` | TunerPro Binary Definition Map |
+| `Alfa_33_142.bin` | **1990–1994** | 32.0 KB | `c263d146a503534626162104ad4c60cf` | Factory Binary Firmware Dump |
+| `Alfa_33_147.bin` | **1990–1994** | 32.0 KB | `f86b523e99af61729c2daa2f9fac1e89` | Factory Binary Firmware Dump |
 
 ---
 

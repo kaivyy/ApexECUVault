@@ -21,17 +21,19 @@ Nama berkas yang tersimpan merefleksikan identitas perangkat keras (Hardware ID)
 > [!NOTE]
 > Mempertahankan kode dan nomor asli pabrikan pada penamaan berkas sangat krusial agar perangkat lunak kalibrasi (seperti **TunerPro**, **WinOLS**, atau **RomRaider**) dapat mengenali dan mencocokkan peta definisi (*definition maps*) secara otomatis tanpa merusak asosiasi header ECU.
 
+* **Rentang Tahun / Model Year**: 2020–2025
+
 ---
 
-## 2. Manifest Aset Berkas Fisik (100% Verified)
+## 2. Manifest Fisik Kalibrasi & Definisi Terverifikasi
 
-Berikut adalah daftar lengkap berkas fisik yang tersimpan secara lokal di direktori ini:
+Berikut adalah daftar lengkap berkas fisik yang tersimpan secara lokal di direktori ini dengan verifikasi Model Year (Tahun Produksi), ukuran, MD5 checksum, dan tipe platform:
 
-| Nama Berkas | Tipe / Format | Ukuran (Bytes) | Deskripsi Teknis & Identifikasi |
-| :--- | :--- | :--- | :--- |
-| `GENERATIONAL_B3M-H591A-00_Yamaha_WR_155_R_Enduro_2020_2025.xdf` | `.XDF` | `2,536` bytes | Yamaha Factory Renesas RL78 / Denso ROM |
-| `WR155_B3M0.bin` | `.BIN` | `27,648` bytes | Yamaha Factory Renesas RL78 / Denso ROM |
-| `YAMAHA_B3M-H594A-00_Yamaha_WR155R_Dual_Sport_(B3M0).xdf` | `.XDF` | `11,873` bytes | Yamaha Factory Renesas RL78 / Denso ROM |
+| Filename | Tahun / Model Year | Size | MD5 Checksum | Type / Target Platform |
+| :--- | :---: | :--- | :--- | :--- |
+| `GENERATIONAL_B3M-H591A-00_Yamaha_WR_155_R_Enduro_2020_2025.xdf` | **2020–2025** | 2.5 KB | `9341ef3c7ef480cb438b152780d378e8` | TunerPro Binary Definition Map |
+| `WR155_B3M0.bin` | **2020–2025** | 27.0 KB | `87baf1a7980923503162057fb70768c1` | Factory Binary Firmware Dump |
+| `YAMAHA_B3M-H594A-00_Yamaha_WR155R_Dual_Sport_(B3M0).xdf` | **2020–2025** | 11.6 KB | `8d78b07fe33f98305c461244988246ec` | TunerPro Binary Definition Map |
 
 ---
 

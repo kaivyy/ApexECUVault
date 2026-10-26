@@ -21,17 +21,19 @@ Nama berkas yang tersimpan merefleksikan identitas perangkat keras (Hardware ID)
 > [!NOTE]
 > Mempertahankan kode dan nomor asli pabrikan pada penamaan berkas sangat krusial agar perangkat lunak kalibrasi (seperti **TunerPro**, **WinOLS**, atau **RomRaider**) dapat mengenali dan mencocokkan peta definisi (*definition maps*) secara otomatis tanpa merusak asosiasi header ECU.
 
+* **Rentang Tahun / Model Year**: 1985–1995
+
 ---
 
-## 2. Manifest Aset Berkas Fisik (100% Verified)
+## 2. Manifest Fisik Kalibrasi & Definisi Terverifikasi
 
-Berikut adalah daftar lengkap berkas fisik yang tersimpan secara lokal di direktori ini:
+Berikut adalah daftar lengkap berkas fisik yang tersimpan secara lokal di direktori ini dengan verifikasi Model Year (Tahun Produksi), ukuran, MD5 checksum, dan tipe platform:
 
-| Nama Berkas | Tipe / Format | Ukuran (Bytes) | Deskripsi Teknis & Identifikasi |
-| :--- | :--- | :--- | :--- |
-| `ANZA.bin` | `.BIN` | `16,384` bytes | Binary Firmware / Calibration Dump |
-| `APYP.bin` | `.BIN` | `16,384` bytes | Binary Firmware / Calibration Dump |
-| `ARAP.bin` | `.BIN` | `16,384` bytes | Binary Firmware / Calibration Dump |
+| Filename | Tahun / Model Year | Size | MD5 Checksum | Type / Target Platform |
+| :--- | :---: | :--- | :--- | :--- |
+| `ANZA.bin` | **1985–1995** | 16.0 KB | `bac00c6ed052846369efa5c632a1b0c4` | Factory Binary Firmware Dump |
+| `APYP.bin` | **1985–1995** | 16.0 KB | `dc9f6c758832e709320553b96b3f6fb8` | Factory Binary Firmware Dump |
+| `ARAP.bin` | **1985–1995** | 16.0 KB | `726726adcf6207dd902154d78a5fe94c` | Factory Binary Firmware Dump |
 
 ---
 

@@ -21,25 +21,27 @@ Nama berkas yang tersimpan merefleksikan identitas perangkat keras (Hardware ID)
 > [!NOTE]
 > Mempertahankan kode dan nomor asli pabrikan pada penamaan berkas sangat krusial agar perangkat lunak kalibrasi (seperti **TunerPro**, **WinOLS**, atau **RomRaider**) dapat mengenali dan mencocokkan peta definisi (*definition maps*) secara otomatis tanpa merusak asosiasi header ECU.
 
+* **Rentang Tahun / Model Year**: 2007–2019
+
 ---
 
-## 2. Manifest Aset Berkas Fisik (100% Verified)
+## 2. Manifest Fisik Kalibrasi & Definisi Terverifikasi
 
-Berikut adalah daftar lengkap berkas fisik yang tersimpan secara lokal di direktori ini:
+Berikut adalah daftar lengkap berkas fisik yang tersimpan secara lokal di direktori ini dengan verifikasi Model Year (Tahun Produksi), ukuran, MD5 checksum, dan tipe platform:
 
-| Nama Berkas | Tipe / Format | Ukuran (Bytes) | Deskripsi Teknis & Identifikasi |
-| :--- | :--- | :--- | :--- |
-| `MAZDA_2_GEN2_2010_1.3L_MZR_86HP_DENSO_ORIGINAL_READ.ori` | `.ORI` | `1,048,576` bytes | Original Hardware Read Dump |
-| `MAZDA_2_GEN2_2010_1.5L_MZR_DENSO_ORIGINAL_READ.ori` | `.ORI` | `1,048,576` bytes | Original Hardware Read Dump |
-| `MAZDA_2_GEN3_2015_1.5L_DIESEL_SKYACTIV_D_105HP_ORIGINAL_READ.ori` | `.ORI` | `4,194,304` bytes | Original Hardware Read Dump |
-| `Mazda-2015-2-1500-diesel-skyactiv-105HP-EGR_G.MOD` | `.MOD` | `4,194,304` bytes | Calibrated / Modified Binary Stage |
-| `Mazda-2015-2-1500-diesel-skyactiv-105HP_G.MOD` | `.MOD` | `4,194,304` bytes | Calibrated / Modified Binary Stage |
-| `Mazda-2015-2-1500-diesel-skyactiv-105HP_H_part.ori` | `.ORI` | `3,898,624` bytes | Original Hardware Read Dump |
-| `Mazda_2010_2_1300_MZR_86HP.ori` | `.ORI` | `1,048,576` bytes | Original Hardware Read Dump |
-| `Mazda_2015_2_1500_diesel_skyactiv_105HP_G.ori` | `.ORI` | `4,194,304` bytes | Original Hardware Read Dump |
-| `Mazda_2_sky_D_H_Quantum_Green_full.MOD` | `.MOD` | `4,194,304` bytes | Calibrated / Modified Binary Stage |
-| `Mazda_2_sky_D_H_Quantum_Green_part.MOD` | `.MOD` | `3,898,624` bytes | Calibrated / Modified Binary Stage |
-| `Mazda_2_sky_D_H_full.ori` | `.ORI` | `4,194,304` bytes | Original Hardware Read Dump |
+| Filename | Tahun / Model Year | Size | MD5 Checksum | Type / Target Platform |
+| :--- | :---: | :--- | :--- | :--- |
+| `MAZDA_2_GEN2_2010_1.3L_MZR_86HP_DENSO_ORIGINAL_READ.ori` | **2010** | 1.00 MB | `26395b013d94524dd9396a939e12065c` | Factory Binary Firmware Dump |
+| `MAZDA_2_GEN2_2010_1.5L_MZR_DENSO_ORIGINAL_READ.ori` | **2010** | 1.00 MB | `26395b013d94524dd9396a939e12065c` | Factory Binary Firmware Dump |
+| `MAZDA_2_GEN3_2015_1.5L_DIESEL_SKYACTIV_D_105HP_ORIGINAL_READ.ori` | **2015** | 4.00 MB | `a30ead7c8ab9b4df343bc98c739a47cd` | Factory Binary Firmware Dump |
+| `Mazda-2015-2-1500-diesel-skyactiv-105HP-EGR_G.MOD` | **2015** | 4.00 MB | `f1ed5c7dcfa9fbbf400af876af501283` | ECU Calibration Asset |
+| `Mazda-2015-2-1500-diesel-skyactiv-105HP_G.MOD` | **2015** | 4.00 MB | `86c8ba1dc419ccfdf009b30a56d62992` | ECU Calibration Asset |
+| `Mazda-2015-2-1500-diesel-skyactiv-105HP_H_part.ori` | **2015** | 3.72 MB | `aad5a77f1e94858061c53f6ecd5bdef7` | Factory Binary Firmware Dump |
+| `Mazda_2010_2_1300_MZR_86HP.ori` | **2010** | 1.00 MB | `26395b013d94524dd9396a939e12065c` | Factory Binary Firmware Dump |
+| `Mazda_2015_2_1500_diesel_skyactiv_105HP_G.ori` | **2015** | 4.00 MB | `a30ead7c8ab9b4df343bc98c739a47cd` | Factory Binary Firmware Dump |
+| `Mazda_2_sky_D_H_Quantum_Green_full.MOD` | **2007–2019** | 4.00 MB | `5f99176ae8dced08ad3f8738b3ed7087` | ECU Calibration Asset |
+| `Mazda_2_sky_D_H_Quantum_Green_part.MOD` | **2007–2019** | 3.72 MB | `49b42e093e6fe862a1bd325159895e3b` | ECU Calibration Asset |
+| `Mazda_2_sky_D_H_full.ori` | **2007–2019** | 4.00 MB | `d6baa6c4992c2de2d1d3c3e6858ccb7b` | Factory Binary Firmware Dump |
 
 ---
 

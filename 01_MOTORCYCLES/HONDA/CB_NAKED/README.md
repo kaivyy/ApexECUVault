@@ -21,21 +21,23 @@ Nama berkas yang tersimpan merefleksikan identitas perangkat keras (Hardware ID)
 > [!NOTE]
 > Mempertahankan kode dan nomor asli pabrikan pada penamaan berkas sangat krusial agar perangkat lunak kalibrasi (seperti **TunerPro**, **WinOLS**, atau **RomRaider**) dapat mengenali dan mencocokkan peta definisi (*definition maps*) secara otomatis tanpa merusak asosiasi header ECU.
 
+* **Rentang Tahun / Model Year**: 2012–2024
+
 ---
 
-## 2. Manifest Aset Berkas Fisik (100% Verified)
+## 2. Manifest Fisik Kalibrasi & Definisi Terverifikasi
 
-Berikut adalah daftar lengkap berkas fisik yang tersimpan secara lokal di direktori ini:
+Berikut adalah daftar lengkap berkas fisik yang tersimpan secara lokal di direktori ini dengan verifikasi Model Year (Tahun Produksi), ukuran, MD5 checksum, dan tipe platform:
 
-| Nama Berkas | Tipe / Format | Ukuran (Bytes) | Deskripsi Teknis & Identifikasi |
-| :--- | :--- | :--- | :--- |
-| `38770-MFN-D01.bin` | `.BIN` | `262,144` bytes | Honda Motorcycle Keihin ECU ROM `38770-MFN` |
-| `38770-MFN-F01.bin` | `.BIN` | `262,144` bytes | Honda Motorcycle Keihin ECU ROM `38770-MFN` |
-| `38770-MGJ-D02.bin` | `.BIN` | `262,144` bytes | Honda Motorcycle Keihin ECU ROM `38770-MGJ` |
-| `38770-MJE-D41.bin` | `.BIN` | `262,144` bytes | Honda Motorcycle Keihin ECU ROM `38770-MJE` |
-| `38770-MJE-G52.bin` | `.BIN` | `262,144` bytes | Honda Motorcycle Keihin ECU ROM `38770-MJE` |
-| `38770_MJW_D51.bin` | `.BIN` | `262,144` bytes | Binary Firmware / Calibration Dump |
-| `38770_MJW_D91.bin` | `.BIN` | `262,144` bytes | Binary Firmware / Calibration Dump |
+| Filename | Tahun / Model Year | Size | MD5 Checksum | Type / Target Platform |
+| :--- | :---: | :--- | :--- | :--- |
+| `38770-MFN-D01.bin` | **2012–2024** | 256.0 KB | `2901004ac436edfa688d8d9390004281` | Factory Binary Firmware Dump |
+| `38770-MFN-F01.bin` | **2012–2024** | 256.0 KB | `79c1fc40d1541cf9bdcd6c3911907655` | Factory Binary Firmware Dump |
+| `38770-MGJ-D02.bin` | **2012–2024** | 256.0 KB | `88094e0884c619179c5ca8addc36ed93` | Factory Binary Firmware Dump |
+| `38770-MJE-D41.bin` | **2012–2024** | 256.0 KB | `84cf7c724b83757fbd3fb12be6b7faae` | Factory Binary Firmware Dump |
+| `38770-MJE-G52.bin` | **2012–2024** | 256.0 KB | `5344ca8a3b30e0e4fc133a43aaebf86a` | Factory Binary Firmware Dump |
+| `38770_MJW_D51.bin` | **2012–2024** | 256.0 KB | `ecdc4c26bf7b131c79ab4cd85625d50d` | Factory Binary Firmware Dump |
+| `38770_MJW_D91.bin` | **2012–2024** | 256.0 KB | `491589af89001258567d82d30341f4b5` | Factory Binary Firmware Dump |
 
 ---
 

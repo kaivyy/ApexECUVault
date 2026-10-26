@@ -21,16 +21,18 @@ Nama berkas yang tersimpan merefleksikan identitas perangkat keras (Hardware ID)
 > [!NOTE]
 > Mempertahankan kode dan nomor asli pabrikan pada penamaan berkas sangat krusial agar perangkat lunak kalibrasi (seperti **TunerPro**, **WinOLS**, atau **RomRaider**) dapat mengenali dan mencocokkan peta definisi (*definition maps*) secara otomatis tanpa merusak asosiasi header ECU.
 
+* **Rentang Tahun / Model Year**: 2000–2006
+
 ---
 
-## 2. Manifest Aset Berkas Fisik (100% Verified)
+## 2. Manifest Fisik Kalibrasi & Definisi Terverifikasi
 
-Berikut adalah daftar lengkap berkas fisik yang tersimpan secara lokal di direktori ini:
+Berikut adalah daftar lengkap berkas fisik yang tersimpan secara lokal di direktori ini dengan verifikasi Model Year (Tahun Produksi), ukuran, MD5 checksum, dan tipe platform:
 
-| Nama Berkas | Tipe / Format | Ukuran (Bytes) | Deskripsi Teknis & Identifikasi |
-| :--- | :--- | :--- | :--- |
-| `MS43_WBABW510X0PK46741_430069_512KB.bin` | `.BIN` | `524,288` bytes | Siemens / Continental DME Calibration Data |
-| `Siemens_MS43_430069_512K.xdf` | `.XDF` | `3,448,756` bytes | Siemens / Continental DME Calibration Data |
+| Filename | Tahun / Model Year | Size | MD5 Checksum | Type / Target Platform |
+| :--- | :---: | :--- | :--- | :--- |
+| `MS43_WBABW510X0PK46741_430069_512KB.bin` | **2000–2006** | 512.0 KB | `724858dbc826c4ff5ac01eb32710ec90` | Factory Binary Firmware Dump |
+| `Siemens_MS43_430069_512K.xdf` | **2000–2006** | 3.29 MB | `b5ba7d3613a78fa014c7cfdafa734e9c` | TunerPro Binary Definition Map |
 
 ---
 

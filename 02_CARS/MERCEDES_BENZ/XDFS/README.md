@@ -21,16 +21,18 @@ Nama berkas yang tersimpan merefleksikan identitas perangkat keras (Hardware ID)
 > [!NOTE]
 > Mempertahankan kode dan nomor asli pabrikan pada penamaan berkas sangat krusial agar perangkat lunak kalibrasi (seperti **TunerPro**, **WinOLS**, atau **RomRaider**) dapat mengenali dan mencocokkan peta definisi (*definition maps*) secara otomatis tanpa merusak asosiasi header ECU.
 
+* **Rentang Tahun / Model Year**: 1989–2006
+
 ---
 
-## 2. Manifest Aset Berkas Fisik (100% Verified)
+## 2. Manifest Fisik Kalibrasi & Definisi Terverifikasi
 
-Berikut adalah daftar lengkap berkas fisik yang tersimpan secara lokal di direktori ini:
+Berikut adalah daftar lengkap berkas fisik yang tersimpan secara lokal di direktori ini dengan verifikasi Model Year (Tahun Produksi), ukuran, MD5 checksum, dan tipe platform:
 
-| Nama Berkas | Tipe / Format | Ukuran (Bytes) | Deskripsi Teknis & Identifikasi |
-| :--- | :--- | :--- | :--- |
-| `MB_190E_KEjetronic_ecu446.xdf` | `.XDF` | `5,519` bytes | TunerPro Binary Definition Map |
-| `MB_300E_KEjetronic_ecu256.xdf` | `.XDF` | `5,432` bytes | TunerPro Binary Definition Map |
+| Filename | Tahun / Model Year | Size | MD5 Checksum | Type / Target Platform |
+| :--- | :---: | :--- | :--- | :--- |
+| `MB_190E_KEjetronic_ecu446.xdf` | **1989–2006** | 5.4 KB | `c2fc208ad0d77a6df7b2f4b38833961a` | TunerPro Binary Definition Map |
+| `MB_300E_KEjetronic_ecu256.xdf` | **1989–2006** | 5.3 KB | `9d3d43db627b3948ef37f99dbc1439f5` | TunerPro Binary Definition Map |
 
 ---
 

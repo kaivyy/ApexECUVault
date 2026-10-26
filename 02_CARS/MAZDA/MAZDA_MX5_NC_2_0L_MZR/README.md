@@ -3,15 +3,18 @@
 ## 1. Technical Overview
 Koleksi biner kalibrasi pabrikan OEM dan definisi tuning untuk modul ECU platform MAZDA MX5 NC 2 0L MZR.
 
+* **Rentang Tahun / Model Year**: 2005–2015
 * **Total File Terdaftar**: 1 file (100% fisik terverifikasi, Zero Synthetic)
 
 ---
 
 ## 2. Manifest Fisik Kalibrasi & Definisi Terverifikasi
 
-| Filename | Size | MD5 Checksum | Type / Target |
-| :--- | :--- | :--- | :--- |
-| `SW-LFG1EK.BIN` | 1.00 MB | `5d6d2e7ceb9476ffa75a55e6c77574da` | Factory Binary Firmware Dump |
+Berikut adalah daftar lengkap berkas fisik yang tersimpan secara lokal di direktori ini dengan verifikasi Model Year (Tahun Produksi), ukuran, MD5 checksum, dan tipe platform:
+
+| Filename | Tahun / Model Year | Size | MD5 Checksum | Type / Target Platform |
+| :--- | :---: | :--- | :--- | :--- |
+| `SW-LFG1EK.BIN` | **2005–2015** | 1.00 MB | `5d6d2e7ceb9476ffa75a55e6c77574da` | Factory Binary Firmware Dump |
 
 ---
 

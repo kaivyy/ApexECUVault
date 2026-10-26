@@ -21,27 +21,29 @@ Nama berkas yang tersimpan merefleksikan identitas perangkat keras (Hardware ID)
 > [!NOTE]
 > Mempertahankan kode dan nomor asli pabrikan pada penamaan berkas sangat krusial agar perangkat lunak kalibrasi (seperti **TunerPro**, **WinOLS**, atau **RomRaider**) dapat mengenali dan mencocokkan peta definisi (*definition maps*) secara otomatis tanpa merusak asosiasi header ECU.
 
+* **Rentang Tahun / Model Year**: 1989–2006
+
 ---
 
-## 2. Manifest Aset Berkas Fisik (100% Verified)
+## 2. Manifest Fisik Kalibrasi & Definisi Terverifikasi
 
-Berikut adalah daftar lengkap berkas fisik yang tersimpan secara lokal di direktori ini:
+Berikut adalah daftar lengkap berkas fisik yang tersimpan secara lokal di direktori ini dengan verifikasi Model Year (Tahun Produksi), ukuran, MD5 checksum, dan tipe platform:
 
-| Nama Berkas | Tipe / Format | Ukuran (Bytes) | Deskripsi Teknis & Identifikasi |
-| :--- | :--- | :--- | :--- |
-| `B13RT.xdf` | `.XDF` | `57,011` bytes | TunerPro Binary Definition Map |
-| `Infinity_M30_90_92.xdf` | `.XDF` | `35,591` bytes | TunerPro Binary Definition Map |
-| `Q45.xdf` | `.XDF` | `72,314` bytes | TunerPro Binary Definition Map |
-| `Q4516bit.xdf` | `.XDF` | `71,071` bytes | TunerPro Binary Definition Map |
-| `RB20det.xdf` | `.XDF` | `64,722` bytes | TunerPro Binary Definition Map |
-| `S13RT.xdf` | `.XDF` | `125,319` bytes | TunerPro Binary Definition Map |
-| `U13-93-94-Altima-240sx.xdf` | `.XDF` | `130,856` bytes | TunerPro Binary Definition Map |
-| `U13-96-240sx-Altima.xdf` | `.XDF` | `98,157` bytes | TunerPro Binary Definition Map |
-| `Z31.xdf` | `.XDF` | `31,009` bytes | TunerPro Binary Definition Map |
-| `Z32.xdf` | `.XDF` | `62,486` bytes | TunerPro Binary Definition Map |
-| `Z32_512.xdf` | `.XDF` | `72,971` bytes | TunerPro Binary Definition Map |
-| `ca18det_v2.xdf` | `.XDF` | `38,656` bytes | TunerPro Binary Definition Map |
-| `sr20ve.xdf` | `.XDF` | `71,550` bytes | TunerPro Binary Definition Map |
+| Filename | Tahun / Model Year | Size | MD5 Checksum | Type / Target Platform |
+| :--- | :---: | :--- | :--- | :--- |
+| `B13RT.xdf` | **1989–2006** | 55.7 KB | `a0006e906bbe90d014633bbbc039d198` | TunerPro Binary Definition Map |
+| `Infinity_M30_90_92.xdf` | **1990–1992** | 34.8 KB | `b1630ec489830f7defbad263058e335a` | TunerPro Binary Definition Map |
+| `Q45.xdf` | **1989–2006** | 70.6 KB | `99e8aea351928ae6cf6cc999ae18800e` | TunerPro Binary Definition Map |
+| `Q4516bit.xdf` | **1989–2006** | 69.4 KB | `ac1473035ba48b95b3eaf3f95b04f943` | TunerPro Binary Definition Map |
+| `RB20det.xdf` | **1989–2006** | 63.2 KB | `e38a481986a9f7d257cca8258c61220c` | TunerPro Binary Definition Map |
+| `S13RT.xdf` | **1989–2006** | 122.4 KB | `571f97764da3c17de15dd706858f65ce` | TunerPro Binary Definition Map |
+| `U13-93-94-Altima-240sx.xdf` | **1989–2006** | 127.8 KB | `459739ee5fef532adf6f4f4cc29db51b` | TunerPro Binary Definition Map |
+| `U13-96-240sx-Altima.xdf` | **1989–2006** | 95.9 KB | `b18f48fcf94d8887f749f2e6a9c3ec1b` | TunerPro Binary Definition Map |
+| `Z31.xdf` | **1989–2006** | 30.3 KB | `291de52e361518ebe13f52c2c436e364` | TunerPro Binary Definition Map |
+| `Z32.xdf` | **1989–2006** | 61.0 KB | `cbdd92027f7e92e65503f7e2192cd567` | TunerPro Binary Definition Map |
+| `Z32_512.xdf` | **1989–2006** | 71.3 KB | `295232210b9c374fa0b5daf3a2727fe1` | TunerPro Binary Definition Map |
+| `ca18det_v2.xdf` | **1989–2006** | 37.8 KB | `4ffe18a32986a82712e9e8f1c6fec6f3` | TunerPro Binary Definition Map |
+| `sr20ve.xdf` | **1989–2006** | 69.9 KB | `fd60ec05379a1ddb4e8bbb13fbd5f2a9` | TunerPro Binary Definition Map |
 
 ---
 

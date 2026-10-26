@@ -21,27 +21,29 @@ Nama berkas yang tersimpan merefleksikan identitas perangkat keras (Hardware ID)
 > [!NOTE]
 > Mempertahankan kode dan nomor asli pabrikan pada penamaan berkas sangat krusial agar perangkat lunak kalibrasi (seperti **TunerPro**, **WinOLS**, atau **RomRaider**) dapat mengenali dan mencocokkan peta definisi (*definition maps*) secara otomatis tanpa merusak asosiasi header ECU.
 
+* **Rentang Tahun / Model Year**: 2014–2020
+
 ---
 
-## 2. Manifest Aset Berkas Fisik (100% Verified)
+## 2. Manifest Fisik Kalibrasi & Definisi Terverifikasi
 
-Berikut adalah daftar lengkap berkas fisik yang tersimpan secara lokal di direktori ini:
+Berikut adalah daftar lengkap berkas fisik yang tersimpan secara lokal di direktori ini dengan verifikasi Model Year (Tahun Produksi), ukuran, MD5 checksum, dan tipe platform:
 
-| Nama Berkas | Tipe / Format | Ukuran (Bytes) | Deskripsi Teknis & Identifikasi |
-| :--- | :--- | :--- | :--- |
-| `00000D07596401.xdf` | `.XDF` | `1,173,892` bytes | BMW DME Flash Calibration ID `00000d07596401` |
-| `00000E2B3B0A01.xdf` | `.XDF` | `1,045,740` bytes | BMW DME Flash Calibration ID `00000e2b3b0a01` |
-| `00000FEF81A001.xdf` | `.XDF` | `1,269,547` bytes | BMW DME Flash Calibration ID `00000fef81a001` |
-| `00001A841D1401.xdf` | `.XDF` | `1,645,978` bytes | BMW DME Flash Calibration ID `00001a841d1401` |
-| `00001A841D2801.xdf` | `.XDF` | `1,637,957` bytes | BMW DME Flash Calibration ID `00001a841d2801` |
-| `00001C41279601.xdf` | `.XDF` | `1,273,833` bytes | BMW DME Flash Calibration ID `00001c41279601` |
-| `000021571D8202.xdf` | `.XDF` | `1,451,322` bytes | BMW DME Flash Calibration ID `000021571d8202` |
-| `000021571DAA01.xdf` | `.XDF` | `1,464,746` bytes | BMW DME Flash Calibration ID `000021571daa01` |
-| `000021571DBE01.xdf` | `.XDF` | `1,464,666` bytes | BMW DME Flash Calibration ID `000021571dbe01` |
-| `00002DF2132801.xdf` | `.XDF` | `1,384,089` bytes | BMW DME Flash Calibration ID `00002df2132801` |
-| `00005BA8134601.xdf` | `.XDF` | `1,682,278` bytes | BMW DME Flash Calibration ID `00005ba8134601` |
-| `00005BA8135001.xdf` | `.XDF` | `1,682,278` bytes | BMW DME Flash Calibration ID `00005ba8135001` |
-| `00005BA8135A01.xdf` | `.XDF` | `1,682,278` bytes | BMW DME Flash Calibration ID `00005ba8135a01` |
+| Filename | Tahun / Model Year | Size | MD5 Checksum | Type / Target Platform |
+| :--- | :---: | :--- | :--- | :--- |
+| `00000D07596401.xdf` | **2014–2020** | 1.12 MB | `54ecc9ce7f7887341ef0024d0efb1d8a` | TunerPro Binary Definition Map |
+| `00000E2B3B0A01.xdf` | **2014–2020** | 1021.2 KB | `2a1dfa71bd836d7a926179936ebaeb8d` | TunerPro Binary Definition Map |
+| `00000FEF81A001.xdf` | **2014–2020** | 1.21 MB | `83f1f282b0239d12ac198c9dba23aea8` | TunerPro Binary Definition Map |
+| `00001A841D1401.xdf` | **2014–2020** | 1.57 MB | `0a91d5aa1c18f041b51c2168bc6f17fa` | TunerPro Binary Definition Map |
+| `00001A841D2801.xdf` | **2014–2020** | 1.56 MB | `b4a403f71993964061f2e73b7596863f` | TunerPro Binary Definition Map |
+| `00001C41279601.xdf` | **2014–2020** | 1.21 MB | `85cfb2ad737aa42bfcfb8efb1050e1c6` | TunerPro Binary Definition Map |
+| `000021571D8202.xdf` | **2014–2020** | 1.38 MB | `04f0ae0563997b3bfcdfb684ee4ad731` | TunerPro Binary Definition Map |
+| `000021571DAA01.xdf` | **2014–2020** | 1.40 MB | `122abda26161d631f7c47e4bf1b3d34d` | TunerPro Binary Definition Map |
+| `000021571DBE01.xdf` | **2014–2020** | 1.40 MB | `9650d306df275b381cfff6c43d77c00a` | TunerPro Binary Definition Map |
+| `00002DF2132801.xdf` | **2014–2020** | 1.32 MB | `f5d6913ee2ecc1bcb137a42a96c7560e` | TunerPro Binary Definition Map |
+| `00005BA8134601.xdf` | **2014–2020** | 1.60 MB | `b40b2d66c96ec5f8d8a69cdaebd22dc9` | TunerPro Binary Definition Map |
+| `00005BA8135001.xdf` | **2014–2020** | 1.60 MB | `b40b2d66c96ec5f8d8a69cdaebd22dc9` | TunerPro Binary Definition Map |
+| `00005BA8135A01.xdf` | **2014–2020** | 1.60 MB | `b40b2d66c96ec5f8d8a69cdaebd22dc9` | TunerPro Binary Definition Map |
 
 ---
 

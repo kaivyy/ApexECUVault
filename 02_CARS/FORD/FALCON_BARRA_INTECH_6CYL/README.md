@@ -21,40 +21,42 @@ Nama berkas yang tersimpan merefleksikan identitas perangkat keras (Hardware ID)
 > [!NOTE]
 > Mempertahankan kode dan nomor asli pabrikan pada penamaan berkas sangat krusial agar perangkat lunak kalibrasi (seperti **TunerPro**, **WinOLS**, atau **RomRaider**) dapat mengenali dan mencocokkan peta definisi (*definition maps*) secara otomatis tanpa merusak asosiasi header ECU.
 
+* **Rentang Tahun / Model Year**: 1998–2010
+
 ---
 
-## 2. Manifest Aset Berkas Fisik (100% Verified)
+## 2. Manifest Fisik Kalibrasi & Definisi Terverifikasi
 
-Berikut adalah daftar lengkap berkas fisik yang tersimpan secara lokal di direktori ini:
+Berikut adalah daftar lengkap berkas fisik yang tersimpan secara lokal di direktori ini dengan verifikasi Model Year (Tahun Produksi), ukuran, MD5 checksum, dan tipe platform:
 
-| Nama Berkas | Tipe / Format | Ukuran (Bytes) | Deskripsi Teknis & Identifikasi |
-| :--- | :--- | :--- | :--- |
-| `12AF_NGIC9A5.256k.bin` | `.BIN` | `262,144` bytes | Binary Firmware / Calibration Dump |
-| `12BE_NGIC9B3.256k.bin` | `.BIN` | `262,144` bytes | Binary Firmware / Calibration Dump |
-| `12CD_NGIC9CF.256k.bin` | `.BIN` | `262,144` bytes | Binary Firmware / Calibration Dump |
-| `12FD_NGIC9F9.256k.bin` | `.BIN` | `262,144` bytes | Binary Firmware / Calibration Dump |
-| `12UD-TurboEnhancedFuel.bin` | `.BIN` | `262,144` bytes | Binary Firmware / Calibration Dump |
-| `12UD_NGIC9UZ.256k.bin` | `.BIN` | `262,144` bytes | Binary Firmware / Calibration Dump |
-| `12VC_NGIC9V7.256k.bin` | `.BIN` | `262,144` bytes | Binary Firmware / Calibration Dump |
-| `12WD_NGIC9WG.256k.bin` | `.BIN` | `262,144` bytes | Binary Firmware / Calibration Dump |
-| `12ZE_NGIC9Z4.256k.bin` | `.BIN` | `262,144` bytes | Binary Firmware / Calibration Dump |
-| `22AB_NGIC9AJ.256k.bin` | `.BIN` | `262,144` bytes | Binary Firmware / Calibration Dump |
-| `22VA_NGICA2Z.256k.bin` | `.BIN` | `262,144` bytes | Binary Firmware / Calibration Dump |
-| `3DAC Extended Alpha.xdf` | `.XDF` | `169,147` bytes | TunerPro Binary Definition Map |
-| `3DAC PrePatched.bin` | `.BIN` | `262,144` bytes | Binary Firmware / Calibration Dump |
-| `HWAD3 Early Access 0.1.xdf` | `.XDF` | `394,362` bytes | TunerPro Binary Definition Map |
-| `N9XJ4 Extended v1.1.xdf` | `.XDF` | `263,102` bytes | TunerPro Binary Definition Map |
-| `N9XJ4 Extended.xdf` | `.XDF` | `260,410` bytes | TunerPro Binary Definition Map |
-| `NGIC9 Extended v1.1.xdf` | `.XDF` | `329,472` bytes | TunerPro Binary Definition Map |
-| `NGIC9 Extended v1.11.xdf` | `.XDF` | `337,436` bytes | TunerPro Binary Definition Map |
-| `NGIC9 Extended v1.12.xdf` | `.XDF` | `338,115` bytes | TunerPro Binary Definition Map |
-| `NGIC9 Extended v1.2.xdf` | `.XDF` | `490,076` bytes | TunerPro Binary Definition Map |
-| `NGIC9 Extended v1.21.xdf` | `.XDF` | `561,688` bytes | TunerPro Binary Definition Map |
-| `NGIC9 Extended v1.3.xdf` | `.XDF` | `1,110,453` bytes | TunerPro Binary Definition Map |
-| `NGIC9 Extended v1.31-b.xdf` | `.XDF` | `1,111,829` bytes | TunerPro Binary Definition Map |
-| `NGIC9 Extended v1.32-b.xdf` | `.XDF` | `1,111,890` bytes | TunerPro Binary Definition Map |
-| `NGIC9 Extended.xdf` | `.XDF` | `329,077` bytes | TunerPro Binary Definition Map |
-| `NGIC9 Generic.bin` | `.BIN` | `262,144` bytes | Binary Firmware / Calibration Dump |
+| Filename | Tahun / Model Year | Size | MD5 Checksum | Type / Target Platform |
+| :--- | :---: | :--- | :--- | :--- |
+| `12AF_NGIC9A5.256k.bin` | **1998–2010** | 256.0 KB | `ba73856610803713c3cbe86a44377f3f` | Factory Binary Firmware Dump |
+| `12BE_NGIC9B3.256k.bin` | **1998–2010** | 256.0 KB | `956675312536ba1600ac05e20670b51b` | Factory Binary Firmware Dump |
+| `12CD_NGIC9CF.256k.bin` | **1998–2010** | 256.0 KB | `b8bf23db71a16b2a64e6d01106d05776` | Factory Binary Firmware Dump |
+| `12FD_NGIC9F9.256k.bin` | **1998–2010** | 256.0 KB | `37208c17d320535180ea0ef615a55c5d` | Factory Binary Firmware Dump |
+| `12UD-TurboEnhancedFuel.bin` | **1998–2010** | 256.0 KB | `1bf9b180d0bcd2f0752e540f4f636fe2` | Factory Binary Firmware Dump |
+| `12UD_NGIC9UZ.256k.bin` | **1998–2010** | 256.0 KB | `51b1e4fe858d8498eed593e6c06fd00e` | Factory Binary Firmware Dump |
+| `12VC_NGIC9V7.256k.bin` | **1998–2010** | 256.0 KB | `553c7b0d05f2ba6b6aa11535253525c6` | Factory Binary Firmware Dump |
+| `12WD_NGIC9WG.256k.bin` | **1998–2010** | 256.0 KB | `5db014395b690fa7169543a21dea1cb7` | Factory Binary Firmware Dump |
+| `12ZE_NGIC9Z4.256k.bin` | **1998–2010** | 256.0 KB | `9a92151df8cca7753f84fc34464999be` | Factory Binary Firmware Dump |
+| `22AB_NGIC9AJ.256k.bin` | **1998–2010** | 256.0 KB | `2aac62b296caa3be655a5e341ed984c8` | Factory Binary Firmware Dump |
+| `22VA_NGICA2Z.256k.bin` | **1998–2010** | 256.0 KB | `9ab4d9d4734b44ddba007d83d49a0f36` | Factory Binary Firmware Dump |
+| `3DAC Extended Alpha.xdf` | **1998–2010** | 165.2 KB | `c4c81208e0f5f98e431cfb2962e540ed` | TunerPro Binary Definition Map |
+| `3DAC PrePatched.bin` | **1998–2010** | 256.0 KB | `9e5825008f152376c896af659a69e940` | Factory Binary Firmware Dump |
+| `HWAD3 Early Access 0.1.xdf` | **1998–2010** | 385.1 KB | `5dbe568c3dfc299e435e907f84f10c5d` | TunerPro Binary Definition Map |
+| `N9XJ4 Extended v1.1.xdf` | **1998–2010** | 256.9 KB | `c5b464110a9589f4130d877a159c0d0b` | TunerPro Binary Definition Map |
+| `N9XJ4 Extended.xdf` | **1998–2010** | 254.3 KB | `e6289cccf4476e4ac4269a6000278430` | TunerPro Binary Definition Map |
+| `NGIC9 Extended v1.1.xdf` | **1998–2010** | 321.8 KB | `a86bfe65875fc6385aeaa7f3cde7747e` | TunerPro Binary Definition Map |
+| `NGIC9 Extended v1.11.xdf` | **1998–2010** | 329.5 KB | `924c853ac12f47bd5496c927b62980ea` | TunerPro Binary Definition Map |
+| `NGIC9 Extended v1.12.xdf` | **1998–2010** | 330.2 KB | `33f15c812bb6fbaaa8de8e23a4a95b38` | TunerPro Binary Definition Map |
+| `NGIC9 Extended v1.2.xdf` | **1998–2010** | 478.6 KB | `b1c4001dccdc7092ead68af2e43b302d` | TunerPro Binary Definition Map |
+| `NGIC9 Extended v1.21.xdf` | **1998–2010** | 548.5 KB | `a67ccbd487a25226935f2e9d3765d40c` | TunerPro Binary Definition Map |
+| `NGIC9 Extended v1.3.xdf` | **1998–2010** | 1.06 MB | `64d05f2f70267cf8952cb69fad8bee59` | TunerPro Binary Definition Map |
+| `NGIC9 Extended v1.31-b.xdf` | **1998–2010** | 1.06 MB | `00b13751c3e4ca5b3dce216098cf1346` | TunerPro Binary Definition Map |
+| `NGIC9 Extended v1.32-b.xdf` | **1998–2010** | 1.06 MB | `280d9f62741d500a34679be209f8b35b` | TunerPro Binary Definition Map |
+| `NGIC9 Extended.xdf` | **1998–2010** | 321.4 KB | `2db964227e8d6a87b63dd414c4411980` | TunerPro Binary Definition Map |
+| `NGIC9 Generic.bin` | **1998–2010** | 256.0 KB | `ba73856610803713c3cbe86a44377f3f` | Factory Binary Firmware Dump |
 
 ---
 

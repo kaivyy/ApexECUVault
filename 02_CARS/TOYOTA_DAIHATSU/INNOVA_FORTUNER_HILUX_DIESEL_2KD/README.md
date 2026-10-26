@@ -21,24 +21,26 @@ Nama berkas yang tersimpan merefleksikan identitas perangkat keras (Hardware ID)
 > [!NOTE]
 > Mempertahankan kode dan nomor asli pabrikan pada penamaan berkas sangat krusial agar perangkat lunak kalibrasi (seperti **TunerPro**, **WinOLS**, atau **RomRaider**) dapat mengenali dan mencocokkan peta definisi (*definition maps*) secara otomatis tanpa merusak asosiasi header ECU.
 
+* **Rentang Tahun / Model Year**: 2004–2015
+
 ---
 
-## 2. Manifest Aset Berkas Fisik (100% Verified)
+## 2. Manifest Fisik Kalibrasi & Definisi Terverifikasi
 
-Berikut adalah daftar lengkap berkas fisik yang tersimpan secara lokal di direktori ini:
+Berikut adalah daftar lengkap berkas fisik yang tersimpan secara lokal di direktori ini dengan verifikasi Model Year (Tahun Produksi), ukuran, MD5 checksum, dan tipe platform:
 
-| Nama Berkas | Tipe / Format | Ukuran (Bytes) | Deskripsi Teknis & Identifikasi |
-| :--- | :--- | :--- | :--- |
-| `GENERATIONAL_89663-0K180_INNOVA_NON_IC_Toyota_Kijang_Innova_2.5_D-4D_Gen_1_Non-Intercooler_(2004-2011).xdf` | `.XDF` | `5,543` bytes | Toyota / Denso Factory Calibration ID `89663-0K180` |
-| `GENERATIONAL_89663-0K750_INNOVA_VNT_Toyota_Kijang_Innova_2.5_D-4D_Gen_1_VN-Turbo_Intercooler_(2011-2015).xdf` | `.XDF` | `5,547` bytes | Toyota / Denso Factory Calibration ID `89663-0K750` |
-| `GENERATIONAL_89663-0K750_Toyota_Innova_2.5_D_4D_VN_Turbo_Intercooler_2011_2015.xdf` | `.XDF` | `1,537` bytes | Toyota / Denso Factory Calibration ID `89663-0K750` |
-| `TOYOTA_89663-0K180_2KD.xdf` | `.XDF` | `12,127` bytes | Toyota / Denso Factory Calibration ID `89663-0K180` |
-| `TOYOTA_FORTUNER_INNOVA_2012_2.7L_2TRFE_AUTO_89663-0K630.bin` | `.BIN` | `376,832` bytes | Toyota / Denso Factory Calibration ID `89663-0K630` |
-| `TOYOTA_FORTUNER_INNOVA_2014_2.7L_2TRFE_AUTO_89663-0KX30.bin` | `.BIN` | `524,288` bytes | Toyota / Denso Factory Calibration ID `89663-0KX30` |
-| `TOYOTA_HIACE_HILUX_2011_2.5TD_2KDFTV_89663-26331.bin` | `.BIN` | `376,832` bytes | Toyota / Denso Factory Calibration ID `89663-26331` |
-| `TOYOTA_INNOVA_HILUX_2012_2.5TD_2KDFTV_MANUAL_89663-0KM60.bin` | `.BIN` | `507,904` bytes | Toyota / Denso Factory Calibration ID `89663-0KM60` |
-| `TOYOTA_INNOVA_HILUX_2013_2.5TD_2KDFTV_MANUAL_89663-0KM63.bin` | `.BIN` | `507,904` bytes | Toyota / Denso Factory Calibration ID `89663-0KM63` |
-| `TOYOTA_INNOVA_HILUX_VNT_2014_2.5TD_2KDFTV_AUTO_89663-0KR70.bin` | `.BIN` | `1,015,808` bytes | Toyota / Denso Factory Calibration ID `89663-0KR70` |
+| Filename | Tahun / Model Year | Size | MD5 Checksum | Type / Target Platform |
+| :--- | :---: | :--- | :--- | :--- |
+| `GENERATIONAL_89663-0K180_INNOVA_NON_IC_Toyota_Kijang_Innova_2.5_D-4D_Gen_1_Non-Intercooler_(2004-2011).xdf` | **2004–2011** | 5.4 KB | `f3d847d8821a7774206d6b2897dcc339` | TunerPro Binary Definition Map |
+| `GENERATIONAL_89663-0K750_INNOVA_VNT_Toyota_Kijang_Innova_2.5_D-4D_Gen_1_VN-Turbo_Intercooler_(2011-2015).xdf` | **2011–2015** | 5.4 KB | `226aa21afde583f159d71a00e9b3615d` | TunerPro Binary Definition Map |
+| `GENERATIONAL_89663-0K750_Toyota_Innova_2.5_D_4D_VN_Turbo_Intercooler_2011_2015.xdf` | **2011–2015** | 1.5 KB | `8f8354630cfd53fd245e6584e3afcbc9` | TunerPro Binary Definition Map |
+| `TOYOTA_89663-0K180_2KD.xdf` | **2004–2015** | 11.8 KB | `40354a237258699f8cac86235dfd0201` | TunerPro Binary Definition Map |
+| `TOYOTA_FORTUNER_INNOVA_2012_2.7L_2TRFE_AUTO_89663-0K630.bin` | **2012** | 368.0 KB | `bc9e8ac16f923a62af7413c6e63ea86f` | Factory Binary Firmware Dump |
+| `TOYOTA_FORTUNER_INNOVA_2014_2.7L_2TRFE_AUTO_89663-0KX30.bin` | **2014** | 512.0 KB | `056b4788d3e706ef9f9050895a27fa7b` | Factory Binary Firmware Dump |
+| `TOYOTA_HIACE_HILUX_2011_2.5TD_2KDFTV_89663-26331.bin` | **2011** | 368.0 KB | `b3cbd5f50d25442e9e5562e4163009d8` | Factory Binary Firmware Dump |
+| `TOYOTA_INNOVA_HILUX_2012_2.5TD_2KDFTV_MANUAL_89663-0KM60.bin` | **2012** | 496.0 KB | `c871a59bb497d208b5d63aa440003a01` | Factory Binary Firmware Dump |
+| `TOYOTA_INNOVA_HILUX_2013_2.5TD_2KDFTV_MANUAL_89663-0KM63.bin` | **2013** | 496.0 KB | `bba31550b1c308a9270c562cd6930911` | Factory Binary Firmware Dump |
+| `TOYOTA_INNOVA_HILUX_VNT_2014_2.5TD_2KDFTV_AUTO_89663-0KR70.bin` | **2014** | 992.0 KB | `5d52e47279a8ffcb3de351d13a0ad687` | Factory Binary Firmware Dump |
 
 ---
 

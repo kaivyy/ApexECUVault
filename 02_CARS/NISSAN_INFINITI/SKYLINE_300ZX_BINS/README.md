@@ -21,17 +21,19 @@ Nama berkas yang tersimpan merefleksikan identitas perangkat keras (Hardware ID)
 > [!NOTE]
 > Mempertahankan kode dan nomor asli pabrikan pada penamaan berkas sangat krusial agar perangkat lunak kalibrasi (seperti **TunerPro**, **WinOLS**, atau **RomRaider**) dapat mengenali dan mencocokkan peta definisi (*definition maps*) secara otomatis tanpa merusak asosiasi header ECU.
 
+* **Rentang Tahun / Model Year**: OEM Production
+
 ---
 
-## 2. Manifest Aset Berkas Fisik (100% Verified)
+## 2. Manifest Fisik Kalibrasi & Definisi Terverifikasi
 
-Berikut adalah daftar lengkap berkas fisik yang tersimpan secara lokal di direktori ini:
+Berikut adalah daftar lengkap berkas fisik yang tersimpan secara lokal di direktori ini dengan verifikasi Model Year (Tahun Produksi), ukuran, MD5 checksum, dan tipe platform:
 
-| Nama Berkas | Tipe / Format | Ukuran (Bytes) | Deskripsi Teknis & Identifikasi |
-| :--- | :--- | :--- | :--- |
-| `88_Z31turbo32k.bin` | `.BIN` | `32,768` bytes | Binary Firmware / Calibration Dump |
-| `R32_GTS4_stock_ROM_MEC-R214B.bin` | `.BIN` | `32,768` bytes | Binary Firmware / Calibration Dump |
-| `sr20det.bin` | `.BIN` | `32,768` bytes | Binary Firmware / Calibration Dump |
+| Filename | Tahun / Model Year | Size | MD5 Checksum | Type / Target Platform |
+| :--- | :---: | :--- | :--- | :--- |
+| `88_Z31turbo32k.bin` | **1988** | 32.0 KB | `939e73454170613cbdc0d97e3ea32094` | Factory Binary Firmware Dump |
+| `R32_GTS4_stock_ROM_MEC-R214B.bin` | **1989–1994** | 32.0 KB | `54afbdec04e2de44dc7098a4defaf49f` | Factory Binary Firmware Dump |
+| `sr20det.bin` | **OEM Production** | 32.0 KB | `fe9828465e5bd2e11f9cd0cadc1db2ec` | Factory Binary Firmware Dump |
 
 ---
 

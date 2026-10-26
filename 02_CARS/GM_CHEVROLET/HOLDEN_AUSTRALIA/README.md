@@ -3,20 +3,23 @@
 ## 1. Technical Overview
 Koleksi biner kalibrasi pabrikan OEM dan definisi tuning untuk modul ECU platform HOLDEN AUSTRALIA.
 
+* **Rentang Tahun / Model Year**: 1988–2006
 * **Total File Terdaftar**: 6 file (100% fisik terverifikasi, Zero Synthetic)
 
 ---
 
 ## 2. Manifest Fisik Kalibrasi & Definisi Terverifikasi
 
-| Filename | Size | MD5 Checksum | Type / Target |
-| :--- | :--- | :--- | :--- |
-| `11.xdf` | 277.6 KB | `5dc439ac730d11ebafcb06a824348e02` | TunerPro Binary Definition Map |
-| `1227808_5d_mod2.ecu` | 166.3 KB | `27b68caba26a41cec5934df9daf1a60e` | ECU / ASAP2 Calibration Map Definition |
-| `16183082_12_v2b.ecu` | 115.2 KB | `8ba370a19f0c2394eeebd876b9ee504f` | ECU / ASAP2 Calibration Map Definition |
-| `83HoldenVS_V8_v2.xdf` | 192.5 KB | `40e2e28565bf901645160d8d9b83b312` | TunerPro Binary Definition Map |
-| `A5.xdf` | 179.4 KB | `b53b9ee25c49b5c2f2e5ecb6bcf29993` | TunerPro Binary Definition Map |
-| `FB.xdf` | 188.3 KB | `0ead088c544d4790bc107658b9814235` | TunerPro Binary Definition Map |
+Berikut adalah daftar lengkap berkas fisik yang tersimpan secara lokal di direktori ini dengan verifikasi Model Year (Tahun Produksi), ukuran, MD5 checksum, dan tipe platform:
+
+| Filename | Tahun / Model Year | Size | MD5 Checksum | Type / Target Platform |
+| :--- | :---: | :--- | :--- | :--- |
+| `11.xdf` | **1988–2006** | 277.6 KB | `5dc439ac730d11ebafcb06a824348e02` | TunerPro Binary Definition Map |
+| `1227808_5d_mod2.ecu` | **1988–2006** | 166.3 KB | `27b68caba26a41cec5934df9daf1a60e` | ECU / ASAP2 Calibration Map Definition |
+| `16183082_12_v2b.ecu` | **1988–2006** | 115.2 KB | `8ba370a19f0c2394eeebd876b9ee504f` | ECU / ASAP2 Calibration Map Definition |
+| `83HoldenVS_V8_v2.xdf` | **1983** | 192.5 KB | `40e2e28565bf901645160d8d9b83b312` | TunerPro Binary Definition Map |
+| `A5.xdf` | **1988–2006** | 179.4 KB | `b53b9ee25c49b5c2f2e5ecb6bcf29993` | TunerPro Binary Definition Map |
+| `FB.xdf` | **1988–2006** | 188.3 KB | `0ead088c544d4790bc107658b9814235` | TunerPro Binary Definition Map |
 
 ---
 

@@ -21,19 +21,21 @@ Nama berkas yang tersimpan merefleksikan identitas perangkat keras (Hardware ID)
 > [!NOTE]
 > Mempertahankan kode dan nomor asli pabrikan pada penamaan berkas sangat krusial agar perangkat lunak kalibrasi (seperti **TunerPro**, **WinOLS**, atau **RomRaider**) dapat mengenali dan mencocokkan peta definisi (*definition maps*) secara otomatis tanpa merusak asosiasi header ECU.
 
+* **Rentang Tahun / Model Year**: 1989–2006
+
 ---
 
-## 2. Manifest Aset Berkas Fisik (100% Verified)
+## 2. Manifest Fisik Kalibrasi & Definisi Terverifikasi
 
-Berikut adalah daftar lengkap berkas fisik yang tersimpan secara lokal di direktori ini:
+Berikut adalah daftar lengkap berkas fisik yang tersimpan secara lokal di direktori ini dengan verifikasi Model Year (Tahun Produksi), ukuran, MD5 checksum, dan tipe platform:
 
-| Nama Berkas | Tipe / Format | Ukuran (Bytes) | Deskripsi Teknis & Identifikasi |
-| :--- | :--- | :--- | :--- |
-| `GM-V6.xdf` | `.XDF` | `660` bytes | TunerPro Binary Definition Map |
-| `P12-Checksum.xdf` | `.XDF` | `658` bytes | TunerPro Binary Definition Map |
-| `e38-e67-checksum.xdf` | `.XDF` | `984` bytes | TunerPro Binary Definition Map |
-| `p01-checksum.xdf` | `.XDF` | `909` bytes | TunerPro Binary Definition Map |
-| `p59-checksum.xdf` | `.XDF` | `906` bytes | TunerPro Binary Definition Map |
+| Filename | Tahun / Model Year | Size | MD5 Checksum | Type / Target Platform |
+| :--- | :---: | :--- | :--- | :--- |
+| `GM-V6.xdf` | **1989–2006** | 660 B | `25ba55868af2b9a93c8c66b21ea6ed80` | TunerPro Binary Definition Map |
+| `P12-Checksum.xdf` | **1989–2006** | 658 B | `9fe1a4f268f1653b89c414fd1febbc94` | TunerPro Binary Definition Map |
+| `e38-e67-checksum.xdf` | **1989–2006** | 984 B | `d36809541d9efede441a9c30f523b4ae` | TunerPro Binary Definition Map |
+| `p01-checksum.xdf` | **1989–2006** | 909 B | `d9fa105fdea87fe6fca7a30fc1cfb54e` | TunerPro Binary Definition Map |
+| `p59-checksum.xdf` | **1989–2006** | 906 B | `14c6b28f461bdbfd03433486b86e5797` | TunerPro Binary Definition Map |
 
 ---
 

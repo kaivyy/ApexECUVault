@@ -24,31 +24,33 @@ Nama berkas yang tersimpan merefleksikan identitas perangkat keras (Hardware ID)
 > [!NOTE]
 > Mempertahankan kode dan nomor asli pabrikan pada penamaan berkas sangat krusial agar perangkat lunak kalibrasi (seperti **TunerPro**, **WinOLS**, atau **EcuFlash**) dapat mengenali dan mencocokkan peta definisi (*definition maps*) secara otomatis tanpa merusak asosiasi header ECU.
 
+* **Rentang Tahun / Model Year**: 1988–1991
+
 ---
 
-## 2. Manifest Aset Berkas Fisik (100% Verified)
+## 2. Manifest Fisik Kalibrasi & Definisi Terverifikasi
 
-Berikut adalah daftar lengkap berkas fisik yang tersimpan secara lokal di direktori ini:
+Berikut adalah daftar lengkap berkas fisik yang tersimpan secara lokal di direktori ini dengan verifikasi Model Year (Tahun Produksi), ukuran, MD5 checksum, dan tipe platform:
 
-| Nama Berkas | Tipe / Format | Ukuran (Bytes) | Deskripsi Teknis & Identifikasi |
-| :--- | :--- | :--- | :--- |
-| `121_pm5_701.bin` | `Original OEM Binary Flash Dump` | 16,384 | Berkas biner firmware resmi pabrikan (16,384 bytes) hasil hardware read murni (Zero-Synthetic) |
-| `p04_rev1_198.bin` | `Original OEM Binary Flash Dump` | 32,768 | Berkas biner firmware resmi pabrikan (32,768 bytes) hasil hardware read murni (Zero-Synthetic) |
-| `p04_rev2_146.bin` | `Original OEM Binary Flash Dump` | 32,768 | Berkas biner firmware resmi pabrikan (32,768 bytes) hasil hardware read murni (Zero-Synthetic) |
-| `p04_rev3_171.bin` | `Original OEM Binary Flash Dump` | 32,768 | Berkas biner firmware resmi pabrikan (32,768 bytes) hasil hardware read murni (Zero-Synthetic) |
-| `p04_rev4_222.bin` | `Original OEM Binary Flash Dump` | 32,768 | Berkas biner firmware resmi pabrikan (32,768 bytes) hasil hardware read murni (Zero-Synthetic) |
-| `p04_rev5_136.bin` | `Original OEM Binary Flash Dump` | 32,768 | Berkas biner firmware resmi pabrikan (32,768 bytes) hasil hardware read murni (Zero-Synthetic) |
-| `p04_rev6_826.bin` | `Original OEM Binary Flash Dump` | 32,768 | Berkas biner firmware resmi pabrikan (32,768 bytes) hasil hardware read murni (Zero-Synthetic) |
-| `p04_rev7_107.bin` | `Original OEM Binary Flash Dump` | 32,768 | Berkas biner firmware resmi pabrikan (32,768 bytes) hasil hardware read murni (Zero-Synthetic) |
-| `p04_rev8_128.bin` | `Original OEM Binary Flash Dump` | 32,768 | Berkas biner firmware resmi pabrikan (32,768 bytes) hasil hardware read murni (Zero-Synthetic) |
-| `p04_rev9_140.bin` | `Original OEM Binary Flash Dump` | 32,768 | Berkas biner firmware resmi pabrikan (32,768 bytes) hasil hardware read murni (Zero-Synthetic) |
-| `p04_try_374.bin` | `Original OEM Binary Flash Dump` | 32,768 | Berkas biner firmware resmi pabrikan (32,768 bytes) hasil hardware read murni (Zero-Synthetic) |
-| `pm5_dump_176.bin` | `Original OEM Binary Flash Dump` | 32,768 | Berkas biner firmware resmi pabrikan (32,768 bytes) hasil hardware read murni (Zero-Synthetic) |
-| `pm5_x30_1991508_175.bin` | `Original OEM Binary Flash Dump` | 32,768 | Berkas biner firmware resmi pabrikan (32,768 bytes) hasil hardware read murni (Zero-Synthetic) |
-| `stock_p04-g01_131.bin` | `Original OEM Binary Flash Dump` | 32,768 | Berkas biner firmware resmi pabrikan (32,768 bytes) hasil hardware read murni (Zero-Synthetic) |
-| `stock_p04-g01_297.bin` | `Original OEM Binary Flash Dump` | 32,768 | Berkas biner firmware resmi pabrikan (32,768 bytes) hasil hardware read murni (Zero-Synthetic) |
-| `stock_p04-g02_sajmon1100_739.bin` | `Original OEM Binary Flash Dump` | 32,768 | Berkas biner firmware resmi pabrikan (32,768 bytes) hasil hardware read murni (Zero-Synthetic) |
-| `stock_pm5_x30_120.bin` | `Original OEM Binary Flash Dump` | 32,768 | Berkas biner firmware resmi pabrikan (32,768 bytes) hasil hardware read murni (Zero-Synthetic) |
+| Filename | Tahun / Model Year | Size | MD5 Checksum | Type / Target Platform |
+| :--- | :---: | :--- | :--- | :--- |
+| `121_pm5_701.bin` | **1988–1991** | 16.0 KB | `c1a71ffe1a0d2c9e913699e6cb8ac208` | Factory Binary Firmware Dump |
+| `p04_rev1_198.bin` | **1988–1991** | 32.0 KB | `244bfe94a3d5306b9322a98f017d4abb` | Factory Binary Firmware Dump |
+| `p04_rev2_146.bin` | **1988–1991** | 32.0 KB | `fe8e425c4f3243323b73939a9b9d60ec` | Factory Binary Firmware Dump |
+| `p04_rev3_171.bin` | **1988–1991** | 32.0 KB | `3dd1c56685f3b81b8e9ab5678ddd4520` | Factory Binary Firmware Dump |
+| `p04_rev4_222.bin` | **1988–1991** | 32.0 KB | `e22cc549a8ab2751bfa7e5aa54132081` | Factory Binary Firmware Dump |
+| `p04_rev5_136.bin` | **1988–1991** | 32.0 KB | `3ead4169c18df94a05729a5f34270c5e` | Factory Binary Firmware Dump |
+| `p04_rev6_826.bin` | **1988–1991** | 32.0 KB | `8d2230dd7e79081e37e62735245d675a` | Factory Binary Firmware Dump |
+| `p04_rev7_107.bin` | **1988–1991** | 32.0 KB | `5e7da87e4d5cdb1a403b4f6164925b0c` | Factory Binary Firmware Dump |
+| `p04_rev8_128.bin` | **1988–1991** | 32.0 KB | `1ae65ab4ed174d07e388a7be826c8337` | Factory Binary Firmware Dump |
+| `p04_rev9_140.bin` | **1988–1991** | 32.0 KB | `5b646891bb38b31a6a696f79d8bd24cc` | Factory Binary Firmware Dump |
+| `p04_try_374.bin` | **1988–1991** | 32.0 KB | `df88aa07310de45fc0d7104aec57cf5b` | Factory Binary Firmware Dump |
+| `pm5_dump_176.bin` | **1988–1991** | 32.0 KB | `cc08b15d100e94e5224982b11bf9a0d7` | Factory Binary Firmware Dump |
+| `pm5_x30_1991508_175.bin` | **1988–1991** | 32.0 KB | `505a35a06c8aaa4a85bf9edee962f0c3` | Factory Binary Firmware Dump |
+| `stock_p04-g01_131.bin` | **1988–1991** | 32.0 KB | `dedfb60aef63ab9e6cc8045403c6e5ea` | Factory Binary Firmware Dump |
+| `stock_p04-g01_297.bin` | **1988–1991** | 32.0 KB | `dedfb60aef63ab9e6cc8045403c6e5ea` | Factory Binary Firmware Dump |
+| `stock_p04-g02_sajmon1100_739.bin` | **1988–1991** | 32.0 KB | `df88aa07310de45fc0d7104aec57cf5b` | Factory Binary Firmware Dump |
+| `stock_pm5_x30_120.bin` | **1988–1991** | 32.0 KB | `7719ed332d8b6783da4c3777cdd51b39` | Factory Binary Firmware Dump |
 
 ---
 

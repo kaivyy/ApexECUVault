@@ -21,33 +21,35 @@ Nama berkas yang tersimpan merefleksikan identitas perangkat keras (Hardware ID)
 > [!NOTE]
 > Mempertahankan kode dan nomor asli pabrikan pada penamaan berkas sangat krusial agar perangkat lunak kalibrasi (seperti **TunerPro**, **WinOLS**, atau **RomRaider**) dapat mengenali dan mencocokkan peta definisi (*definition maps*) secara otomatis tanpa merusak asosiasi header ECU.
 
+* **Rentang Tahun / Model Year**: 1989–2006
+
 ---
 
-## 2. Manifest Aset Berkas Fisik (100% Verified)
+## 2. Manifest Fisik Kalibrasi & Definisi Terverifikasi
 
-Berikut adalah daftar lengkap berkas fisik yang tersimpan secara lokal di direktori ini:
+Berikut adalah daftar lengkap berkas fisik yang tersimpan secara lokal di direktori ini dengan verifikasi Model Year (Tahun Produksi), ukuran, MD5 checksum, dan tipe platform:
 
-| Nama Berkas | Tipe / Format | Ukuran (Bytes) | Deskripsi Teknis & Identifikasi |
-| :--- | :--- | :--- | :--- |
-| `6DFC.bin` | `.BIN` | `262,144` bytes | Binary Firmware / Calibration Dump |
-| `6DFD.bin` | `.BIN` | `262,144` bytes | Binary Firmware / Calibration Dump |
-| `6DGC.bin` | `.BIN` | `262,144` bytes | Binary Firmware / Calibration Dump |
-| `6DGD.bin` | `.BIN` | `262,144` bytes | Binary Firmware / Calibration Dump |
-| `CBAZA.xdf` | `.XDF` | `317,307` bytes | TunerPro Binary Definition Map |
-| `CDAN4.xdf` | `.XDF` | `172,791` bytes | TunerPro Binary Definition Map |
-| `CRAJ0.xdf` | `.XDF` | `215,714` bytes | TunerPro Binary Definition Map |
-| `GUF1.xdf` | `.XDF` | `493,261` bytes | TunerPro Binary Definition Map |
-| `GUFA.xdf` | `.XDF` | `494,970` bytes | TunerPro Binary Definition Map |
-| `GUFB.xdf` | `.XDF` | `496,699` bytes | TunerPro Binary Definition Map |
-| `HWAD3.xdf` | `.XDF` | `44,157` bytes | TunerPro Binary Definition Map |
-| `IAW045_06.xdf` | `.XDF` | `39,613` bytes | TunerPro Binary Definition Map |
-| `IAW045_L01.xdf` | `.XDF` | `40,046` bytes | TunerPro Binary Definition Map |
-| `L8edited1.0.xdf` | `.XDF` | `74,788` bytes | TunerPro Binary Definition Map |
-| `LUX0.xdf` | `.XDF` | `374,255` bytes | TunerPro Binary Definition Map |
-| `N4AGB.xdf` | `.XDF` | `69,593` bytes | TunerPro Binary Definition Map |
-| `NVMG8.xdf` | `.XDF` | `411,833` bytes | TunerPro Binary Definition Map |
-| `P8_research_ver2.0.xdf` | `.XDF` | `137,044` bytes | TunerPro Binary Definition Map |
-| `T23B.xdf` | `.XDF` | `221,443` bytes | TunerPro Binary Definition Map |
+| Filename | Tahun / Model Year | Size | MD5 Checksum | Type / Target Platform |
+| :--- | :---: | :--- | :--- | :--- |
+| `6DFC.bin` | **1989–2006** | 256.0 KB | `2767e7e30e0652a9e795cfb5b409e982` | Factory Binary Firmware Dump |
+| `6DFD.bin` | **1989–2006** | 256.0 KB | `cb30e24470eb6d6725792135e5d906d4` | Factory Binary Firmware Dump |
+| `6DGC.bin` | **1989–2006** | 256.0 KB | `113db590ff6234de01d3ef3df75bd96d` | Factory Binary Firmware Dump |
+| `6DGD.bin` | **1989–2006** | 256.0 KB | `90bbde737a318cdfcbb352e22e14c868` | Factory Binary Firmware Dump |
+| `CBAZA.xdf` | **1989–2006** | 309.9 KB | `dc4628312362aa97968951d40fc5891d` | TunerPro Binary Definition Map |
+| `CDAN4.xdf` | **1989–2006** | 168.7 KB | `5e134df0c835951cd23c969d405d9d6c` | TunerPro Binary Definition Map |
+| `CRAJ0.xdf` | **1989–2006** | 210.7 KB | `00a2acf2a4905fd93bf8c95119e4148e` | TunerPro Binary Definition Map |
+| `GUF1.xdf` | **1989–2006** | 481.7 KB | `32e206fb24fe927cf56cdf1acd4e9f79` | TunerPro Binary Definition Map |
+| `GUFA.xdf` | **1989–2006** | 483.4 KB | `28d3c5bdf66182cff4b39850ebd44814` | TunerPro Binary Definition Map |
+| `GUFB.xdf` | **1989–2006** | 485.1 KB | `f5b62ef9f570031f3f6f79cd05f58e79` | TunerPro Binary Definition Map |
+| `HWAD3.xdf` | **1989–2006** | 43.1 KB | `9299466a21a1d47cdcfcfc831dd60337` | TunerPro Binary Definition Map |
+| `IAW045_06.xdf` | **2006** | 38.7 KB | `08427cd629463934008d86803e9e076f` | TunerPro Binary Definition Map |
+| `IAW045_L01.xdf` | **1989–2006** | 39.1 KB | `35dacdb6094f23237b1def5e86a483db` | TunerPro Binary Definition Map |
+| `L8edited1.0.xdf` | **1989–2006** | 73.0 KB | `dc3049c4a7ecc85e10cb063d3f15706a` | TunerPro Binary Definition Map |
+| `LUX0.xdf` | **1989–2006** | 365.5 KB | `af55aa33baf0c13abedfebb4be45a3cf` | TunerPro Binary Definition Map |
+| `N4AGB.xdf` | **1989–2006** | 68.0 KB | `8f4ba768f3f2166bc94447714611b829` | TunerPro Binary Definition Map |
+| `NVMG8.xdf` | **1989–2006** | 402.2 KB | `2b4cff99e5ae3571d05a455074577895` | TunerPro Binary Definition Map |
+| `P8_research_ver2.0.xdf` | **1989–2006** | 133.8 KB | `13513b416889c1c1e5c3c07d373f3b70` | TunerPro Binary Definition Map |
+| `T23B.xdf` | **1989–2006** | 216.3 KB | `d538b0867b73e1afeff6f807f6c228e8` | TunerPro Binary Definition Map |
 
 ---
 

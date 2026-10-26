@@ -21,19 +21,21 @@ Nama berkas yang tersimpan merefleksikan identitas perangkat keras (Hardware ID)
 > [!NOTE]
 > Mempertahankan kode dan nomor asli pabrikan pada penamaan berkas sangat krusial agar perangkat lunak kalibrasi (seperti **TunerPro**, **WinOLS**, atau **RomRaider**) dapat mengenali dan mencocokkan peta definisi (*definition maps*) secara otomatis tanpa merusak asosiasi header ECU.
 
+* **Rentang Tahun / Model Year**: OEM Production
+
 ---
 
-## 2. Manifest Aset Berkas Fisik (100% Verified)
+## 2. Manifest Fisik Kalibrasi & Definisi Terverifikasi
 
-Berikut adalah daftar lengkap berkas fisik yang tersimpan secara lokal di direktori ini:
+Berikut adalah daftar lengkap berkas fisik yang tersimpan secara lokal di direktori ini dengan verifikasi Model Year (Tahun Produksi), ukuran, MD5 checksum, dan tipe platform:
 
-| Nama Berkas | Tipe / Format | Ukuran (Bytes) | Deskripsi Teknis & Identifikasi |
-| :--- | :--- | :--- | :--- |
-| `01 LM7 12202088 (1).bin` | `.BIN` | `524,288` bytes | General Motors Operating System ID `12202088` |
-| `01 LM7 12202088.bin` | `.BIN` | `524,288` bytes | General Motors Operating System ID `12202088` |
-| `2001 Chevy S-10 L35 4.3L 4L60E (12202088).bin` | `.BIN` | `524,288` bytes | General Motors Operating System ID `12202088` |
-| `2001 Chevy Tahoe LM7 5.3L Auto (12202088).bin` | `.BIN` | `524,288` bytes | General Motors Operating System ID `12202088` |
-| `2001_6.0_2500_2wd _Cal_OS12202088.bin` | `.BIN` | `524,288` bytes | General Motors Operating System ID `12202088` |
+| Filename | Tahun / Model Year | Size | MD5 Checksum | Type / Target Platform |
+| :--- | :---: | :--- | :--- | :--- |
+| `01 LM7 12202088 (1).bin` | **2001** | 512.0 KB | `18ad0009d5aecbd08507ada55a71507e` | Factory Binary Firmware Dump |
+| `01 LM7 12202088.bin` | **2001** | 512.0 KB | `18ad0009d5aecbd08507ada55a71507e` | Factory Binary Firmware Dump |
+| `2001 Chevy S-10 L35 4.3L 4L60E (12202088).bin` | **2001** | 512.0 KB | `b15c78939740180888c087ebdfe21163` | Factory Binary Firmware Dump |
+| `2001 Chevy Tahoe LM7 5.3L Auto (12202088).bin` | **2001** | 512.0 KB | `4ceb219cacd6b2a5f5f361510fac86f1` | Factory Binary Firmware Dump |
+| `2001_6.0_2500_2wd _Cal_OS12202088.bin` | **2001** | 512.0 KB | `27bcf28b45720ba064694ebc7cc6b577` | Factory Binary Firmware Dump |
 
 ---
 

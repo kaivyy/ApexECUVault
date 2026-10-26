@@ -21,19 +21,21 @@ Nama berkas yang tersimpan merefleksikan identitas perangkat keras (Hardware ID)
 > [!NOTE]
 > Mempertahankan kode dan nomor asli pabrikan pada penamaan berkas sangat krusial agar perangkat lunak kalibrasi (seperti **TunerPro**, **WinOLS**, atau **RomRaider**) dapat mengenali dan mencocokkan peta definisi (*definition maps*) secara otomatis tanpa merusak asosiasi header ECU.
 
+* **Rentang Tahun / Model Year**: 1987–1993
+
 ---
 
-## 2. Manifest Aset Berkas Fisik (100% Verified)
+## 2. Manifest Fisik Kalibrasi & Definisi Terverifikasi
 
-Berikut adalah daftar lengkap berkas fisik yang tersimpan secara lokal di direktori ini:
+Berikut adalah daftar lengkap berkas fisik yang tersimpan secara lokal di direktori ini dengan verifikasi Model Year (Tahun Produksi), ukuran, MD5 checksum, dan tipe platform:
 
-| Nama Berkas | Tipe / Format | Ukuran (Bytes) | Deskripsi Teknis & Identifikasi |
-| :--- | :--- | :--- | :--- |
-| `BMW E30 318i 0261200157 356165.bin` | `.BIN` | `32,768` bytes | Bosch Motronic Hardware ID `0261200157` |
-| `BMW E30 325i 0261200173 355705.bin` | `.BIN` | `32,768` bytes | Bosch Motronic Hardware ID `0261200173` |
-| `M1.3 M20B25 ECU Definitions.xml` | `.XML` | `46,618` bytes | RomRaider / EcuFlash XML Definition |
-| `M1.3 M40B18 ECU Definitions.xml` | `.XML` | `46,291` bytes | RomRaider / EcuFlash XML Definition |
-| `M1.3 M42B18 ECU Definitions.xml` | `.XML` | `53,561` bytes | RomRaider / EcuFlash XML Definition |
+| Filename | Tahun / Model Year | Size | MD5 Checksum | Type / Target Platform |
+| :--- | :---: | :--- | :--- | :--- |
+| `BMW E30 318i 0261200157 356165.bin` | **1987–1993** | 32.0 KB | `3b9c805a05eea56313a866e2658f74e7` | Factory Binary Firmware Dump |
+| `BMW E30 325i 0261200173 355705.bin` | **1987–1993** | 32.0 KB | `ad32454a703d6eee8d4e604b22609e2f` | Factory Binary Firmware Dump |
+| `M1.3 M20B25 ECU Definitions.xml` | **1987–1993** | 45.5 KB | `861a3875c506732af79991c89496a812` | ECU / ASAP2 Calibration Map Definition |
+| `M1.3 M40B18 ECU Definitions.xml` | **1987–1993** | 45.2 KB | `a95e3e875e8c2f617c736a15225203a9` | ECU / ASAP2 Calibration Map Definition |
+| `M1.3 M42B18 ECU Definitions.xml` | **1987–1993** | 52.3 KB | `9305f6fe6a625e4d69678687f3d38370` | ECU / ASAP2 Calibration Map Definition |
 
 ---
 

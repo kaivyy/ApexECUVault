@@ -21,17 +21,19 @@ Nama berkas yang tersimpan merefleksikan identitas perangkat keras (Hardware ID)
 > [!NOTE]
 > Mempertahankan kode dan nomor asli pabrikan pada penamaan berkas sangat krusial agar perangkat lunak kalibrasi (seperti **TunerPro**, **WinOLS**, atau **RomRaider**) dapat mengenali dan mencocokkan peta definisi (*definition maps*) secara otomatis tanpa merusak asosiasi header ECU.
 
+* **Rentang Tahun / Model Year**: 2014–2024
+
 ---
 
-## 2. Manifest Aset Berkas Fisik (100% Verified)
+## 2. Manifest Fisik Kalibrasi & Definisi Terverifikasi
 
-Berikut adalah daftar lengkap berkas fisik yang tersimpan secara lokal di direktori ini:
+Berikut adalah daftar lengkap berkas fisik yang tersimpan secara lokal di direktori ini dengan verifikasi Model Year (Tahun Produksi), ukuran, MD5 checksum, dan tipe platform:
 
-| Nama Berkas | Tipe / Format | Ukuran (Bytes) | Deskripsi Teknis & Identifikasi |
-| :--- | :--- | :--- | :--- |
-| `38770-KPP-602.bin` | `.BIN` | `57,344` bytes | Honda Motorcycle Keihin ECU ROM `38770-KPP` |
-| `38770-KPP-N02.bin` | `.BIN` | `57,344` bytes | Honda Motorcycle Keihin ECU ROM `38770-KPP` |
-| `38770-KPP-T03.bin` | `.BIN` | `57,344` bytes | Honda Motorcycle Keihin ECU ROM `38770-KPP` |
+| Filename | Tahun / Model Year | Size | MD5 Checksum | Type / Target Platform |
+| :--- | :---: | :--- | :--- | :--- |
+| `38770-KPP-602.bin` | **2014–2024** | 56.0 KB | `1353ef8c9d307d5d505ce52cdc96f419` | Factory Binary Firmware Dump |
+| `38770-KPP-N02.bin` | **2014–2024** | 56.0 KB | `4e0df92ab66f570fdfb94835d6c81494` | Factory Binary Firmware Dump |
+| `38770-KPP-T03.bin` | **2014–2024** | 56.0 KB | `14abcbc6aafdd507d209d7e9975271e6` | Factory Binary Firmware Dump |
 
 ---
 

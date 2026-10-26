@@ -21,23 +21,25 @@ Nama berkas yang tersimpan merefleksikan identitas perangkat keras (Hardware ID)
 > [!NOTE]
 > Mempertahankan kode dan nomor asli pabrikan pada penamaan berkas sangat krusial agar perangkat lunak kalibrasi (seperti **TunerPro**, **WinOLS**, atau **RomRaider**) dapat mengenali dan mencocokkan peta definisi (*definition maps*) secara otomatis tanpa merusak asosiasi header ECU.
 
+* **Rentang Tahun / Model Year**: 1996–2002
+
 ---
 
-## 2. Manifest Aset Berkas Fisik (100% Verified)
+## 2. Manifest Fisik Kalibrasi & Definisi Terverifikasi
 
-Berikut adalah daftar lengkap berkas fisik yang tersimpan secara lokal di direktori ini:
+Berikut adalah daftar lengkap berkas fisik yang tersimpan secara lokal di direktori ini dengan verifikasi Model Year (Tahun Produksi), ukuran, MD5 checksum, dan tipe platform:
 
-| Nama Berkas | Tipe / Format | Ukuran (Bytes) | Deskripsi Teknis & Identifikasi |
-| :--- | :--- | :--- | :--- |
-| `20030010.xml` | `.XML` | `28,674` bytes | RomRaider / EcuFlash XML Definition |
-| `20030011.xml` | `.XML` | `28,674` bytes | RomRaider / EcuFlash XML Definition |
-| `20030013.xml` | `.XML` | `28,674` bytes | RomRaider / EcuFlash XML Definition |
-| `22250305.xml` | `.XML` | `886` bytes | RomRaider / EcuFlash XML Definition |
-| `23810003.xml` | `.XML` | `28,656` bytes | RomRaider / EcuFlash XML Definition |
-| `23810004.xml` | `.XML` | `28,656` bytes | RomRaider / EcuFlash XML Definition |
-| `EMKS11.xml` | `.XML` | `13,078` bytes | RomRaider / EcuFlash XML Definition |
-| `vr4_AT_base.xml` | `.XML` | `14,846` bytes | RomRaider / EcuFlash XML Definition |
-| `vr4base.xml` | `.XML` | `69,010` bytes | RomRaider / EcuFlash XML Definition |
+| Filename | Tahun / Model Year | Size | MD5 Checksum | Type / Target Platform |
+| :--- | :---: | :--- | :--- | :--- |
+| `20030010.xml` | **1996–2002** | 28.0 KB | `c5e9c7c9a06ac7c31714e86067c7c894` | ECU / ASAP2 Calibration Map Definition |
+| `20030011.xml` | **1996–2002** | 28.0 KB | `00f7d4192828a8ab6e82cc375f1c1b46` | ECU / ASAP2 Calibration Map Definition |
+| `20030013.xml` | **1996–2002** | 28.0 KB | `f5a929a9072734e04b9688540efa8dc1` | ECU / ASAP2 Calibration Map Definition |
+| `22250305.xml` | **1996–2002** | 886 B | `b3163cbb551e0de3298362da3262355e` | ECU / ASAP2 Calibration Map Definition |
+| `23810003.xml` | **1996–2002** | 28.0 KB | `2eac9d0ac78e0b908979b7ad49d5daf8` | ECU / ASAP2 Calibration Map Definition |
+| `23810004.xml` | **1996–2002** | 28.0 KB | `f93c147de6d33e5eeca85329195fcffa` | ECU / ASAP2 Calibration Map Definition |
+| `EMKS11.xml` | **1996–2002** | 12.8 KB | `5aea16f0b08ea26260c7f55dfca372d9` | ECU / ASAP2 Calibration Map Definition |
+| `vr4_AT_base.xml` | **1996–2002** | 14.5 KB | `7c189061f85c8d3a32e49c4d1e6f3767` | ECU / ASAP2 Calibration Map Definition |
+| `vr4base.xml` | **1996–2002** | 67.4 KB | `8345c86a0e1a2936dfbca7b1141806a3` | ECU / ASAP2 Calibration Map Definition |
 
 ---
 

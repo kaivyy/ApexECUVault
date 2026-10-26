@@ -2,11 +2,11 @@
 
 <p align="center">
   <img src="https://img.shields.io/badge/Status-100%25%20Authentic%20Verified-success?style=for-the-badge&logo=shield" alt="Status" />
-  <img src="https://img.shields.io/badge/Binary%20Dumps-7%2C780%2B%20Files-blue?style=for-the-badge&logo=microchip" alt="BIN Dumps" />
-  <img src="https://img.shields.io/badge/TunerPro%20XDF-2%2C567%20Maps-orange?style=for-the-badge&logo=gauge" alt="TunerPro XDFs" />
+  <img src="https://img.shields.io/badge/Binary%20Dumps-8%2C120%2B%20Files-blue?style=for-the-badge&logo=microchip" alt="BIN Dumps" />
+  <img src="https://img.shields.io/badge/TunerPro%20XDF-2%2C644%20Maps-orange?style=for-the-badge&logo=gauge" alt="TunerPro XDFs" />
   <img src="https://img.shields.io/badge/EcuFlash%20XML-1%2C086%20Defs-green?style=for-the-badge&logo=xml" alt="EcuFlash XML" />
-  <img src="https://img.shields.io/badge/Total%20Assets-11%2C843%20Files-purple?style=for-the-badge&logo=database" alt="Total Assets" />
-  <img src="https://img.shields.io/badge/Dossiers-308%20READMEs%20(100%25)-teal?style=for-the-badge&logo=readme" alt="README Coverage" />
+  <img src="https://img.shields.io/badge/Total%20Assets-12%2C271%20Files-purple?style=for-the-badge&logo=database" alt="Total Assets" />
+  <img src="https://img.shields.io/badge/Dossiers-315%20READMEs%20(100%25)-teal?style=for-the-badge&logo=readme" alt="README Coverage" />
 </p>
 
 <p align="center">
@@ -34,11 +34,11 @@ Whether you are performing standalone dynamometer remapping, reverse engineering
 
 | Asset Category | File Count | Storage Size | Description & Standards |
 | :--- | :---: | :---: | :--- |
-| **📦 Factory Binary Firmware & Dumps** | **7,780+** | ~8.1 GB | Raw factory ROMs, Flash, MPC, and EEPROM dumps (`.bin` 3,286, `.rwd` 2,576, `.ori` 1,332, `.hex` 532, `.tun` 16, `.std` 13, `.mod` 12, `.rom` 8) |
-| **🗺️ TunerPro Definition Maps** | **2,567** | ~1.8 GB | 2D/3D calibration tables for fuel, ignition, boost target, WGDC, and limiters (`.xdf`, `.ecu`, `.adx`) |
+| **📦 Factory Binary Firmware & Dumps** | **8,120+** | ~8.1 GB | Raw factory ROMs, Flash, MPC, and EEPROM dumps (`.bin` 3,630, `.rwd` 2,576, `.ori` 1,332, `.hex` 532, `.tun` 16, `.std` 13, `.mod` 12, `.rom` 8) |
+| **🗺️ TunerPro Definition Maps** | **2,644** | ~1.8 GB | 2D/3D calibration tables for fuel, ignition, boost target, WGDC, and limiters (`.xdf`, `.ecu`, `.adx`) |
 | **📑 EcuFlash & RomRaider XMLs** | **1,086** | ~46 MB | Standard OpenECU XML definitions with memory offsets and scaling formulas (`.xml`) |
-| **📚 Technical Documentation Dossiers** | **308** | ~12 MB | Comprehensive platform dossiers covering 100% of managed asset folders (`README.md`) |
-| **Total Curated Assets** | **11,843** | **9.99 GB** | Complete verified open-source automotive & motorcycle calibration database |
+| **📚 Technical Documentation Dossiers** | **315** | ~12 MB | Comprehensive platform dossiers covering 100% of managed asset folders (`README.md`) |
+| **Total Curated Assets** | **12,271** | **10.43 GB** | Complete verified open-source automotive & motorcycle calibration database |
 
 ---
 

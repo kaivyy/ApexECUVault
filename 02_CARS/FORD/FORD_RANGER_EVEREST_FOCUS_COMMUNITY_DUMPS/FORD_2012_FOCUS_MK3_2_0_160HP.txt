@@ -1,0 +1,29 @@
+Partial: T
+Starting address of partial file: 0x00020000
+Partial file size: 0x00060000
+Eprom size: 0x00200000
+
+File Version: 
+Name of the parent process: FLASH_0428
+Protocol version: 6.012 - 1.109
+File date: 09/11/2017
+File time: 09:44.20
+Brand: FORD / FORD US
+Model: FOCUS 3 series
+Type: 2.0L 16V Duratec Ti-VCT 119kW/160HP MED17/2
+Protocol: FLASH_0428 FORD ECOBOOST MED17.2
+Hardware Nr.: BV61-12B684-DA
+Software Nr.: CM5A-12A650-AEH
+Hardware date: 
+Software date: 
+VIN: MPB2XXMXB2DJ25055
+Software Version: 
+Spare part number: 
+Engine code: 
+Hardware Version: 
+Software Upgrade Nr.: CM5A-14C204-AEJ
+Unique identification number: 
+System type: 
+Client code: C8750
+File type: ECU
+Hardware type: NewGenius

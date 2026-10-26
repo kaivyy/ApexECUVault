@@ -1,0 +1,9 @@
+HW: 01804720AB
+SW: 01805DB6AA
+VIN nr.: MMMCD26YJDH302910
+SW ver.: 806
+Spare: 
+Engine: Z20H
+HW Ver.: 
+SW upg.: 01805EF7AA
+Installation: DCM37

@@ -1,0 +1,4976 @@
+XDF
+1.110000
+
+DO NOT HAND EDIT!!!! (Trust me)
+
+%%HEADER%%
+	001000 FileVers         =""
+	001005 DefTitle         ="GM_P4_ECM $83"
+	001007 DescSize         =0x0
+	001006 Desc             =""
+	001010 Author           =""
+	001030 BinSize          =0x8000
+	001035 BaseOffset       =0
+	001200 ADSAssoc         =""
+	001225 ADSCheck         =0x0
+	001300 GenFlags         =0x0
+	001325 ModeFlags        =0x0
+%%END%%
+
+%%CHECKSUM%%
+	000002 UniqueID         =0x2D38
+	010005 Title            ="Imported Checksum"
+	010010 DataStart        =0x6008
+	010015 DataEnd          =0x0
+	010020 SizeBits         =0x10
+	010025 StoreAddr        =0x6006
+	010030 CalcMethod       =0x0
+	010050 Flags            =0x0
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x2D39
+	020005 Title            ="PROMIDA: EPROM ID number"
+	020011 DescSize         =0xA3
+	020010 Desc             ="THIS FILE IS NOT COMPLETE:\r\n\r\nI HAVE USED IT TO DO A COUPLE OF THINGS: version 2 (found more things)\r\n\r\nPLEASE EMAIL ANY UPDATES TO:\r\n\r\nmickclean@bigpond.com.au  "
+	020020 Units            =" "
+	020050 SizeInBits       =0x10
+	020100 Address          =0x6000
+	020200 Equation         =1.000000 * X + 0.000000,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x2D3A
+	020005 Title            ="DATECODE: EPROM date code"
+	020011 DescSize         =0xB
+	020010 Desc             ="looks good"
+	020020 Units            =""
+	020050 SizeInBits       =0x10
+	020100 Address          =0x6002
+	020200 Equation         =1.000000 * X + 0.000000,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x2D3B
+	020005 Title            ="SEQNUMB: Production Sequence number"
+	020011 DescSize         =0xB
+	020010 Desc             ="looks good"
+	020020 Units            =""
+	020050 SizeInBits       =0x10
+	020100 Address          =0x6006
+	020200 Equation         =1.000000 * X + 0.000000,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x2D3C
+	020005 Title            ="KKSUM: Check sum $6008 through $0"
+	020011 DescSize         =0xB
+	020010 Desc             ="looks good"
+	020020 Units            =""
+	020050 SizeInBits       =0x10
+	020100 Address          =0x6008
+	020200 Equation         =1.000000 * X + 0.000000,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x2D3D
+	020005 Title            ="KKKPGMID: Program ID word - $83=1996 - $AA=bypass sumcheck"
+	020011 DescSize         =0xB
+	020010 Desc             ="looks good"
+	020020 Units            =""
+	020100 Address          =0x6008
+	020200 Equation         =X,TH|0|0|0|0|
+	020205 OutType          =0x3
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x2D3E
+	020005 Title            ="KRPMUP: RPM Threshold for engine running (EST)"
+	020011 DescSize         =0xB
+	020010 Desc             ="looks good"
+	020020 Units            ="RPM"
+	020100 Address          =0x6009
+	020200 Equation         =25.000000 * X + 0.000000,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x2D3F
+	020005 Title            ="KERUNCTR: number of succ refpers to allow eng run"
+	020011 DescSize         =0xB
+	020010 Desc             ="looks good"
+	020020 Units            ="Ref"
+	020100 Address          =0x600C
+	020200 Equation         =1.000000 * X + 0.000000,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x2D40
+	020005 Title            ="KFUELUP: RPM Threshold for run fuel mode"
+	020011 DescSize         =0xB
+	020010 Desc             ="looks good"
+	020020 Units            ="RPM"
+	020100 Address          =0x600D
+	020200 Equation         =25.000000 * X + 0.000000,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x2D41
+	020005 Title            ="KRUNFCTR: number of succ refpers to allow run fuel mode"
+	020011 DescSize         =0xB
+	020010 Desc             ="looks good"
+	020020 Units            ="Ref"
+	020100 Address          =0x600E
+	020200 Equation         =1.000000 * X + 0.000000,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x2D42
+	020005 Title            ="KNUMCYLS: Number of engine cylinders (6 or 8)"
+	020011 DescSize         =0xF
+	020010 Desc             ="LOOKS GOOD    "
+	020020 Units            ="cyls"
+	020100 Address          =0x8009
+	020200 Equation         =1.000000 * X + 0.000000,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x2D43
+	020005 Title            ="KFILTMP1: MAP params - MAP filter coefficient - Engine running"
+	020011 DescSize         =0xB
+	020010 Desc             ="looks good"
+	020020 Units            ="Coeff"
+	020100 Address          =0x8012
+	020200 Equation         =0.003906 * X + 0.000000,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x2D44
+	020005 Title            ="KKPMDF: MAP params - Default MAP reading for engine not running"
+	020011 DescSize         =0xB
+	020010 Desc             ="looks good"
+	020020 Units            ="kPa"
+	020100 Address          =0x8013
+	020200 Equation         =0.369004 * X + 10.350000,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x2D45
+	020005 Title            ="KKA: MAP params - Default MAP multiplier"
+	020011 DescSize         =0xB
+	020010 Desc             ="looks good"
+	020020 Units            ="Coeff"
+	020100 Address          =0x8014
+	020200 Equation         =0.014760 * X + 0.000000,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x2D46
+	020005 Title            ="KKB: MAP params - Default MAP offset constant term"
+	020011 DescSize         =0xB
+	020010 Desc             ="looks good"
+	020020 Units            ="kPa"
+	020100 Address          =0x8015
+	020200 Equation         =0.184502 * X + 10.350000,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x2D47
+	020005 Title            ="KKC: MAP params - RPM multiplier for default MAP calc"
+	020011 DescSize         =0xB
+	020010 Desc             ="looks good"
+	020020 Units            ="kPa"
+	020100 Address          =0x8016
+	020200 Equation         =0.000231 * X + 0.000000,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x2D48
+	020005 Title            ="KDMPRPMX: MAP params - RPM offset term for default MAP calculation"
+	020011 DescSize         =0xB
+	020010 Desc             ="looks good"
+	020020 Units            ="kPa"
+	020100 Address          =0x8017
+	020200 Equation         =0.369004 * X + 0.000000,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x2D49
+	020005 Title            ="KDMAPLL: MAP params - Default MAP lower limit"
+	020011 DescSize         =0xB
+	020010 Desc             ="looks good"
+	020020 Units            ="kPa"
+	020100 Address          =0x8018
+	020200 Equation         =0.369004 * X + 10.350000,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x2D4A
+	020005 Title            ="KKACMAP: MAP params - Default MAP offset - A/C On"
+	020011 DescSize         =0xB
+	020010 Desc             ="looks good"
+	020020 Units            ="kPa"
+	020100 Address          =0x8019
+	020200 Equation         =0.369004 * X + 0.000000,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x2D4B
+	020005 Title            ="KKDRMAP: MAP params - Default MAP offset - Drive or Reverse"
+	020011 DescSize         =0xB
+	020010 Desc             ="looks good"
+	020020 Units            ="kPa"
+	020100 Address          =0x801A
+	020200 Equation         =0.369004 * X + 0.000000,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x2D4C
+	020005 Title            ="KDMAPIAC: MAP params - Nominal IAC position for normal idle"
+	020011 DescSize         =0xB
+	020010 Desc             ="looks good"
+	020020 Units            ="Steps"
+	020100 Address          =0x801C
+	020200 Equation         =1.000000 * X + 0.000000,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x2D4D
+	020005 Title            ="KDMIACGN: MAP params - IAC gain factor"
+	020011 DescSize         =0xB
+	020010 Desc             ="looks good"
+	020020 Units            ="factor"
+	020100 Address          =0x801D
+	020200 Equation         =0.001441 * X + 0.000000,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x2D4E
+	020005 Title            ="KDMPFLTI: MAP params - Default MAP filter coefficient - Increasing"
+	020011 DescSize         =0xB
+	020010 Desc             ="looks good"
+	020020 Units            ="Coeff"
+	020100 Address          =0x801F
+	020200 Equation         =0.003906 * X + 0.000000,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x2D4F
+	020005 Title            ="KDMPFLTD: MAP params - Default MAP filter coefficient - Decreasing"
+	020011 DescSize         =0xB
+	020010 Desc             ="looks good"
+	020020 Units            ="Coeff"
+	020100 Address          =0x801E
+	020200 Equation         =0.003906 * X + 0.000000,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x2D50
+	020005 Title            ="KTPCLOSE: TPS - TPS Closed throttle threshold (EGR port)"
+	020011 DescSize         =0xB
+	020010 Desc             ="looks good"
+	020020 Units            ="%"
+	020100 Address          =0x801F
+	020200 Equation         =0.390625 * X + 0.000000,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x2D51
+	020005 Title            ="KF4CNTR: TPS - F4 flag throttle opening delay"
+	020011 DescSize         =0xB
+	020010 Desc             ="looks good"
+	020020 Units            ="%"
+	020100 Address          =0x8020
+	020200 Equation         =0.012500 * X + 0.000000,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x2D52
+	020005 Title            ="K3: TPS - TPS Full travel - Worst case minimum voltage"
+	020011 DescSize         =0xB
+	020010 Desc             ="looks good"
+	020020 Units            ="Volts"
+	020100 Address          =0x8021
+	020200 Equation         =320.000000 / X + 0.000000,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x2D53
+	020005 Title            ="KTAOFF: TPS - Closed TPS filter coefficient"
+	020011 DescSize         =0xB
+	020010 Desc             ="looks good"
+	020020 Units            ="Coeff"
+	020100 Address          =0x8022
+	020200 Equation         =0.003906 * X + 0.000000,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x2D54
+	020005 Title            ="KTPSHYST: TPS - TPS Hysteresis value"
+	020011 DescSize         =0x3C
+	020010 Desc             ="had setting of ' 0 ' I think this is right, could be wrong."
+	020020 Units            ="Cnt"
+	020100 Address          =0x8023
+	020200 Equation         =1.000000 * X + 0.000000,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x2D55
+	020005 Title            ="KSPDSENA: Road speed params - Speed sensor constant Pulses/Kilometre"
+	020011 DescSize         =0xB
+	020010 Desc             ="looks good"
+	020020 Units            ="PPK"
+	020050 SizeInBits       =0x10
+	020100 Address          =0x802A
+	020200 Equation         =7372800.000000 / X + 0.000000,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x2D56
+	020005 Title            ="KFILTKPH: Road speed params - Lag filter coefficient for KPH  N.D"
+	020011 DescSize         =0xB
+	020010 Desc             ="looks good"
+	020020 Units            ="Coeff"
+	020100 Address          =0x802C
+	020200 Equation         =0.003906 * X + 0.000000,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x2D57
+	020005 Title            ="KREFANGL: EST params - Spark reference angle"
+	020011 DescSize         =0xF
+	020010 Desc             ="LOOKS GOOD    "
+	020020 Units            ="Deg"
+	020100 Address          =0x8021
+	020200 Equation         =0.351563 * X + 0.000000,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x2D58
+	020005 Title            ="KTIMELAG: EST params - Time domain correction to spark"
+	020011 DescSize         =0xB
+	020010 Desc             ="looks good"
+	020020 Units            ="Usec"
+	020100 Address          =0x8022
+	020200 Equation         =7.629400 * X + 0.000000,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x2D59
+	020005 Title            ="KMAXADV:  EST params - Maximum Spark Advance from TDC"
+	020011 DescSize         =0xF
+	020010 Desc             ="LOOKS GOOD    "
+	020020 Units            ="Deg"
+	020050 SizeInBits       =0x10
+	020100 Address          =0x8023
+	020200 Equation         =0.351563 * X + 0.000000,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x2D5A
+	020005 Title            ="KMAXRTD:  EST params - Maximum Spark Retard from TDC"
+	020011 DescSize         =0xB
+	020010 Desc             ="looks good"
+	020020 Units            ="Deg"
+	020050 SizeInBits       =0x10
+	020100 Address          =0x8031
+	020200 Equation         =0.351563 * X + -23040.000000,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x2D5B
+	020005 Title            ="KBYPSPK: EST params - Bypass Mode Forced Advance"
+	020011 DescSize         =0xB
+	020010 Desc             ="looks good"
+	020020 Units            ="Deg"
+	020100 Address          =0x8032
+	020200 Equation         =0.351563 * X + 0.000000,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x2D5C
+	020005 Title            ="KDFCOADV: EST params - DFCO Mode Forced Advance"
+	020011 DescSize         =0xB
+	020010 Desc             ="looks good"
+	020020 Units            ="Deg"
+	020100 Address          =0x8034
+	020200 Equation         =0.351563 * X + 0.000000,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x2D5D
+	020005 Title            ="KDFCODCV:   EST params - DFCO spark ram out rate"
+	020011 DescSize         =0x19
+	020010 Desc             ="not sure about this one."
+	020020 Units            ="Deg/S"
+	020050 SizeInBits       =0x10
+	020100 Address          =0x8035
+	020200 Equation         =0.109863 * X + 0.000000,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x2D5E
+	020005 Title            ="KDIAGADV: EST params - DIAG Mode Forced Advance"
+	020011 DescSize         =0xB
+	020010 Desc             ="looks good"
+	020020 Units            ="Deg"
+	020100 Address          =0x8037
+	020200 Equation         =0.351563 * X + 0.000000,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x2D5F
+	020005 Title            ="KDIAGRPM: EST params - Maximum RPM for KDIAGADV"
+	020011 DescSize         =0xB
+	020010 Desc             ="looks good"
+	020020 Units            ="RPM"
+	020100 Address          =0x8037
+	020200 Equation         =25.000000 * X + 0.000000,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x2D60
+	020005 Title            ="KDYNGAIN: EST params - Dynamic correction factor"
+	020011 DescSize         =0x22
+	020010 Desc             ="setting set at '0'...not to sure "
+	020020 Units            ="FACTOR"
+	020100 Address          =0x8038
+	020200 Equation         =0.007813 * X + 0.000000,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x2D61
+	020005 Title            ="KDYNDB:    EST params - Dynamic correction delta ref deadband"
+	020011 DescSize         =0x9
+	020010 Desc             ="not sure"
+	020020 Units            ="Msec"
+	020050 SizeInBits       =0x10
+	020100 Address          =0x803A
+	020200 Equation         =0.007629 * X + 0.000000,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x2D62
+	020005 Title            ="KADVLIM:   EST params - Max rate of Advance increase except in DE"
+	020011 DescSize         =0x9
+	020010 Desc             ="not sure"
+	020020 Units            ="Deg/S"
+	020050 SizeInBits       =0x10
+	020100 Address          =0x803B
+	020200 Equation         =0.109863 * X + 0.000000,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x2D63
+	020005 Title            ="KADVSLOP:  EST params - F1 table Extension Slope"
+	020011 DescSize         =0xB
+	020010 Desc             ="looks good"
+	020020 Units            ="Deg/K"
+	020100 Address          =0x803E
+	020200 Equation         =0.054932 * X + 0.000000,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x2D64
+	020005 Title            ="KCTBIAS:  EST params - F2 Table Bias Term"
+	020011 DescSize         =0xB
+	020010 Desc             ="looks good"
+	020020 Units            ="Deg"
+	020100 Address          =0x803F
+	020200 Equation         =0.351563 * X + 0.000000,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x2D65
+	020005 Title            ="KTMRPM:   EST params - Torque management RPM threshold"
+	020011 DescSize         =0xB
+	020010 Desc             ="looks good"
+	020020 Units            ="RPM"
+	020100 Address          =0x8049
+	020200 Equation         =25.000000 * X + 0.000000,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x2D66
+	020005 Title            ="KTMADV:   EST params - Torque management Forced Advance"
+	020011 DescSize         =0xB
+	020010 Desc             ="looks good"
+	020020 Units            ="Deg"
+	020100 Address          =0x804A
+	020200 Equation         =0.351563 * X + 0.000000,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x2D67
+	020005 Title            ="KDYNDB:    EST params - Dwell during 18X crank spark "
+	020011 DescSize         =0xB
+	020010 Desc             ="looks good"
+	020020 Units            ="Msec"
+	020050 SizeInBits       =0x10
+	020100 Address          =0x804B
+	020200 Equation         =0.007629 * X + 0.000000,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x2D68
+	020005 Title            ="KESCOOLA: ESC params - Coolant temp enable "
+	020011 DescSize         =0xB
+	020010 Desc             ="looks good"
+	020020 Units            ="DegC"
+	020100 Address          =0x804C
+	020200 Equation         =0.750000 * X + -40.000000,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x2D69
+	020005 Title            ="KESCTIM: ESC params - Engine Run Time to Enable "
+	020011 DescSize         =0xB
+	020010 Desc             ="looks good"
+	020020 Units            ="Sec"
+	020100 Address          =0x804E
+	020200 Equation         =1.000000 * X + 0.000000,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x2D6A
+	020005 Title            ="KESCRPML: ESC params - Minimum RPM to Increase Retard"
+	020011 DescSize         =0xB
+	020010 Desc             ="looks good"
+	020020 Units            ="RPM"
+	020100 Address          =0x804F
+	020200 Equation         =25.000000 * X + 0.000000,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x2D6B
+	020005 Title            ="KESCRPMH: ESC params - Maximum RPM to Increase Retard"
+	020011 DescSize         =0xB
+	020010 Desc             ="looks good"
+	020020 Units            ="RPM"
+	020100 Address          =0x8050
+	020200 Equation         =25.000000 * X + 0.000000,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x2D6C
+	020005 Title            ="KRETMAX:   ESC params - Maximum Retard"
+	020011 DescSize         =0xB
+	020010 Desc             ="looks good"
+	020020 Units            ="Deg"
+	020100 Address          =0x8051
+	020200 Equation         =0.351563 * X + 0.000000,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x2D6D
+	020005 Title            ="KBKRCLT:   Burst Knock Retard - If coolant < This then skip Burst knock"
+	020011 DescSize         =0xB
+	020010 Desc             ="looks good"
+	020020 Units            ="DegC"
+	020100 Address          =0x8052
+	020200 Equation         =0.750000 * X + -40.000000,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x2D6E
+	020005 Title            ="KBKRRPM:   Burst Knock Retard - If RPM > Cal  then Zero BKRTD"
+	020011 DescSize         =0xB
+	020010 Desc             ="looks good"
+	020020 Units            ="RPM"
+	020100 Address          =0x8053
+	020200 Equation         =25.000000 * X + 0.000000,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x2D6F
+	020005 Title            ="KBKRTPS:  Burst Knock Retard - TPS Delta threshold to activate BKRTD"
+	020011 DescSize         =0xB
+	020010 Desc             ="looks good"
+	020020 Units            ="%"
+	020100 Address          =0x8065
+	020200 Equation         =0.390625 * X + 0.000000,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x2D70
+	020005 Title            ="KBKRRFLO:  Burst Knock Retard - If REFS in BKRTD <= Cal then Zero BKRTD"
+	020011 DescSize         =0xB
+	020010 Desc             ="looks good"
+	020020 Units            ="REFPSL"
+	020100 Address          =0x8067
+	020200 Equation         =1.000000 * X + 0.000000,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x2D71
+	020005 Title            ="KBKRRFHI:  Burst Knock Retard - If REFS in BKRTD >= Cal then Zero BKRTD"
+	020011 DescSize         =0xB
+	020010 Desc             ="looks good"
+	020020 Units            ="REFPSL"
+	020100 Address          =0x8068
+	020200 Equation         =1.000000 * X + 0.000000,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x2D72
+	020005 Title            ="KBKRTD:  Burst Knock Retard - Burst Knock Retard active value"
+	020011 DescSize         =0xB
+	020010 Desc             ="looks good"
+	020020 Units            ="Deg"
+	020100 Address          =0x8069
+	020200 Equation         =0.351563 * X + 0.000000,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x2D73
+	020005 Title            ="KBKRDEC:  Burst Knock Retard - BKRTD decay value"
+	020011 DescSize         =0xB
+	020010 Desc             ="looks good"
+	020020 Units            ="Deg"
+	020100 Address          =0x806A
+	020200 Equation         =0.351563 * X + 0.000000,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x2D74
+	020005 Title            ="KLOTPSBK:  Burst Knock Retard - If TPSENG <= CAL then set TPSENG12 = 0"
+	020011 DescSize         =0xB
+	020010 Desc             ="looks good"
+	020020 Units            ="%"
+	020100 Address          =0x806B
+	020200 Equation         =0.390625 * X + 0.000000,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x2D75
+	020005 Title            ="KBKFCRNK: Backfire Inhibit - Threshold for Crank Input"
+	020011 DescSize         =0xC
+	020010 Desc             ="looks good "
+	020020 Units            ="Volts"
+	020100 Address          =0x806C
+	020200 Equation         =0.100000 * X + 0.000000,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x2D76
+	020005 Title            ="KBKFRPM:  Backfire Inhibit - RPM threshold for fuel cutoff"
+	020011 DescSize         =0xB
+	020010 Desc             ="looks good"
+	020020 Units            ="RPM"
+	020100 Address          =0x806D
+	020200 Equation         =25.000000 * X + 0.000000,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x2D77
+	020005 Title            ="KBKFTEMP: Backfire Inhibit - Temperature Threshold for Fuel Cutoff"
+	020011 DescSize         =0xB
+	020010 Desc             ="looks good"
+	020020 Units            ="DegC"
+	020100 Address          =0x806E
+	020200 Equation         =0.750000 * X + -40.000000,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x2D78
+	020005 Title            ="KRPMRDSC:  RDSC - High resolution RPM filter coefficient"
+	020011 DescSize         =0xB
+	020010 Desc             ="looks good"
+	020020 Units            ="Coef"
+	020100 Address          =0x806F
+	020200 Equation         =256.000000 * X + 0.000000,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x2D79
+	020005 Title            ="KRDSMIN:  RDSC - Spark advance RDSC lower limit"
+	020011 DescSize         =0xA
+	020010 Desc             ="not sure "
+	020020 Units            ="Deg"
+	020100 Address          =0x81F6
+	020200 Equation         =0.351563 * X + 0.000000,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x2D7A
+	020005 Title            ="KTPSDLT:  RDSC - Increasing/Decreasing TPS threshold"
+	020011 DescSize         =0xB
+	020010 Desc             ="looks good"
+	020020 Units            ="%"
+	020100 Address          =0x81F7
+	020200 Equation         =0.390625 * X + 0.000000,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x2D7B
+	020005 Title            ="KRDSCTPS:  RDSC - Low/High TPS threshold for RDSC"
+	020011 DescSize         =0xB
+	020010 Desc             ="looks good"
+	020020 Units            ="%"
+	020100 Address          =0x81F8
+	020200 Equation         =0.390625 * X + 0.000000,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x2D7C
+	020005 Title            ="KRDSTPSH:  RDSC - Disable RDSC logic if NTPSLD > KRDSTPSH"
+	020011 DescSize         =0xB
+	020010 Desc             ="looks good"
+	020020 Units            ="%"
+	020100 Address          =0x81F9
+	020200 Equation         =0.390625 * X + 0.000000,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x2D7D
+	020005 Title            ="KRDSCCLT:  RDSC - Disable RDSC logic if COOLDEG < KRDSCCLT"
+	020011 DescSize         =0xB
+	020010 Desc             ="looks good"
+	020020 Units            ="DegC"
+	020100 Address          =0x81FA
+	020200 Equation         =0.750000 * X + -40.000000,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x2D7E
+	020005 Title            ="KRDSKPHL:  RDSC - Disable RDSC logic if FILTKPH <= KRDSKPHL"
+	020011 DescSize         =0xB
+	020010 Desc             ="looks good"
+	020020 Units            ="KPH"
+	020100 Address          =0x81FB
+	020200 Equation         =1.000000 * X + 0.000000,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x2D7F
+	020005 Title            ="KRDSRPMH:  RDSC - Disable RDSC logic if NTRPMX >= KRDSRPMH"
+	020011 DescSize         =0xB
+	020010 Desc             ="looks good"
+	020020 Units            ="RPM"
+	020100 Address          =0x81FC
+	020200 Equation         =25.000000 * X + 0.000000,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x2D80
+	020005 Title            ="KRDSRPML:  RDSC - Disable RDSC logic if NTRPMX < KRDSRPML"
+	020011 DescSize         =0xB
+	020010 Desc             ="looks good"
+	020020 Units            ="RPM"
+	020100 Address          =0x81FD
+	020200 Equation         =25.000000 * X + 0.000000,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x2D81
+	020005 Title            ="KINGAIN1:  RDSC - RDSC1 Tip-In gain amount for 1st gear"
+	020011 DescSize         =0xB
+	020010 Desc             ="looks good"
+	020020 Units            ="Deg/RPM"
+	020100 Address          =0x8204
+	020200 Equation         =0.000687 * X + 0.000000,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x2D82
+	020005 Title            ="KINGAIN2:  RDSC - RDSC1 Tip-In gain amount for 2nd gear"
+	020011 DescSize         =0xB
+	020010 Desc             ="looks good"
+	020020 Units            ="Deg/RPM"
+	020100 Address          =0x8205
+	020200 Equation         =0.000687 * X + 0.000000,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x2D83
+	020005 Title            ="KINGAIN3:  RDSC - RDSC1 Tip-In gain amount for 3rd gear"
+	020011 DescSize         =0xB
+	020010 Desc             ="looks good"
+	020020 Units            ="Deg/RPM"
+	020100 Address          =0x8206
+	020200 Equation         =0.000687 * X + 0.000000,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x2D84
+	020005 Title            ="KINGAIN4:  RDSC - RDSC1 Tip-In gain amount for 4th gear"
+	020011 DescSize         =0xB
+	020010 Desc             ="looks good"
+	020020 Units            ="Deg/RPM"
+	020100 Address          =0x8207
+	020200 Equation         =0.000687 * X + 0.000000,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x2D85
+	020005 Title            ="KINGAIN5:  RDSC - RDSC1 Tip-In gain amount for 5th gear"
+	020011 DescSize         =0xB
+	020010 Desc             ="looks good"
+	020020 Units            ="Deg/RPM"
+	020100 Address          =0x8208
+	020200 Equation         =0.000687 * X + 0.000000,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x2D86
+	020005 Title            ="KINGAINN:  RDSC - RDSC1 Tip-In gain amount for Neutral"
+	020011 DescSize         =0x1F
+	020010 Desc             ="setting set at '0'....not sure"
+	020020 Units            ="Deg/RPM"
+	020100 Address          =0x8209
+	020200 Equation         =0.000687 * X + 0.000000,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x2D87
+	020005 Title            ="KINNEG:  RDSC - RDSC1 Tip-In - Spark RDSC negative change limit"
+	020011 DescSize         =0x1
+	020010 Desc             =""
+	020020 Units            ="Deg"
+	020100 Address          =0x820A
+	020200 Equation         =0.351563 * X + 0.000000,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x2D88
+	020005 Title            ="KINPOS:  RDSC - RDSC1 Tip-In - Spark RDSC positive change limit"
+	020011 DescSize         =0x1
+	020010 Desc             =""
+	020020 Units            ="Deg"
+	020100 Address          =0x820B
+	020200 Equation         =0.351563 * X + 0.000000,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x2D89
+	020005 Title            ="KINCTR1:  RDSC - RDSC1 Tip-In - Time RDSC1 enabled when increasing TPS"
+	020011 DescSize         =0x1
+	020010 Desc             =""
+	020020 Units            ="Sec"
+	020100 Address          =0x820C
+	020200 Equation         =0.200000 * X + 0.000000,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x2D8A
+	020005 Title            ="KOUGAIN1:  RDSC - RDSC Tip-Out gain amount for 1st gear"
+	020011 DescSize         =0xB
+	020010 Desc             ="looks good"
+	020020 Units            ="Deg/RPM"
+	020100 Address          =0x820D
+	020200 Equation         =0.000687 * X + 0.000000,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x2D8B
+	020005 Title            ="KOUGAIN2:  RDSC - RDSC1 Tip-Out gain amount for 2nd gear"
+	020011 DescSize         =0xB
+	020010 Desc             ="looks good"
+	020020 Units            ="Deg/RPM"
+	020100 Address          =0x820E
+	020200 Equation         =0.000687 * X + 0.000000,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x2D8C
+	020005 Title            ="KOUGAIN3:  RDSC - RDSC1 Tip-Out gain amount for 3rd gear"
+	020011 DescSize         =0xB
+	020010 Desc             ="looks good"
+	020020 Units            ="Deg/RPM"
+	020100 Address          =0x820F
+	020200 Equation         =0.000687 * X + 0.000000,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x2D8D
+	020005 Title            ="KOUGAIN4:  RDSC - RDSC1 Tip-Out gain amount for 4th gear"
+	020011 DescSize         =0xB
+	020010 Desc             ="looks good"
+	020020 Units            ="Deg/RPM"
+	020100 Address          =0x8210
+	020200 Equation         =0.000687 * X + 0.000000,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x2D8E
+	020005 Title            ="KOUGAIN5:  RDSC - RDSC1 Tip-Out gain amount for 5th gear"
+	020011 DescSize         =0x1
+	020010 Desc             =""
+	020020 Units            ="Deg/RPM"
+	020100 Address          =0x8211
+	020200 Equation         =0.000687 * X + 0.000000,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x2D8F
+	020005 Title            ="KOUGAINN:  RDSC - RDSC1 Tip-Out gain amount for Neutral"
+	020011 DescSize         =0x1
+	020010 Desc             =""
+	020020 Units            ="Deg/RPM"
+	020100 Address          =0x8212
+	020200 Equation         =0.000687 * X + 0.000000,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x2D90
+	020005 Title            ="KOUTCTR:  RDSC1 - RDSC1 Tip-Out - Time RDSC1 enabled when decreasing TPS"
+	020011 DescSize         =0xB
+	020010 Desc             ="looks good"
+	020020 Units            ="Sec"
+	020100 Address          =0x8213
+	020200 Equation         =0.200000 * X + 0.000000,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x2D91
+	020005 Title            ="KOUTNEG:  RDSC - RDSC1 Tip-Out - Spark RDSC negative change limit"
+	020011 DescSize         =0xB
+	020010 Desc             ="looks good"
+	020020 Units            ="Deg"
+	020100 Address          =0x8214
+	020200 Equation         =0.351563 * X + 0.000000,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x2D92
+	020005 Title            ="KOUTPOS:  RDSC -  RDSC1 Tip-In - Spark RDSC positive change limit"
+	020011 DescSize         =0xB
+	020010 Desc             ="looks good"
+	020020 Units            ="Deg"
+	020100 Address          =0x8215
+	020200 Equation         =0.351563 * X + 0.000000,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x2D93
+	020005 Title            ="KBMPKPH:  Tip-In Bump - Minimum vehicle speed to enable Bump spark"
+	020011 DescSize         =0x1
+	020010 Desc             =""
+	020020 Units            ="KPH"
+	020100 Address          =0x8216
+	020200 Equation         =1.000000 * X + 0.000000,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x2D94
+	020005 Title            ="KBMPACT:  Tip-In Bump - Time bump spark is active"
+	020011 DescSize         =0xB
+	020010 Desc             ="looks good"
+	020020 Units            ="Sec"
+	020100 Address          =0x8217
+	020200 Equation         =0.012500 * X + 0.000000,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x2D95
+	020005 Title            ="KBMPDLY:  Tip-In Bump - Time bump spark is held steady before decay"
+	020011 DescSize         =0xB
+	020010 Desc             ="looks good"
+	020020 Units            ="Sec"
+	020100 Address          =0x8218
+	020200 Equation         =0.012500 * X + 0.000000,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x2D96
+	020005 Title            ="KBMPGEAR:  Tip-In Bump - Time bump spark not allowed after gear change"
+	020011 DescSize         =0xB
+	020010 Desc             ="looks good"
+	020020 Units            ="Sec"
+	020100 Address          =0x8219
+	020200 Equation         =0.025000 * X + 0.000000,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x2D97
+	020005 Title            ="KBMPBIAS:  Tip-In Bump - Table bias for Bump Spark"
+	020011 DescSize         =0x1
+	020010 Desc             =""
+	020020 Units            ="Deg"
+	020100 Address          =0x821A
+	020200 Equation         =0.351563 * X + 0.000000,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x2D98
+	020005 Title            ="KBUMPMAX:  Tip-In Bump - Upper Bump Spark Limit (add KBMPBIAS)"
+	020011 DescSize         =0xB
+	020010 Desc             ="looks good"
+	020020 Units            ="Deg"
+	020100 Address          =0x821B
+	020200 Equation         =0.351563 * X + 0.000000,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x2D99
+	020005 Title            ="KINGAINI:  Idle Drive - Idle drive gain amount"
+	020011 DescSize         =0xB
+	020010 Desc             ="looks good"
+	020020 Units            ="Fact"
+	020100 Address          =0x82B0
+	020200 Equation         =0.062500 * X + 0.000000,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x2D9A
+	020005 Title            ="KINNEGI:  Idle Drive - Idle drive Negative change limit (Tip-In)"
+	020011 DescSize         =0xB
+	020010 Desc             ="looks good"
+	020020 Units            ="Deg"
+	020100 Address          =0x82B1
+	020200 Equation         =0.351563 * X + 0.000000,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x2D9B
+	020005 Title            ="KINPOSI:  Idle Drive - Idle drive Positive change limit (Tip-In)"
+	020011 DescSize         =0xB
+	020010 Desc             ="looks good"
+	020020 Units            ="Deg"
+	020100 Address          =0x82B2
+	020200 Equation         =0.351563 * X + 0.000000,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x2D9C
+	020005 Title            ="KROLLRPM:  Idle Drive - Idle RDSC Enable RPM threshold"
+	020011 DescSize         =0xB
+	020010 Desc             ="looks good"
+	020020 Units            ="RPM"
+	020100 Address          =0x82B3
+	020200 Equation         =25.000000 * X + 0.000000,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x2D9D
+	020005 Title            ="KINJFLOW: Run A/F Param - Displacement/inj flow rate; (Litres/Grams per se"
+	020011 DescSize         =0xB
+	020010 Desc             ="looks good"
+	020020 Units            ="Grams/Sec"
+	020100 Address          =0x62B4
+	020200 Equation         =0.000928 * X + 0.000000,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x2D9E
+	020005 Title            ="KAPLH: Run A/F Param - Minimum BPW hysteresis value"
+	020011 DescSize         =0x1
+	020010 Desc             =""
+	020020 Units            ="Msec"
+	020050 SizeInBits       =0x10
+	020100 Address          =0x62B5
+	020200 Equation         =0.007629 * X + 0.000000,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x2D9F
+	020005 Title            ="KAPLL: Run A/F Param - Minimum BPW for Sync delivery"
+	020011 DescSize         =0x1
+	020010 Desc             =""
+	020020 Units            ="Msec"
+	020050 SizeInBits       =0x10
+	020100 Address          =0x62B7
+	020200 Equation         =0.007629 * X + 0.000000,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x2DA0
+	020005 Title            ="KAPMIN: Run A/F Param - Minimum Asynchronous pulse width"
+	020011 DescSize         =0x1
+	020010 Desc             =""
+	020020 Units            ="Msec"
+	020050 SizeInBits       =0x10
+	020100 Address          =0x62B9
+	020200 Equation         =0.007629 * X + 0.000000,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x2DA1
+	020005 Title            ="KAPMAX: Run A/F Param - Maximum Asynchronous pulse width"
+	020011 DescSize         =0x1
+	020010 Desc             =""
+	020020 Units            ="Msec"
+	020050 SizeInBits       =0x10
+	020100 Address          =0x62BB
+	020200 Equation         =0.007629 * X + 0.000000,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x2DA2
+	020005 Title            ="KFCORPML: Run A/F Param - High RPM Fuel cutoff - Low Limit"
+	020011 DescSize         =0x41
+	020010 Desc             ="NOT GOOD need to do some work here.. Sorry! will get back to it."
+	020020 Units            ="RPM"
+	020050 SizeInBits       =0x10
+	020100 Address          =0x82BC
+	020200 Equation         =1.000000 * X + 0.000000,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x2DA3
+	020005 Title            ="KFCORPMH: Run A/F Param - High RPM Fuel cutoff - High Limit"
+	020011 DescSize         =0xD
+	020010 Desc             ="NOT GOOD    "
+	020020 Units            ="RPM"
+	020050 SizeInBits       =0x10
+	020100 Address          =0x62BD
+	020200 Equation         =1.000000 * X + 0.000000,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x2DA4
+	020005 Title            ="KFCOKPHL: Run A/F Param - High Speed Fuel cutoff - Low Limit"
+	020011 DescSize         =0xE
+	020010 Desc             ="LOOKS SUS    "
+	020020 Units            ="KPH"
+	020050 SizeInBits       =0x10
+	020100 Address          =0x62BE
+	020200 Equation         =1.000000 * X + 0.000000,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x2DA5
+	020005 Title            ="KFCOKPHH: Run A/F Param - High Speed Fuel cutoff - High Limit"
+	020011 DescSize         =0xE
+	020010 Desc             ="DONT KNOW    "
+	020020 Units            ="KPH"
+	020050 SizeInBits       =0x10
+	020100 Address          =0x82C2
+	020150 Flags            =0x1
+	020200 Equation         =1.000000 * X + 0.000000,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x2DA6
+	020005 Title            ="KFCOTIME: Run A/F Param - Fuel cutoff time threshold"
+	020011 DescSize         =0xB
+	020010 Desc             ="looks good"
+	020020 Units            ="Sec"
+	020100 Address          =0x82C3
+	020200 Equation         =0.012500 * X + 0.000000,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x2DA7
+	020005 Title            ="KAFSTCN: Run A/F Param - Stoichiometric A/F ratio"
+	020011 DescSize         =0xB
+	020010 Desc             ="looks good"
+	020020 Units            ="Ratio"
+	020100 Address          =0x82C1
+	020200 Equation         =0.100000 * X + 0.000000,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x2DA8
+	020005 Title            ="KAFTCTH: Run A/F Param - Max coolant temp for F56 A/F Ratio"
+	020011 DescSize         =0x1
+	020010 Desc             =""
+	020020 Units            ="DegC"
+	020100 Address          =0x82C2
+	020200 Equation         =0.750000 * X + -40.000000,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x2DA9
+	020005 Title            ="KAFDM: Run A/F Param - A/F Time out decay multiplier"
+	020011 DescSize         =0x1
+	020010 Desc             =""
+	020020 Units            ="%"
+	020100 Address          =0x82C3
+	020200 Equation         =0.390625 * X + 0.000000,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x2DAA
+	020005 Title            ="KLCCLT: Lean Cruise Param - Minimum coolant temp for Lean Cruise"
+	020011 DescSize         =0xB
+	020010 Desc             ="looks good"
+	020020 Units            ="DegC"
+	020100 Address          =0x82C4
+	020200 Equation         =0.750000 * X + -40.000000,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x2DAB
+	020005 Title            ="KLCSPD: Lean Cruise Param - Minimum vehicle speed for Lean Cruise"
+	020011 DescSize         =0xB
+	020010 Desc             ="looks good"
+	020020 Units            ="KPH"
+	020100 Address          =0x82C5
+	020200 Equation         =1.000000 * X + 0.000000,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x2DAC
+	020005 Title            ="KAFLCTIM: Lean Cruise Param - Time delay after idle for Lean Cruise"
+	020011 DescSize         =0xB
+	020010 Desc             ="looks good"
+	020020 Units            ="Sec"
+	020100 Address          =0x82C6
+	020200 Equation         =1.000000 * X + 0.000000,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x2DAD
+	020005 Title            ="KAFSTEP: Lean Cruise Param - Delay time before Lean Cruise A/F step"
+	020011 DescSize         =0xB
+	020010 Desc             ="looks good"
+	020020 Units            ="Sec"
+	020100 Address          =0x82C6
+	020200 Equation         =0.012500 * X + 0.000000,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x2DAE
+	020005 Title            ="KIDLEKPH: Idle Fuel Param - Max road speed for idle A/F ratio"
+	020011 DescSize         =0xE
+	020010 Desc             ="looks ok     "
+	020020 Units            ="KPH"
+	020100 Address          =0x82C7
+	020200 Equation         =1.000000 * X + 0.000000,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x2DAF
+	020005 Title            ="KFILTCLT: Idle Fuel Param - Coolant temp filter coeff at idle"
+	020011 DescSize         =0xB
+	020010 Desc             ="looks good"
+	020020 Units            ="Coef"
+	020100 Address          =0x82C8
+	020200 Equation         =0.003906 * X + 0.000000,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x2DB0
+	020005 Title            ="KIDLTIMN: Idle Fuel Param - Delay before using idle A/F ratio(manual & Aut"
+	020011 DescSize         =0x1
+	020010 Desc             =""
+	020020 Units            ="Sec"
+	020100 Address          =0x82C9
+	020200 Equation         =0.200000 * X + 0.000000,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x2DB1
+	020005 Title            ="KIDLTIMA: Idle Fuel Param - Delay before using idle A/F ratio (Auto in P/N"
+	020011 DescSize         =0x1
+	020010 Desc             =""
+	020020 Units            ="Sec"
+	020100 Address          =0x62CE
+	020200 Equation         =0.200000 * X + 0.000000,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x2DB2
+	020005 Title            ="KLEMGAIN: Idle Fuel Param - Lowspeed enrichment multiplier gain"
+	020011 DescSize         =0x1
+	020010 Desc             =""
+	020020 Units            ="%/100"
+	020100 Address          =0x62CF
+	020200 Equation         =0.100000 * X + 0.000000,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x2DB3
+	020005 Title            ="KLEMMAX: Idle Fuel Param - Lowspeed enrichment multiplier Maximum"
+	020011 DescSize         =0x1
+	020010 Desc             =""
+	020020 Units            ="Factor"
+	020100 Address          =0x62D0
+	020200 Equation         =0.007813 * X + 0.000000,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x2DB4
+	020005 Title            ="KLEMRPM: Idle Fuel Param - RPM above desired to begin Lowspeed enrichment "
+	020011 DescSize         =0x1
+	020010 Desc             =""
+	020020 Units            ="RPM"
+	020100 Address          =0x62D1
+	020200 Equation         =6.250000 * X + 0.000000,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x2DB5
+	020005 Title            ="KFILTVE: Idle Fuel Param - VE table filter coefficient at idle"
+	020011 DescSize         =0xB
+	020010 Desc             ="looks good"
+	020020 Units            ="Coeff"
+	020100 Address          =0x82D3
+	020200 Equation         =0.003906 * X + 0.000000,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x2DB6
+	020005 Title            ="KVEFLRPM: Idle Fuel Param - RPM threshold for filtering VE"
+	020011 DescSize         =0x10
+	020010 Desc             ="looks good     "
+	020020 Units            ="RPM"
+	020100 Address          =0x82D3
+	020200 Equation         =25.000000 * X + 0.000000,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x2DB7
+	020005 Title            ="KCFTM0: Crank A/F Param - Number of ref pulses before crank fuel dacay (se"
+	020011 DescSize         =0x1
+	020010 Desc             =""
+	020020 Units            ="Pulses"
+	020100 Address          =0x82D4
+	020200 Equation         =1.000000 * X + 1.000000,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x2DB8
+	020005 Title            ="KCFTM1: Crank A/F Param - Number of ref pulses before crank fuel decay"
+	020011 DescSize         =0x1
+	020010 Desc             =""
+	020020 Units            ="Pulses"
+	020100 Address          =0x82D5
+	020200 Equation         =1.000000 * X + 1.000000,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x2DB9
+	020005 Title            ="KCFTM2: Crank A/F Param - Number of ref pulses between crank decay loops"
+	020011 DescSize         =0x1
+	020010 Desc             =""
+	020020 Units            ="Pulses"
+	020100 Address          =0x62D6
+	020200 Equation         =1.000000 * X + 1.000000,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x2DBA
+	020005 Title            ="KAFCFTA: Crank A/F Param - Clear flood throttle limit   TPSENG units"
+	020011 DescSize         =0x1
+	020010 Desc             =""
+	020020 Units            ="%"
+	020100 Address          =0x62D7
+	020200 Equation         =0.390625 * X + 0.000000,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x2DBB
+	020005 Title            ="KTPSMAX: Crank A/F Param - High TPS for selecting crank BPW"
+	020011 DescSize         =0x1
+	020010 Desc             =""
+	020020 Units            ="AD cnts"
+	020100 Address          =0x62D8
+	020200 Equation         =1.000000 * X + 0.000000,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x2DBC
+	020005 Title            ="KCRSTEP: Crank A/F Param - Crank decay step size"
+	020011 DescSize         =0x1
+	020010 Desc             =""
+	020020 Units            ="Msec"
+	020050 SizeInBits       =0x10
+	020100 Address          =0x62D9
+	020200 Equation         =0.007629 * X + 0.000000,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x2DBD
+	020005 Title            ="KCRMIN: Crank A/F Param - Minimum crank BPW"
+	020011 DescSize         =0x1
+	020010 Desc             =""
+	020020 Units            ="Msec"
+	020050 SizeInBits       =0x10
+	020100 Address          =0x62DB
+	020200 Equation         =0.007629 * X + 0.000000,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x2DBE
+	020005 Title            ="KAEDFTHR: Manifold Fuel Param - AE delta fuel threshold"
+	020011 DescSize         =0x1
+	020010 Desc             =""
+	020020 Units            ="MANFUEL"
+	020100 Address          =0x62DD
+	020200 Equation         =1.000000 * X + 0.000000,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x2DBF
+	020005 Title            ="KMANRPM: Manifold Fuel Param - RPM gain factor for MANFUEL calc"
+	020011 DescSize         =0x1
+	020010 Desc             =""
+	020020 Units            ="Factor"
+	020100 Address          =0x62DE
+	020200 Equation         =0.007813 * X + 0.000000,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x2DC0
+	020005 Title            ="KAEFLT: Manifold Fuel Param - Filter coefficient for increasing MANFUEL"
+	020011 DescSize         =0x1
+	020010 Desc             =""
+	020020 Units            ="Coeff"
+	020100 Address          =0x62DF
+	020200 Equation         =0.003906 * X + 0.000000,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x2DC1
+	020005 Title            ="KDEFLT: Manifold Fuel Param - Filter coefficient for decreasing MANFUEL"
+	020011 DescSize         =0x1
+	020010 Desc             =""
+	020020 Units            ="Coeff"
+	020100 Address          =0x62E0
+	020200 Equation         =0.003906 * X + 0.000000,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x2DC2
+	020005 Title            ="KAETATH: Accel Enrichment Param - AE delta throttle threshold   TPSENG uni"
+	020011 DescSize         =0x1
+	020010 Desc             =""
+	020020 Units            ="%"
+	020100 Address          =0x62E1
+	020200 Equation         =0.390625 * X + 0.000000,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x2DC3
+	020005 Title            ="KAEISCN: Accel Enrichment Param - AE Idle air control contribution"
+	020011 DescSize         =0x1
+	020010 Desc             =""
+	020020 Units            ="Msec"
+	020100 Address          =0x62E2
+	020200 Equation         =0.030518 * X + 0.000000,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x2DC4
+	020005 Title            ="KITPSCFA: Accel Enrichment Param - AE increasing TPS filter coefficient"
+	020011 DescSize         =0x1
+	020010 Desc             =""
+	020020 Units            ="Coeff"
+	020100 Address          =0x62E3
+	020200 Equation         =0.003906 * X + 0.000000,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x2DC5
+	020005 Title            ="KDTPSCFA: Accel Enrichment Param - AE decreasing TPS filter coefficient"
+	020011 DescSize         =0x1
+	020010 Desc             =""
+	020020 Units            ="Coeff"
+	020100 Address          =0x62E4
+	020200 Equation         =0.003906 * X + 0.000000,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x2DC6
+	020005 Title            ="KDEDFTH: Decel Enleanment Param - DE delta fuel threshold"
+	020011 DescSize         =0x1
+	020010 Desc             =""
+	020020 Units            ="MANFUEL"
+	020100 Address          =0x62E5
+	020200 Equation         =1.000000 * X + 0.000000,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x2DC7
+	020005 Title            ="KDEDFTH: Decel Enleanment Param - DE delta throttle angle threshold"
+	020011 DescSize         =0x1
+	020010 Desc             =""
+	020020 Units            ="%"
+	020100 Address          =0x62E6
+	020200 Equation         =0.390625 * X + 0.000000,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x2DC8
+	020005 Title            ="KDETATH: Decel Enleanment Param - Delta TPS DE factor"
+	020011 DescSize         =0x1
+	020010 Desc             =""
+	020020 Units            ="Mult"
+	020100 Address          =0x62E7
+	020200 Equation         =1.000000 * X + 0.000000,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x2DC9
+	020005 Title            ="KDEDKTH: Decel Enleanment Param - DE throttle decay factor"
+	020011 DescSize         =0x1
+	020010 Desc             =""
+	020020 Units            ="%/Ref"
+	020100 Address          =0x62E8
+	020200 Equation         =0.390625 * X + 0.000000,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x2DCA
+	020005 Title            ="KITPSCFD: Decel Enleanment Param - DE Increasing TPS filter coefficient"
+	020011 DescSize         =0x1
+	020010 Desc             =""
+	020020 Units            ="Coeff"
+	020100 Address          =0x62E9
+	020200 Equation         =0.003906 * X + 0.000000,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x2DCB
+	020005 Title            ="KDTPSCFD: Decel Enleanment Param - DE Decreasing TPS filter coefficient"
+	020011 DescSize         =0x1
+	020010 Desc             =""
+	020020 Units            ="Coeff"
+	020100 Address          =0x62EA
+	020200 Equation         =0.003906 * X + 0.000000,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x2DCC
+	020005 Title            ="KBPWMIN: Decel Enleanment Param - DE throttle decay factor"
+	020011 DescSize         =0x1
+	020010 Desc             =""
+	020020 Units            ="Msec"
+	020100 Address          =0x62EB
+	020200 Equation         =0.007629 * X + 0.000000,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x2DCD
+	020005 Title            ="KDFCOSPH: DFCO Params - DFCO Upper RPM limit - NTRPMX units"
+	020011 DescSize         =0x1
+	020010 Desc             =""
+	020020 Units            ="RPM"
+	020100 Address          =0x62ED
+	020200 Equation         =25.000000 * X + 0.000000,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x2DCE
+	020005 Title            ="KDFCOSPH: DFCO Params - DFCO Lower RPM limit - NTRPMX units"
+	020011 DescSize         =0x1
+	020010 Desc             =""
+	020020 Units            ="RPM"
+	020100 Address          =0x62EE
+	020200 Equation         =25.000000 * X + 0.000000,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x2DCF
+	020005 Title            ="KDFMAPA: DFCO Params - DFCO Max MAP for Automatic  (add 8Kpa hysteresis)"
+	020011 DescSize         =0x1
+	020010 Desc             =""
+	020020 Units            ="Kpa"
+	020100 Address          =0x62EF
+	020200 Equation         =0.369004 * X + 10.354244,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x2DD0
+	020005 Title            ="KDFMAPM: DFCO Params - DFCO Max MAP for Manual  (add 8Kpa hysteresis)"
+	020011 DescSize         =0x1
+	020010 Desc             =""
+	020020 Units            ="Kpa"
+	020100 Address          =0x62F0
+	020200 Equation         =0.369004 * X + 10.354244,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x2DD1
+	020005 Title            ="KDFCOG: DFCO Params - DFCO Multiplier step value"
+	020011 DescSize         =0x1
+	020010 Desc             =""
+	020020 Units            ="%"
+	020100 Address          =0x62F1
+	020200 Equation         =0.390625 * X + 0.000000,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x2DD2
+	020005 Title            ="KDFCOSLL: DFCO Params - DFCO Road speed threshold  ( + 5kph hysteresis)"
+	020011 DescSize         =0x1
+	020010 Desc             =""
+	020020 Units            ="KPH"
+	020100 Address          =0x62F2
+	020200 Equation         =1.000000 * X + 0.000000,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x2DD3
+	020005 Title            ="KDFCOTP: DFCO Params - DFCO Throttle threshold"
+	020011 DescSize         =0x1
+	020010 Desc             =""
+	020020 Units            ="%"
+	020100 Address          =0x62F3
+	020200 Equation         =0.390625 * X + 0.000000,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x2DD4
+	020005 Title            ="KDFCOPW: DFCO Params - DFCO Asynch AE multiplier to BPW"
+	020011 DescSize         =0x1
+	020010 Desc             =""
+	020020 Units            ="Gain"
+	020100 Address          =0x62F4
+	020200 Equation         =0.007813 * X + 0.000000,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x2DD5
+	020005 Title            ="KDFCOCLT: DFCO Params - DFCO Temperature threshold"
+	020011 DescSize         =0x1
+	020010 Desc             =""
+	020020 Units            ="DegC"
+	020100 Address          =0x62F5
+	020200 Equation         =0.750000 * X + -40.000000,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x2DD6
+	020005 Title            ="KVETCLL: VE Learn Params - VE Learn Low temperature limit"
+	020011 DescSize         =0x1
+	020010 Desc             =""
+	020020 Units            ="DegC"
+	020100 Address          =0x62F6
+	020200 Equation         =0.750000 * X + -40.000000,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x2DD7
+	020005 Title            ="KVETCLH: VE Learn Params - VE Learn High temperature limit"
+	020011 DescSize         =0x1
+	020010 Desc             =""
+	020020 Units            ="DegC"
+	020100 Address          =0x62F7
+	020200 Equation         =0.750000 * X + -40.000000,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x2DD8
+	020005 Title            ="KVEESRAD: VE Learn Params - VE Learn Window - RPM Radius (7 MAX)"
+	020011 DescSize         =0x1
+	020010 Desc             =""
+	020020 Units            ="RPM"
+	020100 Address          =0x62F8
+	020200 Equation         =25.000000 * X + 0.000000,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x2DD9
+	020005 Title            ="KVEPMRAD: VE Learn Params - VE Learn Window - MAP Radius (15 MAX)"
+	020011 DescSize         =0x1
+	020010 Desc             =""
+	020020 Units            ="Kpa"
+	020100 Address          =0x62F9
+	020200 Equation         =0.312500 * X + 0.000000,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x2DDA
+	020005 Title            ="KVEMIN: VE Learn Params - Minimum VE Value"
+	020011 DescSize         =0x1
+	020010 Desc             =""
+	020020 Units            ="%"
+	020100 Address          =0x92FA
+	020200 Equation         =0.390625 * X + 0.000000,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x2DDB
+	020005 Title            ="KVEITTH: VE Learn Params - Learning Integrator window"
+	020011 DescSize         =0x1
+	020010 Desc             =""
+	020020 Units            ="Units"
+	020100 Address          =0x62FB
+	020200 Equation         =1.000000 * X + 0.000000,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x2DDC
+	020005 Title            ="KVETIME: VE Learn Params - Learn control update rate"
+	020011 DescSize         =0x5A
+	020010 Desc             ="jump in hex address after this parameter, took a bit to work this out but... LOOKS GOOD11"
+	020020 Units            ="Sec"
+	020100 Address          =0x62FC
+	020200 Equation         =0.100000 * X + 0.000000,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x2DDD
+	020005 Title            ="KBATOOR: IAC Params - Battery voltage Out-of-Range time threshold"
+	020011 DescSize         =0xB
+	020010 Desc             ="looks good"
+	020020 Units            ="Sec"
+	020100 Address          =0x987F
+	020200 Equation         =0.006250 * X + 0.000000,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x2DDE
+	020005 Title            ="KISTPSI: IAC Params - Maximum throttle position for idle"
+	020011 DescSize         =0x1
+	020010 Desc             =""
+	020020 Units            ="%"
+	020100 Address          =0x9880
+	020200 Equation         =0.390625 * X + 0.000000,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x2DDF
+	020005 Title            ="KRSTRPM: IAC Params - IAC motor reset RPM threshold"
+	020011 DescSize         =0x1
+	020010 Desc             =""
+	020020 Units            ="RPM"
+	020100 Address          =0x9881
+	020200 Equation         =25.000000 * X + 0.000000,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x2DE0
+	020005 Title            ="KMAXBASD: IAC Params - Maximum base parameter - Drive"
+	020011 DescSize         =0x1
+	020010 Desc             =""
+	020020 Units            ="Steps"
+	020100 Address          =0x9882
+	020200 Equation         =1.000000 * X + 0.000000,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x2DE1
+	020005 Title            ="KMAXBASN: IAC Params - Maximum base parameter - Neutral"
+	020011 DescSize         =0x1
+	020010 Desc             =""
+	020020 Units            ="Steps"
+	020100 Address          =0x9883
+	020200 Equation         =1.000000 * X + 0.000000,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x2DE2
+	020005 Title            ="KMAXBASA: IAC Params - Maximum base parameter - A/C"
+	020011 DescSize         =0x1
+	020010 Desc             =""
+	020020 Units            ="Steps"
+	020100 Address          =0x9884
+	020200 Equation         =1.000000 * X + 0.000000,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x2DE3
+	020005 Title            ="KISSWNA: IAC Params - Initial IAC motor position"
+	020011 DescSize         =0x1
+	020010 Desc             =""
+	020020 Units            ="Steps"
+	020100 Address          =0x9885
+	020200 Equation         =1.000000 * X + 0.000000,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x2DE4
+	020005 Title            ="KACDLD: IAC Params - Initial additional A/C steps"
+	020011 DescSize         =0x1
+	020010 Desc             =""
+	020020 Units            ="Steps"
+	020100 Address          =0x9886
+	020200 Equation         =1.000000 * X + 0.000000,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x2DE5
+	020005 Title            ="KISPKDL: IAC Params - Ignition off park delta from base"
+	020011 DescSize         =0x1
+	020010 Desc             =""
+	020020 Units            ="Steps"
+	020100 Address          =0x9887
+	020200 Equation         =1.000000 * X + 0.000000,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x2DE6
+	020005 Title            ="KISPKHOT: IAC Params - Hot crank park delta from base"
+	020011 DescSize         =0x1
+	020010 Desc             =""
+	020020 Units            ="Steps"
+	020100 Address          =0x9888
+	020200 Equation         =1.000000 * X + 0.000000,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x2DE7
+	020005 Title            ="KISPKCLT: IAC Params - Temperature Threshold for Park Delta"
+	020011 DescSize         =0x1
+	020010 Desc             =""
+	020020 Units            ="DegC"
+	020100 Address          =0x9889
+	020200 Equation         =0.750000 * X + -40.000000,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x2DE8
+	020005 Title            ="KPNDELAY: IAC Params - IAC Base Delay for Drive to Park/Neutral"
+	020011 DescSize         =0x1
+	020010 Desc             =""
+	020020 Units            ="Sec"
+	020100 Address          =0x988A
+	020200 Equation         =0.012500 * X + 0.000000,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x2DE9
+	020005 Title            ="KIACMAP: IAC Params - Maximum MAP load limit"
+	020011 DescSize         =0x1
+	020010 Desc             =""
+	020020 Units            ="kPa"
+	020100 Address          =0x988B
+	020200 Equation         =0.369004 * X + 10.354244,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x2DEA
+	020005 Title            ="KIACMXMP: IAC Params - Maximum Motor position"
+	020011 DescSize         =0x1
+	020010 Desc             =""
+	020020 Units            ="Steps"
+	020100 Address          =0x988C
+	020200 Equation         =1.000000 * X + 0.000000,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x2DEB
+	020005 Title            ="KETCDLTA: IAC - Adjustments - Extended throttle crack delta"
+	020011 DescSize         =0x1
+	020010 Desc             =""
+	020020 Units            ="Steps"
+	020100 Address          =0x988D
+	020200 Equation         =1.000000 * X + 0.000000,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x2DEC
+	020005 Title            ="KIACCL: IAC - Adjustments - Closed loop fuel step increase"
+	020011 DescSize         =0x1
+	020010 Desc             =""
+	020020 Units            ="Steps"
+	020100 Address          =0x988E
+	020200 Equation         =1.000000 * X + 0.000000,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x2DED
+	020005 Title            ="KHFANDS: IAC - Adjustments - High speed fan-on transient IAC steps"
+	020011 DescSize         =0x1
+	020010 Desc             =""
+	020020 Units            ="Steps"
+	020100 Address          =0x988F
+	020200 Equation         =1.000000 * X + 0.000000,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x2DEE
+	020005 Title            ="KHFANCLC: IAC - Adjustments - Time before High fan transient IAC steps are"
+	020011 DescSize         =0x1
+	020010 Desc             =""
+	020020 Units            ="Secs"
+	020100 Address          =0x9890
+	020200 Equation         =0.200000 * X + 0.000000,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x2DEF
+	020005 Title            ="KHIACFAN: IAC - Adjustments - High speed fan-on IAC step increase"
+	020011 DescSize         =0x1
+	020010 Desc             =""
+	020020 Units            ="Steps"
+	020100 Address          =0x9891
+	020200 Equation         =1.000000 * X + 0.000000,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x2DF0
+	020005 Title            ="KLFANDS: IAC - Adjustments - Low speed fan-on transient IAC steps"
+	020011 DescSize         =0x1
+	020010 Desc             =""
+	020020 Units            ="Steps"
+	020100 Address          =0x9892
+	020200 Equation         =1.000000 * X + 0.000000,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x2DF1
+	020005 Title            ="KLFANCLC: IAC - Adjustments - Time before Low fan transient IAC steps are "
+	020011 DescSize         =0x1
+	020010 Desc             =""
+	020020 Units            ="Secs"
+	020100 Address          =0x9893
+	020200 Equation         =0.200000 * X + 0.000000,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x2DF2
+	020005 Title            ="KLIACFAN: IAC - Adjustments - Low speed fan-on IAC step increase"
+	020011 DescSize         =0x1
+	020010 Desc             =""
+	020020 Units            ="Steps"
+	020100 Address          =0x9894
+	020200 Equation         =1.000000 * X + 0.000000,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x2DF3
+	020005 Title            ="KIACDM: IAC - warm-up params - IAC decay multiplier value"
+	020011 DescSize         =0x1
+	020010 Desc             =""
+	020020 Units            ="%"
+	020100 Address          =0x9895
+	020200 Equation         =0.390625 * X + 0.000000,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x2DF4
+	020005 Title            ="KDRMULT: IAC - warm-up params - RPM Warm-up offset factor for drive"
+	020011 DescSize         =0x1
+	020010 Desc             =""
+	020020 Units            ="%"
+	020100 Address          =0x9896
+	020200 Equation         =0.390625 * X + 0.000000,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x2DF5
+	020005 Title            ="KF14DM1: IAC - warm-up params - Time before Warm-up decay begins"
+	020011 DescSize         =0x1
+	020010 Desc             =""
+	020020 Units            ="Sec"
+	020100 Address          =0x9897
+	020200 Equation         =0.200000 * X + 0.000000,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x2DF6
+	020005 Title            ="KISALPC: IAC - warm-up params - Initial Stall Saver IAC offset"
+	020011 DescSize         =0x1
+	020010 Desc             =""
+	020020 Units            ="Steps"
+	020100 Address          =0x9898
+	020200 Equation         =1.000000 * X + 0.000000,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x2DF7
+	020005 Title            ="KISTDELC: IAC - warm-up params - Initial Stall Saver duration"
+	020011 DescSize         =0x1
+	020010 Desc             =""
+	020020 Units            ="Sec"
+	020100 Address          =0x9899
+	020200 Equation         =0.200000 * X + 0.000000,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x2DF8
+	020005 Title            ="KLGDB: IAC - Closed loop params - Large Error RPM dead band"
+	020011 DescSize         =0x1
+	020010 Desc             =""
+	020020 Units            ="RPM"
+	020100 Address          =0x989A
+	020200 Equation         =6.250000 * X + 0.000000,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x2DF9
+	020005 Title            ="KDRDB: IAC - Closed loop params - Drive RPM deadband"
+	020011 DescSize         =0x1
+	020010 Desc             =""
+	020020 Units            ="RPM"
+	020100 Address          =0x989B
+	020200 Equation         =6.250000 * X + 0.000000,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x2DFA
+	020005 Title            ="KPNDB: IAC - Closed loop params - P/N or Manual RPM deadband"
+	020011 DescSize         =0x1
+	020010 Desc             =""
+	020020 Units            ="RPM"
+	020100 Address          =0x989C
+	020200 Equation         =6.250000 * X + 0.000000,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x2DFB
+	020005 Title            ="KISDWADN: IAC - Closed loop params - Desired RPM increase for A/C ON"
+	020011 DescSize         =0x1
+	020010 Desc             =""
+	020020 Units            ="RPM"
+	020100 Address          =0x989D
+	020200 Equation         =6.250000 * X + 0.000000,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x2DFC
+	020005 Title            ="KFILRPMH: IAC - Closed loop params - RPM filter coefficient when above des"
+	020011 DescSize         =0x1
+	020010 Desc             =""
+	020020 Units            ="Coeff"
+	020100 Address          =0x989E
+	020200 Equation         =256.000000 * X + 0.000000,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x2DFD
+	020005 Title            ="KFILRPML: IAC - Closed loop params - RPM filter coefficient when below des"
+	020011 DescSize         =0x1
+	020010 Desc             =""
+	020020 Units            ="Coeff"
+	020100 Address          =0x989F
+	020200 Equation         =256.000000 * X + 0.000000,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x2DFE
+	020005 Title            ="KOPENDEL: IAC - Closed loop params - Closed loop delay for opening throttl"
+	020011 DescSize         =0x1
+	020010 Desc             =""
+	020020 Units            ="Sec"
+	020100 Address          =0x98A0
+	020200 Equation         =0.200000 * X + 0.000000,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x2DFF
+	020005 Title            ="KPKDRDEL: IAC - Closed loop params - Closed loop delay for Park/Drive chan"
+	020011 DescSize         =0x1
+	020010 Desc             =""
+	020020 Units            ="Sec"
+	020100 Address          =0x98A1
+	020200 Equation         =0.200000 * X + 0.000000,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x2E00
+	020005 Title            ="KACTRANS: IAC - Closed loop params - Closed loop delay for A/C change"
+	020011 DescSize         =0x1
+	020010 Desc             =""
+	020020 Units            ="Sec"
+	020100 Address          =0x98A2
+	020200 Equation         =0.200000 * X + 0.000000,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x2E01
+	020005 Title            ="KRPMIDLE: IAC - Idle spark Adjustment params - High resolution idle RPM fi"
+	020011 DescSize         =0x1
+	020010 Desc             =""
+	020020 Units            ="Coeff"
+	020100 Address          =0x98A3
+	020200 Equation         =256.000000 * X + 0.000000,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x2E02
+	020005 Title            ="KSACOOL: IAC - Idle spark Adjustment params - IAC spark correct'n lower co"
+	020011 DescSize         =0x1
+	020010 Desc             =""
+	020020 Units            ="DegC"
+	020100 Address          =0x98A4
+	020200 Equation         =0.750000 * X + -40.000000,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x2E03
+	020005 Title            ="KSARPMHI: IAC - Idle spark Adjustment params - High RPM spark correction m"
+	020011 DescSize         =0x1
+	020010 Desc             =""
+	020020 Units            ="%Deg/RPM"
+	020050 SizeInBits       =0x10
+	020100 Address          =0x98A5
+	020200 Equation         =0.001373 * X + 0.000000,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x2E04
+	020005 Title            ="KSARPMLO: IAC - Idle spark Adjustment params - Low RPM spark correction mu"
+	020011 DescSize         =0x1
+	020010 Desc             =""
+	020020 Units            ="%Deg/RPM"
+	020050 SizeInBits       =0x10
+	020100 Address          =0x98A7
+	020200 Equation         =0.001373 * X + 0.000000,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x2E05
+	020005 Title            ="KSAOLDB: IAC - Idle spark Adjustment params - RPM error limit for spark ad"
+	020011 DescSize         =0xB
+	020010 Desc             ="looks good"
+	020020 Units            ="RPM"
+	020050 SizeInBits       =0x10
+	020100 Address          =0x98A9
+	020200 Equation         =1.000000 * X + 0.000000,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x2E06
+	020005 Title            ="KSCORLIM: IAC - Idle spark Adjustment params - Idle spark correction limit"
+	020011 DescSize         =0xB
+	020010 Desc             ="looks good"
+	020020 Units            ="Deg"
+	020100 Address          =0x98AB
+	020200 Equation         =0.351563 * X + 0.000000,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x2E07
+	020005 Title            ="KTCDELTA: IAC - Transient IAC params - Throttle Crack Delta TPS"
+	020011 DescSize         =0xB
+	020010 Desc             ="looks good"
+	020020 Units            ="%"
+	020100 Address          =0x98AC
+	020200 Equation         =0.390625 * X + 0.000000,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x2E08
+	020005 Title            ="KMLGAIN: IAC - Transient IAC params - MAP Limiter Gain Factor"
+	020011 DescSize         =0xB
+	020010 Desc             ="looks good"
+	020020 Units            ="%"
+	020100 Address          =0x98AD
+	020200 Equation         =0.010586 * X + 0.000000,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x2E09
+	020005 Title            ="KMLMAX: IAC - Transient IAC params - MAP Limiter Maximum Offset"
+	020011 DescSize         =0xB
+	020010 Desc             ="looks good"
+	020020 Units            ="Steps"
+	020100 Address          =0x98AE
+	020200 Equation         =1.000000 * X + 0.000000,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x2E0A
+	020005 Title            ="KSSRPM: IAC - Transient IAC params - Stall Saver RPM Threshold"
+	020011 DescSize         =0xB
+	020010 Desc             ="looks good"
+	020020 Units            ="RPM"
+	020100 Address          =0x98AF
+	020200 Equation         =6.250000 * X + 0.000000,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x2E0B
+	020005 Title            ="KSAVSTEP: IAC - Transient IAC params - Stall Saver IAC Increase"
+	020011 DescSize         =0xB
+	020010 Desc             ="looks good"
+	020020 Units            ="Steps"
+	020100 Address          =0x98B0
+	020200 Equation         =1.000000 * X + 0.000000,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x2E0C
+	020005 Title            ="KSAGDB: IAC - Transient IAC params - Sag Mode Deadband"
+	020011 DescSize         =0xB
+	020010 Desc             ="looks good"
+	020020 Units            ="RPM"
+	020100 Address          =0x98B1
+	020200 Equation         =6.250000 * X + 0.000000,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x2E0D
+	020005 Title            ="KSAGSTEP: IAC - Transient IAC params - Sag Mode IAC Increase"
+	020011 DescSize         =0xB
+	020010 Desc             ="looks good"
+	020020 Units            ="Steps"
+	020100 Address          =0x98B2
+	020200 Equation         =1.000000 * X + 0.000000,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x2E0E
+	020005 Title            ="KADBARO: Baro params - Default Baro A/D counts (243 = 100kPa)"
+	020011 DescSize         =0x1
+	020010 Desc             =""
+	020020 Units            ="kPa"
+	020100 Address          =0x98F8
+	020200 Equation         =0.369004 * X + 10.354244,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x2E0F
+	020005 Title            ="KMAXOFF: Baro params - Maximum MAP offset for baro adjustment"
+	020011 DescSize         =0x1
+	020010 Desc             =""
+	020020 Units            ="kPa"
+	020100 Address          =0x98F9
+	020200 Equation         =0.369004 * X + 0.000000,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x2E10
+	020005 Title            ="KNVRATAL: Shift light params - RPM/KmH N/V for 5th to be upshifted"
+	020011 DescSize         =0x1
+	020010 Desc             =""
+	020020 Units            =" "
+	020100 Address          =0x990F
+	020200 Equation         =1.000000 * X + 0.000000,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x2E11
+	020005 Title            ="KDLTRPMA: Shift light params - Engine speed tolerence for 5th gear"
+	020011 DescSize         =0x1
+	020010 Desc             =""
+	020020 Units            ="RPM"
+	020100 Address          =0x9910
+	020200 Equation         =25.000000 * X + 0.000000,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x2E12
+	020005 Title            ="KGEARDL1: Shift light params - In-Gear delay time for 1st gear"
+	020011 DescSize         =0x1
+	020010 Desc             =""
+	020020 Units            ="Sec"
+	020100 Address          =0x9911
+	020200 Equation         =0.100000 * X + 0.000000,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x2E13
+	020005 Title            ="KGEARDL2: Shift light params - In-Gear delay time for 2nd 3rd 4th & 5th ge"
+	020011 DescSize         =0x1
+	020010 Desc             =""
+	020020 Units            ="Sec"
+	020100 Address          =0x9912
+	020200 Equation         =0.100000 * X + 0.000000,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x2E14
+	020005 Title            ="KNVRATBL: Shift light params - RPM/KMH N/V for 4th gear"
+	020011 DescSize         =0x1
+	020010 Desc             =""
+	020020 Units            =" "
+	020100 Address          =0x9913
+	020200 Equation         =1.000000 * X + 0.000000,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x2E15
+	020005 Title            ="KDLTRPMB: Shift light params - Engine speed tolerence for 4th gear"
+	020011 DescSize         =0x1
+	020010 Desc             =""
+	020020 Units            ="RPM"
+	020100 Address          =0x9914
+	020200 Equation         =25.000000 * X + 0.000000,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x2E16
+	020005 Title            ="KSHFRPMB: Shift light params - Minimum RPM to allow shift to 5th gear"
+	020011 DescSize         =0x1
+	020010 Desc             =""
+	020020 Units            ="RPM"
+	020100 Address          =0x9915
+	020200 Equation         =25.000000 * X + 0.000000,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x2E17
+	020005 Title            ="KSHFMAPB: Shift light params - Maximum MAP to allow shift to 5th gear"
+	020011 DescSize         =0x1
+	020010 Desc             =""
+	020020 Units            ="kPa"
+	020100 Address          =0x9916
+	020200 Equation         =0.312500 * X + 20.000000,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x2E18
+	020005 Title            ="KNVRATCL: Shift light params - RPM/KMH N/V for 3rd gear"
+	020011 DescSize         =0x1
+	020010 Desc             =""
+	020020 Units            =" "
+	020100 Address          =0x9917
+	020200 Equation         =1.000000 * X + 0.000000,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x2E19
+	020005 Title            ="KDLTRPMC: Shift light params - Engine speed tolerence for 3rd gear"
+	020011 DescSize         =0x1
+	020010 Desc             =""
+	020020 Units            ="RPM"
+	020100 Address          =0x9918
+	020200 Equation         =25.000000 * X + 0.000000,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x2E1A
+	020005 Title            ="KSHFRPMC: Shift light params - Minimum RPM to allow shift to 4th gear"
+	020011 DescSize         =0x1
+	020010 Desc             =""
+	020020 Units            ="RPM"
+	020100 Address          =0x9919
+	020200 Equation         =25.000000 * X + 0.000000,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x2E1B
+	020005 Title            ="KSHFMAPC: Shift light params - Maximum MAP to allow shift to 4th gear"
+	020011 DescSize         =0x1
+	020010 Desc             =""
+	020020 Units            ="kPa"
+	020100 Address          =0x991A
+	020200 Equation         =0.312500 * X + 20.000000,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x2E1C
+	020005 Title            ="KNVRATDL: Shift light params - RPM/KMH N/V for 2nd gear"
+	020011 DescSize         =0x1
+	020010 Desc             =""
+	020020 Units            =" "
+	020100 Address          =0x991B
+	020200 Equation         =1.000000 * X + 0.000000,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x2E1D
+	020005 Title            ="KDLTRPMD: Shift light params - Engine speed tolerence for 2nd gear"
+	020011 DescSize         =0x1
+	020010 Desc             =""
+	020020 Units            ="RPM"
+	020100 Address          =0x991C
+	020200 Equation         =25.000000 * X + 0.000000,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x2E1E
+	020005 Title            ="KSHFRPMD: Shift light params - Minimum RPM to allow shift to 3rd gear"
+	020011 DescSize         =0x1
+	020010 Desc             =""
+	020020 Units            ="RPM"
+	020100 Address          =0x991D
+	020200 Equation         =25.000000 * X + 0.000000,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x2E1F
+	020005 Title            ="KSHFMAPD: Shift light params - Maximum MAP to allow shift to 3rd gear"
+	020011 DescSize         =0x1
+	020010 Desc             =""
+	020020 Units            ="kPa"
+	020100 Address          =0x991E
+	020200 Equation         =0.312500 * X + 20.000000,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x2E20
+	020005 Title            ="KNVRATEL: Shift light params - RPM/KMH N/V for 1st gear"
+	020011 DescSize         =0x1
+	020010 Desc             =""
+	020020 Units            =" "
+	020100 Address          =0x991F
+	020200 Equation         =1.000000 * X + 0.000000,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x2E21
+	020005 Title            ="KDLTRPME: Shift light params - Engine speed tolerence for 1st gear"
+	020011 DescSize         =0x1
+	020010 Desc             =""
+	020020 Units            ="RPM"
+	020100 Address          =0x9920
+	020200 Equation         =25.000000 * X + 0.000000,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x2E22
+	020005 Title            ="KSHFRPME: Shift light params - Minimum RPM to allow shift to 2nd gear"
+	020011 DescSize         =0x1
+	020010 Desc             =""
+	020020 Units            ="RPM"
+	020100 Address          =0x9921
+	020200 Equation         =25.000000 * X + 0.000000,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x2E23
+	020005 Title            ="KSHFMAPE: Shift light params - Maximum MAP to allow shift to 2nd gear"
+	020011 DescSize         =0x1
+	020010 Desc             =""
+	020020 Units            ="kPa"
+	020100 Address          =0x9922
+	020200 Equation         =0.312500 * X + 20.000000,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x2E24
+	020005 Title            ="KTCCTMPL: TCC lower temperature limit"
+	020011 DescSize         =0x1
+	020010 Desc             =""
+	020020 Units            ="DegC"
+	020100 Address          =0x9928
+	020200 Equation         =0.750000 * X + -40.000000,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x2E25
+	020005 Title            ="KCOASTHZ: TCC Params - TCC Hysteresis for KCOAST1 and KCOAST2"
+	020011 DescSize         =0x1
+	020010 Desc             =""
+	020020 Units            ="%"
+	020100 Address          =0x9929
+	020200 Equation         =0.390625 * X + 0.000000,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x2E26
+	020005 Title            ="KRSCSTL: TCC Params - TCC Road speed coast level"
+	020011 DescSize         =0x1
+	020010 Desc             =""
+	020020 Units            ="km/h"
+	020100 Address          =0x992A
+	020200 Equation         =1.000000 * X + 0.000000,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x2E27
+	020005 Title            ="KCOAST1A: TCC Params - TCC Low km/h coast load limit"
+	020011 DescSize         =0x1
+	020010 Desc             =""
+	020020 Units            ="%"
+	020100 Address          =0x992B
+	020200 Equation         =0.390625 * X + 0.000000,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x2E28
+	020005 Title            ="KCOAST2A: TCC Params - TCC High km/h coast load limit"
+	020011 DescSize         =0x1
+	020010 Desc             =""
+	020020 Units            ="%"
+	020100 Address          =0x992C
+	020200 Equation         =0.390625 * X + 0.000000,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x2E29
+	020005 Title            ="KREL1A: TCC Params - TCC Negative delta Throttle position Unlock limit"
+	020011 DescSize         =0x1
+	020010 Desc             =""
+	020020 Units            ="%"
+	020100 Address          =0x992D
+	020200 Equation         =0.390625 * X + 0.000000,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x2E2A
+	020005 Title            ="KREL2A: TCC Params - TCC Positive delta Throttle position unlock limit"
+	020011 DescSize         =0x1
+	020010 Desc             =""
+	020020 Units            ="%"
+	020100 Address          =0x992E
+	020200 Equation         =0.390625 * X + 0.000000,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x2E2B
+	020005 Title            ="KLCKDLYT: TCC Params - TCC delay before lock enabled after coast"
+	020011 DescSize         =0x1
+	020010 Desc             =""
+	020020 Units            ="Sec"
+	020100 Address          =0x992F
+	020200 Equation         =0.100000 * X + 0.000000,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x2E2C
+	020005 Title            ="KLKDLYT2: TCC Params - TCC Coast release lock delay time Low road speed"
+	020011 DescSize         =0x1
+	020010 Desc             =""
+	020020 Units            ="Sec"
+	020100 Address          =0x9930
+	020200 Equation         =0.100000 * X + 0.000000,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x2E2D
+	020005 Title            ="KLKDLYT3: TCC Params - TCC Coast release lock delay time High road speed"
+	020011 DescSize         =0x1
+	020010 Desc             =""
+	020020 Units            ="Sec"
+	020100 Address          =0x9931
+	020200 Equation         =0.100000 * X + 0.000000,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x2E2E
+	020005 Title            ="KRSHNTHL: TCC Params - TCC Road speed upper limit for LOCK"
+	020011 DescSize         =0x1
+	020010 Desc             =""
+	020020 Units            ="km/h"
+	020100 Address          =0x9932
+	020200 Equation         =1.000000 * X + 0.000000,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x2E2F
+	020005 Title            ="KRSHNTLL: TCC Params - TCC Road speed lower limit for UNLOCK"
+	020011 DescSize         =0x1
+	020010 Desc             =""
+	020020 Units            ="km/h"
+	020100 Address          =0x9933
+	020200 Equation         =1.000000 * X + 0.000000,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x2E30
+	020005 Title            ="KHIFANTH: High speed fan ON coolant threshold  -5deg hyst"
+	020011 DescSize         =0xB
+	020010 Desc             ="looks good"
+	020020 Units            ="Deg C"
+	020100 Address          =0x994D
+	020200 Equation         =0.750000 * X + -40.000000,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x2E31
+	020005 Title            ="KHIFANSP: Min road speed for High speed fan  + 8kph hyst"
+	020011 DescSize         =0xB
+	020010 Desc             ="looks good"
+	020020 Units            ="Kph"
+	020100 Address          =0x994E
+	020200 Equation         =1.000000 * X + 0.000000,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x2E32
+	020005 Title            ="KHIFANTIM: Delay time before High fan turn on"
+	020011 DescSize         =0x1
+	020010 Desc             =""
+	020020 Units            ="Sec"
+	020100 Address          =0x994F
+	020200 Equation         =0.100000 * X + 0.000000,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x2E33
+	020005 Title            ="KLOFANTH: High speed fan ON coolant threshold  -6deg hyst"
+	020011 DescSize         =0x1
+	020010 Desc             =""
+	020020 Units            ="Deg C"
+	020100 Address          =0x9950
+	020200 Equation         =0.750000 * X + -40.000000,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x2E34
+	020005 Title            ="KLOFANSP: Min road speed for Low speed fan  + 8kph hyst"
+	020011 DescSize         =0xB
+	020010 Desc             ="looks good"
+	020020 Units            ="Kph"
+	020100 Address          =0x9951
+	020200 Equation         =1.000000 * X + 0.000000,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x2E35
+	020005 Title            ="KLOFANTIM: Delay time before Low fan turn on"
+	020011 DescSize         =0xB
+	020010 Desc             ="looks good"
+	020020 Units            ="Sec"
+	020100 Address          =0x9952
+	020200 Equation         =0.100000 * X + 0.000000,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x2E36
+	020005 Title            ="KACDISTP: A/C TPS Threshold for cut-out"
+	020011 DescSize         =0xB
+	020010 Desc             ="looks good"
+	020020 Units            ="%"
+	020100 Address          =0x9953
+	020200 Equation         =0.390625 * X + 0.000000,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x2E37
+	020005 Title            ="KACTIMER: A/C clutch - A/C delay time"
+	020011 DescSize         =0xB
+	020010 Desc             ="looks good"
+	020020 Units            ="Secs"
+	020100 Address          =0x9954
+	020200 Equation         =0.100000 * X + 0.000000,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x2E38
+	020005 Title            ="KACRPMHI: A/C clutch - A/C Clutch High RPM cut-out"
+	020011 DescSize         =0xB
+	020010 Desc             ="looks good"
+	020020 Units            ="RPM"
+	020100 Address          =0x9957
+	020200 Equation         =25.000000 * X + 0.000000,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x2E39
+	020005 Title            ="A/C CLUTCH - A/C Clutch re-enable RPM"
+	020011 DescSize         =0xB
+	020010 Desc             ="looks good"
+	020020 Units            ="RPM"
+	020100 Address          =0x9961
+	020200 Equation         =25.000000 * X + 0.000000,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x725B
+	020005 Title            ="A/T KICKDOWN MODE 1-2 UPSHIFT THRESHOLD"
+	020011 DescSize         =0x1
+	020010 Desc             =""
+	020020 Units            ="KPH"
+	020100 Address          =0x803B
+	020200 Equation         =X,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x3B30
+	020005 Title            ="A/T KICKDOWN MODE 2-3 UPSHIFT THRESHOLD"
+	020011 DescSize         =0x1
+	020010 Desc             =""
+	020020 Units            ="KPH"
+	020100 Address          =0x803C
+	020200 Equation         =X,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x2BEE
+	020005 Title            ="A/T KICKDOWN MODE 3-4 UPSHIFT THRESHOLD"
+	020011 DescSize         =0x1
+	020010 Desc             =""
+	020020 Units            ="KPH"
+	020100 Address          =0x803D
+	020200 Equation         =X,TH|0|0|0|0|
+%%END%%
+
+%%FLAG%%
+	000002 UniqueID         =0x2E3A
+	030005 Title            ="KOPTFLG1: Option Word 1  - Bit 7 - Bit 7"
+	030011 DescSize         =0x101
+	030010 Desc             ="Bit 0   1 = Backfire inhibit logic selected\r\nBit 1   1 = To allow transient fuel decay to occur on a 12.5ms basis\r\nBit 2   1 = Crank input active high\r\nBit 3   1 = F60 A/F  0 = Stoich A/F\r\nBit 4   1 = RPM used as BLM part throttle criteria 0 = KPH used as "
+	030100 Address          =0x6009
+	030120 SetValue         =0xFF
+	030200 BitNumber        =0x7
+%%END%%
+
+%%FLAG%%
+	000002 UniqueID         =0x2E3B
+	030005 Title            ="KOPTFLG1: Option Word 1  - Bit 6 - Bit 6"
+	030011 DescSize         =0x101
+	030010 Desc             ="Bit 0   1 = Backfire inhibit logic selected\r\nBit 1   1 = To allow transient fuel decay to occur on a 12.5ms basis\r\nBit 2   1 = Crank input active high\r\nBit 3   1 = F60 A/F  0 = Stoich A/F\r\nBit 4   1 = RPM used as BLM part throttle criteria 0 = KPH used as "
+	030100 Address          =0x6009
+	030120 SetValue         =0xFF
+	030200 BitNumber        =0x6
+%%END%%
+
+%%FLAG%%
+	000002 UniqueID         =0x2E3C
+	030005 Title            ="KOPTFLG1: Option Word 1  - Bit 5 - Bit 5"
+	030011 DescSize         =0x101
+	030010 Desc             ="Bit 0   1 = Backfire inhibit logic selected\r\nBit 1   1 = To allow transient fuel decay to occur on a 12.5ms basis\r\nBit 2   1 = Crank input active high\r\nBit 3   1 = F60 A/F  0 = Stoich A/F\r\nBit 4   1 = RPM used as BLM part throttle criteria 0 = KPH used as "
+	030100 Address          =0x6009
+	030120 SetValue         =0xFF
+	030200 BitNumber        =0x5
+%%END%%
+
+%%FLAG%%
+	000002 UniqueID         =0x2E3D
+	030005 Title            ="KOPTFLG1: Option Word 1  - Bit 4 - Bit 4"
+	030011 DescSize         =0x101
+	030010 Desc             ="Bit 0   1 = Backfire inhibit logic selected\r\nBit 1   1 = To allow transient fuel decay to occur on a 12.5ms basis\r\nBit 2   1 = Crank input active high\r\nBit 3   1 = F60 A/F  0 = Stoich A/F\r\nBit 4   1 = RPM used as BLM part throttle criteria 0 = KPH used as "
+	030100 Address          =0x6009
+	030120 SetValue         =0xFF
+	030200 BitNumber        =0x4
+%%END%%
+
+%%FLAG%%
+	000002 UniqueID         =0x2E3E
+	030005 Title            ="KOPTFLG1: Option Word 1  - Bit 3 - Bit 3"
+	030011 DescSize         =0x101
+	030010 Desc             ="Bit 0   1 = Backfire inhibit logic selected\r\nBit 1   1 = To allow transient fuel decay to occur on a 12.5ms basis\r\nBit 2   1 = Crank input active high\r\nBit 3   1 = F60 A/F  0 = Stoich A/F\r\nBit 4   1 = RPM used as BLM part throttle criteria 0 = KPH used as "
+	030100 Address          =0x6009
+	030120 SetValue         =0xFF
+	030200 BitNumber        =0x3
+%%END%%
+
+%%FLAG%%
+	000002 UniqueID         =0x2E3F
+	030005 Title            ="KOPTFLG1: Option Word 1  - Bit 2 - Bit 2"
+	030011 DescSize         =0x101
+	030010 Desc             ="Bit 0   1 = Backfire inhibit logic selected\r\nBit 1   1 = To allow transient fuel decay to occur on a 12.5ms basis\r\nBit 2   1 = Crank input active high\r\nBit 3   1 = F60 A/F  0 = Stoich A/F\r\nBit 4   1 = RPM used as BLM part throttle criteria 0 = KPH used as "
+	030100 Address          =0x6009
+	030120 SetValue         =0xFF
+	030200 BitNumber        =0x2
+%%END%%
+
+%%FLAG%%
+	000002 UniqueID         =0x2E40
+	030005 Title            ="KOPTFLG1: Option Word 1  - Bit 1 - Bit 1"
+	030011 DescSize         =0x101
+	030010 Desc             ="Bit 0   1 = Backfire inhibit logic selected\r\nBit 1   1 = To allow transient fuel decay to occur on a 12.5ms basis\r\nBit 2   1 = Crank input active high\r\nBit 3   1 = F60 A/F  0 = Stoich A/F\r\nBit 4   1 = RPM used as BLM part throttle criteria 0 = KPH used as "
+	030100 Address          =0x9
+	030120 SetValue         =0xFF
+	030200 BitNumber        =0x1
+%%END%%
+
+%%FLAG%%
+	000002 UniqueID         =0x2E41
+	030005 Title            ="KOPTFLG1: Option Word 1  - Bit 0 - Bit 0"
+	030011 DescSize         =0x101
+	030010 Desc             ="Bit 0   1 = Backfire inhibit logic selected\r\nBit 1   1 = To allow transient fuel decay to occur on a 12.5ms basis\r\nBit 2   1 = Crank input active high\r\nBit 3   1 = F60 A/F  0 = Stoich A/F\r\nBit 4   1 = RPM used as BLM part throttle criteria 0 = KPH used as "
+	030100 Address          =0x9
+	030120 SetValue         =0xFF
+	030200 BitNumber        =0x0
+%%END%%
+
+%%FLAG%%
+	000002 UniqueID         =0x2E42
+	030005 Title            ="KOPTFLG2: Option Word 2 - Bit 7 - Bit 7"
+	030011 DescSize         =0x101
+	030010 Desc             ="Bit 0   1 = Use AE after start enrichment\r\nBit 1   1 = Decay transient fuel after each rev\r\nBit 2   1 = 2 speed fan option\r\nBit 3   1 = ACSP coolant sensor\r\nBit 4   1 = Use VE learn logic\r\nBit 5   1 = Use external VE slew option\r\nBit 6   1 = Single fire op"
+	030100 Address          =0x600A
+	030120 SetValue         =0xFF
+	030200 BitNumber        =0x7
+%%END%%
+
+%%FLAG%%
+	000002 UniqueID         =0x2E43
+	030005 Title            ="KOPTFLG2: Option Word 2 - Bit 6 - Bit 6"
+	030011 DescSize         =0x101
+	030010 Desc             ="Bit 0   1 = Use AE after start enrichment\r\nBit 1   1 = Decay transient fuel after each rev\r\nBit 2   1 = 2 speed fan option\r\nBit 3   1 = ACSP coolant sensor\r\nBit 4   1 = Use VE learn logic\r\nBit 5   1 = Use external VE slew option\r\nBit 6   1 = Single fire op"
+	030100 Address          =0x600A
+	030120 SetValue         =0xFF
+	030200 BitNumber        =0x6
+%%END%%
+
+%%FLAG%%
+	000002 UniqueID         =0x2E44
+	030005 Title            ="KOPTFLG2: Option Word 2 - Bit 5 - Bit 5"
+	030011 DescSize         =0x101
+	030010 Desc             ="Bit 0   1 = Use AE after start enrichment\r\nBit 1   1 = Decay transient fuel after each rev\r\nBit 2   1 = 2 speed fan option\r\nBit 3   1 = ACSP coolant sensor\r\nBit 4   1 = Use VE learn logic\r\nBit 5   1 = Use external VE slew option\r\nBit 6   1 = Single fire op"
+	030100 Address          =0x600A
+	030120 SetValue         =0xFF
+	030200 BitNumber        =0x5
+%%END%%
+
+%%FLAG%%
+	000002 UniqueID         =0x2E45
+	030005 Title            ="KOPTFLG2: Option Word 2 - Bit 4 - Bit 4"
+	030011 DescSize         =0x101
+	030010 Desc             ="Bit 0   1 = Use AE after start enrichment\r\nBit 1   1 = Decay transient fuel after each rev\r\nBit 2   1 = 2 speed fan option\r\nBit 3   1 = ACSP coolant sensor\r\nBit 4   1 = Use VE learn logic\r\nBit 5   1 = Use external VE slew option\r\nBit 6   1 = Single fire op"
+	030100 Address          =0x600A
+	030120 SetValue         =0xFF
+	030200 BitNumber        =0x4
+%%END%%
+
+%%FLAG%%
+	000002 UniqueID         =0x2E46
+	030005 Title            ="KOPTFLG2: Option Word 2 - Bit 3 - Bit 3"
+	030011 DescSize         =0x101
+	030010 Desc             ="Bit 0   1 = Use AE after start enrichment\r\nBit 1   1 = Decay transient fuel after each rev\r\nBit 2   1 = 2 speed fan option\r\nBit 3   1 = ACSP coolant sensor\r\nBit 4   1 = Use VE learn logic\r\nBit 5   1 = Use external VE slew option\r\nBit 6   1 = Single fire op"
+	030100 Address          =0x600A
+	030120 SetValue         =0xFF
+	030200 BitNumber        =0x3
+%%END%%
+
+%%FLAG%%
+	000002 UniqueID         =0x2E47
+	030005 Title            ="KOPTFLG2: Option Word 2 - Bit 2 - Bit 2"
+	030011 DescSize         =0x101
+	030010 Desc             ="Bit 0   1 = Use AE after start enrichment\r\nBit 1   1 = Decay transient fuel after each rev\r\nBit 2   1 = 2 speed fan option\r\nBit 3   1 = ACSP coolant sensor\r\nBit 4   1 = Use VE learn logic\r\nBit 5   1 = Use external VE slew option\r\nBit 6   1 = Single fire op"
+	030100 Address          =0x600A
+	030120 SetValue         =0xFF
+	030200 BitNumber        =0x2
+%%END%%
+
+%%FLAG%%
+	000002 UniqueID         =0x2E48
+	030005 Title            ="KOPTFLG2: Option Word 2 - Bit 1 - Bit 1"
+	030011 DescSize         =0x101
+	030010 Desc             ="Bit 0   1 = Use AE after start enrichment\r\nBit 1   1 = Decay transient fuel after each rev\r\nBit 2   1 = 2 speed fan option\r\nBit 3   1 = ACSP coolant sensor\r\nBit 4   1 = Use VE learn logic\r\nBit 5   1 = Use external VE slew option\r\nBit 6   1 = Single fire op"
+	030100 Address          =0x600A
+	030120 SetValue         =0xFF
+	030200 BitNumber        =0x1
+%%END%%
+
+%%FLAG%%
+	000002 UniqueID         =0x2E49
+	030005 Title            ="KOPTFLG2: Option Word 2 - Bit 0 - Bit 0"
+	030011 DescSize         =0x101
+	030010 Desc             ="Bit 0   1 = Use AE after start enrichment\r\nBit 1   1 = Decay transient fuel after each rev\r\nBit 2   1 = 2 speed fan option\r\nBit 3   1 = ACSP coolant sensor\r\nBit 4   1 = Use VE learn logic\r\nBit 5   1 = Use external VE slew option\r\nBit 6   1 = Single fire op"
+	030100 Address          =0x600A
+	030120 SetValue         =0xFF
+	030200 BitNumber        =0x0
+%%END%%
+
+%%FLAG%%
+	000002 UniqueID         =0x2E4A
+	030005 Title            ="KOPTFLG3: Option Word 3 - Bit 7 - Bit 7"
+	030011 DescSize         =0x101
+	030010 Desc             ="Bit 0   1 = Reset fuel integerator if in AE\r\nBit 1   1 = Reset fuel integerator if BLM cell change\r\nBit 2   1 = Reset fuel integerator if in DE\r\nBit 3   1 = Chose MAP as load criteria for BLM logic  0 = Chose TPS as load criteria for BLM logic\r\nBit 4   Not"
+	030100 Address          =0x600B
+	030120 SetValue         =0xFF
+	030200 BitNumber        =0x7
+%%END%%
+
+%%FLAG%%
+	000002 UniqueID         =0x2E4B
+	030005 Title            ="KOPTFLG3: Option Word 3 - Bit 6 - Bit 6"
+	030011 DescSize         =0x101
+	030010 Desc             ="Bit 0   1 = Reset fuel integerator if in AE\r\nBit 1   1 = Reset fuel integerator if BLM cell change\r\nBit 2   1 = Reset fuel integerator if in DE\r\nBit 3   1 = Chose MAP as load criteria for BLM logic  0 = Chose TPS as load criteria for BLM logic\r\nBit 4   Not"
+	030100 Address          =0x600B
+	030120 SetValue         =0xFF
+	030200 BitNumber        =0x6
+%%END%%
+
+%%FLAG%%
+	000002 UniqueID         =0x2E4C
+	030005 Title            ="KOPTFLG3: Option Word 3 - Bit 5 - Bit 5"
+	030011 DescSize         =0x101
+	030010 Desc             ="Bit 0   1 = Reset fuel integerator if in AE\r\nBit 1   1 = Reset fuel integerator if BLM cell change\r\nBit 2   1 = Reset fuel integerator if in DE\r\nBit 3   1 = Chose MAP as load criteria for BLM logic  0 = Chose TPS as load criteria for BLM logic\r\nBit 4   Not"
+	030100 Address          =0x600B
+	030120 SetValue         =0xFF
+	030200 BitNumber        =0x5
+%%END%%
+
+%%FLAG%%
+	000002 UniqueID         =0x2E4D
+	030005 Title            ="KOPTFLG3: Option Word 3 - Bit 4 - Bit 4"
+	030011 DescSize         =0x101
+	030010 Desc             ="Bit 0   1 = Reset fuel integerator if in AE\r\nBit 1   1 = Reset fuel integerator if BLM cell change\r\nBit 2   1 = Reset fuel integerator if in DE\r\nBit 3   1 = Chose MAP as load criteria for BLM logic  0 = Chose TPS as load criteria for BLM logic\r\nBit 4   Not"
+	030100 Address          =0x600B
+	030120 SetValue         =0xFF
+	030200 BitNumber        =0x4
+%%END%%
+
+%%FLAG%%
+	000002 UniqueID         =0x2E4E
+	030005 Title            ="KOPTFLG3: Option Word 3 - Bit 3 - Bit 3"
+	030011 DescSize         =0x101
+	030010 Desc             ="Bit 0   1 = Reset fuel integerator if in AE\r\nBit 1   1 = Reset fuel integerator if BLM cell change\r\nBit 2   1 = Reset fuel integerator if in DE\r\nBit 3   1 = Chose MAP as load criteria for BLM logic  0 = Chose TPS as load criteria for BLM logic\r\nBit 4   Not"
+	030100 Address          =0x600B
+	030120 SetValue         =0xFF
+	030200 BitNumber        =0x3
+%%END%%
+
+%%FLAG%%
+	000002 UniqueID         =0x2E4F
+	030005 Title            ="KOPTFLG3: Option Word 3 - Bit 2 - Bit 2"
+	030011 DescSize         =0x101
+	030010 Desc             ="Bit 0   1 = Reset fuel integerator if in AE\r\nBit 1   1 = Reset fuel integerator if BLM cell change\r\nBit 2   1 = Reset fuel integerator if in DE\r\nBit 3   1 = Chose MAP as load criteria for BLM logic  0 = Chose TPS as load criteria for BLM logic\r\nBit 4   Not"
+	030100 Address          =0x600B
+	030120 SetValue         =0xFF
+	030200 BitNumber        =0x2
+%%END%%
+
+%%FLAG%%
+	000002 UniqueID         =0x2E50
+	030005 Title            ="KOPTFLG3: Option Word 3 - Bit 1 - Bit 1"
+	030011 DescSize         =0x101
+	030010 Desc             ="Bit 0   1 = Reset fuel integerator if in AE\r\nBit 1   1 = Reset fuel integerator if BLM cell change\r\nBit 2   1 = Reset fuel integerator if in DE\r\nBit 3   1 = Chose MAP as load criteria for BLM logic  0 = Chose TPS as load criteria for BLM logic\r\nBit 4   Not"
+	030100 Address          =0x600B
+	030120 SetValue         =0xFF
+	030200 BitNumber        =0x1
+%%END%%
+
+%%FLAG%%
+	000002 UniqueID         =0x2E51
+	030005 Title            ="KOPTFLG3: Option Word 3 - Bit 0 - Bit 0"
+	030011 DescSize         =0x101
+	030010 Desc             ="Bit 0   1 = Reset fuel integerator if in AE\r\nBit 1   1 = Reset fuel integerator if BLM cell change\r\nBit 2   1 = Reset fuel integerator if in DE\r\nBit 3   1 = Chose MAP as load criteria for BLM logic  0 = Chose TPS as load criteria for BLM logic\r\nBit 4   Not"
+	030100 Address          =0x600B
+	030120 SetValue         =0xFF
+	030200 BitNumber        =0x0
+%%END%%
+
+%%FLAG%%
+	000002 UniqueID         =0x2E52
+	030005 Title            ="KOPTFLG4: Option Word 4 - Bit 7 - Bit 7"
+	030011 DescSize         =0x101
+	030010 Desc             ="Bit 0   1 = Disable anti-theft module control\r\nBit 1   1 = Enable A/F check for closed loop fuel logic\r\nBit 2   1 = Use ALTMAPLD as VE load variable\r\nBit 3   1 = RPM derivative spark control option\r\nBit 4   1 = Lean cruise option\r\nBit 5   Not used\r\nBit 6  "
+	030100 Address          =0x900C
+	030120 SetValue         =0xFF
+	030200 BitNumber        =0x7
+%%END%%
+
+%%FLAG%%
+	000002 UniqueID         =0x2E53
+	030005 Title            ="KOPTFLG4: Option Word 4 - Bit 6 - Bit 6"
+	030011 DescSize         =0x101
+	030010 Desc             ="Bit 0   1 = Disable anti-theft module control\r\nBit 1   1 = Enable A/F check for closed loop fuel logic\r\nBit 2   1 = Use ALTMAPLD as VE load variable\r\nBit 3   1 = RPM derivative spark control option\r\nBit 4   1 = Lean cruise option\r\nBit 5   Not used\r\nBit 6  "
+	030100 Address          =0x900C
+	030120 SetValue         =0xFF
+	030200 BitNumber        =0x6
+%%END%%
+
+%%FLAG%%
+	000002 UniqueID         =0x2E54
+	030005 Title            ="KOPTFLG4: Option Word 4 - Bit 5 - Bit 5"
+	030011 DescSize         =0x101
+	030010 Desc             ="Bit 0   1 = Disable anti-theft module control\r\nBit 1   1 = Enable A/F check for closed loop fuel logic\r\nBit 2   1 = Use ALTMAPLD as VE load variable\r\nBit 3   1 = RPM derivative spark control option\r\nBit 4   1 = Lean cruise option\r\nBit 5   Not used\r\nBit 6  "
+	030100 Address          =0x900C
+	030120 SetValue         =0xFF
+	030200 BitNumber        =0x5
+%%END%%
+
+%%FLAG%%
+	000002 UniqueID         =0x2E55
+	030005 Title            ="KOPTFLG4: Option Word 4 - Bit 4 - Bit 4"
+	030011 DescSize         =0x101
+	030010 Desc             ="Bit 0   1 = Disable anti-theft module control\r\nBit 1   1 = Enable A/F check for closed loop fuel logic\r\nBit 2   1 = Use ALTMAPLD as VE load variable\r\nBit 3   1 = RPM derivative spark control option\r\nBit 4   1 = Lean cruise option\r\nBit 5   Not used\r\nBit 6  "
+	030100 Address          =0x900C
+	030120 SetValue         =0xFF
+	030200 BitNumber        =0x4
+%%END%%
+
+%%FLAG%%
+	000002 UniqueID         =0x2E56
+	030005 Title            ="KOPTFLG4: Option Word 4 - Bit 3 - Bit 3"
+	030011 DescSize         =0x101
+	030010 Desc             ="Bit 0   1 = Disable anti-theft module control\r\nBit 1   1 = Enable A/F check for closed loop fuel logic\r\nBit 2   1 = Use ALTMAPLD as VE load variable\r\nBit 3   1 = RPM derivative spark control option\r\nBit 4   1 = Lean cruise option\r\nBit 5   Not used\r\nBit 6  "
+	030100 Address          =0x900C
+	030120 SetValue         =0xFF
+	030200 BitNumber        =0x3
+%%END%%
+
+%%FLAG%%
+	000002 UniqueID         =0x2E57
+	030005 Title            ="KOPTFLG4: Option Word 4 - Bit 2 - Bit 2"
+	030011 DescSize         =0x101
+	030010 Desc             ="Bit 0   1 = Disable anti-theft module control\r\nBit 1   1 = Enable A/F check for closed loop fuel logic\r\nBit 2   1 = Use ALTMAPLD as VE load variable\r\nBit 3   1 = RPM derivative spark control option\r\nBit 4   1 = Lean cruise option\r\nBit 5   Not used\r\nBit 6  "
+	030100 Address          =0x900C
+	030120 SetValue         =0xFF
+	030200 BitNumber        =0x2
+%%END%%
+
+%%FLAG%%
+	000002 UniqueID         =0x2E58
+	030005 Title            ="KOPTFLG4: Option Word 4 - Bit 1 - Bit 1"
+	030011 DescSize         =0x101
+	030010 Desc             ="Bit 0   1 = Disable anti-theft module control\r\nBit 1   1 = Enable A/F check for closed loop fuel logic\r\nBit 2   1 = Use ALTMAPLD as VE load variable\r\nBit 3   1 = RPM derivative spark control option\r\nBit 4   1 = Lean cruise option\r\nBit 5   Not used\r\nBit 6  "
+	030100 Address          =0x900C
+	030120 SetValue         =0xFF
+	030200 BitNumber        =0x1
+%%END%%
+
+%%FLAG%%
+	000002 UniqueID         =0x2E59
+	030005 Title            ="KOPTFLG4: Option Word 4 - Bit 0 - Bit 0"
+	030011 DescSize         =0x101
+	030010 Desc             ="Bit 0   1 = Disable anti-theft module control\r\nBit 1   1 = Enable A/F check for closed loop fuel logic\r\nBit 2   1 = Use ALTMAPLD as VE load variable\r\nBit 3   1 = RPM derivative spark control option\r\nBit 4   1 = Lean cruise option\r\nBit 5   Not used\r\nBit 6  "
+	030100 Address          =0x900C
+	030120 SetValue         =0xFF
+	030200 BitNumber        =0x0
+%%END%%
+
+%%FLAG%%
+	000002 UniqueID         =0x2E5A
+	030005 Title            ="KKMASK1:  MALFUNCTION FLAG  - WORD 1 - Bit 7 - 13   "
+	030011 DescSize         =0x101
+	030010 Desc             ="To disable the processing of a specific malfunction uncheck the relavent KKMASK.\r\nThis determines if a malfunction is processed.\r\nTo enable the malfunction to set the check light the corresponding KKKMASK must be enabled\r\n\r\nThe table below describes how KK"
+	030100 Address          =0x995B
+	030120 SetValue         =0xFF
+	030200 BitNumber        =0x7
+%%END%%
+
+%%FLAG%%
+	000002 UniqueID         =0x2E5B
+	030005 Title            ="KKMASK1:  MALFUNCTION FLAG  - WORD 1 - Bit 6 - 14   "
+	030011 DescSize         =0x101
+	030010 Desc             ="To disable the processing of a specific malfunction uncheck the relavent KKMASK.\r\nThis determines if a malfunction is processed.\r\nTo enable the malfunction to set the check light the corresponding KKKMASK must be enabled\r\n\r\nThe table below describes how KK"
+	030100 Address          =0x995B
+	030120 SetValue         =0xFF
+	030200 BitNumber        =0x6
+%%END%%
+
+%%FLAG%%
+	000002 UniqueID         =0x2E5C
+	030005 Title            ="KKMASK1:  MALFUNCTION FLAG  - WORD 1 - Bit 5 - 15   "
+	030011 DescSize         =0x101
+	030010 Desc             ="To disable the processing of a specific malfunction uncheck the relavent KKMASK.\r\nThis determines if a malfunction is processed.\r\nTo enable the malfunction to set the check light the corresponding KKKMASK must be enabled\r\n\r\nThe table below describes how KK"
+	030100 Address          =0x995B
+	030120 SetValue         =0xFF
+	030200 BitNumber        =0x5
+%%END%%
+
+%%FLAG%%
+	000002 UniqueID         =0x2E5D
+	030005 Title            ="KKMASK1:  MALFUNCTION FLAG  - WORD 1 - Bit 4 - 16   "
+	030011 DescSize         =0x101
+	030010 Desc             ="To disable the processing of a specific malfunction uncheck the relavent KKMASK.\r\nThis determines if a malfunction is processed.\r\nTo enable the malfunction to set the check light the corresponding KKKMASK must be enabled\r\n\r\nThe table below describes how KK"
+	030100 Address          =0x995B
+	030120 SetValue         =0xFF
+	030200 BitNumber        =0x4
+%%END%%
+
+%%FLAG%%
+	000002 UniqueID         =0x2E5E
+	030005 Title            ="KKMASK1:  MALFUNCTION FLAG  - WORD 1 - Bit 3 - 17   "
+	030011 DescSize         =0x101
+	030010 Desc             ="To disable the processing of a specific malfunction uncheck the relavent KKMASK.\r\nThis determines if a malfunction is processed.\r\nTo enable the malfunction to set the check light the corresponding KKKMASK must be enabled\r\n\r\nThe table below describes how KK"
+	030100 Address          =0x995B
+	030120 SetValue         =0xFF
+	030200 BitNumber        =0x3
+%%END%%
+
+%%FLAG%%
+	000002 UniqueID         =0x2E5F
+	030005 Title            ="KKMASK1:  MALFUNCTION FLAG  - WORD 1 - Bit 2 - 18   "
+	030011 DescSize         =0x101
+	030010 Desc             ="To disable the processing of a specific malfunction uncheck the relavent KKMASK.\r\nThis determines if a malfunction is processed.\r\nTo enable the malfunction to set the check light the corresponding KKKMASK must be enabled\r\n\r\nThe table below describes how KK"
+	030100 Address          =0x995B
+	030120 SetValue         =0xFF
+	030200 BitNumber        =0x2
+%%END%%
+
+%%FLAG%%
+	000002 UniqueID         =0x2E60
+	030005 Title            ="KKMASK1:  MALFUNCTION FLAG  - WORD 1 - Bit 1 - 19   "
+	030011 DescSize         =0x101
+	030010 Desc             ="To disable the processing of a specific malfunction uncheck the relavent KKMASK.\r\nThis determines if a malfunction is processed.\r\nTo enable the malfunction to set the check light the corresponding KKKMASK must be enabled\r\n\r\nThe table below describes how KK"
+	030100 Address          =0x995B
+	030120 SetValue         =0xFF
+	030200 BitNumber        =0x1
+%%END%%
+
+%%FLAG%%
+	000002 UniqueID         =0x2E61
+	030005 Title            ="KKMASK1:  MALFUNCTION FLAG  - WORD 1 - Bit 0 -    21"
+	030011 DescSize         =0x101
+	030010 Desc             ="To disable the processing of a specific malfunction uncheck the relavent KKMASK.\r\nThis determines if a malfunction is processed.\r\nTo enable the malfunction to set the check light the corresponding KKKMASK must be enabled\r\n\r\nThe table below describes how KK"
+	030100 Address          =0x995B
+	030120 SetValue         =0xFF
+	030200 BitNumber        =0x0
+%%END%%
+
+%%FLAG%%
+	000002 UniqueID         =0x2E62
+	030005 Title            ="KKMASK2:  MALFUNCTION FLAG  - WORD 2 - Bit 7 - 22   "
+	030011 DescSize         =0x101
+	030010 Desc             ="To disable the processing of a specific malfunction uncheck the relavent KKMASK.\r\nThis determines if a malfunction is processed.\r\nTo enable the malfunction to set the check light the corresponding KKKMASK must be enabled\r\n\r\nThe table below describes how KK"
+	030100 Address          =0x995C
+	030120 SetValue         =0xFF
+	030200 BitNumber        =0x7
+%%END%%
+
+%%FLAG%%
+	000002 UniqueID         =0x2E63
+	030005 Title            ="KKMASK2:  MALFUNCTION FLAG  - WORD 2 - Bit 6 - 23   "
+	030011 DescSize         =0x101
+	030010 Desc             ="To disable the processing of a specific malfunction uncheck the relavent KKMASK.\r\nThis determines if a malfunction is processed.\r\nTo enable the malfunction to set the check light the corresponding KKKMASK must be enabled\r\n\r\nThe table below describes how KK"
+	030100 Address          =0x995C
+	030120 SetValue         =0xFF
+	030200 BitNumber        =0x6
+%%END%%
+
+%%FLAG%%
+	000002 UniqueID         =0x2E64
+	030005 Title            ="KKMASK2:  MALFUNCTION FLAG  - WORD 2 - Bit 5 - 24   "
+	030011 DescSize         =0x101
+	030010 Desc             ="To disable the processing of a specific malfunction uncheck the relavent KKMASK.\r\nThis determines if a malfunction is processed.\r\nTo enable the malfunction to set the check light the corresponding KKKMASK must be enabled\r\n\r\nThe table below describes how KK"
+	030100 Address          =0x995C
+	030120 SetValue         =0xFF
+	030200 BitNumber        =0x5
+%%END%%
+
+%%FLAG%%
+	000002 UniqueID         =0x2E65
+	030005 Title            ="KKMASK2:  MALFUNCTION FLAG  - WORD 2 - Bit 4 - 25   "
+	030011 DescSize         =0x101
+	030010 Desc             ="To disable the processing of a specific malfunction uncheck the relavent KKMASK.\r\nThis determines if a malfunction is processed.\r\nTo enable the malfunction to set the check light the corresponding KKKMASK must be enabled\r\n\r\nThe table below describes how KK"
+	030100 Address          =0x995C
+	030120 SetValue         =0xFF
+	030200 BitNumber        =0x4
+%%END%%
+
+%%FLAG%%
+	000002 UniqueID         =0x2E66
+	030005 Title            ="KKMASK2:  MALFUNCTION FLAG  - WORD 2 - Bit 3 - 26   "
+	030011 DescSize         =0x101
+	030010 Desc             ="To disable the processing of a specific malfunction uncheck the relavent KKMASK.\r\nThis determines if a malfunction is processed.\r\nTo enable the malfunction to set the check light the corresponding KKKMASK must be enabled\r\n\r\nThe table below describes how KK"
+	030100 Address          =0x995C
+	030120 SetValue         =0xFF
+	030200 BitNumber        =0x3
+%%END%%
+
+%%FLAG%%
+	000002 UniqueID         =0x2E67
+	030005 Title            ="KKMASK2:  MALFUNCTION FLAG  - WORD 2 - Bit 2 - 27   "
+	030011 DescSize         =0x101
+	030010 Desc             ="To disable the processing of a specific malfunction uncheck the relavent KKMASK.\r\nThis determines if a malfunction is processed.\r\nTo enable the malfunction to set the check light the corresponding KKKMASK must be enabled\r\n\r\nThe table below describes how KK"
+	030100 Address          =0x995C
+	030120 SetValue         =0xFF
+	030200 BitNumber        =0x2
+%%END%%
+
+%%FLAG%%
+	000002 UniqueID         =0x2E68
+	030005 Title            ="KKMASK2:  MALFUNCTION FLAG  - WORD 2 - Bit 1 - 28   "
+	030011 DescSize         =0x101
+	030010 Desc             ="To disable the processing of a specific malfunction uncheck the relavent KKMASK.\r\nThis determines if a malfunction is processed.\r\nTo enable the malfunction to set the check light the corresponding KKKMASK must be enabled\r\n\r\nThe table below describes how KK"
+	030100 Address          =0x995C
+	030120 SetValue         =0xFF
+	030200 BitNumber        =0x1
+%%END%%
+
+%%FLAG%%
+	000002 UniqueID         =0x2E69
+	030005 Title            ="KKMASK2:  MALFUNCTION FLAG  - WORD 2 - Bit 0 -    29"
+	030011 DescSize         =0x101
+	030010 Desc             ="To disable the processing of a specific malfunction uncheck the relavent KKMASK.\r\nThis determines if a malfunction is processed.\r\nTo enable the malfunction to set the check light the corresponding KKKMASK must be enabled\r\n\r\nThe table below describes how KK"
+	030100 Address          =0x995C
+	030120 SetValue         =0xFF
+	030200 BitNumber        =0x0
+%%END%%
+
+%%FLAG%%
+	000002 UniqueID         =0x2E6A
+	030005 Title            ="KKMASK3:  MALFUNCTION FLAG  - WORD 3 - Bit 7 - 31   "
+	030011 DescSize         =0x101
+	030010 Desc             ="To disable the processing of a specific malfunction uncheck the relavent KKMASK.\r\nThis determines if a malfunction is processed.\r\nTo enable the malfunction to set the check light the corresponding KKKMASK must be enabled\r\n\r\nThe table below describes how KK"
+	030100 Address          =0x995D
+	030120 SetValue         =0xFF
+	030200 BitNumber        =0x7
+%%END%%
+
+%%FLAG%%
+	000002 UniqueID         =0x2E6B
+	030005 Title            ="KKMASK3:  MALFUNCTION FLAG  - WORD 3 - Bit 6 - 32   "
+	030011 DescSize         =0x101
+	030010 Desc             ="To disable the processing of a specific malfunction uncheck the relavent KKMASK.\r\nThis determines if a malfunction is processed.\r\nTo enable the malfunction to set the check light the corresponding KKKMASK must be enabled\r\n\r\nThe table below describes how KK"
+	030100 Address          =0x995D
+	030120 SetValue         =0xFF
+	030200 BitNumber        =0x6
+%%END%%
+
+%%FLAG%%
+	000002 UniqueID         =0x2E6C
+	030005 Title            ="KKMASK3:  MALFUNCTION FLAG  - WORD 3 - Bit 5 - 33   "
+	030011 DescSize         =0x101
+	030010 Desc             ="To disable the processing of a specific malfunction uncheck the relavent KKMASK.\r\nThis determines if a malfunction is processed.\r\nTo enable the malfunction to set the check light the corresponding KKKMASK must be enabled\r\n\r\nThe table below describes how KK"
+	030100 Address          =0x995D
+	030120 SetValue         =0xFF
+	030200 BitNumber        =0x5
+%%END%%
+
+%%FLAG%%
+	000002 UniqueID         =0x2E6D
+	030005 Title            ="KKMASK3:  MALFUNCTION FLAG  - WORD 3 - Bit 4 - 34   "
+	030011 DescSize         =0x101
+	030010 Desc             ="To disable the processing of a specific malfunction uncheck the relavent KKMASK.\r\nThis determines if a malfunction is processed.\r\nTo enable the malfunction to set the check light the corresponding KKKMASK must be enabled\r\n\r\nThe table below describes how KK"
+	030100 Address          =0x995D
+	030120 SetValue         =0xFF
+	030200 BitNumber        =0x4
+%%END%%
+
+%%FLAG%%
+	000002 UniqueID         =0x2E6E
+	030005 Title            ="KKMASK3:  MALFUNCTION FLAG  - WORD 3 - Bit 3 - 35   "
+	030011 DescSize         =0x101
+	030010 Desc             ="To disable the processing of a specific malfunction uncheck the relavent KKMASK.\r\nThis determines if a malfunction is processed.\r\nTo enable the malfunction to set the check light the corresponding KKKMASK must be enabled\r\n\r\nThe table below describes how KK"
+	030100 Address          =0x995D
+	030120 SetValue         =0xFF
+	030200 BitNumber        =0x3
+%%END%%
+
+%%FLAG%%
+	000002 UniqueID         =0x2E6F
+	030005 Title            ="KKMASK3:  MALFUNCTION FLAG  - WORD 3 - Bit 2 - 36   "
+	030011 DescSize         =0x101
+	030010 Desc             ="To disable the processing of a specific malfunction uncheck the relavent KKMASK.\r\nThis determines if a malfunction is processed.\r\nTo enable the malfunction to set the check light the corresponding KKKMASK must be enabled\r\n\r\nThe table below describes how KK"
+	030100 Address          =0x995D
+	030120 SetValue         =0xFF
+	030200 BitNumber        =0x2
+%%END%%
+
+%%FLAG%%
+	000002 UniqueID         =0x2E70
+	030005 Title            ="KKMASK3:  MALFUNCTION FLAG  - WORD 3 - Bit 1 - 37   "
+	030011 DescSize         =0x101
+	030010 Desc             ="To disable the processing of a specific malfunction uncheck the relavent KKMASK.\r\nThis determines if a malfunction is processed.\r\nTo enable the malfunction to set the check light the corresponding KKKMASK must be enabled\r\n\r\nThe table below describes how KK"
+	030100 Address          =0x995D
+	030120 SetValue         =0xFF
+	030200 BitNumber        =0x1
+%%END%%
+
+%%FLAG%%
+	000002 UniqueID         =0x2E71
+	030005 Title            ="KKMASK3:  MALFUNCTION FLAG  - WORD 3 - Bit 0 -    38"
+	030011 DescSize         =0x101
+	030010 Desc             ="To disable the processing of a specific malfunction uncheck the relavent KKMASK.\r\nThis determines if a malfunction is processed.\r\nTo enable the malfunction to set the check light the corresponding KKKMASK must be enabled\r\n\r\nThe table below describes how KK"
+	030100 Address          =0x995D
+	030120 SetValue         =0xFF
+	030200 BitNumber        =0x0
+%%END%%
+
+%%FLAG%%
+	000002 UniqueID         =0x2E72
+	030005 Title            ="KKMASK4:  MALFUNCTION FLAG  - WORD 4 - Bit 7 - 39   "
+	030011 DescSize         =0x101
+	030010 Desc             ="To disable the processing of a specific malfunction uncheck the relavent KKMASK.\r\nThis determines if a malfunction is processed.\r\nTo enable the malfunction to set the check light the corresponding KKKMASK must be enabled\r\n\r\nThe table below describes how KK"
+	030100 Address          =0x995E
+	030120 SetValue         =0xFF
+	030200 BitNumber        =0x7
+%%END%%
+
+%%FLAG%%
+	000002 UniqueID         =0x2E73
+	030005 Title            ="KKMASK4:  MALFUNCTION FLAG  - WORD 4 - Bit 6 - 41   "
+	030011 DescSize         =0x101
+	030010 Desc             ="To disable the processing of a specific malfunction uncheck the relavent KKMASK.\r\nThis determines if a malfunction is processed.\r\nTo enable the malfunction to set the check light the corresponding KKKMASK must be enabled\r\n\r\nThe table below describes how KK"
+	030100 Address          =0x995E
+	030120 SetValue         =0xFF
+	030200 BitNumber        =0x6
+%%END%%
+
+%%FLAG%%
+	000002 UniqueID         =0x2E74
+	030005 Title            ="KKMASK4:  MALFUNCTION FLAG  - WORD 4 - Bit 5 - 42   "
+	030011 DescSize         =0x101
+	030010 Desc             ="To disable the processing of a specific malfunction uncheck the relavent KKMASK.\r\nThis determines if a malfunction is processed.\r\nTo enable the malfunction to set the check light the corresponding KKKMASK must be enabled\r\n\r\nThe table below describes how KK"
+	030100 Address          =0x995E
+	030120 SetValue         =0xFF
+	030200 BitNumber        =0x5
+%%END%%
+
+%%FLAG%%
+	000002 UniqueID         =0x2E75
+	030005 Title            ="KKMASK4:  MALFUNCTION FLAG  - WORD 4 - Bit 4 - 43   "
+	030011 DescSize         =0x101
+	030010 Desc             ="To disable the processing of a specific malfunction uncheck the relavent KKMASK.\r\nThis determines if a malfunction is processed.\r\nTo enable the malfunction to set the check light the corresponding KKKMASK must be enabled\r\n\r\nThe table below describes how KK"
+	030100 Address          =0x995E
+	030120 SetValue         =0xFF
+	030200 BitNumber        =0x4
+%%END%%
+
+%%FLAG%%
+	000002 UniqueID         =0x2E76
+	030005 Title            ="KKMASK4:  MALFUNCTION FLAG  - WORD 4 - Bit 3 - 44   "
+	030011 DescSize         =0x101
+	030010 Desc             ="To disable the processing of a specific malfunction uncheck the relavent KKMASK.\r\nThis determines if a malfunction is processed.\r\nTo enable the malfunction to set the check light the corresponding KKKMASK must be enabled\r\n\r\nThe table below describes how KK"
+	030100 Address          =0x995E
+	030120 SetValue         =0xFF
+	030200 BitNumber        =0x3
+%%END%%
+
+%%FLAG%%
+	000002 UniqueID         =0x2E77
+	030005 Title            ="KKMASK4:  MALFUNCTION FLAG  - WORD 4 - Bit 2 - 45   "
+	030011 DescSize         =0x101
+	030010 Desc             ="To disable the processing of a specific malfunction uncheck the relavent KKMASK.\r\nThis determines if a malfunction is processed.\r\nTo enable the malfunction to set the check light the corresponding KKKMASK must be enabled\r\n\r\nThe table below describes how KK"
+	030100 Address          =0x995E
+	030120 SetValue         =0xFF
+	030200 BitNumber        =0x2
+%%END%%
+
+%%FLAG%%
+	000002 UniqueID         =0x2E78
+	030005 Title            ="KKMASK4:  MALFUNCTION FLAG  - WORD 4 - Bit 1 - 46   "
+	030011 DescSize         =0x101
+	030010 Desc             ="To disable the processing of a specific malfunction uncheck the relavent KKMASK.\r\nThis determines if a malfunction is processed.\r\nTo enable the malfunction to set the check light the corresponding KKKMASK must be enabled\r\n\r\nThe table below describes how KK"
+	030100 Address          =0x995E
+	030120 SetValue         =0xFF
+	030200 BitNumber        =0x1
+%%END%%
+
+%%FLAG%%
+	000002 UniqueID         =0x2E79
+	030005 Title            ="KKMASK4:  MALFUNCTION FLAG  - WORD 4 - Bit 0 -    47"
+	030011 DescSize         =0x101
+	030010 Desc             ="To disable the processing of a specific malfunction uncheck the relavent KKMASK.\r\nThis determines if a malfunction is processed.\r\nTo enable the malfunction to set the check light the corresponding KKKMASK must be enabled\r\n\r\nThe table below describes how KK"
+	030100 Address          =0x995E
+	030120 SetValue         =0xFF
+	030200 BitNumber        =0x0
+%%END%%
+
+%%FLAG%%
+	000002 UniqueID         =0x2E7A
+	030005 Title            ="KKMASK5:  MALFUNCTION FLAG  - WORD 5 - Bit 7 - 48   "
+	030011 DescSize         =0x101
+	030010 Desc             ="To disable the processing of a specific malfunction uncheck the relavent KKMASK.\r\nThis determines if a malfunction is processed.\r\nTo enable the malfunction to set the check light the corresponding KKKMASK must be enabled\r\n\r\nThe table below describes how KK"
+	030100 Address          =0x995F
+	030120 SetValue         =0xFF
+	030200 BitNumber        =0x7
+%%END%%
+
+%%FLAG%%
+	000002 UniqueID         =0x2E7B
+	030005 Title            ="KKMASK5:  MALFUNCTION FLAG  - WORD 5 - Bit 6 - 49   "
+	030011 DescSize         =0x101
+	030010 Desc             ="To disable the processing of a specific malfunction uncheck the relavent KKMASK.\r\nThis determines if a malfunction is processed.\r\nTo enable the malfunction to set the check light the corresponding KKKMASK must be enabled\r\n\r\nThe table below describes how KK"
+	030100 Address          =0x995F
+	030120 SetValue         =0xFF
+	030200 BitNumber        =0x6
+%%END%%
+
+%%FLAG%%
+	000002 UniqueID         =0x2E7C
+	030005 Title            ="KKMASK5:  MALFUNCTION FLAG  - WORD 5 - Bit 5 - 51   "
+	030011 DescSize         =0x101
+	030010 Desc             ="To disable the processing of a specific malfunction uncheck the relavent KKMASK.\r\nThis determines if a malfunction is processed.\r\nTo enable the malfunction to set the check light the corresponding KKKMASK must be enabled\r\n\r\nThe table below describes how KK"
+	030100 Address          =0x995F
+	030120 SetValue         =0xFF
+	030200 BitNumber        =0x5
+%%END%%
+
+%%FLAG%%
+	000002 UniqueID         =0x2E7D
+	030005 Title            ="KKMASK5:  MALFUNCTION FLAG  - WORD 5 - Bit 4 - 52   "
+	030011 DescSize         =0x101
+	030010 Desc             ="To disable the processing of a specific malfunction uncheck the relavent KKMASK.\r\nThis determines if a malfunction is processed.\r\nTo enable the malfunction to set the check light the corresponding KKKMASK must be enabled\r\n\r\nThe table below describes how KK"
+	030100 Address          =0x995F
+	030120 SetValue         =0xFF
+	030200 BitNumber        =0x4
+%%END%%
+
+%%FLAG%%
+	000002 UniqueID         =0x2E7E
+	030005 Title            ="KKMASK5:  MALFUNCTION FLAG  - WORD 5 - Bit 3 - 53   "
+	030011 DescSize         =0x101
+	030010 Desc             ="To disable the processing of a specific malfunction uncheck the relavent KKMASK.\r\nThis determines if a malfunction is processed.\r\nTo enable the malfunction to set the check light the corresponding KKKMASK must be enabled\r\n\r\nThe table below describes how KK"
+	030100 Address          =0x995F
+	030120 SetValue         =0xFF
+	030200 BitNumber        =0x3
+%%END%%
+
+%%FLAG%%
+	000002 UniqueID         =0x2E7F
+	030005 Title            ="KKMASK5:  MALFUNCTION FLAG  - WORD 5 - Bit 2 - 54   "
+	030011 DescSize         =0x101
+	030010 Desc             ="To disable the processing of a specific malfunction uncheck the relavent KKMASK.\r\nThis determines if a malfunction is processed.\r\nTo enable the malfunction to set the check light the corresponding KKKMASK must be enabled\r\n\r\nThe table below describes how KK"
+	030100 Address          =0x995F
+	030120 SetValue         =0xFF
+	030200 BitNumber        =0x2
+%%END%%
+
+%%FLAG%%
+	000002 UniqueID         =0x2E80
+	030005 Title            ="KKMASK5:  MALFUNCTION FLAG  - WORD 5 - Bit 1 - 55   "
+	030011 DescSize         =0x101
+	030010 Desc             ="To disable the processing of a specific malfunction uncheck the relavent KKMASK.\r\nThis determines if a malfunction is processed.\r\nTo enable the malfunction to set the check light the corresponding KKKMASK must be enabled\r\n\r\nThe table below describes how KK"
+	030100 Address          =0x995F
+	030120 SetValue         =0xFF
+	030200 BitNumber        =0x1
+%%END%%
+
+%%FLAG%%
+	000002 UniqueID         =0x2E81
+	030005 Title            ="KKMASK5:  MALFUNCTION FLAG  - WORD 5 - Bit 0 -    56"
+	030011 DescSize         =0x101
+	030010 Desc             ="To disable the processing of a specific malfunction uncheck the relavent KKMASK.\r\nThis determines if a malfunction is processed.\r\nTo enable the malfunction to set the check light the corresponding KKKMASK must be enabled\r\n\r\nThe table below describes how KK"
+	030100 Address          =0x995F
+	030120 SetValue         =0xFF
+	030200 BitNumber        =0x0
+%%END%%
+
+%%FLAG%%
+	000002 UniqueID         =0x2E82
+	030005 Title            ="KKKMASK1:  MALF FLAG - CHECK LAMP ENABLE WORD 1 - Bit 7 - 13   "
+	030011 DescSize         =0x101
+	030010 Desc             ="To disable the processing of a specific malfunction uncheck the relavent KKMASK.\r\nThis determines if a malfunction is processed.\r\nTo enable the malfunction to set the check light the corresponding KKKMASK must be enabled\r\n\r\nThe table below describes how KK"
+	030100 Address          =0x9960
+	030120 SetValue         =0xFF
+	030200 BitNumber        =0x7
+%%END%%
+
+%%FLAG%%
+	000002 UniqueID         =0x2E83
+	030005 Title            ="KKKMASK1:  MALF FLAG - CHECK LAMP ENABLE WORD 1 - Bit 6 - 14   "
+	030011 DescSize         =0x101
+	030010 Desc             ="To disable the processing of a specific malfunction uncheck the relavent KKMASK.\r\nThis determines if a malfunction is processed.\r\nTo enable the malfunction to set the check light the corresponding KKKMASK must be enabled\r\n\r\nThe table below describes how KK"
+	030100 Address          =0x9960
+	030120 SetValue         =0xFF
+	030200 BitNumber        =0x6
+%%END%%
+
+%%FLAG%%
+	000002 UniqueID         =0x2E84
+	030005 Title            ="KKKMASK1:  MALF FLAG - CHECK LAMP ENABLE WORD 1 - Bit 5 - 15   "
+	030011 DescSize         =0x101
+	030010 Desc             ="To disable the processing of a specific malfunction uncheck the relavent KKMASK.\r\nThis determines if a malfunction is processed.\r\nTo enable the malfunction to set the check light the corresponding KKKMASK must be enabled\r\n\r\nThe table below describes how KK"
+	030100 Address          =0x9960
+	030120 SetValue         =0xFF
+	030200 BitNumber        =0x5
+%%END%%
+
+%%FLAG%%
+	000002 UniqueID         =0x2E85
+	030005 Title            ="KKKMASK1:  MALF FLAG - CHECK LAMP ENABLE WORD 1 - Bit 4 - 16   "
+	030011 DescSize         =0x101
+	030010 Desc             ="To disable the processing of a specific malfunction uncheck the relavent KKMASK.\r\nThis determines if a malfunction is processed.\r\nTo enable the malfunction to set the check light the corresponding KKKMASK must be enabled\r\n\r\nThe table below describes how KK"
+	030100 Address          =0x9960
+	030120 SetValue         =0xFF
+	030200 BitNumber        =0x4
+%%END%%
+
+%%FLAG%%
+	000002 UniqueID         =0x2E86
+	030005 Title            ="KKKMASK1:  MALF FLAG - CHECK LAMP ENABLE WORD 1 - Bit 3 - 17   "
+	030011 DescSize         =0x101
+	030010 Desc             ="To disable the processing of a specific malfunction uncheck the relavent KKMASK.\r\nThis determines if a malfunction is processed.\r\nTo enable the malfunction to set the check light the corresponding KKKMASK must be enabled\r\n\r\nThe table below describes how KK"
+	030100 Address          =0x9960
+	030120 SetValue         =0xFF
+	030200 BitNumber        =0x3
+%%END%%
+
+%%FLAG%%
+	000002 UniqueID         =0x2E87
+	030005 Title            ="KKKMASK1:  MALF FLAG - CHECK LAMP ENABLE WORD 1 - Bit 2 - 18   "
+	030011 DescSize         =0x101
+	030010 Desc             ="To disable the processing of a specific malfunction uncheck the relavent KKMASK.\r\nThis determines if a malfunction is processed.\r\nTo enable the malfunction to set the check light the corresponding KKKMASK must be enabled\r\n\r\nThe table below describes how KK"
+	030100 Address          =0x9960
+	030120 SetValue         =0xFF
+	030200 BitNumber        =0x2
+%%END%%
+
+%%FLAG%%
+	000002 UniqueID         =0x2E88
+	030005 Title            ="KKKMASK1:  MALF FLAG - CHECK LAMP ENABLE WORD 1 - Bit 1 - 19   "
+	030011 DescSize         =0x101
+	030010 Desc             ="To disable the processing of a specific malfunction uncheck the relavent KKMASK.\r\nThis determines if a malfunction is processed.\r\nTo enable the malfunction to set the check light the corresponding KKKMASK must be enabled\r\n\r\nThe table below describes how KK"
+	030100 Address          =0x9960
+	030120 SetValue         =0xFF
+	030200 BitNumber        =0x1
+%%END%%
+
+%%FLAG%%
+	000002 UniqueID         =0x2E89
+	030005 Title            ="KKKMASK1:  MALF FLAG - CHECK LAMP ENABLE WORD 1 - Bit 0 -    21"
+	030011 DescSize         =0x101
+	030010 Desc             ="To disable the processing of a specific malfunction uncheck the relavent KKMASK.\r\nThis determines if a malfunction is processed.\r\nTo enable the malfunction to set the check light the corresponding KKKMASK must be enabled\r\n\r\nThe table below describes how KK"
+	030100 Address          =0x9960
+	030120 SetValue         =0xFF
+	030200 BitNumber        =0x0
+%%END%%
+
+%%FLAG%%
+	000002 UniqueID         =0x2E8A
+	030005 Title            ="KKKMASK2:  MALF FLAG - CHECK LAMP ENABLE WORD 2 - Bit 7 - 22   "
+	030011 DescSize         =0x101
+	030010 Desc             ="To disable the processing of a specific malfunction uncheck the relavent KKMASK.\r\nThis determines if a malfunction is processed.\r\nTo enable the malfunction to set the check light the corresponding KKKMASK must be enabled\r\n\r\nThe table below describes how KK"
+	030100 Address          =0x9961
+	030120 SetValue         =0xFF
+	030200 BitNumber        =0x7
+%%END%%
+
+%%FLAG%%
+	000002 UniqueID         =0x2E8B
+	030005 Title            ="KKKMASK2:  MALF FLAG - CHECK LAMP ENABLE WORD 2 - Bit 6 - 23   "
+	030011 DescSize         =0x101
+	030010 Desc             ="To disable the processing of a specific malfunction uncheck the relavent KKMASK.\r\nThis determines if a malfunction is processed.\r\nTo enable the malfunction to set the check light the corresponding KKKMASK must be enabled\r\n\r\nThe table below describes how KK"
+	030100 Address          =0x9961
+	030120 SetValue         =0xFF
+	030200 BitNumber        =0x6
+%%END%%
+
+%%FLAG%%
+	000002 UniqueID         =0x2E8C
+	030005 Title            ="KKKMASK2:  MALF FLAG - CHECK LAMP ENABLE WORD 2 - Bit 5 - 24   "
+	030011 DescSize         =0x101
+	030010 Desc             ="To disable the processing of a specific malfunction uncheck the relavent KKMASK.\r\nThis determines if a malfunction is processed.\r\nTo enable the malfunction to set the check light the corresponding KKKMASK must be enabled\r\n\r\nThe table below describes how KK"
+	030100 Address          =0x9961
+	030120 SetValue         =0xFF
+	030200 BitNumber        =0x5
+%%END%%
+
+%%FLAG%%
+	000002 UniqueID         =0x2E8D
+	030005 Title            ="KKKMASK2:  MALF FLAG - CHECK LAMP ENABLE WORD 2 - Bit 4 - 25   "
+	030011 DescSize         =0x101
+	030010 Desc             ="To disable the processing of a specific malfunction uncheck the relavent KKMASK.\r\nThis determines if a malfunction is processed.\r\nTo enable the malfunction to set the check light the corresponding KKKMASK must be enabled\r\n\r\nThe table below describes how KK"
+	030100 Address          =0x9961
+	030120 SetValue         =0xFF
+	030200 BitNumber        =0x4
+%%END%%
+
+%%FLAG%%
+	000002 UniqueID         =0x2E8E
+	030005 Title            ="KKKMASK2:  MALF FLAG - CHECK LAMP ENABLE WORD 2 - Bit 3 - 26   "
+	030011 DescSize         =0x101
+	030010 Desc             ="To disable the processing of a specific malfunction uncheck the relavent KKMASK.\r\nThis determines if a malfunction is processed.\r\nTo enable the malfunction to set the check light the corresponding KKKMASK must be enabled\r\n\r\nThe table below describes how KK"
+	030100 Address          =0x9961
+	030120 SetValue         =0xFF
+	030200 BitNumber        =0x3
+%%END%%
+
+%%FLAG%%
+	000002 UniqueID         =0x2E8F
+	030005 Title            ="KKKMASK2:  MALF FLAG - CHECK LAMP ENABLE WORD 2 - Bit 2 - 27   "
+	030011 DescSize         =0x101
+	030010 Desc             ="To disable the processing of a specific malfunction uncheck the relavent KKMASK.\r\nThis determines if a malfunction is processed.\r\nTo enable the malfunction to set the check light the corresponding KKKMASK must be enabled\r\n\r\nThe table below describes how KK"
+	030100 Address          =0x9961
+	030120 SetValue         =0xFF
+	030200 BitNumber        =0x2
+%%END%%
+
+%%FLAG%%
+	000002 UniqueID         =0x2E90
+	030005 Title            ="KKKMASK2:  MALF FLAG - CHECK LAMP ENABLE WORD 2 - Bit 1 - 28   "
+	030011 DescSize         =0x101
+	030010 Desc             ="To disable the processing of a specific malfunction uncheck the relavent KKMASK.\r\nThis determines if a malfunction is processed.\r\nTo enable the malfunction to set the check light the corresponding KKKMASK must be enabled\r\n\r\nThe table below describes how KK"
+	030100 Address          =0x9961
+	030120 SetValue         =0xFF
+	030200 BitNumber        =0x1
+%%END%%
+
+%%FLAG%%
+	000002 UniqueID         =0x2E91
+	030005 Title            ="KKKMASK2:  MALF FLAG - CHECK LAMP ENABLE WORD 2 - Bit 0 -    29"
+	030011 DescSize         =0x101
+	030010 Desc             ="To disable the processing of a specific malfunction uncheck the relavent KKMASK.\r\nThis determines if a malfunction is processed.\r\nTo enable the malfunction to set the check light the corresponding KKKMASK must be enabled\r\n\r\nThe table below describes how KK"
+	030100 Address          =0x9961
+	030120 SetValue         =0xFF
+	030200 BitNumber        =0x0
+%%END%%
+
+%%FLAG%%
+	000002 UniqueID         =0x2E92
+	030005 Title            ="KKKMASK3:  MALF FLAG - CHECK LAMP ENABLE WORD 3 - Bit 7 - 31   "
+	030011 DescSize         =0x101
+	030010 Desc             ="To disable the processing of a specific malfunction uncheck the relavent KKMASK.\r\nThis determines if a malfunction is processed.\r\nTo enable the malfunction to set the check light the corresponding KKKMASK must be enabled\r\n\r\nThe table below describes how KK"
+	030100 Address          =0x9962
+	030120 SetValue         =0xFF
+	030200 BitNumber        =0x7
+%%END%%
+
+%%FLAG%%
+	000002 UniqueID         =0x2E93
+	030005 Title            ="KKKMASK3:  MALF FLAG - CHECK LAMP ENABLE WORD 3 - Bit 6 - 32   "
+	030011 DescSize         =0x101
+	030010 Desc             ="To disable the processing of a specific malfunction uncheck the relavent KKMASK.\r\nThis determines if a malfunction is processed.\r\nTo enable the malfunction to set the check light the corresponding KKKMASK must be enabled\r\n\r\nThe table below describes how KK"
+	030100 Address          =0x9962
+	030120 SetValue         =0xFF
+	030200 BitNumber        =0x6
+%%END%%
+
+%%FLAG%%
+	000002 UniqueID         =0x2E94
+	030005 Title            ="KKKMASK3:  MALF FLAG - CHECK LAMP ENABLE WORD 3 - Bit 5 - 33   "
+	030011 DescSize         =0x101
+	030010 Desc             ="To disable the processing of a specific malfunction uncheck the relavent KKMASK.\r\nThis determines if a malfunction is processed.\r\nTo enable the malfunction to set the check light the corresponding KKKMASK must be enabled\r\n\r\nThe table below describes how KK"
+	030100 Address          =0x9962
+	030120 SetValue         =0xFF
+	030200 BitNumber        =0x5
+%%END%%
+
+%%FLAG%%
+	000002 UniqueID         =0x2E95
+	030005 Title            ="KKKMASK3:  MALF FLAG - CHECK LAMP ENABLE WORD 3 - Bit 4 - 34   "
+	030011 DescSize         =0x101
+	030010 Desc             ="To disable the processing of a specific malfunction uncheck the relavent KKMASK.\r\nThis determines if a malfunction is processed.\r\nTo enable the malfunction to set the check light the corresponding KKKMASK must be enabled\r\n\r\nThe table below describes how KK"
+	030100 Address          =0x9962
+	030120 SetValue         =0xFF
+	030200 BitNumber        =0x4
+%%END%%
+
+%%FLAG%%
+	000002 UniqueID         =0x2E96
+	030005 Title            ="KKKMASK3:  MALF FLAG - CHECK LAMP ENABLE WORD 3 - Bit 3 - 35   "
+	030011 DescSize         =0x101
+	030010 Desc             ="To disable the processing of a specific malfunction uncheck the relavent KKMASK.\r\nThis determines if a malfunction is processed.\r\nTo enable the malfunction to set the check light the corresponding KKKMASK must be enabled\r\n\r\nThe table below describes how KK"
+	030100 Address          =0x9962
+	030120 SetValue         =0xFF
+	030200 BitNumber        =0x3
+%%END%%
+
+%%FLAG%%
+	000002 UniqueID         =0x2E97
+	030005 Title            ="KKKMASK3:  MALF FLAG - CHECK LAMP ENABLE WORD 3 - Bit 2 - 36   "
+	030011 DescSize         =0x101
+	030010 Desc             ="To disable the processing of a specific malfunction uncheck the relavent KKMASK.\r\nThis determines if a malfunction is processed.\r\nTo enable the malfunction to set the check light the corresponding KKKMASK must be enabled\r\n\r\nThe table below describes how KK"
+	030100 Address          =0x9962
+	030120 SetValue         =0xFF
+	030200 BitNumber        =0x2
+%%END%%
+
+%%FLAG%%
+	000002 UniqueID         =0x2E98
+	030005 Title            ="KKKMASK3:  MALF FLAG - CHECK LAMP ENABLE WORD 3 - Bit 1 - 37   "
+	030011 DescSize         =0x101
+	030010 Desc             ="To disable the processing of a specific malfunction uncheck the relavent KKMASK.\r\nThis determines if a malfunction is processed.\r\nTo enable the malfunction to set the check light the corresponding KKKMASK must be enabled\r\n\r\nThe table below describes how KK"
+	030100 Address          =0x9962
+	030120 SetValue         =0xFF
+	030200 BitNumber        =0x1
+%%END%%
+
+%%FLAG%%
+	000002 UniqueID         =0x2E99
+	030005 Title            ="KKKMASK3:  MALF FLAG - CHECK LAMP ENABLE WORD 3 - Bit 0 -    38"
+	030011 DescSize         =0x101
+	030010 Desc             ="To disable the processing of a specific malfunction uncheck the relavent KKMASK.\r\nThis determines if a malfunction is processed.\r\nTo enable the malfunction to set the check light the corresponding KKKMASK must be enabled\r\n\r\nThe table below describes how KK"
+	030100 Address          =0x9962
+	030120 SetValue         =0xFF
+	030200 BitNumber        =0x0
+%%END%%
+
+%%FLAG%%
+	000002 UniqueID         =0x2E9A
+	030005 Title            ="KKKMASK4:  MALF FLAG - CHECK LAMP ENABLE WORD 4 - Bit 7 - 39   "
+	030011 DescSize         =0x101
+	030010 Desc             ="To disable the processing of a specific malfunction uncheck the relavent KKMASK.\r\nThis determines if a malfunction is processed.\r\nTo enable the malfunction to set the check light the corresponding KKKMASK must be enabled\r\n\r\nThe table below describes how KK"
+	030100 Address          =0x9963
+	030120 SetValue         =0xFF
+	030200 BitNumber        =0x7
+%%END%%
+
+%%FLAG%%
+	000002 UniqueID         =0x2E9B
+	030005 Title            ="KKKMASK4:  MALF FLAG - CHECK LAMP ENABLE WORD 4 - Bit 6 - 41   "
+	030011 DescSize         =0x101
+	030010 Desc             ="To disable the processing of a specific malfunction uncheck the relavent KKMASK.\r\nThis determines if a malfunction is processed.\r\nTo enable the malfunction to set the check light the corresponding KKKMASK must be enabled\r\n\r\nThe table below describes how KK"
+	030100 Address          =0x9963
+	030120 SetValue         =0xFF
+	030200 BitNumber        =0x6
+%%END%%
+
+%%FLAG%%
+	000002 UniqueID         =0x2E9C
+	030005 Title            ="KKKMASK4:  MALF FLAG - CHECK LAMP ENABLE WORD 4 - Bit 5 - 42   "
+	030011 DescSize         =0x101
+	030010 Desc             ="To disable the processing of a specific malfunction uncheck the relavent KKMASK.\r\nThis determines if a malfunction is processed.\r\nTo enable the malfunction to set the check light the corresponding KKKMASK must be enabled\r\n\r\nThe table below describes how KK"
+	030100 Address          =0x9963
+	030120 SetValue         =0xFF
+	030200 BitNumber        =0x5
+%%END%%
+
+%%FLAG%%
+	000002 UniqueID         =0x2E9D
+	030005 Title            ="KKKMASK4:  MALF FLAG - CHECK LAMP ENABLE WORD 4 - Bit 4 - 43   "
+	030011 DescSize         =0x101
+	030010 Desc             ="To disable the processing of a specific malfunction uncheck the relavent KKMASK.\r\nThis determines if a malfunction is processed.\r\nTo enable the malfunction to set the check light the corresponding KKKMASK must be enabled\r\n\r\nThe table below describes how KK"
+	030100 Address          =0x9963
+	030120 SetValue         =0xFF
+	030200 BitNumber        =0x4
+%%END%%
+
+%%FLAG%%
+	000002 UniqueID         =0x2E9E
+	030005 Title            ="KKKMASK4:  MALF FLAG - CHECK LAMP ENABLE WORD 4 - Bit 3 - 44   "
+	030011 DescSize         =0x101
+	030010 Desc             ="To disable the processing of a specific malfunction uncheck the relavent KKMASK.\r\nThis determines if a malfunction is processed.\r\nTo enable the malfunction to set the check light the corresponding KKKMASK must be enabled\r\n\r\nThe table below describes how KK"
+	030100 Address          =0x9963
+	030120 SetValue         =0xFF
+	030200 BitNumber        =0x3
+%%END%%
+
+%%FLAG%%
+	000002 UniqueID         =0x2E9F
+	030005 Title            ="KKKMASK4:  MALF FLAG - CHECK LAMP ENABLE WORD 4 - Bit 2 - 45   "
+	030011 DescSize         =0x101
+	030010 Desc             ="To disable the processing of a specific malfunction uncheck the relavent KKMASK.\r\nThis determines if a malfunction is processed.\r\nTo enable the malfunction to set the check light the corresponding KKKMASK must be enabled\r\n\r\nThe table below describes how KK"
+	030100 Address          =0x9963
+	030120 SetValue         =0xFF
+	030200 BitNumber        =0x2
+%%END%%
+
+%%FLAG%%
+	000002 UniqueID         =0x2EA0
+	030005 Title            ="KKKMASK4:  MALF FLAG - CHECK LAMP ENABLE WORD 4 - Bit 1 - 46   "
+	030011 DescSize         =0x101
+	030010 Desc             ="To disable the processing of a specific malfunction uncheck the relavent KKMASK.\r\nThis determines if a malfunction is processed.\r\nTo enable the malfunction to set the check light the corresponding KKKMASK must be enabled\r\n\r\nThe table below describes how KK"
+	030100 Address          =0x9963
+	030120 SetValue         =0xFF
+	030200 BitNumber        =0x1
+%%END%%
+
+%%FLAG%%
+	000002 UniqueID         =0x2EA1
+	030005 Title            ="KKKMASK4:  MALF FLAG - CHECK LAMP ENABLE WORD 4 - Bit 0 -    47"
+	030011 DescSize         =0x101
+	030010 Desc             ="To disable the processing of a specific malfunction uncheck the relavent KKMASK.\r\nThis determines if a malfunction is processed.\r\nTo enable the malfunction to set the check light the corresponding KKKMASK must be enabled\r\n\r\nThe table below describes how KK"
+	030100 Address          =0x9963
+	030120 SetValue         =0xFF
+	030200 BitNumber        =0x0
+%%END%%
+
+%%FLAG%%
+	000002 UniqueID         =0x2EA2
+	030005 Title            ="KKKMASK5:  MALF FLAG - CHECK LAMP ENABLE WORD 5 - Bit 7 - 48   "
+	030011 DescSize         =0x101
+	030010 Desc             ="To disable the processing of a specific malfunction uncheck the relavent KKMASK.\r\nThis determines if a malfunction is processed.\r\nTo enable the malfunction to set the check light the corresponding KKKMASK must be enabled\r\n\r\nThe table below describes how KK"
+	030100 Address          =0x9964
+	030120 SetValue         =0xFF
+	030200 BitNumber        =0x7
+%%END%%
+
+%%FLAG%%
+	000002 UniqueID         =0x2EA3
+	030005 Title            ="KKKMASK5:  MALF FLAG - CHECK LAMP ENABLE WORD 5 - Bit 6 - 49   "
+	030011 DescSize         =0x101
+	030010 Desc             ="To disable the processing of a specific malfunction uncheck the relavent KKMASK.\r\nThis determines if a malfunction is processed.\r\nTo enable the malfunction to set the check light the corresponding KKKMASK must be enabled\r\n\r\nThe table below describes how KK"
+	030100 Address          =0x9964
+	030120 SetValue         =0xFF
+	030200 BitNumber        =0x6
+%%END%%
+
+%%FLAG%%
+	000002 UniqueID         =0x2EA4
+	030005 Title            ="KKKMASK5:  MALF FLAG - CHECK LAMP ENABLE WORD 5 - Bit 5 - 51   "
+	030011 DescSize         =0x101
+	030010 Desc             ="To disable the processing of a specific malfunction uncheck the relavent KKMASK.\r\nThis determines if a malfunction is processed.\r\nTo enable the malfunction to set the check light the corresponding KKKMASK must be enabled\r\n\r\nThe table below describes how KK"
+	030100 Address          =0x9964
+	030120 SetValue         =0xFF
+	030200 BitNumber        =0x5
+%%END%%
+
+%%FLAG%%
+	000002 UniqueID         =0x2EA5
+	030005 Title            ="KKKMASK5:  MALF FLAG - CHECK LAMP ENABLE WORD 5 - Bit 4 - 52   "
+	030011 DescSize         =0x101
+	030010 Desc             ="To disable the processing of a specific malfunction uncheck the relavent KKMASK.\r\nThis determines if a malfunction is processed.\r\nTo enable the malfunction to set the check light the corresponding KKKMASK must be enabled\r\n\r\nThe table below describes how KK"
+	030100 Address          =0x9964
+	030120 SetValue         =0xFF
+	030200 BitNumber        =0x4
+%%END%%
+
+%%FLAG%%
+	000002 UniqueID         =0x2EA6
+	030005 Title            ="KKKMASK5:  MALF FLAG - CHECK LAMP ENABLE WORD 5 - Bit 3 - 53   "
+	030011 DescSize         =0x101
+	030010 Desc             ="To disable the processing of a specific malfunction uncheck the relavent KKMASK.\r\nThis determines if a malfunction is processed.\r\nTo enable the malfunction to set the check light the corresponding KKKMASK must be enabled\r\n\r\nThe table below describes how KK"
+	030100 Address          =0x9964
+	030120 SetValue         =0xFF
+	030200 BitNumber        =0x3
+%%END%%
+
+%%FLAG%%
+	000002 UniqueID         =0x2EA7
+	030005 Title            ="KKKMASK5:  MALF FLAG - CHECK LAMP ENABLE WORD 5 - Bit 2 - 54   "
+	030011 DescSize         =0x101
+	030010 Desc             ="To disable the processing of a specific malfunction uncheck the relavent KKMASK.\r\nThis determines if a malfunction is processed.\r\nTo enable the malfunction to set the check light the corresponding KKKMASK must be enabled\r\n\r\nThe table below describes how KK"
+	030100 Address          =0x9964
+	030120 SetValue         =0xFF
+	030200 BitNumber        =0x2
+%%END%%
+
+%%FLAG%%
+	000002 UniqueID         =0x2EA8
+	030005 Title            ="KKKMASK5:  MALF FLAG - CHECK LAMP ENABLE WORD 5 - Bit 1 - 55   "
+	030011 DescSize         =0x101
+	030010 Desc             ="To disable the processing of a specific malfunction uncheck the relavent KKMASK.\r\nThis determines if a malfunction is processed.\r\nTo enable the malfunction to set the check light the corresponding KKKMASK must be enabled\r\n\r\nThe table below describes how KK"
+	030100 Address          =0x9964
+	030120 SetValue         =0xFF
+	030200 BitNumber        =0x1
+%%END%%
+
+%%FLAG%%
+	000002 UniqueID         =0x2EA9
+	030005 Title            ="KKKMASK5:  MALF FLAG - CHECK LAMP ENABLE WORD 5 - Bit 0 -    56"
+	030011 DescSize         =0x101
+	030010 Desc             ="To disable the processing of a specific malfunction uncheck the relavent KKMASK.\r\nThis determines if a malfunction is processed.\r\nTo enable the malfunction to set the check light the corresponding KKKMASK must be enabled\r\n\r\nThe table below describes how KK"
+	030100 Address          =0x9964
+	030120 SetValue         =0xFF
+	030200 BitNumber        =0x0
+%%END%%
+
+%%TABLE%%
+	000002 UniqueID         =0x2EAA
+	040005 Title            ="F78: TPS - TPS default value vs RPM"
+	040011 DescSize         =0x1
+	040010 Desc             =""
+	040100 Address          =0x8066
+	040200 ZEq              =0.390625 * X + 0.000000,TH|0|0|0|0|
+	040210 DecimalPl        =0x1
+	040230 RangeLow         =0.0000
+	040240 RangeHigh        =255.0000
+	040300 Rows             =0x6
+	040305 Cols             =0x1
+	040320 XUnits           =""
+	040325 YUnits           ="RPM"
+	040330 ZUnits           =""
+	040350 XLabels          =  %
+	040352 XLabelType       =0x4
+	040354 XEq              =
+	040360 YLabels          =1000 ,1800 ,2600 ,3400 ,4200 , 5000
+	040362 YLabelType       =0x4
+	040364 YEq              =
+	040660 XAxisMin         =1000.000000
+	040670 XAxisMax         =1000.000000
+	040760 YAxisMin         =1000.000000
+	040770 YAxisMax         =1000.000000
+%%END%%
+
+%%TABLE%%
+	000002 UniqueID         =0x2EAB
+	040005 Title            ="F1: IDLE: Idle Spark Advance as a function of MAP"
+	040011 DescSize         =0x24
+	040010 Desc             ="shit my first table looks good     "
+	040100 Address          =0x8067
+	040200 ZEq              =0.351563 * X + 0.000000,TH|0|0|0|0|
+	040210 DecimalPl        =0x1
+	040230 RangeLow         =0.0000
+	040240 RangeHigh        =255.0000
+	040300 Rows             =0xC
+	040305 Cols             =0xB
+	040320 XUnits           =""
+	040325 YUnits           ="kPa"
+	040330 ZUnits           =""
+	040350 XLabels          =Deg,1,2,3,4,5,6,7,8,9,10
+	040352 XLabelType       =0x4
+	040354 XEq              =
+	040360 YLabels          =   20,   30,   40,   50,   60,   70,   80,   85,   90,   95,  100,  100
+	040362 YLabelType       =0x4
+	040364 YEq              =
+	040660 XAxisMin         =1000.000000
+	040670 XAxisMax         =1000.000000
+	040760 YAxisMin         =1000.000000
+	040770 YAxisMax         =1000.000000
+%%END%%
+
+%%TABLE%%
+	000002 UniqueID         =0x2EAC
+	040005 Title            ="FCRNKEST: Crank EST Table - Spark Advance vs RPM "
+	040011 DescSize         =0x1
+	040010 Desc             =""
+	040100 Address          =0x805F
+	040200 ZEq              =0.351563 * X + 0.000000,TH|0|0|0|0|
+	040210 DecimalPl        =0x1
+	040230 RangeLow         =0.0000
+	040240 RangeHigh        =255.0000
+	040300 Rows             =0x11
+	040305 Cols             =0x1
+	040320 XUnits           =""
+	040325 YUnits           ="RPM"
+	040330 ZUnits           =""
+	040350 XLabels          =Deg
+	040352 XLabelType       =0x4
+	040354 XEq              =
+	040360 YLabels          =  0  , 32  , 64  , 96  , 128 , 160 , 192 , 224 , 256 , 288 , 320 , 352 , 384 , 416 , 448 , 480 , 512
+	040362 YLabelType       =0x4
+	040364 YEq              =
+	040660 XAxisMin         =1000.000000
+	040670 XAxisMax         =1000.000000
+	040760 YAxisMin         =1000.000000
+	040770 YAxisMax         =1000.000000
+%%END%%
+
+%%TABLE%%
+	000002 UniqueID         =0x2EAD
+	040005 Title            ="F1 SAMAIN: Main Spark Advance vs MAP and RPM "
+	040011 DescSize         =0x1
+	040010 Desc             =""
+	040100 Address          =0x8068
+	040200 ZEq              =0.351563 * X + 0.000000,TH|0|0|0|0|
+	040210 DecimalPl        =0x1
+	040230 RangeLow         =0.0000
+	040240 RangeHigh        =255.0000
+	040300 Rows             =0xC
+	040305 Cols             =0xB
+	040320 XUnits           ="MAP"
+	040325 YUnits           ="RPM"
+	040330 ZUnits           =""
+	040350 XLabels          =20 ,30 ,40 ,50 ,60 ,70 ,80 ,85 ,90 ,95 ,100
+	040352 XLabelType       =0x4
+	040354 XEq              =
+	040360 YLabels          =400  ,800  ,1200 ,1600 ,2000 ,2400 ,2800 ,3200 ,3600 ,4000 ,4400 ,4800
+	040362 YLabelType       =0x4
+	040364 YEq              =
+	040660 XAxisMin         =1000.000000
+	040670 XAxisMax         =1000.000000
+	040760 YAxisMin         =1000.000000
+	040770 YAxisMax         =1000.000000
+%%END%%
+
+%%TABLE%%
+	000002 UniqueID         =0x2EAE
+	040005 Title            ="F2: Coolant Advance vs MAP and Temp (Subtract KCTBIAS from value)"
+	040011 DescSize         =0x1
+	040010 Desc             =""
+	040100 Address          =0x80EF
+	040200 ZEq              =0.351563 * X + 0.000000,TH|0|0|0|0|
+	040230 RangeLow         =0.0000
+	040240 RangeHigh        =255.0000
+	040300 Rows             =0xC
+	040305 Cols             =0x5
+	040320 XUnits           ="MAP"
+	040325 YUnits           ="Coolant"
+	040330 ZUnits           =""
+	040350 XLabels          =60 ,70 ,80 ,90 ,100
+	040352 XLabelType       =0x4
+	040354 XEq              =
+	040360 YLabels          =-10  ,2    ,14   ,26   ,38   ,50   ,62   ,74   ,86   ,98   ,110  ,122
+	040362 YLabelType       =0x4
+	040364 YEq              =
+	040660 XAxisMin         =1000.000000
+	040670 XAxisMax         =1000.000000
+	040760 YAxisMin         =1000.000000
+	040770 YAxisMax         =1000.000000
+%%END%%
+
+%%TABLE%%
+	000002 UniqueID         =0x2EAF
+	040005 Title            ="F4: EGR Advance vs RPM and Vacuum"
+	040011 DescSize         =0x9
+	040010 Desc             ="not sure"
+	040100 Address          =0x6139
+	040200 ZEq              =0.351563 * X + 0.000000,TH|0|0|0|0|
+	040230 RangeLow         =0.0000
+	040240 RangeHigh        =255.0000
+	040300 Rows             =0xB
+	040305 Cols             =0xF
+	040320 XUnits           ="kPa (Vac)"
+	040325 YUnits           ="RPM"
+	040330 ZUnits           =""
+	040350 XLabels          =0  ,2½ ,5  ,7½ ,10 ,12½,15 ,17½,20 ,30 ,40 ,50 ,60 ,70 ,80
+	040352 XLabelType       =0x4
+	040354 XEq              =
+	040360 YLabels          =800  ,1200 ,1600 ,2000 ,2400 ,2800 ,3200 ,3600 ,4000 ,4400 ,4800
+	040362 YLabelType       =0x4
+	040364 YEq              =
+	040660 XAxisMin         =1000.000000
+	040670 XAxisMax         =1000.000000
+	040760 YAxisMin         =1000.000000
+	040770 YAxisMax         =1000.000000
+%%END%%
+
+%%TABLE%%
+	000002 UniqueID         =0x2EB0
+	040005 Title            ="F6: ESC Attack rate(Deg/Ms) vs RPM"
+	040011 DescSize         =0x1
+	040010 Desc             =""
+	040100 Address          =0x81D3
+	040200 ZEq              =0.021973 * X + 0.000000,TH|0|0|0|0|
+	040230 RangeLow         =0.0000
+	040240 RangeHigh        =255.0000
+	040300 Rows             =0x4
+	040305 Cols             =0x1
+	040320 XUnits           =""
+	040325 YUnits           ="RPM"
+	040330 ZUnits           =""
+	040350 XLabels          =°ms
+	040352 XLabelType       =0x4
+	040354 XEq              =
+	040360 YLabels          = 1600, 3200, 4800, 6400
+	040362 YLabelType       =0x4
+	040364 YEq              =
+	040660 XAxisMin         =1000.000000
+	040670 XAxisMax         =1000.000000
+	040760 YAxisMin         =1000.000000
+	040770 YAxisMax         =1000.000000
+%%END%%
+
+%%TABLE%%
+	000002 UniqueID         =0x2EB1
+	040005 Title            ="F7: ESC recovery rate (Deg/Sec) vs RPM"
+	040011 DescSize         =0x1
+	040010 Desc             =""
+	040100 Address          =0x81D7
+	040200 ZEq              =0.175781 * X + 0.000000,TH|0|0|0|0|
+	040230 RangeLow         =0.0000
+	040240 RangeHigh        =255.0000
+	040300 Rows             =0x4
+	040305 Cols             =0x1
+	040320 XUnits           =""
+	040325 YUnits           ="RPM"
+	040330 ZUnits           =""
+	040350 XLabels          =D/S
+	040352 XLabelType       =0x4
+	040354 XEq              =
+	040360 YLabels          = 1600, 3200, 4800, 6400
+	040362 YLabelType       =0x4
+	040364 YEq              =
+	040660 XAxisMin         =1000.000000
+	040670 XAxisMax         =1000.000000
+	040760 YAxisMin         =1000.000000
+	040770 YAxisMax         =1000.000000
+%%END%%
+
+%%TABLE%%
+	000002 UniqueID         =0x2EB2
+	040005 Title            ="F44: Altitude Advance(Deg) vs Baro & Vacuum"
+	040011 DescSize         =0x1
+	040010 Desc             =""
+	040100 Address          =0x81E9
+	040200 ZEq              =0.351563 * X + 0.000000,TH|0|0|0|0|
+	040230 RangeLow         =0.0000
+	040240 RangeHigh        =255.0000
+	040300 Rows             =0x2
+	040305 Cols             =0x6
+	040320 XUnits           ="MAP"
+	040325 YUnits           ="Baro"
+	040330 ZUnits           =""
+	040350 XLabels          =0  ,5  ,10 ,15 ,20 ,25
+	040352 XLabelType       =0x4
+	040354 XEq              =
+	040360 YLabels          =80   ,100
+	040362 YLabelType       =0x4
+	040364 YEq              =
+	040660 XAxisMin         =1000.000000
+	040670 XAxisMax         =1000.000000
+	040760 YAxisMin         =1000.000000
+	040770 YAxisMax         =1000.000000
+%%END%%
+
+%%TABLE%%
+	000002 UniqueID         =0x2EB3
+	040005 Title            ="FBUMP1: Tip-In Bump spark Vs TPS & RPM  (subtract KBMPBIAS)"
+	040011 DescSize         =0x1
+	040010 Desc             =""
+	040100 Address          =0x821F
+	040200 ZEq              =0.351563 * X + 0.000000,TH|0|0|0|0|
+	040230 RangeLow         =0.0000
+	040240 RangeHigh        =255.0000
+	040300 Rows             =0x8
+	040305 Cols             =0x11
+	040320 XUnits           ="%TPS"
+	040325 YUnits           ="RPM"
+	040330 ZUnits           =""
+	040350 XLabels          =0  ,4  ,8  ,12 ,16 ,20 ,24 ,28 ,32 ,36 ,40 ,44 ,48 ,52 ,56 ,60 ,64
+	040352 XLabelType       =0x4
+	040354 XEq              =
+	040360 YLabels          =800  ,1200 ,1600 ,2000 ,2400 ,2800 ,3200 ,3600
+	040362 YLabelType       =0x4
+	040364 YEq              =
+	040660 XAxisMin         =1000.000000
+	040670 XAxisMax         =1000.000000
+	040760 YAxisMin         =1000.000000
+	040770 YAxisMax         =1000.000000
+%%END%%
+
+%%TABLE%%
+	000002 UniqueID         =0x2EB4
+	040005 Title            ="FBUMPDEC: Tip-In Bump spark Decay Table - Decay rate Vs TPS"
+	040011 DescSize         =0x1
+	040010 Desc             =""
+	040100 Address          =0x82A7
+	040200 ZEq              =1.757813 * X + 0.000000,TH|0|0|0|0|
+	040230 RangeLow         =0.0000
+	040240 RangeHigh        =255.0000
+	040300 Rows             =0x9
+	040305 Cols             =0x1
+	040320 XUnits           ="Deg/s"
+	040325 YUnits           ="%TPS"
+	040330 ZUnits           =""
+	040350 XLabels          =(null)
+	040352 XLabelType       =0x4
+	040354 XEq              =
+	040360 YLabels          =0    ,12½  ,25   ,37½  ,50   ,62½  ,75   ,87½  ,100
+	040362 YLabelType       =0x4
+	040364 YEq              =
+	040660 XAxisMin         =1000.000000
+	040670 XAxisMax         =1000.000000
+	040760 YAxisMin         =1000.000000
+	040770 YAxisMax         =1000.000000
+%%END%%
+
+%%TABLE%%
+	000002 UniqueID         =0x2EB5
+	040005 Title            ="F27: Injector Bias vs ADINJ "
+	040011 DescSize         =0xB
+	040010 Desc             ="looks good"
+	040100 Address          =0x82FD
+	040200 ZEq              =0.015259 * X + 0.000000,TH|0|0|0|0|
+	040230 RangeLow         =0.0000
+	040240 RangeHigh        =255.0000
+	040300 Rows             =0x8
+	040305 Cols             =0x1
+	040320 XUnits           =""
+	040325 YUnits           ="Volts"
+	040330 ZUnits           =""
+	040350 XLabels          =mS
+	040352 XLabelType       =0x4
+	040354 XEq              =
+	040360 YLabels          =4.8  ,6.4  ,8.0  ,9.6  ,11.2 ,12.8 ,14.4 ,16.0
+	040362 YLabelType       =0x4
+	040364 YEq              =
+	040660 XAxisMin         =1000.000000
+	040670 XAxisMax         =1000.000000
+	040760 YAxisMin         =1000.000000
+	040770 YAxisMax         =1000.000000
+%%END%%
+
+%%TABLE%%
+	000002 UniqueID         =0x2EB6
+	040005 Title            ="F94: Injector bias add-on vs Injector pulse width"
+	040011 DescSize         =0x1
+	040010 Desc             =""
+	040100 Address          =0x8305
+	040200 ZEq              =0.015259 * X + 0.000000,TH|0|0|0|0|
+	040230 RangeLow         =0.0000
+	040240 RangeHigh        =255.0000
+	040300 Rows             =0x11
+	040305 Cols             =0x1
+	040320 XUnits           ="Ms"
+	040325 YUnits           ="Ms offset"
+	040330 ZUnits           =""
+	040350 XLabels          =Add
+	040352 XLabelType       =0x4
+	040354 XEq              =
+	040360 YLabels          =0.000,0.244,0.488,0.732,0.977,1.221,1.465,1.709,1.953,2.197,2.441,2.686,2.930,3.174,3.418,3.662,3.906
+	040362 YLabelType       =0x4
+	040364 YEq              =
+	040660 XAxisMin         =1000.000000
+	040670 XAxisMax         =1000.000000
+	040760 YAxisMin         =1000.000000
+	040770 YAxisMax         =1000.000000
+%%END%%
+
+%%TABLE%%
+	000002 UniqueID         =0x2EB7
+	040005 Title            ="F28: EGR Dilution as a function of RPM and Vacuum"
+	040011 DescSize         =0xB
+	040010 Desc             ="looks good"
+	040100 Address          =0x8319
+	040200 ZEq              =0.390625 * X + 0.000000,TH|0|0|0|0|
+	040230 RangeLow         =0.0000
+	040240 RangeHigh        =255.0000
+	040300 Rows             =0xB
+	040305 Cols             =0xF
+	040320 XUnits           ="kPa (Vac)"
+	040325 YUnits           ="RPM"
+	040330 ZUnits           =""
+	040350 XLabels          =0  ,2½ ,5  ,7½ ,10 ,12½,15 ,17½,20 ,30 ,40 ,50 ,60 ,70 ,80
+	040352 XLabelType       =0x4
+	040354 XEq              =
+	040360 YLabels          =800  ,1200 ,1600 ,2000 ,2400 ,2800 ,3200 ,3600 ,4000 ,4400 ,4800
+	040362 YLabelType       =0x4
+	040364 YEq              =
+	040660 XAxisMin         =1000.000000
+	040670 XAxisMax         =1000.000000
+	040760 YAxisMin         =1000.000000
+	040770 YAxisMax         =1000.000000
+%%END%%
+
+%%TABLE%%
+	000002 UniqueID         =0x2EB8
+	040005 Title            ="FVE1: Volumetric Efficiency (VE) as a function of MAP and RPM (Low RPM)"
+	040011 DescSize         =0xC
+	040010 Desc             ="looks good "
+	040100 Address          =0x83C2
+	040200 ZEq              =0.390625 * X + 0.000000,TH|0|0|0|0|
+	040230 RangeLow         =0.0000
+	040240 RangeHigh        =255.0000
+	040300 Rows             =0xB
+	040305 Cols             =0x9
+	040320 XUnits           ="MAP"
+	040325 YUnits           ="RPM"
+	040330 ZUnits           =""
+	040350 XLabels          =20 ,30 ,40 ,50 ,60 ,70 ,80 ,90 ,100
+	040352 XLabelType       =0x4
+	040354 XEq              =
+	040360 YLabels          =400  ,600  ,800  ,1000 ,1200 ,1400 ,1600 ,1800 ,2000 ,2200 ,2400
+	040362 YLabelType       =0x4
+	040364 YEq              =
+	040660 XAxisMin         =1000.000000
+	040670 XAxisMax         =1000.000000
+	040760 YAxisMin         =1000.000000
+	040770 YAxisMax         =1000.000000
+%%END%%
+
+%%TABLE%%
+	000002 UniqueID         =0x2EB9
+	040005 Title            ="FVE2: Volumetric Efficiency (VE) as a function of MAP and RPM (High RPM)"
+	040011 DescSize         =0x49
+	040010 Desc             ="not sure here things look close but i dont know will need more work     "
+	040100 Address          =0x8429
+	040200 ZEq              =0.390625 * X + 0.000000,TH|0|0|0|0|
+	040230 RangeLow         =0.0000
+	040240 RangeHigh        =255.0000
+	040300 Rows             =0xD
+	040305 Cols             =0x9
+	040320 XUnits           ="MAP"
+	040325 YUnits           ="RPM"
+	040330 ZUnits           =""
+	040350 XLabels          =20 ,30 ,40 ,50 ,60 ,70 ,80 ,90 ,100
+	040352 XLabelType       =0x4
+	040354 XEq              =
+	040360 YLabels          =2400 ,2800 ,3200 ,3600 ,4000 ,4400 ,4800 ,5200 ,5600 ,6000 ,6400 ,6800 ,7200
+	040362 YLabelType       =0x4
+	040364 YEq              =
+	040660 XAxisMin         =1000.000000
+	040670 XAxisMax         =1000.000000
+	040760 YAxisMin         =1000.000000
+	040770 YAxisMax         =1000.000000
+%%END%%
+
+%%TABLE%%
+	000002 UniqueID         =0x2EBA
+	040005 Title            ="F31: Inverse Temperature term vs Charge Temperature term"
+	040011 DescSize         =0x1
+	040010 Desc             =""
+	040100 Address          =0x849C
+	040200 ZEq              =50000.000000 / X + -273.000000,TH|0|0|0|0|
+	040230 RangeLow         =0.0000
+	040240 RangeHigh        =255.0000
+	040300 Rows             =0x11
+	040305 Cols             =0x1
+	040320 XUnits           ="(50000/value) = Deg "
+	040325 YUnits           ="Degrees K"
+	040330 ZUnits           =""
+	040350 XLabels          =  X
+	040352 XLabelType       =0x4
+	040354 XEq              =
+	040360 YLabels          =  -40,  -28,  -16,   -4,    8,   20,   32,   44,   56,   68,   80,   92,  104,  116,  128,  140,  152
+	040362 YLabelType       =0x4
+	040364 YEq              =
+	040660 XAxisMin         =1000.000000
+	040670 XAxisMax         =1000.000000
+	040760 YAxisMin         =1000.000000
+	040770 YAxisMax         =1000.000000
+%%END%%
+
+%%TABLE%%
+	000002 UniqueID         =0x2EBB
+	040005 Title            ="F33: Voltage compensation vs Battery voltage "
+	040011 DescSize         =0x1
+	040010 Desc             =""
+	040100 Address          =0x84AD
+	040200 ZEq              =0.007813 * X + 0.000000,TH|0|0|0|0|
+	040230 RangeLow         =0.0000
+	040240 RangeHigh        =255.0000
+	040300 Rows             =0x8
+	040305 Cols             =0x1
+	040320 XUnits           =""
+	040325 YUnits           ="Volts"
+	040330 ZUnits           =""
+	040350 XLabels          =Fac
+	040352 XLabelType       =0x4
+	040354 XEq              =
+	040360 YLabels          =4.8  ,6.4  ,8.0  ,9.6  ,11.2 ,12.8 ,14.4 , 16.0
+	040362 YLabelType       =0x4
+	040364 YEq              =
+	040660 XAxisMin         =1000.000000
+	040670 XAxisMax         =1000.000000
+	040760 YAxisMin         =1000.000000
+	040770 YAxisMax         =1000.000000
+%%END%%
+
+%%TABLE%%
+	000002 UniqueID         =0x2EBC
+	040005 Title            ="F34: DE Coolant factor vs COOLDEGB"
+	040011 DescSize         =0x1
+	040010 Desc             =""
+	040100 Address          =0x84B5
+	040200 ZEq              =0.031250 * X + 0.000000,TH|0|0|0|0|
+	040230 RangeLow         =0.0000
+	040240 RangeHigh        =255.0000
+	040300 Rows             =0xD
+	040305 Cols             =0x1
+	040320 XUnits           =""
+	040325 YUnits           ="DegC"
+	040330 ZUnits           =""
+	040350 XLabels          =Fac
+	040352 XLabelType       =0x4
+	040354 XEq              =
+	040360 YLabels          =-28  ,-16  , -4  ,  8  , 20  , 32  , 44  , 56  , 68  , 80  , 92  ,104  ,116
+	040362 YLabelType       =0x4
+	040364 YEq              =
+	040660 XAxisMin         =1000.000000
+	040670 XAxisMax         =1000.000000
+	040760 YAxisMin         =1000.000000
+	040770 YAxisMax         =1000.000000
+%%END%%
+
+%%TABLE%%
+	000002 UniqueID         =0x2EBD
+	040005 Title            ="F36: AE Multiplier Vs Engine RPM Table "
+	040011 DescSize         =0x1
+	040010 Desc             =""
+	040100 Address          =0x84C2
+	040200 ZEq              =0.010000 * X + 0.000000,TH|0|0|0|0|
+	040230 RangeLow         =0.0000
+	040240 RangeHigh        =255.0000
+	040300 Rows             =0x6
+	040305 Cols             =0x1
+	040320 XUnits           =""
+	040325 YUnits           ="RPM"
+	040330 ZUnits           =""
+	040350 XLabels          =Mul
+	040352 XLabelType       =0x4
+	040354 XEq              =
+	040360 YLabels          =800  ,1600 ,2400 ,3200 ,4000 ,4800 
+	040362 YLabelType       =0x4
+	040364 YEq              =
+	040660 XAxisMin         =1000.000000
+	040670 XAxisMax         =1000.000000
+	040760 YAxisMin         =1000.000000
+	040770 YAxisMax         =1000.000000
+%%END%%
+
+%%TABLE%%
+	000002 UniqueID         =0x2EBE
+	040005 Title            ="F37: AE Temperature factor vs COOLDEGB"
+	040011 DescSize         =0x1
+	040010 Desc             =""
+	040100 Address          =0x84C8
+	040200 ZEq              =0.015625 * X + 0.000000,TH|0|0|0|0|
+	040230 RangeLow         =0.0000
+	040240 RangeHigh        =255.0000
+	040300 Rows             =0xD
+	040305 Cols             =0x1
+	040320 XUnits           =""
+	040325 YUnits           ="DegC"
+	040330 ZUnits           =""
+	040350 XLabels          =Fac
+	040352 XLabelType       =0x4
+	040354 XEq              =
+	040360 YLabels          =-28  ,-16  , -4  ,  8  , 20  , 32  , 44  , 56  , 68  , 80  , 92  ,104  ,116
+	040362 YLabelType       =0x4
+	040364 YEq              =
+	040660 XAxisMin         =1000.000000
+	040670 XAxisMax         =1000.000000
+	040760 YAxisMin         =1000.000000
+	040770 YAxisMax         =1000.000000
+%%END%%
+
+%%TABLE%%
+	000002 UniqueID         =0x2EBF
+	040005 Title            ="F38: AEDP Decay factor(% ref period)  Vs COOLDEGB"
+	040011 DescSize         =0x1
+	040010 Desc             =""
+	040100 Address          =0x84D5
+	040200 ZEq              =0.390625 * X + 0.000000,TH|0|0|0|0|
+	040230 RangeLow         =0.0000
+	040240 RangeHigh        =255.0000
+	040300 Rows             =0x4
+	040305 Cols             =0x1
+	040320 XUnits           =""
+	040325 YUnits           ="DegC"
+	040330 ZUnits           =""
+	040350 XLabels          =%Re
+	040352 XLabelType       =0x4
+	040354 XEq              =
+	040360 YLabels          =-28  , 20  , 68  ,116
+	040362 YLabelType       =0x4
+	040364 YEq              =
+	040660 XAxisMin         =1000.000000
+	040670 XAxisMax         =1000.000000
+	040760 YAxisMin         =1000.000000
+	040770 YAxisMax         =1000.000000
+%%END%%
+
+%%TABLE%%
+	000002 UniqueID         =0x2EC0
+	040005 Title            ="F38: DEMAP Decay factor(% ref period)  Vs COOLDEGB"
+	040011 DescSize         =0x1
+	040010 Desc             =""
+	040100 Address          =0x84D9
+	040200 ZEq              =0.390625 * X + 0.000000,TH|0|0|0|0|
+	040230 RangeLow         =0.0000
+	040240 RangeHigh        =255.0000
+	040300 Rows             =0x4
+	040305 Cols             =0x1
+	040320 XUnits           =""
+	040325 YUnits           ="DegC"
+	040330 ZUnits           =""
+	040350 XLabels          =%Re
+	040352 XLabelType       =0x4
+	040354 XEq              =
+	040360 YLabels          =-28  , 20  , 68  ,116
+	040362 YLabelType       =0x4
+	040364 YEq              =
+	040660 XAxisMin         =1000.000000
+	040670 XAxisMax         =1000.000000
+	040760 YAxisMin         =1000.000000
+	040770 YAxisMax         =1000.000000
+%%END%%
+
+%%TABLE%%
+	000002 UniqueID         =0x2EC1
+	040005 Title            ="F40: AE Gain Vs Delta manifold fuel"
+	040011 DescSize         =0x1
+	040010 Desc             =""
+	040100 Address          =0x84DD
+	040200 ZEq              =0.007629 * X + 0.000000,TH|0|0|0|0|
+	040230 RangeLow         =0.0000
+	040240 RangeHigh        =255.0000
+	040300 Rows             =0x6
+	040305 Cols             =0x1
+	040320 XUnits           =""
+	040325 YUnits           ="Counts"
+	040330 ZUnits           =""
+	040350 XLabels          =Ms/
+	040352 XLabelType       =0x4
+	040354 XEq              =
+	040360 YLabels          =0    ,50   ,100  ,150  ,200  ,250
+	040362 YLabelType       =0x4
+	040364 YEq              =
+	040660 XAxisMin         =1000.000000
+	040670 XAxisMax         =1000.000000
+	040760 YAxisMin         =1000.000000
+	040770 YAxisMax         =1000.000000
+%%END%%
+
+%%TABLE%%
+	000002 UniqueID         =0x2EC2
+	040005 Title            ="F41: DE Gain Vs Delta manifold fuel"
+	040011 DescSize         =0x1
+	040010 Desc             =""
+	040100 Address          =0x84E3
+	040200 ZEq              =0.500000 * X + 0.000000,TH|0|0|0|0|
+	040230 RangeLow         =0.0000
+	040240 RangeHigh        =255.0000
+	040300 Rows             =0x6
+	040305 Cols             =0x1
+	040320 XUnits           =""
+	040325 YUnits           ="Counts"
+	040330 ZUnits           =""
+	040350 XLabels          =Mul
+	040352 XLabelType       =0x4
+	040354 XEq              =
+	040360 YLabels          =0    ,50   ,100  ,150  ,200  ,250
+	040362 YLabelType       =0x4
+	040364 YEq              =
+	040660 XAxisMin         =1000.000000
+	040670 XAxisMax         =1000.000000
+	040760 YAxisMin         =1000.000000
+	040770 YAxisMax         =1000.000000
+%%END%%
+
+%%TABLE%%
+	000002 UniqueID         =0x2EC3
+	040005 Title            ="F51: Initial Run A/F Ratio Time-Out vs Coolant Temperature"
+	040011 DescSize         =0x1
+	040010 Desc             =""
+	040100 Address          =0x84E9
+	040200 ZEq              =0.100000 * X + 0.000000,TH|0|0|0|0|
+	040230 RangeLow         =0.0000
+	040240 RangeHigh        =255.0000
+	040300 Rows             =0xF
+	040305 Cols             =0x1
+	040320 XUnits           ="Ratio"
+	040325 YUnits           ="Degrees C"
+	040330 ZUnits           =""
+	040350 XLabels          =Rat
+	040352 XLabelType       =0x4
+	040354 XEq              =
+	040360 YLabels          =  -40,  -28,  -16,   -4,    8,   20,   32,   44,   56,   68,   80,   92,  104,  116,  128
+	040362 YLabelType       =0x4
+	040364 YEq              =
+	040660 XAxisMin         =1000.000000
+	040670 XAxisMax         =1000.000000
+	040760 YAxisMin         =1000.000000
+	040770 YAxisMax         =1000.000000
+%%END%%
+
+%%TABLE%%
+	000002 UniqueID         =0x2EC4
+	040005 Title            ="F52: Run A/F Time-Out Interval Vs COOLDEG"
+	040011 DescSize         =0x1
+	040010 Desc             =""
+	040100 Address          =0x84F8
+	040200 ZEq              =0.025000 * X + 0.025000,TH|0|0|0|0|
+	040230 RangeLow         =0.0000
+	040240 RangeHigh        =255.0000
+	040300 Rows             =0xF
+	040305 Cols             =0x1
+	040320 XUnits           =""
+	040325 YUnits           ="Degrees C"
+	040330 ZUnits           =""
+	040350 XLabels          =Sec
+	040352 XLabelType       =0x4
+	040354 XEq              =
+	040360 YLabels          =  -40,  -28,  -16,   -4,    8,   20,   32,   44,   56,   68,   80,   92,  104,  116,  128
+	040362 YLabelType       =0x4
+	040364 YEq              =
+	040660 XAxisMin         =1000.000000
+	040670 XAxisMax         =1000.000000
+	040760 YAxisMin         =1000.000000
+	040770 YAxisMax         =1000.000000
+%%END%%
+
+%%TABLE%%
+	000002 UniqueID         =0x2EC5
+	040005 Title            ="F53: Initial Crank Base Pulse Width vs COOLDEGB - If KCFTM0 = 0"
+	040011 DescSize         =0x1
+	040010 Desc             =""
+	040100 Address          =0x8507
+	040200 ZEq              =0.488281 * X + 0.000000,TH|0|0|0|0|
+	040230 RangeLow         =0.0000
+	040240 RangeHigh        =255.0000
+	040300 Rows             =0xD
+	040305 Cols             =0x1
+	040320 XUnits           =""
+	040325 YUnits           ="Deg C"
+	040330 ZUnits           =""
+	040350 XLabels          =ms
+	040352 XLabelType       =0x4
+	040354 XEq              =
+	040360 YLabels          =-28  ,-16  ,-4   ,8    ,20   ,32   ,44   ,56   ,68   ,80   ,92   ,104  ,116
+	040362 YLabelType       =0x4
+	040364 YEq              =
+	040660 XAxisMin         =1000.000000
+	040670 XAxisMax         =1000.000000
+	040760 YAxisMin         =1000.000000
+	040770 YAxisMax         =1000.000000
+%%END%%
+
+%%TABLE%%
+	000002 UniqueID         =0x2EC6
+	040005 Title            ="F54: Initial Crank Base Pulse Width vs COOLDEGB - If KCFTM0 <> 0"
+	040011 DescSize         =0x1
+	040010 Desc             =""
+	040100 Address          =0x8514
+	040200 ZEq              =0.488281 * X + 0.000000,TH|0|0|0|0|
+	040230 RangeLow         =0.0000
+	040240 RangeHigh        =255.0000
+	040300 Rows             =0xD
+	040305 Cols             =0x1
+	040320 XUnits           =""
+	040325 YUnits           ="Deg C"
+	040330 ZUnits           =""
+	040350 XLabels          =ms
+	040352 XLabelType       =0x4
+	040354 XEq              =
+	040360 YLabels          =-28  ,-16  ,-4   ,8    ,20   ,32   ,44   ,56   ,68   ,80   ,92   ,104  ,116
+	040362 YLabelType       =0x4
+	040364 YEq              =
+	040660 XAxisMin         =1000.000000
+	040670 XAxisMax         =1000.000000
+	040760 YAxisMin         =1000.000000
+	040770 YAxisMax         =1000.000000
+%%END%%
+
+%%TABLE%%
+	000002 UniqueID         =0x2EC7
+	040005 Title            ="F56: Cold Engine A/F Ratio vs COOLDEG and MAP"
+	040011 DescSize         =0x2D
+	040010 Desc             ="not good but very close with the hex address"
+	040100 Address          =0x8515
+	040200 ZEq              =0.100000 * X + 0.000000,TH|0|0|0|0|
+	040230 RangeLow         =0.0000
+	040240 RangeHigh        =255.0000
+	040300 Rows             =0xD
+	040305 Cols             =0x9
+	040320 XUnits           ="MAP"
+	040325 YUnits           ="DegC"
+	040330 ZUnits           =""
+	040350 XLabels          =20 ,30 ,40 ,50 ,60 ,70 ,80 ,90 ,100
+	040352 XLabelType       =0x4
+	040354 XEq              =
+	040360 YLabels          =-40  ,-28  ,-16  ,-4   ,8    ,20   ,32   ,44   ,56   ,68   ,80   ,92   ,104
+	040362 YLabelType       =0x4
+	040364 YEq              =
+	040660 XAxisMin         =1000.000000
+	040670 XAxisMax         =1000.000000
+	040760 YAxisMin         =1000.000000
+	040770 YAxisMax         =1000.000000
+%%END%%
+
+%%TABLE%%
+	000002 UniqueID         =0x2EC8
+	040005 Title            ="F57: Idle A/F Ratio vs Coolant Temperature"
+	040011 DescSize         =0x10
+	040010 Desc             ="looks good     "
+	040100 Address          =0x859A
+	040200 ZEq              =0.100000 * X + 0.000000,TH|0|0|0|0|
+	040230 RangeLow         =0.0000
+	040240 RangeHigh        =255.0000
+	040300 Rows             =0x7
+	040305 Cols             =0x1
+	040320 XUnits           =""
+	040325 YUnits           ="Deg C"
+	040330 ZUnits           =""
+	040350 XLabels          =A/F
+	040352 XLabelType       =0x4
+	040354 XEq              =
+	040360 YLabels          =-28  ,-4   ,20   ,44   ,68   ,92   ,  116
+	040362 YLabelType       =0x4
+	040364 YEq              =
+	040660 XAxisMin         =1000.000000
+	040670 XAxisMax         =1000.000000
+	040760 YAxisMin         =1000.000000
+	040770 YAxisMax         =1000.000000
+%%END%%
+
+%%TABLE%%
+	000002 UniqueID         =0x2EC9
+	040005 Title            ="F60: Air Fuel ratio vs RPM and MAP"
+	040011 DescSize         =0xB
+	040010 Desc             ="looks good"
+	040100 Address          =0x85A3
+	040200 ZEq              =0.100000 * X + 0.000000,TH|0|0|0|0|
+	040230 RangeLow         =0.0000
+	040240 RangeHigh        =255.0000
+	040300 Rows             =0x10
+	040305 Cols             =0xC
+	040320 XUnits           ="MAP"
+	040325 YUnits           ="RPM"
+	040330 ZUnits           =""
+	040350 XLabels          =20 ,30 ,40 ,50 ,60 ,70 ,75 ,80 ,85 ,90 ,95 ,100
+	040352 XLabelType       =0x4
+	040354 XEq              =
+	040360 YLabels          =400  ,800  ,1200 ,1600 ,2000 ,2400 ,2800 ,3200 ,3600 ,4000 ,4400 ,4800 ,5200 ,5600 ,6000 ,6400
+	040362 YLabelType       =0x4
+	040364 YEq              =
+	040660 XAxisMin         =1000.000000
+	040670 XAxisMax         =1000.000000
+	040760 YAxisMin         =1000.000000
+	040770 YAxisMax         =1000.000000
+%%END%%
+
+%%TABLE%%
+	000002 UniqueID         =0x2ECA
+	040005 Title            ="F61: Lean Cruise Air Fuel Delta Vs RPM and MAP"
+	040011 DescSize         =0x1
+	040010 Desc             =""
+	040100 Address          =0x871F
+	040200 ZEq              =0.100000 * X + 0.000000,TH|0|0|0|0|
+	040230 RangeLow         =0.0000
+	040240 RangeHigh        =255.0000
+	040300 Rows             =0x10
+	040305 Cols             =0x9
+	040320 XUnits           ="MAP"
+	040325 YUnits           ="RPM"
+	040330 ZUnits           =""
+	040350 XLabels          =20 ,30 ,40 ,50 ,60 ,70 ,80 ,90 ,100
+	040352 XLabelType       =0x4
+	040354 XEq              =
+	040360 YLabels          =400  ,800  ,1200 ,1600 ,2000 ,2400 ,2800 ,3200 ,3600 ,4000 ,4400 ,4800 ,5200 ,5600 ,6000 ,6400
+	040362 YLabelType       =0x4
+	040364 YEq              =
+	040660 XAxisMin         =1000.000000
+	040670 XAxisMax         =1000.000000
+	040760 YAxisMin         =1000.000000
+	040770 YAxisMax         =1000.000000
+%%END%%
+
+%%TABLE%%
+	000002 UniqueID         =0x2ECB
+	040005 Title            ="F66: Injector delay Table (% of Ref period vs RPM & TPS)"
+	040011 DescSize         =0x2C
+	040010 Desc             ="THIS IS NOT RIGHT , BUT IT IS CLOSE TO HERE"
+	040100 Address          =0x8720
+	040200 ZEq              =0.390625 * X + 0.000000,TH|0|0|0|0|
+	040230 RangeLow         =0.0000
+	040240 RangeHigh        =255.0000
+	040300 Rows             =0x8
+	040305 Cols             =0x9
+	040320 XUnits           ="TPS%"
+	040325 YUnits           ="RPM"
+	040330 ZUnits           =""
+	040350 XLabels          =0  ,12½,25 ,37½,50 ,62½,75 ,87½,100
+	040352 XLabelType       =0x4
+	040354 XEq              =
+	040360 YLabels          =400  ,800  ,1200 ,1600 ,2000 ,2400 ,2800 ,3200
+	040362 YLabelType       =0x4
+	040364 YEq              =
+	040660 XAxisMin         =1000.000000
+	040670 XAxisMax         =1000.000000
+	040760 YAxisMin         =1000.000000
+	040770 YAxisMax         =1000.000000
+%%END%%
+
+%%TABLE%%
+	000002 UniqueID         =0x2ECC
+	040005 Title            ="F100: % Coolant contribution for calculating charge temp Vs RPM & MAP"
+	040011 DescSize         =0x1
+	040010 Desc             =""
+	040100 Address          =0x8744
+	040200 ZEq              =0.390625 * X + 0.000000,TH|0|0|0|0|
+	040230 RangeLow         =0.0000
+	040240 RangeHigh        =255.0000
+	040300 Rows             =0x10
+	040305 Cols             =0x9
+	040320 XUnits           ="MAP"
+	040325 YUnits           ="RPM"
+	040330 ZUnits           =""
+	040350 XLabels          =20 ,30 ,40 ,50 ,60 ,70 ,80 ,90 ,100
+	040352 XLabelType       =0x4
+	040354 XEq              =
+	040360 YLabels          =400  ,800  ,1200 ,1600 ,2000 ,2400 ,2800 ,3200 ,3600 ,4000 ,4400 ,4800 ,5200 ,5600 ,6000 ,6400
+	040362 YLabelType       =0x4
+	040364 YEq              =
+	040660 XAxisMin         =1000.000000
+	040670 XAxisMax         =1000.000000
+	040760 YAxisMin         =1000.000000
+	040770 YAxisMax         =1000.000000
+%%END%%
+
+%%TABLE%%
+	000002 UniqueID         =0x2ECD
+	040005 Title            ="F10: IAC - Warmup IAC motor position offset Vs  COOLDEGB"
+	040011 DescSize         =0x9
+	040010 Desc             ="LOOKS OK"
+	040100 Address          =0x88B7
+	040200 ZEq              =1.000000 * X + 0.000000,TH|0|0|0|0|
+	040230 RangeLow         =0.0000
+	040240 RangeHigh        =255.0000
+	040300 Rows             =0xD
+	040305 Cols             =0x1
+	040320 XUnits           =""
+	040325 YUnits           ="Deg C"
+	040330 ZUnits           =""
+	040350 XLabels          =Ste
+	040352 XLabelType       =0x4
+	040354 XEq              =
+	040360 YLabels          =-28  ,-16  ,-4   ,8    ,20   ,32   ,44   ,56   ,68   ,80   ,92   ,104  ,116
+	040362 YLabelType       =0x4
+	040364 YEq              =
+	040660 XAxisMin         =1000.000000
+	040670 XAxisMax         =1000.000000
+	040760 YAxisMin         =1000.000000
+	040770 YAxisMax         =1000.000000
+%%END%%
+
+%%TABLE%%
+	000002 UniqueID         =0x2ECE
+	040005 Title            ="F13D: IAC - Desired RPM in Drive Vs Battery voltage"
+	040011 DescSize         =0x1
+	040010 Desc             =""
+	040100 Address          =0x88C3
+	040200 ZEq              =6.250000 * X + 0.000000,TH|0|0|0|0|
+	040230 RangeLow         =0.0000
+	040240 RangeHigh        =255.0000
+	040300 Rows             =0x3
+	040305 Cols             =0x1
+	040320 XUnits           =""
+	040325 YUnits           ="Volts"
+	040330 ZUnits           =""
+	040350 XLabels          =RPM
+	040352 XLabelType       =0x4
+	040354 XEq              =
+	040360 YLabels          =9.6  ,11.2 , 12.8
+	040362 YLabelType       =0x4
+	040364 YEq              =
+	040660 XAxisMin         =1000.000000
+	040670 XAxisMax         =1000.000000
+	040760 YAxisMin         =1000.000000
+	040770 YAxisMax         =1000.000000
+%%END%%
+
+%%TABLE%%
+	000002 UniqueID         =0x2ECF
+	040005 Title            ="F13P: IAC - Desired RPM in Park/Neutral Vs Battery voltage"
+	040011 DescSize         =0x1
+	040010 Desc             =""
+	040100 Address          =0x88C6
+	040200 ZEq              =6.250000 * X + 0.000000,TH|0|0|0|0|
+	040230 RangeLow         =0.0000
+	040240 RangeHigh        =255.0000
+	040300 Rows             =0x3
+	040305 Cols             =0x1
+	040320 XUnits           =""
+	040325 YUnits           ="Volts"
+	040330 ZUnits           =""
+	040350 XLabels          =RPM
+	040352 XLabelType       =0x4
+	040354 XEq              =
+	040360 YLabels          =9.6  ,11.2 , 12.8
+	040362 YLabelType       =0x4
+	040364 YEq              =
+	040660 XAxisMin         =1000.000000
+	040670 XAxisMax         =1000.000000
+	040760 YAxisMin         =1000.000000
+	040770 YAxisMax         =1000.000000
+%%END%%
+
+%%TABLE%%
+	000002 UniqueID         =0x2ED0
+	040005 Title            ="F13M: IAC - Desired RPM for manual trans Vs Battery voltage"
+	040011 DescSize         =0x1
+	040010 Desc             =""
+	040100 Address          =0x88C9
+	040200 ZEq              =6.250000 * X + 0.000000,TH|0|0|0|0|
+	040230 RangeLow         =0.0000
+	040240 RangeHigh        =255.0000
+	040300 Rows             =0x3
+	040305 Cols             =0x1
+	040320 XUnits           =""
+	040325 YUnits           ="Volts"
+	040330 ZUnits           =""
+	040350 XLabels          =RPM
+	040352 XLabelType       =0x4
+	040354 XEq              =
+	040360 YLabels          =9.6  ,11.2 , 12.8
+	040362 YLabelType       =0x4
+	040364 YEq              =
+	040660 XAxisMin         =1000.000000
+	040670 XAxisMax         =1000.000000
+	040760 YAxisMin         =1000.000000
+	040770 YAxisMax         =1000.000000
+%%END%%
+
+%%TABLE%%
+	000002 UniqueID         =0x2ED1
+	040005 Title            ="F14: IAC - IAC Warmup decay rate Vs COOLDEGB"
+	040011 DescSize         =0x1
+	040010 Desc             =""
+	040100 Address          =0x88CC
+	040200 ZEq              =0.200000 * X + 0.000000,TH|0|0|0|0|
+	040230 RangeLow         =0.0000
+	040240 RangeHigh        =255.0000
+	040300 Rows             =0xD
+	040305 Cols             =0x1
+	040320 XUnits           =""
+	040325 YUnits           ="Deg C"
+	040330 ZUnits           =""
+	040350 XLabels          =Sec
+	040352 XLabelType       =0x4
+	040354 XEq              =
+	040360 YLabels          =-28  ,-16  ,-4   ,8    ,20   ,32   ,44   ,56   ,68   ,80   ,92   ,104  ,116
+	040362 YLabelType       =0x4
+	040364 YEq              =
+	040660 XAxisMin         =1000.000000
+	040670 XAxisMax         =1000.000000
+	040760 YAxisMin         =1000.000000
+	040770 YAxisMax         =1000.000000
+%%END%%
+
+%%TABLE%%
+	000002 UniqueID         =0x2ED2
+	040005 Title            ="F15: IAC - Fast idle offset Vs COOLDEGB"
+	040011 DescSize         =0x1
+	040010 Desc             =""
+	040100 Address          =0x88D9
+	040200 ZEq              =6.250000 * X + 0.000000,TH|0|0|0|0|
+	040230 RangeLow         =0.0000
+	040240 RangeHigh        =255.0000
+	040300 Rows             =0xD
+	040305 Cols             =0x1
+	040320 XUnits           =""
+	040325 YUnits           ="Deg C"
+	040330 ZUnits           =""
+	040350 XLabels          =RPM
+	040352 XLabelType       =0x4
+	040354 XEq              =
+	040360 YLabels          =-28  ,-16  ,-4   ,8    ,20   ,32   ,44   ,56   ,68   ,80   ,92   ,104  ,116
+	040362 YLabelType       =0x4
+	040364 YEq              =
+	040660 XAxisMin         =1000.000000
+	040670 XAxisMax         =1000.000000
+	040760 YAxisMin         =1000.000000
+	040770 YAxisMax         =1000.000000
+%%END%%
+
+%%TABLE%%
+	000002 UniqueID         =0x2ED3
+	040005 Title            ="F16: IAC - Throttle crack offset Vs RPM"
+	040011 DescSize         =0x1
+	040010 Desc             =""
+	040100 Address          =0x88E6
+	040200 ZEq              =1.000000 * X + 0.000000,TH|0|0|0|0|
+	040230 RangeLow         =0.0000
+	040240 RangeHigh        =255.0000
+	040300 Rows             =0x9
+	040305 Cols             =0x1
+	040320 XUnits           =""
+	040325 YUnits           ="RPM"
+	040330 ZUnits           =""
+	040350 XLabels          =Ste
+	040352 XLabelType       =0x4
+	040354 XEq              =
+	040360 YLabels          =0    ,800  ,1600 ,2400 ,3200 ,4000 ,4800 ,5600 ,6400
+	040362 YLabelType       =0x4
+	040364 YEq              =
+	040660 XAxisMin         =1000.000000
+	040670 XAxisMax         =1000.000000
+	040760 YAxisMin         =1000.000000
+	040770 YAxisMax         =1000.000000
+%%END%%
+
+%%TABLE%%
+	000002 UniqueID         =0x2ED4
+	040005 Title            ="F59: Baro params - Baro Adjustment offset to MAP A/D reading vs RPM & TPS"
+	040011 DescSize         =0x1
+	040010 Desc             =""
+	040100 Address          =0x88FD
+	040200 ZEq              =0.369004 * X + 0.000000,TH|0|0|0|0|
+	040230 RangeLow         =0.0000
+	040240 RangeHigh        =255.0000
+	040300 Rows             =0x3
+	040305 Cols             =0x6
+	040320 XUnits           ="%Thrott Pos"
+	040325 YUnits           ="RPM"
+	040330 ZUnits           =""
+	040350 XLabels          =37½,50 ,62½,75 ,87½,100
+	040352 XLabelType       =0x4
+	040354 XEq              =
+	040360 YLabels          =1200 ,2400 ,3600
+	040362 YLabelType       =0x4
+	040364 YEq              =
+	040660 XAxisMin         =1000.000000
+	040670 XAxisMax         =1000.000000
+	040760 YAxisMin         =1000.000000
+	040770 YAxisMax         =1000.000000
+%%END%%
+
+%%TABLE%%
+	000002 UniqueID         =0x2ED5
+	040005 Title            ="F55:  Shift light - RPM Threshold vs NTPSLD to turn on shift light"
+	040011 DescSize         =0x1
+	040010 Desc             =""
+	040100 Address          =0x8923
+	040200 ZEq              =25.000000 * X + 0.000000,TH|0|0|0|0|
+	040230 RangeLow         =0.0000
+	040240 RangeHigh        =255.0000
+	040300 Rows             =0x5
+	040305 Cols             =0x1
+	040320 XUnits           =""
+	040325 YUnits           ="%TPS"
+	040330 ZUnits           =""
+	040350 XLabels          =RPM
+	040352 XLabelType       =0x4
+	040354 XEq              =
+	040360 YLabels          =00   ,25   ,50   ,75   ,100
+	040362 YLabelType       =0x4
+	040364 YEq              =
+	040660 XAxisMin         =1000.000000
+	040670 XAxisMax         =1000.000000
+	040760 YAxisMin         =1000.000000
+	040770 YAxisMax         =1000.000000
+%%END%%
+
+%%TABLE%%
+	000002 UniqueID         =0x2ED6
+	040005 Title            ="F42C: TCC UNLOCK table  TPS limit Vs Road speed"
+	040011 DescSize         =0x1
+	040010 Desc             =""
+	040100 Address          =0x8934
+	040200 ZEq              =0.390625 * X + 0.000000,TH|0|0|0|0|
+	040230 RangeLow         =0.0000
+	040240 RangeHigh        =255.0000
+	040300 Rows             =0xB
+	040305 Cols             =0x1
+	040320 XUnits           =""
+	040325 YUnits           ="km/h"
+	040330 ZUnits           =""
+	040350 XLabels          =%
+	040352 XLabelType       =0x4
+	040354 XEq              =
+	040360 YLabels          =32   ,40   ,48   ,56   ,64   ,72   ,80   ,88   ,96   ,104  , 112
+	040362 YLabelType       =0x4
+	040364 YEq              =
+	040660 XAxisMin         =1000.000000
+	040670 XAxisMax         =1000.000000
+	040760 YAxisMin         =1000.000000
+	040770 YAxisMax         =1000.000000
+%%END%%
+
+%%TABLE%%
+	000002 UniqueID         =0x2ED7
+	040005 Title            ="F43C: TCC Lock table    TPS limit vs Road Speed"
+	040011 DescSize         =0x1
+	040010 Desc             =""
+	040100 Address          =0x893F
+	040200 ZEq              =0.390625 * X + 0.000000,TH|0|0|0|0|
+	040230 RangeLow         =0.0000
+	040240 RangeHigh        =255.0000
+	040300 Rows             =0xB
+	040305 Cols             =0x1
+	040320 XUnits           =""
+	040325 YUnits           ="km/h"
+	040330 ZUnits           =""
+	040350 XLabels          =  %
+	040352 XLabelType       =0x4
+	040354 XEq              =
+	040360 YLabels          =32   ,40   ,48   ,56   ,64   ,72   ,80   ,88   ,96   ,104  , 112
+	040362 YLabelType       =0x4
+	040364 YEq              =
+	040660 XAxisMin         =1000.000000
+	040670 XAxisMax         =1000.000000
+	040760 YAxisMin         =1000.000000
+	040770 YAxisMax         =1000.000000
+%%END%%
+

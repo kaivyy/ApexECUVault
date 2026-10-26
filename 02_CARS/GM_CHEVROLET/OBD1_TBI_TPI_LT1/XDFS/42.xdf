@@ -1,0 +1,3332 @@
+XDF
+1.110000
+
+DO NOT HAND EDIT!!!! (Trust me)
+
+%%HEADER%%
+	001000 FileVers         ="1.0"
+	001005 DefTitle         ="$42"
+	001007 DescSize         =0x11
+	001006 Desc             ="Created 9/20/2009"
+	001010 Author           ="Robert Saar"
+	001030 BinSize          =0x1000
+	001035 BaseOffset       =0
+	001200 ADSAssoc         ="..\\..\\DataStreams\\Mine\\42.ads"
+	001225 ADSCheck         =0x11433
+	001300 GenFlags         =0x0
+	001325 ModeFlags        =0x0
+%%END%%
+
+%%FLAG%%
+	000002 UniqueID         =0x3005
+	030005 Title            ="51 PROM"
+	030011 DescSize         =0x1
+	030010 Desc             =""
+	030100 Address          =0x50F
+	030200 BitNumber        =0x4
+%%END%%
+
+%%FLAG%%
+	000002 UniqueID         =0x69AA
+	030005 Title            ="52 Cal-Pack"
+	030011 DescSize         =0x1
+	030010 Desc             =""
+	030100 Address          =0x50F
+	030200 BitNumber        =0x3
+%%END%%
+
+%%FLAG%%
+	000002 UniqueID         =0x2178
+	030005 Title            ="53 VATS"
+	030011 DescSize         =0x1
+	030010 Desc             =""
+	030100 Address          =0x50F
+	030200 BitNumber        =0x2
+%%END%%
+
+%%FLAG%%
+	000002 UniqueID         =0x4ABF
+	030005 Title            ="54 Fuel Pump Relay"
+	030011 DescSize         =0x1
+	030010 Desc             =""
+	030100 Address          =0x50F
+	030200 BitNumber        =0x1
+%%END%%
+
+%%CHECKSUM%%
+	000002 UniqueID         =0x591E
+	010005 Title            ="Checksum"
+	010010 DataStart        =0x4
+	010015 DataEnd          =0xFFF
+	010025 StoreAddr        =0x0
+	010030 CalcMethod       =0x0
+	010050 Flags            =0x0
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x6AE6
+	020005 Title            ="     General"
+	020011 DescSize         =0x1
+	020010 Desc             =""
+	020020 Units            =""
+	020100 Address          =0x0
+	020200 Equation         =X,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x7F27
+	020005 Title            ="Checksum"
+	020011 DescSize         =0x33
+	020010 Desc             ="this should be computed automatically in tunerpro."
+	020020 Units            =""
+	020050 SizeInBits       =0x10
+	020100 Address          =0x0
+	020200 Equation         =X,TH|0|0|0|0|
+	020205 OutType          =0x3
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x4CFC
+	020005 Title            ="PROM ID"
+	020011 DescSize         =0x51
+	020010 Desc             ="can be used to track and see what a BIN actually is or what it was based off of."
+	020020 Units            =""
+	020050 SizeInBits       =0x10
+	020100 Address          =0x2
+	020200 Equation         =X,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x75F2
+	020005 Title            ="Codemask"
+	020011 DescSize         =0x76
+	020010 Desc             ="if you're using a $42 BIN, this should always say 42 unless the checksum is disabled, in which case it would read AA."
+	020020 Units            =""
+	020100 Address          =0x4
+	020200 Equation         =X,TH|0|0|0|0|
+	020205 OutType          =0x3
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x2EE2
+	020005 Title            ="Number of Cylinders"
+	020011 DescSize         =0x16
+	020010 Desc             ="Can use 3, 4, 6 and 8"
+	020020 Units            =""
+	020100 Address          =0x16
+	020200 Equation         =X,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x4367
+	020005 Title            ="Number of Power-Ups to Clear DTCs"
+	020011 DescSize         =0x1
+	020010 Desc             =""
+	020020 Units            =""
+	020100 Address          =0x510
+	020200 Equation         =X,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x7149
+	020005 Title            ="     Spark"
+	020011 DescSize         =0x1
+	020010 Desc             =""
+	020020 Units            =""
+	020100 Address          =0x0
+	020200 Equation         =X,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x439E
+	020005 Title            ="Spark Added in ALDL Mode"
+	020011 DescSize         =0x46
+	020010 Desc             ="Zero this or else you will be chasing knock issues for a LONG time..."
+	020020 Units            ="*"
+	020100 Address          =0x23
+	020200 Equation         =X*0.3515625,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x1DE
+	020005 Title            ="Initial Advance"
+	020011 DescSize         =0x4E
+	020010 Desc             ="this setting needs to match your distributor for the engine to run correctly."
+	020020 Units            ="*"
+	020100 Address          =0x9
+	020200 Equation         =X*0.3515625,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x3B04
+	020005 Title            ="Minimum RPM to Consider the Engine Running"
+	020011 DescSize         =0x1C
+	020010 Desc             ="setting affects idle spark."
+	020020 Units            ="RPM"
+	020050 SizeInBits       =0x10
+	020100 Address          =0xA
+	020200 Equation         =X/4.37,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0xC54
+	020005 Title            ="Maximum RPM to add Spark Above Main Spark Table"
+	020011 DescSize         =0x1
+	020010 Desc             =""
+	020020 Units            ="RPM"
+	020100 Address          =0xC
+	020200 Equation         =X*25,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x231A
+	020005 Title            ="Amount of Spark to add per 1000RPM above Main Spark Table"
+	020011 DescSize         =0x1
+	020010 Desc             =""
+	020020 Units            ="*"
+	020100 Address          =0xD
+	020200 Equation         =X/9.2,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x7826
+	020005 Title            ="Main Spark Advance Bias"
+	020011 DescSize         =0x1
+	020010 Desc             =""
+	020020 Units            ="*"
+	020100 Address          =0x14
+	020200 Equation         =X*0.3515625,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x28EF
+	020005 Title            ="Cold Spark Advance Bias"
+	020011 DescSize         =0x1
+	020010 Desc             =""
+	020020 Units            ="*"
+	020100 Address          =0x15
+	020200 Equation         =X*0.3515625,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x4609
+	020005 Title            ="Maximum Spark Advance"
+	020011 DescSize         =0x42
+	020010 Desc             ="Suggested Maximums: V8: 42*, Large Cap V6: 54*, Small Cap V6: 40*"
+	020020 Units            ="*"
+	020050 SizeInBits       =0x10
+	020100 Address          =0x19
+	020200 Equation         =X*0.3515625,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x255
+	020005 Title            ="Maximum Spark Retard"
+	020011 DescSize         =0x3E
+	020010 Desc             ="Suggest Maximums: V8: 4*, Large Cap V6: 14*, Small Cap V6: 9*"
+	020020 Units            ="*"
+	020100 Address          =0x1C
+	020200 Equation         =0.351560 * X -90,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x4DAA
+	020005 Title            ="Minimum MPH for Highway Spark"
+	020011 DescSize         =0x1
+	020010 Desc             =""
+	020020 Units            ="MPH"
+	020100 Address          =0x24
+	020200 Equation         =X/3.2,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x1937
+	020005 Title            ="Minimum Time at Correct Conditions for Highway Spark"
+	020011 DescSize         =0x1
+	020010 Desc             =""
+	020020 Units            ="Seconds"
+	020100 Address          =0x25
+	020200 Equation         =X,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x5DEE
+	020005 Title            ="Power Enrichment Spark Added"
+	020011 DescSize         =0x1
+	020010 Desc             =""
+	020020 Units            ="*"
+	020100 Address          =0x2A
+	020200 Equation         =X*0.3515625,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x1233
+	020005 Title            ="Minimum MPH for Knock Retard"
+	020011 DescSize         =0x1
+	020010 Desc             =""
+	020020 Units            ="MPH"
+	020100 Address          =0x2B
+	020200 Equation         =X,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x52A6
+	020005 Title            ="Minimum RPM for Knock Retard"
+	020011 DescSize         =0x1
+	020010 Desc             =""
+	020020 Units            ="RPM"
+	020100 Address          =0x2C
+	020200 Equation         =X*12.5,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x4590
+	020005 Title            ="Minimum Coolant Temp for Knock Retard"
+	020011 DescSize         =0x1
+	020010 Desc             =""
+	020020 Units            ="F"
+	020100 Address          =0x2D
+	020200 Equation         =(X*1.35) -40,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x29CD
+	020005 Title            ="Minimum MAP for Burst Knock Retard"
+	020011 DescSize         =0x1
+	020010 Desc             =""
+	020020 Units            ="kPa"
+	020100 Address          =0x2E
+	020200 Equation         =X*.369 +10.354,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x7F7F
+	020005 Title            ="Minimum TPS for Burst Knock Retard"
+	020011 DescSize         =0x1
+	020010 Desc             =""
+	020020 Units            ="%"
+	020100 Address          =0x2F
+	020200 Equation         =X*0.3921568627450980392156862745098,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x2C4
+	020005 Title            ="Minimum Delta TPS for Burst Knock Retard"
+	020011 DescSize         =0x1
+	020010 Desc             =""
+	020020 Units            ="%"
+	020100 Address          =0x30
+	020200 Equation         =X*0.3921568627450980392156862745098,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x676E
+	020005 Title            ="Duration of Burst Knock Retard"
+	020011 DescSize         =0x1
+	020010 Desc             =""
+	020020 Units            ="Seconds"
+	020100 Address          =0x31
+	020200 Equation         =X/80,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x506F
+	020005 Title            ="     Air"
+	020011 DescSize         =0x1
+	020010 Desc             =""
+	020020 Units            =""
+	020100 Address          =0x0
+	020200 Equation         =X,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x34B9
+	020005 Title            ="Maximum RPM to Adjust Barometric at WOT"
+	020011 DescSize         =0x1
+	020010 Desc             =""
+	020020 Units            ="RPM"
+	020100 Address          =0x1F
+	020200 Equation         =X*25,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x30FC
+	020005 Title            ="Minimum TPS for Barometric Read"
+	020011 DescSize         =0x1
+	020010 Desc             =""
+	020020 Units            ="%"
+	020100 Address          =0x20
+	020200 Equation         =X*0.3921568627450980392156862745098,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x5ADB
+	020005 Title            ="Maximum Delta TPS to Allow Barometric Read"
+	020011 DescSize         =0x1
+	020010 Desc             =""
+	020020 Units            =""
+	020100 Address          =0x21
+	020200 Equation         =X*0.3921568627450980392156862745098,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x782B
+	020005 Title            ="     EGR"
+	020011 DescSize         =0x1
+	020010 Desc             =""
+	020020 Units            =""
+	020100 Address          =0x0
+	020200 Equation         =X,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x5948
+	020005 Title            ="Minimum Coolant Temp for EGR"
+	020011 DescSize         =0x78
+	020010 Desc             ="maxing this value essentially disables your EGR, allowing you to remove it and have no effects on your motor, no codes."
+	020020 Units            ="F"
+	020100 Address          =0x1B3
+	020200 Equation         =X*1.35 -40,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x3880
+	020005 Title            ="EGR Enable at or above this TPS"
+	020011 DescSize         =0x1
+	020010 Desc             =""
+	020020 Units            ="%"
+	020100 Address          =0x1B6
+	020200 Equation         =X*0.3921568627450980392156862745098,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x4FBC
+	020005 Title            ="EGR Disable at or below this TPS"
+	020011 DescSize         =0x1
+	020010 Desc             =""
+	020020 Units            ="%"
+	020100 Address          =0x1B7
+	020200 Equation         =X*0.3921568627450980392156862745098,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x5939
+	020005 Title            ="EGR Enable at or above this MAP"
+	020011 DescSize         =0x1
+	020010 Desc             =""
+	020020 Units            ="kPa"
+	020100 Address          =0x1B9
+	020200 Equation         =X*.369+10.354,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x7554
+	020005 Title            ="EGR Disable at or under this MAP"
+	020011 DescSize         =0x1
+	020010 Desc             =""
+	020020 Units            ="kPa"
+	020100 Address          =0x1B8
+	020200 Equation         =X*.369+10.354,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x54F9
+	020005 Title            ="Minimum EGR Duty Cycle to allow EGR On"
+	020011 DescSize         =0x1
+	020010 Desc             =""
+	020020 Units            ="%"
+	020100 Address          =0x1BD
+	020200 Equation         =X*0.3921568627450980392156862745098,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x6A86
+	020005 Title            ="Max TPS to allow EGR On"
+	020011 DescSize         =0x59
+	020010 Desc             ="this can also be used to disable the EGR, just zero it and the EGR never gets requested."
+	020020 Units            ="%"
+	020100 Address          =0x1BF
+	020200 Equation         =X*0.3921568627450980392156862745098,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x3CB7
+	020005 Title            ="     Fuel"
+	020011 DescSize         =0x1
+	020010 Desc             =""
+	020020 Units            =""
+	020100 Address          =0x0
+	020200 Equation         =X,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x5228
+	020005 Title            ="Cold/Warm O2 Closed Loop Timer Threshold"
+	020011 DescSize         =0x1
+	020010 Desc             =""
+	020020 Units            ="F"
+	020100 Address          =0x296
+	020200 Equation         =(X*1.35)-40,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x3AB8
+	020005 Title            ="Warm O2 Closed Loop Timer"
+	020011 DescSize         =0x1
+	020010 Desc             =""
+	020020 Units            ="Seconds"
+	020100 Address          =0x297
+	020200 Equation         =X*.5,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x3470
+	020005 Title            ="Cold O2 Closed Loop Timer"
+	020011 DescSize         =0x1
+	020010 Desc             =""
+	020020 Units            ="Seconds"
+	020100 Address          =0x0
+	020200 Equation         =X*.5,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x566F
+	020005 Title            ="Minimum Coolant Temp for Closed Loop"
+	020011 DescSize         =0x1
+	020010 Desc             =""
+	020020 Units            ="F"
+	020100 Address          =0x299
+	020200 Equation         =X,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x59A4
+	020005 Title            ="Minimum MAP for BLM"
+	020011 DescSize         =0x1
+	020010 Desc             =""
+	020020 Units            ="kPa"
+	020100 Address          =0x29B
+	020200 Equation         =X*.369 +10.354,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x661D
+	020005 Title            ="Maximum MAP for BLM"
+	020011 DescSize         =0x1
+	020010 Desc             =""
+	020020 Units            ="kPa"
+	020100 Address          =0x29C
+	020200 Equation         =X*.369+10.354,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x4014
+	020005 Title            ="Maximum RPM for BLM"
+	020011 DescSize         =0x1
+	020010 Desc             =""
+	020020 Units            ="RPM"
+	020100 Address          =0x29D
+	020200 Equation         =X*25,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x34DD
+	020005 Title            ="Maximum MPH for Open Loop Idle"
+	020011 DescSize         =0x1
+	020010 Desc             =""
+	020020 Units            ="MPH"
+	020100 Address          =0x29E
+	020200 Equation         =X,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x6C19
+	020005 Title            ="Maximum TPS for Open Loop Idle"
+	020011 DescSize         =0x1
+	020010 Desc             =""
+	020020 Units            ="%"
+	020100 Address          =0x29F
+	020200 Equation         =X*0.3921568627450980392156862745098,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x3F7E
+	020005 Title            ="RPM Above Which Open Loop Idle is Forced Off"
+	020011 DescSize         =0x1
+	020010 Desc             =""
+	020020 Units            ="RPM"
+	020100 Address          =0x2A0
+	020200 Equation         =X*25,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x188
+	020005 Title            ="RPM Below Which Open Loop Idle is Allowed"
+	020011 DescSize         =0x1
+	020010 Desc             =""
+	020020 Units            ="RPM"
+	020100 Address          =0x2A1
+	020200 Equation         =X*25,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x1D7D
+	020005 Title            ="Open Loop Idle AFR Enable Delay"
+	020011 DescSize         =0x1
+	020010 Desc             =""
+	020020 Units            ="Seconds"
+	020100 Address          =0x2A2
+	020200 Equation         =X*.05,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x69DE
+	020005 Title            ="Maximum Open Loop Idle AFR"
+	020011 DescSize         =0x1
+	020010 Desc             =""
+	020020 Units            =""
+	020100 Address          =0x2A4
+	020200 Equation         =X*.1,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x3F5E
+	020005 Title            ="Minimum Open Loop Idle AFR"
+	020011 DescSize         =0x1
+	020010 Desc             =""
+	020020 Units            =""
+	020100 Address          =0x2A9
+	020200 Equation         =X*.1,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x348D
+	020005 Title            ="Maximum Open Loop AFR"
+	020011 DescSize         =0x1
+	020010 Desc             =""
+	020020 Units            =""
+	020100 Address          =0x2A8
+	020200 Equation         =X*.1,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x7DDE
+	020005 Title            ="Stoichiometric AFR"
+	020011 DescSize         =0x1
+	020010 Desc             =""
+	020020 Units            =""
+	020100 Address          =0x2AA
+	020200 Equation         =X*.1,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x7C5C
+	020005 Title            ="Maximum AFR"
+	020011 DescSize         =0x1
+	020010 Desc             =""
+	020020 Units            =""
+	020100 Address          =0x2C5
+	020200 Equation         =X*.1,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x2160
+	020005 Title            ="Clear Flood AFR"
+	020011 DescSize         =0x1
+	020010 Desc             =""
+	020020 Units            =""
+	020100 Address          =0x2C7
+	020200 Equation         =X*.1,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x468C
+	020005 Title            ="Choke AFR"
+	020011 DescSize         =0x1
+	020010 Desc             =""
+	020020 Units            =""
+	020100 Address          =0x2D1
+	020200 Equation         =X*.1,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x6D2D
+	020005 Title            ="BLM Update Rate"
+	020011 DescSize         =0x1
+	020010 Desc             =""
+	020020 Units            ="mSec"
+	020100 Address          =0x2AB
+	020200 Equation         =(X*20)+1,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x39D4
+	020005 Title            ="Low BLM Cell Boundry - RPM"
+	020011 DescSize         =0x1
+	020010 Desc             =""
+	020020 Units            ="RPM"
+	020100 Address          =0x2AC
+	020200 Equation         =X*25,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x3075
+	020005 Title            ="Middle BLM Cell Boundries - RPM"
+	020011 DescSize         =0x1
+	020010 Desc             =""
+	020020 Units            ="RPM"
+	020100 Address          =0x2AD
+	020200 Equation         =X*25,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x519F
+	020005 Title            ="High BLM Cell Boundry - RPM"
+	020011 DescSize         =0x1
+	020010 Desc             =""
+	020020 Units            ="RPM"
+	020100 Address          =0x2AE
+	020200 Equation         =X*25,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x386F
+	020005 Title            ="Low BLM Cell Boundry - MAP"
+	020011 DescSize         =0x1
+	020010 Desc             =""
+	020020 Units            ="kPa"
+	020100 Address          =0x2AF
+	020200 Equation         =X*.369+10.354,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x438
+	020005 Title            ="Middle BLM Cell Boundries - MAP"
+	020011 DescSize         =0x1
+	020010 Desc             =""
+	020020 Units            ="kPa"
+	020100 Address          =0x2B0
+	020200 Equation         =X*.369+10.354,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0xEF3
+	020005 Title            ="High BLM Cell Boundy - MAP"
+	020011 DescSize         =0x1
+	020010 Desc             =""
+	020020 Units            ="kPa"
+	020100 Address          =0x2B1
+	020200 Equation         =X*.369+10.354,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x4DF7
+	020005 Title            ="BPW Constant for EGR Off"
+	020011 DescSize         =0x17D
+	020010 Desc             ="the table \"BPW Constant for EGR On\" is used any time EGR is on, and when in transition, the difference between these values are smoothed. the 5.7L uses a 61.2lb/hr injector setup and the constant is 135. the 7.4L uses a 80 lb/hr setup and the constant is 134. the 4.3 uses 45.6lb/hr injectors and the constant is 181. larger injectors on the same engine requires a smaller number."
+	020020 Units            =""
+	020100 Address          =0x2B4
+	020200 Equation         =X,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0xEB6
+	020005 Title            ="INT Window"
+	020011 DescSize         =0x1
+	020010 Desc             =""
+	020020 Units            =""
+	020100 Address          =0x2B7
+	020200 Equation         =X,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x6A09
+	020005 Title            ="INT Maximum"
+	020011 DescSize         =0x1
+	020010 Desc             =""
+	020020 Units            =""
+	020100 Address          =0x2C4
+	020200 Equation         =X,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x36CC
+	020005 Title            ="INT Minimum"
+	020011 DescSize         =0x1
+	020010 Desc             =""
+	020020 Units            =""
+	020100 Address          =0x2C3
+	020200 Equation         =X,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x6091
+	020005 Title            ="Maximum BLM"
+	020011 DescSize         =0x1
+	020010 Desc             =""
+	020020 Units            =""
+	020100 Address          =0x2B9
+	020200 Equation         =X,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x4F28
+	020005 Title            ="Minimum BLM"
+	020011 DescSize         =0x1
+	020010 Desc             =""
+	020020 Units            =""
+	020100 Address          =0x2BA
+	020200 Equation         =X,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x1E1D
+	020005 Title            ="Maximum BLM at Startup"
+	020011 DescSize         =0x1
+	020010 Desc             =""
+	020020 Units            =""
+	020100 Address          =0x2BB
+	020200 Equation         =X,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x7471
+	020005 Title            ="Minimum BLM at Startup"
+	020011 DescSize         =0x1
+	020010 Desc             =""
+	020020 Units            =""
+	020100 Address          =0x2BC
+	020200 Equation         =X,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x5D70
+	020005 Title            ="Closed Loop Window Upper"
+	020011 DescSize         =0x1
+	020010 Desc             =""
+	020020 Units            ="mV"
+	020100 Address          =0x2BD
+	020200 Equation         =X/230.4,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x7621
+	020005 Title            ="Closed Loop Window Low"
+	020011 DescSize         =0x1
+	020010 Desc             =""
+	020020 Units            ="mV"
+	020100 Address          =0x2BE
+	020200 Equation         =X/230.4,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x6A0A
+	020005 Title            ="Initial Closed Loop Window Upper"
+	020011 DescSize         =0x1
+	020010 Desc             =""
+	020020 Units            ="mV"
+	020100 Address          =0x2BF
+	020200 Equation         =X/230.4,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0xD86
+	020005 Title            ="Initial Closed Loop Lower"
+	020011 DescSize         =0x1
+	020010 Desc             =""
+	020020 Units            ="mV"
+	020100 Address          =0x2C0
+	020200 Equation         =X/230.4,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x21A5
+	020005 Title            ="TPS Needed to enter Clear Flood Mode"
+	020011 DescSize         =0x1
+	020010 Desc             =""
+	020020 Units            ="%"
+	020100 Address          =0x2C6
+	020200 Equation         =X*0.3921568627450980392156862745098,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x7CE4
+	020005 Title            ="Minimum Coolant Temp for PE Delay"
+	020011 DescSize         =0x1
+	020010 Desc             =""
+	020020 Units            ="F"
+	020100 Address          =0x2C9
+	020200 Equation         =X*1.35-40,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x2DFE
+	020005 Title            ="Maximum Coolant Temp for PE Delay"
+	020011 DescSize         =0x1
+	020010 Desc             =""
+	020020 Units            ="F"
+	020100 Address          =0x2CA
+	020200 Equation         =X*1.35-40,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x1E07
+	020005 Title            ="RPM Below Which PE is Delayed"
+	020011 DescSize         =0x1
+	020010 Desc             =""
+	020020 Units            ="RPM"
+	020100 Address          =0x2CC
+	020200 Equation         =X*25,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x4F8
+	020005 Title            ="Maximum TPS for PE Delay"
+	020011 DescSize         =0x1
+	020010 Desc             =""
+	020020 Units            ="%"
+	020100 Address          =0x2CD
+	020200 Equation         =X*0.3921568627450980392156862745098,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x4A0A
+	020005 Title            ="PE Delay Timer"
+	020011 DescSize         =0x1
+	020010 Desc             =""
+	020020 Units            ="Seconds"
+	020100 Address          =0x2CE
+	020200 Equation         =X*.05,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0xEAB
+	020005 Title            ="Minimum RPM for PE"
+	020011 DescSize         =0x1
+	020010 Desc             =""
+	020020 Units            ="RPM"
+	020100 Address          =0x2D0
+	020200 Equation         =X*25,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x7ED1
+	020005 Title            ="Choke AFR Decay Time"
+	020011 DescSize         =0x1
+	020010 Desc             =""
+	020020 Units            ="Seconds"
+	020100 Address          =0x2D2
+	020200 Equation         =X/5,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x7E5D
+	020005 Title            ="Minimum BPW"
+	020011 DescSize         =0x1
+	020010 Desc             =""
+	020020 Units            ="mSec"
+	020050 SizeInBits       =0x10
+	020100 Address          =0x2D8
+	020200 Equation         =X/65.536,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x28F0
+	020005 Title            ="Injector Bias"
+	020011 DescSize         =0x4B
+	020010 Desc             ="added to the total BPW. used to compensate for injectors that open slowly."
+	020020 Units            ="mSec"
+	020050 SizeInBits       =0x10
+	020100 Address          =0x2DA
+	020200 Equation         =X/65.536,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x5C79
+	020005 Title            ="Maximum Asynchronous BPW"
+	020011 DescSize         =0x4A
+	020010 Desc             ="any pulsewidth above this is ignored for aysnc and added to another pulse"
+	020020 Units            ="mSec"
+	020050 SizeInBits       =0x10
+	020100 Address          =0x2DC
+	020200 Equation         =X/65.536,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x6C8A
+	020005 Title            ="Minimum Asynchronous BPW"
+	020011 DescSize         =0x46
+	020010 Desc             ="any pulse width lower than this is ignored and sent in another pulse."
+	020020 Units            ="mSec"
+	020050 SizeInBits       =0x10
+	020100 Address          =0x2DE
+	020200 Equation         =X/65.536,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x1C53
+	020005 Title            ="Allow DFCO above this MPH"
+	020011 DescSize         =0x1
+	020010 Desc             =""
+	020020 Units            ="MPH"
+	020100 Address          =0x2E5
+	020200 Equation         =X,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x2CDC
+	020005 Title            ="Disable DFCO under this MPH"
+	020011 DescSize         =0x1
+	020010 Desc             =""
+	020020 Units            ="MPH"
+	020100 Address          =0x2E6
+	020200 Equation         =X,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x12A9
+	020005 Title            ="Allow DFCO above this RPM"
+	020011 DescSize         =0x1
+	020010 Desc             =""
+	020020 Units            ="RPM"
+	020100 Address          =0x2E3
+	020200 Equation         =X*25,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x209C
+	020005 Title            ="Disable DFCO under this RPM"
+	020011 DescSize         =0x1
+	020010 Desc             =""
+	020020 Units            ="RPM"
+	020100 Address          =0x2E4
+	020200 Equation         =X*25,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x1188
+	020005 Title            ="Allow DFCO above this MAP"
+	020011 DescSize         =0x1
+	020010 Desc             =""
+	020020 Units            ="kPa"
+	020100 Address          =0x2E7
+	020200 Equation         =X*.369+10.354,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x6AB4
+	020005 Title            ="Disable DFCO under this MAP"
+	020011 DescSize         =0x1
+	020010 Desc             =""
+	020020 Units            ="kpa"
+	020100 Address          =0x2E8
+	020200 Equation         =X*.369+10.354,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x373D
+	020005 Title            ="Fuel Pulse when exiting DFCO"
+	020011 DescSize         =0x1
+	020010 Desc             =""
+	020020 Units            ="mSec"
+	020050 SizeInBits       =0x10
+	020100 Address          =0x2EB
+	020200 Equation         =X/65.536,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x7343
+	020005 Title            ="Minimum Time in Correct Conditions to allow DFCO"
+	020011 DescSize         =0x1
+	020010 Desc             =""
+	020020 Units            ="Seconds"
+	020100 Address          =0x2ED
+	020200 Equation         =X/80,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x4A0
+	020005 Title            ="Maximum TPS for DFCO"
+	020011 DescSize         =0x1
+	020010 Desc             =""
+	020020 Units            ="%"
+	020100 Address          =0x2F0
+	020200 Equation         =X*0.3921568627450980392156862745098,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x5074
+	020005 Title            ="Minimum Coolant Temp for DFCO"
+	020011 DescSize         =0x1
+	020010 Desc             =""
+	020020 Units            ="F"
+	020100 Address          =0x2F2
+	020200 Equation         =X*1.35-40,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x63E7
+	020005 Title            ="     AIR"
+	020011 DescSize         =0x1
+	020010 Desc             =""
+	020020 Units            =""
+	020100 Address          =0x0
+	020200 Equation         =X,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x4B95
+	020005 Title            ="Minimum Temp for AIR"
+	020011 DescSize         =0x1
+	020010 Desc             =""
+	020020 Units            ="F"
+	020100 Address          =0x560
+	020200 Equation         =X*1.35-40,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x7D1B
+	020005 Title            ="     TCC"
+	020011 DescSize         =0x1
+	020010 Desc             =""
+	020020 Units            =""
+	020100 Address          =0x0
+	020200 Equation         =X,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x4B84
+	020005 Title            ="Minimum Temp for TCC Lock"
+	020011 DescSize         =0x1
+	020010 Desc             =""
+	020020 Units            ="F"
+	020100 Address          =0x564
+	020200 Equation         =X*1.35-40,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x5B9B
+	020005 Title            ="TCC Load Parameter Selection"
+	020011 DescSize         =0x1D
+	020010 Desc             ="0 = Vacuum, 1 = MAP, 3 = TPS"
+	020020 Units            =""
+	020100 Address          =0x565
+	020200 Equation         =X,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0xE1D
+	020005 Title            ="Lock Delay After 4-3 Shift"
+	020011 DescSize         =0x1
+	020010 Desc             =""
+	020020 Units            ="Seconds"
+	020100 Address          =0x56C
+	020200 Equation         =X*.1,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x2B33
+	020005 Title            ="Lock Delay when all Conditions are met"
+	020011 DescSize         =0x1
+	020010 Desc             =""
+	020020 Units            ="Seconds"
+	020100 Address          =0x56D
+	020200 Equation         =X*.1,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x20EF
+	020005 Title            ="Speed at which TCC will always be Locked"
+	020011 DescSize         =0x1
+	020010 Desc             =""
+	020020 Units            ="MPH"
+	020100 Address          =0x56E
+	020200 Equation         =X,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x40BA
+	020005 Title            ="3rd Gear TCC Lock Speed"
+	020011 DescSize         =0x1
+	020010 Desc             =""
+	020020 Units            ="MPH"
+	020100 Address          =0x56F
+	020200 Equation         =X,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x74D6
+	020005 Title            ="3rd Gear TCC Unlock Speed"
+	020011 DescSize         =0x1
+	020010 Desc             =""
+	020020 Units            ="MPH"
+	020100 Address          =0x571
+	020200 Equation         =X,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x28A0
+	020005 Title            ="4th Gear TCC Lock Speed"
+	020011 DescSize         =0x1
+	020010 Desc             =""
+	020020 Units            ="MPH"
+	020100 Address          =0x589
+	020200 Equation         =X,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x2D79
+	020005 Title            ="4th Gear Unlock Speed"
+	020011 DescSize         =0x1
+	020010 Desc             =""
+	020020 Units            ="MPH"
+	020100 Address          =0x58B
+	020200 Equation         =X,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x6B3D
+	020005 Title            ="     Shift Light"
+	020011 DescSize         =0x1
+	020010 Desc             =""
+	020020 Units            =""
+	020100 Address          =0x0
+	020200 Equation         =X,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x7426
+	020005 Title            ="1st Gear Upper N/V"
+	020011 DescSize         =0x32
+	020010 Desc             ="this MAY also be used for 5a3, not entirely sure."
+	020020 Units            =""
+	020100 Address          =0x5A4
+	020200 Equation         =X,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x1589
+	020005 Title            ="1st Gear Lower N/V"
+	020011 DescSize         =0x1
+	020010 Desc             =""
+	020020 Units            =""
+	020100 Address          =0x5A8
+	020200 Equation         =X,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x51DC
+	020005 Title            ="2nd Gear Upper N/V"
+	020011 DescSize         =0x1
+	020010 Desc             =""
+	020020 Units            =""
+	020100 Address          =0x5A5
+	020200 Equation         =X,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x7E28
+	020005 Title            ="2nd Gear Lower N/V"
+	020011 DescSize         =0x1
+	020010 Desc             =""
+	020020 Units            =""
+	020100 Address          =0x5A9
+	020200 Equation         =X,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x2C0C
+	020005 Title            ="3rd Gear Upper N/V"
+	020011 DescSize         =0x1
+	020010 Desc             =""
+	020020 Units            =""
+	020100 Address          =0x5A6
+	020200 Equation         =X,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0xA37
+	020005 Title            ="3rd Gear Lower N/V"
+	020011 DescSize         =0x1
+	020010 Desc             =""
+	020020 Units            =""
+	020100 Address          =0x5AA
+	020200 Equation         =X,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x5092
+	020005 Title            ="4th Gear Upper N/V"
+	020011 DescSize         =0x1
+	020010 Desc             =""
+	020020 Units            =""
+	020100 Address          =0x5A7
+	020200 Equation         =X,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x2199
+	020005 Title            ="4th Gear Lower N/V"
+	020011 DescSize         =0x1
+	020010 Desc             =""
+	020020 Units            =""
+	020100 Address          =0x5AB
+	020200 Equation         =X,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x2924
+	020005 Title            ="Minimum RPM for Shift Light 1st"
+	020011 DescSize         =0x1
+	020010 Desc             =""
+	020020 Units            ="RPM"
+	020100 Address          =0x5AC
+	020200 Equation         =X*25,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x6872
+	020005 Title            ="Minimum RPM for Shift Light 2nd"
+	020011 DescSize         =0x1
+	020010 Desc             =""
+	020020 Units            ="RPM"
+	020100 Address          =0x5AD
+	020200 Equation         =X*25,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x3E52
+	020005 Title            ="Minimum RPM for Shift Light 3rd"
+	020011 DescSize         =0x1
+	020010 Desc             =""
+	020020 Units            ="RPM"
+	020100 Address          =0x5AE
+	020200 Equation         =X*25,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x7E1B
+	020005 Title            ="Minimum RPM for Shift Light 4th"
+	020011 DescSize         =0x1
+	020010 Desc             =""
+	020020 Units            =""
+	020100 Address          =0x5AF
+	020200 Equation         =X*25,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x3924
+	020005 Title            ="Multiplier for TPS in 1st"
+	020011 DescSize         =0x1
+	020010 Desc             =""
+	020020 Units            =""
+	020100 Address          =0x5B0
+	020200 Equation         =X/128,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x6E24
+	020005 Title            ="Multiplier for TPS in 2nd"
+	020011 DescSize         =0x1
+	020010 Desc             =""
+	020020 Units            =""
+	020100 Address          =0x5B1
+	020200 Equation         =X/128,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x7071
+	020005 Title            ="Multiplier for TPS in 3rd"
+	020011 DescSize         =0x1
+	020010 Desc             =""
+	020020 Units            =""
+	020100 Address          =0x5B2
+	020200 Equation         =X/128,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x73BC
+	020005 Title            ="Multiplier for TPS in 4th"
+	020011 DescSize         =0x1
+	020010 Desc             =""
+	020020 Units            =""
+	020100 Address          =0x5B3
+	020200 Equation         =X/128,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x562C
+	020005 Title            ="Minimum Coolant Temp for Shift Light in Lower Gears"
+	020011 DescSize         =0x1
+	020010 Desc             =""
+	020020 Units            ="F"
+	020100 Address          =0x5B4
+	020200 Equation         =(X*1.35)-40,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x6DE3
+	020005 Title            ="RPM above which Shift Light is Always On"
+	020011 DescSize         =0x1
+	020010 Desc             =""
+	020020 Units            ="RPM"
+	020100 Address          =0x5B7
+	020200 Equation         =X*25,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x5102
+	020005 Title            ="1st Gear Light On Delay"
+	020011 DescSize         =0x29
+	020010 Desc             ="probably applies to all gears under 4th."
+	020020 Units            ="Seconds"
+	020100 Address          =0x5B8
+	020200 Equation         =X*.1,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x7617
+	020005 Title            ="4th Gear Light On Delay"
+	020011 DescSize         =0x1
+	020010 Desc             =""
+	020020 Units            ="Seconds"
+	020100 Address          =0x5B9
+	020200 Equation         =X*.1,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x28F5
+	020005 Title            ="     IAC"
+	020011 DescSize         =0x1
+	020010 Desc             =""
+	020020 Units            =""
+	020100 Address          =0x0
+	020200 Equation         =X,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x27E0
+	020005 Title            ="Minimum IAC Position after Power Removal"
+	020011 DescSize         =0x45
+	020010 Desc             ="this may be the key to never having to do an idle relearn procedure."
+	020020 Units            ="Steps"
+	020100 Address          =0x5C1
+	020200 Equation         =X,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x4DAB
+	020005 Title            ="Motor Park Position"
+	020011 DescSize         =0x1
+	020010 Desc             =""
+	020020 Units            ="Steps"
+	020100 Address          =0x5C2
+	020200 Equation         =X,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x5C51
+	020005 Title            ="Idle Speed Deadband"
+	020011 DescSize         =0x1
+	020010 Desc             =""
+	020020 Units            ="RPM"
+	020100 Address          =0x5CD
+	020200 Equation         =X*12.5,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x2F8
+	020005 Title            ="ALDL Speed"
+	020011 DescSize         =0x37
+	020010 Desc             ="This is the commanded idle speed while in ALDL mode..."
+	020020 Units            ="RPM"
+	020100 Address          =0x5DB
+	020200 Equation         =X*12.5,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x7046
+	020005 Title            ="Idle Speed Increase Due to A/C"
+	020011 DescSize         =0x1
+	020010 Desc             =""
+	020020 Units            ="RPM"
+	020100 Address          =0x5E3
+	020200 Equation         =X*12.5,TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x18A6
+	020005 Title            ="Maximum IAC Position"
+	020011 DescSize         =0x1
+	020010 Desc             =""
+	020020 Units            ="Steps"
+	020100 Address          =0x5DE
+	020200 Equation         =X,TH|0|0|0|0|
+%%END%%
+
+%%FLAG%%
+	000002 UniqueID         =0x6D10
+	030005 Title            ="     Air/Fuel Options (X=Yes unless specified otherwise)"
+	030011 DescSize         =0x1
+	030010 Desc             =""
+	030100 Address          =0x0
+	030200 BitNumber        =0x0
+%%END%%
+
+%%FLAG%%
+	000002 UniqueID         =0x4D23
+	030005 Title            ="1 Pass EGR Diagnostic"
+	030011 DescSize         =0x1
+	030010 Desc             =""
+	030100 Address          =0x5
+	030200 BitNumber        =0x7
+%%END%%
+
+%%FLAG%%
+	000002 UniqueID         =0x57B4
+	030005 Title            ="Inverse EGR Duty Cycle"
+	030011 DescSize         =0x40
+	030010 Desc             ="As far as i know, no factory BIN came with this option checked."
+	030100 Address          =0x5
+	030200 BitNumber        =0x4
+%%END%%
+
+%%FLAG%%
+	000002 UniqueID         =0xB2C
+	030005 Title            ="EGR Type (X=Backpressure, 0=EVRV)"
+	030011 DescSize         =0x49
+	030010 Desc             ="BP operates on a 32Hz signal, while the EVRV operates on a 128Hz signal."
+	030100 Address          =0x5
+	030200 BitNumber        =0x3
+%%END%%
+
+%%FLAG%%
+	000002 UniqueID         =0x72E5
+	030005 Title            ="GRID Data"
+	030011 DescSize         =0x1
+	030010 Desc             =""
+	030100 Address          =0x5
+	030200 BitNumber        =0x1
+%%END%%
+
+%%FLAG%%
+	000002 UniqueID         =0x22E0
+	030005 Title            ="Use Delta TPS for Accel Enrich"
+	030011 DescSize         =0x40
+	030010 Desc             ="i assume if this is unchecked, Delta MAP would be used instead."
+	030100 Address          =0x6
+	030200 BitNumber        =0x7
+%%END%%
+
+%%FLAG%%
+	000002 UniqueID         =0x7EEF
+	030005 Title            ="Motor Reset Due to Restart (X=No)"
+	030011 DescSize         =0x2D
+	030010 Desc             ="probably refering to the IAC reset function."
+	030100 Address          =0x6
+	030200 BitNumber        =0x6
+%%END%%
+
+%%FLAG%%
+	000002 UniqueID         =0xFC
+	030005 Title            ="Reset INT on BLM Cell Change"
+	030011 DescSize         =0x2F
+	030010 Desc             ="will reset the INT to 128 on each Cell Change."
+	030100 Address          =0x6
+	030200 BitNumber        =0x5
+%%END%%
+
+%%FLAG%%
+	000002 UniqueID         =0x7F9D
+	030005 Title            ="Reset INT on AE"
+	030011 DescSize         =0x3D
+	030010 Desc             ="will reset the INT every time the vehicle goes into AE mode."
+	030100 Address          =0x6
+	030200 BitNumber        =0x4
+%%END%%
+
+%%FLAG%%
+	000002 UniqueID         =0x7CCF
+	030005 Title            ="Go Open Loop When in DFCO"
+	030011 DescSize         =0x33
+	030010 Desc             ="the ECM will disregard the O2 sensor when in DFCO."
+	030100 Address          =0x6
+	030200 BitNumber        =0x3
+%%END%%
+
+%%FLAG%%
+	000002 UniqueID         =0x1096
+	030005 Title            ="TCC Load Limit (X=RPM,0=MPH)"
+	030011 DescSize         =0xF2
+	030010 Desc             ="depending on the option selected, the ECM will engage/disengage the TCC based on either of those two values. i highly suggest using MPH since thats what this XDF was created for. RPM seems to only be used in manual transmission applications."
+	030100 Address          =0x6
+	030200 BitNumber        =0x1
+%%END%%
+
+%%FLAG%%
+	000002 UniqueID         =0x2EED
+	030005 Title            ="Burst Knock Retard"
+	030011 DescSize         =0x3E
+	030010 Desc             ="burst knock is knock detected below the knock temp threshold."
+	030100 Address          =0x6
+	030200 BitNumber        =0x0
+%%END%%
+
+%%FLAG%%
+	000002 UniqueID         =0x7A12
+	030005 Title            ="Transmission Option (X=Manual)"
+	030011 DescSize         =0x1
+	030010 Desc             =""
+	030100 Address          =0x7
+	030200 BitNumber        =0x7
+%%END%%
+
+%%FLAG%%
+	000002 UniqueID         =0x7DD6
+	030005 Title            ="High Gear Switch Polarity (X= High)"
+	030011 DescSize         =0x2E
+	030010 Desc             ="quoting from the hack: 1 = Hi Sig, 0 = Lo Sig"
+	030100 Address          =0x7
+	030200 BitNumber        =0x5
+%%END%%
+
+%%FLAG%%
+	000002 UniqueID         =0x5FB6
+	030005 Title            ="Unlock TCC When in DFCO"
+	030011 DescSize         =0x1
+	030010 Desc             =""
+	030100 Address          =0x7
+	030200 BitNumber        =0x2
+%%END%%
+
+%%FLAG%%
+	000002 UniqueID         =0x25D1
+	030005 Title            ="Test High Gear in Highway Mode Spark"
+	030011 DescSize         =0x1
+	030010 Desc             =""
+	030100 Address          =0x7
+	030200 BitNumber        =0x1
+%%END%%
+
+%%FLAG%%
+	000002 UniqueID         =0x7EF0
+	030005 Title            ="     Codes"
+	030011 DescSize         =0x1
+	030010 Desc             =""
+	030100 Address          =0x0
+	030200 BitNumber        =0x0
+%%END%%
+
+%%FLAG%%
+	000002 UniqueID         =0x5BB0
+	030005 Title            ="12 Crank Sensor/System Check"
+	030011 DescSize         =0x1
+	030010 Desc             =""
+	030100 Address          =0x50D
+	030200 BitNumber        =0x7
+%%END%%
+
+%%FLAG%%
+	000002 UniqueID         =0x2CF7
+	030005 Title            ="13 O2 Sensor"
+	030011 DescSize         =0x1
+	030010 Desc             =""
+	030100 Address          =0x50D
+	030200 BitNumber        =0x6
+%%END%%
+
+%%FLAG%%
+	000002 UniqueID         =0x257C
+	030005 Title            ="14 Coolant High"
+	030011 DescSize         =0x1
+	030010 Desc             =""
+	030100 Address          =0x50D
+	030200 BitNumber        =0x5
+%%END%%
+
+%%FLAG%%
+	000002 UniqueID         =0x655
+	030005 Title            ="15 Coolant Low"
+	030011 DescSize         =0x1
+	030010 Desc             =""
+	030100 Address          =0x50D
+	030200 BitNumber        =0x4
+%%END%%
+
+%%FLAG%%
+	000002 UniqueID         =0x7B79
+	030005 Title            ="21 TPS High"
+	030011 DescSize         =0x1
+	030010 Desc             =""
+	030100 Address          =0x50D
+	030200 BitNumber        =0x3
+%%END%%
+
+%%FLAG%%
+	000002 UniqueID         =0x6B68
+	030005 Title            ="22 TPS Low"
+	030011 DescSize         =0x1
+	030010 Desc             =""
+	030100 Address          =0x50D
+	030200 BitNumber        =0x2
+%%END%%
+
+%%FLAG%%
+	000002 UniqueID         =0x2C5E
+	030005 Title            ="23 MAT Low"
+	030011 DescSize         =0x1
+	030010 Desc             =""
+	030100 Address          =0x50D
+	030200 BitNumber        =0x1
+%%END%%
+
+%%FLAG%%
+	000002 UniqueID         =0x442
+	030005 Title            ="24 VSS"
+	030011 DescSize         =0x1
+	030010 Desc             =""
+	030100 Address          =0x50D
+	030200 BitNumber        =0x0
+%%END%%
+
+%%FLAG%%
+	000002 UniqueID         =0x1969
+	030005 Title            ="25 MAT High"
+	030011 DescSize         =0x1
+	030010 Desc             =""
+	030100 Address          =0x50E
+	030200 BitNumber        =0x7
+%%END%%
+
+%%FLAG%%
+	000002 UniqueID         =0x6DAD
+	030005 Title            ="32 EGR"
+	030011 DescSize         =0x1
+	030010 Desc             =""
+	030100 Address          =0x50E
+	030200 BitNumber        =0x5
+%%END%%
+
+%%FLAG%%
+	000002 UniqueID         =0x1C21
+	030005 Title            ="33 MAP High"
+	030011 DescSize         =0x1
+	030010 Desc             =""
+	030100 Address          =0x50E
+	030200 BitNumber        =0x4
+%%END%%
+
+%%FLAG%%
+	000002 UniqueID         =0x2E54
+	030005 Title            ="34 MAP Low"
+	030011 DescSize         =0x1
+	030010 Desc             =""
+	030100 Address          =0x50E
+	030200 BitNumber        =0x3
+%%END%%
+
+%%FLAG%%
+	000002 UniqueID         =0x6495
+	030005 Title            ="35 IAC"
+	030011 DescSize         =0x1
+	030010 Desc             =""
+	030100 Address          =0x50E
+	030200 BitNumber        =0x2
+%%END%%
+
+%%FLAG%%
+	000002 UniqueID         =0x490
+	030005 Title            ="41 No DRPs"
+	030011 DescSize         =0x1
+	030010 Desc             =""
+	030100 Address          =0x50E
+	030200 BitNumber        =0x1
+%%END%%
+
+%%FLAG%%
+	000002 UniqueID         =0x45B8
+	030005 Title            ="42 Knock Sensor"
+	030011 DescSize         =0x1
+	030010 Desc             =""
+	030100 Address          =0x50E
+	030200 BitNumber        =0x0
+%%END%%
+
+%%FLAG%%
+	000002 UniqueID         =0x17B9
+	030005 Title            ="43 ESC"
+	030011 DescSize         =0x1
+	030010 Desc             =""
+	030100 Address          =0x50F
+	030200 BitNumber        =0x7
+%%END%%
+
+%%FLAG%%
+	000002 UniqueID         =0x19CC
+	030005 Title            ="44 O2 Lean"
+	030011 DescSize         =0x1
+	030010 Desc             =""
+	030100 Address          =0x50F
+	030200 BitNumber        =0x6
+%%END%%
+
+%%FLAG%%
+	000002 UniqueID         =0x7967
+	030005 Title            ="45 O2 Rich"
+	030011 DescSize         =0x1
+	030010 Desc             =""
+	030100 Address          =0x50F
+	030200 BitNumber        =0x5
+%%END%%
+
+%%FLAG%%
+	000002 UniqueID         =0xDF2
+	030005 Title            ="55 ADU"
+	030011 DescSize         =0x1
+	030010 Desc             =""
+	030100 Address          =0x50F
+	030200 BitNumber        =0x0
+%%END%%
+
+%%TABLE%%
+	000002 UniqueID         =0x1A19
+	040005 Title            ="     Spark"
+	040011 DescSize         =0x1
+	040010 Desc             =""
+	040100 Address          =0x0
+	040200 ZEq              =X,TH|0|0|0|0|
+	040203 XOutType         =0x4
+	040304 YOutType         =0x4
+	040230 RangeLow         =0.0000
+	040240 RangeHigh        =255.0000
+	040300 Rows             =0x1
+	040305 Cols             =0x1
+	040320 XUnits           =""
+	040325 YUnits           =""
+	040330 ZUnits           =""
+	040350 XLabels          =
+	040352 XLabelType       =0x4
+	040354 XEq              =X,TH|0|0|0|0|
+	040360 YLabels          =
+	040362 YLabelType       =0x4
+	040364 YEq              =X,TH|0|0|0|0|
+	040660 XAxisMin         =1000.000000
+	040670 XAxisMax         =1000.000000
+	040760 YAxisMin         =1000.000000
+	040770 YAxisMax         =1000.000000
+%%END%%
+
+%%TABLE%%
+	000002 UniqueID         =0xD14
+	040005 Title            ="Main Spark Advance"
+	040011 DescSize         =0x1
+	040010 Desc             =""
+	040100 Address          =0x35
+	040200 ZEq              =X*0.3515625,TH|0|0|0|0|
+	040203 XOutType         =0x4
+	040304 YOutType         =0x4
+	040230 RangeLow         =0.0000
+	040240 RangeHigh        =255.0000
+	040300 Rows             =0xE
+	040305 Cols             =0xF
+	040320 XUnits           ="kPa"
+	040325 YUnits           ="RPM"
+	040330 ZUnits           =""
+	040350 XLabels          =30,35,40,45,50,55,60,65,70,75,80,85,90,95,100
+	040352 XLabelType       =0x4
+	040354 XEq              =X,TH|0|0|0|0|
+	040360 YLabels          =400,600,800,1000,1200,1400,1600,1800,2000,2200,2400,2800,3200,3600
+	040362 YLabelType       =0x4
+	040364 YEq              =X,TH|0|0|0|0|
+	040660 XAxisMin         =1000.000000
+	040670 XAxisMax         =1000.000000
+	040760 YAxisMin         =1000.000000
+	040770 YAxisMax         =1000.000000
+%%END%%
+
+%%TABLE%%
+	000002 UniqueID         =0x54AE
+	040005 Title            ="Coolant Temp Spark Advance Correction"
+	040011 DescSize         =0xB6
+	040010 Desc             ="colder engines can run more advance without detonation. that is the purpose of this table. the \"cold spark advance bias\" affects this table and is compensated for in the conversion."
+	040100 Address          =0x10A
+	040200 ZEq              =X*0.3515625 - y,TH|0|0|0|0|,OB|28EF|0|0|0|
+	040203 XOutType         =0x4
+	040304 YOutType         =0x4
+	040230 RangeLow         =0.0000
+	040240 RangeHigh        =255.0000
+	040300 Rows             =0xC
+	040305 Cols             =0x5
+	040320 XUnits           ="kPa"
+	040325 YUnits           ="F"
+	040330 ZUnits           =""
+	040350 XLabels          =60,70,80,90,100
+	040352 XLabelType       =0x4
+	040354 XEq              =X,TH|0|0|0|0|
+	040360 YLabels          =41,59,77,95,113,131,149,167,185,203,221,239
+	040362 YLabelType       =0x4
+	040364 YEq              =X,TH|0|0|0|0|
+	040660 XAxisMin         =1000.000000
+	040670 XAxisMax         =1000.000000
+	040760 YAxisMin         =1000.000000
+	040770 YAxisMax         =1000.000000
+%%END%%
+
+%%TABLE%%
+	000002 UniqueID         =0x7B3D
+	040005 Title            ="EGR On Spark Advance Correction"
+	040011 DescSize         =0x54
+	040010 Desc             ="if the EGR is commanded on, these values are added to the main spark advance table."
+	040100 Address          =0x146
+	040200 ZEq              =X*0.3515625,TH|0|0|0|0|
+	040203 XOutType         =0x4
+	040304 YOutType         =0x4
+	040230 RangeLow         =0.0000
+	040240 RangeHigh        =255.0000
+	040300 Rows             =0x11
+	040305 Cols             =0x1
+	040320 XUnits           ="*"
+	040325 YUnits           ="EGR Duty Cycle"
+	040330 ZUnits           =""
+	040350 XLabels          =
+	040352 XLabelType       =0x4
+	040354 XEq              =X,TH|0|0|0|0|
+	040360 YLabels          =0.00,6.25,12.5,18.75,25,31.25,37.5,43.75,50,56.25,62.5,68.75,75,81.25,87.5,93.75,100
+	040362 YLabelType       =0x4
+	040364 YEq              =X,TH|0|0|0|0|
+	040660 XAxisMin         =1000.000000
+	040670 XAxisMax         =1000.000000
+	040760 YAxisMin         =1000.000000
+	040770 YAxisMax         =1000.000000
+%%END%%
+
+%%TABLE%%
+	000002 UniqueID         =0x57F2
+	040005 Title            ="Highway Spark Advance Correction"
+	040011 DescSize         =0x49
+	040010 Desc             ="these values are added to the main spark table if in highway spark mode."
+	040100 Address          =0x157
+	040200 ZEq              =X*0.3515625,TH|0|0|0|0|
+	040203 XOutType         =0x4
+	040304 YOutType         =0x4
+	040230 RangeLow         =0.0000
+	040240 RangeHigh        =255.0000
+	040300 Rows             =0x6
+	040305 Cols             =0x1
+	040320 XUnits           ="*"
+	040325 YUnits           ="kPa"
+	040330 ZUnits           =""
+	040350 XLabels          =
+	040352 XLabelType       =0x4
+	040354 XEq              =X,TH|0|0|0|0|
+	040360 YLabels          =50,60,70,80,90,100
+	040362 YLabelType       =0x4
+	040364 YEq              =X,TH|0|0|0|0|
+	040660 XAxisMin         =1000.000000
+	040670 XAxisMax         =1000.000000
+	040760 YAxisMin         =1000.000000
+	040770 YAxisMax         =1000.000000
+%%END%%
+
+%%TABLE%%
+	000002 UniqueID         =0x411F
+	040005 Title            ="Power Enrichment Spark Advance Correction"
+	040011 DescSize         =0x3E
+	040010 Desc             ="these values are added to the main spark table if in PE mode."
+	040100 Address          =0x15E
+	040200 ZEq              =X*0.3515625,TH|0|0|0|0|
+	040203 XOutType         =0x4
+	040304 YOutType         =0x4
+	040230 RangeLow         =0.0000
+	040240 RangeHigh        =255.0000
+	040300 Rows             =0x8
+	040305 Cols             =0x1
+	040320 XUnits           ="*"
+	040325 YUnits           ="RPM"
+	040330 ZUnits           =""
+	040350 XLabels          =(null)
+	040352 XLabelType       =0x4
+	040354 XEq              =X,TH|0|0|0|0|
+	040360 YLabels          =800,1200,1600,2000,2400,2800,3200,3600
+	040362 YLabelType       =0x4
+	040364 YEq              =X,TH|0|0|0|0|
+	040660 XAxisMin         =1000.000000
+	040670 XAxisMax         =1000.000000
+	040760 YAxisMin         =1000.000000
+	040770 YAxisMax         =1000.000000
+%%END%%
+
+%%TABLE%%
+	000002 UniqueID         =0x4794
+	040005 Title            ="Initial Spark"
+	040011 DescSize         =0xA2
+	040010 Desc             ="this is the spark table used to start the motor. it decays through the table \"inital spark decay\" with the smoothing factor from \"intital spark decay multiplier\""
+	040100 Address          =0x16E
+	040200 ZEq              =X*0.3515625,TH|0|0|0|0|
+	040203 XOutType         =0x4
+	040304 YOutType         =0x4
+	040230 RangeLow         =0.0000
+	040240 RangeHigh        =255.0000
+	040300 Rows             =0x5
+	040305 Cols             =0x1
+	040320 XUnits           ="*"
+	040325 YUnits           ="F"
+	040330 ZUnits           =""
+	040350 XLabels          =
+	040352 XLabelType       =0x4
+	040354 XEq              =X,TH|0|0|0|0|
+	040360 YLabels          =36,75,122,177,240
+	040362 YLabelType       =0x4
+	040364 YEq              =X,TH|0|0|0|0|
+	040660 XAxisMin         =1000.000000
+	040670 XAxisMax         =1000.000000
+	040760 YAxisMin         =1000.000000
+	040770 YAxisMax         =1000.000000
+%%END%%
+
+%%TABLE%%
+	000002 UniqueID         =0x589F
+	040005 Title            ="Initial Spark Decay"
+	040011 DescSize         =0xAA
+	040010 Desc             ="this table determines how quickly the values from \"initial spark\" are smoothed into the values in the main spark table and the corrections it recieves from other tables."
+	040100 Address          =0x174
+	040200 ZEq              =X*.1,TH|0|0|0|0|
+	040203 XOutType         =0x4
+	040304 YOutType         =0x4
+	040230 RangeLow         =0.0000
+	040240 RangeHigh        =255.0000
+	040300 Rows             =0x5
+	040305 Cols             =0x1
+	040320 XUnits           ="Seconds"
+	040325 YUnits           ="F"
+	040330 ZUnits           =""
+	040350 XLabels          =
+	040352 XLabelType       =0x4
+	040354 XEq              =X,TH|0|0|0|0|
+	040360 YLabels          =36,75,122,177,240
+	040362 YLabelType       =0x4
+	040364 YEq              =X,TH|0|0|0|0|
+	040660 XAxisMin         =1000.000000
+	040670 XAxisMax         =1000.000000
+	040760 YAxisMin         =1000.000000
+	040770 YAxisMax         =1000.000000
+%%END%%
+
+%%TABLE%%
+	000002 UniqueID         =0x4D42
+	040005 Title            ="Initial Spark Decay Multiplier"
+	040011 DescSize         =0x4B
+	040010 Desc             ="\"initial spark decay\" determines how fast, this table determines how much."
+	040100 Address          =0x17A
+	040200 ZEq              =X*0.3515625,TH|0|0|0|0|
+	040203 XOutType         =0x4
+	040304 YOutType         =0x4
+	040230 RangeLow         =0.0000
+	040240 RangeHigh        =255.0000
+	040300 Rows             =0x5
+	040305 Cols             =0x1
+	040320 XUnits           ="Multiplier"
+	040325 YUnits           ="F"
+	040330 ZUnits           =""
+	040350 XLabels          =
+	040352 XLabelType       =0x4
+	040354 XEq              =X,TH|0|0|0|0|
+	040360 YLabels          =36,75,122,177,240
+	040362 YLabelType       =0x4
+	040364 YEq              =X,TH|0|0|0|0|
+	040660 XAxisMin         =1000.000000
+	040670 XAxisMax         =1000.000000
+	040760 YAxisMin         =1000.000000
+	040770 YAxisMax         =1000.000000
+%%END%%
+
+%%TABLE%%
+	000002 UniqueID         =0x234F
+	040005 Title            ="Burst Knock Retard"
+	040011 DescSize         =0x6E
+	040010 Desc             ="these values are removed from the main spark table if knock is detected below the normal knock temp threshold"
+	040100 Address          =0x167
+	040200 ZEq              =X*0.3515625,TH|0|0|0|0|
+	040203 XOutType         =0x4
+	040304 YOutType         =0x4
+	040230 RangeLow         =0.0000
+	040240 RangeHigh        =255.0000
+	040300 Rows             =0x6
+	040305 Cols             =0x1
+	040320 XUnits           ="*"
+	040325 YUnits           ="F"
+	040330 ZUnits           =""
+	040350 XLabels          =(null)
+	040352 XLabelType       =0x4
+	040354 XEq              =X,TH|0|0|0|0|
+	040360 YLabels          =167,185,203,212,221,230
+	040362 YLabelType       =0x4
+	040364 YEq              =X,TH|0|0|0|0|
+	040660 XAxisMin         =1000.000000
+	040670 XAxisMax         =1000.000000
+	040760 YAxisMin         =1000.000000
+	040770 YAxisMax         =1000.000000
+%%END%%
+
+%%TABLE%%
+	000002 UniqueID         =0x50F2
+	040005 Title            ="Maximum Knock Retard in Power Enrichment"
+	040011 DescSize         =0x1
+	040010 Desc             =""
+	040100 Address          =0x17F
+	040200 ZEq              =X*(0.3515625/2),TH|0|0|0|0|
+	040203 XOutType         =0x4
+	040304 YOutType         =0x4
+	040230 RangeLow         =0.0000
+	040240 RangeHigh        =255.0000
+	040300 Rows             =0x9
+	040305 Cols             =0x1
+	040320 XUnits           ="*"
+	040325 YUnits           ="RPM"
+	040330 ZUnits           =""
+	040350 XLabels          =
+	040352 XLabelType       =0x4
+	040354 XEq              =X,TH|0|0|0|0|
+	040360 YLabels          =400,600,800,1200,1600,2000,2400,3200,4000
+	040362 YLabelType       =0x4
+	040364 YEq              =X,TH|0|0|0|0|
+	040660 XAxisMin         =1000.000000
+	040670 XAxisMax         =1000.000000
+	040760 YAxisMin         =1000.000000
+	040770 YAxisMax         =1000.000000
+%%END%%
+
+%%TABLE%%
+	000002 UniqueID         =0x1A7C
+	040005 Title            ="Max Knock Retard vs MAP"
+	040011 DescSize         =0x37
+	040010 Desc             ="values determine the maximum amount of KR based on MAP"
+	040100 Address          =0x188
+	040200 ZEq              =X*(0.3515625/2),TH|0|0|0|0|
+	040203 XOutType         =0x4
+	040304 YOutType         =0x4
+	040230 RangeLow         =0.0000
+	040240 RangeHigh        =255.0000
+	040300 Rows             =0x5
+	040305 Cols             =0x1
+	040320 XUnits           ="*"
+	040325 YUnits           ="kPa"
+	040330 ZUnits           =""
+	040350 XLabels          =
+	040352 XLabelType       =0x4
+	040354 XEq              =X,TH|0|0|0|0|
+	040360 YLabels          =60,70,80,90,100
+	040362 YLabelType       =0x4
+	040364 YEq              =X,TH|0|0|0|0|
+	040660 XAxisMin         =1000.000000
+	040670 XAxisMax         =1000.000000
+	040760 YAxisMin         =1000.000000
+	040770 YAxisMax         =1000.000000
+%%END%%
+
+%%TABLE%%
+	000002 UniqueID         =0x4730
+	040005 Title            ="Knock Retard Attack Rate"
+	040011 DescSize         =0x64
+	040010 Desc             ="values determine how many degrees of timing to pull per mSecond until knock disappears based on RPM"
+	040100 Address          =0x18D
+	040200 ZEq              =X*.0255,TH|0|0|0|0|
+	040203 XOutType         =0x4
+	040304 YOutType         =0x4
+	040230 RangeLow         =0.0000
+	040240 RangeHigh        =255.0000
+	040300 Rows             =0x9
+	040305 Cols             =0x1
+	040320 XUnits           ="Deg per mSec"
+	040325 YUnits           ="RPM"
+	040330 ZUnits           =""
+	040350 XLabels          =
+	040352 XLabelType       =0x4
+	040354 XEq              =X,TH|0|0|0|0|
+	040360 YLabels          =400,600,800,1200,1600,2000,2400,3200,4000
+	040362 YLabelType       =0x4
+	040364 YEq              =X,TH|0|0|0|0|
+	040660 XAxisMin         =1000.000000
+	040670 XAxisMax         =1000.000000
+	040760 YAxisMin         =1000.000000
+	040770 YAxisMax         =1000.000000
+%%END%%
+
+%%TABLE%%
+	000002 UniqueID         =0x4E90
+	040005 Title            ="Knock Retard Recovery Rate"
+	040011 DescSize         =0x3C
+	040010 Desc             ="values determine how quickly KR is reduced in % per mSecond"
+	040100 Address          =0x196
+	040200 ZEq              =X/.512,TH|0|0|0|0|
+	040203 XOutType         =0x4
+	040304 YOutType         =0x4
+	040230 RangeLow         =0.0000
+	040240 RangeHigh        =255.0000
+	040300 Rows             =0x9
+	040305 Cols             =0x1
+	040320 XUnits           ="%/mSec"
+	040325 YUnits           ="RPM"
+	040330 ZUnits           =""
+	040350 XLabels          =(null)
+	040352 XLabelType       =0x4
+	040354 XEq              =X,TH|0|0|0|0|
+	040360 YLabels          =400,600,800,1200,1600,2000,2400,3200,4000
+	040362 YLabelType       =0x4
+	040364 YEq              =X,TH|0|0|0|0|
+	040660 XAxisMin         =1000.000000
+	040670 XAxisMax         =1000.000000
+	040760 YAxisMin         =1000.000000
+	040770 YAxisMax         =1000.000000
+%%END%%
+
+%%TABLE%%
+	000002 UniqueID         =0x6CAC
+	040005 Title            ="Spark Latency Correction"
+	040011 DescSize         =0x30
+	040010 Desc             ="not entirely sure of the purpose of this table."
+	040100 Address          =0x1A0
+	040200 ZEq              =X*15.26,TH|0|0|0|0|
+	040203 XOutType         =0x4
+	040304 YOutType         =0x4
+	040230 RangeLow         =0.0000
+	040240 RangeHigh        =255.0000
+	040300 Rows             =0xD
+	040305 Cols             =0x1
+	040320 XUnits           ="uSec"
+	040325 YUnits           ="RPM"
+	040330 ZUnits           =""
+	040350 XLabels          =
+	040352 XLabelType       =0x4
+	040354 XEq              =X,TH|0|0|0|0|
+	040360 YLabels          =0,400,800,1200,1600,2000,2400,2800,3200,3600,4000,4400,4800
+	040362 YLabelType       =0x4
+	040364 YEq              =X,TH|0|0|0|0|
+	040660 XAxisMin         =1000.000000
+	040670 XAxisMax         =1000.000000
+	040760 YAxisMin         =1000.000000
+	040770 YAxisMax         =1000.000000
+%%END%%
+
+%%TABLE%%
+	000002 UniqueID         =0x5AB
+	040005 Title            ="Barometric Correction vs TPS"
+	040011 DescSize         =0x22
+	040010 Desc             ="somehow this is related to spark."
+	040100 Address          =0x1AE
+	040200 ZEq              =X/17.28,TH|0|0|0|0|
+	040203 XOutType         =0x4
+	040304 YOutType         =0x4
+	040230 RangeLow         =0.0000
+	040240 RangeHigh        =255.0000
+	040300 Rows             =0x5
+	040305 Cols             =0x1
+	040320 XUnits           ="kPa"
+	040325 YUnits           ="%TPS"
+	040330 ZUnits           =""
+	040350 XLabels          =
+	040352 XLabelType       =0x4
+	040354 XEq              =X,TH|0|0|0|0|
+	040360 YLabels          =0,25,50,75,100
+	040362 YLabelType       =0x4
+	040364 YEq              =X,TH|0|0|0|0|
+	040660 XAxisMin         =1000.000000
+	040670 XAxisMax         =1000.000000
+	040760 YAxisMin         =1000.000000
+	040770 YAxisMax         =1000.000000
+%%END%%
+
+%%TABLE%%
+	000002 UniqueID         =0x600C
+	040005 Title            ="     EGR"
+	040011 DescSize         =0x1
+	040010 Desc             =""
+	040100 Address          =0x0
+	040200 ZEq              =X,TH|0|0|0|0|
+	040203 XOutType         =0x4
+	040304 YOutType         =0x4
+	040230 RangeLow         =0.0000
+	040240 RangeHigh        =255.0000
+	040300 Rows             =0x1
+	040305 Cols             =0x1
+	040320 XUnits           =""
+	040325 YUnits           =""
+	040330 ZUnits           =""
+	040350 XLabels          =
+	040352 XLabelType       =0x4
+	040354 XEq              =X,TH|0|0|0|0|
+	040360 YLabels          =
+	040362 YLabelType       =0x4
+	040364 YEq              =X,TH|0|0|0|0|
+	040660 XAxisMin         =1000.000000
+	040670 XAxisMax         =1000.000000
+	040760 YAxisMin         =1000.000000
+	040770 YAxisMax         =1000.000000
+%%END%%
+
+%%TABLE%%
+	000002 UniqueID         =0x3BFB
+	040005 Title            ="Commanded EGR Duty Cycle"
+	040011 DescSize         =0x1
+	040010 Desc             =""
+	040100 Address          =0x1C4
+	040200 ZEq              =X*0.3921568627450980392156862745098,TH|0|0|0|0|
+	040203 XOutType         =0x4
+	040304 YOutType         =0x4
+	040230 RangeLow         =0.0000
+	040240 RangeHigh        =255.0000
+	040300 Rows             =0x7
+	040305 Cols             =0x7
+	040320 XUnits           ="kPa"
+	040325 YUnits           ="RPM"
+	040330 ZUnits           =""
+	040350 XLabels          =40,50,60,70,80,90,100
+	040352 XLabelType       =0x4
+	040354 XEq              =X,TH|0|0|0|0|
+	040360 YLabels          =1000,1200,1400,1600,1800,2200,3000
+	040362 YLabelType       =0x4
+	040364 YEq              =X,TH|0|0|0|0|
+	040660 XAxisMin         =1000.000000
+	040670 XAxisMax         =1000.000000
+	040760 YAxisMin         =1000.000000
+	040770 YAxisMax         =1000.000000
+%%END%%
+
+%%TABLE%%
+	000002 UniqueID         =0x7525
+	040005 Title            ="EGR Duty Cycle Multiplier vs Coolant"
+	040011 DescSize         =0x1
+	040010 Desc             =""
+	040100 Address          =0x1F6
+	040200 ZEq              =X/128,TH|0|0|0|0|
+	040203 XOutType         =0x4
+	040304 YOutType         =0x4
+	040230 RangeLow         =0.0000
+	040240 RangeHigh        =255.0000
+	040300 Rows             =0x8
+	040305 Cols             =0x1
+	040320 XUnits           ="Multiplier"
+	040325 YUnits           ="F"
+	040330 ZUnits           =""
+	040350 XLabels          =
+	040352 XLabelType       =0x4
+	040354 XEq              =X,TH|0|0|0|0|
+	040360 YLabels          =68,86,104,122,140,158,176,194
+	040362 YLabelType       =0x4
+	040364 YEq              =X,TH|0|0|0|0|
+	040660 XAxisMin         =1000.000000
+	040670 XAxisMax         =1000.000000
+	040760 YAxisMin         =1000.000000
+	040770 YAxisMax         =1000.000000
+%%END%%
+
+%%TABLE%%
+	000002 UniqueID         =0x54E6
+	040005 Title            ="EGR Duty Cycle Multiplier vs MAP vs Barometric"
+	040011 DescSize         =0x1
+	040010 Desc             =""
+	040100 Address          =0x201
+	040200 ZEq              =X/128,TH|0|0|0|0|
+	040203 XOutType         =0x4
+	040304 YOutType         =0x4
+	040230 RangeLow         =0.0000
+	040240 RangeHigh        =255.0000
+	040300 Rows             =0x7
+	040305 Cols             =0x4
+	040320 XUnits           ="Baro kPa"
+	040325 YUnits           ="MAP kPa"
+	040330 ZUnits           =""
+	040350 XLabels          =75,85,95,105
+	040352 XLabelType       =0x4
+	040354 XEq              =X,TH|0|0|0|0|
+	040360 YLabels          =40,50,60,70,80,90,100
+	040362 YLabelType       =0x4
+	040364 YEq              =X,TH|0|0|0|0|
+	040660 XAxisMin         =1000.000000
+	040670 XAxisMax         =1000.000000
+	040760 YAxisMin         =1000.000000
+	040770 YAxisMax         =1000.000000
+%%END%%
+
+%%TABLE%%
+	000002 UniqueID         =0x261C
+	040005 Title            ="EGR Correction vs MAP vs EGR Duty Cycle"
+	040011 DescSize         =0x1
+	040010 Desc             =""
+	040100 Address          =0x220
+	040200 ZEq              =X/256,TH|0|0|0|0|
+	040203 XOutType         =0x4
+	040304 YOutType         =0x4
+	040230 RangeLow         =0.0000
+	040240 RangeHigh        =255.0000
+	040300 Rows             =0x8
+	040305 Cols             =0xD
+	040320 XUnits           =""
+	040325 YUnits           ="EGR Duty Cycle"
+	040330 ZUnits           =""
+	040350 XLabels          =0,2.5,5,7.5,10,12.5,15,17.5,20,30,40,50,60
+	040352 XLabelType       =0x4
+	040354 XEq              =X,TH|0|0|0|0|
+	040360 YLabels          =30,40,50,60,70,80,90,100
+	040362 YLabelType       =0x4
+	040364 YEq              =X,TH|0|0|0|0|
+	040660 XAxisMin         =1000.000000
+	040670 XAxisMax         =1000.000000
+	040760 YAxisMin         =1000.000000
+	040770 YAxisMax         =1000.000000
+%%END%%
+
+%%TABLE%%
+	000002 UniqueID         =0x6B6E
+	040005 Title            ="     Fuel"
+	040011 DescSize         =0x1
+	040010 Desc             =""
+	040100 Address          =0x0
+	040200 ZEq              =X,TH|0|0|0|0|
+	040203 XOutType         =0x4
+	040304 YOutType         =0x4
+	040230 RangeLow         =0.0000
+	040240 RangeHigh        =255.0000
+	040300 Rows             =0x1
+	040305 Cols             =0x1
+	040320 XUnits           =""
+	040325 YUnits           =""
+	040330 ZUnits           =""
+	040350 XLabels          =
+	040352 XLabelType       =0x4
+	040354 XEq              =X,TH|0|0|0|0|
+	040360 YLabels          =
+	040362 YLabelType       =0x4
+	040364 YEq              =X,TH|0|0|0|0|
+	040660 XAxisMin         =1000.000000
+	040670 XAxisMax         =1000.000000
+	040760 YAxisMin         =1000.000000
+	040770 YAxisMax         =1000.000000
+%%END%%
+
+%%TABLE%%
+	000002 UniqueID         =0x71E2
+	040005 Title            ="Main VE Table"
+	040011 DescSize         =0x1
+	040010 Desc             =""
+	040100 Address          =0x37F
+	040200 ZEq              =X*0.3921568627450980392156862745098,TH|0|0|0|0|
+	040203 XOutType         =0x4
+	040304 YOutType         =0x4
+	040230 RangeLow         =0.0000
+	040240 RangeHigh        =255.0000
+	040300 Rows             =0x8
+	040305 Cols             =0x9
+	040310 PopByCol         =0x1
+	040320 XUnits           ="kPa"
+	040325 YUnits           ="RPM"
+	040330 ZUnits           =""
+	040350 XLabels          =20,30,40,50,60,70,80,90,100
+	040352 XLabelType       =0x4
+	040354 XEq              =X,TH|0|0|0|0|
+	040360 YLabels          =400,800,1200,1600,2000,2400,2800,3200
+	040362 YLabelType       =0x4
+	040364 YEq              =X,TH|0|0|0|0|
+	040660 XAxisMin         =1000.000000
+	040670 XAxisMax         =1000.000000
+	040760 YAxisMin         =1000.000000
+	040770 YAxisMax         =1000.000000
+%%END%%
+
+%%TABLE%%
+	000002 UniqueID         =0x1DF1
+	040005 Title            ="VE Adder Table"
+	040011 DescSize         =0x1
+	040010 Desc             =""
+	040100 Address          =0x3C7
+	040200 ZEq              =X*0.3921568627450980392156862745098,TH|0|0|0|0|
+	040203 XOutType         =0x4
+	040304 YOutType         =0x4
+	040230 RangeLow         =0.0000
+	040240 RangeHigh        =255.0000
+	040300 Rows             =0x11
+	040305 Cols             =0x1
+	040320 XUnits           ="%"
+	040325 YUnits           ="RPM"
+	040330 ZUnits           =""
+	040350 XLabels          =
+	040352 XLabelType       =0x4
+	040354 XEq              =X,TH|0|0|0|0|
+	040360 YLabels          =0,400,800,1200,1600,2000,2400,2800,3200,3600,4000,4400,4800,5200,5600,6000,6400
+	040362 YLabelType       =0x4
+	040364 YEq              =X,TH|0|0|0|0|
+	040660 XAxisMin         =1000.000000
+	040670 XAxisMax         =1000.000000
+	040760 YAxisMin         =1000.000000
+	040770 YAxisMax         =1000.000000
+%%END%%
+
+%%TABLE%%
+	000002 UniqueID         =0x40CC
+	040005 Title            ="Accel Enrichment vs Delta MAP"
+	040011 DescSize         =0x21
+	040010 Desc             ="AE is added to Async fuel Pulses"
+	040100 Address          =0x30E
+	040200 ZEq              =X/16.384,TH|0|0|0|0|
+	040203 XOutType         =0x4
+	040304 YOutType         =0x4
+	040230 RangeLow         =0.0000
+	040240 RangeHigh        =255.0000
+	040300 Rows             =0x5
+	040305 Cols             =0x1
+	040320 XUnits           ="mSec"
+	040325 YUnits           ="Delta kPa"
+	040330 ZUnits           =""
+	040350 XLabels          =
+	040352 XLabelType       =0x4
+	040354 XEq              =X,TH|0|0|0|0|
+	040360 YLabels          =0,20,40,60,80
+	040362 YLabelType       =0x4
+	040364 YEq              =X,TH|0|0|0|0|
+	040660 XAxisMin         =1000.000000
+	040670 XAxisMax         =1000.000000
+	040760 YAxisMin         =1000.000000
+	040770 YAxisMax         =1000.000000
+%%END%%
+
+%%TABLE%%
+	000002 UniqueID         =0x3267
+	040005 Title            ="Accel Enrichment vs Delta TPS"
+	040011 DescSize         =0x1
+	040010 Desc             =""
+	040100 Address          =0x314
+	040200 ZEq              =X/16.384,TH|0|0|0|0|
+	040203 XOutType         =0x4
+	040304 YOutType         =0x4
+	040230 RangeLow         =0.0000
+	040240 RangeHigh        =255.0000
+	040300 Rows             =0x9
+	040305 Cols             =0x1
+	040320 XUnits           ="mSec"
+	040325 YUnits           ="Delta TPS"
+	040330 ZUnits           =""
+	040350 XLabels          =
+	040352 XLabelType       =0x4
+	040354 XEq              =X,TH|0|0|0|0|
+	040360 YLabels          =0,3.125,6.25,9.375,12.5,15.625,18.75,21.875,25
+	040362 YLabelType       =0x4
+	040364 YEq              =X,TH|0|0|0|0|
+	040660 XAxisMin         =1000.000000
+	040670 XAxisMax         =1000.000000
+	040760 YAxisMin         =1000.000000
+	040770 YAxisMax         =1000.000000
+%%END%%
+
+%%TABLE%%
+	000002 UniqueID         =0x740B
+	040005 Title            ="Accel Enrichment vs Coolant Temp"
+	040011 DescSize         =0x1
+	040010 Desc             =""
+	040100 Address          =0x40C
+	040200 ZEq              =X/32,TH|0|0|0|0|
+	040203 XOutType         =0x4
+	040304 YOutType         =0x4
+	040230 RangeLow         =0.0000
+	040240 RangeHigh        =255.0000
+	040300 Rows             =0x10
+	040305 Cols             =0x1
+	040320 XUnits           ="Multiplier"
+	040325 YUnits           ="F"
+	040330 ZUnits           =""
+	040350 XLabels          =
+	040352 XLabelType       =0x4
+	040354 XEq              =X,TH|0|0|0|0|
+	040360 YLabels          =0,17,43,60,74,87,99,110,121,133,145,176,196,225,281,304
+	040362 YLabelType       =0x4
+	040364 YEq              =X,TH|0|0|0|0|
+	040660 XAxisMin         =1000.000000
+	040670 XAxisMax         =1000.000000
+	040760 YAxisMin         =1000.000000
+	040770 YAxisMax         =1000.000000
+%%END%%
+
+%%TABLE%%
+	000002 UniqueID         =0x2E78
+	040005 Title            ="Cold Engine AFR"
+	040011 DescSize         =0x1
+	040010 Desc             =""
+	040100 Address          =0x41E
+	040200 ZEq              =X*.1,TH|0|0|0|0|
+	040203 XOutType         =0x4
+	040304 YOutType         =0x4
+	040230 RangeLow         =0.0000
+	040240 RangeHigh        =255.0000
+	040300 Rows             =0x9
+	040305 Cols             =0x1
+	040320 XUnits           ="AFR"
+	040325 YUnits           ="kPa"
+	040330 ZUnits           =""
+	040350 XLabels          =
+	040352 XLabelType       =0x4
+	040354 XEq              =X,TH|0|0|0|0|
+	040360 YLabels          =20,30,40,50,60,70,80,90,100
+	040362 YLabelType       =0x4
+	040364 YEq              =X,TH|0|0|0|0|
+	040660 XAxisMin         =1000.000000
+	040670 XAxisMax         =1000.000000
+	040760 YAxisMin         =1000.000000
+	040770 YAxisMax         =1000.000000
+%%END%%
+
+%%TABLE%%
+	000002 UniqueID         =0x3BDC
+	040005 Title            ="Choke AFR"
+	040011 DescSize         =0x50
+	040010 Desc             ="this table simulates a choke. these values are subtracted from the current AFR."
+	040100 Address          =0x427
+	040200 ZEq              =X*.1,TH|0|0|0|0|
+	040203 XOutType         =0x4
+	040304 YOutType         =0x4
+	040230 RangeLow         =0.0000
+	040240 RangeHigh        =255.0000
+	040300 Rows             =0x11
+	040305 Cols             =0x1
+	040320 XUnits           ="AFR"
+	040325 YUnits           ="F"
+	040330 ZUnits           =""
+	040350 XLabels          =
+	040352 XLabelType       =0x4
+	040354 XEq              =X,TH|0|0|0|0|
+	040360 YLabels          =0,19,44,61,75,88,99,111,121,134,146,161,177,198,227,281,304
+	040362 YLabelType       =0x4
+	040364 YEq              =X,TH|0|0|0|0|
+	040660 XAxisMin         =1000.000000
+	040670 XAxisMax         =1000.000000
+	040760 YAxisMin         =1000.000000
+	040770 YAxisMax         =1000.000000
+%%END%%
+
+%%TABLE%%
+	000002 UniqueID         =0x57B3
+	040005 Title            ="Choke AFR Multiplier"
+	040011 DescSize         =0x21
+	040010 Desc             ="decays the Choke by this amount."
+	040100 Address          =0x438
+	040200 ZEq              =X/256,TH|0|0|0|0|
+	040203 XOutType         =0x4
+	040304 YOutType         =0x4
+	040230 RangeLow         =0.0000
+	040240 RangeHigh        =255.0000
+	040300 Rows             =0x11
+	040305 Cols             =0x1
+	040320 XUnits           ="Multiplier"
+	040325 YUnits           ="F"
+	040330 ZUnits           =""
+	040350 XLabels          =
+	040352 XLabelType       =0x4
+	040354 XEq              =X,TH|0|0|0|0|
+	040360 YLabels          =0,19,44,61,75,88,99,111,121,134,146,161,177,198,227,281,304
+	040362 YLabelType       =0x4
+	040364 YEq              =X,TH|0|0|0|0|
+	040660 XAxisMin         =1000.000000
+	040670 XAxisMax         =1000.000000
+	040760 YAxisMin         =1000.000000
+	040770 YAxisMax         =1000.000000
+%%END%%
+
+%%TABLE%%
+	000002 UniqueID         =0xB59
+	040005 Title            ="Cranking AFR vs Coolant"
+	040011 DescSize         =0x1
+	040010 Desc             =""
+	040100 Address          =0x449
+	040200 ZEq              =X*.1,TH|0|0|0|0|
+	040203 XOutType         =0x4
+	040304 YOutType         =0x4
+	040230 RangeLow         =0.0000
+	040240 RangeHigh        =255.0000
+	040300 Rows             =0x11
+	040305 Cols             =0x1
+	040320 XUnits           ="AFR"
+	040325 YUnits           ="F"
+	040330 ZUnits           =""
+	040350 XLabels          =
+	040352 XLabelType       =0x4
+	040354 XEq              =X,TH|0|0|0|0|
+	040360 YLabels          =0,19,44,61,75,88,99,111,121,134,146,161,177,198,227,281,304
+	040362 YLabelType       =0x4
+	040364 YEq              =X,TH|0|0|0|0|
+	040660 XAxisMin         =1000.000000
+	040670 XAxisMax         =1000.000000
+	040760 YAxisMin         =1000.000000
+	040770 YAxisMax         =1000.000000
+%%END%%
+
+%%TABLE%%
+	000002 UniqueID         =0x6F12
+	040005 Title            ="Cranking Fuel Multiplier vs RPM"
+	040011 DescSize         =0x1
+	040010 Desc             =""
+	040100 Address          =0x401
+	040200 ZEq              =X/255,TH|0|0|0|0|
+	040203 XOutType         =0x4
+	040304 YOutType         =0x4
+	040230 RangeLow         =0.0000
+	040240 RangeHigh        =255.0000
+	040300 Rows             =0xB
+	040305 Cols             =0x1
+	040320 XUnits           ="Multiplier"
+	040325 YUnits           ="% of Running RPM"
+	040330 ZUnits           =""
+	040350 XLabels          =
+	040352 XLabelType       =0x4
+	040354 XEq              =X,TH|0|0|0|0|
+	040360 YLabels          =0,10,20,30,40,50,60,70,80,90,100
+	040362 YLabelType       =0x4
+	040364 YEq              =X,TH|0|0|0|0|
+	040660 XAxisMin         =1000.000000
+	040670 XAxisMax         =1000.000000
+	040760 YAxisMin         =1000.000000
+	040770 YAxisMax         =1000.000000
+%%END%%
+
+%%TABLE%%
+	000002 UniqueID         =0x4CFA
+	040005 Title            ="Open Loop AFR vs Coolant Temp"
+	040011 DescSize         =0x1
+	040010 Desc             =""
+	040100 Address          =0x45A
+	040200 ZEq              =X*.1,TH|0|0|0|0|
+	040203 XOutType         =0x4
+	040304 YOutType         =0x4
+	040230 RangeLow         =0.0000
+	040240 RangeHigh        =255.0000
+	040300 Rows             =0x11
+	040305 Cols             =0x1
+	040320 XUnits           ="AFR"
+	040325 YUnits           ="F"
+	040330 ZUnits           =""
+	040350 XLabels          =
+	040352 XLabelType       =0x4
+	040354 XEq              =X,TH|0|0|0|0|
+	040360 YLabels          =0,19,44,61,75,88,99,111,121,134,146,161,177,198,227,281,304
+	040362 YLabelType       =0x4
+	040364 YEq              =X,TH|0|0|0|0|
+	040660 XAxisMin         =1000.000000
+	040670 XAxisMax         =1000.000000
+	040760 YAxisMin         =1000.000000
+	040770 YAxisMax         =1000.000000
+%%END%%
+
+%%TABLE%%
+	000002 UniqueID         =0x1516
+	040005 Title            ="Power Enrich AFR vs RPM"
+	040011 DescSize         =0x1
+	040010 Desc             =""
+	040100 Address          =0x486
+	040200 ZEq              =X*.1,TH|0|0|0|0|
+	040203 XOutType         =0x4
+	040304 YOutType         =0x4
+	040230 RangeLow         =0.0000
+	040240 RangeHigh        =255.0000
+	040300 Rows             =0x9
+	040305 Cols             =0x1
+	040320 XUnits           ="AFR"
+	040325 YUnits           ="RPM"
+	040330 ZUnits           =""
+	040350 XLabels          =
+	040352 XLabelType       =0x4
+	040354 XEq              =X,TH|0|0|0|0|
+	040360 YLabels          =0,400,800,1200,1600,2000,2400,2800,3200
+	040362 YLabelType       =0x4
+	040364 YEq              =X,TH|0|0|0|0|
+	040660 XAxisMin         =1000.000000
+	040670 XAxisMax         =1000.000000
+	040760 YAxisMin         =1000.000000
+	040770 YAxisMax         =1000.000000
+%%END%%
+
+%%TABLE%%
+	000002 UniqueID         =0x45DA
+	040005 Title            ="TPS Needed to enter PE vs RPM"
+	040011 DescSize         =0x1
+	040010 Desc             =""
+	040100 Address          =0x47D
+	040200 ZEq              =X*(0.01960784313725490196078431372549/0.04),TH|0|0|0|0|
+	040203 XOutType         =0x4
+	040304 YOutType         =0x4
+	040230 RangeLow         =0.0000
+	040240 RangeHigh        =255.0000
+	040300 Rows             =0x9
+	040305 Cols             =0x1
+	040320 XUnits           ="TPS%"
+	040325 YUnits           ="RPM"
+	040330 ZUnits           =""
+	040350 XLabels          =
+	040352 XLabelType       =0x4
+	040354 XEq              =X,TH|0|0|0|0|
+	040360 YLabels          =0,400,800,1200,1600,2000,2400,2800,3200
+	040362 YLabelType       =0x4
+	040364 YEq              =X,TH|0|0|0|0|
+	040660 XAxisMin         =1000.000000
+	040670 XAxisMax         =1000.000000
+	040760 YAxisMin         =1000.000000
+	040770 YAxisMax         =1000.000000
+%%END%%
+
+%%TABLE%%
+	000002 UniqueID         =0x5647
+	040005 Title            ="Power Enrichment TPS Multiplier vs Barometric"
+	040011 DescSize         =0x68
+	040010 Desc             ="this takes the barometric reading and lowers the point necessary to enter PE mode in higher elevations."
+	040100 Address          =0x479
+	040200 ZEq              =X/128,TH|0|0|0|0|
+	040203 XOutType         =0x4
+	040304 YOutType         =0x4
+	040230 RangeLow         =0.0000
+	040240 RangeHigh        =255.0000
+	040300 Rows             =0x4
+	040305 Cols             =0x1
+	040320 XUnits           ="Multiplier"
+	040325 YUnits           ="Baro kPa"
+	040330 ZUnits           =""
+	040350 XLabels          =
+	040352 XLabelType       =0x4
+	040354 XEq              =X,TH|0|0|0|0|
+	040360 YLabels          =75,85,95,105
+	040362 YLabelType       =0x4
+	040364 YEq              =X,TH|0|0|0|0|
+	040660 XAxisMin         =1000.000000
+	040670 XAxisMax         =1000.000000
+	040760 YAxisMin         =1000.000000
+	040770 YAxisMax         =1000.000000
+%%END%%
+
+%%TABLE%%
+	000002 UniqueID         =0x5537
+	040005 Title            ="BPW Constant for EGR On"
+	040011 DescSize         =0x1
+	040010 Desc             =""
+	040100 Address          =0x327
+	040200 ZEq              =X,TH|0|0|0|0|
+	040203 XOutType         =0x4
+	040304 YOutType         =0x4
+	040230 RangeLow         =0.0000
+	040240 RangeHigh        =255.0000
+	040300 Rows             =0x11
+	040305 Cols             =0x5
+	040310 PopByCol         =0x1
+	040320 XUnits           ="Grams/Sec"
+	040325 YUnits           ="%EGR"
+	040330 ZUnits           =""
+	040350 XLabels          =8,16,24,32,40
+	040352 XLabelType       =0x4
+	040354 XEq              =X,TH|0|0|0|0|
+	040360 YLabels          =0,6.25,12.5,18.75,25,31.25,37.5,43.75,50,56.25,62.5,68.75,75,81.25,87.5,93.75,100
+	040362 YLabelType       =0x4
+	040364 YEq              =X,TH|0|0|0|0|
+	040660 XAxisMin         =1000.000000
+	040670 XAxisMax         =1000.000000
+	040760 YAxisMin         =1000.000000
+	040770 YAxisMax         =1000.000000
+%%END%%
+
+%%TABLE%%
+	000002 UniqueID         =0x16D4
+	040005 Title            ="Injector Compensation vs Battery Voltage"
+	040011 DescSize         =0x1
+	040010 Desc             =""
+	040100 Address          =0x3E9
+	040200 ZEq              =X/128,TH|0|0|0|0|
+	040203 XOutType         =0x4
+	040304 YOutType         =0x4
+	040230 RangeLow         =0.0000
+	040240 RangeHigh        =255.0000
+	040300 Rows             =0x11
+	040305 Cols             =0x1
+	040320 XUnits           ="Multiplier"
+	040325 YUnits           ="Volts"
+	040330 ZUnits           =""
+	040350 XLabels          =
+	040352 XLabelType       =0x4
+	040354 XEq              =X,TH|0|0|0|0|
+	040360 YLabels          =0,1.6,3.2,4.8,6.4,8,9.6,11.2,12.8,14.4,16,17.6,19.2,20.8,22.4,24,25.5
+	040362 YLabelType       =0x4
+	040364 YEq              =X,TH|0|0|0|0|
+	040660 XAxisMin         =1000.000000
+	040670 XAxisMax         =1000.000000
+	040760 YAxisMin         =1000.000000
+	040770 YAxisMax         =1000.000000
+%%END%%
+
+%%TABLE%%
+	000002 UniqueID         =0x24F5
+	040005 Title            ="Decel Enleanment Multiplier vs Coolant Temp"
+	040011 DescSize         =0x1
+	040010 Desc             =""
+	040100 Address          =0x3FB
+	040200 ZEq              =X/32,TH|0|0|0|0|
+	040203 XOutType         =0x4
+	040304 YOutType         =0x4
+	040230 RangeLow         =0.0000
+	040240 RangeHigh        =255.0000
+	040300 Rows             =0x5
+	040305 Cols             =0x1
+	040320 XUnits           ="Multiplier"
+	040325 YUnits           ="F"
+	040330 ZUnits           =""
+	040350 XLabels          =
+	040352 XLabelType       =0x4
+	040354 XEq              =X,TH|0|0|0|0|
+	040360 YLabels          =30,75,120,177,212
+	040362 YLabelType       =0x4
+	040364 YEq              =X,TH|0|0|0|0|
+	040660 XAxisMin         =1000.000000
+	040670 XAxisMax         =1000.000000
+	040760 YAxisMin         =1000.000000
+	040770 YAxisMax         =1000.000000
+%%END%%
+
+%%TABLE%%
+	000002 UniqueID         =0x4127
+	040005 Title            ="BPW Constant Multiplier vs Barometric"
+	040011 DescSize         =0x1
+	040010 Desc             =""
+	040100 Address          =0x475
+	040200 ZEq              =X/128,TH|0|0|0|0|
+	040203 XOutType         =0x4
+	040304 YOutType         =0x4
+	040230 RangeLow         =0.0000
+	040240 RangeHigh        =255.0000
+	040300 Rows             =0x4
+	040305 Cols             =0x1
+	040320 XUnits           ="Multiplier"
+	040325 YUnits           ="Baro kPa"
+	040330 ZUnits           =""
+	040350 XLabels          =
+	040352 XLabelType       =0x4
+	040354 XEq              =X,TH|0|0|0|0|
+	040360 YLabels          =75,85,95,105
+	040362 YLabelType       =0x4
+	040364 YEq              =X,TH|0|0|0|0|
+	040660 XAxisMin         =1000.000000
+	040670 XAxisMax         =1000.000000
+	040760 YAxisMin         =1000.000000
+	040770 YAxisMax         =1000.000000
+%%END%%
+
+%%TABLE%%
+	000002 UniqueID         =0x37CA
+	040005 Title            ="INT Delay vs Airflow"
+	040011 DescSize         =0x1
+	040010 Desc             =""
+	040100 Address          =0x48F
+	040200 ZEq              =X/40,TH|0|0|0|0|
+	040203 XOutType         =0x4
+	040304 YOutType         =0x4
+	040230 RangeLow         =0.0000
+	040240 RangeHigh        =255.0000
+	040300 Rows             =0x5
+	040305 Cols             =0x1
+	040320 XUnits           ="Seconds"
+	040325 YUnits           ="Grams/Sec"
+	040330 ZUnits           =""
+	040350 XLabels          =
+	040352 XLabelType       =0x4
+	040354 XEq              =X,TH|0|0|0|0|
+	040360 YLabels          =0,16,32,48,64
+	040362 YLabelType       =0x4
+	040364 YEq              =X,TH|0|0|0|0|
+	040660 XAxisMin         =1000.000000
+	040670 XAxisMax         =1000.000000
+	040760 YAxisMin         =1000.000000
+	040770 YAxisMax         =1000.000000
+%%END%%
+
+%%TABLE%%
+	000002 UniqueID         =0x7B2B
+	040005 Title            ="Mean Rich/Lean Threshold"
+	040011 DescSize         =0x80
+	040010 Desc             ="narrowband o2 sensors have different voltages for stoich depending on how much airflow there is, this table compensates for it."
+	040100 Address          =0x494
+	040200 ZEq              =X/230.4,TH|0|0|0|0|
+	040203 XOutType         =0x4
+	040304 YOutType         =0x4
+	040230 RangeLow         =0.0000
+	040240 RangeHigh        =255.0000
+	040300 Rows             =0x5
+	040305 Cols             =0x1
+	040320 XUnits           ="V"
+	040325 YUnits           ="Airflow"
+	040330 ZUnits           =""
+	040350 XLabels          =
+	040352 XLabelType       =0x4
+	040354 XEq              =X,TH|0|0|0|0|
+	040360 YLabels          =0,16,32,48,64
+	040362 YLabelType       =0x4
+	040364 YEq              =X,TH|0|0|0|0|
+	040660 XAxisMin         =1000.000000
+	040670 XAxisMax         =1000.000000
+	040760 YAxisMin         =1000.000000
+	040770 YAxisMax         =1000.000000
+%%END%%
+
+%%TABLE%%
+	000002 UniqueID         =0x3408
+	040005 Title            ="Rich O2 Threshold vs Airflow"
+	040011 DescSize         =0x1
+	040010 Desc             =""
+	040100 Address          =0x499
+	040200 ZEq              =X/230.4,TH|0|0|0|0|
+	040203 XOutType         =0x4
+	040304 YOutType         =0x4
+	040230 RangeLow         =0.0000
+	040240 RangeHigh        =255.0000
+	040300 Rows             =0x5
+	040305 Cols             =0x1
+	040320 XUnits           ="V"
+	040325 YUnits           ="Grams/Sec"
+	040330 ZUnits           =""
+	040350 XLabels          =
+	040352 XLabelType       =0x4
+	040354 XEq              =X,TH|0|0|0|0|
+	040360 YLabels          =0,16,32,48,64
+	040362 YLabelType       =0x4
+	040364 YEq              =X,TH|0|0|0|0|
+	040660 XAxisMin         =1000.000000
+	040670 XAxisMax         =1000.000000
+	040760 YAxisMin         =1000.000000
+	040770 YAxisMax         =1000.000000
+%%END%%
+
+%%TABLE%%
+	000002 UniqueID         =0x6448
+	040005 Title            ="Lean O2 Threshold vs Airflow"
+	040011 DescSize         =0x1
+	040010 Desc             =""
+	040100 Address          =0x49E
+	040200 ZEq              =X/230.4,TH|0|0|0|0|
+	040203 XOutType         =0x4
+	040304 YOutType         =0x4
+	040230 RangeLow         =0.0000
+	040240 RangeHigh        =255.0000
+	040300 Rows             =0x5
+	040305 Cols             =0x1
+	040320 XUnits           ="V"
+	040325 YUnits           ="Grams/Sec"
+	040330 ZUnits           =""
+	040350 XLabels          =
+	040352 XLabelType       =0x4
+	040354 XEq              =X,TH|0|0|0|0|
+	040360 YLabels          =0,16,32,48,64
+	040362 YLabelType       =0x4
+	040364 YEq              =X,TH|0|0|0|0|
+	040660 XAxisMin         =1000.000000
+	040670 XAxisMax         =1000.000000
+	040760 YAxisMin         =1000.000000
+	040770 YAxisMax         =1000.000000
+%%END%%
+
+%%TABLE%%
+	000002 UniqueID         =0x5F1F
+	040005 Title            ="     TCC"
+	040011 DescSize         =0x1
+	040010 Desc             =""
+	040100 Address          =0x0
+	040200 ZEq              =X,TH|0|0|0|0|
+	040203 XOutType         =0x4
+	040304 YOutType         =0x4
+	040230 RangeLow         =0.0000
+	040240 RangeHigh        =255.0000
+	040300 Rows             =0x1
+	040305 Cols             =0x1
+	040320 XUnits           =""
+	040325 YUnits           =""
+	040330 ZUnits           =""
+	040350 XLabels          =
+	040352 XLabelType       =0x4
+	040354 XEq              =X,TH|0|0|0|0|
+	040360 YLabels          =
+	040362 YLabelType       =0x4
+	040364 YEq              =X,TH|0|0|0|0|
+	040660 XAxisMin         =0.000000
+	040670 XAxisMax         =1000.000000
+	040760 YAxisMin         =0.000000
+	040770 YAxisMax         =1000.000000
+%%END%%
+
+%%TABLE%%
+	000002 UniqueID         =0x6766
+	040005 Title            ="3rd Gear TCC Load Limit Upper"
+	040011 DescSize         =0x32
+	040010 Desc             ="these tables also seem to affect the shift light."
+	040100 Address          =0x573
+	040200 ZEq              =X*0.3921568627450980392156862745098,TH|0|0|0|0|
+	040203 XOutType         =0x4
+	040304 YOutType         =0x4
+	040230 RangeLow         =0.0000
+	040240 RangeHigh        =255.0000
+	040300 Rows             =0xB
+	040305 Cols             =0x1
+	040320 XUnits           ="TPS%"
+	040325 YUnits           ="MPH"
+	040330 ZUnits           =""
+	040350 XLabels          =
+	040352 XLabelType       =0x4
+	040354 XEq              =X,TH|0|0|0|0|
+	040360 YLabels          =10,15,20,25,30,35,40,45,50,55,60
+	040362 YLabelType       =0x4
+	040364 YEq              =X,TH|0|0|0|0|
+	040660 XAxisMin         =1000.000000
+	040670 XAxisMax         =1000.000000
+	040760 YAxisMin         =1000.000000
+	040770 YAxisMax         =1000.000000
+%%END%%
+
+%%TABLE%%
+	000002 UniqueID         =0x9C9
+	040005 Title            ="3rd Gear TCC Load Limit Lower"
+	040011 DescSize         =0x1
+	040010 Desc             =""
+	040100 Address          =0x57E
+	040200 ZEq              =X*0.3921568627450980392156862745098,TH|0|0|0|0|
+	040203 XOutType         =0x4
+	040304 YOutType         =0x4
+	040230 RangeLow         =0.0000
+	040240 RangeHigh        =255.0000
+	040300 Rows             =0xB
+	040305 Cols             =0x1
+	040320 XUnits           ="TPS%"
+	040325 YUnits           ="MPH"
+	040330 ZUnits           =""
+	040350 XLabels          =
+	040352 XLabelType       =0x4
+	040354 XEq              =X,TH|0|0|0|0|
+	040360 YLabels          =10,15,20,25,30,35,40,45,50,55,60
+	040362 YLabelType       =0x4
+	040364 YEq              =X,TH|0|0|0|0|
+	040660 XAxisMin         =1000.000000
+	040670 XAxisMax         =1000.000000
+	040760 YAxisMin         =1000.000000
+	040770 YAxisMax         =1000.000000
+%%END%%
+
+%%TABLE%%
+	000002 UniqueID         =0x4593
+	040005 Title            ="4th Gear TCC Load Limit Upper"
+	040011 DescSize         =0x1
+	040010 Desc             =""
+	040100 Address          =0x58D
+	040200 ZEq              =X*0.3921568627450980392156862745098,TH|0|0|0|0|
+	040203 XOutType         =0x4
+	040304 YOutType         =0x4
+	040230 RangeLow         =0.0000
+	040240 RangeHigh        =255.0000
+	040300 Rows             =0xB
+	040305 Cols             =0x1
+	040320 XUnits           ="TPS%"
+	040325 YUnits           ="MPH"
+	040330 ZUnits           =""
+	040350 XLabels          =
+	040352 XLabelType       =0x4
+	040354 XEq              =X,TH|0|0|0|0|
+	040360 YLabels          =10,15,20,25,30,35,40,45,50,55,60
+	040362 YLabelType       =0x4
+	040364 YEq              =X,TH|0|0|0|0|
+	040660 XAxisMin         =1000.000000
+	040670 XAxisMax         =1000.000000
+	040760 YAxisMin         =1000.000000
+	040770 YAxisMax         =1000.000000
+%%END%%
+
+%%TABLE%%
+	000002 UniqueID         =0x5CD5
+	040005 Title            ="4th Gear TCC Load Limit Lower"
+	040011 DescSize         =0x1
+	040010 Desc             =""
+	040100 Address          =0x598
+	040200 ZEq              =X*0.3921568627450980392156862745098,TH|0|0|0|0|
+	040203 XOutType         =0x4
+	040304 YOutType         =0x4
+	040230 RangeLow         =0.0000
+	040240 RangeHigh        =255.0000
+	040300 Rows             =0xB
+	040305 Cols             =0x1
+	040320 XUnits           ="TPS%"
+	040325 YUnits           ="MPH"
+	040330 ZUnits           =""
+	040350 XLabels          =
+	040352 XLabelType       =0x4
+	040354 XEq              =X,TH|0|0|0|0|
+	040360 YLabels          =10,15,20,25,30,35,40,45,50,55,60
+	040362 YLabelType       =0x4
+	040364 YEq              =X,TH|0|0|0|0|
+	040660 XAxisMin         =1000.000000
+	040670 XAxisMax         =1000.000000
+	040760 YAxisMin         =1000.000000
+	040770 YAxisMax         =1000.000000
+%%END%%
+
+%%TABLE%%
+	000002 UniqueID         =0x34DB
+	040005 Title            ="TCC/Shift Light Multiplier vs Barometric"
+	040011 DescSize         =0x1
+	040010 Desc             =""
+	040100 Address          =0x5BA
+	040200 ZEq              =X/128,TH|0|0|0|0|
+	040203 XOutType         =0x4
+	040304 YOutType         =0x4
+	040230 RangeLow         =0.0000
+	040240 RangeHigh        =255.0000
+	040300 Rows             =0x4
+	040305 Cols             =0x1
+	040320 XUnits           ="Multiplier"
+	040325 YUnits           ="kPa"
+	040330 ZUnits           =""
+	040350 XLabels          =
+	040352 XLabelType       =0x4
+	040354 XEq              =X,TH|0|0|0|0|
+	040360 YLabels          =75,85,95,105
+	040362 YLabelType       =0x4
+	040364 YEq              =X,TH|0|0|0|0|
+	040660 XAxisMin         =1000.000000
+	040670 XAxisMax         =1000.000000
+	040760 YAxisMin         =1000.000000
+	040770 YAxisMax         =1000.000000
+%%END%%
+
+%%TABLE%%
+	000002 UniqueID         =0x4E60
+	040005 Title            ="     IAC"
+	040011 DescSize         =0x1
+	040010 Desc             =""
+	040100 Address          =0x0
+	040200 ZEq              =X,TH|0|0|0|0|
+	040203 XOutType         =0x4
+	040304 YOutType         =0x4
+	040230 RangeLow         =0.0000
+	040240 RangeHigh        =255.0000
+	040300 Rows             =0x1
+	040305 Cols             =0x1
+	040320 XUnits           =""
+	040325 YUnits           =""
+	040330 ZUnits           =""
+	040350 XLabels          =
+	040352 XLabelType       =0x4
+	040354 XEq              =X,TH|0|0|0|0|
+	040360 YLabels          =
+	040362 YLabelType       =0x4
+	040364 YEq              =X,TH|0|0|0|0|
+	040660 XAxisMin         =1000.000000
+	040670 XAxisMax         =1000.000000
+	040760 YAxisMin         =1000.000000
+	040770 YAxisMax         =1000.000000
+%%END%%
+
+%%TABLE%%
+	000002 UniqueID         =0x5D37
+	040005 Title            ="IAC Motor Position vs Coolant Temp"
+	040011 DescSize         =0x1
+	040010 Desc             =""
+	040100 Address          =0x5F5
+	040200 ZEq              =X,TH|0|0|0|0|
+	040203 XOutType         =0x4
+	040304 YOutType         =0x4
+	040230 RangeLow         =0.0000
+	040240 RangeHigh        =255.0000
+	040300 Rows             =0x11
+	040305 Cols             =0x1
+	040320 XUnits           ="Steps"
+	040325 YUnits           ="F"
+	040330 ZUnits           =""
+	040350 XLabels          =
+	040352 XLabelType       =0x4
+	040354 XEq              =X,TH|0|0|0|0|
+	040360 YLabels          =304,277,225,196,176,160,145,133,121,110,99,87,74,60,43,17,0
+	040362 YLabelType       =0x4
+	040364 YEq              =X,TH|0|0|0|0|
+	040660 XAxisMin         =1000.000000
+	040670 XAxisMax         =1000.000000
+	040760 YAxisMin         =1000.000000
+	040770 YAxisMax         =1000.000000
+%%END%%
+
+%%TABLE%%
+	000002 UniqueID         =0x6ADA
+	040005 Title            ="Position after Motor Reset vs Barometric"
+	040011 DescSize         =0x1
+	040010 Desc             =""
+	040100 Address          =0x606
+	040200 ZEq              =X,TH|0|0|0|0|
+	040203 XOutType         =0x4
+	040304 YOutType         =0x4
+	040230 RangeLow         =0.0000
+	040240 RangeHigh        =255.0000
+	040300 Rows             =0x4
+	040305 Cols             =0x1
+	040320 XUnits           ="Steps"
+	040325 YUnits           ="kPa"
+	040330 ZUnits           =""
+	040350 XLabels          =
+	040352 XLabelType       =0x4
+	040354 XEq              =X,TH|0|0|0|0|
+	040360 YLabels          =75,85,95,105
+	040362 YLabelType       =0x4
+	040364 YEq              =X,TH|0|0|0|0|
+	040660 XAxisMin         =1000.000000
+	040670 XAxisMax         =1000.000000
+	040760 YAxisMin         =1000.000000
+	040770 YAxisMax         =1000.000000
+%%END%%
+
+%%TABLE%%
+	000002 UniqueID         =0x3475
+	040005 Title            ="Steps Added Due to PS Stall vs Barometric"
+	040011 DescSize         =0x1
+	040010 Desc             =""
+	040100 Address          =0x60A
+	040200 ZEq              =X,TH|0|0|0|0|
+	040203 XOutType         =0x4
+	040304 YOutType         =0x4
+	040230 RangeLow         =0.0000
+	040240 RangeHigh        =255.0000
+	040300 Rows             =0x4
+	040305 Cols             =0x1
+	040320 XUnits           ="Steps"
+	040325 YUnits           ="kPa"
+	040330 ZUnits           =""
+	040350 XLabels          =
+	040352 XLabelType       =0x4
+	040354 XEq              =X,TH|0|0|0|0|
+	040360 YLabels          =75,85,95,105
+	040362 YLabelType       =0x4
+	040364 YEq              =X,TH|0|0|0|0|
+	040660 XAxisMin         =1000.000000
+	040670 XAxisMax         =1000.000000
+	040760 YAxisMin         =1000.000000
+	040770 YAxisMax         =1000.000000
+%%END%%
+
+%%TABLE%%
+	000002 UniqueID         =0x523D
+	040005 Title            ="Desired Idle Speed (Closed Loop)"
+	040011 DescSize         =0x1
+	040010 Desc             =""
+	040100 Address          =0x60E
+	040200 ZEq              =X*12.5,TH|0|0|0|0|
+	040203 XOutType         =0x4
+	040304 YOutType         =0x4
+	040230 RangeLow         =0.0000
+	040240 RangeHigh        =255.0000
+	040300 Rows             =0x9
+	040305 Cols             =0x1
+	040320 XUnits           ="RPM"
+	040325 YUnits           ="F"
+	040330 ZUnits           =""
+	040350 XLabels          =
+	040352 XLabelType       =0x4
+	040354 XEq              =X,TH|0|0|0|0|
+	040360 YLabels          =131,149,167,185,203,212,221,230,239
+	040362 YLabelType       =0x4
+	040364 YEq              =X,TH|0|0|0|0|
+	040660 XAxisMin         =1000.000000
+	040670 XAxisMax         =1000.000000
+	040760 YAxisMin         =1000.000000
+	040770 YAxisMax         =1000.000000
+%%END%%
+

@@ -1,0 +1,4031 @@
+/*format = 2*/
+
+/*ECU Created/Edited by TunerPro*/
+
+
+/* General */
+
+{
+/*ecuId                     =Super 8d Rev 6/27/04,
+/*fileSize                  =8000,
+/*checkSumAddr              =6,
+/*checkSumSize              =2,
+/*checkSumStartAddr         =8,
+/*checkSumEndAddr           =7FFF,
+/*Items                     =199,,
+};
+
+
+/* Items */
+
+/* ***Constants*** */
+
+/* Constant 1: AIR Enable Min. Temp.  */
+/*||  Deg. C = Deg. F              
+          0 =  32
+        10 =  50
+        20 =  68
+        30 =  86 
+        40 = 104
+        50 = 122
+        60 = 140 
+        70 = 158 
+        80 = 176 
+        90 = 194
+      100 = 212 
+      110 = 230 
+      120 = 248             ||*/
+{
+/*startAddr                 =39A,
+/*columns                   =1,
+/*rows                      =1,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =-40.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =0.750000,
+/*map_name                  =AIR Enable Min. Temp. ,
+/*ylabel                    =,
+/*yaxis                     =,
+/*xlabel                    =Deg. C,
+/*xaxis                     =,,
+};
+
+/* Constant 2: AIR Rich/Lean Reduction Volts  */
+{
+/*startAddr                 =49D,
+/*columns                   =1,
+/*rows                      =1,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =4.424800,
+/*map_name                  =AIR Rich/Lean Reduction Volts ,
+/*ylabel                    =,
+/*yaxis                     =,
+/*xlabel                    =mVolts,
+/*xaxis                     =,,
+};
+
+/* Constant 3: BLM Enable Learn Max. Temp. */
+/*||  Deg. C = Deg. F
+          0 =  32
+        10 =  50
+        20 =  68
+        30 =  86
+        40 = 104
+        50 = 122
+        60 = 140
+        70 = 158
+        80 = 176
+        90 = 194
+      100 = 212
+      110 = 230
+      120 = 248
+           ||*/
+{
+/*startAddr                 =519,
+/*columns                   =1,
+/*rows                      =1,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =-40.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =0.750000,
+/*map_name                  =BLM Enable Learn Max. Temp.,
+/*ylabel                    = ,
+/*yaxis                     =     ,
+/*xlabel                    =Deg. C,
+/*xaxis                     =,,
+};
+
+/* Constant 4: BLM Enable Learn Min. Temp. */
+/*||  Deg. C = Deg. F
+          0 =  32
+        10 =  50
+        20 =  68
+        30 =  86
+        40 = 104
+        50 = 122
+        60 = 140
+        70 = 158
+        80 = 176
+        90 = 194
+      100 = 212
+      110 = 230
+      120 = 248              ||*/
+{
+/*startAddr                 =518,
+/*columns                   =1,
+/*rows                      =1,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =-40.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =0.750000,
+/*map_name                  =BLM Enable Learn Min. Temp.,
+/*ylabel                    = ,
+/*yaxis                     =     ,
+/*xlabel                    =Deg. C,
+/*xaxis                     =,,
+};
+
+/* Constant 5: BLM Integrator Value Max. */
+/*|| Normal BLM Integrator Max. Value is 160 for a stock bin.  This is the short term or INT value of the BLM cell.        ||*/
+{
+/*startAddr                 =493,
+/*columns                   =1,
+/*rows                      =1,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =1.000000,
+/*map_name                  =BLM Integrator Value Max.,
+/*ylabel                    =,
+/*yaxis                     =,
+/*xlabel                    =Value,
+/*xaxis                     =,,
+};
+
+/* Constant 6: BLM Integrator Value Min. */
+/*|| Normal BLM Integrator Min. Value is 108 for a stock bin.  This is the short term or INT value of the BLM cell.        ||*/
+{
+/*startAddr                 =492,
+/*columns                   =1,
+/*rows                      =1,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =1.000000,
+/*map_name                  =BLM Integrator Value Min.,
+/*ylabel                    =,
+/*yaxis                     =,
+/*xlabel                    =Value,
+/*xaxis                     =,,
+};
+
+/* Constant 7: BLM Update Cell Amount */
+{
+/*startAddr                 =51C,
+/*columns                   =1,
+/*rows                      =1,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =1.000000,
+/*map_name                  =BLM Update Cell Amount,
+/*ylabel                    =,
+/*yaxis                     =,
+/*xlabel                    =Counts,
+/*xaxis                     =,,
+};
+
+/* Constant 8: BLM Update Integrator Error Min. Negative */
+/*||         ||*/
+{
+/*startAddr                 =520,
+/*columns                   =1,
+/*rows                      =1,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =-1.000000,
+/*map_name                  =BLM Update Integrator Error Min. Negative,
+/*ylabel                    =,
+/*yaxis                     =,
+/*xlabel                    =Counts,
+/*xaxis                     =,,
+};
+
+/* Constant 9: BLM Update Integrator Error Min. Positive */
+/*|| This is the short term or INT value of the BLM cell.        ||*/
+{
+/*startAddr                 =51F,
+/*columns                   =1,
+/*rows                      =1,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =1.000000,
+/*map_name                  =BLM Update Integrator Error Min. Positive,
+/*ylabel                    =,
+/*yaxis                     =,
+/*xlabel                    =Counts,
+/*xaxis                     =,,
+};
+
+/* Constant 10: BLM Update Rate */
+{
+/*startAddr                 =51B,
+/*columns                   =1,
+/*rows                      =1,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =1.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =0.050000,
+/*map_name                  =BLM Update Rate,
+/*ylabel                    =,
+/*yaxis                     =,
+/*xlabel                    =Sec.,
+/*xaxis                     =,,
+};
+
+/* Constant 11: BLM Value Max.  */
+/*|| Normal BLM Max. Value is 160 for a stock bin.  This is the Long Term or BLM value of the BLM cell.        ||*/
+{
+/*startAddr                 =51D,
+/*columns                   =1,
+/*rows                      =1,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =1.000000,
+/*map_name                  =BLM Value Max. ,
+/*ylabel                    =,
+/*yaxis                     =,
+/*xlabel                    =Value,
+/*xaxis                     =,,
+};
+
+/* Constant 12: BLM Value Min.  */
+/*|| Normal BLM Min. Value is 108 for a stock bin.  This is the Long Term or BLM value of the BLM cell.        ||*/
+{
+/*startAddr                 =51E,
+/*columns                   =1,
+/*rows                      =1,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =1.000000,
+/*map_name                  =BLM Value Min. ,
+/*ylabel                    =,
+/*yaxis                     =,
+/*xlabel                    =Value,
+/*xaxis                     =,,
+};
+
+/* Constant 13: Canister Purge Disable MAP  */
+{
+/*startAddr                 =2EF,
+/*columns                   =1,
+/*rows                      =1,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =1.000000,
+/*map_name                  =Canister Purge Disable MAP ,
+/*ylabel                    =,
+/*yaxis                     =,
+/*xlabel                    =kPa,
+/*xaxis                     =,,
+};
+
+/* Constant 14: Canister Purge Disable TPS  */
+{
+/*startAddr                 =2F0,
+/*columns                   =1,
+/*rows                      =1,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =0.390625,
+/*map_name                  =Canister Purge Disable TPS ,
+/*ylabel                    =,
+/*yaxis                     =,
+/*xlabel                    =% TPS,
+/*xaxis                     =,,
+};
+
+/* Constant 15: Canister Purge Disable Vehicle Speed  */
+{
+/*startAddr                 =2EE,
+/*columns                   =1,
+/*rows                      =1,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =0.312500,
+/*map_name                  =Canister Purge Disable Vehicle Speed ,
+/*ylabel                    =,
+/*yaxis                     =,
+/*xlabel                    =MPH,
+/*xaxis                     =,,
+};
+
+/* Constant 16: Canister Purge Duty Cycle Min. TPS  */
+{
+/*startAddr                 =2E6,
+/*columns                   =1,
+/*rows                      =1,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =0.390625,
+/*map_name                  =Canister Purge Duty Cycle Min. TPS ,
+/*ylabel                    =,
+/*yaxis                     =,
+/*xlabel                    =% TPS,
+/*xaxis                     =,,
+};
+
+/* Constant 17: Canister Purge Enable MAP  */
+{
+/*startAddr                 =2EC,
+/*columns                   =1,
+/*rows                      =1,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =1.000000,
+/*map_name                  =Canister Purge Enable MAP ,
+/*ylabel                    =,
+/*yaxis                     =,
+/*xlabel                    =kPa,
+/*xaxis                     =,,
+};
+
+/* Constant 18: Canister Purge Enable Min. Temp.  */
+/*||  Deg. C = Deg. F 
+          0 =  32
+        10 =  50
+        20 =  68
+        30 =  86 
+        40 = 104
+        50 = 122
+        60 = 140
+        70 = 158
+        80 = 176
+        90 = 194
+      100 = 212
+      110 = 230
+      120 = 248             ||*/
+{
+/*startAddr                 =2EA,
+/*columns                   =1,
+/*rows                      =1,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =-40.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =0.750000,
+/*map_name                  =Canister Purge Enable Min. Temp. ,
+/*ylabel                    =,
+/*yaxis                     =,
+/*xlabel                    =Deg. C,
+/*xaxis                     =,,
+};
+
+/* Constant 19: Canister Purge Enable TPS  */
+{
+/*startAddr                 =2ED,
+/*columns                   =1,
+/*rows                      =1,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =0.390625,
+/*map_name                  =Canister Purge Enable TPS ,
+/*ylabel                    =,
+/*yaxis                     =,
+/*xlabel                    =% TPS,
+/*xaxis                     =,,
+};
+
+/* Constant 20: Canister Purge Enable Vehicle Speed */
+{
+/*startAddr                 =2EB,
+/*columns                   =1,
+/*rows                      =1,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =0.312500,
+/*map_name                  =Canister Purge Enable Vehicle Speed,
+/*ylabel                    =,
+/*yaxis                     =,
+/*xlabel                    =MPH,
+/*xaxis                     =,,
+};
+
+/* Constant 21: Canister Purge Force BLM Idle Cell Min. Duty Cycle  */
+{
+/*startAddr                 =522,
+/*columns                   =1,
+/*rows                      =1,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =0.390625,
+/*map_name                  =Canister Purge Force BLM Idle Cell Min. Duty Cycle ,
+/*ylabel                    =,
+/*yaxis                     =,
+/*xlabel                    =% Duty Cycle,
+/*xaxis                     =,,
+};
+
+/* Constant 22: Canister Purge Force BLM Idle Cell Max. Duty Cycle  */
+{
+/*startAddr                 =521,
+/*columns                   =1,
+/*rows                      =1,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =0.390625,
+/*map_name                  =Canister Purge Force BLM Idle Cell Max. Duty Cycle ,
+/*ylabel                    =,
+/*yaxis                     =,
+/*xlabel                    =% Duty Cycle,
+/*xaxis                     =,,
+};
+
+/* Constant 23: Checksum */
+{
+/*startAddr                 =6,
+/*columns                   =1,
+/*rows                      =1,
+/*elementSize               =2,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =1.000000,
+/*map_name                  =Checksum,
+/*ylabel                    =,
+/*yaxis                     =,
+/*xlabel                    =,
+/*xaxis                     =,,
+};
+
+/* Constant 24: Chip Code Mask  */
+/*|| (AA To Disable Cksum)                  ||*/
+{
+/*startAddr                 =8,
+/*columns                   =1,
+/*rows                      =1,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =2,
+/*factor                    =1.000000,
+/*map_name                  =Chip Code Mask ,
+/*ylabel                    = ,
+/*yaxis                     =     ,
+/*xlabel                    =Hex,
+/*xaxis                     =   ,,
+};
+
+/* Constant 25: Cylinder Number  */
+/*|| Use 0 for 8 Cylinders Use 128 for 4 Cylinders Use 192 for 6 Cylinders                              ||*/
+{
+/*startAddr                 =9,
+/*columns                   =1,
+/*rows                      =1,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =1.000000,
+/*map_name                  =Cylinder Number ,
+/*ylabel                    =,
+/*yaxis                     =,
+/*xlabel                    =,
+/*xaxis                     =,,
+};
+
+/* Constant 26: Cylinder Volume  */
+/*|| Cylinder volume is per cylinder. To  calculate divide the total displacement by the number of cylinders.  Example  350 in^3 =5.7 liters/8=.7125l/cyl X100 = 712.5                                ||*/
+{
+/*startAddr                 =6DD,
+/*columns                   =1,
+/*rows                      =1,
+/*elementSize               =2,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =4.484300,
+/*map_name                  =Cylinder Volume ,
+/*ylabel                    = ,
+/*yaxis                     =     ,
+/*xlabel                    = cc/Cyl,
+/*xaxis                     =,,
+};
+
+/* Constant 27: EGR Diagnostic Min. Vehicle Speed */
+{
+/*startAddr                 =27F,
+/*columns                   =1,
+/*rows                      =1,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =1.000000,
+/*map_name                  =EGR Diagnostic Min. Vehicle Speed,
+/*ylabel                    =,
+/*yaxis                     =,
+/*xlabel                    =MPH,
+/*xaxis                     =,,
+};
+
+/* Constant 28: EGR Enable Min. MAT Temp. */
+/*||  Deg. C = Deg. F
+          0 =  32
+        10 =  50
+        20 =  68
+        30 =  86
+        40 = 104
+        50 = 122
+        60 = 140
+        70 = 158
+        80 = 176
+        90 = 194
+      100 = 212
+      110 = 230
+      120 = 248             ||*/
+{
+/*startAddr                 =2B0,
+/*columns                   =1,
+/*rows                      =1,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =-40.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =0.750000,
+/*map_name                  =EGR Enable Min. MAT Temp.,
+/*ylabel                    =,
+/*yaxis                     =     ,
+/*xlabel                    =Deg. C,
+/*xaxis                     =,,
+};
+
+/* Constant 29: EGR % TPS Disable Threshold */
+{
+/*startAddr                 =2AE,
+/*columns                   =1,
+/*rows                      =1,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =0.390625,
+/*map_name                  =EGR % TPS Disable Threshold,
+/*ylabel                    =,
+/*yaxis                     =,
+/*xlabel                    =% TPS,
+/*xaxis                     =,,
+};
+
+/* Constant 30: EGR % TPS Enable Threshold */
+{
+/*startAddr                 =2AF,
+/*columns                   =1,
+/*rows                      =1,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =0.390625,
+/*map_name                  =EGR % TPS Enable Threshold,
+/*ylabel                    =,
+/*yaxis                     =,
+/*xlabel                    =% TPS,
+/*xaxis                     =,,
+};
+
+/* Constant 31: Enrich Accel Delta TPS Pulse Width Factor  */
+{
+/*startAddr                 =534,
+/*columns                   =1,
+/*rows                      =1,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =0.003906,
+/*map_name                  =Enrich Accel Delta TPS Pulse Width Factor ,
+/*ylabel                    =,
+/*yaxis                     =,
+/*xlabel                    =Mult.,
+/*xaxis                     =,,
+};
+
+/* Constant 32: Enrich Accel Delta TPS Scale Factor  */
+/*|| This constant multiplies the change in TPS which then gets stored into ram for a comparing calculation. The multiplier increases or decreases the actual TPS change.                   ||*/
+{
+/*startAddr                 =535,
+/*columns                   =1,
+/*rows                      =1,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =0.003906,
+/*map_name                  =Enrich Accel Delta TPS Scale Factor ,
+/*ylabel                    =,
+/*yaxis                     =,
+/*xlabel                    =Mult.,
+/*xaxis                     =,,
+};
+
+/* Constant 33: Enrich Accel Pulse Width Max. Limit Timer  */
+{
+/*startAddr                 =532,
+/*columns                   =1,
+/*rows                      =1,
+/*elementSize               =2,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =0.019000,
+/*map_name                  =Enrich Accel Pulse Width Max. Limit Timer ,
+/*ylabel                    =,
+/*yaxis                     =,
+/*xlabel                    =mSec.,
+/*xaxis                     =,,
+};
+
+/* Constant 34: Enrich Accel Ref Pulses (Asynch) */
+{
+/*startAddr                 =530,
+/*columns                   =1,
+/*rows                      =1,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =1.000000,
+/*map_name                  =Enrich Accel Ref Pulses (Asynch),
+/*ylabel                    =,
+/*yaxis                     =,
+/*xlabel                    =Counts,
+/*xaxis                     =,,
+};
+
+/* Constant 35: Enrich Power AFR Enable Min. Temp.   */
+/*||  Deg. C = Deg. F
+          0 =  32
+        10 =  50
+        20 =  68
+        30 =  86
+        40 = 104
+        50 = 122
+        60 = 140
+        70 = 158
+        80 = 176
+        90 = 194 
+      100 = 212 
+      110 = 230 
+      120 = 248             ||*/
+{
+/*startAddr                 =602,
+/*columns                   =1,
+/*rows                      =1,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =-40.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =0.750000,
+/*map_name                  =Enrich Power AFR Enable Min. Temp.  ,
+/*ylabel                    =,
+/*yaxis                     =,
+/*xlabel                    =Deg. C,
+/*xaxis                     =,,
+};
+
+/* Constant 36: Enrich Power Min. MAP   */
+{
+/*startAddr                 =5FF,
+/*columns                   =1,
+/*rows                      =1,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =80.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =-0.312500,
+/*map_name                  =Enrich Power Min. MAP  ,
+/*ylabel                    =,
+/*yaxis                     =,
+/*xlabel                    =kPa,
+/*xaxis                     =,,
+};
+
+/* Constant 37: Fan 1 Delayed Run Time After Off  */
+{
+/*startAddr                 =37C,
+/*columns                   =1,
+/*rows                      =1,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =1.000000,
+/*map_name                  =Fan 1 Delayed Run Time After Off ,
+/*ylabel                    =,
+/*yaxis                     =    ,
+/*xlabel                    =Sec.,
+/*xaxis                     =,,
+};
+
+/* Constant 38: Fan 1 Disable Vehicle Speed */
+{
+/*startAddr                 =374,
+/*columns                   =1,
+/*rows                      =1,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =1.000000,
+/*map_name                  =Fan 1 Disable Vehicle Speed,
+/*ylabel                    =,
+/*yaxis                     =     ,
+/*xlabel                    =MPH,
+/*xaxis                     =,,
+};
+
+/* Constant 39: Fan 1 Disable Temp.  */
+/*||   Deg. C = Deg. F 
+           0 =  32
+         10 =  50
+         20 =  68 
+         30 =  86
+         40 = 104
+         50 = 122 
+         60 = 140  
+         70 = 158  
+         80 = 176 
+         90 = 194  
+       100 = 212  
+       110 = 230  
+       120 = 248             ||*/
+{
+/*startAddr                 =377,
+/*columns                   =1,
+/*rows                      =1,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =-40.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =0.750000,
+/*map_name                  =Fan 1 Disable Temp. ,
+/*ylabel                    =,
+/*yaxis                     =     ,
+/*xlabel                    =Deg. C,
+/*xaxis                     =,,
+};
+
+/* Constant 40: Fan 1 Enable Temp.  */
+/*||  Deg. C = Deg. F   
+          0 =  32    
+        10 =  50   
+        20 =  68  
+        30 =  86   
+        40 = 104   
+        50 = 122    
+        60 = 140   
+        70 = 158  
+        80 = 176  
+        90 = 194   
+      100 = 212  
+      110 = 230  
+      120 = 248             ||*/
+{
+/*startAddr                 =378,
+/*columns                   =1,
+/*rows                      =1,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =-40.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =0.750000,
+/*map_name                  =Fan 1 Enable Temp. ,
+/*ylabel                    =,
+/*yaxis                     =     ,
+/*xlabel                    =Deg. C,
+/*xaxis                     =,,
+};
+
+/* Constant 41: Fan 2 Delayed Run Time After Off  */
+{
+/*startAddr                 =37E,
+/*columns                   =1,
+/*rows                      =1,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =1.000000,
+/*map_name                  =Fan 2 Delayed Run Time After Off ,
+/*ylabel                    =,
+/*yaxis                     =    ,
+/*xlabel                    =Sec.,
+/*xaxis                     =,,
+};
+
+/* Constant 42: Fan 2 Disable Vehicle Speed High A/C Pres */
+{
+/*startAddr                 =376,
+/*columns                   =1,
+/*rows                      =1,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =1.000000,
+/*map_name                  =Fan 2 Disable Vehicle Speed High A/C Pres,
+/*ylabel                    =,
+/*yaxis                     =,
+/*xlabel                    =MPH,
+/*xaxis                     =,,
+};
+
+/* Constant 43: Fan 2 Disable Temp.  */
+/*||  Deg. C = Deg. F   
+          0 =  32   
+        10 =  50   
+        20 =  68   
+        30 =  86   
+        40 = 104    
+        50 = 122   
+        60 = 140   
+        70 = 158   
+        80 = 176  
+        90 = 194  
+      100 = 212   
+      110 = 230   
+      120 = 248             ||*/
+{
+/*startAddr                 =379,
+/*columns                   =1,
+/*rows                      =1,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =-40.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =0.750000,
+/*map_name                  =Fan 2 Disable Temp. ,
+/*ylabel                    =,
+/*yaxis                     =     ,
+/*xlabel                    =Deg. C,
+/*xaxis                     =,,
+};
+
+/* Constant 44: Fan 2 Disable Vehicle Speed */
+{
+/*startAddr                 =375,
+/*columns                   =1,
+/*rows                      =1,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =1.000000,
+/*map_name                  =Fan 2 Disable Vehicle Speed,
+/*ylabel                    =,
+/*yaxis                     =     ,
+/*xlabel                    =MPH,
+/*xaxis                     =,,
+};
+
+/* Constant 45: Fan 2 Enable Temp. */
+/*||  Deg. C = Deg. F    
+          0 =  32     
+        10 =  50   
+        20 =  68    
+        30 =  86     
+        40 = 104   
+        50 = 122    
+        60 = 140    
+        70 = 158   
+        80 = 176   
+        90 = 194    
+      100 = 212   
+      110 = 230   
+      120 = 248             ||*/
+{
+/*startAddr                 =37A,
+/*columns                   =1,
+/*rows                      =1,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =-40.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =0.750000,
+/*map_name                  =Fan 2 Enable Temp.,
+/*ylabel                    =,
+/*yaxis                     =     ,
+/*xlabel                    =Deg. C,
+/*xaxis                     =,,
+};
+
+/* Constant 46: Fuel Cut Off Deceleration Disable Engine Speed */
+{
+/*startAddr                 =5E2,
+/*columns                   =1,
+/*rows                      =1,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =25.000000,
+/*map_name                  =Fuel Cut Off Deceleration Disable Engine Speed,
+/*ylabel                    = ,
+/*yaxis                     =     ,
+/*xlabel                    =RPM,
+/*xaxis                     =,,
+};
+
+/* Constant 47: Fuel Cut Off Deceleration Disable MAP  */
+{
+/*startAddr                 =5E4,
+/*columns                   =1,
+/*rows                      =1,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =1.000000,
+/*map_name                  =Fuel Cut Off Deceleration Disable MAP ,
+/*ylabel                    =,
+/*yaxis                     =,
+/*xlabel                    =kPa,
+/*xaxis                     =,,
+};
+
+/* Constant 48: Fuel Cut Off Deceleration Enable MAP */
+{
+/*startAddr                 =5E3,
+/*columns                   =1,
+/*rows                      =1,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =1.000000,
+/*map_name                  =Fuel Cut Off Deceleration Enable MAP,
+/*ylabel                    =,
+/*yaxis                     =,
+/*xlabel                    =kPa,
+/*xaxis                     =,,
+};
+
+/* Constant 49: Fuel Cut Off Deceleration Enable Max. Engine Speed */
+{
+/*startAddr                 =5E1,
+/*columns                   =1,
+/*rows                      =1,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =25.000000,
+/*map_name                  =Fuel Cut Off Deceleration Enable Max. Engine Speed,
+/*ylabel                    = ,
+/*yaxis                     =     ,
+/*xlabel                    =RPM,
+/*xaxis                     =,,
+};
+
+/* Constant 50: Fuel Cut Off Deceleration Min. Time Between Cutoffs  */
+{
+/*startAddr                 =5EF,
+/*columns                   =1,
+/*rows                      =1,
+/*elementSize               =2,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =0.012500,
+/*map_name                  =Fuel Cut Off Deceleration Min. Time Between Cutoffs ,
+/*ylabel                    = ,
+/*yaxis                     =     ,
+/*xlabel                    =Sec.,
+/*xaxis                     =,,
+};
+
+/* Constant 51: Fuel Cut Off Engine Speed  */
+{
+/*startAddr                 =3F5,
+/*columns                   =1,
+/*rows                      =1,
+/*elementSize               =2,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =1,
+/*factor                    =983040.000000,
+/*map_name                  =Fuel Cut Off Engine Speed ,
+/*ylabel                    =,
+/*yaxis                     =     ,
+/*xlabel                    =RPM,
+/*xaxis                     =,,
+};
+
+/* Constant 52: Fuel Cut Off Min. Temp.  */
+/*||   Deg. C = Deg. F    
+           0 =  32    
+         10 =  50  
+         20 =  68   
+         30 =  86  
+         40 = 104  
+         50 = 122  
+         60 = 140  
+         70 = 158  
+         80 = 176 
+         90 = 194   
+       100 = 212  
+       110 = 230  
+       120 = 248               ||*/
+{
+/*startAddr                 =5E8,
+/*columns                   =1,
+/*rows                      =1,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =0.492800,
+/*map_name                  =Fuel Cut Off Min. Temp. ,
+/*ylabel                    = ,
+/*yaxis                     =     ,
+/*xlabel                    =Deg. C,
+/*xaxis                     =,,
+};
+
+/* Constant 53: Fuel Cut Off Min. Time  */
+{
+/*startAddr                 =5E7,
+/*columns                   =1,
+/*rows                      =1,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =0.003125,
+/*map_name                  =Fuel Cut Off Min. Time ,
+/*ylabel                    = ,
+/*yaxis                     =     ,
+/*xlabel                    = Sec.,
+/*xaxis                     =,,
+};
+
+/* Constant 54: Fuel Cut Off Min. Vehicle Speed */
+{
+/*startAddr                 =5E9,
+/*columns                   =1,
+/*rows                      =1,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =1.000000,
+/*map_name                  =Fuel Cut Off Min. Vehicle Speed,
+/*ylabel                    = ,
+/*yaxis                     =     ,
+/*xlabel                    =MPH,
+/*xaxis                     =,,
+};
+
+/* Constant 55: Fuel Cut Off Vehicle Speed  */
+{
+/*startAddr                 =3F4,
+/*columns                   =1,
+/*rows                      =1,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =1.000000,
+/*map_name                  =Fuel Cut Off Vehicle Speed ,
+/*ylabel                    =,
+/*yaxis                     =     ,
+/*xlabel                    =MPH,
+/*xaxis                     =,,
+};
+
+/* Constant 56: Fuel Resume Engine Speed  */
+{
+/*startAddr                 =3F8,
+/*columns                   =1,
+/*rows                      =1,
+/*elementSize               =2,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =1,
+/*factor                    =983040.000000,
+/*map_name                  =Fuel Resume Engine Speed ,
+/*ylabel                    =,
+/*yaxis                     =     ,
+/*xlabel                    =RPM,
+/*xaxis                     =,,
+};
+
+/* Constant 57: Fuel Resume Vehicle Speed  */
+{
+/*startAddr                 =3F7,
+/*columns                   =1,
+/*rows                      =1,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =1.000000,
+/*map_name                  =Fuel Resume Vehicle Speed ,
+/*ylabel                    =,
+/*yaxis                     =     ,
+/*xlabel                    =MPH,
+/*xaxis                     =,,
+};
+
+/* Constant 58: Highway Mode Spark Advance Delay Timer */
+/*|| Spark Advance will be enabled when the criteria is met for Highway Mode for the amount of time indicated. 
+                ||*/
+{
+/*startAddr                 =1AA,
+/*columns                   =1,
+/*rows                      =1,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =1.000000,
+/*map_name                  =Highway Mode Spark Advance Delay Timer,
+/*ylabel                    =,
+/*yaxis                     =     ,
+/*xlabel                    =Sec.,
+/*xaxis                     =,,
+};
+
+/* Constant 59: Highway Mode Spark Advance Max. MAP */
+/*|| Highway Mode will be disabled if the MAP is greater than this value.                                 ||*/
+{
+/*startAddr                 =1A8,
+/*columns                   =1,
+/*rows                      =1,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =1.000000,
+/*map_name                  =Highway Mode Spark Advance Max. MAP,
+/*ylabel                    =,
+/*yaxis                     =     ,
+/*xlabel                    =kPa,
+/*xaxis                     =,,
+};
+
+/* Constant 60: Highway Mode Spark Advance Min. Engine Speed */
+/*|| Spark Advance will be disabled if the engine RPM is less than or equal to this value while in Highway Mode.                               ||*/
+{
+/*startAddr                 =1A9,
+/*columns                   =1,
+/*rows                      =1,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =12.500000,
+/*map_name                  =Highway Mode Spark Advance Min. Engine Speed,
+/*ylabel                    =,
+/*yaxis                     =     ,
+/*xlabel                    =RPM,
+/*xaxis                     =,,
+};
+
+/* Constant 61: Highway Mode Fuel Delay Timer */
+{
+/*startAddr                 =482,
+/*columns                   =1,
+/*rows                      =1,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =1.000000,
+/*map_name                  =Highway Mode Fuel Delay Timer,
+/*ylabel                    =,
+/*yaxis                     =     ,
+/*xlabel                    =Sec.,
+/*xaxis                     =,,
+};
+
+/* Constant 62: Highway Mode Fuel Max. MAP   */
+{
+/*startAddr                 =480,
+/*columns                   =1,
+/*rows                      =1,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =1.000000,
+/*map_name                  =Highway Mode Fuel Max. MAP  ,
+/*ylabel                    =,
+/*yaxis                     =     ,
+/*xlabel                    =kPa,
+/*xaxis                     =,,
+};
+
+/* Constant 63: Highway Mode Fuel Max. Time  */
+{
+/*startAddr                 =483,
+/*columns                   =1,
+/*rows                      =1,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =1.000000,
+/*map_name                  =Highway Mode Fuel Max. Time ,
+/*ylabel                    =,
+/*yaxis                     =     ,
+/*xlabel                    =Sec.,
+/*xaxis                     =,,
+};
+
+/* Constant 64: Highway Mode Fuel Min. Temp.   */
+/*||  Deg. C = Deg. F   
+          0 =  32   
+        10 =  50    
+        20 =  68   
+        30 =  86  
+        40 = 104 
+        50 = 122 
+        60 = 140 
+        70 = 158  
+        80 = 176 
+        90 = 194  
+      100 = 212  
+      110 = 230  
+      120 = 248             ||*/
+{
+/*startAddr                 =481,
+/*columns                   =1,
+/*rows                      =1,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =-40.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =0.750000,
+/*map_name                  =Highway Mode Fuel Min. Temp.  ,
+/*ylabel                    =,
+/*yaxis                     =     ,
+/*xlabel                    =Deg. C,
+/*xaxis                     =,,
+};
+
+/* Constant 65: Highway Mode Fuel Min. Vehicle Speed */
+{
+/*startAddr                 =484,
+/*columns                   =1,
+/*rows                      =1,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =1.000000,
+/*map_name                  =Highway Mode Fuel Min. Vehicle Speed,
+/*ylabel                    =,
+/*yaxis                     =     ,
+/*xlabel                    =MPH,
+/*xaxis                     =,,
+};
+
+/* Constant 66: Highway Mode Spark Advance Min. Temp.  */
+/*||  Deg. C = Deg. F   
+          0 =  32   
+        10 =  50   
+        20 =  68   
+        30 =  86   
+        40 = 104  
+        50 = 122   
+        60 = 140  
+        70 = 158  
+        80 = 176  
+        90 = 194 
+      100 = 212  
+      110 = 230  
+      120 = 248                ||*/
+{
+/*startAddr                 =1A7,
+/*columns                   =1,
+/*rows                      =1,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =-40.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =0.750000,
+/*map_name                  =Highway Mode Spark Advance Min. Temp. ,
+/*ylabel                    =,
+/*yaxis                     =     ,
+/*xlabel                    =Deg. C,
+/*xaxis                     =,,
+};
+
+/* Constant 67: IAC Command Engine Speed Open Loop Offset */
+{
+/*startAddr                 =631,
+/*columns                   =1,
+/*rows                      =1,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =12.500000,
+/*map_name                  =IAC Command Engine Speed Open Loop Offset,
+/*ylabel                    =,
+/*yaxis                     =,
+/*xlabel                    =RPM,
+/*xaxis                     =,,
+};
+
+/* Constant 68: IAC Learn Max. Temp.  */
+/*||  Deg. C = Deg. F   
+          0 =  32  
+        10 =  50    
+        20 =  68   
+        30 =  86  
+        40 = 104  
+        50 = 122   
+        60 = 140   
+        70 = 158  
+        80 = 176   
+        90 = 194  
+      100 = 212  
+      110 = 230  
+      120 = 248              ||*/
+{
+/*startAddr                 =69B,
+/*columns                   =1,
+/*rows                      =1,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =-40.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =0.750000,
+/*map_name                  =IAC Learn Max. Temp. ,
+/*ylabel                    =,
+/*yaxis                     =     ,
+/*xlabel                    =Deg. C,
+/*xaxis                     =,,
+};
+
+/* Constant 69: IAC Learn Min. Temp.  */
+/*||  Deg. C = Deg. F  
+          0 =  32  
+        10 =  50   
+        20 =  68   
+        30 =  86   
+        40 = 104  
+        50 = 122   
+        60 = 140  
+        70 = 158  
+        80 = 176  
+        90 = 194   
+      100 = 212  
+      110 = 230   
+      120 = 248             ||*/
+{
+/*startAddr                 =69A,
+/*columns                   =1,
+/*rows                      =1,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =-40.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =0.750000,
+/*map_name                  =IAC Learn Min. Temp. ,
+/*ylabel                    =,
+/*yaxis                     =          ,
+/*xlabel                    =Deg. C,
+/*xaxis                     =,,
+};
+
+/* Constant 70: IAC Learn Timer  */
+{
+/*startAddr                 =6A0,
+/*columns                   =1,
+/*rows                      =1,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =1.000000,
+/*map_name                  =IAC Learn Timer ,
+/*ylabel                    =,
+/*yaxis                     =,
+/*xlabel                    =Sec.,
+/*xaxis                     =,,
+};
+
+/* Constant 71: IAC Park Position  */
+{
+/*startAddr                 =629,
+/*columns                   =1,
+/*rows                      =1,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =1.000000,
+/*map_name                  =IAC Park Position ,
+/*ylabel                    = ,
+/*yaxis                     =     ,
+/*xlabel                    =Steps ,
+/*xaxis                     =,,
+};
+
+/* Constant 72: IAC Throttle Follower Slope Gain */
+{
+/*startAddr                 =65D,
+/*columns                   =1,
+/*rows                      =1,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =0.781250,
+/*map_name                  =IAC Throttle Follower Slope Gain,
+/*ylabel                    =,
+/*yaxis                     =,
+/*xlabel                    =% Gain,
+/*xaxis                     =,,
+};
+
+/* Constant 73: IAC Throttle Follower Add Time In Open Loop */
+{
+/*startAddr                 =65C,
+/*columns                   =1,
+/*rows                      =1,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =6.250000,
+/*map_name                  =IAC Throttle Follower Add Time In Open Loop,
+/*ylabel                    =,
+/*yaxis                     =,
+/*xlabel                    =mSec.,
+/*xaxis                     =,,
+};
+
+/* Constant 74: IAC Throttle Follower Add Time in Drive */
+{
+/*startAddr                 =65B,
+/*columns                   =1,
+/*rows                      =1,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =6.250000,
+/*map_name                  =IAC Throttle Follower Add Time in Drive,
+/*ylabel                    =,
+/*yaxis                     =mSec.,
+/*xlabel                    =mSec.,
+/*xaxis                     =,,
+};
+
+/* Constant 75: IAC Throttle Follower Decay Timer (Drive) */
+{
+/*startAddr                 =65A,
+/*columns                   =1,
+/*rows                      =1,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =6.250000,
+/*map_name                  =IAC Throttle Follower Decay Timer (Drive),
+/*ylabel                    =,
+/*yaxis                     =,
+/*xlabel                    =mSec.,
+/*xaxis                     =,,
+};
+
+/* Constant 76: IAC Throttle Follower Decay Timer (Park/Neutral) */
+{
+/*startAddr                 =659,
+/*columns                   =1,
+/*rows                      =1,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =6.250000,
+/*map_name                  =IAC Throttle Follower Decay Timer (Park/Neutral),
+/*ylabel                    =,
+/*yaxis                     =,
+/*xlabel                    =mSec.,
+/*xaxis                     =,,
+};
+
+/* Constant 77: IAC Throttle Follower Max. Steps */
+{
+/*startAddr                 =66A,
+/*columns                   =1,
+/*rows                      =1,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =1.000000,
+/*map_name                  =IAC Throttle Follower Max. Steps,
+/*ylabel                    =,
+/*yaxis                     =,
+/*xlabel                    =Steps,
+/*xaxis                     =,,
+};
+
+/* Constant 78: IAC Throttle Follower Max. Steps In Drive */
+{
+/*startAddr                 =65E,
+/*columns                   =1,
+/*rows                      =1,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =1.000000,
+/*map_name                  =IAC Throttle Follower Max. Steps In Drive,
+/*ylabel                    =,
+/*yaxis                     =,
+/*xlabel                    =Steps,
+/*xaxis                     =,,
+};
+
+/* Constant 79: Idle Engine Speed A/C On Added to Base */
+/*|| This is the increase to the base RPM when in the air conditioning is on.                      ||*/
+{
+/*startAddr                 =630,
+/*columns                   =1,
+/*rows                      =1,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =12.500000,
+/*map_name                  =Idle Engine Speed A/C On Added to Base,
+/*ylabel                    =,
+/*yaxis                     =,
+/*xlabel                    =RPM,
+/*xaxis                     =,,
+};
+
+/* Constant 80: Idle Engine Speed In Park/Neut Added to Base */
+/*|| This is the amount that the RPM will increase by when in park/neutral.                      ||*/
+{
+/*startAddr                 =62E,
+/*columns                   =1,
+/*rows                      =1,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =12.500000,
+/*map_name                  =Idle Engine Speed In Park/Neut Added to Base,
+/*ylabel                    =,
+/*yaxis                     =,
+/*xlabel                    =RPM,
+/*xaxis                     =,,
+};
+
+/* Constant 81: Idle Max. % TPS   */
+{
+/*startAddr                 =494,
+/*columns                   =1,
+/*rows                      =1,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =0.390625,
+/*map_name                  =Idle Max. % TPS  ,
+/*ylabel                    =,
+/*yaxis                     =    ,
+/*xlabel                    =% TPS,
+/*xaxis                     =,,
+};
+
+/* Constant 82: Idle Max. Vehicle Speed  */
+{
+/*startAddr                 =495,
+/*columns                   =1,
+/*rows                      =1,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =0.312500,
+/*map_name                  =Idle Max. Vehicle Speed ,
+/*ylabel                    =,
+/*yaxis                     =    ,
+/*xlabel                    =MPH,
+/*xaxis                     =,,
+};
+
+/* Constant 83: Idle O2 Rich/Lean Slow Zero Error Lower  */
+{
+/*startAddr                 =498,
+/*columns                   =1,
+/*rows                      =1,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =0.004400,
+/*map_name                  =Idle O2 Rich/Lean Slow Zero Error Lower ,
+/*ylabel                    =,
+/*yaxis                     =,
+/*xlabel                    =Volts,
+/*xaxis                     =,,
+};
+
+/* Constant 84: Idle O2 Rich/Lean Slow Zero Error Upper    */
+{
+/*startAddr                 =497,
+/*columns                   =1,
+/*rows                      =1,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =0.004400,
+/*map_name                  =Idle O2 Rich/Lean Slow Zero Error Upper   ,
+/*ylabel                    =,
+/*yaxis                     =,
+/*xlabel                    =Volts,
+/*xaxis                     =,,
+};
+
+/* Constant 85: Idle O2 Rich/Lean Threshold Fast  */
+{
+/*startAddr                 =496,
+/*columns                   =1,
+/*rows                      =1,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =0.004400,
+/*map_name                  =Idle O2 Rich/Lean Threshold Fast ,
+/*ylabel                    =,
+/*yaxis                     =,
+/*xlabel                    =Volts,
+/*xaxis                     =,,
+};
+
+/* Constant 86: Idle O2 Rich/Lean Threshold Fast Hysteresis  */
+{
+/*startAddr                 =49C,
+/*columns                   =1,
+/*rows                      =1,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =0.004400,
+/*map_name                  =Idle O2 Rich/Lean Threshold Fast Hysteresis ,
+/*ylabel                    =,
+/*yaxis                     =,
+/*xlabel                    =Volts,
+/*xaxis                     =,,
+};
+
+/* Constant 87: Idle Open Loop % Change AFR  */
+{
+/*startAddr                 =41F,
+/*columns                   =1,
+/*rows                      =1,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =0.390625,
+/*map_name                  =Idle Open Loop % Change AFR ,
+/*ylabel                    =,
+/*yaxis                     =,
+/*xlabel                    =% Change,
+/*xaxis                     =,,
+};
+
+/* Constant 88: Idle Engine Speed Deadband (Drive) */
+{
+/*startAddr                 =644,
+/*columns                   =1,
+/*rows                      =1,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =12.500000,
+/*map_name                  =Idle Engine Speed Deadband (Drive),
+/*ylabel                    =,
+/*yaxis                     =,
+/*xlabel                    =RPM,
+/*xaxis                     =,,
+};
+
+/* Constant 89: Idle Engine Speed Deadband (Park/Neutral) */
+{
+/*startAddr                 =643,
+/*columns                   =1,
+/*rows                      =1,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =12.500000,
+/*map_name                  =Idle Engine Speed Deadband (Park/Neutral),
+/*ylabel                    =,
+/*yaxis                     =,
+/*xlabel                    =RPM,
+/*xaxis                     =,,
+};
+
+/* Constant 90: Idle Engine Speed Startup Delay */
+{
+/*startAddr                 =62F,
+/*columns                   =1,
+/*rows                      =1,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =12.500000,
+/*map_name                  =Idle Engine Speed Startup Delay,
+/*ylabel                    =,
+/*yaxis                     =,
+/*xlabel                    =mSec.,
+/*xaxis                     =,,
+};
+
+/* Constant 91: Injector Flow Rate  */
+{
+/*startAddr                 =41C,
+/*columns                   =1,
+/*rows                      =1,
+/*elementSize               =2,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =1,
+/*factor                    =10158.800000,
+/*map_name                  =Injector Flow Rate ,
+/*ylabel                    =,
+/*yaxis                     =,
+/*xlabel                    =Lbs/Hr,
+/*xaxis                     =,,
+};
+
+/* Constant 92: Knock Enable Diff. Temp.  */
+/*||  Deg. C = Deg. F 
+          0 =  32  
+        10 =  50  
+        20 =  68   
+        30 =  86  
+        40 = 104  
+        50 = 122    
+        60 = 140   
+        70 = 158   
+        80 = 176 
+        90 = 194 
+      100 = 212  
+      110 = 230   
+      120 = 248              ||*/
+{
+/*startAddr                 =20D,
+/*columns                   =1,
+/*rows                      =1,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =-40.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =0.750000,
+/*map_name                  =Knock Enable Diff. Temp. ,
+/*ylabel                    =,
+/*yaxis                     =     ,
+/*xlabel                    =Deg. C,
+/*xaxis                     =,,
+};
+
+/* Constant 93: Knock Enable Min. Engine Speed */
+{
+/*startAddr                 =20A,
+/*columns                   =1,
+/*rows                      =1,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =12.500000,
+/*map_name                  =Knock Enable Min. Engine Speed,
+/*ylabel                    =,
+/*yaxis                     =    ,
+/*xlabel                    =RPM,
+/*xaxis                     =,,
+};
+
+/* Constant 94: Knock Enable Min. Temp. */
+/*||  Deg. C = Deg. F   
+          0 =  32   
+        10 =  50   
+        20 =  68   
+        30 =  86   
+        40 = 104  
+        50 = 122   
+        60 = 140   
+        70 = 158  
+        80 = 176   
+        90 = 194   
+      100 = 212    
+      110 = 230   
+      120 = 248             ||*/
+{
+/*startAddr                 =20C,
+/*columns                   =1,
+/*rows                      =1,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =-40.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =0.750000,
+/*map_name                  =Knock Enable Min. Temp.,
+/*ylabel                    =,
+/*yaxis                     =,
+/*xlabel                    =Deg. C,
+/*xaxis                     =,,
+};
+
+/* Constant 95: Knock Enable Min. Vehicle Speed  */
+{
+/*startAddr                 =20B,
+/*columns                   =1,
+/*rows                      =1,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =1.000000,
+/*map_name                  =Knock Enable Min. Vehicle Speed ,
+/*ylabel                    =,
+/*yaxis                     =,
+/*xlabel                    =MPH,
+/*xaxis                     =,,
+};
+
+/* Constant 96: Loop Closed Delay Timer Cold O2 Temp.  */
+/*|| The time before the ECM will go into closed loop operation when cold.                      ||*/
+{
+/*startAddr                 =48C,
+/*columns                   =1,
+/*rows                      =1,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =2.000000,
+/*map_name                  =Loop Closed Delay Timer Cold O2 Temp. ,
+/*ylabel                    =,
+/*yaxis                     =,
+/*xlabel                    =Sec.,
+/*xaxis                     =,,
+};
+
+/* Constant 97: Loop Closed Delay Timer Hot O2 Temp.  */
+/*|| The time before the ECM will go into closed loop operation when hot.                      ||*/
+{
+/*startAddr                 =48E,
+/*columns                   =1,
+/*rows                      =1,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =2.000000,
+/*map_name                  =Loop Closed Delay Timer Hot O2 Temp. ,
+/*ylabel                    =,
+/*yaxis                     =     ,
+/*xlabel                    =Sec.,
+/*xaxis                     =,,
+};
+
+/* Constant 98: Loop Closed Delay Timer Warm O2 Temp.  */
+/*|| The time before the ECM will go into closed loop operation when warm.                      ||*/
+{
+/*startAddr                 =48D,
+/*columns                   =1,
+/*rows                      =1,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =2.000000,
+/*map_name                  =Loop Closed Delay Timer Warm O2 Temp. ,
+/*ylabel                    =,
+/*yaxis                     =    ,
+/*xlabel                    =Sec.,
+/*xaxis                     =,,
+};
+
+/* Constant 99: Loop Closed Enable Hot Temp. Threshold  */
+/*||  Deg. C = Deg. F   
+          0 =  32    
+        10 =  50     
+        20 =  68    
+        30 =  86    
+        40 = 104  
+        50 = 122   
+        60 = 140   
+        70 = 158   
+        80 = 176    
+        90 = 194  
+      100 = 212  
+      110 = 230   
+      120 = 248             ||*/
+{
+/*startAddr                 =48A,
+/*columns                   =1,
+/*rows                      =1,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =-40.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =0.750000,
+/*map_name                  =Loop Closed Enable Hot Temp. Threshold ,
+/*ylabel                    =,
+/*yaxis                     =     ,
+/*xlabel                    =Deg. C,
+/*xaxis                     =,,
+};
+
+/* Constant 100: Loop Closed Enable Min. Temp.  */
+/*||    Deg. C = Deg. F   
+            0 =  32    
+          10 =  50   
+          20 =  68     
+          30 =  86   
+          40 = 104  
+          50 = 122   
+          60 = 140    
+          70 = 158   
+          80 = 176 
+          90 = 194  
+        100 = 212 
+        110 = 230  
+        120 = 248             ||*/
+{
+/*startAddr                 =489,
+/*columns                   =1,
+/*rows                      =1,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =-40.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =0.750000,
+/*map_name                  =Loop Closed Enable Min. Temp. ,
+/*ylabel                    =,
+/*yaxis                     =     ,
+/*xlabel                    =Deg. C,
+/*xaxis                     =,,
+};
+
+/* Constant 101: Loop Closed Timer Cold Temp. Threshold  */
+/*||  Deg. C = Deg. F   
+          0 =  32   
+        10 =  50    
+        20 =  68   
+        30 =  86    
+        40 = 104  
+        50 = 122  
+        60 = 140    
+        70 = 158     
+        80 = 176    
+        90 = 194   
+      100 = 212   
+      110 = 230   
+      120 = 248             ||*/
+{
+/*startAddr                 =48B,
+/*columns                   =1,
+/*rows                      =1,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =-40.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =0.750000,
+/*map_name                  =Loop Closed Timer Cold Temp. Threshold ,
+/*ylabel                    =,
+/*yaxis                     =     ,
+/*xlabel                    =Deg. C,
+/*xaxis                     =,,
+};
+
+/* Constant 102: Low Octane Knock Retard  */
+{
+/*startAddr                 =22E,
+/*columns                   =1,
+/*rows                      =1,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =0.351563,
+/*map_name                  =Low Octane Knock Retard ,
+/*ylabel                    =,
+/*yaxis                     =,
+/*xlabel                    =Deg. Retard,
+/*xaxis                     =,,
+};
+
+/* Constant 103: Low Octane Knock Retard Amount */
+{
+/*startAddr                 =22B,
+/*columns                   =1,
+/*rows                      =1,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =0.351563,
+/*map_name                  =Low Octane Knock Retard Amount,
+/*ylabel                    =,
+/*yaxis                     =    ,
+/*xlabel                    =Deg. Retard,
+/*xaxis                     =,,
+};
+
+/* Constant 104: Low Octane Knock Retard Decrease Amount  */
+{
+/*startAddr                 =22D,
+/*columns                   =1,
+/*rows                      =1,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =0.351563,
+/*map_name                  =Low Octane Knock Retard Decrease Amount ,
+/*ylabel                    =,
+/*yaxis                     =,
+/*xlabel                    =Deg. Retard,
+/*xaxis                     =,,
+};
+
+/* Constant 105: Low Octane Knock Retard Diff. MAP Threshold  */
+{
+/*startAddr                 =22A,
+/*columns                   =1,
+/*rows                      =1,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =0.312500,
+/*map_name                  =Low Octane Knock Retard Diff. MAP Threshold ,
+/*ylabel                    =,
+/*yaxis                     =     ,
+/*xlabel                    =kPa,
+/*xaxis                     =,,
+};
+
+/* Constant 106: Low Octane Knock Retard Enable MAP   */
+{
+/*startAddr                 =229,
+/*columns                   =1,
+/*rows                      =1,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =20.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =0.312500,
+/*map_name                  =Low Octane Knock Retard Enable MAP  ,
+/*ylabel                    =,
+/*yaxis                     =     ,
+/*xlabel                    =kPa,
+/*xaxis                     =,,
+};
+
+/* Constant 107: Low Octane Knock Retard Increase Amount */
+{
+/*startAddr                 =22C,
+/*columns                   =1,
+/*rows                      =1,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =0.351563,
+/*map_name                  =Low Octane Knock Retard Increase Amount,
+/*ylabel                    =,
+/*yaxis                     =     ,
+/*xlabel                    =Deg. Advance,
+/*xaxis                     =,,
+};
+
+/* Constant 108: PROM ID */
+{
+/*startAddr                 =0,
+/*columns                   =1,
+/*rows                      =1,
+/*elementSize               =2,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =1.000000,
+/*map_name                  =PROM ID,
+/*ylabel                    =,
+/*yaxis                     =,
+/*xlabel                    =ID,
+/*xaxis                     =,,
+};
+
+/* Constant 109: Spark Advance Base Temp. Correction Table Bias */
+{
+/*startAddr                 =137,
+/*columns                   =1,
+/*rows                      =1,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =0.351563,
+/*map_name                  =Spark Advance Base Temp. Correction Table Bias,
+/*ylabel                    =,
+/*yaxis                     =,
+/*xlabel                    =Deg. C,
+/*xaxis                     =,,
+};
+
+/* Constant 110: Spark Advance Cold Disable Temp. */
+/*||  Deg. C = Deg. F    
+          0 =  32    
+        10 =  50   
+        20 =  68   
+        30 =  86   
+        40 = 104  
+        50 = 122  
+        60 = 140   
+        70 = 158  
+        80 = 176  
+        90 = 194  
+      100 = 212  
+      110 = 230   
+      120 = 248             ||*/
+{
+/*startAddr                 =31,
+/*columns                   =1,
+/*rows                      =1,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =-40.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =0.750000,
+/*map_name                  =Spark Advance Cold Disable Temp.,
+/*ylabel                    =,
+/*yaxis                     =,
+/*xlabel                    =Deg. C,
+/*xaxis                     =,,
+};
+
+/* Constant 111: Spark Advance Decay Rate Startup  */
+{
+/*startAddr                 =1B8,
+/*columns                   =1,
+/*rows                      =1,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =1.000000,
+/*map_name                  =Spark Advance Decay Rate Startup ,
+/*ylabel                    =,
+/*yaxis                     =     ,
+/*xlabel                    =Reference Pulses,
+/*xaxis                     =,,
+};
+
+/* Constant 112: Spark Advance Initial (Distributor Setting) */
+/*|| This is the initial distributor timing setting.                              ||*/
+{
+/*startAddr                 =25,
+/*columns                   =1,
+/*rows                      =1,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =0.351563,
+/*map_name                  =Spark Advance Initial (Distributor Setting),
+/*ylabel                    =,
+/*yaxis                     =  ,
+/*xlabel                    =Deg. Advance,
+/*xaxis                     =,,
+};
+
+/* Constant 113: Spark Advance Max.  */
+/*|| This is the total from the Initial Spark Advance.                              ||*/
+{
+/*startAddr                 =26,
+/*columns                   =1,
+/*rows                      =1,
+/*elementSize               =2,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =0.351563,
+/*map_name                  =Spark Advance Max. ,
+/*ylabel                    =,
+/*yaxis                     =,
+/*xlabel                    =Deg. Advance,
+/*xaxis                     =,,
+};
+
+/* Constant 114: Spark Advance Stall Saver Disable Engine Speed */
+{
+/*startAddr                 =2D,
+/*columns                   =1,
+/*rows                      =1,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =12.500000,
+/*map_name                  =Spark Advance Stall Saver Disable Engine Speed,
+/*ylabel                    =,
+/*yaxis                     =,
+/*xlabel                    =RPM,
+/*xaxis                     =,,
+};
+
+/* Constant 115: Spark Advance Stall Saver Enable Engine Below 300 RPM */
+{
+/*startAddr                 =2A,
+/*columns                   =1,
+/*rows                      =1,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =12.500000,
+/*map_name                  =Spark Advance Stall Saver Enable Engine Below 300 RPM,
+/*ylabel                    =,
+/*yaxis                     =,
+/*xlabel                    =RPM,
+/*xaxis                     =,,
+};
+
+/* Constant 116: Spark Advance Stall Saver Enable Engine Speed 300 To 550 RPM */
+{
+/*startAddr                 =2B,
+/*columns                   =1,
+/*rows                      =1,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =12.500000,
+/*map_name                  =Spark Advance Stall Saver Enable Engine Speed 300 To 550 RPM,
+/*ylabel                    =,
+/*yaxis                     =,
+/*xlabel                    =RPM,
+/*xaxis                     =,,
+};
+
+/* Constant 117: Spark Advance Stall Saver Enable Engine 550 To Target RPM */
+{
+/*startAddr                 =2C,
+/*columns                   =1,
+/*rows                      =1,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =12.500000,
+/*map_name                  =Spark Advance Stall Saver Enable Engine 550 To Target RPM,
+/*ylabel                    =,
+/*yaxis                     =,
+/*xlabel                    =RPM,
+/*xaxis                     =,,
+};
+
+/* Constant 118: Spark Retard Hot Disable Temp. */
+/*||  Deg. C = Deg. F  
+          0 =  32   
+        10 =  50   
+        20 =  68   
+        30 =  86   
+        40 = 104  
+        50 = 122   
+        60 = 140   
+        70 = 158   
+        80 = 176   
+        90 = 194    
+      100 = 212    
+      110 = 230    
+      120 = 248             ||*/
+{
+/*startAddr                 =2F,
+/*columns                   =1,
+/*rows                      =1,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =-40.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =0.750000,
+/*map_name                  =Spark Retard Hot Disable Temp.,
+/*ylabel                    =,
+/*yaxis                     =,
+/*xlabel                    =Deg. C,
+/*xaxis                     =,,
+};
+
+/* Constant 119: Stay Alive Cell At Idle */
+{
+/*startAddr                 =527,
+/*columns                   =1,
+/*rows                      =1,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =1.000000,
+/*map_name                  =Stay Alive Cell At Idle,
+/*ylabel                    =,
+/*yaxis                     =,
+/*xlabel                    =Cell,
+/*xaxis                     =,,
+};
+
+/* Constant 120: Stay Alive Cell Non Idle */
+{
+/*startAddr                 =528,
+/*columns                   =1,
+/*rows                      =1,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =1.000000,
+/*map_name                  =Stay Alive Cell Non Idle,
+/*ylabel                    =,
+/*yaxis                     =,
+/*xlabel                    =Cell,
+/*xaxis                     =,,
+};
+
+/* Constant 121: Stay Alive Memory Disable Temp. */
+/*||  Deg. C = Deg. F   
+          0 =  32   
+        10 =  50   
+        20 =  68  
+        30 =  86   
+        40 = 104   
+        50 = 122   
+        60 = 140   
+        70 = 158   
+        80 = 176   
+        90 = 194   
+      100 = 212   
+      110 = 230   
+      120 = 248             ||*/
+{
+/*startAddr                 =52B,
+/*columns                   =1,
+/*rows                      =1,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =-40.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =0.750000,
+/*map_name                  =Stay Alive Memory Disable Temp.,
+/*ylabel                    =,
+/*yaxis                     =,
+/*xlabel                    =Deg. C,
+/*xaxis                     =,,
+};
+
+/* Constant 122: Stay Alive Memory Enable Temp. */
+/*||  Deg. C = Deg. F    
+          0 =  32    
+        10 =  50    
+        20 =  68    
+        30 =  86    
+        40 = 104   
+        50 = 122   
+        60 = 140   
+        70 = 158    
+        80 = 176   
+        90 = 194   
+      100 = 212   
+      110 = 230   
+      120 = 248             ||*/
+{
+/*startAddr                 =52A,
+/*columns                   =1,
+/*rows                      =1,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =-40.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =0.750000,
+/*map_name                  =Stay Alive Memory Enable Temp.,
+/*ylabel                    =,
+/*yaxis                     =,
+/*xlabel                    =Deg. C,
+/*xaxis                     =,,
+};
+
+/* Constant 123: Stoichiometeric Air Fuel Ratio */
+/*|| The target AFR. This is 14.7.                      ||*/
+{
+/*startAddr                 =41A,
+/*columns                   =1,
+/*rows                      =1,
+/*elementSize               =2,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =1,
+/*factor                    =6553.600000,
+/*map_name                  =Stoichiometeric Air Fuel Ratio,
+/*ylabel                    =,
+/*yaxis                     =     ,
+/*xlabel                    =AFR,
+/*xaxis                     =,,
+};
+
+/* Constant 124: TCC Coast Release */
+{
+/*startAddr                 =315,
+/*columns                   =1,
+/*rows                      =1,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =1.000000,
+/*map_name                  =TCC Coast Release,
+/*ylabel                    = ,
+/*yaxis                     =,
+/*xlabel                    =MPH,
+/*xaxis                     =,,
+};
+
+/* Constant 125: TCC Enable Min. Temp.  */
+/*||  Deg. C = Deg. F   
+          0 =  32    
+        10 =  50   
+        20 =  68    
+        30 =  86   
+        40 = 104    
+        50 = 122    
+        60 = 140    
+        70 = 158    
+        80 = 176    
+        90 = 194    
+      100 = 212    
+      110 = 230      
+      120 = 248             ||*/
+{
+/*startAddr                 =314,
+/*columns                   =1,
+/*rows                      =1,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =-40.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =0.750000,
+/*map_name                  =TCC Enable Min. Temp. ,
+/*ylabel                    =,
+/*yaxis                     =,
+/*xlabel                    =Deg. C,
+/*xaxis                     =,,
+};
+
+/* Constant 126: TCC Lock High Gear Vehicle Speed */
+{
+/*startAddr                 =33B,
+/*columns                   =1,
+/*rows                      =1,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =1.000000,
+/*map_name                  =TCC Lock High Gear Vehicle Speed,
+/*ylabel                    =,
+/*yaxis                     =     ,
+/*xlabel                    =MPH,
+/*xaxis                     =,,
+};
+
+/* Constant 127: TCC Lock Low Gears Vehicle Speed */
+{
+/*startAddr                 =31F,
+/*columns                   =1,
+/*rows                      =1,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =1.000000,
+/*map_name                  =TCC Lock Low Gears Vehicle Speed,
+/*ylabel                    =,
+/*yaxis                     =     ,
+/*xlabel                    =MPH,
+/*xaxis                     =,,
+};
+
+/* Constant 128: TCC Unlock High Gear Vehicle Speed */
+{
+/*startAddr                 =33D,
+/*columns                   =1,
+/*rows                      =1,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =1.000000,
+/*map_name                  =TCC Unlock High Gear Vehicle Speed,
+/*ylabel                    =,
+/*yaxis                     =     ,
+/*xlabel                    =MPH,
+/*xaxis                     =,,
+};
+
+/* Constant 129: TCC Unlock Low Gears Vehicle Speed */
+{
+/*startAddr                 =321,
+/*columns                   =1,
+/*rows                      =1,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =1.000000,
+/*map_name                  =TCC Unlock Low Gears Vehicle Speed,
+/*ylabel                    =,
+/*yaxis                     =     ,
+/*xlabel                    =MPH,
+/*xaxis                     =,,
+};
+
+/* Constant 130: TCC Unlock Prevention Vehicle Speed */
+{
+/*startAddr                 =31D,
+/*columns                   =1,
+/*rows                      =1,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =1.000000,
+/*map_name                  =TCC Unlock Prevention Vehicle Speed,
+/*ylabel                    =,
+/*yaxis                     =,
+/*xlabel                    =MPH,
+/*xaxis                     =,,
+};
+
+/* Constant 131: Vehicle Speed Sensor  */
+/*|| For SD use 4000 P/M.                                         ||*/
+{
+/*startAddr                 =15,
+/*columns                   =1,
+/*rows                      =1,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =1,
+/*factor                    =921600.000000,
+/*map_name                  =Vehicle Speed Sensor ,
+/*ylabel                    =,
+/*yaxis                     =,
+/*xlabel                    =Pulses/Mile,
+/*xaxis                     =,,
+};
+
+/* Constant 132: Vehicle Speed Sensor Instrument Panel Pulse Divisor  */
+{
+/*startAddr                 =14,
+/*columns                   =1,
+/*rows                      =1,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =1.000000,
+/*map_name                  =Vehicle Speed Sensor Instrument Panel Pulse Divisor ,
+/*ylabel                    =,
+/*yaxis                     =,
+/*xlabel                    =,
+/*xaxis                     =,,
+};
+
+/* ***Flags*** */
+
+/* Flag 1: Switch 16 (VATS TCC-R 4th-NO VATS OLP) */
+/*||  b6, 1 = USE A/D BATT FOR INJ Lk Up, (else use PUMP VDC)  OLP= Open Loop Purge    VATS= VATS Enable   b3, 1 = LET LOW TPS DISABLE CCP 4thNO= 4th Gear N.O.  b1, 1 = 16 Hz CCP SOLENIOD IN USE  TCCR=TCC Control On=RPM              ||*/
+{
+/*startAddr                 =16,
+/*columns                   =1,
+/*rows                      =1,
+/*elementSize               =1,
+/*bitMask                   =80,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =1.000000,
+/*map_name                  =Switch 16 (VATS TCC-R 4th-NO VATS OLP),
+/*ylabel                    =,
+/*yaxis                     =   B7   B6  OLP VATS   B34thNO   B1 TCCR,
+/*xlabel                    =,
+/*xaxis                     =,,
+};
+
+/* Flag 2: Switch 17 Single/Dual Air Valve (Dual EGR)  */
+/*||  Dual = DUAL AIR VALVE X=Dual 0 = SINGLE EGR = EGR DIAG, 1 PASS OPT               ||*/
+{
+/*startAddr                 =17,
+/*columns                   =1,
+/*rows                      =1,
+/*elementSize               =1,
+/*bitMask                   =80,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =1.000000,
+/*map_name                  =Switch 17 Single/Dual Air Valve (Dual EGR) ,
+/*ylabel                    =Option,
+/*yaxis                     =b7   b6   b5   b4   b3    Dualb1     EGR,
+/*xlabel                    =,
+/*xaxis                     =,,
+};
+
+/* Flag 3: Switch 18 (VSS M/AT U-TCC I-MAT VSS CCPE) */
+/*|| CCPE=Charcoal Canister Purge  Enable  Vehicle Speed Sensor Enable b5, 1 = INT RESET WHEN BLM CELL CHG IMAT= Inverse MAT Lookup Table Enable  UTCC= Unlock TCC in Fuel Cut Off Deceleration Mode.  M/AT= Manual/Auto Transmission Select. On=Manual Off=Auto  b1, 1 = INT RESET WHEN Accel Enr IN WORK b0, 1 = COOL FOR IDLE SPD TIME OUT                            ||*/
+{
+/*startAddr                 =18,
+/*columns                   =1,
+/*rows                      =1,
+/*elementSize               =1,
+/*bitMask                   =80,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =1.000000,
+/*map_name                  =Switch 18 (VSS M/AT U-TCC I-MAT VSS CCPE),
+/*ylabel                    =Option,
+/*yaxis                     = CCPE  VSS   B5 IMAT UTCC M/AT B1     B0,
+/*xlabel                    =,
+/*xaxis                     =,,
+};
+
+/* Flag 4: Switch 19 (Fan PSS TCCH 4th HWM) */
+/*||  4thH= Enable Highway Mode Spark Advance when in 4th Gear.   PSS= Power Steering Switch Enable Fan= AC Pressure Switch Fan Enable  TCCH=Enable Highway Mode Spark Advance when TCC is Locked.  b3 , 1 = IF CCP CHG, FORCE INT TO 128 b2 , 1 = 4th GR HIWAY MODE SA CHECK  b0 , 1 = ERROR 32 DISABLED IF PASSES 1 TIME                                 ||*/
+{
+/*startAddr                 =19,
+/*columns                   =1,
+/*rows                      =1,
+/*elementSize               =1,
+/*bitMask                   =80,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =1.000000,
+/*map_name                  =Switch 19 (Fan PSS TCCH 4th HWM),
+/*ylabel                    =Option,
+/*yaxis                     = b7   PSS   Fan TCCH b3   4thH b1   b0  ,
+/*xlabel                    =,
+/*xaxis                     =,,
+};
+
+/* Flag 5: Switch 249 Error Code Masks (12-22)  */
+/*|| 12=ECM   13=Oxygen Sensor   14=Coolant Temp. Sensor High 15=Coolant Temp. Sensor Low  16=Direct Ignition System Fault Line   21=TPS Sensor Voltage High  22=TPS Sensor Voltage Low 23=MAT Sensor Temp. Low                              ||*/
+{
+/*startAddr                 =249,
+/*columns                   =1,
+/*rows                      =1,
+/*elementSize               =1,
+/*bitMask                   =80,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =1.000000,
+/*map_name                  =Switch 249 Error Code Masks (12-22) ,
+/*ylabel                    =Code,
+/*yaxis                     =12   13   14   15   16   21   22     23 ,
+/*xlabel                    =,
+/*xaxis                     =,,
+};
+
+/* Flag 6: Switch 24A Error Code Masks (24-34)  */
+/*|| 24=Vehicle Speed Sensor   25=MAT Sensor Temp. High 32=EGR Valve   33=MAP Voltage High - Low Vacuum 34=MAP Voltage Low - High Vacuum                                 ||*/
+{
+/*startAddr                 =24A,
+/*columns                   =1,
+/*rows                      =1,
+/*elementSize               =1,
+/*bitMask                   =80,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =1.000000,
+/*map_name                  =Switch 24A Error Code Masks (24-34) ,
+/*ylabel                    =Code,
+/*yaxis                     =24   25   B5   B4   32   33   34      B0,
+/*xlabel                    =,
+/*xaxis                     =,,
+};
+
+/* Flag 7: Switch 24B Error Code Masks (36-51)  */
+/*|| 36=Direct Ignition System (DIS) Missing signal   41=Cylinder Select Error (Faulty or Incorrect Mem-cal)   42=Electronic Spark Timing (EST)  43=Electronic Spark Control (ESC)  44=Oxygen Sensor Lean   45=Oxygen Sensor Rich   46= Vehicle Anti-Thieft (VATS)   51= Mem-Cal Error (Faulty or Incorrect)                             ||*/
+{
+/*startAddr                 =24B,
+/*columns                   =1,
+/*rows                      =1,
+/*elementSize               =1,
+/*bitMask                   =80,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =1.000000,
+/*map_name                  =Switch 24B Error Code Masks (36-51) ,
+/*ylabel                    =Code,
+/*yaxis                     =36   41   42   43   44   45   46   51   ,
+/*xlabel                    =,
+/*xaxis                     =,,
+};
+
+/* Flag 8: Switch 24C Error Code Masks (52-63)  */
+/*|| 52=Engine Oil Temp. (Low)  53=System Voltage (High)  54=Fuel Pump (Low Voltage)   55= Fuel Lean Monitor   56=Vacuum Sen (High or Low Vacuum)   62=Oil Temp. Hi  63=Right Oxygen Sen (Open Circuit)                             ||*/
+{
+/*startAddr                 =24C,
+/*columns                   =1,
+/*rows                      =1,
+/*elementSize               =1,
+/*bitMask                   =80,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =1.000000,
+/*map_name                  =Switch 24C Error Code Masks (52-63) ,
+/*ylabel                    =Code,
+/*yaxis                     =52   53   54   55   56    61  62    63  ,
+/*xlabel                    =,
+/*xaxis                     =,,
+};
+
+/* Flag 9: Switch 24D Error Code Masks (65-66)  */
+/*|| 64=Right Oxygen Sen (Lean Exhaust)  65=Right Oxygen Sen (Rich Exhaust)  B5 = CODE 66   B6 = CODE 65                           ||*/
+{
+/*startAddr                 =24D,
+/*columns                   =1,
+/*rows                      =1,
+/*elementSize               =1,
+/*bitMask                   =80,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =1.000000,
+/*map_name                  =Switch 24D Error Code Masks (65-66) ,
+/*ylabel                    =Code,
+/*yaxis                     =none none 65   66   none none none none ,
+/*xlabel                    =,
+/*xaxis                     =,,
+};
+
+/* ***Tables*** */
+
+/* Table 1: BLM Cell Boundaries  */
+{
+/*startAddr                 =510,
+/*columns                   =1,
+/*rows                      =3,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =25.000000,
+/*map_name                  =BLM Cell Boundaries ,
+/*ylabel                    =Boundary,
+/*yaxis                     =Low  Mid     Hi,
+/*xlabel                    =RPM,
+/*xaxis                     =   ,,
+};
+
+/* Table 2: BLM Cell Boundaries MAP  */
+{
+/*startAddr                 =513,
+/*columns                   =1,
+/*rows                      =3,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =1.000000,
+/*map_name                  =BLM Cell Boundaries MAP ,
+/*ylabel                    =Boundary,
+/*yaxis                     =Low  Mid     Hi,
+/*xlabel                    = MAP (kPa),
+/*xaxis                     =   ,,
+};
+
+/* Table 3: Crank Fuel Delivery Delay vs. MAT */
+/*||  Deg. C = Deg. F  
+          0 =  32   
+        10 =  50   
+        20 =  68   
+        30 =  86   
+        40 = 104  
+        50 = 122   
+        60 = 140   
+        70 = 158   
+        80 = 176   
+        90 = 194    
+      100 = 212    
+      110 = 230    
+      120 = 248                         ||*/
+{
+/*startAddr                 =39C,
+/*columns                   =1,
+/*rows                      =17,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =1.000000,
+/*map_name                  =Crank Fuel Delivery Delay vs. MAT,
+/*ylabel                    =Deg. C,
+/*yaxis                     =  -40  -28  -16   -4    8   20   32   44   56   68   80   92  104  116  128  140  152,
+/*xlabel                    =DRP,
+/*xaxis                     =,,
+};
+
+/* Table 4: Crank Pulse Mult. Vs. Ref Pulses 1-24 */
+{
+/*startAddr                 =3C7,
+/*columns                   =1,
+/*rows                      =24,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =0.003906,
+/*map_name                  =Crank Pulse Mult. Vs. Ref Pulses 1-24,
+/*ylabel                    =Ref. Pulse,
+/*yaxis                     =    1    2    3    4    5    6    7    8    9   10   11   12   13   14   15   16   17   18   19   20   21   22   23   24,
+/*xlabel                    =Mult.,
+/*xaxis                     =,,
+};
+
+/* Table 5: Crank Pulse Width Vs. Temp. */
+/*||  Deg. C = Deg. F  
+          0 =  32   
+        10 =  50   
+        20 =  68   
+        30 =  86   
+        40 = 104  
+        50 = 122   
+        60 = 140   
+        70 = 158   
+        80 = 176   
+        90 = 194    
+      100 = 212    
+      110 = 230    
+      120 = 248             ||*/
+{
+/*startAddr                 =3AF,
+/*columns                   =1,
+/*rows                      =14,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =200.004878,
+/*map_name                  =Crank Pulse Width Vs. Temp.,
+/*ylabel                    =deg C,
+/*yaxis                     =-40  -28  -16  -4   8    20   32   44   56   68   80   92   104  116,
+/*xlabel                    =uSec.,
+/*xaxis                     =,,
+};
+
+/* Table 6: EGR Duty Cycle Mult. Vs. Temp. */
+/*||  Deg. C = Deg. F  
+          0 =  32   
+        10 =  50   
+        20 =  68   
+        30 =  86   
+        40 = 104  
+        50 = 122   
+        60 = 140   
+        70 = 158   
+        80 = 176   
+        90 = 194    
+      100 = 212    
+      110 = 230    
+      120 = 248             ||*/
+{
+/*startAddr                 =2D9,
+/*columns                   =1,
+/*rows                      =7,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =0.007813,
+/*map_name                  =EGR Duty Cycle Mult. Vs. Temp.,
+/*ylabel                    =Deg. C,
+/*yaxis                     =8    20   32   44   56   68      80,
+/*xlabel                    =% Duty Cycle,
+/*xaxis                     =,,
+};
+
+/* Table 7: EGR Duty Cycle RPM Vs. MAP */
+{
+/*startAddr                 =2B5,
+/*columns                   =9,
+/*rows                      =4,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =0.390625,
+/*map_name                  =EGR Duty Cycle RPM Vs. MAP,
+/*ylabel                    = Vacuum (kPa),
+/*yaxis                     =  800 1200 1600 2000 2400,
+/*xlabel                    =RPM,
+/*xaxis                     = 80 70 60 50 40 30 20 10  0,,
+};
+
+/* Table 8: Enrich Accel Delta MAP Enable Vs. TPS */
+/*|| The amount of TPS required to allow for a delta MAP AE event to occur. If the TPS isn't exceeding the amount in the table MAP AE will not occur. This specifies how much of a MAP delta change there has to be for the AE event to occur vs. TPS. The TPS delta is fixed but the KPA change can be modified.                   ||*/
+{
+/*startAddr                 =59A,
+/*columns                   =1,
+/*rows                      =5,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =0.312500,
+/*map_name                  =Enrich Accel Delta MAP Enable Vs. TPS,
+/*ylabel                    =% TPS,
+/*yaxis                     =    0 12.5   25 37.5   50,
+/*xlabel                    =kPa,
+/*xaxis                     =,,
+};
+
+/* Table 9: Enrich Accel Delta MAP Factor Mult. Vs. TPS */
+/*|| The amount of AE that is calculated for a state change in TPS. If the TPS change X amount the multiplier will factor in and provide more AE shot if its value is increased. Recoding the value decreases TPS delta AE being added.                   ||*/
+{
+/*startAddr                 =59F,
+/*columns                   =1,
+/*rows                      =5,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =1,
+/*factor                    =64.000000,
+/*map_name                  =Enrich Accel Delta MAP Factor Mult. Vs. TPS,
+/*ylabel                    =% TPS,
+/*yaxis                     =    0 12.5   25 37.5   50,
+/*xlabel                    =Mult.,
+/*xaxis                     =0  13 25 38  50,,
+};
+
+/* Table 10: Enrich Accel Delta MAP Pulse Width Decay Factor Vs. Temp. */
+/*|| Adjusts the slope or decrease in the actual Pump shot. This controls the slope of decrease vs. coolant temp. over a period of time. Do all tuning hot.   
+ Deg. C = Deg. F  
+          0 =  32   
+        10 =  50   
+        20 =  68   
+        30 =  86   
+        40 = 104  
+        50 = 122   
+        60 = 140   
+        70 = 158   
+        80 = 176   
+        90 = 194    
+      100 = 212    
+      110 = 230    
+      120 = 248             ||*/
+{
+/*startAddr                 =591,
+/*columns                   =1,
+/*rows                      =9,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =0.390625,
+/*map_name                  =Enrich Accel Delta MAP Pulse Width Decay Factor Vs. Temp.,
+/*ylabel                    =Deg C,
+/*yaxis                     =  -40  -16    8   32   56   80  104  128  152,
+/*xlabel                    =% Decay,
+/*xaxis                     =-40-168  32 56 80 104128152,,
+};
+
+/* Table 11: Enrich Accel Delta MAP Pulse Width Mult. Vs. Delta MAP */
+/*|| Increasing the values add AE pulse width when the MAP goes delta. When a sudden load change occurs the BPW the ECM is computing will be multiplied by this number and added to the final PW to deliver the final AE enriched PW.                   ||*/
+{
+/*startAddr                 =580,
+/*columns                   =1,
+/*rows                      =6,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =0.003906,
+/*map_name                  =Enrich Accel Delta MAP Pulse Width Mult. Vs. Delta MAP,
+/*ylabel                    =MAP (kPa),
+/*yaxis                     =    0   10   20   30   40   50,
+/*xlabel                    =Multiplier,
+/*xaxis                     =,,
+};
+
+/* Table 12: Enrich Accel Delta MAP Pulse Width Mult. Vs. Temp. */
+/*|| The table is works like the TPS clamp. It fixes load changes when the engine is cold. Do all AE tuning when at running temperature and work backwards to cold.   
+ Deg. C = Deg. F  
+          0 =  32   
+        10 =  50   
+        20 =  68   
+        30 =  86   
+        40 = 104  
+        50 = 122   
+        60 = 140   
+        70 = 158   
+        80 = 176   
+        90 = 194    
+      100 = 212    
+      110 = 230    
+      120 = 248             ||*/
+{
+/*startAddr                 =587,
+/*columns                   =1,
+/*rows                      =9,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =0.003906,
+/*map_name                  =Enrich Accel Delta MAP Pulse Width Mult. Vs. Temp.,
+/*ylabel                    =Deg C,
+/*yaxis                     =  -40  -16    8   32   56   80  104  128  152,
+/*xlabel                    =Mult.,
+/*xaxis                     =-40-168  32 56 80 104128152,,
+};
+
+/* Table 13: Enrich Accel Delta TPS Factor Vs. Ref. Pulse */
+/*|| The base PW it takes from the current PW to arrive at a value to divide for the rest of the AE functions. If the AE tables are maxed these values need to be increased.                   ||*/
+{
+/*startAddr                 =53B,
+/*columns                   =1,
+/*rows                      =8,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =0.015625,
+/*map_name                  =Enrich Accel Delta TPS Factor Vs. Ref. Pulse,
+/*ylabel                    =Ref. Pulse,
+/*yaxis                     =    1    2    3    4    5    6    7    8,
+/*xlabel                    =Mult.,
+/*xaxis                     =1  2  3  4  5  6  7    8,,
+};
+
+/* Table 14: Enrich Accel Delta TPS Mult vs. Delta TPS */
+/*|| Try increasing the values to add AE to a delta tps change. Then try decreasing the decay values..                   ||*/
+{
+/*startAddr                 =543,
+/*columns                   =1,
+/*rows                      =17,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =0.007813,
+/*map_name                  =Enrich Accel Delta TPS Mult vs. Delta TPS,
+/*ylabel                    =% TPS,
+/*yaxis                     =  0.0  3.1  6.3  9.4 12.5 15.6 18.8 21.9 25.0 28.1 31.3 34.4 37.5 40.6 43.8 46.9 50.0,
+/*xlabel                    =Mult.,
+/*xaxis                     =   ,,
+};
+
+/* Table 15: Enrich Accel Delta TPS Pulse Width Factor Vs. Temp. */
+/*|| Increasing these values increase AE at various engine temps. Use this to correct for a rich or lean Tip in issue when hot or cold. Do all AE tuning hot so you can scale up or down the cold values. The curve tends to be somewhat linear.  
+ Deg. C = Deg. F  
+          0 =  32   
+        10 =  50   
+        20 =  68   
+        30 =  86   
+        40 = 104  
+        50 = 122   
+        60 = 140   
+        70 = 158   
+        80 = 176   
+        90 = 194    
+      100 = 212    
+      110 = 230    
+      120 = 248             ||*/
+{
+/*startAddr                 =554,
+/*columns                   =1,
+/*rows                      =15,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =0.007813,
+/*map_name                  =Enrich Accel Delta TPS Pulse Width Factor Vs. Temp.,
+/*ylabel                    =Deg C,
+/*yaxis                     =  -40  -28  -16   -4    8   20   32   44   56   68   80   92  104  116  128,
+/*xlabel                    =Mult.,
+/*xaxis                     =-40-28-16-4 8  20 32 44 56 68 80 92 104116128 ,,
+};
+
+/* Table 16: Enrich Power Change to AFR Vs. RPM  */
+/*|| The percent change to AFR when in power enrichment mode.  The values from this table and the PE  Change To AFR Vs. RPM are summed to arrive at the final Power Enrichment Fuel/Air ratio.  The resulting AFR can be calculated as follows: PE AFR = 14.7 / (1 + %Change vs. Cool/100 + %Change vs RPM/100) For the selected RPM, suppose the percent change to AFR from the RPM table is = - 5.1 and the percent change to AFR from the COOLANT table at the selected coolant temperature is = 22.7, then the approximate Power Enrichment AFR would be: 14.7 / (1 -0.051+.227) = 12.5:1 AFR                      ||*/
+{
+/*startAddr                 =617,
+/*columns                   =1,
+/*rows                      =17,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =-50.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =0.390625,
+/*map_name                  =Enrich Power Change to AFR Vs. RPM ,
+/*ylabel                    =RPM,
+/*yaxis                     =    0  400  800 1200 1600 2000 2400 2800 3200 3600 4000 4400 4800 5200 5600 6000 6400,
+/*xlabel                    =% Change,
+/*xaxis                     =,,
+};
+
+/* Table 17: Enrich Power Change to AFR Vs. Temp.  */
+/*|| The percent change to AFR when in power enrichment mode. The values from this table and the PE Change To AFR Vs. RPM are summed to arrive at the final Power Enrichment Fuel/Air ratio. The resulting AFR can be calculated as follows: PE AFR = 14.7 / (1 + %Change vs. Cool/100 + %Change vs. RPM/100) For the selected RPM, suppose the percent change to AFR from the RPM table is = - 5.1 and the percent change to AFR from the COOLANT table at the selected coolant temperature is = 22.7, then the approximate Power Enrichment AFR would be: 14.7 / (1 -0.051+.227) = 12.5:1 AFR   
+ Deg. C = Deg. F  
+          0 =  32   
+        10 =  50   
+        20 =  68   
+        30 =  86   
+        40 = 104  
+        50 = 122   
+        60 = 140   
+        70 = 158   
+        80 = 176   
+        90 = 194    
+      100 = 212    
+      110 = 230    
+      120 = 248             ||*/
+{
+/*startAddr                 =60E,
+/*columns                   =1,
+/*rows                      =9,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =0.390625,
+/*map_name                  =Enrich Power Change to AFR Vs. Temp. ,
+/*ylabel                    =Deg. C,
+/*yaxis                     =  -40  -16    8   32   56   80  104  128  152,
+/*xlabel                    =% Change,
+/*xaxis                     =,,
+};
+
+/* Table 18: Enrich Power Enable % TPS  */
+/*|| The percent throttle position to enable power enrichment mode.                      ||*/
+{
+/*startAddr                 =603,
+/*columns                   =1,
+/*rows                      =5,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =0.390625,
+/*map_name                  =Enrich Power Enable % TPS ,
+/*ylabel                    =RPM,
+/*yaxis                     =400  1200 2000 3200  4800,
+/*xlabel                    =% TPS,
+/*xaxis                     =,,
+};
+
+/* Table 19: Enrich Power Enable When Hot   */
+/*|| The throttle position to enable power enrichment when the coolant temperature is above the value specified.                      ||*/
+{
+/*startAddr                 =608,
+/*columns                   =1,
+/*rows                      =5,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =0.390625,
+/*map_name                  =Enrich Power Enable When Hot  ,
+/*ylabel                    =RPM,
+/*yaxis                     =  400 1200 2000 3200 4800,
+/*xlabel                    =% TPS,
+/*xaxis                     =,,
+};
+
+/* Table 20: Enrich Power Spark Advance Vs. RPM */
+/*|| Spark advance added to spark advance in power enrichment mode.                      ||*/
+{
+/*startAddr                 =1B3,
+/*columns                   =1,
+/*rows                      =5,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =0.351563,
+/*map_name                  =Enrich Power Spark Advance Vs. RPM,
+/*ylabel                    =RPM,
+/*yaxis                     =400  1200 2000 3200  4800,
+/*xlabel                    =Deg Advance,
+/*xaxis                     =,,
+};
+
+/* Table 21: Enrich Startup Vs. Temp.  */
+/*||  Deg. C = Deg. F  
+          0 =  32   
+        10 =  50   
+        20 =  68   
+        30 =  86   
+        40 = 104  
+        50 = 122   
+        60 = 140   
+        70 = 158   
+        80 = 176   
+        90 = 194    
+      100 = 212    
+      110 = 230    
+      120 = 248             ||*/
+{
+/*startAddr                 =431,
+/*columns                   =1,
+/*rows                      =16,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =0.390625,
+/*map_name                  =Enrich Startup Vs. Temp. ,
+/*ylabel                    =Deg. C,
+/*yaxis                     =-40  -28  -26  -4   8    20   32   44   56   68   80   92   104  116  128  140,
+/*xlabel                    =% Change AFR,
+/*xaxis                     =,,
+};
+
+/* Table 22: Fuel Cut Off Enable % TPS  */
+{
+/*startAddr                 =5F5,
+/*columns                   =1,
+/*rows                      =10,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =0.390625,
+/*map_name                  =Fuel Cut Off Enable % TPS ,
+/*ylabel                    =RPM,
+/*yaxis                     =0    400  800  1200 1600 2000 2400 2800 3200 3600 ,
+/*xlabel                    =% TPS,
+/*xaxis                     =   ,,
+};
+
+/* Table 23: Highway Mode AFR vs. MAP */
+/*|| Highway fuel mode target AFR.                      ||*/
+{
+/*startAddr                 =485,
+/*columns                   =1,
+/*rows                      =4,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =0.100000,
+/*map_name                  =Highway Mode AFR vs. MAP,
+/*ylabel                    =kPa,
+/*yaxis                     =30   40   50      60,
+/*xlabel                    =AFR,
+/*xaxis                     =,,
+};
+
+/* Table 24: Highway Mode Spark Advance vs. MAP  */
+/*|| The spark advance in degrees that is added to the spark advance when in Highway Spark Mode.                        ||*/
+{
+/*startAddr                 =1AB,
+/*columns                   =1,
+/*rows                      =8,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =0.351563,
+/*map_name                  =Highway Mode Spark Advance vs. MAP ,
+/*ylabel                    =MAP (kPa),
+/*yaxis                     =  30    35   40   45   50   55   60   65,
+/*xlabel                    =Deg. Advance,
+/*xaxis                     =,,
+};
+
+/* Table 25: IAC Idle Steps vs. Temp.  */
+/*|| The predicted adjustment to the IAC to maintain the target idle RPM.        Deg. C = Deg. F  
+          0 =  32   
+        10 =  50   
+        20 =  68   
+        30 =  86   
+        40 = 104  
+        50 = 122   
+        60 = 140   
+        70 = 158   
+        80 = 176   
+        90 = 194    
+      100 = 212    
+      110 = 230    
+      120 = 248                    ||*/
+{
+/*startAddr                 =6A1,
+/*columns                   =1,
+/*rows                      =17,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =1.000000,
+/*map_name                  =IAC Idle Steps vs. Temp. ,
+/*ylabel                    =Deg. C,
+/*yaxis                     =  -40  -28  -16   -4    8   20   32   44   56   68   80   92  104  116  128  140  152,
+/*xlabel                    =Steps,
+/*xaxis                     =,,
+};
+
+/* Table 26: IAC Throttle Follower Vs. MPH */
+/*|| Added per 8d Throttle follower and S_AUJP version 2 where all values were zeroed out.       ||*/
+{
+/*startAddr                 =6B2,
+/*columns                   =1,
+/*rows                      =17,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =1.000000,
+/*map_name                  =IAC Throttle Follower Vs. MPH,
+/*ylabel                    =MPH,
+/*yaxis                     =    4    8   12   16   20   24   28   32   36   40   44   48   52   56   60   64   68,
+/*xlabel                    =Steps,
+/*xaxis                     =,,
+};
+
+/* Table 27: IAC Warm Park Position Vs. Temp.  */
+/*||  Deg. C = Deg. F  
+          0 =  32   
+        10 =  50   
+        20 =  68   
+        30 =  86   
+        40 = 104  
+        50 = 122   
+        60 = 140   
+        70 = 158   
+        80 = 176   
+        90 = 194    
+      100 = 212    
+      110 = 230    
+      120 = 248             ||*/
+{
+/*startAddr                 =68A,
+/*columns                   =1,
+/*rows                      =9,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =1.000000,
+/*map_name                  =IAC Warm Park Position Vs. Temp. ,
+/*ylabel                    = Deg. C,
+/*yaxis                     =  -40  -16    8   32   56   80  104  128  152,
+/*xlabel                    = Steps,
+/*xaxis                     =   ,,
+};
+
+/* Table 28: Idle Engine Speed Vs. Temp.  */
+/*||  Deg. C = Deg. F  
+          0 =  32   
+        10 =  50   
+        20 =  68   
+        30 =  86   
+        40 = 104  
+        50 = 122   
+        60 = 140   
+        70 = 158   
+        80 = 176   
+        90 = 194    
+      100 = 212    
+      110 = 230    
+      120 = 248                   ||*/
+{
+/*startAddr                 =632,
+/*columns                   =1,
+/*rows                      =17,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =12.500000,
+/*map_name                  =Idle Engine Speed Vs. Temp. ,
+/*ylabel                    =Deg. C,
+/*yaxis                     =-40  -28   -16 -4   8    20   32   44   56   68   80   92   104  116  128  140  152,
+/*xlabel                    =RPM,
+/*xaxis                     =,,
+};
+
+/* Table 29: Idle Spark Advance Mult. Vs. MAP */
+{
+/*startAddr                 =1F9,
+/*columns                   =1,
+/*rows                      =4,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =0.003906,
+/*map_name                  =Idle Spark Advance Mult. Vs. MAP,
+/*ylabel                    =MAP (kPa),
+/*yaxis                     =   20   30   40   50,
+/*xlabel                    =Mult.,
+/*xaxis                     =,,
+};
+
+/* Table 30: Idle Spark Advance Vs. RPM Error */
+{
+/*startAddr                 =1F0,
+/*columns                   =1,
+/*rows                      =5,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =0.351563,
+/*map_name                  =Idle Spark Advance Vs. RPM Error,
+/*ylabel                    =RPM Error,
+/*yaxis                     =    0   50  100  150  200,
+/*xlabel                    =Deg. Advance,
+/*xaxis                     =,,
+};
+
+/* Table 31: Idle Spark Advance Retard Mult. vs. MAP */
+{
+/*startAddr                 =1F5,
+/*columns                   =1,
+/*rows                      =4,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =0.003906,
+/*map_name                  =Idle Spark Advance Retard Mult. vs. MAP,
+/*ylabel                    =MAP (kPa),
+/*yaxis                     =,
+/*xlabel                    =Mult.,
+/*xaxis                     =,,
+};
+
+/* Table 32: Idle Spark Advance Retard Vs. RPM  */
+{
+/*startAddr                 =1EB,
+/*columns                   =1,
+/*rows                      =5,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =0.351563,
+/*map_name                  =Idle Spark Advance Retard Vs. RPM ,
+/*ylabel                    =RPM Error,
+/*yaxis                     =    0   50  100  150  200,
+/*xlabel                    =Deg. Retard,
+/*xaxis                     =,,
+};
+
+/* Table 33: Injector Pulse Width Correction Vs. Battery Voltage */
+/*|| Correction values that are applied to the injector pulse width as a function of battery voltage. This is used to correct for the delay response time of the fuel injector.                       ||*/
+{
+/*startAddr                 =3FA,
+/*columns                   =1,
+/*rows                      =17,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =30.518000,
+/*map_name                  =Injector Pulse Width Correction Vs. Battery Voltage,
+/*ylabel                    =Volts DC,
+/*yaxis                     =  0.0  1.6  3.2  4.8  6.4  8.0  9.6 11.2 12.8 14.4 16.0 17.6 19.2 20.8 22.4 24.0 25.6,
+/*xlabel                    =uSec. Added,
+/*xaxis                     =,,
+};
+
+/* Table 34: Injector Pulse Width Low Offset Vs. Base Pulse Width  */
+{
+/*startAddr                 =40B,
+/*columns                   =1,
+/*rows                      =15,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =15.258790,
+/*map_name                  =Injector Pulse Width Low Offset Vs. Base Pulse Width ,
+/*ylabel                    =BPW mSec,
+/*yaxis                     =0.4880.7320.976 1.22 1.46 1.71 1.95 2.20 2.44 2.69 2.93 3.17 3.41 3.66 3.90,
+/*xlabel                    =uSec. Added,
+/*xaxis                     =,,
+};
+
+/* Table 35: Knock Attack Rate vs. RPM  */
+/*|| The rate at which spark advance is removed when knock is detected.                       ||*/
+{
+/*startAddr                 =20E,
+/*columns                   =1,
+/*rows                      =5,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =0.022500,
+/*map_name                  =Knock Attack Rate vs. RPM ,
+/*ylabel                    =RPM,
+/*yaxis                     =  400 1200 2000 3200 4800,
+/*xlabel                    =DEG/mSec.,
+/*xaxis                     =,,
+};
+
+/* Table 36: Knock Recovery Rate vs. RPM  */
+/*|| The rate at which spark advance is restored after being removed due to knock.                      ||*/
+{
+/*startAddr                 =213,
+/*columns                   =1,
+/*rows                      =5,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =1.953125,
+/*map_name                  =Knock Recovery Rate vs. RPM ,
+/*ylabel                    =RPM,
+/*yaxis                     =  400 1200 2000 3200 4800,
+/*xlabel                    =% Retard Removed,
+/*xaxis                     =DEG/MS,,
+};
+
+/* Table 37: Knock Retard In Power Enrich Max.  */
+/*|| The spark retard maximum limits that may be applied if knock is detected when in power enrichment mode.                        ||*/
+{
+/*startAddr                 =218,
+/*columns                   =1,
+/*rows                      =8,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =0.175781,
+/*map_name                  =Knock Retard In Power Enrich Max. ,
+/*ylabel                    =RPM,
+/*yaxis                     =800  1600 2400 3200 4000 4800 5600  6400,
+/*xlabel                    =Deg. Retard,
+/*xaxis                     =,,
+};
+
+/* Table 38: Knock Retard Not In Power Enrich Max. */
+/*|| The spark retard maximum limits that may be applied if knock is detected when not in power enrichment mode.                        ||*/
+{
+/*startAddr                 =220,
+/*columns                   =1,
+/*rows                      =9,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =0.175781,
+/*map_name                  =Knock Retard Not In Power Enrich Max.,
+/*ylabel                    =MAP (kPa),
+/*yaxis                     =20   30   40   50   60   70   80   90     100,
+/*xlabel                    =Deg. Retard,
+/*xaxis                     =,,
+};
+
+/* Table 39: Loop Open % Change AFR Vs. MAP  */
+/*|| The percent change that is applied to the target AFR when in open loop.                       ||*/
+{
+/*startAddr                 =420,
+/*columns                   =1,
+/*rows                      =17,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =0.390625,
+/*map_name                  =Loop Open % Change AFR Vs. MAP ,
+/*ylabel                    =MAP (kPa),
+/*yaxis                     =   20   25   30   35   40   45   50   55   60   65   70   75   80   85   90   95  100,
+/*xlabel                    =% Change,
+/*xaxis                     =,,
+};
+
+/* Table 40: Loop Open % Change AFR Vs. Temp.  */
+/*|| The percent change that is applied to the target AFR when in open loop.
+ Deg. C = Deg. F  
+          0 =  32   
+        10 =  50   
+        20 =  68   
+        30 =  86   
+        40 = 104  
+        50 = 122   
+        60 = 140   
+        70 = 158   
+        80 = 176   
+        90 = 194    
+      100 = 212    
+      110 = 230    
+      120 = 248             ||*/
+{
+/*startAddr                 =45E,
+/*columns                   =1,
+/*rows                      =17,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =0.390625,
+/*map_name                  =Loop Open % Change AFR Vs. Temp. ,
+/*ylabel                    =Deg. C,
+/*yaxis                     =-40  -28  -16  -4   8    20   32   44   56   68   80   92   104  116  128  140    152,
+/*xlabel                    =% Change,
+/*xaxis                     =,,
+};
+
+/* Table 41: Low Octane Knock Retard Mult. Vs. MAP */
+{
+/*startAddr                 =238,
+/*columns                   =1,
+/*rows                      =17,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =0.003906,
+/*map_name                  =Low Octane Knock Retard Mult. Vs. MAP,
+/*ylabel                    =MAP (kPa),
+/*yaxis                     =   20   25   30   35   40   45   50   55   60   65   70   75   80   85   90   95  100,
+/*xlabel                    =Mult.,
+/*xaxis                     =,,
+};
+
+/* Table 42: Low Octane Knock Retard Mult. Vs. RPM */
+{
+/*startAddr                 =22F,
+/*columns                   =1,
+/*rows                      =9,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =0.003906,
+/*map_name                  =Low Octane Knock Retard Mult. Vs. RPM,
+/*ylabel                    =RPM,
+/*yaxis                     =0    800  1600 2400 3200 4000 4800 5600  6400,
+/*xlabel                    =Mult.,
+/*xaxis                     =,,
+};
+
+/* Table 43: MAT Compensation Counts Vs. MAT  */
+/*||  Deg. C = Deg. F  
+          0 =  32   
+        10 =  50   
+        20 =  68   
+        30 =  86   
+        40 = 104  
+        50 = 122   
+        60 = 140   
+        70 = 158   
+        80 = 176   
+        90 = 194    
+      100 = 212    
+      110 = 230    
+      120 = 248                            ||*/
+{
+/*startAddr                 =7FD,
+/*columns                   =1,
+/*rows                      =17,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =1.000000,
+/*map_name                  =MAT Compensation Counts Vs. MAT ,
+/*ylabel                    =MAT Deg. C,
+/*yaxis                     =  -40  -28  -16   -4    8   20   32   44   56   68   80   92  104  116  128  140  152,
+/*xlabel                    =Counts,
+/*xaxis                     =,,
+};
+
+/* Table 44: MAT Inverse Term Lookup Delta Mult. Vs. Airflow  */
+{
+/*startAddr                 =80E,
+/*columns                   =1,
+/*rows                      =17,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =0.007813,
+/*map_name                  =MAT Inverse Term Lookup Delta Mult. Vs. Airflow ,
+/*ylabel                    =gm/Sec.,
+/*yaxis                     =    0   16   32   48   64   80   96  112  128  144  160  176  192  208  224  240  256,
+/*xlabel                    =Mult.,
+/*xaxis                     =,,
+};
+
+/* Table 45: O2 Rich/Lean Upper Zero Reference Error Slow Vs. MAP */
+{
+/*startAddr                 =4A2,
+/*columns                   =1,
+/*rows                      =9,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =0.004400,
+/*map_name                  =O2 Rich/Lean Upper Zero Reference Error Slow Vs. MAP,
+/*ylabel                    =MAP (kPa),
+/*yaxis                     =   20   30   40   50   60   70   80   90  100,
+/*xlabel                    =Volts,
+/*xaxis                     =,,
+};
+
+/* Table 46: Spark Advance Closed Throttle Vs. RPM  */
+{
+/*startAddr                 =1FD,
+/*columns                   =1,
+/*rows                      =13,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =0.351563,
+/*map_name                  =Spark Advance Closed Throttle Vs. RPM ,
+/*ylabel                    =RPM,
+/*yaxis                     =    0  400  800 1200 2000 2400 2800 2800 3200 3600 4000 4400 4800,
+/*xlabel                    =Deg. Advance,
+/*xaxis                     =,,
+};
+
+/* Table 47: Spark Advance Main */
+/*|| The Main spark table as a function of manifold pressure and RPM from idle to 4800 RPM.                       ||*/
+{
+/*startAddr                 =36,
+/*columns                   =12,
+/*rows                      =17,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =0.351563,
+/*map_name                  =Spark Advance Main,
+/*ylabel                    =RPM,
+/*yaxis                     =400  600  800  1000 1200 1400 1600 1800 2000 2200 2400 2800 3200 3600 4000 4400 4800,
+/*xlabel                    =MAP (kPa),
+/*xaxis                     =20 30 40 50 60 70 75 80 85 90 95 100,,
+};
+
+/* Table 48: Spark Advance Main Extended */
+/*|| The Main spark table as a function of manifold pressure and RPM from 4800 RPM up.                      ||*/
+{
+/*startAddr                 =105,
+/*columns                   =12,
+/*rows                      =3,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =0.351563,
+/*map_name                  =Spark Advance Main Extended,
+/*ylabel                    =RPM,
+/*yaxis                     =4800 5200  5600,
+/*xlabel                    =MAP (kPa),
+/*xaxis                     =20 30 40 50 60 70 75 80 85 90 95 100,,
+};
+
+/* Table 49: Spark Advance Startup vs. Temp.  */
+/*|| The spark advance used at start up.  
+ Deg. C = Deg. F  
+          0 =  32   
+        10 =  50   
+        20 =  68   
+        30 =  86   
+        40 = 104  
+        50 = 122   
+        60 = 140   
+        70 = 158   
+        80 = 176   
+        90 = 194    
+      100 = 212    
+      110 = 230    
+      120 = 248             ||*/
+{
+/*startAddr                 =1B9,
+/*columns                   =1,
+/*rows                      =14,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =0.351563,
+/*map_name                  =Spark Advance Startup vs. Temp. ,
+/*ylabel                    =Deg. C,
+/*yaxis                     = -40  -28  -16   -4    8   20    32   44   56   68   80   92  104  116,
+/*xlabel                    =Deg. Advance,
+/*xaxis                     =,,
+};
+
+/* Table 50: Spark Advance Temp. Correction Vs. Load Vs. Temp. */
+/*||  Deg. C = Deg. F  
+          0 =  32   
+        10 =  50   
+        20 =  68   
+        30 =  86   
+        40 = 104  
+        50 = 122   
+        60 = 140   
+        70 = 158   
+        80 = 176   
+        90 = 194    
+      100 = 212    
+      110 = 230    
+      120 = 248             ||*/
+{
+/*startAddr                 =13B,
+/*columns                   =9,
+/*rows                      =12,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =0.351563,
+/*map_name                  =Spark Advance Temp. Correction Vs. Load Vs. Temp.,
+/*ylabel                    =Deg. C,
+/*yaxis                     =  -16   -4    8   20   32   44   56   68   80   92  104  116,
+/*xlabel                    =Vacuum (kPa),
+/*xaxis                     = 80 70 60 50 40 30 20 10  0,,
+};
+
+/* Table 51: Spark Latency Correction */
+{
+/*startAddr                 =129,
+/*columns                   =1,
+/*rows                      =14,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =15.260000,
+/*map_name                  =Spark Latency Correction,
+/*ylabel                    =RPM,
+/*yaxis                     = 800 1200 1600 2000 2400 2800 3200 3600 4000 4400 4800 5200 5600 6000,
+/*xlabel                    =uSec.,
+/*xaxis                     =,,
+};
+
+/* Table 52: TCC Lock 3rd Gear %TPS Vs. Vehicle Speed */
+{
+/*startAddr                 =32F,
+/*columns                   =1,
+/*rows                      =12,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =0.390625,
+/*map_name                  =TCC Lock 3rd Gear %TPS Vs. Vehicle Speed,
+/*ylabel                    =MPH,
+/*yaxis                     =   12   20   28   36   44   52   60   68   76   84   92  100,
+/*xlabel                    =% TPS,
+/*xaxis                     =,,
+};
+
+/* Table 53: TCC Unlock 3rd Gear %TPS Vs. Vehicle Speed  */
+{
+/*startAddr                 =323,
+/*columns                   =1,
+/*rows                      =12,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =0.390625,
+/*map_name                  =TCC Unlock 3rd Gear %TPS Vs. Vehicle Speed ,
+/*ylabel                    =MPH,
+/*yaxis                     =   12   20   28   36   44   52   60   68   76   84   92  100,
+/*xlabel                    =% TPS,
+/*xaxis                     =,,
+};
+
+/* Table 54: TCC Lock 4th Gear %TPS Vs. Vehicle Speed   */
+{
+/*startAddr                 =34B,
+/*columns                   =1,
+/*rows                      =12,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =0.390625,
+/*map_name                  =TCC Lock 4th Gear %TPS Vs. Vehicle Speed  ,
+/*ylabel                    =MPH,
+/*yaxis                     =   12   20   28   36   44   52   60   68   76   84   92  100,
+/*xlabel                    =% TPS,
+/*xaxis                     =,,
+};
+
+/* Table 55: TCC Unlock 4th Gear %TPS Vs. Vehicle Speed   */
+{
+/*startAddr                 =33F,
+/*columns                   =1,
+/*rows                      =12,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =0.390625,
+/*map_name                  =TCC Unlock 4th Gear %TPS Vs. Vehicle Speed  ,
+/*ylabel                    =MPH,
+/*yaxis                     =   12   20   28   36   44   52   60   68   76   84   92  100,
+/*xlabel                    =% TPS,
+/*xaxis                     =,,
+};
+
+/* Table 56: Volumetric Efficency Lower Table  */
+/*|| To calculate a new Pulse width use the following equation:   New PW=(Meas BLM)/128 X (Meas INT)/128 X  Original PW  This would be based on the location of a specific PW at a specific RPM and Vacuum Pressure. If say at idle the car is at 600 RPM and 40kPa pressure and the BLM = 115 and INT=126 with a PW = 42 then:   New PW=(115/128)(126/128)42=37.145            ||*/
+{
+/*startAddr                 =6EE,
+/*columns                   =13,
+/*rows                      =13,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =0.390625,
+/*map_name                  =Volumetric Efficency Lower Table ,
+/*ylabel                    =RPM,
+/*yaxis                     =400  500  600  700  800  900  1000 1100 1200 1300 1400 1500 1600 ,
+/*xlabel                    =MAP (kPa),
+/*xaxis                     =20 25 30 35 40 45 50 55 60 70 80 90 100,,
+};
+
+/* Table 57: Volumetric Efficency Upper Table Original to 5600 RPM */
+/*|| This is the table to use if you are using an original BIN. If you are using a extended VE table by patching the bin then use the Extended VE table to 6400 RPM  .  To calculate a new Pulse width use the following equation:   New PW=(Meas BLM)/128 X (Meas INT)/128 X  Original PW  This would be based on the location of a specific PW at a specific RPM and Vacuum Pressure. If say at idle the car is at 600 RPM and 40kPa pressure and the BLM = 115 and INT=126 with a PW = 42 then:   New PW=(115/128)(126/128)42=37.145                                          ||*/
+{
+/*startAddr                 =79A,
+/*columns                   =9,
+/*rows                      =11,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =0.390625,
+/*map_name                  =Volumetric Efficency Upper Table Original to 5600 RPM,
+/*ylabel                    =RPM,
+/*yaxis                     =1600 2000 2400 2800 3200 3600 4000 4400 4800 5200 5600  6000 6400 6800,
+/*xlabel                    =MAP (kPa),
+/*xaxis                     =20 30 40 50 60 70 80 90 100,,
+};
+
+/* Table 58: Volumetric Efficency Upper Table Extended to 6400 RPM */
+/*|| This is the table to use if you are using a extended VE table by patching the bin otherwise use the Original Upper VE table to 5600 RPM.  To calculate a new Pulse width use the following equation:   New PW=(Meas BLM)/128 X (Meas INT)/128 X  Original PW  This would be based on the location of a specific PW at a specific RPM and Vacuum Pressure. If say at idle the car is at 600 RPM and 40kPa pressure and the BLM = 115 and INT=126 with a PW = 42 then:   New PW=(115/128)(126/128)42=37.145                                            ||*/
+{
+/*startAddr                 =1003,
+/*columns                   =9,
+/*rows                      =13,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =0.390625,
+/*map_name                  =Volumetric Efficency Upper Table Extended to 6400 RPM,
+/*ylabel                    =RPM,
+/*yaxis                     = 1600 2000 2400 2800 3200 3600 4000 4400 4800 5200 5600 6000 6400 6800,
+/*xlabel                    =MAP (kPa),
+/*xaxis                     =20 30 40 50 60 70 80 90 100,,
+};
+

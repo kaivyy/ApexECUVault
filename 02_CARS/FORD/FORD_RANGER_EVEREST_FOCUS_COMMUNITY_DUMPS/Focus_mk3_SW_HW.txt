@@ -1,0 +1,9 @@
+HW: BV61-12B684-DA
+SW: CM5A-12A650-AEH
+VIN nr.: MPB2XXMXB2DJ25055
+SW ver.: 
+Spare: 
+Engine: 
+HW Ver.: 
+SW upg.: CM5A-14C204-AEJ
+Installation: 

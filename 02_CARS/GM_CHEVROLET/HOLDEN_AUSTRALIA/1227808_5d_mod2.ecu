@@ -1,0 +1,4856 @@
+/*format =2*/
+
+/*ECU Created/Edited by GMECM Edit*/
+
+
+/* General */
+
+{
+/*ecuId                     =GM_P4_ECM,
+/*fileSize                  =4000,
+/*checkSumAddr              =6,
+/*checkSumSize              =2,
+/*checkSumStartAddr         =8,
+/*checkSumEndAddr           =3FFF,
+/*Items                     =284,,
+};
+
+
+/* Items */
+
+/* ***Constants*** */
+
+/* Constant 1: PROMIDA: EPROM ID number */
+{
+/*startAddr                 =0,
+/*columns                   =1,
+/*rows                      =1,
+/*elementSize               =2,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =1.000000,
+/*map_name                  =PROMIDA: EPROM ID number,
+/*ylabel                    = ,
+/*yaxis                     = ,
+/*xlabel                    = },
+/*xaxis                     = ,,
+};
+
+/* Constant 2: DATECODE: EPROM date code */
+{
+/*startAddr                 =2,
+/*columns                   =1,
+/*rows                      =1,
+/*elementSize               =2,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =1.000000,
+/*map_name                  =DATECODE: EPROM date code,
+/*ylabel                    =,
+/*yaxis                     =,
+/*xlabel                    =,
+/*xaxis                     =,,
+};
+
+/* Constant 3: SEQNUMB: Production Sequence number */
+{
+/*startAddr                 =4,
+/*columns                   =1,
+/*rows                      =1,
+/*elementSize               =2,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =1.000000,
+/*map_name                  =SEQNUMB: Production Sequence number,
+/*ylabel                    =,
+/*yaxis                     =,
+/*xlabel                    =,
+/*xaxis                     =,,
+};
+
+/* Constant 4: KKPGMID: Check sum $C008 through $ffff */
+{
+/*startAddr                 =6,
+/*columns                   =1,
+/*rows                      =1,
+/*elementSize               =2,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =1.000000,
+/*map_name                  =KKPGMID: Check sum $C008 through $ffff,
+/*ylabel                    =,
+/*yaxis                     =,
+/*xlabel                    =,
+/*xaxis                     =,,
+};
+
+/* Constant 5: KKKPGMID: Program ID word - $5D=1989 $AA=bypass sumcheck */
+{
+/*startAddr                 =8,
+/*columns                   =1,
+/*rows                      =1,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =1.000000,
+/*map_name                  =KKKPGMID: Program ID word - $5D=1989 $AA=bypass sumcheck,
+/*ylabel                    =,
+/*yaxis                     =,
+/*xlabel                    =,
+/*xaxis                     =,,
+};
+
+/* Constant 6: KRPMUP: RPM Threshold for engine running (EST) */
+{
+/*startAddr                 =B,
+/*columns                   =1,
+/*rows                      =1,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =25.000000,
+/*map_name                  =KRPMUP: RPM Threshold for engine running (EST),
+/*ylabel                    = ,
+/*yaxis                     = ,
+/*xlabel                    =RPM,
+/*xaxis                     = ,,
+};
+
+/* Constant 7: KERUNCTR: number of succ refpers to allow eng run */
+{
+/*startAddr                 =C,
+/*columns                   =1,
+/*rows                      =1,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =1.000000,
+/*map_name                  =KERUNCTR: number of succ refpers to allow eng run,
+/*ylabel                    = ,
+/*yaxis                     = ,
+/*xlabel                    =Ref,
+/*xaxis                     = ,,
+};
+
+/* Constant 8: KFUELUP: RPM Threshold for run fuel mode */
+{
+/*startAddr                 =D,
+/*columns                   =1,
+/*rows                      =1,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =25.000000,
+/*map_name                  =KFUELUP: RPM Threshold for run fuel mode,
+/*ylabel                    = ,
+/*yaxis                     = ,
+/*xlabel                    =RPM,
+/*xaxis                     = ,,
+};
+
+/* Constant 9: KRUNFCTR: number of succ refpers to allow run fuel */
+{
+/*startAddr                 =E,
+/*columns                   =1,
+/*rows                      =1,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =1.000000,
+/*map_name                  =KRUNFCTR: number of succ refpers to allow run fuel,
+/*ylabel                    = ,
+/*yaxis                     = ,
+/*xlabel                    =Ref,
+/*xaxis                     = ,,
+};
+
+/* Constant 10: KFILTMP1: MAP params - MAP filter coefficient - Engine running */
+{
+/*startAddr                 =F,
+/*columns                   =1,
+/*rows                      =1,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =0.003906,
+/*map_name                  =KFILTMP1: MAP params - MAP filter coefficient - Engine running,
+/*ylabel                    =,
+/*yaxis                     =,
+/*xlabel                    =Coeff,
+/*xaxis                     =,,
+};
+
+/* Constant 11: KKPMDF: MAP params - Default MAP reading for engine not running */
+{
+/*startAddr                 =10,
+/*columns                   =1,
+/*rows                      =1,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =10.332103,
+/*mulOrDivOrBit             =0,
+/*factor                    =0.369004,
+/*map_name                  =KKPMDF: MAP params - Default MAP reading for engine not running,
+/*ylabel                    =,
+/*yaxis                     =,
+/*xlabel                    =kPa,
+/*xaxis                     =,,
+};
+
+/* Constant 12: KKA: MAP params - Default MAP = KKA*TPS + KKB + KKACMA */
+{
+/*startAddr                 =11,
+/*columns                   =1,
+/*rows                      =1,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =0.007813,
+/*map_name                  =KKA: MAP params - Default MAP = KKA*TPS + KKB + KKACMA,
+/*ylabel                    =,
+/*yaxis                     =,
+/*xlabel                    =Coeff,
+/*xaxis                     =,,
+};
+
+/* Constant 13: KKB: MAP params - Default MAP offset - constant term */
+{
+/*startAddr                 =12,
+/*columns                   =1,
+/*rows                      =1,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =10.332103,
+/*mulOrDivOrBit             =0,
+/*factor                    =0.369004,
+/*map_name                  =KKB: MAP params - Default MAP offset - constant term,
+/*ylabel                    =,
+/*yaxis                     =,
+/*xlabel                    =kPa,
+/*xaxis                     =,,
+};
+
+/* Constant 14: KKACMAP: MAP params - Default MAP offset - A/C On */
+{
+/*startAddr                 =13,
+/*columns                   =1,
+/*rows                      =1,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =0.369004,
+/*map_name                  =KKACMAP: MAP params - Default MAP offset - A/C On,
+/*ylabel                    =,
+/*yaxis                     =,
+/*xlabel                    =kPa,
+/*xaxis                     =,,
+};
+
+/* Constant 15: KKACMAP: MAP params - Default MAP offset - Drive or Reverse */
+{
+/*startAddr                 =14,
+/*columns                   =1,
+/*rows                      =1,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =0.369004,
+/*map_name                  =KKACMAP: MAP params - Default MAP offset - Drive or Reverse,
+/*ylabel                    =,
+/*yaxis                     =,
+/*xlabel                    =kPa,
+/*xaxis                     =,,
+};
+
+/* Constant 16: KTPCLOSE: TPS - TPS Closed throttle threshold (EGR port) */
+{
+/*startAddr                 =15,
+/*columns                   =1,
+/*rows                      =1,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =0.390625,
+/*map_name                  =KTPCLOSE: TPS - TPS Closed throttle threshold (EGR port),
+/*ylabel                    = ,
+/*yaxis                     = ,
+/*xlabel                    =%,
+/*xaxis                     = ,,
+};
+
+/* Constant 17: KF4CNTR: TPS - F4 flag throttle opening delay 255 = 3.19 sec */
+{
+/*startAddr                 =16,
+/*columns                   =1,
+/*rows                      =1,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =0.012500,
+/*map_name                  =KF4CNTR: TPS - F4 flag throttle opening delay 255 = 3.19 sec,
+/*ylabel                    = ,
+/*yaxis                     = ,
+/*xlabel                    =%,
+/*xaxis                     = ,,
+};
+
+/* Constant 18: K3: TPS - TPS Full travel - Worst case minimum voltage */
+{
+/*startAddr                 =17,
+/*columns                   =1,
+/*rows                      =1,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =0.027451,
+/*map_name                  =K3: TPS - TPS Full travel - Worst case minimum voltage,
+/*ylabel                    =VOLTS,
+/*yaxis                     =,
+/*xlabel                    =Volts,
+/*xaxis                     =,,
+};
+
+/* Constant 19: KTAOFF: TPS - Closed TPS filter coefficient */
+{
+/*startAddr                 =18,
+/*columns                   =1,
+/*rows                      =1,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =0.003906,
+/*map_name                  =KTAOFF: TPS - Closed TPS filter coefficient,
+/*ylabel                    =,
+/*yaxis                     =,
+/*xlabel                    =Coeff,
+/*xaxis                     =,,
+};
+
+/* Constant 20: KSPDSENA: Speed sensor constant PPK  */
+{
+/*startAddr                 =1F,
+/*columns                   =1,
+/*rows                      =1,
+/*elementSize               =2,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =1,
+/*factor                    =7372800.000000,
+/*map_name                  =KSPDSENA: Speed sensor constant PPK ,
+/*ylabel                    = ,
+/*yaxis                     = ,
+/*xlabel                    =Pulses/kilometer,
+/*xaxis                     = ,,
+};
+
+/* Constant 21: KFILTKPH: Speed sensor lag filter coefficient */
+{
+/*startAddr                 =21,
+/*columns                   =1,
+/*rows                      =1,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =0.003906,
+/*map_name                  =KFILTKPH: Speed sensor lag filter coefficient,
+/*ylabel                    = ,
+/*yaxis                     = ,
+/*xlabel                    =Coeff,
+/*xaxis                     = ,,
+};
+
+/* Constant 22: KREFANGL: EST params - Spark reference angle */
+{
+/*startAddr                 =22,
+/*columns                   =1,
+/*rows                      =1,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =0.351563,
+/*map_name                  =KREFANGL: EST params - Spark reference angle,
+/*ylabel                    = ,
+/*yaxis                     = ,
+/*xlabel                    =Deg,
+/*xaxis                     = ,,
+};
+
+/* Constant 23: KTIMELAG: EST params - Time domain correction to spark */
+{
+/*startAddr                 =23,
+/*columns                   =1,
+/*rows                      =1,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =15.259022,
+/*map_name                  =KTIMELAG: EST params - Time domain correction to spark,
+/*ylabel                    = ,
+/*yaxis                     = ,
+/*xlabel                    =Usec,
+/*xaxis                     = ,,
+};
+
+/* Constant 24: KMAXADV:  EST params - Maximum Spark Advance */
+{
+/*startAddr                 =24,
+/*columns                   =1,
+/*rows                      =1,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =0.351563,
+/*map_name                  =KMAXADV:  EST params - Maximum Spark Advance,
+/*ylabel                    = ,
+/*yaxis                     = ,
+/*xlabel                    =Deg,
+/*xaxis                     = ,,
+};
+
+/* Constant 25: KDFCOADV: EST params - DFCO Mode Forced Advance */
+{
+/*startAddr                 =25,
+/*columns                   =1,
+/*rows                      =1,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =0.351563,
+/*map_name                  =KDFCOADV: EST params - DFCO Mode Forced Advance,
+/*ylabel                    = ,
+/*yaxis                     = ,
+/*xlabel                    =Deg,
+/*xaxis                     = ,,
+};
+
+/* Constant 26: KDIAGADV: EST params - DIAG Mode Forced Advance */
+{
+/*startAddr                 =26,
+/*columns                   =1,
+/*rows                      =1,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =0.351563,
+/*map_name                  =KDIAGADV: EST params - DIAG Mode Forced Advance,
+/*ylabel                    = ,
+/*yaxis                     = ,
+/*xlabel                    =Deg,
+/*xaxis                     = ,,
+};
+
+/* Constant 27: KDIAGRPM: EST params - Maximum RPM for KDIAGADV */
+{
+/*startAddr                 =27,
+/*columns                   =1,
+/*rows                      =1,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =25.000000,
+/*map_name                  =KDIAGRPM: EST params - Maximum RPM for KDIAGADV,
+/*ylabel                    = ,
+/*yaxis                     = ,
+/*xlabel                    =RPM,
+/*xaxis                     = ,,
+};
+
+/* Constant 28: KDYNGAIN: EST params - Dynamic correction factor */
+{
+/*startAddr                 =28,
+/*columns                   =1,
+/*rows                      =1,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =1.000000,
+/*map_name                  =KDYNGAIN: EST params - Dynamic correction factor,
+/*ylabel                    = ,
+/*yaxis                     = ,
+/*xlabel                    =FACTOR,
+/*xaxis                     = ,,
+};
+
+/* Constant 29: KDYNDB:    EST params - Dynamic correction delta ref deadband */
+{
+/*startAddr                 =29,
+/*columns                   =1,
+/*rows                      =1,
+/*elementSize               =2,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =0.015625,
+/*map_name                  =KDYNDB:    EST params - Dynamic correction delta ref deadband,
+/*ylabel                    = ,
+/*yaxis                     = ,
+/*xlabel                    =Msec,
+/*xaxis                     = ,,
+};
+
+/* Constant 30: KADVLIM:   EST params - Max rate of Advance increase except in DE */
+{
+/*startAddr                 =2B,
+/*columns                   =1,
+/*rows                      =1,
+/*elementSize               =2,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =0.109863,
+/*map_name                  =KADVLIM:   EST params - Max rate of Advance increase except in DE,
+/*ylabel                    = ,
+/*yaxis                     = ,
+/*xlabel                    =Deg/S,
+/*xaxis                     = ,,
+};
+
+/* Constant 31: KADVSLOP:  EST params - F1 table Extension Slope */
+{
+/*startAddr                 =2D,
+/*columns                   =1,
+/*rows                      =1,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =0.054932,
+/*map_name                  =KADVSLOP:  EST params - F1 table Extension Slope,
+/*ylabel                    = ,
+/*yaxis                     = ,
+/*xlabel                    =Deg/K,
+/*xaxis                     = ,,
+};
+
+/* Constant 32: KCTBIAS:  EST params - F2 Table Bias Term */
+{
+/*startAddr                 =2E,
+/*columns                   =1,
+/*rows                      =1,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =0.351563,
+/*map_name                  =KCTBIAS:  EST params - F2 Table Bias Term,
+/*ylabel                    = ,
+/*yaxis                     = ,
+/*xlabel                    =Deg,
+/*xaxis                     = ,,
+};
+
+/* Constant 33: KTMRPM:   EST params - Torque management RPM threshold */
+{
+/*startAddr                 =2F,
+/*columns                   =1,
+/*rows                      =1,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =25.000000,
+/*map_name                  =KTMRPM:   EST params - Torque management RPM threshold,
+/*ylabel                    = ,
+/*yaxis                     = ,
+/*xlabel                    =RPM,
+/*xaxis                     = ,,
+};
+
+/* Constant 34: KTMADV:   EST params - Torque management Forced Advance */
+{
+/*startAddr                 =30,
+/*columns                   =1,
+/*rows                      =1,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =0.351563,
+/*map_name                  =KTMADV:   EST params - Torque management Forced Advance,
+/*ylabel                    = ,
+/*yaxis                     = ,
+/*xlabel                    =Deg,
+/*xaxis                     = ,,
+};
+
+/* Constant 35: KESCOOLA: EST params - ESC Coolant temp enable  */
+{
+/*startAddr                 =31,
+/*columns                   =1,
+/*rows                      =1,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =-40.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =0.750000,
+/*map_name                  =KESCOOLA: EST params - ESC Coolant temp enable ,
+/*ylabel                    =,
+/*yaxis                     =,
+/*xlabel                    =DegC,
+/*xaxis                     =,,
+};
+
+/* Constant 36: KESCOOLA: EST params - ESC Engine Run Time to Enable  */
+{
+/*startAddr                 =32,
+/*columns                   =1,
+/*rows                      =1,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =1.000000,
+/*map_name                  =KESCOOLA: EST params - ESC Engine Run Time to Enable ,
+/*ylabel                    =,
+/*yaxis                     =,
+/*xlabel                    =Sec,
+/*xaxis                     =,,
+};
+
+/* Constant 37: KESCRPML: EST params - ESC Minimum RPM to Increase Retard */
+{
+/*startAddr                 =33,
+/*columns                   =1,
+/*rows                      =1,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =25.000000,
+/*map_name                  =KESCRPML: EST params - ESC Minimum RPM to Increase Retard,
+/*ylabel                    = ,
+/*yaxis                     = ,
+/*xlabel                    =RPM,
+/*xaxis                     = ,,
+};
+
+/* Constant 38: KESCRPMH: EST params - ESC Maximum RPM to Increase Retard */
+{
+/*startAddr                 =34,
+/*columns                   =1,
+/*rows                      =1,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =25.000000,
+/*map_name                  =KESCRPMH: EST params - ESC Maximum RPM to Increase Retard,
+/*ylabel                    = ,
+/*yaxis                     = ,
+/*xlabel                    =RPM,
+/*xaxis                     = ,,
+};
+
+/* Constant 39: KRETMAX:   EST params - ESC Maximum Retard */
+{
+/*startAddr                 =35,
+/*columns                   =1,
+/*rows                      =1,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =0.351563,
+/*map_name                  =KRETMAX:   EST params - ESC Maximum Retard,
+/*ylabel                    = ,
+/*yaxis                     = ,
+/*xlabel                    =Deg,
+/*xaxis                     = ,,
+};
+
+/* Constant 40: KADBARO: Default Baro A to D conversion const (243 = 100kPa) */
+{
+/*startAddr                 =1C6,
+/*columns                   =1,
+/*rows                      =1,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =0.411523,
+/*map_name                  =KADBARO: Default Baro A to D conversion const (243 = 100kPa),
+/*ylabel                    =,
+/*yaxis                     =,
+/*xlabel                    =kPa,
+/*xaxis                     =,,
+};
+
+/* Constant 41: KMAXOFF: Maximum MAP offset for Baro adjustment */
+{
+/*startAddr                 =1C7,
+/*columns                   =1,
+/*rows                      =1,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =0.363636,
+/*map_name                  =KMAXOFF: Maximum MAP offset for Baro adjustment,
+/*ylabel                    =,
+/*yaxis                     =,
+/*xlabel                    =kPa,
+/*xaxis                     =,,
+};
+
+/* Constant 42: KKDIAGWM: Diagnostic Params - Malfunction 13 and 24 Coolant Threshold */
+{
+/*startAddr                 =1E1,
+/*columns                   =1,
+/*rows                      =1,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =-40.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =0.750000,
+/*map_name                  =KKDIAGWM: Diagnostic Params - Malfunction 13 and 24 Coolant Threshold,
+/*ylabel                    = ,
+/*yaxis                     = ,
+/*xlabel                    =Deg C,
+/*xaxis                     = ,,
+};
+
+/* Constant 43: KK13ENBL: Diagnostic Params - Malf 13 - O2 sensor open - Time since run ena  */
+{
+/*startAddr                 =1E2,
+/*columns                   =1,
+/*rows                      =1,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =1.000000,
+/*map_name                  =KK13ENBL: Diagnostic Params - Malf 13 - O2 sensor open - Time since run ena ,
+/*ylabel                    = ,
+/*yaxis                     = ,
+/*xlabel                    =Secs,
+/*xaxis                     = ,,
+};
+
+/* Constant 44: KK13LOW: Diagnostic Params - Malf 13 - O2 sensor open - Sensor Low limit */
+{
+/*startAddr                 =1E3,
+/*columns                   =1,
+/*rows                      =1,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =0.004348,
+/*map_name                  =KK13LOW: Diagnostic Params - Malf 13 - O2 sensor open - Sensor Low limit,
+/*ylabel                    = ,
+/*yaxis                     = ,
+/*xlabel                    =Volts,
+/*xaxis                     = ,,
+};
+
+/* Constant 45: KK13HIGH: Diagnostic Params - Malf 13 - O2 sensor open - Sensor High limit */
+{
+/*startAddr                 =1E4,
+/*columns                   =1,
+/*rows                      =1,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =0.004348,
+/*map_name                  =KK13HIGH: Diagnostic Params - Malf 13 - O2 sensor open - Sensor High limit,
+/*ylabel                    = ,
+/*yaxis                     = ,
+/*xlabel                    =Volts,
+/*xaxis                     = ,,
+};
+
+/* Constant 46: KK13TPS: Diagnostic Params - Malf 13 - O2 sensor open - Minimum throttle po  */
+{
+/*startAddr                 =1E5,
+/*columns                   =1,
+/*rows                      =1,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =0.390625,
+/*map_name                  =KK13TPS: Diagnostic Params - Malf 13 - O2 sensor open - Minimum throttle po ,
+/*ylabel                    = ,
+/*yaxis                     = ,
+/*xlabel                    =%tps,
+/*xaxis                     = ,,
+};
+
+/* Constant 47: KK13TIM: Diagnostic Params - Malf 13 - O2 sensor open - Detection time */
+{
+/*startAddr                 =1E6,
+/*columns                   =1,
+/*rows                      =1,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =0.100000,
+/*map_name                  =KK13TIM: Diagnostic Params - Malf 13 - O2 sensor open - Detection time,
+/*ylabel                    = ,
+/*yaxis                     = ,
+/*xlabel                    =Secs,
+/*xaxis                     = ,,
+};
+
+/* Constant 48: KK14TIME: Diagnostic Params - Malf 14 - Coolant Hot - Time since run enable  */
+{
+/*startAddr                 =1E7,
+/*columns                   =1,
+/*rows                      =1,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =1.000000,
+/*map_name                  =KK14TIME: Diagnostic Params - Malf 14 - Coolant Hot - Time since run enable ,
+/*ylabel                    = ,
+/*yaxis                     = ,
+/*xlabel                    =Secs,
+/*xaxis                     = ,,
+};
+
+/* Constant 49: KK14TEMP: Diagnostic Params - Malf 14 - Coolant Hot - Coolant temp hot limi  */
+{
+/*startAddr                 =1E8,
+/*columns                   =1,
+/*rows                      =1,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =-40.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =0.750000,
+/*map_name                  =KK14TEMP: Diagnostic Params - Malf 14 - Coolant Hot - Coolant temp hot limi ,
+/*ylabel                    = ,
+/*yaxis                     = ,
+/*xlabel                    =Deg C,
+/*xaxis                     = ,,
+};
+
+/* Constant 50: KK15TIME: Diagnostic Params - Malf 15 - Coolant Cold - Time since run enabl  */
+{
+/*startAddr                 =1E9,
+/*columns                   =1,
+/*rows                      =1,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =1.000000,
+/*map_name                  =KK15TIME: Diagnostic Params - Malf 15 - Coolant Cold - Time since run enabl ,
+/*ylabel                    = ,
+/*yaxis                     = ,
+/*xlabel                    =Secs,
+/*xaxis                     = ,,
+};
+
+/* Constant 51: KK15LIM: Diagnostic Params - Malf 15 - Coolant Cold - ADCOOL Cold Limit */
+{
+/*startAddr                 =1EA,
+/*columns                   =1,
+/*rows                      =1,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =1.000000,
+/*map_name                  =KK15LIM: Diagnostic Params - Malf 15 - Coolant Cold - ADCOOL Cold Limit,
+/*ylabel                    = ,
+/*yaxis                     = ,
+/*xlabel                    =A/D,
+/*xaxis                     = ,,
+};
+
+/* Constant 52: KKTCDF: Diagnostic Params - Malf 14 & 15 - Max default coolant */
+{
+/*startAddr                 =1EB,
+/*columns                   =1,
+/*rows                      =1,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =-40.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =0.750000,
+/*map_name                  =KKTCDF: Diagnostic Params - Malf 14 & 15 - Max default coolant,
+/*ylabel                    = ,
+/*yaxis                     = ,
+/*xlabel                    =Deg C,
+/*xaxis                     = ,,
+};
+
+/* Constant 53: KK21TPS: Diagnostic Params - Malf 21 - TPS High - High TPS A/D limit */
+{
+/*startAddr                 =1EC,
+/*columns                   =1,
+/*rows                      =1,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =1.000000,
+/*map_name                  =KK21TPS: Diagnostic Params - Malf 21 - TPS High - High TPS A/D limit,
+/*ylabel                    = ,
+/*yaxis                     = ,
+/*xlabel                    =A/D,
+/*xaxis                     = ,,
+};
+
+/* Constant 54: KK21RPM: Diagnostic Params - Malf 21 - TPS High - Minimum engine speed */
+{
+/*startAddr                 =1ED,
+/*columns                   =1,
+/*rows                      =1,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =25.000000,
+/*map_name                  =KK21RPM: Diagnostic Params - Malf 21 - TPS High - Minimum engine speed,
+/*ylabel                    = ,
+/*yaxis                     = ,
+/*xlabel                    =RPM,
+/*xaxis                     = ,,
+};
+
+/* Constant 55: KK21TIM: Diagnostic Params - Malf 21 - TPS High -Time limit */
+{
+/*startAddr                 =1EE,
+/*columns                   =1,
+/*rows                      =1,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =0.100000,
+/*map_name                  =KK21TIM: Diagnostic Params - Malf 21 - TPS High -Time limit,
+/*ylabel                    = ,
+/*yaxis                     = ,
+/*xlabel                    =Secs,
+/*xaxis                     = ,,
+};
+
+/* Constant 56: KK21MAP: Diagnostic Params - Malf 21 - TPS High - Maximum MAP */
+{
+/*startAddr                 =1EF,
+/*columns                   =1,
+/*rows                      =1,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =10.332103,
+/*mulOrDivOrBit             =0,
+/*factor                    =0.369004,
+/*map_name                  =KK21MAP: Diagnostic Params - Malf 21 - TPS High - Maximum MAP,
+/*ylabel                    = ,
+/*yaxis                     = ,
+/*xlabel                    =kPa,
+/*xaxis                     = ,,
+};
+
+/* Constant 57: KK22TPS: Diagnostic Params - Malf 22 - TPS Low - Low TPS A/D limit */
+{
+/*startAddr                 =1F0,
+/*columns                   =1,
+/*rows                      =1,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =1.000000,
+/*map_name                  =KK22TPS: Diagnostic Params - Malf 22 - TPS Low - Low TPS A/D limit,
+/*ylabel                    = ,
+/*yaxis                     = ,
+/*xlabel                    =A/D,
+/*xaxis                     = ,,
+};
+
+/* Constant 58: KK23TIME: Diagnostic Params - Malf 23 - MAT Cold - Time since run enable */
+{
+/*startAddr                 =1F1,
+/*columns                   =1,
+/*rows                      =1,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =1.000000,
+/*map_name                  =KK23TIME: Diagnostic Params - Malf 23 - MAT Cold - Time since run enable,
+/*ylabel                    = ,
+/*yaxis                     = ,
+/*xlabel                    =Sec,
+/*xaxis                     = ,,
+};
+
+/* Constant 59: KK23LIM: Diagnostic Params - Malf 23 - MAT Cold - Manifold temp cold limit */
+{
+/*startAddr                 =1F2,
+/*columns                   =1,
+/*rows                      =1,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =1.000000,
+/*map_name                  =KK23LIM: Diagnostic Params - Malf 23 - MAT Cold - Manifold temp cold limit,
+/*ylabel                    = ,
+/*yaxis                     = ,
+/*xlabel                    =A/D,
+/*xaxis                     = ,,
+};
+
+/* Constant 60: KKDFMAT: Diagnostic Params - Malf 23 & 25 - Default MAT reading */
+{
+/*startAddr                 =1F3,
+/*columns                   =1,
+/*rows                      =1,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =-40.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =0.750000,
+/*map_name                  =KKDFMAT: Diagnostic Params - Malf 23 & 25 - Default MAT reading,
+/*ylabel                    = ,
+/*yaxis                     = ,
+/*xlabel                    =Deg C,
+/*xaxis                     = ,,
+};
+
+/* Constant 61: KK24RPML: Diagnostic Params - Malf 24 - Vehicle speed - Engine speed upper   */
+{
+/*startAddr                 =1F4,
+/*columns                   =1,
+/*rows                      =1,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =25.000000,
+/*map_name                  =KK24RPML: Diagnostic Params - Malf 24 - Vehicle speed - Engine speed upper  ,
+/*ylabel                    = ,
+/*yaxis                     = ,
+/*xlabel                    =RPM,
+/*xaxis                     = ,,
+};
+
+/* Constant 62: KK24RPMU: Diagnostic Params - Malf 24 - Vehicle speed - Engine speed lower   */
+{
+/*startAddr                 =1F5,
+/*columns                   =1,
+/*rows                      =1,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =25.000000,
+/*map_name                  =KK24RPMU: Diagnostic Params - Malf 24 - Vehicle speed - Engine speed lower  ,
+/*ylabel                    = ,
+/*yaxis                     = ,
+/*xlabel                    =RPM,
+/*xaxis                     = ,,
+};
+
+/* Constant 63: KK24MAP: Diagnostic Params - Malf 24 - Vehicle speed - Maximum MAP load lim  */
+{
+/*startAddr                 =1F6,
+/*columns                   =1,
+/*rows                      =1,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =10.332103,
+/*mulOrDivOrBit             =0,
+/*factor                    =0.369004,
+/*map_name                  =KK24MAP: Diagnostic Params - Malf 24 - Vehicle speed - Maximum MAP load lim ,
+/*ylabel                    = ,
+/*yaxis                     = ,
+/*xlabel                    =kPa,
+/*xaxis                     = ,,
+};
+
+/* Constant 64: KK24TIM: Diagnostic Params - Malf 24 - Vehicle speed - Time limit */
+{
+/*startAddr                 =1F7,
+/*columns                   =1,
+/*rows                      =1,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =0.100000,
+/*map_name                  =KK24TIM: Diagnostic Params - Malf 24 - Vehicle speed - Time limit,
+/*ylabel                    = ,
+/*yaxis                     = ,
+/*xlabel                    =Sec,
+/*xaxis                     = ,,
+};
+
+/* Constant 65: KK25TIME: Diagnostic Params - Malf 25 - MAT Hot - Time since run enable */
+{
+/*startAddr                 =1F8,
+/*columns                   =1,
+/*rows                      =1,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =1.000000,
+/*map_name                  =KK25TIME: Diagnostic Params - Malf 25 - MAT Hot - Time since run enable,
+/*ylabel                    = ,
+/*yaxis                     = ,
+/*xlabel                    =Sec,
+/*xaxis                     = ,,
+};
+
+/* Constant 66: KK25LIM: Diagnostic Params - Malf 25 - MAT Hot - Manifold temp Hot limit */
+{
+/*startAddr                 =1F9,
+/*columns                   =1,
+/*rows                      =1,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =1.000000,
+/*map_name                  =KK25LIM: Diagnostic Params - Malf 25 - MAT Hot - Manifold temp Hot limit,
+/*ylabel                    = ,
+/*yaxis                     = ,
+/*xlabel                    =A/D,
+/*xaxis                     = ,,
+};
+
+/* Constant 67: KK33TPS: Diagnostic Params - Malf 33 - MAP High - Throttle position limit */
+{
+/*startAddr                 =1FA,
+/*columns                   =1,
+/*rows                      =1,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =0.390625,
+/*map_name                  =KK33TPS: Diagnostic Params - Malf 33 - MAP High - Throttle position limit,
+/*ylabel                    = ,
+/*yaxis                     = ,
+/*xlabel                    =%TPS,
+/*xaxis                     = ,,
+};
+
+/* Constant 68: KK33MAP: Diagnostic Params - Malf 33 - MAP High - MAP limit */
+{
+/*startAddr                 =1FB,
+/*columns                   =1,
+/*rows                      =1,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =10.332103,
+/*mulOrDivOrBit             =0,
+/*factor                    =0.369004,
+/*map_name                  =KK33MAP: Diagnostic Params - Malf 33 - MAP High - MAP limit,
+/*ylabel                    = ,
+/*yaxis                     = ,
+/*xlabel                    =kPa,
+/*xaxis                     = ,,
+};
+
+/* Constant 69: KK33TIM: Diagnostic Params - Malf 33 - MAP High - Time limit */
+{
+/*startAddr                 =1FC,
+/*columns                   =1,
+/*rows                      =1,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =0.100000,
+/*map_name                  =KK33TIM: Diagnostic Params - Malf 33 - MAP High - Time limit,
+/*ylabel                    = ,
+/*yaxis                     = ,
+/*xlabel                    =Sec,
+/*xaxis                     = ,,
+};
+
+/* Constant 70: KK34MAP: Diagnostic Params - Malf 34 - MAP Low - Low MAP limit */
+{
+/*startAddr                 =1FD,
+/*columns                   =1,
+/*rows                      =1,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =10.332103,
+/*mulOrDivOrBit             =0,
+/*factor                    =0.369004,
+/*map_name                  =KK34MAP: Diagnostic Params - Malf 34 - MAP Low - Low MAP limit,
+/*ylabel                    = ,
+/*yaxis                     = ,
+/*xlabel                    =kPa,
+/*xaxis                     = ,,
+};
+
+/* Constant 71: KK34RPM: Diagnostic Params - Malf 34 - MAP Low - Minimum RPM for TPS test */
+{
+/*startAddr                 =1FE,
+/*columns                   =1,
+/*rows                      =1,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =25.000000,
+/*map_name                  =KK34RPM: Diagnostic Params - Malf 34 - MAP Low - Minimum RPM for TPS test,
+/*ylabel                    = ,
+/*yaxis                     = ,
+/*xlabel                    =RPM,
+/*xaxis                     = ,,
+};
+
+/* Constant 72: KK34TPS: Diagnostic Params - Malf 34 - MAP Low - Minimum throttle position */
+{
+/*startAddr                 =1FF,
+/*columns                   =1,
+/*rows                      =1,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =0.390625,
+/*map_name                  =KK34TPS: Diagnostic Params - Malf 34 - MAP Low - Minimum throttle position,
+/*ylabel                    = ,
+/*yaxis                     = ,
+/*xlabel                    =%TPS,
+/*xaxis                     = ,,
+};
+
+/* Constant 73: KK34TIM: Diagnostic Params - Malf 34 - MAP Low - Time limit */
+{
+/*startAddr                 =200,
+/*columns                   =1,
+/*rows                      =1,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =0.010000,
+/*map_name                  =KK34TIM: Diagnostic Params - Malf 34 - MAP Low - Time limit,
+/*ylabel                    = ,
+/*yaxis                     = ,
+/*xlabel                    =Sec,
+/*xaxis                     = ,,
+};
+
+/* Constant 74: KK35MXMP: Diagnostic Params - Malf 35 - IAC Fail - Maximum motor position */
+{
+/*startAddr                 =201,
+/*columns                   =1,
+/*rows                      =1,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =1.000000,
+/*map_name                  =KK35MXMP: Diagnostic Params - Malf 35 - IAC Fail - Maximum motor position,
+/*ylabel                    = ,
+/*yaxis                     = ,
+/*xlabel                    =Steps,
+/*xaxis                     = ,,
+};
+
+/* Constant 75: KK35DIAG: Diagnostic Params - Malf 35 - IAC Fail - Maximum RPM Error */
+{
+/*startAddr                 =202,
+/*columns                   =1,
+/*rows                      =1,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =6.250000,
+/*map_name                  =KK35DIAG: Diagnostic Params - Malf 35 - IAC Fail - Maximum RPM Error,
+/*ylabel                    = ,
+/*yaxis                     = ,
+/*xlabel                    =RPM,
+/*xaxis                     = ,,
+};
+
+/* Constant 76: KK35TIME: Diagnostic Params - Malf 35 - IAC Fail - Time threshold */
+{
+/*startAddr                 =203,
+/*columns                   =1,
+/*rows                      =1,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =0.200000,
+/*map_name                  =KK35TIME: Diagnostic Params - Malf 35 - IAC Fail - Time threshold,
+/*ylabel                    = ,
+/*yaxis                     = ,
+/*xlabel                    =Sec,
+/*xaxis                     = ,,
+};
+
+/* Constant 77: KK41VAC: Diagnostic Params - Malf 41 - No REFHI Pulses - Vac threshold whil  */
+{
+/*startAddr                 =204,
+/*columns                   =1,
+/*rows                      =1,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =0.369004,
+/*map_name                  =KK41VAC: Diagnostic Params - Malf 41 - No REFHI Pulses - Vac threshold whil ,
+/*ylabel                    = ,
+/*yaxis                     = ,
+/*xlabel                    =kPa,
+/*xaxis                     = ,,
+};
+
+/* Constant 78: KK41TIM: Diagnostic Params - Malf 41 - No REFHI Pulses - Time threshold */
+{
+/*startAddr                 =205,
+/*columns                   =1,
+/*rows                      =1,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =0.100000,
+/*map_name                  =KK41TIM: Diagnostic Params - Malf 41 - No REFHI Pulses - Time threshold,
+/*ylabel                    = ,
+/*yaxis                     = ,
+/*xlabel                    =Sec,
+/*xaxis                     = ,,
+};
+
+/* Constant 79: KK41BAT: Diagnostic Params - Malf 41 - No REFHI Pulses - Battery voltage th  */
+{
+/*startAddr                 =206,
+/*columns                   =1,
+/*rows                      =1,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =0.100000,
+/*map_name                  =KK41BAT: Diagnostic Params - Malf 41 - No REFHI Pulses - Battery voltage th ,
+/*ylabel                    = ,
+/*yaxis                     = ,
+/*xlabel                    =Volts,
+/*xaxis                     = ,,
+};
+
+/* Constant 80: KK43LO: Diagnostic Params - Malf 43 - ESC Fail - Minimum A/D value */
+{
+/*startAddr                 =207,
+/*columns                   =1,
+/*rows                      =1,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =1.000000,
+/*map_name                  =KK43LO: Diagnostic Params - Malf 43 - ESC Fail - Minimum A/D value,
+/*ylabel                    = ,
+/*yaxis                     = ,
+/*xlabel                    =A/D,
+/*xaxis                     = ,,
+};
+
+/* Constant 81: KK43HI: Diagnostic Params - Malf 43 - ESC Fail - Maximum A/D value */
+{
+/*startAddr                 =208,
+/*columns                   =1,
+/*rows                      =1,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =1.000000,
+/*map_name                  =KK43HI: Diagnostic Params - Malf 43 - ESC Fail - Maximum A/D value,
+/*ylabel                    = ,
+/*yaxis                     = ,
+/*xlabel                    =A/D,
+/*xaxis                     = ,,
+};
+
+/* Constant 82: KK43TIM: Diagnostic Params - Malf 43 - ESC Fail - Detection time limit */
+{
+/*startAddr                 =209,
+/*columns                   =1,
+/*rows                      =1,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =0.100000,
+/*map_name                  =KK43TIM: Diagnostic Params - Malf 43 - ESC Fail - Detection time limit,
+/*ylabel                    = ,
+/*yaxis                     = ,
+/*xlabel                    =Sec,
+/*xaxis                     = ,,
+};
+
+/* Constant 83: KKRTDF: Diagnostic Params - Malf 43 - ESC Fail - Default retard value */
+{
+/*startAddr                 =20A,
+/*columns                   =1,
+/*rows                      =1,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =0.351563,
+/*map_name                  =KKRTDF: Diagnostic Params - Malf 43 - ESC Fail - Default retard value,
+/*ylabel                    = ,
+/*yaxis                     = ,
+/*xlabel                    =Deg,
+/*xaxis                     = ,,
+};
+
+/* Constant 84: KK44TIM: Diagnostic Params - Malf 44 & 45 - O2 Lean/Rich - Time threshold */
+{
+/*startAddr                 =20B,
+/*columns                   =1,
+/*rows                      =1,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =0.100000,
+/*map_name                  =KK44TIM: Diagnostic Params - Malf 44 & 45 - O2 Lean/Rich - Time threshold,
+/*ylabel                    = ,
+/*yaxis                     = ,
+/*xlabel                    =Sec,
+/*xaxis                     = ,,
+};
+
+/* Constant 85: KFANTCL: Fan 1 OFF coolant temp Celcius */
+{
+/*startAddr                 =20C,
+/*columns                   =1,
+/*rows                      =1,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =-40.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =0.750000,
+/*map_name                  =KFANTCL: Fan 1 OFF coolant temp Celcius,
+/*ylabel                    = ,
+/*yaxis                     = ,
+/*xlabel                    =Deg C,
+/*xaxis                     = ,,
+};
+
+/* Constant 86: KFANTCH: Fan 1 ON coolant temp Celcius */
+{
+/*startAddr                 =20D,
+/*columns                   =1,
+/*rows                      =1,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =-40.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =0.750000,
+/*map_name                  =KFANTCH: Fan 1 ON coolant temp Celcius,
+/*ylabel                    = ,
+/*yaxis                     = ,
+/*xlabel                    =Deg C,
+/*xaxis                     = ,,
+};
+
+/* Constant 87: KFANKPH: Fan 1 enable speed W/AC ON (km/h) -8 kmh hysteresis */
+{
+/*startAddr                 =20E,
+/*columns                   =1,
+/*rows                      =1,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =1.000000,
+/*map_name                  =KFANKPH: Fan 1 enable speed W/AC ON (km/h) -8 kmh hysteresis,
+/*ylabel                    = ,
+/*yaxis                     = ,
+/*xlabel                    =km/h,
+/*xaxis                     = ,,
+};
+
+/* Constant 88: KFAN2TCL: Fan 2 OFF coolant temp Celcius */
+{
+/*startAddr                 =20F,
+/*columns                   =1,
+/*rows                      =1,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =-40.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =0.750000,
+/*map_name                  =KFAN2TCL: Fan 2 OFF coolant temp Celcius,
+/*ylabel                    = ,
+/*yaxis                     = ,
+/*xlabel                    =Deg C,
+/*xaxis                     = ,,
+};
+
+/* Constant 89: KFAN2TCH: Fan 2 ON coolant temp Celcius */
+{
+/*startAddr                 =210,
+/*columns                   =1,
+/*rows                      =1,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =-40.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =0.750000,
+/*map_name                  =KFAN2TCH: Fan 2 ON coolant temp Celcius,
+/*ylabel                    = ,
+/*yaxis                     = ,
+/*xlabel                    =Deg C,
+/*xaxis                     = ,,
+};
+
+/* Constant 90: KFAN2KPH: Fan 2 enable speed (km/h) -8 Km/h Hysteresis */
+{
+/*startAddr                 =211,
+/*columns                   =1,
+/*rows                      =1,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =1.000000,
+/*map_name                  =KFAN2KPH: Fan 2 enable speed (km/h) -8 Km/h Hysteresis,
+/*ylabel                    = ,
+/*yaxis                     = ,
+/*xlabel                    =km/h,
+/*xaxis                     = ,,
+};
+
+/* Constant 91: KACTIMER: A/C - A/C TPS Threshold for Cut-out  */
+{
+/*startAddr                 =212,
+/*columns                   =1,
+/*rows                      =1,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =0.390625,
+/*map_name                  =KACTIMER: A/C - A/C TPS Threshold for Cut-out ,
+/*ylabel                    = ,
+/*yaxis                     = ,
+/*xlabel                    =%,
+/*xaxis                     = ,,
+};
+
+/* Constant 92: KACTIMER: A/C - A/C Clutch Delay Time */
+{
+/*startAddr                 =213,
+/*columns                   =1,
+/*rows                      =1,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =0.100000,
+/*map_name                  =KACTIMER: A/C - A/C Clutch Delay Time,
+/*ylabel                    = ,
+/*yaxis                     = ,
+/*xlabel                    =SEC,
+/*xaxis                     = ,,
+};
+
+/* Constant 93: KACRPMHI: A/C - A/C Clutch high RPM cut-out */
+{
+/*startAddr                 =214,
+/*columns                   =1,
+/*rows                      =1,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =25.000000,
+/*map_name                  =KACRPMHI: A/C - A/C Clutch high RPM cut-out,
+/*ylabel                    = ,
+/*yaxis                     = ,
+/*xlabel                    =RPM,
+/*xaxis                     = ,,
+};
+
+/* Constant 94: KACRPMLO: A/C - A/C Clutch cut-out-> Re-Enable RPM */
+{
+/*startAddr                 =215,
+/*columns                   =1,
+/*rows                      =1,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =25.000000,
+/*map_name                  =KACRPMLO: A/C - A/C Clutch cut-out-> Re-Enable RPM,
+/*ylabel                    = ,
+/*yaxis                     = ,
+/*xlabel                    =RPM,
+/*xaxis                     = ,,
+};
+
+/* Constant 95: KOUTDLY:  A/C - Discrete Output Delay Time Delay */
+{
+/*startAddr                 =216,
+/*columns                   =1,
+/*rows                      =1,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =0.100000,
+/*map_name                  =KOUTDLY:  A/C - Discrete Output Delay Time Delay,
+/*ylabel                    = ,
+/*yaxis                     = ,
+/*xlabel                    =SEC,
+/*xaxis                     = ,,
+};
+
+/* Constant 96: KFPTIME:  F/Pump Slow Run - Engine Run Time to Enable Slow Pump */
+{
+/*startAddr                 =217,
+/*columns                   =1,
+/*rows                      =1,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =1.000000,
+/*map_name                  =KFPTIME:  F/Pump Slow Run - Engine Run Time to Enable Slow Pump,
+/*ylabel                    = ,
+/*yaxis                     = ,
+/*xlabel                    =SEC,
+/*xaxis                     = ,,
+};
+
+/* Constant 97: KFPTEMP:  F/Pump Slow Run - Max Manifold Temperature (+3deg Hyst) */
+{
+/*startAddr                 =218,
+/*columns                   =1,
+/*rows                      =1,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =-40.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =0.750000,
+/*map_name                  =KFPTEMP:  F/Pump Slow Run - Max Manifold Temperature (+3deg Hyst),
+/*ylabel                    = ,
+/*yaxis                     = ,
+/*xlabel                    =Deg C,
+/*xaxis                     = ,,
+};
+
+/* Constant 98: KFPVOLTS:  F/Pump Slow Run - Minimum Battery Voltage to Enable */
+{
+/*startAddr                 =219,
+/*columns                   =1,
+/*rows                      =1,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =0.100000,
+/*map_name                  =KFPVOLTS:  F/Pump Slow Run - Minimum Battery Voltage to Enable,
+/*ylabel                    = ,
+/*yaxis                     = ,
+/*xlabel                    =Volts,
+/*xaxis                     = ,,
+};
+
+/* Constant 99: KFPGAIN:  F/Pump Slow Run - Voltage Gain for F33 Lookup */
+{
+/*startAddr                 =21A,
+/*columns                   =1,
+/*rows                      =1,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =0.390625,
+/*map_name                  =KFPGAIN:  F/Pump Slow Run - Voltage Gain for F33 Lookup,
+/*ylabel                    = ,
+/*yaxis                     = ,
+/*xlabel                    =%Gain,
+/*xaxis                     = ,,
+};
+
+/* Constant 100: KFPTPSHI: F/Pump Slow Run - TPS Limit to Disable Slow Pump */
+{
+/*startAddr                 =21B,
+/*columns                   =1,
+/*rows                      =1,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =0.390625,
+/*map_name                  =KFPTPSHI: F/Pump Slow Run - TPS Limit to Disable Slow Pump,
+/*ylabel                    = ,
+/*yaxis                     = ,
+/*xlabel                    =%,
+/*xaxis                     = ,,
+};
+
+/* Constant 101: KFPTPSHI: F/Pump Slow Run - TPS Limit to Enable Slow Pump */
+{
+/*startAddr                 =21C,
+/*columns                   =1,
+/*rows                      =1,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =0.390625,
+/*map_name                  =KFPTPSHI: F/Pump Slow Run - TPS Limit to Enable Slow Pump,
+/*ylabel                    = ,
+/*yaxis                     = ,
+/*xlabel                    =%,
+/*xaxis                     = ,,
+};
+
+/* Constant 102: KTCFUEU: Trip computer - 0  for Upper Byte Usage of KTCFUEL */
+{
+/*startAddr                 =21D,
+/*columns                   =1,
+/*rows                      =1,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =1.000000,
+/*map_name                  =KTCFUEU: Trip computer - 0  for Upper Byte Usage of KTCFUEL,
+/*ylabel                    = ,
+/*yaxis                     = ,
+/*xlabel                    =Units,
+/*xaxis                     = ,,
+};
+
+/* Constant 103: KTCFUEL: Trip computer - Amount of Fuel For 1/256 DU */
+{
+/*startAddr                 =21E,
+/*columns                   =1,
+/*rows                      =1,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =0.015625,
+/*map_name                  =KTCFUEL: Trip computer - Amount of Fuel For 1/256 DU,
+/*ylabel                    = ,
+/*yaxis                     = ,
+/*xlabel                    =Msec,
+/*xaxis                     = ,,
+};
+
+/* Constant 104: KNVRATAL: Shift light params - RPM/KmH N/V for HIGEAR to be upshift */
+{
+/*startAddr                 =21F,
+/*columns                   =1,
+/*rows                      =1,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =1.000000,
+/*map_name                  =KNVRATAL: Shift light params - RPM/KmH N/V for HIGEAR to be upshift,
+/*ylabel                    = ,
+/*yaxis                     = ,
+/*xlabel                    = ,
+/*xaxis                     = ,,
+};
+
+/* Constant 105: KDLTRPMA: Shift light params - Engine speed tolerence for highest gear */
+{
+/*startAddr                 =220,
+/*columns                   =1,
+/*rows                      =1,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =25.000000,
+/*map_name                  =KDLTRPMA: Shift light params - Engine speed tolerence for highest gear,
+/*ylabel                    = ,
+/*yaxis                     = ,
+/*xlabel                    =RPM,
+/*xaxis                     = ,,
+};
+
+/* Constant 106: KGEARDL1: Shift light params - In-Gear delay time for first gear */
+{
+/*startAddr                 =221,
+/*columns                   =1,
+/*rows                      =1,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =0.100000,
+/*map_name                  =KGEARDL1: Shift light params - In-Gear delay time for first gear,
+/*ylabel                    = ,
+/*yaxis                     = ,
+/*xlabel                    =Sec,
+/*xaxis                     = ,,
+};
+
+/* Constant 107: KGEARDL2: Shift light params - In-Gear delay time for 2nd 3rd & 4th gear */
+{
+/*startAddr                 =222,
+/*columns                   =1,
+/*rows                      =1,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =0.100000,
+/*map_name                  =KGEARDL2: Shift light params - In-Gear delay time for 2nd 3rd & 4th gear,
+/*ylabel                    = ,
+/*yaxis                     = ,
+/*xlabel                    =Sec,
+/*xaxis                     = ,,
+};
+
+/* Constant 108: KNVRATBL: Shift light params - RPM/KMH N/V for 2nd gear */
+{
+/*startAddr                 =223,
+/*columns                   =1,
+/*rows                      =1,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =1.000000,
+/*map_name                  =KNVRATBL: Shift light params - RPM/KMH N/V for 2nd gear,
+/*ylabel                    = ,
+/*yaxis                     = ,
+/*xlabel                    = ,
+/*xaxis                     = ,,
+};
+
+/* Constant 109: KDLTRPMB: Shift light params - Engine speed tolerence for 2nd highest gear */
+{
+/*startAddr                 =224,
+/*columns                   =1,
+/*rows                      =1,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =25.000000,
+/*map_name                  =KDLTRPMB: Shift light params - Engine speed tolerence for 2nd highest gear,
+/*ylabel                    = ,
+/*yaxis                     = ,
+/*xlabel                    =RPM,
+/*xaxis                     = ,,
+};
+
+/* Constant 110: KSHFRPMB: Shift light params - Minimum RPM to allow shift to 3rd gear */
+{
+/*startAddr                 =225,
+/*columns                   =1,
+/*rows                      =1,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =25.000000,
+/*map_name                  =KSHFRPMB: Shift light params - Minimum RPM to allow shift to 3rd gear,
+/*ylabel                    = ,
+/*yaxis                     = ,
+/*xlabel                    =RPM,
+/*xaxis                     = ,,
+};
+
+/* Constant 111: KSHFMAPB: Shift light params - Maximum MAP to allow shift to 3rd gear */
+{
+/*startAddr                 =226,
+/*columns                   =1,
+/*rows                      =1,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =10.332103,
+/*mulOrDivOrBit             =0,
+/*factor                    =0.369004,
+/*map_name                  =KSHFMAPB: Shift light params - Maximum MAP to allow shift to 3rd gear,
+/*ylabel                    = ,
+/*yaxis                     = ,
+/*xlabel                    =kPa,
+/*xaxis                     = ,,
+};
+
+/* Constant 112: KNVRATDL: Shift light params - RPM/KMH N/V for 3rd gear */
+{
+/*startAddr                 =227,
+/*columns                   =1,
+/*rows                      =1,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =1.000000,
+/*map_name                  =KNVRATDL: Shift light params - RPM/KMH N/V for 3rd gear,
+/*ylabel                    = ,
+/*yaxis                     = ,
+/*xlabel                    = ,
+/*xaxis                     = ,,
+};
+
+/* Constant 113: KDLTRPMC: Shift light params - Engine speed tolerence for 3rd highest gear */
+{
+/*startAddr                 =228,
+/*columns                   =1,
+/*rows                      =1,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =25.000000,
+/*map_name                  =KDLTRPMC: Shift light params - Engine speed tolerence for 3rd highest gear,
+/*ylabel                    = ,
+/*yaxis                     = ,
+/*xlabel                    =RPM,
+/*xaxis                     = ,,
+};
+
+/* Constant 114: KSHFRPMC: Shift light params - Minimum RPM to allow shift to 4th gear */
+{
+/*startAddr                 =229,
+/*columns                   =1,
+/*rows                      =1,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =25.000000,
+/*map_name                  =KSHFRPMC: Shift light params - Minimum RPM to allow shift to 4th gear,
+/*ylabel                    = ,
+/*yaxis                     = ,
+/*xlabel                    =RPM,
+/*xaxis                     = ,,
+};
+
+/* Constant 115: KSHFMAPC: Shift light params - Maximum MAP to allow shift to 4th gear */
+{
+/*startAddr                 =22A,
+/*columns                   =1,
+/*rows                      =1,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =10.332103,
+/*mulOrDivOrBit             =0,
+/*factor                    =0.369004,
+/*map_name                  =KSHFMAPC: Shift light params - Maximum MAP to allow shift to 4th gear,
+/*ylabel                    = ,
+/*yaxis                     = ,
+/*xlabel                    =kPa,
+/*xaxis                     = ,,
+};
+
+/* Constant 116: KNVRATDL: Shift light params - RPM/KMH N/V for 4th gear */
+{
+/*startAddr                 =22B,
+/*columns                   =1,
+/*rows                      =1,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =1.000000,
+/*map_name                  =KNVRATDL: Shift light params - RPM/KMH N/V for 4th gear,
+/*ylabel                    = ,
+/*yaxis                     = ,
+/*xlabel                    = ,
+/*xaxis                     = ,,
+};
+
+/* Constant 117: KDLTRPMD: Shift light params - Engine speed tolerence for 4th highest gear */
+{
+/*startAddr                 =22C,
+/*columns                   =1,
+/*rows                      =1,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =25.000000,
+/*map_name                  =KDLTRPMD: Shift light params - Engine speed tolerence for 4th highest gear,
+/*ylabel                    = ,
+/*yaxis                     = ,
+/*xlabel                    =RPM,
+/*xaxis                     = ,,
+};
+
+/* Constant 118: KSHFRPMD: Shift light params - Minimum RPM to allow shift to 5th gear */
+{
+/*startAddr                 =22D,
+/*columns                   =1,
+/*rows                      =1,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =25.000000,
+/*map_name                  =KSHFRPMD: Shift light params - Minimum RPM to allow shift to 5th gear,
+/*ylabel                    = ,
+/*yaxis                     = ,
+/*xlabel                    =RPM,
+/*xaxis                     = ,,
+};
+
+/* Constant 119: KSHFMAPD: Shift light params - Maximum MAP to allow shift to 5th gear */
+{
+/*startAddr                 =22E,
+/*columns                   =1,
+/*rows                      =1,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =10.332103,
+/*mulOrDivOrBit             =0,
+/*factor                    =0.369004,
+/*map_name                  =KSHFMAPD: Shift light params - Maximum MAP to allow shift to 5th gear,
+/*ylabel                    = ,
+/*yaxis                     = ,
+/*xlabel                    =kPa,
+/*xaxis                     = ,,
+};
+
+/* Constant 120: KNVRATEL: Shift light params - RPM/KMH N/V for 1st gear */
+{
+/*startAddr                 =22F,
+/*columns                   =1,
+/*rows                      =1,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =1.000000,
+/*map_name                  =KNVRATEL: Shift light params - RPM/KMH N/V for 1st gear,
+/*ylabel                    = ,
+/*yaxis                     = ,
+/*xlabel                    = ,
+/*xaxis                     = ,,
+};
+
+/* Constant 121: KDLTRPME: Shift light params - Engine speed tolerence for 1st gear */
+{
+/*startAddr                 =230,
+/*columns                   =1,
+/*rows                      =1,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =25.000000,
+/*map_name                  =KDLTRPME: Shift light params - Engine speed tolerence for 1st gear,
+/*ylabel                    = ,
+/*yaxis                     = ,
+/*xlabel                    =RPM,
+/*xaxis                     = ,,
+};
+
+/* Constant 122: KSHFRPME: Shift light params - Minimum RPM to allow shift to 2nd gear */
+{
+/*startAddr                 =231,
+/*columns                   =1,
+/*rows                      =1,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =25.000000,
+/*map_name                  =KSHFRPME: Shift light params - Minimum RPM to allow shift to 2nd gear,
+/*ylabel                    = ,
+/*yaxis                     = ,
+/*xlabel                    =RPM,
+/*xaxis                     = ,,
+};
+
+/* Constant 123: KSHFMAPE: Shift light params - Maximum MAP to allow shift to 2nd gear */
+{
+/*startAddr                 =232,
+/*columns                   =1,
+/*rows                      =1,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =10.332103,
+/*mulOrDivOrBit             =0,
+/*factor                    =0.369004,
+/*map_name                  =KSHFMAPE: Shift light params - Maximum MAP to allow shift to 2nd gear,
+/*ylabel                    = ,
+/*yaxis                     = ,
+/*xlabel                    =kPa,
+/*xaxis                     = ,,
+};
+
+/* Constant 124: KTCCTMPL: TCC lower temperature limit */
+{
+/*startAddr                 =239,
+/*columns                   =1,
+/*rows                      =1,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =-40.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =0.750000,
+/*map_name                  =KTCCTMPL: TCC lower temperature limit,
+/*ylabel                    =,
+/*yaxis                     =,
+/*xlabel                    =DegC,
+/*xaxis                     =,,
+};
+
+/* Constant 125: KCOASTHZ: TCC Params - TCC Hysteresis for KCOAST1 and KCOAST2 */
+{
+/*startAddr                 =23A,
+/*columns                   =1,
+/*rows                      =1,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =0.390625,
+/*map_name                  =KCOASTHZ: TCC Params - TCC Hysteresis for KCOAST1 and KCOAST2,
+/*ylabel                    =,
+/*yaxis                     =,
+/*xlabel                    =%,
+/*xaxis                     =,,
+};
+
+/* Constant 126: KRSCSTL: TCC Params - TCC Road speed coast level */
+{
+/*startAddr                 =23B,
+/*columns                   =1,
+/*rows                      =1,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =1.000000,
+/*map_name                  =KRSCSTL: TCC Params - TCC Road speed coast level,
+/*ylabel                    =,
+/*yaxis                     =,
+/*xlabel                    =km/h,
+/*xaxis                     =,,
+};
+
+/* Constant 127: KCOAST1A: TCC Params - TCC Low km/h coast load limit */
+{
+/*startAddr                 =23C,
+/*columns                   =1,
+/*rows                      =1,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =0.390625,
+/*map_name                  =KCOAST1A: TCC Params - TCC Low km/h coast load limit,
+/*ylabel                    =,
+/*yaxis                     =,
+/*xlabel                    =%,
+/*xaxis                     =,,
+};
+
+/* Constant 128: KCOAST2A: TCC Params - TCC High km/h coast load limit */
+{
+/*startAddr                 =23D,
+/*columns                   =1,
+/*rows                      =1,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =0.390625,
+/*map_name                  =KCOAST2A: TCC Params - TCC High km/h coast load limit,
+/*ylabel                    =,
+/*yaxis                     =,
+/*xlabel                    =%,
+/*xaxis                     =,,
+};
+
+/* Constant 129: KREL1A: TCC Params - TCC Negative delta Throttle position   Unlocked */
+{
+/*startAddr                 =23E,
+/*columns                   =1,
+/*rows                      =1,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =0.390625,
+/*map_name                  =KREL1A: TCC Params - TCC Negative delta Throttle position   Unlocked,
+/*ylabel                    =,
+/*yaxis                     =,
+/*xlabel                    =%,
+/*xaxis                     =,,
+};
+
+/* Constant 130: KREL2A: TCC Params - TCC Positive delta Throttle position   Unlocked */
+{
+/*startAddr                 =23F,
+/*columns                   =1,
+/*rows                      =1,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =0.390625,
+/*map_name                  =KREL2A: TCC Params - TCC Positive delta Throttle position   Unlocked,
+/*ylabel                    =,
+/*yaxis                     =,
+/*xlabel                    =%,
+/*xaxis                     =,,
+};
+
+/* Constant 131: KLCKDLYT: TCC Params - TCC delay before lock enabled after coast */
+{
+/*startAddr                 =240,
+/*columns                   =1,
+/*rows                      =1,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =0.100000,
+/*map_name                  =KLCKDLYT: TCC Params - TCC delay before lock enabled after coast,
+/*ylabel                    =,
+/*yaxis                     =,
+/*xlabel                    =Sec,
+/*xaxis                     =,,
+};
+
+/* Constant 132: KLKDLYT2: TCC Params - TCC Coast release lock delay time Low */
+{
+/*startAddr                 =241,
+/*columns                   =1,
+/*rows                      =1,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =0.100000,
+/*map_name                  =KLKDLYT2: TCC Params - TCC Coast release lock delay time Low,
+/*ylabel                    =,
+/*yaxis                     =,
+/*xlabel                    =Sec,
+/*xaxis                     =,,
+};
+
+/* Constant 133: KLKDLYT3: TCC Params - TCC Coast release lock delay time High */
+{
+/*startAddr                 =242,
+/*columns                   =1,
+/*rows                      =1,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =0.100000,
+/*map_name                  =KLKDLYT3: TCC Params - TCC Coast release lock delay time High,
+/*ylabel                    =,
+/*yaxis                     =,
+/*xlabel                    =Sec,
+/*xaxis                     =,,
+};
+
+/* Constant 134: KRSHNTHL: TCC Params - TCC Road speed upper limit for LOCK */
+{
+/*startAddr                 =243,
+/*columns                   =1,
+/*rows                      =1,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =1.000000,
+/*map_name                  =KRSHNTHL: TCC Params - TCC Road speed upper limit for LOCK,
+/*ylabel                    =,
+/*yaxis                     =,
+/*xlabel                    =km/h,
+/*xaxis                     =,,
+};
+
+/* Constant 135: KRSHNTLL: TCC Params - TCC Road speed lower limit for UNLOCK */
+{
+/*startAddr                 =244,
+/*columns                   =1,
+/*rows                      =1,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =1.000000,
+/*map_name                  =KRSHNTLL: TCC Params - TCC Road speed lower limit for UNLOCK,
+/*ylabel                    =,
+/*yaxis                     =,
+/*xlabel                    =km/h,
+/*xaxis                     =,,
+};
+
+/* Constant 136: KINJFLOW: Run A/F Param - Displacement/inj flow rate; (Litres/Grams per sec */
+{
+/*startAddr                 =271,
+/*columns                   =1,
+/*rows                      =1,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =0.000902,
+/*map_name                  =KINJFLOW: Run A/F Param - Displacement/inj flow rate; (Litres/Grams per sec,
+/*ylabel                    =,
+/*yaxis                     =,
+/*xlabel                    =Grams/Sec,
+/*xaxis                     =,,
+};
+
+/* Constant 137: KAPLH: Run A/F Param - Max BPW for Async Delivery  ms*65536 */
+{
+/*startAddr                 =272,
+/*columns                   =1,
+/*rows                      =1,
+/*elementSize               =2,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =0.015625,
+/*map_name                  =KAPLH: Run A/F Param - Max BPW for Async Delivery  ms*65536,
+/*ylabel                    = ,
+/*yaxis                     = ,
+/*xlabel                    =Msec,
+/*xaxis                     = ,,
+};
+
+/* Constant 138: KAPLL: Run A/F Param - Min BPW for Sync Delivery  ms*65536 */
+{
+/*startAddr                 =274,
+/*columns                   =1,
+/*rows                      =1,
+/*elementSize               =2,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =0.015259,
+/*map_name                  =KAPLL: Run A/F Param - Min BPW for Sync Delivery  ms*65536,
+/*ylabel                    = ,
+/*yaxis                     = ,
+/*xlabel                    =Msec,
+/*xaxis                     = ,,
+};
+
+/* Constant 139: KAPMAX: Run A/F Param - Max Async Pulse Width  ms*65536 */
+{
+/*startAddr                 =276,
+/*columns                   =1,
+/*rows                      =1,
+/*elementSize               =2,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =0.015259,
+/*map_name                  =KAPMAX: Run A/F Param - Max Async Pulse Width  ms*65536,
+/*ylabel                    = ,
+/*yaxis                     = ,
+/*xlabel                    =Msec,
+/*xaxis                     = ,,
+};
+
+/* Constant 140: KAPMIN: Run A/F Param - Min Async Pulse Width  ms*65536 */
+{
+/*startAddr                 =278,
+/*columns                   =1,
+/*rows                      =1,
+/*elementSize               =2,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =0.015259,
+/*map_name                  =KAPMIN: Run A/F Param - Min Async Pulse Width  ms*65536,
+/*ylabel                    = ,
+/*yaxis                     = ,
+/*xlabel                    =Msec,
+/*xaxis                     = ,,
+};
+
+/* Constant 141: KAPMAX: Run A/F Param - Min Async Pulse for AE Mode  ms*65536 */
+{
+/*startAddr                 =27A,
+/*columns                   =1,
+/*rows                      =1,
+/*elementSize               =2,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =0.015259,
+/*map_name                  =KAPMAX: Run A/F Param - Min Async Pulse for AE Mode  ms*65536,
+/*ylabel                    = ,
+/*yaxis                     = ,
+/*xlabel                    =Msec,
+/*xaxis                     = ,,
+};
+
+/* Constant 142: KFCORPML: Run A/F Param - Hi RPM fuel cutoff - LOW limit */
+{
+/*startAddr                 =27C,
+/*columns                   =1,
+/*rows                      =1,
+/*elementSize               =2,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =1,
+/*factor                    =983040.000000,
+/*map_name                  =KFCORPML: Run A/F Param - Hi RPM fuel cutoff - LOW limit,
+/*ylabel                    = ,
+/*yaxis                     = ,
+/*xlabel                    =RPM,
+/*xaxis                     = ,,
+};
+
+/* Constant 143: KFCORPMH: Run A/F Param - Hi RPM fuel cutoff - HI limit */
+{
+/*startAddr                 =27E,
+/*columns                   =1,
+/*rows                      =1,
+/*elementSize               =2,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =1,
+/*factor                    =983040.000000,
+/*map_name                  =KFCORPMH: Run A/F Param - Hi RPM fuel cutoff - HI limit,
+/*ylabel                    = ,
+/*yaxis                     = ,
+/*xlabel                    =RPM,
+/*xaxis                     = ,,
+};
+
+/* Constant 144: KFCOKPHL: Run A/F Param - Hi speed fuel cutoff - LOW limit */
+{
+/*startAddr                 =280,
+/*columns                   =1,
+/*rows                      =1,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =1.000000,
+/*map_name                  =KFCOKPHL: Run A/F Param - Hi speed fuel cutoff - LOW limit,
+/*ylabel                    = ,
+/*yaxis                     = ,
+/*xlabel                    =km/h,
+/*xaxis                     = ,,
+};
+
+/* Constant 145: KFCOKPHH: Run A/F Param - Hi Speed fuel cutoff - HIGH limit */
+{
+/*startAddr                 =281,
+/*columns                   =1,
+/*rows                      =1,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =1.000000,
+/*map_name                  =KFCOKPHH: Run A/F Param - Hi Speed fuel cutoff - HIGH limit,
+/*ylabel                    = ,
+/*yaxis                     = ,
+/*xlabel                    =km/h,
+/*xaxis                     = ,,
+};
+
+/* Constant 146: KFCOTIME: Run A/F Param - Fuel Cutoff Time Threshold */
+{
+/*startAddr                 =282,
+/*columns                   =1,
+/*rows                      =1,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =0.012500,
+/*map_name                  =KFCOTIME: Run A/F Param - Fuel Cutoff Time Threshold,
+/*ylabel                    = ,
+/*yaxis                     = ,
+/*xlabel                    =Sec,
+/*xaxis                     = ,,
+};
+
+/* Constant 147: KAFSTCN: Run A/F Param - Stoichiometric A/F ratio */
+{
+/*startAddr                 =283,
+/*columns                   =1,
+/*rows                      =1,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =0.100000,
+/*map_name                  =KAFSTCN: Run A/F Param - Stoichiometric A/F ratio,
+/*ylabel                    = ,
+/*yaxis                     = ,
+/*xlabel                    =Ratio,
+/*xaxis                     = ,,
+};
+
+/* Constant 148: KAFTCTH: Run A/F Param - Maximum Coolant Temp for F56 A/F Ratio */
+{
+/*startAddr                 =284,
+/*columns                   =1,
+/*rows                      =1,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =-40.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =0.750000,
+/*map_name                  =KAFTCTH: Run A/F Param - Maximum Coolant Temp for F56 A/F Ratio,
+/*ylabel                    =,
+/*yaxis                     =,
+/*xlabel                    =DegC,
+/*xaxis                     =,,
+};
+
+/* Constant 149: KAFDM: Run A/F Param - A/F Time Out Decay Multiplier */
+{
+/*startAddr                 =285,
+/*columns                   =1,
+/*rows                      =1,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =0.390625,
+/*map_name                  =KAFDM: Run A/F Param - A/F Time Out Decay Multiplier,
+/*ylabel                    = ,
+/*yaxis                     = ,
+/*xlabel                    =%,
+/*xaxis                     = ,,
+};
+
+/* Constant 150: KIDLECLT: Idle Fuel - Min coolant temp for stoich idle A/F */
+{
+/*startAddr                 =286,
+/*columns                   =1,
+/*rows                      =1,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =-40.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =0.750000,
+/*map_name                  =KIDLECLT: Idle Fuel - Min coolant temp for stoich idle A/F,
+/*ylabel                    =,
+/*yaxis                     =,
+/*xlabel                    =DegC,
+/*xaxis                     =,,
+};
+
+/* Constant 151: KIDLEKPH: Idle Fuel - Max road speed for idle A/F ratio */
+{
+/*startAddr                 =287,
+/*columns                   =1,
+/*rows                      =1,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =1.000000,
+/*map_name                  =KIDLEKPH: Idle Fuel - Max road speed for idle A/F ratio,
+/*ylabel                    = ,
+/*yaxis                     = ,
+/*xlabel                    =km/h,
+/*xaxis                     = ,,
+};
+
+/* Constant 152: KFILTCLT: Idle Fuel - Coolant temp filter coefficient at idle */
+{
+/*startAddr                 =288,
+/*columns                   =1,
+/*rows                      =1,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =0.003906,
+/*map_name                  =KFILTCLT: Idle Fuel - Coolant temp filter coefficient at idle,
+/*ylabel                    =,
+/*yaxis                     =,
+/*xlabel                    =Coeff,
+/*xaxis                     =,,
+};
+
+/* Constant 153: KIDLETIM: Idle Fuel - Delay time before using idle A/F ratio */
+{
+/*startAddr                 =289,
+/*columns                   =1,
+/*rows                      =1,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =0.100000,
+/*map_name                  =KIDLETIM: Idle Fuel - Delay time before using idle A/F ratio,
+/*ylabel                    =,
+/*yaxis                     =,
+/*xlabel                    =Seconds,
+/*xaxis                     =,,
+};
+
+/* Constant 154: KLEMGAIN: Idle Fuel - Low-speed Enrichment multiplier GAIN */
+{
+/*startAddr                 =28A,
+/*columns                   =1,
+/*rows                      =1,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =1.000000,
+/*map_name                  =KLEMGAIN: Idle Fuel - Low-speed Enrichment multiplier GAIN,
+/*ylabel                    =,
+/*yaxis                     =,
+/*xlabel                    =%/100,
+/*xaxis                     =,,
+};
+
+/* Constant 155: KLEMMAX: Idle Fuel - Low-speed Enrichment multiplier MAX */
+{
+/*startAddr                 =28B,
+/*columns                   =1,
+/*rows                      =1,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =0.007813,
+/*map_name                  =KLEMMAX: Idle Fuel - Low-speed Enrichment multiplier MAX,
+/*ylabel                    =,
+/*yaxis                     =,
+/*xlabel                    =Factor,
+/*xaxis                     =,,
+};
+
+/* Constant 156: KLEMRPM: Idle Fuel - RPM above desired to begin LEM  */
+{
+/*startAddr                 =28C,
+/*columns                   =1,
+/*rows                      =1,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =1.000000,
+/*map_name                  =KLEMRPM: Idle Fuel - RPM above desired to begin LEM ,
+/*ylabel                    =,
+/*yaxis                     =,
+/*xlabel                    =RPM,
+/*xaxis                     =,,
+};
+
+/* Constant 157: KFILTVE: Idle Fuel - VE table filter coefficient at idle */
+{
+/*startAddr                 =28D,
+/*columns                   =1,
+/*rows                      =1,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =0.003906,
+/*map_name                  =KFILTVE: Idle Fuel - VE table filter coefficient at idle,
+/*ylabel                    =,
+/*yaxis                     =,
+/*xlabel                    =Coeff,
+/*xaxis                     =,,
+};
+
+/* Constant 158: KVEFLRPM: Idle Fuel - RPM threshold for filtering VE */
+{
+/*startAddr                 =28E,
+/*columns                   =1,
+/*rows                      =1,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =1.000000,
+/*map_name                  =KVEFLRPM: Idle Fuel - RPM threshold for filtering VE,
+/*ylabel                    =,
+/*yaxis                     =,
+/*xlabel                    =RPM,
+/*xaxis                     =,,
+};
+
+/* Constant 159: KCFTM1 Crank A/F - Number of Ref Pulses Before Crank Fuel Decay */
+{
+/*startAddr                 =28F,
+/*columns                   =1,
+/*rows                      =1,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =1.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =1.000000,
+/*map_name                  =KCFTM1 Crank A/F - Number of Ref Pulses Before Crank Fuel Decay,
+/*ylabel                    =,
+/*yaxis                     =,
+/*xlabel                    =pulses
+Xleg		=,
+/*xaxis                     =,,
+};
+
+/* Constant 160: KCFTM2 Crank A/F - Number of Ref Pulses Between Crank Decay L */
+{
+/*startAddr                 =290,
+/*columns                   =1,
+/*rows                      =1,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =1.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =1.000000,
+/*map_name                  =KCFTM2 Crank A/F - Number of Ref Pulses Between Crank Decay L,
+/*ylabel                    =,
+/*yaxis                     =,
+/*xlabel                    =pulses
+Xleg		=,
+/*xaxis                     =,,
+};
+
+/* Constant 161: KAFCFTA: Crank A/F - Clear Flood Throttle Limit  NTPSLD UN */
+{
+/*startAddr                 =291,
+/*columns                   =1,
+/*rows                      =1,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =0.390625,
+/*map_name                  =KAFCFTA: Crank A/F - Clear Flood Throttle Limit  NTPSLD UN,
+/*ylabel                    = ,
+/*yaxis                     = ,
+/*xlabel                    =%,
+/*xaxis                     = ,,
+};
+
+/* Constant 162: KTPSMAX: Crank A/F - 'A/D CNTS' High TPS Foselecting Crank */
+{
+/*startAddr                 =292,
+/*columns                   =1,
+/*rows                      =1,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =1.000000,
+/*map_name                  =KTPSMAX: Crank A/F - 'A/D CNTS' High TPS Foselecting Crank,
+/*ylabel                    = ,
+/*yaxis                     = ,
+/*xlabel                    =counts,
+/*xaxis                     = ,,
+};
+
+/* Constant 163: KCRSTEP: Crank A/F - Crank Decay Step Size */
+{
+/*startAddr                 =293,
+/*columns                   =1,
+/*rows                      =1,
+/*elementSize               =2,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =0.015259,
+/*map_name                  =KCRSTEP: Crank A/F - Crank Decay Step Size,
+/*ylabel                    = ,
+/*yaxis                     = ,
+/*xlabel                    =Msec,
+/*xaxis                     = ,,
+};
+
+/* Constant 164: KCRMIN: Crank A/F - Minimum Crank BPW */
+{
+/*startAddr                 =295,
+/*columns                   =1,
+/*rows                      =1,
+/*elementSize               =2,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =0.015259,
+/*map_name                  =KCRMIN: Crank A/F - Minimum Crank BPW,
+/*ylabel                    = ,
+/*yaxis                     = ,
+/*xlabel                    =Msec,
+/*xaxis                     = ,,
+};
+
+/* Constant 165: KAEDFTH: AE Params - AE Delta Fuel Threshold Manfuel Unit */
+{
+/*startAddr                 =297,
+/*columns                   =1,
+/*rows                      =1,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =1.000000,
+/*map_name                  =KAEDFTH: AE Params - AE Delta Fuel Threshold Manfuel Unit,
+/*ylabel                    = ,
+/*yaxis                     = ,
+/*xlabel                    =unit,
+/*xaxis                     = ,,
+};
+
+/* Constant 166: KAETATH: AE Params - AE Delta Throttle Threshold   NTPSLD  U */
+{
+/*startAddr                 =298,
+/*columns                   =1,
+/*rows                      =1,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =0.390625,
+/*map_name                  =KAETATH: AE Params - AE Delta Throttle Threshold   NTPSLD  U,
+/*ylabel                    = ,
+/*yaxis                     = ,
+/*xlabel                    =%,
+/*xaxis                     = ,,
+};
+
+/* Constant 167: KAEISCN: AE Params - AE Idle Air Control Contribution */
+{
+/*startAddr                 =299,
+/*columns                   =1,
+/*rows                      =1,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =0.390625,
+/*map_name                  =KAEISCN: AE Params - AE Idle Air Control Contribution,
+/*ylabel                    = ,
+/*yaxis                     = ,
+/*xlabel                    =Msec,
+/*xaxis                     = ,,
+};
+
+/* Constant 168: KAETPS: AE Params - AE Delta TPS AE factor */
+{
+/*startAddr                 =29A,
+/*columns                   =1,
+/*rows                      =1,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =1.000000,
+/*map_name                  =KAETPS: AE Params - AE Delta TPS AE factor,
+/*ylabel                    = ,
+/*yaxis                     = ,
+/*xlabel                    =Mult,
+/*xaxis                     = ,,
+};
+
+/* Constant 169: KAEFUEL: AE Params - AE Delta Fuel AE factor */
+{
+/*startAddr                 =29B,
+/*columns                   =1,
+/*rows                      =1,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =1.000000,
+/*map_name                  =KAEFUEL: AE Params - AE Delta Fuel AE factor,
+/*ylabel                    = ,
+/*yaxis                     = ,
+/*xlabel                    =Mult,
+/*xaxis                     = ,,
+};
+
+/* Constant 170: KMANRPM: AE Params - AE RPM Gain factor for MANFUEL calc */
+{
+/*startAddr                 =29C,
+/*columns                   =1,
+/*rows                      =1,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =1.000000,
+/*map_name                  =KMANRPM: AE Params - AE RPM Gain factor for MANFUEL calc,
+/*ylabel                    = ,
+/*yaxis                     = ,
+/*xlabel                    =Factor,
+/*xaxis                     = ,,
+};
+
+/* Constant 171: KDETATH: DE Params - DE Delta throttle angle threshold */
+{
+/*startAddr                 =29D,
+/*columns                   =1,
+/*rows                      =1,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =0.390625,
+/*map_name                  =KDETATH: DE Params - DE Delta throttle angle threshold,
+/*ylabel                    = ,
+/*yaxis                     = ,
+/*xlabel                    =%,
+/*xaxis                     = ,,
+};
+
+/* Constant 172: KDEDFTH: DE Params - DE Delta fuel threshold - MANFUEL unit */
+{
+/*startAddr                 =29E,
+/*columns                   =1,
+/*rows                      =1,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =1.000000,
+/*map_name                  =KDEDFTH: DE Params - DE Delta fuel threshold - MANFUEL unit,
+/*ylabel                    = ,
+/*yaxis                     = ,
+/*xlabel                    =,
+/*xaxis                     = ,,
+};
+
+/* Constant 173: KDETPS: DE Params - DE Delta TPS DE Factor */
+{
+/*startAddr                 =29F,
+/*columns                   =1,
+/*rows                      =1,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =1.000000,
+/*map_name                  =KDETPS: DE Params - DE Delta TPS DE Factor,
+/*ylabel                    = ,
+/*yaxis                     = ,
+/*xlabel                    =Mult,
+/*xaxis                     = ,,
+};
+
+/* Constant 174: KDEFUEL: DE Params - DE Delta Fuel DE Factor */
+{
+/*startAddr                 =2A0,
+/*columns                   =1,
+/*rows                      =1,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =1.000000,
+/*map_name                  =KDEFUEL: DE Params - DE Delta Fuel DE Factor,
+/*ylabel                    = ,
+/*yaxis                     = ,
+/*xlabel                    =Mult,
+/*xaxis                     = ,,
+};
+
+/* Constant 175: KDEDECAY: DE Params - DE Decay Factor */
+{
+/*startAddr                 =2A1,
+/*columns                   =1,
+/*rows                      =1,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =0.390625,
+/*map_name                  =KDEDECAY: DE Params - DE Decay Factor,
+/*ylabel                    = ,
+/*yaxis                     = ,
+/*xlabel                    =%/Ref,
+/*xaxis                     = ,,
+};
+
+/* Constant 176: KDFCOSPH: DFCO Params - DFCO Upper RPM Limit   NTRPMX Units */
+{
+/*startAddr                 =2A2,
+/*columns                   =1,
+/*rows                      =1,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =25.000000,
+/*map_name                  =KDFCOSPH: DFCO Params - DFCO Upper RPM Limit   NTRPMX Units,
+/*ylabel                    = ,
+/*yaxis                     = ,
+/*xlabel                    =RPM,
+/*xaxis                     = ,,
+};
+
+/* Constant 177: KDFCOSPL: DFCO Params - DFCO Lower RPM Limit   NTRPMX Units */
+{
+/*startAddr                 =2A3,
+/*columns                   =1,
+/*rows                      =1,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =25.000000,
+/*map_name                  =KDFCOSPL: DFCO Params - DFCO Lower RPM Limit   NTRPMX Units,
+/*ylabel                    = ,
+/*yaxis                     = ,
+/*xlabel                    =RPM,
+/*xaxis                     = ,,
+};
+
+/* Constant 178: KDFCOMAP: DFCO Params - DFCO Maximum MAP to enter   (add 8kPa) */
+{
+/*startAddr                 =2A4,
+/*columns                   =1,
+/*rows                      =1,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =10.332103,
+/*mulOrDivOrBit             =0,
+/*factor                    =0.369004,
+/*map_name                  =KDFCOMAP: DFCO Params - DFCO Maximum MAP to enter   (add 8kPa),
+/*ylabel                    = ,
+/*yaxis                     = ,
+/*xlabel                    =kPa,
+/*xaxis                     = ,,
+};
+
+/* Constant 179: KDFCOG: DFCO Params - DFCO Multiplier step value */
+{
+/*startAddr                 =2A5,
+/*columns                   =1,
+/*rows                      =1,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =0.390625,
+/*map_name                  =KDFCOG: DFCO Params - DFCO Multiplier step value,
+/*ylabel                    = ,
+/*yaxis                     = ,
+/*xlabel                    =%,
+/*xaxis                     = ,,
+};
+
+/* Constant 180: KDFCOSLL: DFCO Params - DFCO Road speed threshold   + 5km/h hysteresis */
+{
+/*startAddr                 =2A6,
+/*columns                   =1,
+/*rows                      =1,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =1.000000,
+/*map_name                  =KDFCOSLL: DFCO Params - DFCO Road speed threshold   + 5km/h hysteresis,
+/*ylabel                    = ,
+/*yaxis                     = ,
+/*xlabel                    =km/h,
+/*xaxis                     = ,,
+};
+
+/* Constant 181: KDFCOTP: DFCO Params - DFCO Throttle threshold */
+{
+/*startAddr                 =2A7,
+/*columns                   =1,
+/*rows                      =1,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =0.390625,
+/*map_name                  =KDFCOTP: DFCO Params - DFCO Throttle threshold,
+/*ylabel                    = ,
+/*yaxis                     = ,
+/*xlabel                    =%,
+/*xaxis                     = ,,
+};
+
+/* Constant 182: KDFCOPW: DFCO Params - DFCO Asynch AE multiplier to BPW */
+{
+/*startAddr                 =2A8,
+/*columns                   =1,
+/*rows                      =1,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =0.007813,
+/*map_name                  =KDFCOPW: DFCO Params - DFCO Asynch AE multiplier to BPW,
+/*ylabel                    = ,
+/*yaxis                     = ,
+/*xlabel                    =Gain,
+/*xaxis                     = ,,
+};
+
+/* Constant 183: KDFCOCLT: DFCO Params - DFCO Temperature threshold */
+{
+/*startAddr                 =2A9,
+/*columns                   =1,
+/*rows                      =1,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =-40.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =0.750000,
+/*map_name                  =KDFCOCLT: DFCO Params - DFCO Temperature threshold,
+/*ylabel                    = ,
+/*yaxis                     = ,
+/*xlabel                    =degC,
+/*xaxis                     = ,,
+};
+
+/* Constant 184: KCLOXTH: Closed Loop Params - O2 sensor Rich-Lean threshold */
+{
+/*startAddr                 =2AA,
+/*columns                   =1,
+/*rows                      =1,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =0.004348,
+/*map_name                  =KCLOXTH: Closed Loop Params - O2 sensor Rich-Lean threshold,
+/*ylabel                    = ,
+/*yaxis                     = ,
+/*xlabel                    =Volts,
+/*xaxis                     = ,,
+};
+
+/* Constant 185: KCLOXDB: Closed Loop Params - O2 sensor Closed Loop deadband */
+{
+/*startAddr                 =2AB,
+/*columns                   =1,
+/*rows                      =1,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =0.004348,
+/*map_name                  =KCLOXDB: Closed Loop Params - O2 sensor Closed Loop deadband,
+/*ylabel                    = ,
+/*yaxis                     = ,
+/*xlabel                    =Volts,
+/*xaxis                     = ,,
+};
+
+/* Constant 186: KCLTC: Closed Loop Params - Closed Loop minimum coolant temperature */
+{
+/*startAddr                 =2AC,
+/*columns                   =1,
+/*rows                      =1,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =-40.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =0.750000,
+/*map_name                  =KCLTC: Closed Loop Params - Closed Loop minimum coolant temperature,
+/*ylabel                    = ,
+/*yaxis                     = ,
+/*xlabel                    =DegC,
+/*xaxis                     = ,,
+};
+
+/* Constant 187: KCLITMI: Closed Loop minimum integrator value */
+{
+/*startAddr                 =2AD,
+/*columns                   =1,
+/*rows                      =1,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =1.000000,
+/*map_name                  =KCLITMI: Closed Loop minimum integrator value,
+/*ylabel                    = ,
+/*yaxis                     = ,
+/*xlabel                    =Units,
+/*xaxis                     = ,,
+};
+
+/* Constant 188: KCLITMX: Closed Loop Maximum integrator value */
+{
+/*startAddr                 =2AE,
+/*columns                   =1,
+/*rows                      =1,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =1.000000,
+/*map_name                  =KCLITMX: Closed Loop Maximum integrator value,
+/*ylabel                    = ,
+/*yaxis                     = ,
+/*xlabel                    =Units,
+/*xaxis                     = ,,
+};
+
+/* Constant 189: KCLPROP: Closed Loop Proportional Step (open Throttle) */
+{
+/*startAddr                 =2AF,
+/*columns                   =1,
+/*rows                      =1,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =1.000000,
+/*map_name                  =KCLPROP: Closed Loop Proportional Step (open Throttle),
+/*ylabel                    = ,
+/*yaxis                     = ,
+/*xlabel                    =Units,
+/*xaxis                     = ,,
+};
+
+/* Constant 190: KLCTCLL: Block Learn Params - Block Learn LOW temp limit */
+{
+/*startAddr                 =2B0,
+/*columns                   =1,
+/*rows                      =1,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =-40.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =0.750000,
+/*map_name                  =KLCTCLL: Block Learn Params - Block Learn LOW temp limit,
+/*ylabel                    = ,
+/*yaxis                     = ,
+/*xlabel                    =DegC,
+/*xaxis                     = ,,
+};
+
+/* Constant 191: KLCTCLH: Block Learn Params - Block Learn HIGH temp limit */
+{
+/*startAddr                 =2B1,
+/*columns                   =1,
+/*rows                      =1,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =-40.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =0.750000,
+/*map_name                  =KLCTCLH: Block Learn Params - Block Learn HIGH temp limit,
+/*ylabel                    = ,
+/*yaxis                     = ,
+/*xlabel                    =DegC,
+/*xaxis                     = ,,
+};
+
+/* Constant 192: KLCITTH: Block Learn Params - Block Learn Integrator Window Value */
+{
+/*startAddr                 =2B2,
+/*columns                   =1,
+/*rows                      =1,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =1.000000,
+/*map_name                  =KLCITTH: Block Learn Params - Block Learn Integrator Window Value,
+/*ylabel                    = ,
+/*yaxis                     = ,
+/*xlabel                    =Units,
+/*xaxis                     = ,,
+};
+
+/* Constant 193: KLCTIME1: Block Learn Params - Learning Update Rate  TPS Closed */
+{
+/*startAddr                 =2B3,
+/*columns                   =1,
+/*rows                      =1,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =0.025000,
+/*map_name                  =KLCTIME1: Block Learn Params - Learning Update Rate  TPS Closed,
+/*ylabel                    = ,
+/*yaxis                     = ,
+/*xlabel                    =Sec,
+/*xaxis                     = ,,
+};
+
+/* Constant 194: KLCTIME: Block Learn Params - Learn Control Update Rate */
+{
+/*startAddr                 =2B4,
+/*columns                   =1,
+/*rows                      =1,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =0.025000,
+/*map_name                  =KLCTIME: Block Learn Params - Learn Control Update Rate,
+/*ylabel                    = ,
+/*yaxis                     = ,
+/*xlabel                    =Sec,
+/*xaxis                     = ,,
+};
+
+/* Constant 195: KBLMMAX: Block Learn Params - Maximum Allowable BLM */
+{
+/*startAddr                 =2B5,
+/*columns                   =1,
+/*rows                      =1,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =0.007813,
+/*map_name                  =KBLMMAX: Block Learn Params - Maximum Allowable BLM,
+/*ylabel                    = ,
+/*yaxis                     = ,
+/*xlabel                    =Val,
+/*xaxis                     = ,,
+};
+
+/* Constant 196: KBLMMAX: Block Learn Params - Minimum Allowable BLM */
+{
+/*startAddr                 =2B6,
+/*columns                   =1,
+/*rows                      =1,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =0.007813,
+/*map_name                  =KBLMMAX: Block Learn Params - Minimum Allowable BLM,
+/*ylabel                    = ,
+/*yaxis                     = ,
+/*xlabel                    =Val,
+/*xaxis                     = ,,
+};
+
+/* Constant 197: KVEMIN: Block Learn Params - Minimum VE value */
+{
+/*startAddr                 =2B7,
+/*columns                   =1,
+/*rows                      =1,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =0.390625,
+/*map_name                  =KVEMIN: Block Learn Params - Minimum VE value,
+/*ylabel                    =,
+/*yaxis                     =,
+/*xlabel                    =%,
+/*xaxis                     =,,
+};
+
+/* Constant 198: KBLESRAD: Block Learn Params - BLM Learn Window - RPM radius (7 max) */
+{
+/*startAddr                 =2B8,
+/*columns                   =1,
+/*rows                      =1,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =50.000000,
+/*map_name                  =KBLESRAD: Block Learn Params - BLM Learn Window - RPM radius (7 max),
+/*ylabel                    =,
+/*yaxis                     =,
+/*xlabel                    =,
+/*xaxis                     =RPM,,
+};
+
+/* Constant 199: KBLPMRAD: Block Learn Params - BLM Learn Window - MAP radius (31 max) */
+{
+/*startAddr                 =2B9,
+/*columns                   =1,
+/*rows                      =1,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =0.312500,
+/*map_name                  =KBLPMRAD: Block Learn Params - BLM Learn Window - MAP radius (31 max),
+/*ylabel                    =,
+/*yaxis                     =,
+/*xlabel                    =,
+/*xaxis                     =kPa,,
+};
+
+/* Constant 200: KVEESRAD: Block Learn Params - VE Learn Window - RPM radius (7 max) */
+{
+/*startAddr                 =2BA,
+/*columns                   =1,
+/*rows                      =1,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =25.000000,
+/*map_name                  =KVEESRAD: Block Learn Params - VE Learn Window - RPM radius (7 max),
+/*ylabel                    =,
+/*yaxis                     =,
+/*xlabel                    =,
+/*xaxis                     =RPM,,
+};
+
+/* Constant 201: KVEPMRAD: Block Learn Params - VE Learn Window - MAP radius (15 max) */
+{
+/*startAddr                 =2BB,
+/*columns                   =1,
+/*rows                      =1,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =0.312500,
+/*map_name                  =KVEPMRAD: Block Learn Params - VE Learn Window - MAP radius (15 max),
+/*ylabel                    =,
+/*yaxis                     =,
+/*xlabel                    =,
+/*xaxis                     =kPa,,
+};
+
+/* Constant 202: KISTPSI: IAC Params - Maximum Throttle Position for Idle */
+{
+/*startAddr                 =66B,
+/*columns                   =1,
+/*rows                      =1,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =0.390625,
+/*map_name                  =KISTPSI: IAC Params - Maximum Throttle Position for Idle,
+/*ylabel                    = ,
+/*yaxis                     = ,
+/*xlabel                    =%,
+/*xaxis                     = ,,
+};
+
+/* Constant 203: KRSTRPM: IAC Params - IAC Motor Reset RPM Threshold */
+{
+/*startAddr                 =66C,
+/*columns                   =1,
+/*rows                      =1,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =25.000000,
+/*map_name                  =KRSTRPM: IAC Params - IAC Motor Reset RPM Threshold,
+/*ylabel                    = ,
+/*yaxis                     = ,
+/*xlabel                    =RPM,
+/*xaxis                     = ,,
+};
+
+/* Constant 204: KISSWNA: IAC Params - Initial IAC Motor Position - No A/C */
+{
+/*startAddr                 =66D,
+/*columns                   =1,
+/*rows                      =1,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =1.000000,
+/*map_name                  =KISSWNA: IAC Params - Initial IAC Motor Position - No A/C,
+/*ylabel                    = ,
+/*yaxis                     = ,
+/*xlabel                    =Steps,
+/*xaxis                     = ,,
+};
+
+/* Constant 205: KACDLD: IAC Params - Initial Additional A/C Steps */
+{
+/*startAddr                 =66E,
+/*columns                   =1,
+/*rows                      =1,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =1.000000,
+/*map_name                  =KACDLD: IAC Params - Initial Additional A/C Steps,
+/*ylabel                    = ,
+/*yaxis                     = ,
+/*xlabel                    =Steps,
+/*xaxis                     = ,,
+};
+
+/* Constant 206: KISPKDL: IAC Params - Ignition Off Park delta from Base */
+{
+/*startAddr                 =66F,
+/*columns                   =1,
+/*rows                      =1,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =1.000000,
+/*map_name                  =KISPKDL: IAC Params - Ignition Off Park delta from Base,
+/*ylabel                    = ,
+/*yaxis                     = ,
+/*xlabel                    =Steps,
+/*xaxis                     = ,,
+};
+
+/* Constant 207: KISPKHOT: IAC Params - Hot Crank Park delta from Base */
+{
+/*startAddr                 =670,
+/*columns                   =1,
+/*rows                      =1,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =1.000000,
+/*map_name                  =KISPKHOT: IAC Params - Hot Crank Park delta from Base,
+/*ylabel                    = ,
+/*yaxis                     = ,
+/*xlabel                    =Steps,
+/*xaxis                     = ,,
+};
+
+/* Constant 208: KISPKCLT: IAC Params - Temperature Threshold for Park Delta */
+{
+/*startAddr                 =671,
+/*columns                   =1,
+/*rows                      =1,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =-40.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =0.750000,
+/*map_name                  =KISPKCLT: IAC Params - Temperature Threshold for Park Delta,
+/*ylabel                    = ,
+/*yaxis                     = ,
+/*xlabel                    =DegC,
+/*xaxis                     = ,,
+};
+
+/* Constant 209: KPNDELAY: IAC Params - IAC Base Delay for Drive to Park/Neutral */
+{
+/*startAddr                 =672,
+/*columns                   =1,
+/*rows                      =1,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =0.012500,
+/*map_name                  =KPNDELAY: IAC Params - IAC Base Delay for Drive to Park/Neutral,
+/*ylabel                    =,
+/*yaxis                     =,
+/*xlabel                    =Sec,
+/*xaxis                     =,,
+};
+
+/* Constant 210: KETCDLTA: IAC Adjustments - Extended Throttle Crack Delta */
+{
+/*startAddr                 =673,
+/*columns                   =1,
+/*rows                      =1,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =1.000000,
+/*map_name                  =KETCDLTA: IAC Adjustments - Extended Throttle Crack Delta,
+/*ylabel                    = ,
+/*yaxis                     = ,
+/*xlabel                    =Steps,
+/*xaxis                     = ,,
+};
+
+/* Constant 211: KIACCL: IAC Adjustments - C/L Fuel Step Increase */
+{
+/*startAddr                 =674,
+/*columns                   =1,
+/*rows                      =1,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =1.000000,
+/*map_name                  =KIACCL: IAC Adjustments - C/L Fuel Step Increase,
+/*ylabel                    = ,
+/*yaxis                     = ,
+/*xlabel                    =Steps,
+/*xaxis                     = ,,
+};
+
+/* Constant 212: KIACFAN: IAC Adjustments - Fan-On IAC Step Increase */
+{
+/*startAddr                 =675,
+/*columns                   =1,
+/*rows                      =1,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =1.000000,
+/*map_name                  =KIACFAN: IAC Adjustments - Fan-On IAC Step Increase,
+/*ylabel                    = ,
+/*yaxis                     = ,
+/*xlabel                    =Steps,
+/*xaxis                     = ,,
+};
+
+/* Constant 213: KIACDM: Warm Up Params - IAC Decay - Multiplier value */
+{
+/*startAddr                 =676,
+/*columns                   =1,
+/*rows                      =1,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =0.390625,
+/*map_name                  =KIACDM: Warm Up Params - IAC Decay - Multiplier value,
+/*ylabel                    = ,
+/*yaxis                     = ,
+/*xlabel                    =%,
+/*xaxis                     = ,,
+};
+
+/* Constant 214: KIACDM: Warm Up Params - RPM WarmUp Offset Factor for Drive */
+{
+/*startAddr                 =677,
+/*columns                   =1,
+/*rows                      =1,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =0.390625,
+/*map_name                  =KIACDM: Warm Up Params - RPM WarmUp Offset Factor for Drive,
+/*ylabel                    = ,
+/*yaxis                     = ,
+/*xlabel                    =%,
+/*xaxis                     = ,,
+};
+
+/* Constant 215: KF14TM1: Warm Up Params - Time before WarmUp Decay Begins */
+{
+/*startAddr                 =678,
+/*columns                   =1,
+/*rows                      =1,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =0.200000,
+/*map_name                  =KF14TM1: Warm Up Params - Time before WarmUp Decay Begins,
+/*ylabel                    =,
+/*yaxis                     =,
+/*xlabel                    =Sec,
+/*xaxis                     =,,
+};
+
+/* Constant 216: KISALPC: Warm Up Params - Initial Stall Saver IAC Offset */
+{
+/*startAddr                 =679,
+/*columns                   =1,
+/*rows                      =1,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =1.000000,
+/*map_name                  =KISALPC: Warm Up Params - Initial Stall Saver IAC Offset,
+/*ylabel                    = ,
+/*yaxis                     = ,
+/*xlabel                    =Steps,
+/*xaxis                     = ,,
+};
+
+/* Constant 217: KF14TM1: Warm Up Params - Initial Stall Saver Duration */
+{
+/*startAddr                 =67A,
+/*columns                   =1,
+/*rows                      =1,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =0.200000,
+/*map_name                  =KF14TM1: Warm Up Params - Initial Stall Saver Duration,
+/*ylabel                    =,
+/*yaxis                     =,
+/*xlabel                    =Sec,
+/*xaxis                     =,,
+};
+
+/* Constant 218: KLGDB: Closed Loop Params - Large Error RPM Deadband */
+{
+/*startAddr                 =67B,
+/*columns                   =1,
+/*rows                      =1,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =6.250000,
+/*map_name                  =KLGDB: Closed Loop Params - Large Error RPM Deadband,
+/*ylabel                    =,
+/*yaxis                     =,
+/*xlabel                    =RPM,
+/*xaxis                     =,,
+};
+
+/* Constant 219: KDRDB: Closed Loop Params - Drive RPM Deadband */
+{
+/*startAddr                 =67C,
+/*columns                   =1,
+/*rows                      =1,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =6.250000,
+/*map_name                  =KDRDB: Closed Loop Params - Drive RPM Deadband,
+/*ylabel                    =,
+/*yaxis                     =,
+/*xlabel                    =RPM,
+/*xaxis                     =,,
+};
+
+/* Constant 220: KKPNDB: Closed Loop Params - P/N or Manual Deadband */
+{
+/*startAddr                 =67D,
+/*columns                   =1,
+/*rows                      =1,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =6.250000,
+/*map_name                  =KKPNDB: Closed Loop Params - P/N or Manual Deadband,
+/*ylabel                    =,
+/*yaxis                     =,
+/*xlabel                    =RPM,
+/*xaxis                     =,,
+};
+
+/* Constant 221: KISDWADN: Closed Loop Params - Desired RPM Increase for A/C On */
+{
+/*startAddr                 =67E,
+/*columns                   =1,
+/*rows                      =1,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =6.250000,
+/*map_name                  =KISDWADN: Closed Loop Params - Desired RPM Increase for A/C On,
+/*ylabel                    =,
+/*yaxis                     =,
+/*xlabel                    =RPM,
+/*xaxis                     =,,
+};
+
+/* Constant 222: KFILRPMH: Closed Loop Params - RPM Filt Coeff When Above Desired Speed */
+{
+/*startAddr                 =67F,
+/*columns                   =1,
+/*rows                      =1,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =256.000000,
+/*map_name                  =KFILRPMH: Closed Loop Params - RPM Filt Coeff When Above Desired Speed,
+/*ylabel                    =,
+/*yaxis                     =,
+/*xlabel                    =Coeff,
+/*xaxis                     =,,
+};
+
+/* Constant 223: KFILRPML: Closed Loop Params - RPM Filt Coeff When Below Desired Speed */
+{
+/*startAddr                 =680,
+/*columns                   =1,
+/*rows                      =1,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =256.000000,
+/*map_name                  =KFILRPML: Closed Loop Params - RPM Filt Coeff When Below Desired Speed,
+/*ylabel                    =,
+/*yaxis                     =,
+/*xlabel                    =Coeff,
+/*xaxis                     =,,
+};
+
+/* Constant 224: KOPENDEL: Closed Loop Params - C/L Delay for Opening Throttle */
+{
+/*startAddr                 =681,
+/*columns                   =1,
+/*rows                      =1,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =0.200000,
+/*map_name                  =KOPENDEL: Closed Loop Params - C/L Delay for Opening Throttle,
+/*ylabel                    =,
+/*yaxis                     =,
+/*xlabel                    =Sec,
+/*xaxis                     =,,
+};
+
+/* Constant 225: KPKDRDEL: Closed Loop Params - C/L Delay for Park/Drive Change */
+{
+/*startAddr                 =682,
+/*columns                   =1,
+/*rows                      =1,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =0.200000,
+/*map_name                  =KPKDRDEL: Closed Loop Params - C/L Delay for Park/Drive Change,
+/*ylabel                    =,
+/*yaxis                     =,
+/*xlabel                    =Sec,
+/*xaxis                     =,,
+};
+
+/* Constant 226: KACTRANS: Closed Loop Params - C/L Delay for A/C Change */
+{
+/*startAddr                 =683,
+/*columns                   =1,
+/*rows                      =1,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =0.200000,
+/*map_name                  =KACTRANS: Closed Loop Params - C/L Delay for A/C Change,
+/*ylabel                    =,
+/*yaxis                     =,
+/*xlabel                    =Sec,
+/*xaxis                     =,,
+};
+
+/* Constant 227: KTCDELTA: Transient IAC Params - Throttle Crack delta TPS */
+{
+/*startAddr                 =684,
+/*columns                   =1,
+/*rows                      =1,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =0.390625,
+/*map_name                  =KTCDELTA: Transient IAC Params - Throttle Crack delta TPS,
+/*ylabel                    =,
+/*yaxis                     =,
+/*xlabel                    =%,
+/*xaxis                     =,,
+};
+
+/* Constant 228: KMLGAIN: Transient IAC Params - MAP Limiter Gain Factor */
+{
+/*startAddr                 =685,
+/*columns                   =1,
+/*rows                      =1,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =0.010547,
+/*map_name                  =KMLGAIN: Transient IAC Params - MAP Limiter Gain Factor,
+/*ylabel                    =,
+/*yaxis                     =,
+/*xlabel                    =S/kPa,
+/*xaxis                     =,,
+};
+
+/* Constant 229: KMLMAX: Transient IAC Params - MAP Limiter Max Offset */
+{
+/*startAddr                 =686,
+/*columns                   =1,
+/*rows                      =1,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =1.000000,
+/*map_name                  =KMLMAX: Transient IAC Params - MAP Limiter Max Offset,
+/*ylabel                    =,
+/*yaxis                     =,
+/*xlabel                    =Steps,
+/*xaxis                     =,,
+};
+
+/* Constant 230: KSSRPM: Transient IAC Params - Stall Saver RPM Threshold */
+{
+/*startAddr                 =687,
+/*columns                   =1,
+/*rows                      =1,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =6.250000,
+/*map_name                  =KSSRPM: Transient IAC Params - Stall Saver RPM Threshold,
+/*ylabel                    =,
+/*yaxis                     =,
+/*xlabel                    =RPM,
+/*xaxis                     =,,
+};
+
+/* Constant 231: KSAVSTEP: Transient IAC Params - Stall Saver IAC Increase */
+{
+/*startAddr                 =688,
+/*columns                   =1,
+/*rows                      =1,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =1.000000,
+/*map_name                  =KSAVSTEP: Transient IAC Params - Stall Saver IAC Increase,
+/*ylabel                    =,
+/*yaxis                     =,
+/*xlabel                    =Steps,
+/*xaxis                     =,,
+};
+
+/* Constant 232: KSAGDB: Transient IAC Params - Sag Mode Deadband */
+{
+/*startAddr                 =689,
+/*columns                   =1,
+/*rows                      =1,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =6.250000,
+/*map_name                  =KSAGDB: Transient IAC Params - Sag Mode Deadband,
+/*ylabel                    =,
+/*yaxis                     =,
+/*xlabel                    =RPM,
+/*xaxis                     =,,
+};
+
+/* Constant 233: KSAGSTEP: Transient IAC Params - Sag Mode IAC Increase */
+{
+/*startAddr                 =68A,
+/*columns                   =1,
+/*rows                      =1,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =1.000000,
+/*map_name                  =KSAGSTEP: Transient IAC Params - Sag Mode IAC Increase,
+/*ylabel                    =,
+/*yaxis                     =,
+/*xlabel                    =Steps,
+/*xaxis                     =,,
+};
+
+/* Constant 234: KTCRATE: Transient IAC Params - Throttle Crack Decay Rate */
+{
+/*startAddr                 =68B,
+/*columns                   =1,
+/*rows                      =1,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =0.312500,
+/*map_name                  =KTCRATE: Transient IAC Params - Throttle Crack Decay Rate,
+/*ylabel                    =,
+/*yaxis                     =,
+/*xlabel                    =Step/S,
+/*xaxis                     =,,
+};
+
+/* Constant 235: KPSRATE: Transient IAC Params - Power Steering Decay Rate */
+{
+/*startAddr                 =68C,
+/*columns                   =1,
+/*rows                      =1,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =0.312500,
+/*map_name                  =KPSRATE: Transient IAC Params - Power Steering Decay Rate,
+/*ylabel                    =,
+/*yaxis                     =,
+/*xlabel                    =Step/S,
+/*xaxis                     =,,
+};
+
+/* Constant 236: KSRRATE: Transient IAC Params - Stall Recovery Decay Rate */
+{
+/*startAddr                 =68D,
+/*columns                   =1,
+/*rows                      =1,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =0.312500,
+/*map_name                  =KSRRATE: Transient IAC Params - Stall Recovery Decay Rate,
+/*ylabel                    =,
+/*yaxis                     =,
+/*xlabel                    =Step/S,
+/*xaxis                     =,,
+};
+
+/* Constant 237: KBKFCRNK: Backfire Inhibit - Threshold for Crank Input */
+{
+/*startAddr                 =6D4,
+/*columns                   =1,
+/*rows                      =1,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =0.100000,
+/*map_name                  =KBKFCRNK: Backfire Inhibit - Threshold for Crank Input,
+/*ylabel                    = ,
+/*yaxis                     = ,
+/*xlabel                    =Volts,
+/*xaxis                     = ,,
+};
+
+/* Constant 238: KBKFRPM:  Backfire Inhibit - RPM threshold for fuel cutoff */
+{
+/*startAddr                 =6D5,
+/*columns                   =1,
+/*rows                      =1,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =25.000000,
+/*map_name                  =KBKFRPM:  Backfire Inhibit - RPM threshold for fuel cutoff,
+/*ylabel                    = ,
+/*yaxis                     = ,
+/*xlabel                    =RPM,
+/*xaxis                     = ,,
+};
+
+/* Constant 239: KBKFTEMP: Backfire Inhibit - Temperature Threshold for Fuel Cutoff */
+{
+/*startAddr                 =6D6,
+/*columns                   =1,
+/*rows                      =1,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =-40.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =0.750000,
+/*map_name                  =KBKFTEMP: Backfire Inhibit - Temperature Threshold for Fuel Cutoff,
+/*ylabel                    = ,
+/*yaxis                     = ,
+/*xlabel                    =DegC,
+/*xaxis                     = ,,
+};
+
+/* ***Flags*** */
+
+/* Flag 1: KAFOPTC: Air/Fuel Option Word */
+{
+/*startAddr                 =9,
+/*columns                   =1,
+/*rows                      =8,
+/*elementSize               =1,
+/*bitMask                   =80,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =2,
+/*factor                    =1.000000,
+/*map_name                  =KAFOPTC: Air/Fuel Option Word,
+/*ylabel                    =Code,
+/*yaxis                     =SPKctSPKss---  F60  Crnk+BLMidBFinhBPWmd,
+/*xlabel                    =,
+/*xaxis                     =Bit,,
+};
+
+/* Flag 2: KTBPFOPT: TBI/PFI Option Flag */
+{
+/*startAddr                 =A,
+/*columns                   =1,
+/*rows                      =8,
+/*elementSize               =1,
+/*bitMask                   =80,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =2,
+/*factor                    =1.000000,
+/*map_name                  =KTBPFOPT: TBI/PFI Option Flag,
+/*ylabel                    =Code,
+/*yaxis                     =TBI  exBPWVElrnACSPt6cyl 8cyl DecayAEaft,
+/*xlabel                    =,
+/*xaxis                     =Bit,,
+};
+
+/* Flag 3: KKMASK1: Malfunction Word 1 */
+{
+/*startAddr                 =1DD,
+/*columns                   =1,
+/*rows                      =8,
+/*elementSize               =1,
+/*bitMask                   =80,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =2,
+/*factor                    =1.000000,
+/*map_name                  =KKMASK1: Malfunction Word 1,
+/*ylabel                    =Code,
+/*yaxis                     =12ref13oxy14cLO15cHI21tLO22tHI23mLO24vss,
+/*xlabel                    =,
+/*xaxis                     =Bit,,
+};
+
+/* Flag 4: KKMASK2: Malfunction Word 2 */
+{
+/*startAddr                 =1DE,
+/*columns                   =1,
+/*rows                      =8,
+/*elementSize               =1,
+/*bitMask                   =80,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =2,
+/*factor                    =1.000000,
+/*map_name                  =KKMASK2: Malfunction Word 2,
+/*ylabel                    =Code,
+/*yaxis                     =25mLO31---32---33vHI34vLO35idl41ref42est,
+/*xlabel                    =,
+/*xaxis                     =Bit,,
+};
+
+/* Flag 5: KKMASK3: Malfunction Word 3 */
+{
+/*startAddr                 =1DF,
+/*columns                   =1,
+/*rows                      =8,
+/*elementSize               =1,
+/*bitMask                   =80,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =2,
+/*factor                    =1.000000,
+/*map_name                  =KKMASK3: Malfunction Word 3,
+/*ylabel                    =Code,
+/*yaxis                     =43ks?44o2L45o2H51mem52cal53o/v54---55a/d,
+/*xlabel                    =,
+/*xaxis                     =Bit,,
+};
+
+/* ***Tables*** */
+
+/* Table 1: F78: TPS - TPS default value vs RPM */
+{
+/*startAddr                 =19,
+/*columns                   =1,
+/*rows                      =6,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =0.390625,
+/*map_name                  =F78: TPS - TPS default value vs RPM,
+/*ylabel                    =RPM,
+/*yaxis                     =1000 1800 2600 3400 4200 5000,
+/*xlabel                    =,
+/*xaxis                     =%,,
+};
+
+/* Table 2: F1 IDLE: Idle Spark Advance as a function of MAP */
+{
+/*startAddr                 =36,
+/*columns                   =1,
+/*rows                      =11,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =0.351563,
+/*map_name                  =F1 IDLE: Idle Spark Advance as a function of MAP,
+/*ylabel                    =kPa,
+/*yaxis                     =   20   30   40   50   60   70   80   85   90   95  100,
+/*xlabel                    =,
+/*xaxis                     =Deg,,
+};
+
+/* Table 3: F1 SAMAIN: Main Spark Advance vs MAP and RPM  */
+{
+/*startAddr                 =44,
+/*columns                   =11,
+/*rows                      =12,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =0.351563,
+/*map_name                  =F1 SAMAIN: Main Spark Advance vs MAP and RPM ,
+/*ylabel                    =RPM,
+/*yaxis                     =400  800  1200 1600 2000 2400 2800 3200 3600 4000 4400 4800,
+/*xlabel                    =MAP,
+/*xaxis                     =20 30 40 50 60 70 80 85 90 95 100,,
+};
+
+/* Table 4: F2: Coolant Advance vs MAP and Temperature */
+{
+/*startAddr                 =CB,
+/*columns                   =5,
+/*rows                      =12,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =-19.917969,
+/*mulOrDivOrBit             =0,
+/*factor                    =0.351563,
+/*map_name                  =F2: Coolant Advance vs MAP and Temperature,
+/*ylabel                    =Coolant,
+/*yaxis                     =-10  2    14   26   38   50   62   74   86   98   110  122,
+/*xlabel                    =MAP,
+/*xaxis                     =60 70 80 90 100,,
+};
+
+/* Table 5: F4: EGR Advance vs RPM and Vacuum */
+{
+/*startAddr                 =10A,
+/*columns                   =15,
+/*rows                      =11,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =0.351563,
+/*map_name                  =F4: EGR Advance vs RPM and Vacuum,
+/*ylabel                    =RPM,
+/*yaxis                     =800  1200 1600 2000 2400 2800 3200 3600 4000 4400 4800,
+/*xlabel                    =kPa (Vac),
+/*xaxis                     =0  2½ 5  7½ 10 12½15 17½20 30 40 50 60 70 80,,
+};
+
+/* Table 6: F6: ESC Attack rate(Deg/ms) vs RPM */
+{
+/*startAddr                 =1AF,
+/*columns                   =1,
+/*rows                      =4,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =0.045000,
+/*map_name                  =F6: ESC Attack rate(Deg/ms) vs RPM,
+/*ylabel                    =RPM,
+/*yaxis                     = 1600 3200 4800 6400,
+/*xlabel                    =,
+/*xaxis                     =°ms,,
+};
+
+/* Table 7: F7: ESC percentage recovery rate (%/second) vs RPM */
+{
+/*startAddr                 =1B3,
+/*columns                   =1,
+/*rows                      =4,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =1.953125,
+/*map_name                  =F7: ESC percentage recovery rate (%/second) vs RPM,
+/*ylabel                    =RPM,
+/*yaxis                     = 1600 3200 4800 6400,
+/*xlabel                    =,
+/*xaxis                     =%/SEC,,
+};
+
+/* Table 8: F44: Altitude Advance vs Baro & Vacuum */
+{
+/*startAddr                 =1BA,
+/*columns                   =6,
+/*rows                      =2,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =0.351563,
+/*map_name                  =F44: Altitude Advance vs Baro & Vacuum,
+/*ylabel                    =Baro,
+/*yaxis                     =80   100,
+/*xlabel                    =MAP,
+/*xaxis                     =0  5  10 15 20 25,,
+};
+
+/* Table 9: F59: Baro Adjustment offset to MAP A/D reading vs RPM & TPS  */
+{
+/*startAddr                 =1CB,
+/*columns                   =6,
+/*rows                      =3,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =0.369004,
+/*map_name                  =F59: Baro Adjustment offset to MAP A/D reading vs RPM & TPS ,
+/*ylabel                    =RPM,
+/*yaxis                     =1200 2400 3600,
+/*xlabel                    =%Thrott Pos,
+/*xaxis                     =37½50 62½75 87½100,,
+};
+
+/* Table 10: F55:  RPM Threshold vs NTPSLD to turn on shift light */
+{
+/*startAddr                 =234,
+/*columns                   =1,
+/*rows                      =5,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =25.000000,
+/*map_name                  =F55:  RPM Threshold vs NTPSLD to turn on shift light,
+/*ylabel                    =%TPS,
+/*yaxis                     =00   25   50   75   100,
+/*xlabel                    =,
+/*xaxis                     =RPM,,
+};
+
+/* Table 11: F42C: TCC Unlock (3rd) TPS percentage vs Road Speed */
+{
+/*startAddr                 =245,
+/*columns                   =1,
+/*rows                      =11,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =0.390625,
+/*map_name                  =F42C: TCC Unlock (3rd) TPS percentage vs Road Speed,
+/*ylabel                    =km/h,
+/*yaxis                     =32   40   48   56   64   72   80   88   96   104   112,
+/*xlabel                    =,
+/*xaxis                     =%,,
+};
+
+/* Table 12: F43C: TCC Lock (3rd) TPS percentage vs Road Speed */
+{
+/*startAddr                 =250,
+/*columns                   =1,
+/*rows                      =11,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =0.390625,
+/*map_name                  =F43C: TCC Lock (3rd) TPS percentage vs Road Speed,
+/*ylabel                    =km/h,
+/*yaxis                     =32   40   48   56   64   72   80   88   96   104   112,
+/*xlabel                    =,
+/*xaxis                     =%,,
+};
+
+/* Table 13: F42D: TCC Unlock (4th) TPS percentage vs Road Speed */
+{
+/*startAddr                 =25B,
+/*columns                   =1,
+/*rows                      =11,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =0.390625,
+/*map_name                  =F42D: TCC Unlock (4th) TPS percentage vs Road Speed,
+/*ylabel                    =km/h,
+/*yaxis                     =32   40   48   56   64   72   80   88   96   104   112,
+/*xlabel                    =% TPS,
+/*xaxis                     =%,,
+};
+
+/* Table 14: F43D: TCC Lock (4th) TPS percentage vs Road Speed */
+{
+/*startAddr                 =266,
+/*columns                   =1,
+/*rows                      =11,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =0.390625,
+/*map_name                  =F43D: TCC Lock (4th) TPS percentage vs Road Speed,
+/*ylabel                    =km/h,
+/*yaxis                     =32   40   48   56   64   72   80   88   96   104   112,
+/*xlabel                    =% TPS,
+/*xaxis                     =%,,
+};
+
+/* Table 15: F24: Maximum Closed loop integrator vs RPM (Steps/second ) */
+{
+/*startAddr                 =2BC,
+/*columns                   =1,
+/*rows                      =4,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =0.050000,
+/*map_name                  =F24: Maximum Closed loop integrator vs RPM (Steps/second ),
+/*ylabel                    =RPM,
+/*yaxis                     =800  1600 2400 3200,
+/*xlabel                    =,
+/*xaxis                     =Stp/sec,,
+};
+
+/* Table 16: F27: Injector Bias vs ADBAT  */
+{
+/*startAddr                 =2C0,
+/*columns                   =1,
+/*rows                      =8,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =0.015259,
+/*map_name                  =F27: Injector Bias vs ADBAT ,
+/*ylabel                    =Volts,
+/*yaxis                     =4.8  6.4  8.0  9.6  11.2 12.8 14.4 16.0,
+/*xlabel                    =,
+/*xaxis                     =mS,,
+};
+
+/* Table 17: F94: Injector bias add-on vs Injector pulse width */
+{
+/*startAddr                 =2C8,
+/*columns                   =1,
+/*rows                      =17,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =0.015259,
+/*map_name                  =F94: Injector bias add-on vs Injector pulse width,
+/*ylabel                    =P/W,
+/*yaxis                     =0.0000.2440.4880.7320.9771.2211.4651.7091.9532.1972.4412.6862.9303.1743.4183.6623.906,
+/*xlabel                    =Add on,
+/*xaxis                     =Add,,
+};
+
+/* Table 18: F28E: EGR Dilution as a function of RPM and Vacuum */
+{
+/*startAddr                 =2DC,
+/*columns                   =15,
+/*rows                      =11,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =0.390625,
+/*map_name                  =F28E: EGR Dilution as a function of RPM and Vacuum,
+/*ylabel                    =RPM,
+/*yaxis                     =800 1200 1600 2000 2400 2800 3200 3600 4000 4400 4800,
+/*xlabel                    =kPa (Vac),
+/*xaxis                     =0  2½ 5  7½ 10 12½15 17½20 30 40 50 60 70 80,,
+};
+
+/* Table 19: F29H: Volumetric Efficiency (VE) as a function of MAP and RPM */
+{
+/*startAddr                 =384,
+/*columns                   =9,
+/*rows                      =17,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =0.390625,
+/*map_name                  =F29H: Volumetric Efficiency (VE) as a function of MAP and RPM,
+/*ylabel                    =RPM,
+/*yaxis                     =400  600  800  1200 1600 2000 2400 2800 3200 3600 4000 4400 4800 5200 5600 6400 7200,
+/*xlabel                    =MAP,
+/*xaxis                     =20 30 40 50 60 70 80 90 100,,
+};
+
+/* Table 20: F31E: Inverse Temperature term vs Charge Temperature */
+{
+/*startAddr                 =41D,
+/*columns                   =1,
+/*rows                      =17,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =1.000000,
+/*map_name                  =F31E: Inverse Temperature term vs Charge Temperature,
+/*ylabel                    =Degrees K,
+/*yaxis                     =  -40  -28  -16   -4    8   20   32   44   56   68   80   92  104  116  128  140  152,
+/*xlabel                    =(50000/value) = Deg K  X,
+/*xaxis                     =  X,,
+};
+
+/* Table 21: F33: Voltage compensation vs Battery voltage  */
+{
+/*startAddr                 =42E,
+/*columns                   =1,
+/*rows                      =8,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =0.007813,
+/*map_name                  =F33: Voltage compensation vs Battery voltage ,
+/*ylabel                    =Volts,
+/*yaxis                     =4.8  6.4  8.0  9.6  11.2 12.8 14.4 16.0,
+/*xlabel                    =,
+/*xaxis                     =Factor,,
+};
+
+/* Table 22: F34: DE Coolant factor vs COOLDEGB (factor*32) */
+{
+/*startAddr                 =436,
+/*columns                   =1,
+/*rows                      =13,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =0.031250,
+/*map_name                  =F34: DE Coolant factor vs COOLDEGB (factor*32),
+/*ylabel                    =DegC,
+/*yaxis                     =-28  -16   -4    8   20   32   44   56   68   80   92  104  116,
+/*xlabel                    =,
+/*xaxis                     =Factor,,
+};
+
+/* Table 23: F37: AE Temperature factor vs COOLDEGB (factor*16) */
+{
+/*startAddr                 =443,
+/*columns                   =1,
+/*rows                      =13,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =0.062500,
+/*map_name                  =F37: AE Temperature factor vs COOLDEGB (factor*16),
+/*ylabel                    =DegC,
+/*yaxis                     =-28  -16   -4    8   20   32   44   56   68   80   92  104  116,
+/*xlabel                    =,
+/*xaxis                     =Factor,,
+};
+
+/* Table 24: F51C: Initial Run A/F Ratio Time-Out vs Coolant Temperature */
+{
+/*startAddr                 =454,
+/*columns                   =1,
+/*rows                      =13,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =0.100000,
+/*map_name                  =F51C: Initial Run A/F Ratio Time-Out vs Coolant Temperature,
+/*ylabel                    =Degrees C,
+/*yaxis                     =  -28  -16   -4    8   20   32   44   56   68   80   92  104  116,
+/*xlabel                    =AF Ratio,
+/*xaxis                     =  X,,
+};
+
+/* Table 25: F52C: Run AF Ratio Time-Out Interval vs Coolant Temperature */
+{
+/*startAddr                 =461,
+/*columns                   =1,
+/*rows                      =13,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =0.025000,
+/*mulOrDivOrBit             =0,
+/*factor                    =0.025000,
+/*map_name                  =F52C: Run AF Ratio Time-Out Interval vs Coolant Temperature,
+/*ylabel                    =Degrees C,
+/*yaxis                     =  -28  -16   -4    8   20   32   44   56   68   80   92  104  116,
+/*xlabel                    =(SEC * 40) - 1,
+/*xaxis                     =Sec,,
+};
+
+/* Table 26: F53: Initial Crank Base Pulse Width vs Coolant Temperature */
+{
+/*startAddr                 =46E,
+/*columns                   =1,
+/*rows                      =13,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =0.488281,
+/*map_name                  =F53: Initial Crank Base Pulse Width vs Coolant Temperature,
+/*ylabel                    =Deg C,
+/*yaxis                     =-28  -16  -4   8    20   32   44   56   68   80   92   104  116,
+/*xlabel                    =,
+/*xaxis                     =ms,,
+};
+
+/* Table 27: F56: Cold Engine A/F Ratio vs Coolant Temp and MAP */
+{
+/*startAddr                 =47E,
+/*columns                   =9,
+/*rows                      =13,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =0.100000,
+/*map_name                  =F56: Cold Engine A/F Ratio vs Coolant Temp and MAP,
+/*ylabel                    =DegC,
+/*yaxis                     =-40  -28  -16  -4   8    20   32   44   56   68   80   92   104,
+/*xlabel                    =MAP,
+/*xaxis                     =20 30 40 50 60 70 80 90 100,,
+};
+
+/* Table 28: F57B: Idle A/F Ratio vs Coolant Temperature */
+{
+/*startAddr                 =4F3,
+/*columns                   =1,
+/*rows                      =7,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =0.100000,
+/*map_name                  =F57B: Idle A/F Ratio vs Coolant Temperature,
+/*ylabel                    =Deg C,
+/*yaxis                     =-28  -4   20   44   68   92   116,
+/*xlabel                    =,
+/*xaxis                     =A/F,,
+};
+
+/* Table 29: F60: Open Loop A/F ratio vs RPM and MAP */
+{
+/*startAddr                 =4FD,
+/*columns                   =9,
+/*rows                      =16,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =0.100000,
+/*map_name                  =F60: Open Loop A/F ratio vs RPM and MAP,
+/*ylabel                    =RPM,
+/*yaxis                     =400  800  1200 1600 2000 2400 2800 3200 3600 4000 4400 4800 5200 5600 6000 6400,
+/*xlabel                    =MAP,
+/*xaxis                     =20 30 40 60 80 85 90 95 100,,
+};
+
+/* Table 30: F66: Injector delay Table (% of Ref period vs RPM & TPS) */
+{
+/*startAddr                 =590,
+/*columns                   =9,
+/*rows                      =8,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =0.390625,
+/*map_name                  =F66: Injector delay Table (% of Ref period vs RPM & TPS),
+/*ylabel                    =RPM,
+/*yaxis                     =400  800  1200 1600 2000 2400 2800 3200,
+/*xlabel                    =TPS%,
+/*xaxis                     =0  12½25 37½50 62½75 87½100,,
+};
+
+/* Table 31: F100: % Coolant contribution for calculating charge temp */
+{
+/*startAddr                 =5DB,
+/*columns                   =9,
+/*rows                      =16,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =0.390625,
+/*map_name                  =F100: % Coolant contribution for calculating charge temp,
+/*ylabel                    =RPM,
+/*yaxis                     =400  800  1200 1600 2000 2400 2800 3200 3600 4000 4400 4800 5200 5600 6000 6400,
+/*xlabel                    =MAP,
+/*xaxis                     =20 30 40 50 60 70 80 90 100,,
+};
+
+/* Table 32: F10:  Warmup IAC Motor position Offset vs coolant temp(IAC steps) */
+{
+/*startAddr                 =68E,
+/*columns                   =1,
+/*rows                      =13,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =1.000000,
+/*map_name                  =F10:  Warmup IAC Motor position Offset vs coolant temp(IAC steps),
+/*ylabel                    =Deg C,
+/*yaxis                     =-28  -16  -4   8    20   32   44   56   68   80   92   104  116,
+/*xlabel                    =,
+/*xaxis                     =Stp,,
+};
+
+/* Table 33: F12:  Power Steering Offset vs Baro (IAC steps) */
+{
+/*startAddr                 =69B,
+/*columns                   =1,
+/*rows                      =4,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =1.000000,
+/*map_name                  =F12:  Power Steering Offset vs Baro (IAC steps),
+/*ylabel                    =kPa,
+/*yaxis                     =70   80   90   100,
+/*xlabel                    =,
+/*xaxis                     =Stp,,
+};
+
+/* Table 34: F13D: Auto trans Desired idle RPM in Drive vs Battery voltage */
+{
+/*startAddr                 =69F,
+/*columns                   =1,
+/*rows                      =3,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =6.250000,
+/*map_name                  =F13D: Auto trans Desired idle RPM in Drive vs Battery voltage,
+/*ylabel                    =volts,
+/*yaxis                     = 9.6 11.2 12.8,
+/*xlabel                    =,
+/*xaxis                     =RPM,,
+};
+
+/* Table 35: F13P: Auto trans Desired idle RPM in P/N vs Battery voltage */
+{
+/*startAddr                 =6A2,
+/*columns                   =1,
+/*rows                      =3,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =6.250000,
+/*map_name                  =F13P: Auto trans Desired idle RPM in P/N vs Battery voltage,
+/*ylabel                    =volts,
+/*yaxis                     = 9.6 11.2 12.8,
+/*xlabel                    =,
+/*xaxis                     =RPM,,
+};
+
+/* Table 36: F13M: Manual trans Desired idle RPM vs Battery voltage */
+{
+/*startAddr                 =6A5,
+/*columns                   =1,
+/*rows                      =3,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =6.250000,
+/*map_name                  =F13M: Manual trans Desired idle RPM vs Battery voltage,
+/*ylabel                    =volts,
+/*yaxis                     = 9.6 11.2 12.8,
+/*xlabel                    =,
+/*xaxis                     =RPM,,
+};
+
+/* Table 37: F14: IAC warmup Decay rate vs coolant temp */
+{
+/*startAddr                 =6A8,
+/*columns                   =1,
+/*rows                      =13,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =0.200000,
+/*map_name                  =F14: IAC warmup Decay rate vs coolant temp,
+/*ylabel                    =Deg C,
+/*yaxis                     =-28  -16  -4   8    20   32   44   56   68   80   92   104  116,
+/*xlabel                    =,
+/*xaxis                     =Seconds,,
+};
+
+/* Table 38: F15: Fast idle offset vs coolant temp */
+{
+/*startAddr                 =6B5,
+/*columns                   =1,
+/*rows                      =13,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =6.250000,
+/*map_name                  =F15: Fast idle offset vs coolant temp,
+/*ylabel                    =Deg C,
+/*yaxis                     =-28  -16  -4   8    20   32   44   56   68   80   92   104  116,
+/*xlabel                    =,
+/*xaxis                     =RPM,,
+};
+
+/* Table 39: F16: Throttle crack offset vs RPM  ( IAC Steps ) */
+{
+/*startAddr                 =6C2,
+/*columns                   =1,
+/*rows                      =9,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =0.000000,
+/*mulOrDivOrBit             =0,
+/*factor                    =1.000000,
+/*map_name                  =F16: Throttle crack offset vs RPM  ( IAC Steps ),
+/*ylabel                    =RPM,
+/*yaxis                     =0    800  1600 2400 3200 4000 4800 5600 6400,
+/*xlabel                    =,
+/*xaxis                     =Stp,,
+};
+
+/* Table 40: F18: MAP Limiter - MAP threshold vs RPM */
+{
+/*startAddr                 =6CB,
+/*columns                   =1,
+/*rows                      =9,
+/*elementSize               =1,
+/*bitMask                   =0,
+/*offset                    =10.332103,
+/*mulOrDivOrBit             =0,
+/*factor                    =0.369004,
+/*map_name                  =F18: MAP Limiter - MAP threshold vs RPM,
+/*ylabel                    =RPM,
+/*yaxis                     =0    200  400  600  800  1000 1200 1400 1600,
+/*xlabel                    =,
+/*xaxis                     =kPa,,
+};
+

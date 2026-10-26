@@ -1,0 +1,6303 @@
+XDF
+1.000000
+
+DO NOT HAND EDIT!!!! (Trust me)
+
+%%HEADER%%
+	001000 FileVers         =""
+	001005 DefTitle         ="GM_P4_ECM-808 $FB"
+	001007 DescSize         =0x0
+	001006 Desc             =""
+	001010 Author           =""
+	001030 BinSize          =0x4000
+	001035 BaseOffset       =0
+	001200 ADSAssoc         =""
+	001225 ADSCheck         =0x0
+	001300 GenFlags         =0x0
+	001325 ModeFlags        =0x0
+%%END%%
+
+%%CHECKSUM%%
+	000002 UniqueID         =0x4F2D
+	000003 BaseFlags        =0x0
+	010005 Title            ="Imported Checksum"
+	010010 DataStart        =0x8
+	010015 DataEnd          =0x3FFF
+	010020 SizeBits         =0x10
+	010025 StoreAddr        =0x6
+	010030 CalcMethod       =0x0
+	010050 Flags            =0x0
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x4F2E
+	000003 BaseFlags        =0x0
+	020005 Title            ="GEN IDN PROM ID"
+	020011 DescSize         =0x100
+	020010 Desc             =""
+	020020 Units            =""
+	020050 SizeInBits       =0x10
+	020100 Address          =0x0
+	020150 Flags            =0x0
+	020200 Equation         =1.000000 * X + 0.000000,TH|0|0|0|0|
+	020205 OutType          =0x1
+	020210 DecimalPl        =0x2
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x4F2F
+	000003 BaseFlags        =0x0
+	020005 Title            ="GEN IDN DATE CODE"
+	020011 DescSize         =0x100
+	020010 Desc             =""
+	020020 Units            =""
+	020050 SizeInBits       =0x10
+	020100 Address          =0x2
+	020150 Flags            =0x0
+	020200 Equation         =1.000000 * X + 0.000000,TH|0|0|0|0|
+	020205 OutType          =0x1
+	020210 DecimalPl        =0x2
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x4F30
+	000003 BaseFlags        =0x0
+	020005 Title            ="GEN IDN SEQ NUM"
+	020011 DescSize         =0x100
+	020010 Desc             =""
+	020020 Units            =""
+	020050 SizeInBits       =0x10
+	020100 Address          =0x4
+	020150 Flags            =0x0
+	020200 Equation         =1.000000 * X + 0.000000,TH|0|0|0|0|
+	020205 OutType          =0x1
+	020210 DecimalPl        =0x2
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x4F31
+	000003 BaseFlags        =0x0
+	020005 Title            ="GEN IDN CHK SUM"
+	020011 DescSize         =0x100
+	020010 Desc             =""
+	020020 Units            =""
+	020050 SizeInBits       =0x10
+	020100 Address          =0x6
+	020150 Flags            =0x0
+	020200 Equation         =1.000000 * X + 0.000000,TH|0|0|0|0|
+	020205 OutType          =0x1
+	020210 DecimalPl        =0x2
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x4F32
+	000003 BaseFlags        =0x0
+	020005 Title            ="GEN IDN PROG ID"
+	020011 DescSize         =0x100
+	020010 Desc             =""
+	020020 Units            =""
+	020050 SizeInBits       =0x8
+	020100 Address          =0x8
+	020150 Flags            =0x0
+	020200 Equation         =X,TH|0|0|0|0|
+	020205 OutType          =0x3
+	020210 DecimalPl        =0x2
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x4F33
+	000003 BaseFlags        =0x0
+	020005 Title            ="SPK RUN RUN RPM"
+	020011 DescSize         =0x100
+	020010 Desc             =""
+	020020 Units            ="Rpm"
+	020050 SizeInBits       =0x8
+	020100 Address          =0xC
+	020150 Flags            =0x0
+	020200 Equation         =25.000000 * X + 0.000000,TH|0|0|0|0|
+	020205 OutType          =0x1
+	020210 DecimalPl        =0x2
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x4F34
+	000003 BaseFlags        =0x0
+	020005 Title            ="SPK RUN RUN ERR"
+	020011 DescSize         =0x100
+	020010 Desc             =""
+	020020 Units            ="counts"
+	020050 SizeInBits       =0x8
+	020100 Address          =0xD
+	020150 Flags            =0x0
+	020200 Equation         =1.000000 * X + 0.000000,TH|0|0|0|0|
+	020205 OutType          =0x1
+	020210 DecimalPl        =0x2
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x4F35
+	000003 BaseFlags        =0x0
+	020005 Title            ="SPK RUN AF RUN RPM"
+	020011 DescSize         =0x100
+	020010 Desc             =""
+	020020 Units            ="Rpm"
+	020050 SizeInBits       =0x8
+	020100 Address          =0xE
+	020150 Flags            =0x0
+	020200 Equation         =25.000000 * X + 0.000000,TH|0|0|0|0|
+	020205 OutType          =0x1
+	020210 DecimalPl        =0x2
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x4F36
+	000003 BaseFlags        =0x0
+	020005 Title            ="SPK RUN AF RUN ERR"
+	020011 DescSize         =0x100
+	020010 Desc             =""
+	020020 Units            ="counts"
+	020050 SizeInBits       =0x8
+	020100 Address          =0xF
+	020150 Flags            =0x0
+	020200 Equation         =1.000000 * X + 0.000000,TH|0|0|0|0|
+	020205 OutType          =0x1
+	020210 DecimalPl        =0x2
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x4F37
+	000003 BaseFlags        =0x0
+	020005 Title            ="VAR MAP MAP Q "
+	020011 DescSize         =0x100
+	020010 Desc             =""
+	020020 Units            ="%"
+	020050 SizeInBits       =0x8
+	020100 Address          =0x10
+	020150 Flags            =0x0
+	020200 Equation         =0.390625 * X + 0.000000,TH|0|0|0|0|
+	020205 OutType          =0x1
+	020210 DecimalPl        =0x2
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x4F38
+	000003 BaseFlags        =0x0
+	020005 Title            ="VAR MAP DEF MAP "
+	020011 DescSize         =0x100
+	020010 Desc             =""
+	020020 Units            ="kpa"
+	020050 SizeInBits       =0x8
+	020100 Address          =0x11
+	020150 Flags            =0x0
+	020200 Equation         =0.368862 * X + 10.350300,TH|0|0|0|0|
+	020205 OutType          =0x1
+	020210 DecimalPl        =0x2
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x4F39
+	000003 BaseFlags        =0x0
+	020005 Title            ="VAR MAP TPS FAC "
+	020011 DescSize         =0x100
+	020010 Desc             =""
+	020020 Units            ="kpa/tps %"
+	020050 SizeInBits       =0x8
+	020100 Address          =0x12
+	020150 Flags            =0x0
+	020200 Equation         =0.029509 * X + 0.000000,TH|0|0|0|0|
+	020205 OutType          =0x1
+	020210 DecimalPl        =0x2
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x4F3A
+	000003 BaseFlags        =0x0
+	020005 Title            ="VAR MAP TPS OFS "
+	020011 DescSize         =0x100
+	020010 Desc             =""
+	020020 Units            ="kpa"
+	020050 SizeInBits       =0x8
+	020100 Address          =0x13
+	020150 Flags            =0x0
+	020200 Equation         =0.368862 * X + 0.000000,TH|0|0|0|0|
+	020205 OutType          =0x1
+	020210 DecimalPl        =0x2
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x4F3B
+	000003 BaseFlags        =0x0
+	020005 Title            ="VAR MAP RPM FAC "
+	020011 DescSize         =0x100
+	020010 Desc             =""
+	020020 Units            ="kpa/100rpm"
+	020050 SizeInBits       =0x8
+	020100 Address          =0x14
+	020150 Flags            =0x0
+	020200 Equation         =0.023054 * X + 0.000000,TH|0|0|0|0|
+	020205 OutType          =0x1
+	020210 DecimalPl        =0x2
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x4F3C
+	000003 BaseFlags        =0x0
+	020005 Title            ="VAR MAP RPM OFS "
+	020011 DescSize         =0x100
+	020010 Desc             =""
+	020020 Units            ="kpa"
+	020050 SizeInBits       =0x8
+	020100 Address          =0x15
+	020150 Flags            =0x0
+	020200 Equation         =0.368862 * X + 0.000000,TH|0|0|0|0|
+	020205 OutType          =0x1
+	020210 DecimalPl        =0x2
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x4F3D
+	000003 BaseFlags        =0x0
+	020005 Title            ="VAR MAP DEF MIN "
+	020011 DescSize         =0x100
+	020010 Desc             =""
+	020020 Units            ="kpa"
+	020050 SizeInBits       =0x8
+	020100 Address          =0x16
+	020150 Flags            =0x0
+	020200 Equation         =0.368862 * X + 10.350300,TH|0|0|0|0|
+	020205 OutType          =0x1
+	020210 DecimalPl        =0x2
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x4F3E
+	000003 BaseFlags        =0x0
+	020005 Title            ="VAR MAP AC MAP "
+	020011 DescSize         =0x100
+	020010 Desc             =""
+	020020 Units            ="kpa"
+	020050 SizeInBits       =0x8
+	020100 Address          =0x17
+	020150 Flags            =0x0
+	020200 Equation         =0.368862 * X + 0.000000,TH|0|0|0|0|
+	020205 OutType          =0x1
+	020210 DecimalPl        =0x2
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x4F3F
+	000003 BaseFlags        =0x0
+	020005 Title            ="VAR MAP DR MAP "
+	020011 DescSize         =0x100
+	020010 Desc             =""
+	020020 Units            ="kpa"
+	020050 SizeInBits       =0x8
+	020100 Address          =0x18
+	020150 Flags            =0x0
+	020200 Equation         =0.368862 * X + 0.000000,TH|0|0|0|0|
+	020205 OutType          =0x1
+	020210 DecimalPl        =0x2
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x4F40
+	000003 BaseFlags        =0x0
+	020005 Title            ="VAR MAP MIN STEP "
+	020011 DescSize         =0x100
+	020010 Desc             =""
+	020020 Units            ="steps"
+	020050 SizeInBits       =0x8
+	020100 Address          =0x19
+	020150 Flags            =0x0
+	020200 Equation         =1.000000 * X + 0.000000,TH|0|0|0|0|
+	020205 OutType          =0x1
+	020210 DecimalPl        =0x2
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x4F41
+	000003 BaseFlags        =0x0
+	020005 Title            ="VAR MAP STEP MUL "
+	020011 DescSize         =0x100
+	020010 Desc             =""
+	020020 Units            ="kpa/step"
+	020050 SizeInBits       =0x8
+	020100 Address          =0x1A
+	020150 Flags            =0x0
+	020200 Equation         =0.001441 * X + 0.000000,TH|0|0|0|0|
+	020205 OutType          =0x1
+	020210 DecimalPl        =0x2
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x4F42
+	000003 BaseFlags        =0x0
+	020005 Title            ="VAR MAP INC MAP Q "
+	020011 DescSize         =0x100
+	020010 Desc             =""
+	020020 Units            ="%"
+	020050 SizeInBits       =0x8
+	020100 Address          =0x1B
+	020150 Flags            =0x0
+	020200 Equation         =0.390625 * X + 0.000000,TH|0|0|0|0|
+	020205 OutType          =0x1
+	020210 DecimalPl        =0x2
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x4F43
+	000003 BaseFlags        =0x0
+	020005 Title            ="VAR MAP DEC MAP Q "
+	020011 DescSize         =0x100
+	020010 Desc             =""
+	020020 Units            ="%"
+	020050 SizeInBits       =0x8
+	020100 Address          =0x1C
+	020150 Flags            =0x0
+	020200 Equation         =0.390625 * X + 0.000000,TH|0|0|0|0|
+	020205 OutType          =0x1
+	020210 DecimalPl        =0x2
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x4F44
+	000003 BaseFlags        =0x0
+	020005 Title            ="VAR EGR EGR TPS"
+	020011 DescSize         =0x100
+	020010 Desc             =""
+	020020 Units            ="tps"
+	020050 SizeInBits       =0x8
+	020100 Address          =0x1D
+	020150 Flags            =0x0
+	020200 Equation         =0.390625 * X + 0.000000,TH|0|0|0|0|
+	020205 OutType          =0x1
+	020210 DecimalPl        =0x2
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x4F45
+	000003 BaseFlags        =0x0
+	020005 Title            ="VAR EGR EGR CTR"
+	020011 DescSize         =0x100
+	020010 Desc             =""
+	020020 Units            ="sec"
+	020050 SizeInBits       =0x8
+	020100 Address          =0x1E
+	020150 Flags            =0x0
+	020200 Equation         =0.012500 * X + 0.000000,TH|0|0|0|0|
+	020205 OutType          =0x1
+	020210 DecimalPl        =0x2
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x4F46
+	000003 BaseFlags        =0x0
+	020005 Title            ="VAR TPS TPS GAIN"
+	020011 DescSize         =0x100
+	020010 Desc             =""
+	020020 Units            ="sec"
+	020050 SizeInBits       =0x8
+	020100 Address          =0x1F
+	020150 Flags            =0x0
+	020200 Equation         =0.390625 * X + 0.000000,TH|0|0|0|0|
+	020205 OutType          =0x1
+	020210 DecimalPl        =0x2
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x4F47
+	000003 BaseFlags        =0x0
+	020005 Title            ="VAR TPS TPS Q"
+	020011 DescSize         =0x100
+	020010 Desc             =""
+	020020 Units            ="kpa"
+	020050 SizeInBits       =0x8
+	020100 Address          =0x20
+	020150 Flags            =0x0
+	020200 Equation         =0.390625 * X + 0.000000,TH|0|0|0|0|
+	020205 OutType          =0x1
+	020210 DecimalPl        =0x2
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x4F48
+	000003 BaseFlags        =0x0
+	020005 Title            ="VAR KPH VSS CONST "
+	020011 DescSize         =0x100
+	020010 Desc             =""
+	020020 Units            ="pulses/km"
+	020050 SizeInBits       =0x10
+	020100 Address          =0x27
+	020150 Flags            =0x0
+	020200 Equation         =7372800.000000 / X + 0.000000,TH|0|0|0|0|
+	020205 OutType          =0x1
+	020210 DecimalPl        =0x2
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x4F49
+	000003 BaseFlags        =0x0
+	020005 Title            ="VAR KPH KHP Q "
+	020011 DescSize         =0x100
+	020010 Desc             =""
+	020020 Units            ="%"
+	020050 SizeInBits       =0x8
+	020100 Address          =0x29
+	020150 Flags            =0x0
+	020200 Equation         =0.390625 * X + 0.000000,TH|0|0|0|0|
+	020205 OutType          =0x1
+	020210 DecimalPl        =0x2
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x4F4A
+	000003 BaseFlags        =0x0
+	020005 Title            ="SPK EST REF ANG"
+	020011 DescSize         =0x100
+	020010 Desc             =""
+	020020 Units            ="Degrees"
+	020050 SizeInBits       =0x8
+	020100 Address          =0x2A
+	020150 Flags            =0x0
+	020200 Equation         =0.351562 * X + 0.000000,TH|0|0|0|0|
+	020205 OutType          =0x1
+	020210 DecimalPl        =0x2
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x4F4B
+	000003 BaseFlags        =0x0
+	020005 Title            ="SPK EST TIM LAG"
+	020011 DescSize         =0x100
+	020010 Desc             =""
+	020020 Units            ="usec"
+	020050 SizeInBits       =0x8
+	020100 Address          =0x2B
+	020150 Flags            =0x0
+	020200 Equation         =15.258800 * X + 0.000000,TH|0|0|0|0|
+	020205 OutType          =0x1
+	020210 DecimalPl        =0x2
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x4F4C
+	000003 BaseFlags        =0x0
+	020005 Title            ="SPK EST MAX SPK"
+	020011 DescSize         =0x100
+	020010 Desc             =""
+	020020 Units            ="Degrees"
+	020050 SizeInBits       =0x10
+	020100 Address          =0x2C
+	020150 Flags            =0x0
+	020200 Equation         =0.351562 * X + 0.000000,TH|0|0|0|0|
+	020205 OutType          =0x1
+	020210 DecimalPl        =0x2
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x4F4D
+	000003 BaseFlags        =0x0
+	020005 Title            ="SPK EST MIN SPK"
+	020011 DescSize         =0x100
+	020010 Desc             =""
+	020020 Units            ="Degrees"
+	020050 SizeInBits       =0x10
+	020100 Address          =0x2E
+	020150 Flags            =0x0
+	020200 Equation         =0.351562 * X + 0.000000,TH|0|0|0|0|
+	020205 OutType          =0x1
+	020210 DecimalPl        =0x2
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x4F4E
+	000003 BaseFlags        =0x0
+	020005 Title            ="SPK EST DFC SPK MN"
+	020011 DescSize         =0x100
+	020010 Desc             =""
+	020020 Units            ="Degrees"
+	020050 SizeInBits       =0x8
+	020100 Address          =0x30
+	020150 Flags            =0x0
+	020200 Equation         =0.351562 * X + 0.000000,TH|0|0|0|0|
+	020205 OutType          =0x1
+	020210 DecimalPl        =0x2
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x4F4F
+	000003 BaseFlags        =0x0
+	020005 Title            ="SPK EST DFC SPK DL"
+	020011 DescSize         =0x100
+	020010 Desc             =""
+	020020 Units            ="Degrees"
+	020050 SizeInBits       =0x10
+	020100 Address          =0x31
+	020150 Flags            =0x0
+	020200 Equation         =0.001373 * X + 0.000000,TH|0|0|0|0|
+	020205 OutType          =0x1
+	020210 DecimalPl        =0x2
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x4F50
+	000003 BaseFlags        =0x0
+	020005 Title            ="SPK EST SL TPS"
+	020011 DescSize         =0x100
+	020010 Desc             =""
+	020020 Units            ="%"
+	020050 SizeInBits       =0x8
+	020100 Address          =0x33
+	020150 Flags            =0x0
+	020200 Equation         =0.390625 * X + 0.000000,TH|0|0|0|0|
+	020205 OutType          =0x1
+	020210 DecimalPl        =0x2
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x4F51
+	000003 BaseFlags        =0x0
+	020005 Title            ="SPK EST SL RPM"
+	020011 DescSize         =0x100
+	020010 Desc             =""
+	020020 Units            ="Rpm"
+	020050 SizeInBits       =0x8
+	020100 Address          =0x34
+	020150 Flags            =0x0
+	020200 Equation         =25.000000 * X + 0.000000,TH|0|0|0|0|
+	020205 OutType          =0x1
+	020210 DecimalPl        =0x2
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x4F52
+	000003 BaseFlags        =0x0
+	020005 Title            ="SPK EST SL KPH MIN"
+	020011 DescSize         =0x100
+	020010 Desc             =""
+	020020 Units            ="KPH"
+	020050 SizeInBits       =0x8
+	020100 Address          =0x35
+	020150 Flags            =0x0
+	020200 Equation         =1.000000 * X + 0.000000,TH|0|0|0|0|
+	020205 OutType          =0x1
+	020210 DecimalPl        =0x2
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x4F53
+	000003 BaseFlags        =0x0
+	020005 Title            ="SPK EST SL KPH MAX"
+	020011 DescSize         =0x100
+	020010 Desc             =""
+	020020 Units            ="KPH"
+	020050 SizeInBits       =0x8
+	020100 Address          =0x36
+	020150 Flags            =0x0
+	020200 Equation         =1.000000 * X + 0.000000,TH|0|0|0|0|
+	020205 OutType          =0x1
+	020210 DecimalPl        =0x2
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x4F54
+	000003 BaseFlags        =0x0
+	020005 Title            ="SPK EST SL MAX ADV"
+	020011 DescSize         =0x100
+	020010 Desc             =""
+	020020 Units            ="Degrees"
+	020050 SizeInBits       =0x8
+	020100 Address          =0x37
+	020150 Flags            =0x0
+	020200 Equation         =0.351562 * X + 0.000000,TH|0|0|0|0|
+	020205 OutType          =0x1
+	020210 DecimalPl        =0x2
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x4F55
+	000003 BaseFlags        =0x0
+	020005 Title            ="SPK EST DGN ADV"
+	020011 DescSize         =0x100
+	020010 Desc             =""
+	020020 Units            ="Degrees"
+	020050 SizeInBits       =0x8
+	020100 Address          =0x38
+	020150 Flags            =0x0
+	020200 Equation         =0.351562 * X + 0.000000,TH|0|0|0|0|
+	020205 OutType          =0x1
+	020210 DecimalPl        =0x2
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x4F56
+	000003 BaseFlags        =0x0
+	020005 Title            ="SPK EST DGN RPM"
+	020011 DescSize         =0x100
+	020010 Desc             =""
+	020020 Units            ="Rpm"
+	020050 SizeInBits       =0x8
+	020100 Address          =0x39
+	020150 Flags            =0x0
+	020200 Equation         =25.000000 * X + 0.000000,TH|0|0|0|0|
+	020205 OutType          =0x1
+	020210 DecimalPl        =0x2
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x4F57
+	000003 BaseFlags        =0x0
+	020005 Title            ="SPK EST ACC FAC"
+	020011 DescSize         =0x100
+	020010 Desc             =""
+	020020 Units            ="%"
+	020050 SizeInBits       =0x8
+	020100 Address          =0x3A
+	020150 Flags            =0x0
+	020200 Equation         =0.390625 * X + 0.000000,TH|0|0|0|0|
+	020205 OutType          =0x1
+	020210 DecimalPl        =0x2
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x4F58
+	000003 BaseFlags        =0x0
+	020005 Title            ="SPK EST DEL REF"
+	020011 DescSize         =0x100
+	020010 Desc             =""
+	020020 Units            ="mSec"
+	020050 SizeInBits       =0x10
+	020100 Address          =0x3B
+	020150 Flags            =0x0
+	020200 Equation         =0.015259 * X + 0.000000,TH|0|0|0|0|
+	020205 OutType          =0x1
+	020210 DecimalPl        =0x2
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x4F59
+	000003 BaseFlags        =0x0
+	020005 Title            ="SPK EST MAX D SPK"
+	020011 DescSize         =0x100
+	020010 Desc             =""
+	020020 Units            ="deg/msec"
+	020050 SizeInBits       =0x10
+	020100 Address          =0x3D
+	020150 Flags            =0x0
+	020200 Equation         =0.000110 * X + 0.000000,TH|0|0|0|0|
+	020205 OutType          =0x1
+	020210 DecimalPl        =0x2
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x4F5A
+	000003 BaseFlags        =0x0
+	020005 Title            ="SPK EST HI ADV RAT"
+	020011 DescSize         =0x100
+	020010 Desc             =""
+	020020 Units            ="deg/Krpm"
+	020050 SizeInBits       =0x8
+	020100 Address          =0x3F
+	020150 Flags            =0x0
+	020200 Equation         =0.054945 * X + 0.000000,TH|0|0|0|0|
+	020205 OutType          =0x1
+	020210 DecimalPl        =0x2
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x4F5B
+	000003 BaseFlags        =0x0
+	020005 Title            ="SPK EST CLT OFS"
+	020011 DescSize         =0x100
+	020010 Desc             =""
+	020020 Units            ="Degrees"
+	020050 SizeInBits       =0x8
+	020100 Address          =0x40
+	020150 Flags            =0x0
+	020200 Equation         =0.351562 * X + 0.000000,TH|0|0|0|0|
+	020205 OutType          =0x1
+	020210 DecimalPl        =0x2
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x4F5C
+	000003 BaseFlags        =0x0
+	020005 Title            ="SPK EST PND RPM"
+	020011 DescSize         =0x100
+	020010 Desc             =""
+	020020 Units            ="Rpm"
+	020050 SizeInBits       =0x8
+	020100 Address          =0x41
+	020150 Flags            =0x0
+	020200 Equation         =25.000000 * X + 0.000000,TH|0|0|0|0|
+	020205 OutType          =0x1
+	020210 DecimalPl        =0x2
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x4F5D
+	000003 BaseFlags        =0x0
+	020005 Title            ="SPK EST PND ADV"
+	020011 DescSize         =0x100
+	020010 Desc             =""
+	020020 Units            ="Degrees"
+	020050 SizeInBits       =0x8
+	020100 Address          =0x42
+	020150 Flags            =0x0
+	020200 Equation         =0.351562 * X + 0.000000,TH|0|0|0|0|
+	020205 OutType          =0x1
+	020210 DecimalPl        =0x2
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x4F5E
+	000003 BaseFlags        =0x0
+	020005 Title            ="SPK ESC LO CLT"
+	020011 DescSize         =0x100
+	020010 Desc             =""
+	020020 Units            ="Degrees C"
+	020050 SizeInBits       =0x8
+	020100 Address          =0x43
+	020150 Flags            =0x0
+	020200 Equation         =0.750000 * X + -40.000000,TH|0|0|0|0|
+	020205 OutType          =0x1
+	020210 DecimalPl        =0x2
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x4F5F
+	000003 BaseFlags        =0x0
+	020005 Title            ="SPK ESC TIME"
+	020011 DescSize         =0x100
+	020010 Desc             =""
+	020020 Units            ="Sec"
+	020050 SizeInBits       =0x8
+	020100 Address          =0x44
+	020150 Flags            =0x0
+	020200 Equation         =1.000000 * X + 0.000000,TH|0|0|0|0|
+	020205 OutType          =0x1
+	020210 DecimalPl        =0x2
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x4F60
+	000003 BaseFlags        =0x0
+	020005 Title            ="SPK ESC LO RPM"
+	020011 DescSize         =0x100
+	020010 Desc             =""
+	020020 Units            ="RPM"
+	020050 SizeInBits       =0x8
+	020100 Address          =0x45
+	020150 Flags            =0x0
+	020200 Equation         =25.000000 * X + 0.000000,TH|0|0|0|0|
+	020205 OutType          =0x1
+	020210 DecimalPl        =0x2
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x4F61
+	000003 BaseFlags        =0x0
+	020005 Title            ="SPK ESC HI RPM"
+	020011 DescSize         =0x100
+	020010 Desc             =""
+	020020 Units            ="RPM"
+	020050 SizeInBits       =0x8
+	020100 Address          =0x46
+	020150 Flags            =0x0
+	020200 Equation         =25.000000 * X + 0.000000,TH|0|0|0|0|
+	020205 OutType          =0x1
+	020210 DecimalPl        =0x2
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x4F62
+	000003 BaseFlags        =0x0
+	020005 Title            ="SPK ESC MAX RTD "
+	020011 DescSize         =0x100
+	020010 Desc             =""
+	020020 Units            ="Degrees"
+	020050 SizeInBits       =0x8
+	020100 Address          =0x47
+	020150 Flags            =0x0
+	020200 Equation         =0.351562 * X + 0.000000,TH|0|0|0|0|
+	020205 OutType          =0x1
+	020210 DecimalPl        =0x2
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x4F63
+	000003 BaseFlags        =0x0
+	020005 Title            ="SPK RTD SPK MIN "
+	020011 DescSize         =0x100
+	020010 Desc             =""
+	020020 Units            ="Degrees"
+	020050 SizeInBits       =0x8
+	020100 Address          =0x48
+	020150 Flags            =0x0
+	020200 Equation         =0.351562 * X + 0.000000,TH|0|0|0|0|
+	020205 OutType          =0x1
+	020210 DecimalPl        =0x2
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x4F64
+	000003 BaseFlags        =0x0
+	020005 Title            ="SPK RTD D TPS TH "
+	020011 DescSize         =0x100
+	020010 Desc             =""
+	020020 Units            ="% TPS"
+	020050 SizeInBits       =0x8
+	020100 Address          =0x49
+	020150 Flags            =0x0
+	020200 Equation         =0.390625 * X + 0.000000,TH|0|0|0|0|
+	020205 OutType          =0x1
+	020210 DecimalPl        =0x2
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x4F65
+	000003 BaseFlags        =0x0
+	020005 Title            ="SPK RTD TPS MAX "
+	020011 DescSize         =0x100
+	020010 Desc             =""
+	020020 Units            ="% TPS"
+	020050 SizeInBits       =0x8
+	020100 Address          =0x4A
+	020150 Flags            =0x0
+	020200 Equation         =0.390625 * X + 0.000000,TH|0|0|0|0|
+	020205 OutType          =0x1
+	020210 DecimalPl        =0x2
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x4F66
+	000003 BaseFlags        =0x0
+	020005 Title            ="SPK RTD LO TPS TH "
+	020011 DescSize         =0x100
+	020010 Desc             =""
+	020020 Units            ="% TPS"
+	020050 SizeInBits       =0x8
+	020100 Address          =0x4B
+	020150 Flags            =0x0
+	020200 Equation         =0.390625 * X + 0.000000,TH|0|0|0|0|
+	020205 OutType          =0x1
+	020210 DecimalPl        =0x2
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x4F67
+	000003 BaseFlags        =0x0
+	020005 Title            ="SPK RTD CLT MIN "
+	020011 DescSize         =0x100
+	020010 Desc             =""
+	020020 Units            ="Degrees C"
+	020050 SizeInBits       =0x8
+	020100 Address          =0x4C
+	020150 Flags            =0x0
+	020200 Equation         =0.750000 * X + -40.000000,TH|0|0|0|0|
+	020205 OutType          =0x1
+	020210 DecimalPl        =0x2
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x4F68
+	000003 BaseFlags        =0x0
+	020005 Title            ="SPK RTD KPH MIN "
+	020011 DescSize         =0x100
+	020010 Desc             =""
+	020020 Units            ="KPH"
+	020050 SizeInBits       =0x8
+	020100 Address          =0x4D
+	020150 Flags            =0x0
+	020200 Equation         =1.000000 * X + 0.000000,TH|0|0|0|0|
+	020205 OutType          =0x1
+	020210 DecimalPl        =0x2
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x4F69
+	000003 BaseFlags        =0x0
+	020005 Title            ="SPK RTD RPM MAX "
+	020011 DescSize         =0x100
+	020010 Desc             =""
+	020020 Units            ="RPM"
+	020050 SizeInBits       =0x8
+	020100 Address          =0x4E
+	020150 Flags            =0x0
+	020200 Equation         =25.000000 * X + 0.000000,TH|0|0|0|0|
+	020205 OutType          =0x1
+	020210 DecimalPl        =0x2
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x4F6A
+	000003 BaseFlags        =0x0
+	020005 Title            ="SPK RTD RPM MIN "
+	020011 DescSize         =0x100
+	020010 Desc             =""
+	020020 Units            ="RPM"
+	020050 SizeInBits       =0x8
+	020100 Address          =0x4F
+	020150 Flags            =0x0
+	020200 Equation         =25.000000 * X + 0.000000,TH|0|0|0|0|
+	020205 OutType          =0x1
+	020210 DecimalPl        =0x2
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x4F6B
+	000003 BaseFlags        =0x0
+	020005 Title            ="SPK RTD SPK MX AP"
+	020011 DescSize         =0x100
+	020010 Desc             =""
+	020020 Units            ="Degrees"
+	020050 SizeInBits       =0x8
+	020100 Address          =0x5C
+	020150 Flags            =0x0
+	020200 Equation         =0.351562 * X + 0.000000,TH|0|0|0|0|
+	020205 OutType          =0x1
+	020210 DecimalPl        =0x2
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x4F6C
+	000003 BaseFlags        =0x0
+	020005 Title            ="SPK RTD SPK MX AN"
+	020011 DescSize         =0x100
+	020010 Desc             =""
+	020020 Units            ="Degrees"
+	020050 SizeInBits       =0x8
+	020100 Address          =0x5D
+	020150 Flags            =0x0
+	020200 Equation         =0.351562 * X + 0.000000,TH|0|0|0|0|
+	020205 OutType          =0x1
+	020210 DecimalPl        =0x2
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x4F6D
+	000003 BaseFlags        =0x0
+	020005 Title            ="SPK RTD ACC TIM"
+	020011 DescSize         =0x100
+	020010 Desc             =""
+	020020 Units            ="Sec"
+	020050 SizeInBits       =0x8
+	020100 Address          =0x5E
+	020150 Flags            =0x0
+	020200 Equation         =0.200000 * X + 0.000000,TH|0|0|0|0|
+	020205 OutType          =0x1
+	020210 DecimalPl        =0x2
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x4F6E
+	000003 BaseFlags        =0x0
+	020005 Title            ="SPK RTD DEC TIM"
+	020011 DescSize         =0x100
+	020010 Desc             =""
+	020020 Units            ="Sec"
+	020050 SizeInBits       =0x8
+	020100 Address          =0x65
+	020150 Flags            =0x0
+	020200 Equation         =0.200000 * X + 0.000000,TH|0|0|0|0|
+	020205 OutType          =0x1
+	020210 DecimalPl        =0x2
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x4F6F
+	000003 BaseFlags        =0x0
+	020005 Title            ="SPK RTD SPK MX DP"
+	020011 DescSize         =0x100
+	020010 Desc             =""
+	020020 Units            ="Degrees"
+	020050 SizeInBits       =0x8
+	020100 Address          =0x66
+	020150 Flags            =0x0
+	020200 Equation         =0.351562 * X + 0.000000,TH|0|0|0|0|
+	020205 OutType          =0x1
+	020210 DecimalPl        =0x2
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x4F70
+	000003 BaseFlags        =0x0
+	020005 Title            ="SPK RTD SPK MX DN"
+	020011 DescSize         =0x100
+	020010 Desc             =""
+	020020 Units            ="Degrees"
+	020050 SizeInBits       =0x8
+	020100 Address          =0x67
+	020150 Flags            =0x0
+	020200 Equation         =0.351562 * X + 0.000000,TH|0|0|0|0|
+	020205 OutType          =0x1
+	020210 DecimalPl        =0x2
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x4F71
+	000003 BaseFlags        =0x0
+	020005 Title            ="SPK RTD LO KPH TH"
+	020011 DescSize         =0x100
+	020010 Desc             =""
+	020020 Units            ="KPH"
+	020050 SizeInBits       =0x8
+	020100 Address          =0x68
+	020150 Flags            =0x0
+	020200 Equation         =1.000000 * X + 0.000000,TH|0|0|0|0|
+	020205 OutType          =0x1
+	020210 DecimalPl        =0x2
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x4F72
+	000003 BaseFlags        =0x0
+	020005 Title            ="SPK RTD GR SPK TIM 1"
+	020011 DescSize         =0x100
+	020010 Desc             =""
+	020020 Units            ="Sec"
+	020050 SizeInBits       =0x8
+	020100 Address          =0x69
+	020150 Flags            =0x0
+	020200 Equation         =0.012500 * X + 0.000000,TH|0|0|0|0|
+	020205 OutType          =0x1
+	020210 DecimalPl        =0x2
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x4F73
+	000003 BaseFlags        =0x0
+	020005 Title            ="SPK RTD GR SPK TIM 2"
+	020011 DescSize         =0x100
+	020010 Desc             =""
+	020020 Units            ="Sec"
+	020050 SizeInBits       =0x8
+	020100 Address          =0x6A
+	020150 Flags            =0x0
+	020200 Equation         =0.012500 * X + 0.000000,TH|0|0|0|0|
+	020205 OutType          =0x1
+	020210 DecimalPl        =0x2
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x4F74
+	000003 BaseFlags        =0x0
+	020005 Title            ="SPK RTD IN GR TIM "
+	020011 DescSize         =0x100
+	020010 Desc             =""
+	020020 Units            ="Sec"
+	020050 SizeInBits       =0x8
+	020100 Address          =0x6B
+	020150 Flags            =0x0
+	020200 Equation         =0.100000 * X + 0.000000,TH|0|0|0|0|
+	020205 OutType          =0x1
+	020210 DecimalPl        =0x2
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x4F75
+	000003 BaseFlags        =0x0
+	020005 Title            ="SPK RTD GR SPK BASE"
+	020011 DescSize         =0x100
+	020010 Desc             =""
+	020020 Units            ="Degrees"
+	020050 SizeInBits       =0x8
+	020100 Address          =0x6C
+	020150 Flags            =0x0
+	020200 Equation         =0.351562 * X + 0.000000,TH|0|0|0|0|
+	020205 OutType          =0x1
+	020210 DecimalPl        =0x2
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x4F76
+	000003 BaseFlags        =0x0
+	020005 Title            ="SPK RTD GR SPK MAX"
+	020011 DescSize         =0x100
+	020010 Desc             =""
+	020020 Units            ="Degrees"
+	020050 SizeInBits       =0x8
+	020100 Address          =0x6D
+	020150 Flags            =0x0
+	020200 Equation         =0.351562 * X + 0.000000,TH|0|0|0|0|
+	020205 OutType          =0x1
+	020210 DecimalPl        =0x2
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x4F77
+	000003 BaseFlags        =0x0
+	020005 Title            ="SPK RTD SPK MX LAP "
+	020011 DescSize         =0x100
+	020010 Desc             =""
+	020020 Units            ="Degrees"
+	020050 SizeInBits       =0x8
+	020100 Address          =0x103
+	020150 Flags            =0x0
+	020200 Equation         =0.351562 * X + 0.000000,TH|0|0|0|0|
+	020205 OutType          =0x1
+	020210 DecimalPl        =0x2
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x4F78
+	000003 BaseFlags        =0x0
+	020005 Title            ="SPK RTD SPK MX LAN "
+	020011 DescSize         =0x100
+	020010 Desc             =""
+	020020 Units            ="Degrees"
+	020050 SizeInBits       =0x8
+	020100 Address          =0x104
+	020150 Flags            =0x0
+	020200 Equation         =0.351562 * X + 0.000000,TH|0|0|0|0|
+	020205 OutType          =0x1
+	020210 DecimalPl        =0x2
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x4F79
+	000003 BaseFlags        =0x0
+	020005 Title            ="SPK RTD LO RPM TH "
+	020011 DescSize         =0x100
+	020010 Desc             =""
+	020020 Units            ="RPM"
+	020050 SizeInBits       =0x8
+	020100 Address          =0x105
+	020150 Flags            =0x0
+	020200 Equation         =25.000000 * X + 0.000000,TH|0|0|0|0|
+	020205 OutType          =0x1
+	020210 DecimalPl        =0x2
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x4F7A
+	000003 BaseFlags        =0x0
+	020005 Title            ="VAR BAR DEF BARO "
+	020011 DescSize         =0x100
+	020010 Desc             =""
+	020020 Units            ="KPA"
+	020050 SizeInBits       =0x8
+	020100 Address          =0x296
+	020150 Flags            =0x0
+	020200 Equation         =0.368862 * X + 10.350300,TH|0|0|0|0|
+	020205 OutType          =0x1
+	020210 DecimalPl        =0x2
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x4F7B
+	000003 BaseFlags        =0x0
+	020005 Title            ="VAR BAR MAX OFS "
+	020011 DescSize         =0x100
+	020010 Desc             =""
+	020020 Units            ="KPA"
+	020050 SizeInBits       =0x8
+	020100 Address          =0x297
+	020150 Flags            =0x0
+	020200 Equation         =0.368862 * X + 0.000000,TH|0|0|0|0|
+	020205 OutType          =0x1
+	020210 DecimalPl        =0x2
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x4F7C
+	000003 BaseFlags        =0x0
+	020005 Title            ="DGN MLF NOMALF"
+	020011 DescSize         =0x100
+	020010 Desc             =""
+	020020 Units            ="Counts"
+	020050 SizeInBits       =0x8
+	020100 Address          =0x2B0
+	020150 Flags            =0x0
+	020200 Equation         =1.000000 * X + 0.000000,TH|0|0|0|0|
+	020205 OutType          =0x1
+	020210 DecimalPl        =0x2
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x4F7D
+	000003 BaseFlags        =0x0
+	020005 Title            ="DGN M13 LO CLT"
+	020011 DescSize         =0x100
+	020010 Desc             =""
+	020020 Units            ="Degrees C"
+	020050 SizeInBits       =0x8
+	020100 Address          =0x2B1
+	020150 Flags            =0x0
+	020200 Equation         =0.750000 * X + -40.000000,TH|0|0|0|0|
+	020205 OutType          =0x1
+	020210 DecimalPl        =0x2
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x4F7E
+	000003 BaseFlags        =0x0
+	020005 Title            ="DGN M13 LO TIM"
+	020011 DescSize         =0x100
+	020010 Desc             =""
+	020020 Units            ="Sec"
+	020050 SizeInBits       =0x8
+	020100 Address          =0x2B2
+	020150 Flags            =0x0
+	020200 Equation         =1.000000 * X + 0.000000,TH|0|0|0|0|
+	020205 OutType          =0x1
+	020210 DecimalPl        =0x2
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x4F7F
+	000003 BaseFlags        =0x0
+	020005 Title            ="DGN M13 O2 LO VOLTS"
+	020011 DescSize         =0x100
+	020010 Desc             =""
+	020020 Units            ="Volts"
+	020050 SizeInBits       =0x8
+	020100 Address          =0x2B3
+	020150 Flags            =0x0
+	020200 Equation         =0.004427 * X + 0.000000,TH|0|0|0|0|
+	020205 OutType          =0x1
+	020210 DecimalPl        =0x2
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x4F80
+	000003 BaseFlags        =0x0
+	020005 Title            ="DGN M13 O2 HI VOLTS"
+	020011 DescSize         =0x100
+	020010 Desc             =""
+	020020 Units            ="Volts"
+	020050 SizeInBits       =0x8
+	020100 Address          =0x2B4
+	020150 Flags            =0x0
+	020200 Equation         =0.004427 * X + 0.000000,TH|0|0|0|0|
+	020205 OutType          =0x1
+	020210 DecimalPl        =0x2
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x4F81
+	000003 BaseFlags        =0x0
+	020005 Title            ="DGN M13 TPS LOAD"
+	020011 DescSize         =0x100
+	020010 Desc             =""
+	020020 Units            ="% TPS"
+	020050 SizeInBits       =0x8
+	020100 Address          =0x2B5
+	020150 Flags            =0x0
+	020200 Equation         =0.390625 * X + 0.000000,TH|0|0|0|0|
+	020205 OutType          =0x1
+	020210 DecimalPl        =0x2
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x4F82
+	000003 BaseFlags        =0x0
+	020005 Title            ="DGN M13 TIMER"
+	020011 DescSize         =0x100
+	020010 Desc             =""
+	020020 Units            ="Sec"
+	020050 SizeInBits       =0x8
+	020100 Address          =0x2B6
+	020150 Flags            =0x0
+	020200 Equation         =0.100000 * X + 0.000000,TH|0|0|0|0|
+	020205 OutType          =0x1
+	020210 DecimalPl        =0x2
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x4F83
+	000003 BaseFlags        =0x0
+	020005 Title            ="DGN M14 LO TIM"
+	020011 DescSize         =0x100
+	020010 Desc             =""
+	020020 Units            ="Sec"
+	020050 SizeInBits       =0x8
+	020100 Address          =0x2B7
+	020150 Flags            =0x0
+	020200 Equation         =1.000000 * X + 0.000000,TH|0|0|0|0|
+	020205 OutType          =0x1
+	020210 DecimalPl        =0x2
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x4F84
+	000003 BaseFlags        =0x0
+	020005 Title            ="DGN M14 LO CLT"
+	020011 DescSize         =0x100
+	020010 Desc             =""
+	020020 Units            ="Degrees C"
+	020050 SizeInBits       =0x8
+	020100 Address          =0x2B8
+	020150 Flags            =0x0
+	020200 Equation         =0.750000 * X + -40.000000,TH|0|0|0|0|
+	020205 OutType          =0x1
+	020210 DecimalPl        =0x2
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x4F85
+	000003 BaseFlags        =0x0
+	020005 Title            ="DGN M15 LO TIM"
+	020011 DescSize         =0x100
+	020010 Desc             =""
+	020020 Units            ="Sec"
+	020050 SizeInBits       =0x8
+	020100 Address          =0x2B9
+	020150 Flags            =0x0
+	020200 Equation         =1.000000 * X + 0.000000,TH|0|0|0|0|
+	020205 OutType          =0x1
+	020210 DecimalPl        =0x2
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x4F86
+	000003 BaseFlags        =0x0
+	020005 Title            ="DGN M15 LO CLT"
+	020011 DescSize         =0x100
+	020010 Desc             =""
+	020020 Units            ="AD units"
+	020050 SizeInBits       =0x8
+	020100 Address          =0x2BA
+	020150 Flags            =0x0
+	020200 Equation         =1.000000 * X + 0.000000,TH|0|0|0|0|
+	020205 OutType          =0x1
+	020210 DecimalPl        =0x2
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x4F87
+	000003 BaseFlags        =0x0
+	020005 Title            ="DGN M14 M15 DEF CLT"
+	020011 DescSize         =0x100
+	020010 Desc             =""
+	020020 Units            ="Degrees C "
+	020050 SizeInBits       =0x8
+	020100 Address          =0x2BB
+	020150 Flags            =0x0
+	020200 Equation         =0.750000 * X + -40.000000,TH|0|0|0|0|
+	020205 OutType          =0x1
+	020210 DecimalPl        =0x2
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x4F88
+	000003 BaseFlags        =0x0
+	020005 Title            ="DGN M21 LO TPS"
+	020011 DescSize         =0x100
+	020010 Desc             =""
+	020020 Units            ="% TPS"
+	020050 SizeInBits       =0x8
+	020100 Address          =0x2BC
+	020150 Flags            =0x0
+	020200 Equation         =0.390625 * X + 0.000000,TH|0|0|0|0|
+	020205 OutType          =0x1
+	020210 DecimalPl        =0x2
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x4F89
+	000003 BaseFlags        =0x0
+	020005 Title            ="DGN M21 HI RPM"
+	020011 DescSize         =0x100
+	020010 Desc             =""
+	020020 Units            ="RPM"
+	020050 SizeInBits       =0x8
+	020100 Address          =0x2BD
+	020150 Flags            =0x0
+	020200 Equation         =25.000000 * X + 0.000000,TH|0|0|0|0|
+	020205 OutType          =0x1
+	020210 DecimalPl        =0x2
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x4F8A
+	000003 BaseFlags        =0x0
+	020005 Title            ="DGN M21 TIME"
+	020011 DescSize         =0x100
+	020010 Desc             =""
+	020020 Units            ="Sec"
+	020050 SizeInBits       =0x8
+	020100 Address          =0x2BE
+	020150 Flags            =0x0
+	020200 Equation         =0.100000 * X + 0.000000,TH|0|0|0|0|
+	020205 OutType          =0x1
+	020210 DecimalPl        =0x2
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x4F8B
+	000003 BaseFlags        =0x0
+	020005 Title            ="DGN M21 HI MAP"
+	020011 DescSize         =0x100
+	020010 Desc             =""
+	020020 Units            ="kPa"
+	020050 SizeInBits       =0x8
+	020100 Address          =0x2BF
+	020150 Flags            =0x0
+	020200 Equation         =0.368862 * X + 10.350300,TH|0|0|0|0|
+	020205 OutType          =0x1
+	020210 DecimalPl        =0x2
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x4F8C
+	000003 BaseFlags        =0x0
+	020005 Title            ="DGN M22 LO TPS"
+	020011 DescSize         =0x100
+	020010 Desc             =""
+	020020 Units            ="AD units"
+	020050 SizeInBits       =0x8
+	020100 Address          =0x2C0
+	020150 Flags            =0x0
+	020200 Equation         =1.000000 * X + 0.000000,TH|0|0|0|0|
+	020205 OutType          =0x1
+	020210 DecimalPl        =0x2
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x4F8D
+	000003 BaseFlags        =0x0
+	020005 Title            ="DGN M23 LO TIM"
+	020011 DescSize         =0x100
+	020010 Desc             =""
+	020020 Units            ="Sec"
+	020050 SizeInBits       =0x8
+	020100 Address          =0x2C1
+	020150 Flags            =0x0
+	020200 Equation         =1.000000 * X + 0.000000,TH|0|0|0|0|
+	020205 OutType          =0x1
+	020210 DecimalPl        =0x2
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x4F8E
+	000003 BaseFlags        =0x0
+	020005 Title            ="DGN M23 LO CLT"
+	020011 DescSize         =0x100
+	020010 Desc             =""
+	020020 Units            ="AD units"
+	020050 SizeInBits       =0x8
+	020100 Address          =0x2C2
+	020150 Flags            =0x0
+	020200 Equation         =1.000000 * X + 0.000000,TH|0|0|0|0|
+	020205 OutType          =0x1
+	020210 DecimalPl        =0x2
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x4F8F
+	000003 BaseFlags        =0x0
+	020005 Title            ="DGN M23 M25 DEF MAT"
+	020011 DescSize         =0x100
+	020010 Desc             =""
+	020020 Units            ="Degrees C "
+	020050 SizeInBits       =0x8
+	020100 Address          =0x2C3
+	020150 Flags            =0x0
+	020200 Equation         =0.750000 * X + -40.000000,TH|0|0|0|0|
+	020205 OutType          =0x1
+	020210 DecimalPl        =0x2
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x4F90
+	000003 BaseFlags        =0x0
+	020005 Title            ="DGN M24 LO RPM"
+	020011 DescSize         =0x100
+	020010 Desc             =""
+	020020 Units            ="RPM"
+	020050 SizeInBits       =0x8
+	020100 Address          =0x2C4
+	020150 Flags            =0x0
+	020200 Equation         =25.000000 * X + 0.000000,TH|0|0|0|0|
+	020205 OutType          =0x1
+	020210 DecimalPl        =0x2
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x4F91
+	000003 BaseFlags        =0x0
+	020005 Title            ="DGN M24 HI RPM"
+	020011 DescSize         =0x100
+	020010 Desc             =""
+	020020 Units            ="RPM"
+	020050 SizeInBits       =0x8
+	020100 Address          =0x2C5
+	020150 Flags            =0x0
+	020200 Equation         =25.000000 * X + 0.000000,TH|0|0|0|0|
+	020205 OutType          =0x1
+	020210 DecimalPl        =0x2
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x4F92
+	000003 BaseFlags        =0x0
+	020005 Title            ="DGN M24 LO MAP"
+	020011 DescSize         =0x100
+	020010 Desc             =""
+	020020 Units            ="kPa"
+	020050 SizeInBits       =0x8
+	020100 Address          =0x2C6
+	020150 Flags            =0x0
+	020200 Equation         =0.368862 * X + 10.350300,TH|0|0|0|0|
+	020205 OutType          =0x1
+	020210 DecimalPl        =0x2
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x4F93
+	000003 BaseFlags        =0x0
+	020005 Title            ="DGN M24 TIME"
+	020011 DescSize         =0x100
+	020010 Desc             =""
+	020020 Units            ="Sec"
+	020050 SizeInBits       =0x8
+	020100 Address          =0x2C7
+	020150 Flags            =0x0
+	020200 Equation         =0.100000 * X + 0.000000,TH|0|0|0|0|
+	020205 OutType          =0x1
+	020210 DecimalPl        =0x2
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x4F94
+	000003 BaseFlags        =0x0
+	020005 Title            ="DGN M25 LO TIM"
+	020011 DescSize         =0x100
+	020010 Desc             =""
+	020020 Units            ="Sec"
+	020050 SizeInBits       =0x8
+	020100 Address          =0x2C8
+	020150 Flags            =0x0
+	020200 Equation         =1.000000 * X + 0.000000,TH|0|0|0|0|
+	020205 OutType          =0x1
+	020210 DecimalPl        =0x2
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x4F95
+	000003 BaseFlags        =0x0
+	020005 Title            ="DGN M25 LO CLT"
+	020011 DescSize         =0x100
+	020010 Desc             =""
+	020020 Units            ="AD units"
+	020050 SizeInBits       =0x8
+	020100 Address          =0x2C9
+	020150 Flags            =0x0
+	020200 Equation         =1.000000 * X + 0.000000,TH|0|0|0|0|
+	020205 OutType          =0x1
+	020210 DecimalPl        =0x2
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x4F96
+	000003 BaseFlags        =0x0
+	020005 Title            ="DGN M33 LO TPS"
+	020011 DescSize         =0x100
+	020010 Desc             =""
+	020020 Units            ="% TPS"
+	020050 SizeInBits       =0x8
+	020100 Address          =0x2CA
+	020150 Flags            =0x0
+	020200 Equation         =0.390625 * X + 0.000000,TH|0|0|0|0|
+	020205 OutType          =0x1
+	020210 DecimalPl        =0x2
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x4F97
+	000003 BaseFlags        =0x0
+	020005 Title            ="DGN M33 BAR MUL"
+	020011 DescSize         =0x100
+	020010 Desc             =""
+	020020 Units            ="%"
+	020050 SizeInBits       =0x8
+	020100 Address          =0x2CB
+	020150 Flags            =0x0
+	020200 Equation         =0.390625 * X + 0.000000,TH|0|0|0|0|
+	020205 OutType          =0x1
+	020210 DecimalPl        =0x2
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x4F98
+	000003 BaseFlags        =0x0
+	020005 Title            ="DGN M33 TIME"
+	020011 DescSize         =0x100
+	020010 Desc             =""
+	020020 Units            ="Sec"
+	020050 SizeInBits       =0x8
+	020100 Address          =0x2CC
+	020150 Flags            =0x0
+	020200 Equation         =0.100000 * X + 0.000000,TH|0|0|0|0|
+	020205 OutType          =0x1
+	020210 DecimalPl        =0x2
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x4F99
+	000003 BaseFlags        =0x0
+	020005 Title            ="DGN M34 LO MAP"
+	020011 DescSize         =0x100
+	020010 Desc             =""
+	020020 Units            ="kPa"
+	020050 SizeInBits       =0x8
+	020100 Address          =0x2CD
+	020150 Flags            =0x0
+	020200 Equation         =0.368862 * X + 10.350300,TH|0|0|0|0|
+	020205 OutType          =0x1
+	020210 DecimalPl        =0x2
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x4F9A
+	000003 BaseFlags        =0x0
+	020005 Title            ="DGN M34 LO RPM"
+	020011 DescSize         =0x100
+	020010 Desc             =""
+	020020 Units            ="RPM"
+	020050 SizeInBits       =0x8
+	020100 Address          =0x2CE
+	020150 Flags            =0x0
+	020200 Equation         =25.000000 * X + 0.000000,TH|0|0|0|0|
+	020205 OutType          =0x1
+	020210 DecimalPl        =0x2
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x4F9B
+	000003 BaseFlags        =0x0
+	020005 Title            ="DGN M34 LO TPS"
+	020011 DescSize         =0x100
+	020010 Desc             =""
+	020020 Units            ="%"
+	020050 SizeInBits       =0x8
+	020100 Address          =0x2CF
+	020150 Flags            =0x0
+	020200 Equation         =0.390625 * X + 0.000000,TH|0|0|0|0|
+	020205 OutType          =0x1
+	020210 DecimalPl        =0x2
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x4F9C
+	000003 BaseFlags        =0x0
+	020005 Title            ="DGN M34 TIME"
+	020011 DescSize         =0x100
+	020010 Desc             =""
+	020020 Units            ="Sec"
+	020050 SizeInBits       =0x8
+	020100 Address          =0x2D0
+	020150 Flags            =0x0
+	020200 Equation         =0.010000 * X + 0.000000,TH|0|0|0|0|
+	020205 OutType          =0x1
+	020210 DecimalPl        =0x2
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x4F9D
+	000003 BaseFlags        =0x0
+	020005 Title            ="DGN M35 RST CTS"
+	020011 DescSize         =0x100
+	020010 Desc             =""
+	020020 Units            ="counts"
+	020050 SizeInBits       =0x8
+	020100 Address          =0x2D1
+	020150 Flags            =0x0
+	020200 Equation         =1.000000 * X + 0.000000,TH|0|0|0|0|
+	020205 OutType          =0x1
+	020210 DecimalPl        =0x2
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x4F9E
+	000003 BaseFlags        =0x0
+	020005 Title            ="DGN M41 LO MAP"
+	020011 DescSize         =0x100
+	020010 Desc             =""
+	020020 Units            ="kPa"
+	020050 SizeInBits       =0x8
+	020100 Address          =0x2D2
+	020150 Flags            =0x0
+	020200 Equation         =0.368862 * X + 0.000000,TH|0|0|0|0|
+	020205 OutType          =0x1
+	020210 DecimalPl        =0x2
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x4F9F
+	000003 BaseFlags        =0x0
+	020005 Title            ="DGN M41 TIME"
+	020011 DescSize         =0x100
+	020010 Desc             =""
+	020020 Units            ="Sec"
+	020050 SizeInBits       =0x8
+	020100 Address          =0x2D3
+	020150 Flags            =0x0
+	020200 Equation         =0.100000 * X + 0.000000,TH|0|0|0|0|
+	020205 OutType          =0x1
+	020210 DecimalPl        =0x2
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x4FA0
+	000003 BaseFlags        =0x0
+	020005 Title            ="DGN M41 HI BAT"
+	020011 DescSize         =0x100
+	020010 Desc             =""
+	020020 Units            ="volts"
+	020050 SizeInBits       =0x8
+	020100 Address          =0x2D4
+	020150 Flags            =0x0
+	020200 Equation         =0.100000 * X + 0.000000,TH|0|0|0|0|
+	020205 OutType          =0x1
+	020210 DecimalPl        =0x2
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x4FA1
+	000003 BaseFlags        =0x0
+	020005 Title            ="DGN M43 AD LO"
+	020011 DescSize         =0x100
+	020010 Desc             =""
+	020020 Units            ="volts"
+	020050 SizeInBits       =0x8
+	020100 Address          =0x2D5
+	020150 Flags            =0x0
+	020200 Equation         =0.020000 * X + 0.000000,TH|0|0|0|0|
+	020205 OutType          =0x1
+	020210 DecimalPl        =0x2
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x4FA2
+	000003 BaseFlags        =0x0
+	020005 Title            ="DGN M43 AD HI"
+	020011 DescSize         =0x100
+	020010 Desc             =""
+	020020 Units            ="volts"
+	020050 SizeInBits       =0x8
+	020100 Address          =0x2D6
+	020150 Flags            =0x0
+	020200 Equation         =0.020000 * X + 0.000000,TH|0|0|0|0|
+	020205 OutType          =0x1
+	020210 DecimalPl        =0x2
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x4FA3
+	000003 BaseFlags        =0x0
+	020005 Title            ="DGN M43 TIME"
+	020011 DescSize         =0x100
+	020010 Desc             =""
+	020020 Units            ="Sec"
+	020050 SizeInBits       =0x8
+	020100 Address          =0x2D7
+	020150 Flags            =0x0
+	020200 Equation         =0.100000 * X + 0.000000,TH|0|0|0|0|
+	020205 OutType          =0x1
+	020210 DecimalPl        =0x2
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x4FA4
+	000003 BaseFlags        =0x0
+	020005 Title            ="DGN M43 DEF RTD"
+	020011 DescSize         =0x100
+	020010 Desc             =""
+	020020 Units            ="Degrees"
+	020050 SizeInBits       =0x8
+	020100 Address          =0x2D8
+	020150 Flags            =0x0
+	020200 Equation         =0.351562 * X + 0.000000,TH|0|0|0|0|
+	020205 OutType          =0x1
+	020210 DecimalPl        =0x2
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x4FA5
+	000003 BaseFlags        =0x0
+	020005 Title            ="DGN M44 M45 O2 TIME"
+	020011 DescSize         =0x100
+	020010 Desc             =""
+	020020 Units            ="Sec"
+	020050 SizeInBits       =0x8
+	020100 Address          =0x2D9
+	020150 Flags            =0x0
+	020200 Equation         =0.100000 * X + 0.000000,TH|0|0|0|0|
+	020205 OutType          =0x1
+	020210 DecimalPl        =0x2
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x4FA6
+	000003 BaseFlags        =0x0
+	020005 Title            ="OUT FAN LO CLT 1"
+	020011 DescSize         =0x100
+	020010 Desc             =""
+	020020 Units            ="Degrees C"
+	020050 SizeInBits       =0x8
+	020100 Address          =0x2DA
+	020150 Flags            =0x0
+	020200 Equation         =0.750000 * X + -40.000000,TH|0|0|0|0|
+	020205 OutType          =0x1
+	020210 DecimalPl        =0x2
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x4FA7
+	000003 BaseFlags        =0x0
+	020005 Title            ="OUT FAN HI CLT 1"
+	020011 DescSize         =0x100
+	020010 Desc             =""
+	020020 Units            ="Degrees C"
+	020050 SizeInBits       =0x8
+	020100 Address          =0x2DB
+	020150 Flags            =0x0
+	020200 Equation         =0.750000 * X + -40.000000,TH|0|0|0|0|
+	020205 OutType          =0x1
+	020210 DecimalPl        =0x2
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x4FA8
+	000003 BaseFlags        =0x0
+	020005 Title            ="OUT FAN HI KPH 1"
+	020011 DescSize         =0x100
+	020010 Desc             =""
+	020020 Units            ="KPH"
+	020050 SizeInBits       =0x8
+	020100 Address          =0x2DC
+	020150 Flags            =0x0
+	020200 Equation         =1.000000 * X + 0.000000,TH|0|0|0|0|
+	020205 OutType          =0x1
+	020210 DecimalPl        =0x2
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x4FA9
+	000003 BaseFlags        =0x0
+	020005 Title            ="OUT FAN LO CLT 2"
+	020011 DescSize         =0x100
+	020010 Desc             =""
+	020020 Units            ="Degrees C"
+	020050 SizeInBits       =0x8
+	020100 Address          =0x2DD
+	020150 Flags            =0x0
+	020200 Equation         =0.750000 * X + -40.000000,TH|0|0|0|0|
+	020205 OutType          =0x1
+	020210 DecimalPl        =0x2
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x4FAA
+	000003 BaseFlags        =0x0
+	020005 Title            ="OUT FAN HI CLT 2"
+	020011 DescSize         =0x100
+	020010 Desc             =""
+	020020 Units            ="Degrees C"
+	020050 SizeInBits       =0x8
+	020100 Address          =0x2DE
+	020150 Flags            =0x0
+	020200 Equation         =0.750000 * X + -40.000000,TH|0|0|0|0|
+	020205 OutType          =0x1
+	020210 DecimalPl        =0x2
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x4FAB
+	000003 BaseFlags        =0x0
+	020005 Title            ="OUT FAN HI KPH 2"
+	020011 DescSize         =0x100
+	020010 Desc             =""
+	020020 Units            ="KPH"
+	020050 SizeInBits       =0x8
+	020100 Address          =0x2DF
+	020150 Flags            =0x0
+	020200 Equation         =1.000000 * X + 0.000000,TH|0|0|0|0|
+	020205 OutType          =0x1
+	020210 DecimalPl        =0x2
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x4FAC
+	000003 BaseFlags        =0x0
+	020005 Title            ="OUT ACC HI TPS "
+	020011 DescSize         =0x100
+	020010 Desc             =""
+	020020 Units            ="%"
+	020050 SizeInBits       =0x8
+	020100 Address          =0x2E1
+	020150 Flags            =0x0
+	020200 Equation         =0.390625 * X + 0.000000,TH|0|0|0|0|
+	020205 OutType          =0x1
+	020210 DecimalPl        =0x2
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x4FAD
+	000003 BaseFlags        =0x0
+	020005 Title            ="OUT ACC DELAY "
+	020011 DescSize         =0x100
+	020010 Desc             =""
+	020020 Units            ="Sec"
+	020050 SizeInBits       =0x8
+	020100 Address          =0x2E2
+	020150 Flags            =0x0
+	020200 Equation         =0.100000 * X + 0.000000,TH|0|0|0|0|
+	020205 OutType          =0x1
+	020210 DecimalPl        =0x2
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x4FAE
+	000003 BaseFlags        =0x0
+	020005 Title            ="OUT ACC HI RPM "
+	020011 DescSize         =0x100
+	020010 Desc             =""
+	020020 Units            ="RPM"
+	020050 SizeInBits       =0x8
+	020100 Address          =0x2E3
+	020150 Flags            =0x0
+	020200 Equation         =25.000000 * X + 0.000000,TH|0|0|0|0|
+	020205 OutType          =0x1
+	020210 DecimalPl        =0x2
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x4FAF
+	000003 BaseFlags        =0x0
+	020005 Title            ="OUT ACC LO RPM "
+	020011 DescSize         =0x100
+	020010 Desc             =""
+	020020 Units            ="RPM"
+	020050 SizeInBits       =0x8
+	020100 Address          =0x2E4
+	020150 Flags            =0x0
+	020200 Equation         =25.000000 * X + 0.000000,TH|0|0|0|0|
+	020205 OutType          =0x1
+	020210 DecimalPl        =0x2
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x4FB0
+	000003 BaseFlags        =0x0
+	020005 Title            ="OUT GEN DELAY "
+	020011 DescSize         =0x100
+	020010 Desc             =""
+	020020 Units            ="Sec"
+	020050 SizeInBits       =0x8
+	020100 Address          =0x2E5
+	020150 Flags            =0x0
+	020200 Equation         =0.100000 * X + 0.000000,TH|0|0|0|0|
+	020205 OutType          =0x1
+	020210 DecimalPl        =0x2
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x4FB1
+	000003 BaseFlags        =0x0
+	020005 Title            ="OUT DO 1 TIME "
+	020011 DescSize         =0x100
+	020010 Desc             =""
+	020020 Units            ="Sec"
+	020050 SizeInBits       =0x8
+	020100 Address          =0x2E6
+	020150 Flags            =0x0
+	020200 Equation         =1.000000 * X + 0.000000,TH|0|0|0|0|
+	020205 OutType          =0x1
+	020210 DecimalPl        =0x2
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x4FB2
+	000003 BaseFlags        =0x0
+	020005 Title            ="OUT DO 1 HI MAT "
+	020011 DescSize         =0x100
+	020010 Desc             =""
+	020020 Units            ="Degrees C"
+	020050 SizeInBits       =0x8
+	020100 Address          =0x2E7
+	020150 Flags            =0x0
+	020200 Equation         =0.750000 * X + -40.000000,TH|0|0|0|0|
+	020205 OutType          =0x1
+	020210 DecimalPl        =0x2
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x4FB3
+	000003 BaseFlags        =0x0
+	020005 Title            ="OUT DO 1 LO BAT "
+	020011 DescSize         =0x100
+	020010 Desc             =""
+	020020 Units            ="volts"
+	020050 SizeInBits       =0x8
+	020100 Address          =0x2E8
+	020150 Flags            =0x0
+	020200 Equation         =0.100000 * X + 0.000000,TH|0|0|0|0|
+	020205 OutType          =0x1
+	020210 DecimalPl        =0x2
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x4FB4
+	000003 BaseFlags        =0x0
+	020005 Title            ="OUT DO 1 BAT MUL "
+	020011 DescSize         =0x100
+	020010 Desc             =""
+	020020 Units            ="%"
+	020050 SizeInBits       =0x8
+	020100 Address          =0x2E9
+	020150 Flags            =0x0
+	020200 Equation         =0.390625 * X + 0.000000,TH|0|0|0|0|
+	020205 OutType          =0x1
+	020210 DecimalPl        =0x2
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x4FB5
+	000003 BaseFlags        =0x0
+	020005 Title            ="OUT DO 1 HI TPS "
+	020011 DescSize         =0x100
+	020010 Desc             =""
+	020020 Units            ="% TPS"
+	020050 SizeInBits       =0x8
+	020100 Address          =0x2EA
+	020150 Flags            =0x0
+	020200 Equation         =0.390625 * X + 0.000000,TH|0|0|0|0|
+	020205 OutType          =0x1
+	020210 DecimalPl        =0x2
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x4FB6
+	000003 BaseFlags        =0x0
+	020005 Title            ="OUT DO 1 LO TPS "
+	020011 DescSize         =0x100
+	020010 Desc             =""
+	020020 Units            ="% TPS"
+	020050 SizeInBits       =0x8
+	020100 Address          =0x2EB
+	020150 Flags            =0x0
+	020200 Equation         =0.390625 * X + 0.000000,TH|0|0|0|0|
+	020205 OutType          =0x1
+	020210 DecimalPl        =0x2
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x4FB7
+	000003 BaseFlags        =0x0
+	020005 Title            ="VAR TRP TC DC "
+	020011 DescSize         =0x100
+	020010 Desc             =""
+	020020 Units            ="msec"
+	020050 SizeInBits       =0x8
+	020100 Address          =0x2ED
+	020150 Flags            =0x0
+	020200 Equation         =0.015259 * X + 0.000000,TH|0|0|0|0|
+	020205 OutType          =0x1
+	020210 DecimalPl        =0x2
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x4FB8
+	000003 BaseFlags        =0x0
+	020005 Title            ="OUT LIT NV GEAR 5"
+	020011 DescSize         =0x100
+	020010 Desc             =""
+	020020 Units            ="rpm/kph"
+	020050 SizeInBits       =0x8
+	020100 Address          =0x2F0
+	020150 Flags            =0x0
+	020200 Equation         =1.000000 * X + 0.000000,TH|0|0|0|0|
+	020205 OutType          =0x1
+	020210 DecimalPl        =0x2
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x4FB9
+	000003 BaseFlags        =0x0
+	020005 Title            ="OUT LIT RPM TOL 5"
+	020011 DescSize         =0x100
+	020010 Desc             =""
+	020020 Units            ="rpm"
+	020050 SizeInBits       =0x8
+	020100 Address          =0x2F1
+	020150 Flags            =0x0
+	020200 Equation         =25.000000 * X + 0.000000,TH|0|0|0|0|
+	020205 OutType          =0x1
+	020210 DecimalPl        =0x2
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x4FBA
+	000003 BaseFlags        =0x0
+	020005 Title            ="OUT LIT DEL GR 5"
+	020011 DescSize         =0x100
+	020010 Desc             =""
+	020020 Units            ="sec"
+	020050 SizeInBits       =0x8
+	020100 Address          =0x2F2
+	020150 Flags            =0x0
+	020200 Equation         =0.100000 * X + 0.000000,TH|0|0|0|0|
+	020205 OutType          =0x1
+	020210 DecimalPl        =0x2
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x4FBB
+	000003 BaseFlags        =0x0
+	020005 Title            ="OUT LIT DEL GR 2-5"
+	020011 DescSize         =0x100
+	020010 Desc             =""
+	020020 Units            ="sec"
+	020050 SizeInBits       =0x8
+	020100 Address          =0x2F3
+	020150 Flags            =0x0
+	020200 Equation         =0.100000 * X + 0.000000,TH|0|0|0|0|
+	020205 OutType          =0x1
+	020210 DecimalPl        =0x2
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x4FBC
+	000003 BaseFlags        =0x0
+	020005 Title            ="OUT LIT NV GEAR 4"
+	020011 DescSize         =0x100
+	020010 Desc             =""
+	020020 Units            ="rpm/kph"
+	020050 SizeInBits       =0x8
+	020100 Address          =0x2F4
+	020150 Flags            =0x0
+	020200 Equation         =1.000000 * X + 0.000000,TH|0|0|0|0|
+	020205 OutType          =0x1
+	020210 DecimalPl        =0x2
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x4FBD
+	000003 BaseFlags        =0x0
+	020005 Title            ="OUT LIT RPM TOL 4"
+	020011 DescSize         =0x100
+	020010 Desc             =""
+	020020 Units            ="rpm"
+	020050 SizeInBits       =0x8
+	020100 Address          =0x2F5
+	020150 Flags            =0x0
+	020200 Equation         =25.000000 * X + 0.000000,TH|0|0|0|0|
+	020205 OutType          =0x1
+	020210 DecimalPl        =0x2
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x4FBE
+	000003 BaseFlags        =0x0
+	020005 Title            ="OUT LIT SHF RPM 4"
+	020011 DescSize         =0x100
+	020010 Desc             =""
+	020020 Units            ="rpm"
+	020050 SizeInBits       =0x8
+	020100 Address          =0x2F6
+	020150 Flags            =0x0
+	020200 Equation         =25.000000 * X + 0.000000,TH|0|0|0|0|
+	020205 OutType          =0x1
+	020210 DecimalPl        =0x2
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x4FBF
+	000003 BaseFlags        =0x0
+	020005 Title            ="OUT LIT SHF MAP 4"
+	020011 DescSize         =0x100
+	020010 Desc             =""
+	020020 Units            ="kPa"
+	020050 SizeInBits       =0x8
+	020100 Address          =0x2F7
+	020150 Flags            =0x0
+	020200 Equation         =0.368862 * X + 10.350300,TH|0|0|0|0|
+	020205 OutType          =0x1
+	020210 DecimalPl        =0x2
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x4FC0
+	000003 BaseFlags        =0x0
+	020005 Title            ="OUT LIT NV GEAR 3"
+	020011 DescSize         =0x100
+	020010 Desc             =""
+	020020 Units            ="rpm/kph"
+	020050 SizeInBits       =0x8
+	020100 Address          =0x2F8
+	020150 Flags            =0x0
+	020200 Equation         =1.000000 * X + 0.000000,TH|0|0|0|0|
+	020205 OutType          =0x1
+	020210 DecimalPl        =0x2
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x4FC1
+	000003 BaseFlags        =0x0
+	020005 Title            ="OUT LIT RPM TOL 3"
+	020011 DescSize         =0x100
+	020010 Desc             =""
+	020020 Units            ="rpm"
+	020050 SizeInBits       =0x8
+	020100 Address          =0x2F9
+	020150 Flags            =0x0
+	020200 Equation         =25.000000 * X + 0.000000,TH|0|0|0|0|
+	020205 OutType          =0x1
+	020210 DecimalPl        =0x2
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x4FC2
+	000003 BaseFlags        =0x0
+	020005 Title            ="OUT LIT SHF RPM 3"
+	020011 DescSize         =0x100
+	020010 Desc             =""
+	020020 Units            ="rpm"
+	020050 SizeInBits       =0x8
+	020100 Address          =0x2FA
+	020150 Flags            =0x0
+	020200 Equation         =25.000000 * X + 0.000000,TH|0|0|0|0|
+	020205 OutType          =0x1
+	020210 DecimalPl        =0x2
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x4FC3
+	000003 BaseFlags        =0x0
+	020005 Title            ="OUT LIT SHF MAP 3"
+	020011 DescSize         =0x100
+	020010 Desc             =""
+	020020 Units            ="kPa"
+	020050 SizeInBits       =0x8
+	020100 Address          =0x2FB
+	020150 Flags            =0x0
+	020200 Equation         =0.368862 * X + 10.350300,TH|0|0|0|0|
+	020205 OutType          =0x1
+	020210 DecimalPl        =0x2
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x4FC4
+	000003 BaseFlags        =0x0
+	020005 Title            ="OUT LIT NV GEAR 2"
+	020011 DescSize         =0x100
+	020010 Desc             =""
+	020020 Units            ="rpm/kph"
+	020050 SizeInBits       =0x8
+	020100 Address          =0x2FC
+	020150 Flags            =0x0
+	020200 Equation         =1.000000 * X + 0.000000,TH|0|0|0|0|
+	020205 OutType          =0x1
+	020210 DecimalPl        =0x2
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x4FC5
+	000003 BaseFlags        =0x0
+	020005 Title            ="OUT LIT RPM TOL 2"
+	020011 DescSize         =0x100
+	020010 Desc             =""
+	020020 Units            ="rpm"
+	020050 SizeInBits       =0x8
+	020100 Address          =0x2FD
+	020150 Flags            =0x0
+	020200 Equation         =25.000000 * X + 0.000000,TH|0|0|0|0|
+	020205 OutType          =0x1
+	020210 DecimalPl        =0x2
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x4FC6
+	000003 BaseFlags        =0x0
+	020005 Title            ="OUT LIT SHF RPM 2"
+	020011 DescSize         =0x100
+	020010 Desc             =""
+	020020 Units            ="rpm"
+	020050 SizeInBits       =0x8
+	020100 Address          =0x2FE
+	020150 Flags            =0x0
+	020200 Equation         =25.000000 * X + 0.000000,TH|0|0|0|0|
+	020205 OutType          =0x1
+	020210 DecimalPl        =0x2
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x4FC7
+	000003 BaseFlags        =0x0
+	020005 Title            ="OUT LIT SHF MAP 2"
+	020011 DescSize         =0x100
+	020010 Desc             =""
+	020020 Units            ="kPa"
+	020050 SizeInBits       =0x8
+	020100 Address          =0x2FF
+	020150 Flags            =0x0
+	020200 Equation         =0.368862 * X + 10.350300,TH|0|0|0|0|
+	020205 OutType          =0x1
+	020210 DecimalPl        =0x2
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x4FC8
+	000003 BaseFlags        =0x0
+	020005 Title            ="OUT LIT NV GEAR 1"
+	020011 DescSize         =0x100
+	020010 Desc             =""
+	020020 Units            ="rpm/kph"
+	020050 SizeInBits       =0x8
+	020100 Address          =0x300
+	020150 Flags            =0x0
+	020200 Equation         =1.000000 * X + 0.000000,TH|0|0|0|0|
+	020205 OutType          =0x1
+	020210 DecimalPl        =0x2
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x4FC9
+	000003 BaseFlags        =0x0
+	020005 Title            ="OUT LIT RPM TOL 1"
+	020011 DescSize         =0x100
+	020010 Desc             =""
+	020020 Units            ="rpm"
+	020050 SizeInBits       =0x8
+	020100 Address          =0x301
+	020150 Flags            =0x0
+	020200 Equation         =25.000000 * X + 0.000000,TH|0|0|0|0|
+	020205 OutType          =0x1
+	020210 DecimalPl        =0x2
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x4FCA
+	000003 BaseFlags        =0x0
+	020005 Title            ="OUT LIT SHF RPM 1"
+	020011 DescSize         =0x100
+	020010 Desc             =""
+	020020 Units            ="rpm"
+	020050 SizeInBits       =0x8
+	020100 Address          =0x302
+	020150 Flags            =0x0
+	020200 Equation         =25.000000 * X + 0.000000,TH|0|0|0|0|
+	020205 OutType          =0x1
+	020210 DecimalPl        =0x2
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x4FCB
+	000003 BaseFlags        =0x0
+	020005 Title            ="OUT LIT SHF MAP 1"
+	020011 DescSize         =0x100
+	020010 Desc             =""
+	020020 Units            ="kPa"
+	020050 SizeInBits       =0x8
+	020100 Address          =0x303
+	020150 Flags            =0x0
+	020200 Equation         =0.368862 * X + 10.350300,TH|0|0|0|0|
+	020205 OutType          =0x1
+	020210 DecimalPl        =0x2
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x4FCC
+	000003 BaseFlags        =0x0
+	020005 Title            ="OUT TCC LO CLT LIM"
+	020011 DescSize         =0x100
+	020010 Desc             =""
+	020020 Units            ="degrees C"
+	020050 SizeInBits       =0x8
+	020100 Address          =0x30A
+	020150 Flags            =0x0
+	020200 Equation         =0.750000 * X + -40.000000,TH|0|0|0|0|
+	020205 OutType          =0x1
+	020210 DecimalPl        =0x2
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x4FCD
+	000003 BaseFlags        =0x0
+	020005 Title            ="OUT TCC TPS HYST"
+	020011 DescSize         =0x100
+	020010 Desc             =""
+	020020 Units            ="% tps"
+	020050 SizeInBits       =0x8
+	020100 Address          =0x30B
+	020150 Flags            =0x0
+	020200 Equation         =0.390625 * X + 0.000000,TH|0|0|0|0|
+	020205 OutType          =0x1
+	020210 DecimalPl        =0x2
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x4FCE
+	000003 BaseFlags        =0x0
+	020005 Title            ="OUT TCC HI KPH"
+	020011 DescSize         =0x100
+	020010 Desc             =""
+	020020 Units            ="kph"
+	020050 SizeInBits       =0x8
+	020100 Address          =0x30C
+	020150 Flags            =0x0
+	020200 Equation         =1.000000 * X + 0.000000,TH|0|0|0|0|
+	020205 OutType          =0x1
+	020210 DecimalPl        =0x2
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x4FCF
+	000003 BaseFlags        =0x0
+	020005 Title            ="OUT TCC TPS HI"
+	020011 DescSize         =0x100
+	020010 Desc             =""
+	020020 Units            ="% tps"
+	020050 SizeInBits       =0x8
+	020100 Address          =0x30D
+	020150 Flags            =0x0
+	020200 Equation         =0.390625 * X + 0.000000,TH|0|0|0|0|
+	020205 OutType          =0x1
+	020210 DecimalPl        =0x2
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x4FD0
+	000003 BaseFlags        =0x0
+	020005 Title            ="OUT TCC TPS LO"
+	020011 DescSize         =0x100
+	020010 Desc             =""
+	020020 Units            ="% tps"
+	020050 SizeInBits       =0x8
+	020100 Address          =0x30E
+	020150 Flags            =0x0
+	020200 Equation         =0.390625 * X + 0.000000,TH|0|0|0|0|
+	020205 OutType          =0x1
+	020210 DecimalPl        =0x2
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x4FD1
+	000003 BaseFlags        =0x0
+	020005 Title            ="OUT TCC NEG DEL TPS"
+	020011 DescSize         =0x100
+	020010 Desc             =""
+	020020 Units            ="% tps"
+	020050 SizeInBits       =0x8
+	020100 Address          =0x30F
+	020150 Flags            =0x0
+	020200 Equation         =0.390625 * X + 0.000000,TH|0|0|0|0|
+	020205 OutType          =0x1
+	020210 DecimalPl        =0x2
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x4FD2
+	000003 BaseFlags        =0x0
+	020005 Title            ="OUT TCC POS DEL TPS"
+	020011 DescSize         =0x100
+	020010 Desc             =""
+	020020 Units            ="% tps"
+	020050 SizeInBits       =0x8
+	020100 Address          =0x310
+	020150 Flags            =0x0
+	020200 Equation         =0.390625 * X + 0.000000,TH|0|0|0|0|
+	020205 OutType          =0x1
+	020210 DecimalPl        =0x2
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x4FD3
+	000003 BaseFlags        =0x0
+	020005 Title            ="OUT TCC LOK DEL"
+	020011 DescSize         =0x100
+	020010 Desc             =""
+	020020 Units            ="sec"
+	020050 SizeInBits       =0x8
+	020100 Address          =0x311
+	020150 Flags            =0x0
+	020200 Equation         =0.100000 * X + 0.000000,TH|0|0|0|0|
+	020205 OutType          =0x1
+	020210 DecimalPl        =0x2
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x4FD4
+	000003 BaseFlags        =0x0
+	020005 Title            ="OUT TCC ULK DEL HI"
+	020011 DescSize         =0x100
+	020010 Desc             =""
+	020020 Units            ="sec"
+	020050 SizeInBits       =0x8
+	020100 Address          =0x312
+	020150 Flags            =0x0
+	020200 Equation         =0.100000 * X + 0.000000,TH|0|0|0|0|
+	020205 OutType          =0x1
+	020210 DecimalPl        =0x2
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x4FD5
+	000003 BaseFlags        =0x0
+	020005 Title            ="OUT TCC ULK DEL LO"
+	020011 DescSize         =0x100
+	020010 Desc             =""
+	020020 Units            ="sec"
+	020050 SizeInBits       =0x8
+	020100 Address          =0x313
+	020150 Flags            =0x0
+	020200 Equation         =0.100000 * X + 0.000000,TH|0|0|0|0|
+	020205 OutType          =0x1
+	020210 DecimalPl        =0x2
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x4FD6
+	000003 BaseFlags        =0x0
+	020005 Title            ="OUT TCC LOK KPH"
+	020011 DescSize         =0x100
+	020010 Desc             =""
+	020020 Units            ="KPH"
+	020050 SizeInBits       =0x8
+	020100 Address          =0x314
+	020150 Flags            =0x0
+	020200 Equation         =1.000000 * X + 0.000000,TH|0|0|0|0|
+	020205 OutType          =0x1
+	020210 DecimalPl        =0x2
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x4FD7
+	000003 BaseFlags        =0x0
+	020005 Title            ="OUT TCC ULK KPH"
+	020011 DescSize         =0x100
+	020010 Desc             =""
+	020020 Units            ="KPH"
+	020050 SizeInBits       =0x8
+	020100 Address          =0x315
+	020150 Flags            =0x0
+	020200 Equation         =1.000000 * X + 0.000000,TH|0|0|0|0|
+	020205 OutType          =0x1
+	020210 DecimalPl        =0x2
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x4FD8
+	000003 BaseFlags        =0x0
+	020005 Title            ="FUL RUN BPC"
+	020011 DescSize         =0x100
+	020010 Desc             =""
+	020020 Units            ="l-sec/gram"
+	020050 SizeInBits       =0x8
+	020100 Address          =0x32C
+	020150 Flags            =0x0
+	020200 Equation         =0.000930 * X + 0.000000,TH|0|0|0|0|
+	020205 OutType          =0x1
+	020210 DecimalPl        =0x2
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x4FD9
+	000003 BaseFlags        =0x0
+	020005 Title            ="FUL RUN MIN BP LO"
+	020011 DescSize         =0x100
+	020010 Desc             =""
+	020020 Units            ="msec?"
+	020050 SizeInBits       =0x10
+	020100 Address          =0x32D
+	020150 Flags            =0x0
+	020200 Equation         =0.015259 * X + 0.000000,TH|0|0|0|0|
+	020205 OutType          =0x1
+	020210 DecimalPl        =0x2
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x4FDA
+	000003 BaseFlags        =0x0
+	020005 Title            ="FUL RUN MIN BP HI"
+	020011 DescSize         =0x100
+	020010 Desc             =""
+	020020 Units            ="msec?"
+	020050 SizeInBits       =0x10
+	020100 Address          =0x32F
+	020150 Flags            =0x0
+	020200 Equation         =0.015259 * X + 0.000000,TH|0|0|0|0|
+	020205 OutType          =0x1
+	020210 DecimalPl        =0x2
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x4FDB
+	000003 BaseFlags        =0x0
+	020005 Title            ="FUL RUN MAX A PW"
+	020011 DescSize         =0x100
+	020010 Desc             =""
+	020020 Units            ="msec"
+	020050 SizeInBits       =0x10
+	020100 Address          =0x331
+	020150 Flags            =0x0
+	020200 Equation         =0.015259 * X + 0.000000,TH|0|0|0|0|
+	020205 OutType          =0x1
+	020210 DecimalPl        =0x2
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x4FDC
+	000003 BaseFlags        =0x0
+	020005 Title            ="FUL RUN MIN A PW"
+	020011 DescSize         =0x100
+	020010 Desc             =""
+	020020 Units            ="msec"
+	020050 SizeInBits       =0x10
+	020100 Address          =0x333
+	020150 Flags            =0x0
+	020200 Equation         =0.015259 * X + 0.000000,TH|0|0|0|0|
+	020205 OutType          =0x1
+	020210 DecimalPl        =0x2
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x4FDD
+	000003 BaseFlags        =0x0
+	020005 Title            ="FUL RUN MIN A PAE"
+	020011 DescSize         =0x100
+	020010 Desc             =""
+	020020 Units            ="msec"
+	020050 SizeInBits       =0x10
+	020100 Address          =0x335
+	020150 Flags            =0x0
+	020200 Equation         =0.015259 * X + 0.000000,TH|0|0|0|0|
+	020205 OutType          =0x1
+	020210 DecimalPl        =0x2
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x4FDE
+	000003 BaseFlags        =0x0
+	020005 Title            ="FUL CUT LO RPM"
+	020011 DescSize         =0x100
+	020010 Desc             =""
+	020020 Units            ="RPM"
+	020050 SizeInBits       =0x10
+	020100 Address          =0x337
+	020150 Flags            =0x0
+	020200 Equation         =983040.000000 / X + 0.000000,TH|0|0|0|0|
+	020205 OutType          =0x1
+	020210 DecimalPl        =0x2
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x4FDF
+	000003 BaseFlags        =0x0
+	020005 Title            ="FUL CUT HI RPM"
+	020011 DescSize         =0x100
+	020010 Desc             =""
+	020020 Units            ="RPM"
+	020050 SizeInBits       =0x10
+	020100 Address          =0x339
+	020150 Flags            =0x0
+	020200 Equation         =983040.000000 / X + 0.000000,TH|0|0|0|0|
+	020205 OutType          =0x1
+	020210 DecimalPl        =0x2
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x4FE0
+	000003 BaseFlags        =0x0
+	020005 Title            ="FUL CUT LO KPH"
+	020011 DescSize         =0x100
+	020010 Desc             =""
+	020020 Units            ="KPH"
+	020050 SizeInBits       =0x8
+	020100 Address          =0x33B
+	020150 Flags            =0x0
+	020200 Equation         =1.000000 * X + 0.000000,TH|0|0|0|0|
+	020205 OutType          =0x1
+	020210 DecimalPl        =0x2
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x4FE1
+	000003 BaseFlags        =0x0
+	020005 Title            ="FUL CUT HI KPH"
+	020011 DescSize         =0x100
+	020010 Desc             =""
+	020020 Units            ="KPH"
+	020050 SizeInBits       =0x8
+	020100 Address          =0x33C
+	020150 Flags            =0x0
+	020200 Equation         =1.000000 * X + 0.000000,TH|0|0|0|0|
+	020205 OutType          =0x1
+	020210 DecimalPl        =0x2
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x4FE2
+	000003 BaseFlags        =0x0
+	020005 Title            ="FUL CUT CUT TIME"
+	020011 DescSize         =0x100
+	020010 Desc             =""
+	020020 Units            ="Seconds"
+	020050 SizeInBits       =0x8
+	020100 Address          =0x33D
+	020150 Flags            =0x0
+	020200 Equation         =0.012500 * X + 0.000000,TH|0|0|0|0|
+	020205 OutType          =0x1
+	020210 DecimalPl        =0x2
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x4FE3
+	000003 BaseFlags        =0x0
+	020005 Title            ="FUL RUN STIO AF"
+	020011 DescSize         =0x100
+	020010 Desc             =""
+	020020 Units            ="ratio"
+	020050 SizeInBits       =0x8
+	020100 Address          =0x33E
+	020150 Flags            =0x0
+	020200 Equation         =0.100000 * X + 0.000000,TH|0|0|0|0|
+	020205 OutType          =0x1
+	020210 DecimalPl        =0x2
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x4FE4
+	000003 BaseFlags        =0x0
+	020005 Title            ="FUL RUN AF CLT"
+	020011 DescSize         =0x100
+	020010 Desc             =""
+	020020 Units            ="Degrees C"
+	020050 SizeInBits       =0x8
+	020100 Address          =0x33F
+	020150 Flags            =0x0
+	020200 Equation         =0.750000 * X + -40.000000,TH|0|0|0|0|
+	020205 OutType          =0x1
+	020210 DecimalPl        =0x2
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x4FE5
+	000003 BaseFlags        =0x0
+	020005 Title            ="FUL RUN AF TOM"
+	020011 DescSize         =0x100
+	020010 Desc             =""
+	020020 Units            ="%"
+	020050 SizeInBits       =0x8
+	020100 Address          =0x340
+	020150 Flags            =0x0
+	020200 Equation         =0.390625 * X + 0.000000,TH|0|0|0|0|
+	020205 OutType          =0x1
+	020210 DecimalPl        =0x2
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x4FE6
+	000003 BaseFlags        =0x0
+	020005 Title            ="FUL RUN IAF CLT"
+	020011 DescSize         =0x100
+	020010 Desc             =""
+	020020 Units            ="DEG C"
+	020050 SizeInBits       =0x8
+	020100 Address          =0x341
+	020150 Flags            =0x0
+	020200 Equation         =0.750000 * X + -40.000000,TH|0|0|0|0|
+	020205 OutType          =0x1
+	020210 DecimalPl        =0x2
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x4FE7
+	000003 BaseFlags        =0x0
+	020005 Title            ="FUL IAC HI KPH"
+	020011 DescSize         =0x100
+	020010 Desc             =""
+	020020 Units            ="KPH"
+	020050 SizeInBits       =0x8
+	020100 Address          =0x342
+	020150 Flags            =0x0
+	020200 Equation         =1.000000 * X + 0.000000,TH|0|0|0|0|
+	020205 OutType          =0x1
+	020210 DecimalPl        =0x2
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x4FE8
+	000003 BaseFlags        =0x0
+	020005 Title            ="VAR CLT CLT Q "
+	020011 DescSize         =0x100
+	020010 Desc             =""
+	020020 Units            ="%"
+	020050 SizeInBits       =0x8
+	020100 Address          =0x343
+	020150 Flags            =0x0
+	020200 Equation         =0.390625 * X + 0.000000,TH|0|0|0|0|
+	020205 OutType          =0x1
+	020210 DecimalPl        =0x2
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x4FE9
+	000003 BaseFlags        =0x0
+	020005 Title            ="FUL IAC AF TIM DR"
+	020011 DescSize         =0x100
+	020010 Desc             =""
+	020020 Units            ="Sec"
+	020050 SizeInBits       =0x8
+	020100 Address          =0x344
+	020150 Flags            =0x0
+	020200 Equation         =0.200000 * X + 0.000000,TH|0|0|0|0|
+	020205 OutType          =0x1
+	020210 DecimalPl        =0x2
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x4FEA
+	000003 BaseFlags        =0x0
+	020005 Title            ="FUL IAC AF TIM PN"
+	020011 DescSize         =0x100
+	020010 Desc             =""
+	020020 Units            ="Sec"
+	020050 SizeInBits       =0x8
+	020100 Address          =0x345
+	020150 Flags            =0x0
+	020200 Equation         =0.200000 * X + 0.000000,TH|0|0|0|0|
+	020205 OutType          =0x1
+	020210 DecimalPl        =0x2
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x4FEB
+	000003 BaseFlags        =0x0
+	020005 Title            ="FUL IAC DRM RAT"
+	020011 DescSize         =0x100
+	020010 Desc             =""
+	020020 Units            ="%/100rpm"
+	020050 SizeInBits       =0x8
+	020100 Address          =0x346
+	020150 Flags            =0x0
+	020200 Equation         =0.024414 * X + 0.000000,TH|0|0|0|0|
+	020205 OutType          =0x1
+	020210 DecimalPl        =0x2
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x4FEC
+	000003 BaseFlags        =0x0
+	020005 Title            ="FUL IAC BP WUL"
+	020011 DescSize         =0x100
+	020010 Desc             =""
+	020020 Units            ="%"
+	020050 SizeInBits       =0x8
+	020100 Address          =0x347
+	020150 Flags            =0x0
+	020200 Equation         =0.390625 * X + 0.000000,TH|0|0|0|0|
+	020205 OutType          =0x1
+	020210 DecimalPl        =0x2
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x4FED
+	000003 BaseFlags        =0x0
+	020005 Title            ="FUL IAC DEL RPM"
+	020011 DescSize         =0x100
+	020010 Desc             =""
+	020020 Units            ="RPM"
+	020050 SizeInBits       =0x8
+	020100 Address          =0x348
+	020150 Flags            =0x0
+	020200 Equation         =6.250000 * X + 0.000000,TH|0|0|0|0|
+	020205 OutType          =0x1
+	020210 DecimalPl        =0x2
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x4FEE
+	000003 BaseFlags        =0x0
+	020005 Title            ="FUL IAC VE Q"
+	020011 DescSize         =0x100
+	020010 Desc             =""
+	020020 Units            ="%"
+	020050 SizeInBits       =0x8
+	020100 Address          =0x349
+	020150 Flags            =0x0
+	020200 Equation         =0.390625 * X + 0.000000,TH|0|0|0|0|
+	020205 OutType          =0x1
+	020210 DecimalPl        =0x2
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x4FEF
+	000003 BaseFlags        =0x0
+	020005 Title            ="FUL IAC VE FL TRM"
+	020011 DescSize         =0x100
+	020010 Desc             =""
+	020020 Units            ="RPM"
+	020050 SizeInBits       =0x8
+	020100 Address          =0x34A
+	020150 Flags            =0x0
+	020200 Equation         =1.000000 * X + 0.000000,TH|0|0|0|0|
+	020205 OutType          =0x1
+	020210 DecimalPl        =0x2
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x4FF0
+	000003 BaseFlags        =0x0
+	020005 Title            ="FUL CRK TIM1"
+	020011 DescSize         =0x100
+	020010 Desc             =""
+	020020 Units            ="sec"
+	020050 SizeInBits       =0x8
+	020100 Address          =0x34B
+	020150 Flags            =0x0
+	020200 Equation         =0.025000 * X + 0.000000,TH|0|0|0|0|
+	020205 OutType          =0x1
+	020210 DecimalPl        =0x2
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x4FF1
+	000003 BaseFlags        =0x0
+	020005 Title            ="FUL CRK TIM2"
+	020011 DescSize         =0x100
+	020010 Desc             =""
+	020020 Units            ="sec"
+	020050 SizeInBits       =0x8
+	020100 Address          =0x34D
+	020150 Flags            =0x0
+	020200 Equation         =0.025000 * X + 0.000000,TH|0|0|0|0|
+	020205 OutType          =0x1
+	020210 DecimalPl        =0x2
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x4FF2
+	000003 BaseFlags        =0x0
+	020005 Title            ="FUL CRK CF TPS"
+	020011 DescSize         =0x100
+	020010 Desc             =""
+	020020 Units            ="%"
+	020050 SizeInBits       =0x8
+	020100 Address          =0x34E
+	020150 Flags            =0x0
+	020200 Equation         =0.390625 * X + 0.000000,TH|0|0|0|0|
+	020205 OutType          =0x1
+	020210 DecimalPl        =0x2
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x4FF3
+	000003 BaseFlags        =0x0
+	020005 Title            ="FUL CRK CF L AD"
+	020011 DescSize         =0x100
+	020010 Desc             =""
+	020020 Units            ="AD units"
+	020050 SizeInBits       =0x8
+	020100 Address          =0x34F
+	020150 Flags            =0x0
+	020200 Equation         =1.000000 * X + 0.000000,TH|0|0|0|0|
+	020205 OutType          =0x1
+	020210 DecimalPl        =0x2
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x4FF4
+	000003 BaseFlags        =0x0
+	020005 Title            ="FUL CRK BPW DEC"
+	020011 DescSize         =0x100
+	020010 Desc             =""
+	020020 Units            ="msec"
+	020050 SizeInBits       =0x10
+	020100 Address          =0x350
+	020150 Flags            =0x0
+	020200 Equation         =0.015259 * X + 0.000000,TH|0|0|0|0|
+	020205 OutType          =0x1
+	020210 DecimalPl        =0x2
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x4FF5
+	000003 BaseFlags        =0x0
+	020005 Title            ="FUL CRK CFL BPW"
+	020011 DescSize         =0x100
+	020010 Desc             =""
+	020020 Units            ="msec"
+	020050 SizeInBits       =0x10
+	020100 Address          =0x352
+	020150 Flags            =0x0
+	020200 Equation         =0.015259 * X + 0.000000,TH|0|0|0|0|
+	020205 OutType          =0x1
+	020210 DecimalPl        =0x2
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x4FF6
+	000003 BaseFlags        =0x0
+	020005 Title            ="FUL TAE DEL MAP"
+	020011 DescSize         =0x100
+	020010 Desc             =""
+	020020 Units            ="kpa"
+	020050 SizeInBits       =0x8
+	020100 Address          =0x354
+	020150 Flags            =0x0
+	020200 Equation         =0.368862 * X + 0.000000,TH|0|0|0|0|
+	020205 OutType          =0x1
+	020210 DecimalPl        =0x2
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x4FF7
+	000003 BaseFlags        =0x0
+	020005 Title            ="FUL TAE DEL TPS"
+	020011 DescSize         =0x100
+	020010 Desc             =""
+	020020 Units            ="%"
+	020050 SizeInBits       =0x8
+	020100 Address          =0x355
+	020150 Flags            =0x0
+	020200 Equation         =0.390625 * X + 0.000000,TH|0|0|0|0|
+	020205 OutType          =0x1
+	020210 DecimalPl        =0x2
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x4FF8
+	000003 BaseFlags        =0x0
+	020005 Title            ="FUL TAE IAC PW"
+	020011 DescSize         =0x100
+	020010 Desc             =""
+	020020 Units            ="msec"
+	020050 SizeInBits       =0x8
+	020100 Address          =0x356
+	020150 Flags            =0x0
+	020200 Equation         =0.015259 * X + 0.000000,TH|0|0|0|0|
+	020205 OutType          =0x1
+	020210 DecimalPl        =0x2
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x4FF9
+	000003 BaseFlags        =0x0
+	020005 Title            ="FUL TAE D MAP MUL"
+	020011 DescSize         =0x100
+	020010 Desc             =""
+	020020 Units            ="%"
+	020050 SizeInBits       =0x8
+	020100 Address          =0x357
+	020150 Flags            =0x0
+	020200 Equation         =0.041368 * X + 0.000000,TH|0|0|0|0|
+	020205 OutType          =0x1
+	020210 DecimalPl        =0x2
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x4FFA
+	000003 BaseFlags        =0x0
+	020005 Title            ="VAR MAP TR MUL"
+	020011 DescSize         =0x100
+	020010 Desc             =""
+	020020 Units            ="%"
+	020050 SizeInBits       =0x8
+	020100 Address          =0x358
+	020150 Flags            =0x0
+	020200 Equation         =0.014800 * X + 0.000000,TH|0|0|0|0|
+	020205 OutType          =0x1
+	020210 DecimalPl        =0x2
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x4FFB
+	000003 BaseFlags        =0x0
+	020005 Title            ="FUL TDE DEL TPS"
+	020011 DescSize         =0x100
+	020010 Desc             =""
+	020020 Units            ="%"
+	020050 SizeInBits       =0x8
+	020100 Address          =0x359
+	020150 Flags            =0x0
+	020200 Equation         =0.390625 * X + 0.000000,TH|0|0|0|0|
+	020205 OutType          =0x1
+	020210 DecimalPl        =0x2
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x4FFC
+	000003 BaseFlags        =0x0
+	020005 Title            ="FUL TDE DEL MAP"
+	020011 DescSize         =0x100
+	020010 Desc             =""
+	020020 Units            ="kpa"
+	020050 SizeInBits       =0x8
+	020100 Address          =0x35A
+	020150 Flags            =0x0
+	020200 Equation         =0.368862 * X + 0.000000,TH|0|0|0|0|
+	020205 OutType          =0x1
+	020210 DecimalPl        =0x2
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x4FFD
+	000003 BaseFlags        =0x0
+	020005 Title            ="FUL TDE TPS MUL"
+	020011 DescSize         =0x100
+	020010 Desc             =""
+	020020 Units            ="%"
+	020050 SizeInBits       =0x8
+	020100 Address          =0x35B
+	020150 Flags            =0x0
+	020200 Equation         =0.390625 * X + 0.000000,TH|0|0|0|0|
+	020205 OutType          =0x1
+	020210 DecimalPl        =0x2
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x4FFE
+	000003 BaseFlags        =0x0
+	020005 Title            ="FUL TDE MAP MUL"
+	020011 DescSize         =0x100
+	020010 Desc             =""
+	020020 Units            ="%"
+	020050 SizeInBits       =0x8
+	020100 Address          =0x35C
+	020150 Flags            =0x0
+	020200 Equation         =0.390625 * X + 0.000000,TH|0|0|0|0|
+	020205 OutType          =0x1
+	020210 DecimalPl        =0x2
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x4FFF
+	000003 BaseFlags        =0x0
+	020005 Title            ="FUL TDE TPS R"
+	020011 DescSize         =0x100
+	020010 Desc             =""
+	020020 Units            ="%"
+	020050 SizeInBits       =0x8
+	020100 Address          =0x35D
+	020150 Flags            =0x0
+	020200 Equation         =0.390625 * X + 0.000000,TH|0|0|0|0|
+	020205 OutType          =0x1
+	020210 DecimalPl        =0x2
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x5000
+	000003 BaseFlags        =0x0
+	020005 Title            ="FUL DFC HI RPM"
+	020011 DescSize         =0x100
+	020010 Desc             =""
+	020020 Units            ="rpm"
+	020050 SizeInBits       =0x8
+	020100 Address          =0x35E
+	020150 Flags            =0x0
+	020200 Equation         =25.000000 * X + 0.000000,TH|0|0|0|0|
+	020205 OutType          =0x1
+	020210 DecimalPl        =0x2
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x5001
+	000003 BaseFlags        =0x0
+	020005 Title            ="FUL DFC LO RPM"
+	020011 DescSize         =0x100
+	020010 Desc             =""
+	020020 Units            ="rpm"
+	020050 SizeInBits       =0x8
+	020100 Address          =0x35F
+	020150 Flags            =0x0
+	020200 Equation         =25.000000 * X + 0.000000,TH|0|0|0|0|
+	020205 OutType          =0x1
+	020210 DecimalPl        =0x2
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x5002
+	000003 BaseFlags        =0x0
+	020005 Title            ="FUL DFC MAP TH A"
+	020011 DescSize         =0x100
+	020010 Desc             =""
+	020020 Units            ="deg c"
+	020050 SizeInBits       =0x8
+	020100 Address          =0x360
+	020150 Flags            =0x0
+	020200 Equation         =0.368862 * X + 10.350300,TH|0|0|0|0|
+	020205 OutType          =0x1
+	020210 DecimalPl        =0x2
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x5003
+	000003 BaseFlags        =0x0
+	020005 Title            ="FUL DFC MAP TH M"
+	020011 DescSize         =0x100
+	020010 Desc             =""
+	020020 Units            ="deg c"
+	020050 SizeInBits       =0x8
+	020100 Address          =0x361
+	020150 Flags            =0x0
+	020200 Equation         =0.368862 * X + 10.350300,TH|0|0|0|0|
+	020205 OutType          =0x1
+	020210 DecimalPl        =0x2
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x5004
+	000003 BaseFlags        =0x0
+	020005 Title            ="FUL DFC BPW SF"
+	020011 DescSize         =0x100
+	020010 Desc             =""
+	020020 Units            ="%"
+	020050 SizeInBits       =0x8
+	020100 Address          =0x362
+	020150 Flags            =0x0
+	020200 Equation         =0.390625 * X + 0.000000,TH|0|0|0|0|
+	020205 OutType          =0x1
+	020210 DecimalPl        =0x2
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x5005
+	000003 BaseFlags        =0x0
+	020005 Title            ="FUL DFC LO KPH"
+	020011 DescSize         =0x100
+	020010 Desc             =""
+	020020 Units            ="kph"
+	020050 SizeInBits       =0x8
+	020100 Address          =0x363
+	020150 Flags            =0x0
+	020200 Equation         =1.000000 * X + 0.000000,TH|0|0|0|0|
+	020205 OutType          =0x1
+	020210 DecimalPl        =0x2
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x5006
+	000003 BaseFlags        =0x0
+	020005 Title            ="FUL DFC LO TPS"
+	020011 DescSize         =0x100
+	020010 Desc             =""
+	020020 Units            ="%"
+	020050 SizeInBits       =0x8
+	020100 Address          =0x364
+	020150 Flags            =0x0
+	020200 Equation         =0.390625 * X + 0.000000,TH|0|0|0|0|
+	020205 OutType          =0x1
+	020210 DecimalPl        =0x2
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x5007
+	000003 BaseFlags        =0x0
+	020005 Title            ="FUL DFC BPW MUL"
+	020011 DescSize         =0x100
+	020010 Desc             =""
+	020020 Units            ="%"
+	020050 SizeInBits       =0x8
+	020100 Address          =0x365
+	020150 Flags            =0x0
+	020200 Equation         =0.390625 * X + 0.000000,TH|0|0|0|0|
+	020205 OutType          =0x1
+	020210 DecimalPl        =0x2
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x5008
+	000003 BaseFlags        =0x0
+	020005 Title            ="FUL DFC LO CLT"
+	020011 DescSize         =0x100
+	020010 Desc             =""
+	020020 Units            ="deg c"
+	020050 SizeInBits       =0x8
+	020100 Address          =0x366
+	020150 Flags            =0x0
+	020200 Equation         =0.750000 * X + -40.000000,TH|0|0|0|0|
+	020205 OutType          =0x1
+	020210 DecimalPl        =0x2
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x5009
+	000003 BaseFlags        =0x0
+	020005 Title            ="VAR OXY HI VOLTS"
+	020011 DescSize         =0x100
+	020010 Desc             =""
+	020020 Units            ="Volts "
+	020050 SizeInBits       =0x8
+	020100 Address          =0x367
+	020150 Flags            =0x0
+	020200 Equation         =0.004427 * X + 0.000000,TH|0|0|0|0|
+	020205 OutType          =0x1
+	020210 DecimalPl        =0x2
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x500A
+	000003 BaseFlags        =0x0
+	020005 Title            ="VAR OXY LO VOLTS"
+	020011 DescSize         =0x100
+	020010 Desc             =""
+	020020 Units            ="Volts "
+	020050 SizeInBits       =0x8
+	020100 Address          =0x368
+	020150 Flags            =0x0
+	020200 Equation         =0.004427 * X + 0.000000,TH|0|0|0|0|
+	020205 OutType          =0x1
+	020210 DecimalPl        =0x2
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x500B
+	000003 BaseFlags        =0x0
+	020005 Title            ="VAR OXY LMT CTR"
+	020011 DescSize         =0x100
+	020010 Desc             =""
+	020020 Units            ="Sec "
+	020050 SizeInBits       =0x8
+	020100 Address          =0x369
+	020150 Flags            =0x0
+	020200 Equation         =0.200000 * X + 0.000000,TH|0|0|0|0|
+	020205 OutType          =0x1
+	020210 DecimalPl        =0x2
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x500C
+	000003 BaseFlags        =0x0
+	020005 Title            ="FUL CLP O2 RL TH"
+	020011 DescSize         =0x100
+	020010 Desc             =""
+	020020 Units            ="Volts "
+	020050 SizeInBits       =0x8
+	020100 Address          =0x36A
+	020150 Flags            =0x0
+	020200 Equation         =0.004427 * X + 0.000000,TH|0|0|0|0|
+	020205 OutType          =0x1
+	020210 DecimalPl        =0x2
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x500D
+	000003 BaseFlags        =0x0
+	020005 Title            ="FUL CLP FLT O2 TH"
+	020011 DescSize         =0x100
+	020010 Desc             =""
+	020020 Units            ="Volts "
+	020050 SizeInBits       =0x8
+	020100 Address          =0x36B
+	020150 Flags            =0x0
+	020200 Equation         =0.004427 * X + 0.000000,TH|0|0|0|0|
+	020205 OutType          =0x1
+	020210 DecimalPl        =0x2
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x500E
+	000003 BaseFlags        =0x0
+	020005 Title            ="FUL CLP LO CLT"
+	020011 DescSize         =0x100
+	020010 Desc             =""
+	020020 Units            ="deg c"
+	020050 SizeInBits       =0x8
+	020100 Address          =0x36C
+	020150 Flags            =0x0
+	020200 Equation         =0.750000 * X + -40.000000,TH|0|0|0|0|
+	020205 OutType          =0x1
+	020210 DecimalPl        =0x2
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x500F
+	000003 BaseFlags        =0x0
+	020005 Title            ="FUL CLP INT LO"
+	020011 DescSize         =0x100
+	020010 Desc             =""
+	020020 Units            ="units"
+	020050 SizeInBits       =0x8
+	020100 Address          =0x36D
+	020150 Flags            =0x0
+	020200 Equation         =1.000000 * X + 0.000000,TH|0|0|0|0|
+	020205 OutType          =0x1
+	020210 DecimalPl        =0x2
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x5010
+	000003 BaseFlags        =0x0
+	020005 Title            ="FUL CLP INT HI"
+	020011 DescSize         =0x100
+	020010 Desc             =""
+	020020 Units            ="units"
+	020050 SizeInBits       =0x8
+	020100 Address          =0x36E
+	020150 Flags            =0x0
+	020200 Equation         =1.000000 * X + 0.000000,TH|0|0|0|0|
+	020205 OutType          =0x1
+	020210 DecimalPl        =0x2
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x5011
+	000003 BaseFlags        =0x0
+	020005 Title            ="FUL CLP O2 WNDO 1"
+	020011 DescSize         =0x100
+	020010 Desc             =""
+	020020 Units            ="units"
+	020050 SizeInBits       =0x8
+	020100 Address          =0x36F
+	020150 Flags            =0x0
+	020200 Equation         =1.000000 * X + 0.000000,TH|0|0|0|0|
+	020205 OutType          =0x1
+	020210 DecimalPl        =0x2
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x5012
+	000003 BaseFlags        =0x0
+	020005 Title            ="FUL CLP O2 WNDO 2"
+	020011 DescSize         =0x100
+	020010 Desc             =""
+	020020 Units            ="units"
+	020050 SizeInBits       =0x8
+	020100 Address          =0x370
+	020150 Flags            =0x0
+	020200 Equation         =1.000000 * X + 0.000000,TH|0|0|0|0|
+	020205 OutType          =0x1
+	020210 DecimalPl        =0x2
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x5013
+	000003 BaseFlags        =0x0
+	020005 Title            ="FUL CLP O2 WNDO 3"
+	020011 DescSize         =0x100
+	020010 Desc             =""
+	020020 Units            ="units"
+	020050 SizeInBits       =0x8
+	020100 Address          =0x371
+	020150 Flags            =0x0
+	020200 Equation         =1.000000 * X + 0.000000,TH|0|0|0|0|
+	020205 OutType          =0x1
+	020210 DecimalPl        =0x2
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x5014
+	000003 BaseFlags        =0x0
+	020005 Title            ="FUL CLP O2 WNDO 4"
+	020011 DescSize         =0x100
+	020010 Desc             =""
+	020020 Units            ="units"
+	020050 SizeInBits       =0x8
+	020100 Address          =0x372
+	020150 Flags            =0x0
+	020200 Equation         =1.000000 * X + 0.000000,TH|0|0|0|0|
+	020205 OutType          =0x1
+	020210 DecimalPl        =0x2
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x5015
+	000003 BaseFlags        =0x0
+	020005 Title            ="FUL BLM LO CLT "
+	020011 DescSize         =0x100
+	020010 Desc             =""
+	020020 Units            ="deg c"
+	020050 SizeInBits       =0x8
+	020100 Address          =0x373
+	020150 Flags            =0x0
+	020200 Equation         =0.750000 * X + -40.000000,TH|0|0|0|0|
+	020205 OutType          =0x1
+	020210 DecimalPl        =0x2
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x5016
+	000003 BaseFlags        =0x0
+	020005 Title            ="FUL BLM HI CLT "
+	020011 DescSize         =0x100
+	020010 Desc             =""
+	020020 Units            ="deg c"
+	020050 SizeInBits       =0x8
+	020100 Address          =0x374
+	020150 Flags            =0x0
+	020200 Equation         =0.750000 * X + -40.000000,TH|0|0|0|0|
+	020205 OutType          =0x1
+	020210 DecimalPl        =0x2
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x5017
+	000003 BaseFlags        =0x0
+	020005 Title            ="FUL BLM INT TH "
+	020011 DescSize         =0x100
+	020010 Desc             =""
+	020020 Units            ="units"
+	020050 SizeInBits       =0x8
+	020100 Address          =0x375
+	020150 Flags            =0x0
+	020200 Equation         =1.000000 * X + 0.000000,TH|0|0|0|0|
+	020205 OutType          =0x1
+	020210 DecimalPl        =0x2
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x5018
+	000003 BaseFlags        =0x0
+	020005 Title            ="FUL BLM LRN TIM CT "
+	020011 DescSize         =0x100
+	020010 Desc             =""
+	020020 Units            ="sec"
+	020050 SizeInBits       =0x8
+	020100 Address          =0x376
+	020150 Flags            =0x0
+	020200 Equation         =0.025000 * X + 0.000000,TH|0|0|0|0|
+	020205 OutType          =0x1
+	020210 DecimalPl        =0x2
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x5019
+	000003 BaseFlags        =0x0
+	020005 Title            ="FUL BLM LRN TIM "
+	020011 DescSize         =0x100
+	020010 Desc             =""
+	020020 Units            ="sec"
+	020050 SizeInBits       =0x8
+	020100 Address          =0x377
+	020150 Flags            =0x0
+	020200 Equation         =0.025000 * X + 0.000000,TH|0|0|0|0|
+	020205 OutType          =0x1
+	020210 DecimalPl        =0x2
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x501A
+	000003 BaseFlags        =0x0
+	020005 Title            ="FUL BLM MAX CEL "
+	020011 DescSize         =0x100
+	020010 Desc             =""
+	020020 Units            ="units"
+	020050 SizeInBits       =0x8
+	020100 Address          =0x378
+	020150 Flags            =0x0
+	020200 Equation         =1.000000 * X + 0.000000,TH|0|0|0|0|
+	020205 OutType          =0x1
+	020210 DecimalPl        =0x2
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x501B
+	000003 BaseFlags        =0x0
+	020005 Title            ="FUL BLM MIN CEL "
+	020011 DescSize         =0x100
+	020010 Desc             =""
+	020020 Units            ="units"
+	020050 SizeInBits       =0x8
+	020100 Address          =0x379
+	020150 Flags            =0x0
+	020200 Equation         =1.000000 * X + 0.000000,TH|0|0|0|0|
+	020205 OutType          =0x1
+	020210 DecimalPl        =0x2
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x501C
+	000003 BaseFlags        =0x0
+	020005 Title            ="FUL BLM RPM INC "
+	020011 DescSize         =0x100
+	020010 Desc             =""
+	020020 Units            ="% rpm"
+	020050 SizeInBits       =0x8
+	020100 Address          =0x37B
+	020150 Flags            =0x0
+	020200 Equation         =6.250000 * X + 0.000000,TH|0|0|0|0|
+	020205 OutType          =0x1
+	020210 DecimalPl        =0x2
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x501D
+	000003 BaseFlags        =0x0
+	020005 Title            ="FUL BLM MAP INC "
+	020011 DescSize         =0x100
+	020010 Desc             =""
+	020020 Units            ="% map"
+	020050 SizeInBits       =0x8
+	020100 Address          =0x37C
+	020150 Flags            =0x0
+	020200 Equation         =0.312500 * X + 0.000000,TH|0|0|0|0|
+	020205 OutType          =0x1
+	020210 DecimalPl        =0x2
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x501E
+	000003 BaseFlags        =0x0
+	020005 Title            ="IAC INI MIN TPS"
+	020011 DescSize         =0x100
+	020010 Desc             =""
+	020020 Units            ="%"
+	020050 SizeInBits       =0x8
+	020100 Address          =0x754
+	020150 Flags            =0x0
+	020200 Equation         =0.390625 * X + 0.000000,TH|0|0|0|0|
+	020205 OutType          =0x1
+	020210 DecimalPl        =0x2
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x501F
+	000003 BaseFlags        =0x0
+	020005 Title            ="IAC INI RST RPM"
+	020011 DescSize         =0x100
+	020010 Desc             =""
+	020020 Units            ="RPM"
+	020050 SizeInBits       =0x8
+	020100 Address          =0x755
+	020150 Flags            =0x0
+	020200 Equation         =25.000000 * X + 0.000000,TH|0|0|0|0|
+	020205 OutType          =0x1
+	020210 DecimalPl        =0x2
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x5020
+	000003 BaseFlags        =0x0
+	020005 Title            ="IAC INI RST DR "
+	020011 DescSize         =0x100
+	020010 Desc             =""
+	020020 Units            ="steps"
+	020050 SizeInBits       =0x8
+	020100 Address          =0x756
+	020150 Flags            =0x0
+	020200 Equation         =1.000000 * X + 0.000000,TH|0|0|0|0|
+	020205 OutType          =0x1
+	020210 DecimalPl        =0x2
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x5021
+	000003 BaseFlags        =0x0
+	020005 Title            ="IAC INI RST PN "
+	020011 DescSize         =0x100
+	020010 Desc             =""
+	020020 Units            ="steps"
+	020050 SizeInBits       =0x8
+	020100 Address          =0x757
+	020150 Flags            =0x0
+	020200 Equation         =1.000000 * X + 0.000000,TH|0|0|0|0|
+	020205 OutType          =0x1
+	020210 DecimalPl        =0x2
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x5022
+	000003 BaseFlags        =0x0
+	020005 Title            ="IAC INI RST AC "
+	020011 DescSize         =0x100
+	020010 Desc             =""
+	020020 Units            ="steps"
+	020050 SizeInBits       =0x8
+	020100 Address          =0x758
+	020150 Flags            =0x0
+	020200 Equation         =1.000000 * X + 0.000000,TH|0|0|0|0|
+	020205 OutType          =0x1
+	020210 DecimalPl        =0x2
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x5023
+	000003 BaseFlags        =0x0
+	020005 Title            ="IAC INI MXM POS"
+	020011 DescSize         =0x100
+	020010 Desc             =""
+	020020 Units            ="steps"
+	020050 SizeInBits       =0x8
+	020100 Address          =0x759
+	020150 Flags            =0x0
+	020200 Equation         =1.000000 * X + 0.000000,TH|0|0|0|0|
+	020205 OutType          =0x1
+	020210 DecimalPl        =0x2
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x5024
+	000003 BaseFlags        =0x0
+	020005 Title            ="IAC INI NO AC POS"
+	020011 DescSize         =0x100
+	020010 Desc             =""
+	020020 Units            ="Steps"
+	020050 SizeInBits       =0x8
+	020100 Address          =0x75A
+	020150 Flags            =0x0
+	020200 Equation         =1.000000 * X + 0.000000,TH|0|0|0|0|
+	020205 OutType          =0x1
+	020210 DecimalPl        =0x2
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x5025
+	000003 BaseFlags        =0x0
+	020005 Title            ="IAC INI AC STEP"
+	020011 DescSize         =0x100
+	020010 Desc             =""
+	020020 Units            ="Steps"
+	020050 SizeInBits       =0x8
+	020100 Address          =0x75B
+	020150 Flags            =0x0
+	020200 Equation         =1.000000 * X + 0.000000,TH|0|0|0|0|
+	020205 OutType          =0x1
+	020210 DecimalPl        =0x2
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x5026
+	000003 BaseFlags        =0x0
+	020005 Title            ="IAC INI IG OFF STEP"
+	020011 DescSize         =0x100
+	020010 Desc             =""
+	020020 Units            ="Steps"
+	020050 SizeInBits       =0x8
+	020100 Address          =0x75C
+	020150 Flags            =0x0
+	020200 Equation         =1.000000 * X + 0.000000,TH|0|0|0|0|
+	020205 OutType          =0x1
+	020210 DecimalPl        =0x2
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x5027
+	000003 BaseFlags        =0x0
+	020005 Title            ="IAC INI IG ON STEP"
+	020011 DescSize         =0x100
+	020010 Desc             =""
+	020020 Units            ="Steps"
+	020050 SizeInBits       =0x8
+	020100 Address          =0x75D
+	020150 Flags            =0x0
+	020200 Equation         =1.000000 * X + 0.000000,TH|0|0|0|0|
+	020205 OutType          =0x1
+	020210 DecimalPl        =0x2
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x5028
+	000003 BaseFlags        =0x0
+	020005 Title            ="IAC INI LO CLT"
+	020011 DescSize         =0x100
+	020010 Desc             =""
+	020020 Units            ="Deg C"
+	020050 SizeInBits       =0x8
+	020100 Address          =0x75E
+	020150 Flags            =0x0
+	020200 Equation         =0.750000 * X + -40.000000,TH|0|0|0|0|
+	020205 OutType          =0x1
+	020210 DecimalPl        =0x2
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x5029
+	000003 BaseFlags        =0x0
+	020005 Title            ="IAC INI PN TIME"
+	020011 DescSize         =0x100
+	020010 Desc             =""
+	020020 Units            ="Sec"
+	020050 SizeInBits       =0x8
+	020100 Address          =0x75F
+	020150 Flags            =0x0
+	020200 Equation         =0.012500 * X + 0.000000,TH|0|0|0|0|
+	020205 OutType          =0x1
+	020210 DecimalPl        =0x2
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x502A
+	000003 BaseFlags        =0x0
+	020005 Title            ="IAC INI RST STEP"
+	020011 DescSize         =0x100
+	020010 Desc             =""
+	020020 Units            ="Steps"
+	020050 SizeInBits       =0x8
+	020100 Address          =0x760
+	020150 Flags            =0x0
+	020200 Equation         =1.000000 * X + 0.000000,TH|0|0|0|0|
+	020205 OutType          =0x1
+	020210 DecimalPl        =0x2
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x502B
+	000003 BaseFlags        =0x0
+	020005 Title            ="IAC INI CLP"
+	020011 DescSize         =0x100
+	020010 Desc             =""
+	020020 Units            ="Steps"
+	020050 SizeInBits       =0x8
+	020100 Address          =0x761
+	020150 Flags            =0x0
+	020200 Equation         =1.000000 * X + 0.000000,TH|0|0|0|0|
+	020205 OutType          =0x1
+	020210 DecimalPl        =0x2
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x502C
+	000003 BaseFlags        =0x0
+	020005 Title            ="IAC TRA FAN TR STP"
+	020011 DescSize         =0x100
+	020010 Desc             =""
+	020020 Units            ="Steps"
+	020050 SizeInBits       =0x8
+	020100 Address          =0x762
+	020150 Flags            =0x0
+	020200 Equation         =1.000000 * X + 0.000000,TH|0|0|0|0|
+	020205 OutType          =0x1
+	020210 DecimalPl        =0x2
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x502D
+	000003 BaseFlags        =0x0
+	020005 Title            ="IAC TRA FAN TRANS"
+	020011 DescSize         =0x100
+	020010 Desc             =""
+	020020 Units            ="Steps"
+	020050 SizeInBits       =0x8
+	020100 Address          =0x763
+	020150 Flags            =0x0
+	020200 Equation         =1.000000 * X + 0.000000,TH|0|0|0|0|
+	020205 OutType          =0x1
+	020210 DecimalPl        =0x2
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x502E
+	000003 BaseFlags        =0x0
+	020005 Title            ="IAC INI FAN"
+	020011 DescSize         =0x100
+	020010 Desc             =""
+	020020 Units            ="Steps"
+	020050 SizeInBits       =0x8
+	020100 Address          =0x764
+	020150 Flags            =0x0
+	020200 Equation         =1.000000 * X + 0.000000,TH|0|0|0|0|
+	020205 OutType          =0x1
+	020210 DecimalPl        =0x2
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x502F
+	000003 BaseFlags        =0x0
+	020005 Title            ="IAC INI FAN 2 "
+	020011 DescSize         =0x100
+	020010 Desc             =""
+	020020 Units            ="Steps"
+	020050 SizeInBits       =0x8
+	020100 Address          =0x765
+	020150 Flags            =0x0
+	020200 Equation         =1.000000 * X + 0.000000,TH|0|0|0|0|
+	020205 OutType          =0x1
+	020210 DecimalPl        =0x2
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x5030
+	000003 BaseFlags        =0x0
+	020005 Title            ="IAC WUP IAC MUL "
+	020011 DescSize         =0x100
+	020010 Desc             =""
+	020020 Units            ="%"
+	020050 SizeInBits       =0x8
+	020100 Address          =0x766
+	020150 Flags            =0x0
+	020200 Equation         =0.390625 * X + 0.000000,TH|0|0|0|0|
+	020205 OutType          =0x1
+	020210 DecimalPl        =0x2
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x5031
+	000003 BaseFlags        =0x0
+	020005 Title            ="IAC WUP DR MUL "
+	020011 DescSize         =0x100
+	020010 Desc             =""
+	020020 Units            ="%"
+	020050 SizeInBits       =0x8
+	020100 Address          =0x767
+	020150 Flags            =0x0
+	020200 Equation         =0.390625 * X + 0.000000,TH|0|0|0|0|
+	020205 OutType          =0x1
+	020210 DecimalPl        =0x2
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x5032
+	000003 BaseFlags        =0x0
+	020005 Title            ="IAC WUP INI TIM "
+	020011 DescSize         =0x100
+	020010 Desc             =""
+	020020 Units            ="Sec"
+	020050 SizeInBits       =0x8
+	020100 Address          =0x768
+	020150 Flags            =0x0
+	020200 Equation         =0.200000 * X + 0.000000,TH|0|0|0|0|
+	020205 OutType          =0x1
+	020210 DecimalPl        =0x2
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x5033
+	000003 BaseFlags        =0x0
+	020005 Title            ="IAC TRA STEPS "
+	020011 DescSize         =0x100
+	020010 Desc             =""
+	020020 Units            ="Steps"
+	020050 SizeInBits       =0x8
+	020100 Address          =0x769
+	020150 Flags            =0x0
+	020200 Equation         =1.000000 * X + 0.000000,TH|0|0|0|0|
+	020205 OutType          =0x1
+	020210 DecimalPl        =0x2
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x5034
+	000003 BaseFlags        =0x0
+	020005 Title            ="IAC TRA TIME "
+	020011 DescSize         =0x100
+	020010 Desc             =""
+	020020 Units            ="Sec"
+	020050 SizeInBits       =0x8
+	020100 Address          =0x76A
+	020150 Flags            =0x0
+	020200 Equation         =0.200000 * X + 0.000000,TH|0|0|0|0|
+	020205 OutType          =0x1
+	020210 DecimalPl        =0x2
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x5035
+	000003 BaseFlags        =0x0
+	020005 Title            ="IAC CLP RPM DBL "
+	020011 DescSize         =0x100
+	020010 Desc             =""
+	020020 Units            ="RPM"
+	020050 SizeInBits       =0x8
+	020100 Address          =0x76B
+	020150 Flags            =0x0
+	020200 Equation         =6.250000 * X + 0.000000,TH|0|0|0|0|
+	020205 OutType          =0x1
+	020210 DecimalPl        =0x2
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x5036
+	000003 BaseFlags        =0x0
+	020005 Title            ="IAC CLP RPM DBD "
+	020011 DescSize         =0x100
+	020010 Desc             =""
+	020020 Units            ="RPM"
+	020050 SizeInBits       =0x8
+	020100 Address          =0x76C
+	020150 Flags            =0x0
+	020200 Equation         =6.250000 * X + 0.000000,TH|0|0|0|0|
+	020205 OutType          =0x1
+	020210 DecimalPl        =0x2
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x5037
+	000003 BaseFlags        =0x0
+	020005 Title            ="IAC CLP RPM DB PN "
+	020011 DescSize         =0x100
+	020010 Desc             =""
+	020020 Units            ="RPM"
+	020050 SizeInBits       =0x8
+	020100 Address          =0x76D
+	020150 Flags            =0x0
+	020200 Equation         =6.250000 * X + 0.000000,TH|0|0|0|0|
+	020205 OutType          =0x1
+	020210 DecimalPl        =0x2
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x5038
+	000003 BaseFlags        =0x0
+	020005 Title            ="IAC CLP AC RPM "
+	020011 DescSize         =0x100
+	020010 Desc             =""
+	020020 Units            ="RPM"
+	020050 SizeInBits       =0x8
+	020100 Address          =0x76E
+	020150 Flags            =0x0
+	020200 Equation         =6.250000 * X + 0.000000,TH|0|0|0|0|
+	020205 OutType          =0x1
+	020210 DecimalPl        =0x2
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x5039
+	000003 BaseFlags        =0x0
+	020005 Title            ="VAR RPM IAC LO Q"
+	020011 DescSize         =0x100
+	020010 Desc             =""
+	020020 Units            ="%"
+	020050 SizeInBits       =0x8
+	020100 Address          =0x76F
+	020150 Flags            =0x0
+	020200 Equation         =0.390625 * X + 0.000000,TH|0|0|0|0|
+	020205 OutType          =0x1
+	020210 DecimalPl        =0x2
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x503A
+	000003 BaseFlags        =0x0
+	020005 Title            ="VAR RPM IAC HI Q"
+	020011 DescSize         =0x100
+	020010 Desc             =""
+	020020 Units            ="%"
+	020050 SizeInBits       =0x8
+	020100 Address          =0x770
+	020150 Flags            =0x0
+	020200 Equation         =0.390625 * X + 0.000000,TH|0|0|0|0|
+	020205 OutType          =0x1
+	020210 DecimalPl        =0x2
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x503B
+	000003 BaseFlags        =0x0
+	020005 Title            ="IAC TRA D TPS TRANS "
+	020011 DescSize         =0x100
+	020010 Desc             =""
+	020020 Units            ="SEC"
+	020050 SizeInBits       =0x8
+	020100 Address          =0x771
+	020150 Flags            =0x0
+	020200 Equation         =0.200000 * X + 0.000000,TH|0|0|0|0|
+	020205 OutType          =0x1
+	020210 DecimalPl        =0x2
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x503C
+	000003 BaseFlags        =0x0
+	020005 Title            ="IAC TRA PNDR TRANS "
+	020011 DescSize         =0x100
+	020010 Desc             =""
+	020020 Units            ="SEC"
+	020050 SizeInBits       =0x8
+	020100 Address          =0x772
+	020150 Flags            =0x0
+	020200 Equation         =0.200000 * X + 0.000000,TH|0|0|0|0|
+	020205 OutType          =0x1
+	020210 DecimalPl        =0x2
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x503D
+	000003 BaseFlags        =0x0
+	020005 Title            ="IAC TRA AC TRANS "
+	020011 DescSize         =0x100
+	020010 Desc             =""
+	020020 Units            ="SEC"
+	020050 SizeInBits       =0x8
+	020100 Address          =0x773
+	020150 Flags            =0x0
+	020200 Equation         =0.200000 * X + 0.000000,TH|0|0|0|0|
+	020205 OutType          =0x1
+	020210 DecimalPl        =0x2
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x503E
+	000003 BaseFlags        =0x0
+	020005 Title            ="SPK EST PS Q"
+	020011 DescSize         =0x100
+	020010 Desc             =""
+	020020 Units            ="FAC"
+	020050 SizeInBits       =0x8
+	020100 Address          =0x774
+	020150 Flags            =0x0
+	020200 Equation         =0.390625 * X + 0.000000,TH|0|0|0|0|
+	020205 OutType          =0x1
+	020210 DecimalPl        =0x2
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x503F
+	000003 BaseFlags        =0x0
+	020005 Title            ="SPK EST PS CLT"
+	020011 DescSize         =0x100
+	020010 Desc             =""
+	020020 Units            ="deg C"
+	020050 SizeInBits       =0x8
+	020100 Address          =0x775
+	020150 Flags            =0x0
+	020200 Equation         =0.750000 * X + -40.000000,TH|0|0|0|0|
+	020205 OutType          =0x1
+	020210 DecimalPl        =0x2
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x5040
+	000003 BaseFlags        =0x0
+	020005 Title            ="SPK EST PS POS"
+	020011 DescSize         =0x100
+	020010 Desc             =""
+	020020 Units            ="deg/rpm"
+	020050 SizeInBits       =0x10
+	020100 Address          =0x776
+	020150 Flags            =0x0
+	020200 Equation         =0.001375 * X + 0.000000,TH|0|0|0|0|
+	020205 OutType          =0x1
+	020210 DecimalPl        =0x2
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x5041
+	000003 BaseFlags        =0x0
+	020005 Title            ="SPK EST PS NEG"
+	020011 DescSize         =0x100
+	020010 Desc             =""
+	020020 Units            ="deg/rpm"
+	020050 SizeInBits       =0x10
+	020100 Address          =0x778
+	020150 Flags            =0x0
+	020200 Equation         =0.001375 * X + 0.000000,TH|0|0|0|0|
+	020205 OutType          =0x1
+	020210 DecimalPl        =0x2
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x5042
+	000003 BaseFlags        =0x0
+	020005 Title            ="SPK EST RPM ERR"
+	020011 DescSize         =0x100
+	020010 Desc             =""
+	020020 Units            ="RPM"
+	020050 SizeInBits       =0x10
+	020100 Address          =0x77A
+	020150 Flags            =0x0
+	020200 Equation         =1.000000 * X + 0.000000,TH|0|0|0|0|
+	020205 OutType          =0x1
+	020210 DecimalPl        =0x2
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x5043
+	000003 BaseFlags        =0x0
+	020005 Title            ="SPK EST PS MAX ADV"
+	020011 DescSize         =0x100
+	020010 Desc             =""
+	020020 Units            ="RPM"
+	020050 SizeInBits       =0x8
+	020100 Address          =0x77C
+	020150 Flags            =0x0
+	020200 Equation         =0.351562 * X + 0.000000,TH|0|0|0|0|
+	020205 OutType          =0x1
+	020210 DecimalPl        =0x2
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x5044
+	000003 BaseFlags        =0x0
+	020005 Title            ="IAC TRA TCD TPS"
+	020011 DescSize         =0x100
+	020010 Desc             =""
+	020020 Units            ="%"
+	020050 SizeInBits       =0x8
+	020100 Address          =0x77D
+	020150 Flags            =0x0
+	020200 Equation         =0.390625 * X + 0.000000,TH|0|0|0|0|
+	020205 OutType          =0x1
+	020210 DecimalPl        =0x2
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x5045
+	000003 BaseFlags        =0x0
+	020005 Title            ="IAC TRA MAC STEPS"
+	020011 DescSize         =0x100
+	020010 Desc             =""
+	020020 Units            ="steps"
+	020050 SizeInBits       =0x8
+	020100 Address          =0x77E
+	020150 Flags            =0x0
+	020200 Equation         =1.000000 * X + 0.000000,TH|0|0|0|0|
+	020205 OutType          =0x1
+	020210 DecimalPl        =0x2
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x5046
+	000003 BaseFlags        =0x0
+	020005 Title            ="IAC TRA D MAP MUL "
+	020011 DescSize         =0x100
+	020010 Desc             =""
+	020020 Units            ="%"
+	020050 SizeInBits       =0x8
+	020100 Address          =0x77F
+	020150 Flags            =0x0
+	020200 Equation         =0.010590 * X + 0.000000,TH|0|0|0|0|
+	020205 OutType          =0x1
+	020210 DecimalPl        =0x2
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x5047
+	000003 BaseFlags        =0x0
+	020005 Title            ="IAC TRA MAC D MAP ST "
+	020011 DescSize         =0x100
+	020010 Desc             =""
+	020020 Units            ="STEPS"
+	020050 SizeInBits       =0x8
+	020100 Address          =0x780
+	020150 Flags            =0x0
+	020200 Equation         =1.000000 * X + 0.000000,TH|0|0|0|0|
+	020205 OutType          =0x1
+	020210 DecimalPl        =0x2
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x5048
+	000003 BaseFlags        =0x0
+	020005 Title            ="IAC TRA SAG LO RPM "
+	020011 DescSize         =0x100
+	020010 Desc             =""
+	020020 Units            ="RPM"
+	020050 SizeInBits       =0x8
+	020100 Address          =0x781
+	020150 Flags            =0x0
+	020200 Equation         =6.250000 * X + 0.000000,TH|0|0|0|0|
+	020205 OutType          =0x1
+	020210 DecimalPl        =0x2
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x5049
+	000003 BaseFlags        =0x0
+	020005 Title            ="IAC TRA SAG STEP H "
+	020011 DescSize         =0x100
+	020010 Desc             =""
+	020020 Units            ="Steps"
+	020050 SizeInBits       =0x8
+	020100 Address          =0x782
+	020150 Flags            =0x0
+	020200 Equation         =1.000000 * X + 0.000000,TH|0|0|0|0|
+	020205 OutType          =0x1
+	020210 DecimalPl        =0x2
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x504A
+	000003 BaseFlags        =0x0
+	020005 Title            ="IAC TRA SAG RPM DB "
+	020011 DescSize         =0x100
+	020010 Desc             =""
+	020020 Units            ="RPM"
+	020050 SizeInBits       =0x8
+	020100 Address          =0x783
+	020150 Flags            =0x0
+	020200 Equation         =6.250000 * X + 0.000000,TH|0|0|0|0|
+	020205 OutType          =0x1
+	020210 DecimalPl        =0x2
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x504B
+	000003 BaseFlags        =0x0
+	020005 Title            ="IAC TRA SAG STEP L "
+	020011 DescSize         =0x100
+	020010 Desc             =""
+	020020 Units            ="Steps"
+	020050 SizeInBits       =0x8
+	020100 Address          =0x784
+	020150 Flags            =0x0
+	020200 Equation         =1.000000 * X + 0.000000,TH|0|0|0|0|
+	020205 OutType          =0x1
+	020210 DecimalPl        =0x2
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x504C
+	000003 BaseFlags        =0x0
+	020005 Title            ="IAC TRA TC STEPS "
+	020011 DescSize         =0x100
+	020010 Desc             =""
+	020020 Units            ="?PM"
+	020050 SizeInBits       =0x8
+	020100 Address          =0x785
+	020150 Flags            =0x0
+	020200 Equation         =0.312500 * X + 0.000000,TH|0|0|0|0|
+	020205 OutType          =0x1
+	020210 DecimalPl        =0x2
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x504D
+	000003 BaseFlags        =0x0
+	020005 Title            ="IAC TRA NT STEP "
+	020011 DescSize         =0x100
+	020010 Desc             =""
+	020020 Units            ="?teps"
+	020050 SizeInBits       =0x8
+	020100 Address          =0x786
+	020150 Flags            =0x0
+	020200 Equation         =0.312500 * X + 0.000000,TH|0|0|0|0|
+	020205 OutType          =0x1
+	020210 DecimalPl        =0x2
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x504E
+	000003 BaseFlags        =0x0
+	020005 Title            ="IAC TRA SR STEP "
+	020011 DescSize         =0x100
+	020010 Desc             =""
+	020020 Units            ="?teps"
+	020050 SizeInBits       =0x8
+	020100 Address          =0x787
+	020150 Flags            =0x0
+	020200 Equation         =0.312500 * X + 0.000000,TH|0|0|0|0|
+	020205 OutType          =0x1
+	020210 DecimalPl        =0x2
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x504F
+	000003 BaseFlags        =0x0
+	020005 Title            ="FUL CCO LO CRANK "
+	020011 DescSize         =0x100
+	020010 Desc             =""
+	020020 Units            ="AD UNITS"
+	020050 SizeInBits       =0x8
+	020100 Address          =0x7CE
+	020150 Flags            =0x0
+	020200 Equation         =1.000000 * X + 0.000000,TH|0|0|0|0|
+	020205 OutType          =0x1
+	020210 DecimalPl        =0x2
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x5050
+	000003 BaseFlags        =0x0
+	020005 Title            ="FUL CCO HI RPM "
+	020011 DescSize         =0x100
+	020010 Desc             =""
+	020020 Units            ="RPM"
+	020050 SizeInBits       =0x8
+	020100 Address          =0x7CF
+	020150 Flags            =0x0
+	020200 Equation         =25.000000 * X + 0.000000,TH|0|0|0|0|
+	020205 OutType          =0x1
+	020210 DecimalPl        =0x2
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x5051
+	000003 BaseFlags        =0x0
+	020005 Title            ="FUL CCO HI CLT "
+	020011 DescSize         =0x100
+	020010 Desc             =""
+	020020 Units            ="DEG C"
+	020050 SizeInBits       =0x8
+	020100 Address          =0x7D0
+	020150 Flags            =0x0
+	020200 Equation         =0.750000 * X + -40.000000,TH|0|0|0|0|
+	020205 OutType          =0x1
+	020210 DecimalPl        =0x2
+%%END%%
+
+%%FLAG%%
+	000002 UniqueID         =0x5052
+	000003 BaseFlags        =0x0
+	030005 Title            ="GEN OPT OPTION A - Bit 7 - LRBSP"
+	030011 DescSize         =0x100
+	030010 Desc             =""
+	030050 SizeInBits       =0x1
+	030100 Address          =0x9
+	030150 Flags            =0x0
+	030200 BitNumber        =0x7
+%%END%%
+
+%%FLAG%%
+	000002 UniqueID         =0x5053
+	000003 BaseFlags        =0x0
+	030005 Title            ="GEN OPT OPTION A - Bit 6 - LTBSP"
+	030011 DescSize         =0x100
+	030010 Desc             =""
+	030050 SizeInBits       =0x1
+	030100 Address          =0x9
+	030150 Flags            =0x0
+	030200 BitNumber        =0x6
+%%END%%
+
+%%FLAG%%
+	000002 UniqueID         =0x5054
+	000003 BaseFlags        =0x0
+	030005 Title            ="GEN OPT OPTION A - Bit 5 - XXXXX"
+	030011 DescSize         =0x100
+	030010 Desc             =""
+	030050 SizeInBits       =0x1
+	030100 Address          =0x9
+	030150 Flags            =0x0
+	030200 BitNumber        =0x5
+%%END%%
+
+%%FLAG%%
+	000002 UniqueID         =0x5055
+	000003 BaseFlags        =0x0
+	030005 Title            ="GEN OPT OPTION A - Bit 4 - LRUAF"
+	030011 DescSize         =0x100
+	030010 Desc             =""
+	030050 SizeInBits       =0x1
+	030100 Address          =0x9
+	030150 Flags            =0x0
+	030200 BitNumber        =0x4
+%%END%%
+
+%%FLAG%%
+	000002 UniqueID         =0x5056
+	000003 BaseFlags        =0x0
+	030005 Title            ="GEN OPT OPTION A - Bit 3 - ICCOI"
+	030011 DescSize         =0x100
+	030010 Desc             =""
+	030050 SizeInBits       =0x1
+	030100 Address          =0x9
+	030150 Flags            =0x0
+	030200 BitNumber        =0x3
+%%END%%
+
+%%FLAG%%
+	000002 UniqueID         =0x5057
+	000003 BaseFlags        =0x0
+	030005 Title            ="GEN OPT OPTION A - Bit 2 - IDBLM"
+	030011 DescSize         =0x100
+	030010 Desc             =""
+	030050 SizeInBits       =0x1
+	030100 Address          =0x9
+	030150 Flags            =0x0
+	030200 BitNumber        =0x2
+%%END%%
+
+%%FLAG%%
+	000002 UniqueID         =0x5058
+	000003 BaseFlags        =0x0
+	030005 Title            ="GEN OPT OPTION A - Bit 1 - CCO  "
+	030011 DescSize         =0x100
+	030010 Desc             =""
+	030050 SizeInBits       =0x1
+	030100 Address          =0x9
+	030150 Flags            =0x0
+	030200 BitNumber        =0x1
+%%END%%
+
+%%FLAG%%
+	000002 UniqueID         =0x5060
+	000003 BaseFlags        =0x0
+	030005 Title            ="GEN OPT OPTION A - Bit 0 - XXXXX"
+	030011 DescSize         =0x100
+	030010 Desc             =""
+	030050 SizeInBits       =0x1
+	030100 Address          =0x9
+	030150 Flags            =0x0
+	030200 BitNumber        =0x0
+%%END%%
+
+%%FLAG%%
+	000002 UniqueID         =0x5061
+	000003 BaseFlags        =0x0
+	030005 Title            ="GEN OPT OPTION B - Bit 7 - TBPFI"
+	030011 DescSize         =0x100
+	030010 Desc             =""
+	030050 SizeInBits       =0x1
+	030100 Address          =0xA
+	030150 Flags            =0x0
+	030200 BitNumber        =0x7
+%%END%%
+
+%%FLAG%%
+	000002 UniqueID         =0x5062
+	000003 BaseFlags        =0x0
+	030005 Title            ="GEN OPT OPTION B - Bit 6 - KNOB "
+	030011 DescSize         =0x100
+	030010 Desc             =""
+	030050 SizeInBits       =0x1
+	030100 Address          =0xA
+	030150 Flags            =0x0
+	030200 BitNumber        =0x6
+%%END%%
+
+%%FLAG%%
+	000002 UniqueID         =0x5063
+	000003 BaseFlags        =0x0
+	030005 Title            ="GEN OPT OPTION B - Bit 5 - NOBLM"
+	030011 DescSize         =0x100
+	030010 Desc             =""
+	030050 SizeInBits       =0x1
+	030100 Address          =0xA
+	030150 Flags            =0x0
+	030200 BitNumber        =0x5
+%%END%%
+
+%%FLAG%%
+	000002 UniqueID         =0x5064
+	000003 BaseFlags        =0x0
+	030005 Title            ="GEN OPT OPTION B - Bit 4 - CLTSN"
+	030011 DescSize         =0x100
+	030010 Desc             =""
+	030050 SizeInBits       =0x1
+	030100 Address          =0xA
+	030150 Flags            =0x0
+	030200 BitNumber        =0x4
+%%END%%
+
+%%FLAG%%
+	000002 UniqueID         =0x5065
+	000003 BaseFlags        =0x0
+	030005 Title            ="GEN OPT OPTION B - Bit 3 - 6 CYL"
+	030011 DescSize         =0x100
+	030010 Desc             =""
+	030050 SizeInBits       =0x1
+	030100 Address          =0xA
+	030150 Flags            =0x0
+	030200 BitNumber        =0x3
+%%END%%
+
+%%FLAG%%
+	000002 UniqueID         =0x5066
+	000003 BaseFlags        =0x0
+	030005 Title            ="GEN OPT OPTION B - Bit 2 - 8 CYL"
+	030011 DescSize         =0x100
+	030010 Desc             =""
+	030050 SizeInBits       =0x1
+	030100 Address          =0xA
+	030150 Flags            =0x0
+	030200 BitNumber        =0x2
+%%END%%
+
+%%FLAG%%
+	000002 UniqueID         =0x5067
+	000003 BaseFlags        =0x0
+	030005 Title            ="GEN OPT OPTION B - Bit 1 - ASYPC"
+	030011 DescSize         =0x100
+	030010 Desc             =""
+	030050 SizeInBits       =0x1
+	030100 Address          =0xA
+	030150 Flags            =0x0
+	030200 BitNumber        =0x1
+%%END%%
+
+%%FLAG%%
+	000002 UniqueID         =0x5068
+	000003 BaseFlags        =0x0
+	030005 Title            ="GEN OPT OPTION B - Bit 0 - AECLM"
+	030011 DescSize         =0x100
+	030010 Desc             =""
+	030050 SizeInBits       =0x1
+	030100 Address          =0xA
+	030150 Flags            =0x0
+	030200 BitNumber        =0x0
+%%END%%
+
+%%FLAG%%
+	000002 UniqueID         =0x5069
+	000003 BaseFlags        =0x0
+	030005 Title            ="GEN OPT OPTION C - Bit 7 -     X"
+	030011 DescSize         =0x100
+	030010 Desc             =""
+	030050 SizeInBits       =0x1
+	030100 Address          =0xB
+	030150 Flags            =0x0
+	030200 BitNumber        =0x7
+%%END%%
+
+%%FLAG%%
+	000002 UniqueID         =0x506A
+	000003 BaseFlags        =0x0
+	030005 Title            ="GEN OPT OPTION C - Bit 6 -     X"
+	030011 DescSize         =0x100
+	030010 Desc             =""
+	030050 SizeInBits       =0x1
+	030100 Address          =0xB
+	030150 Flags            =0x0
+	030200 BitNumber        =0x6
+%%END%%
+
+%%FLAG%%
+	000002 UniqueID         =0x506B
+	000003 BaseFlags        =0x0
+	030005 Title            ="GEN OPT OPTION C - Bit 5 - LGSWI"
+	030011 DescSize         =0x100
+	030010 Desc             =""
+	030050 SizeInBits       =0x1
+	030100 Address          =0xB
+	030150 Flags            =0x0
+	030200 BitNumber        =0x5
+%%END%%
+
+%%FLAG%%
+	000002 UniqueID         =0x506C
+	000003 BaseFlags        =0x0
+	030005 Title            ="GEN OPT OPTION C - Bit 4 - LGHWI"
+	030011 DescSize         =0x100
+	030010 Desc             =""
+	030050 SizeInBits       =0x1
+	030100 Address          =0xB
+	030150 Flags            =0x0
+	030200 BitNumber        =0x4
+%%END%%
+
+%%FLAG%%
+	000002 UniqueID         =0x506D
+	000003 BaseFlags        =0x0
+	030005 Title            ="GEN OPT OPTION C - Bit 3 - SPRTD"
+	030011 DescSize         =0x100
+	030010 Desc             =""
+	030050 SizeInBits       =0x1
+	030100 Address          =0xB
+	030150 Flags            =0x0
+	030200 BitNumber        =0x3
+%%END%%
+
+%%FLAG%%
+	000002 UniqueID         =0x506E
+	000003 BaseFlags        =0x0
+	030005 Title            ="GEN OPT OPTION C - Bit 2 - SPKLM"
+	030011 DescSize         =0x100
+	030010 Desc             =""
+	030050 SizeInBits       =0x1
+	030100 Address          =0xB
+	030150 Flags            =0x0
+	030200 BitNumber        =0x2
+%%END%%
+
+%%FLAG%%
+	000002 UniqueID         =0x506F
+	000003 BaseFlags        =0x0
+	030005 Title            ="GEN OPT OPTION C - Bit 1 - 2 FAN"
+	030011 DescSize         =0x100
+	030010 Desc             =""
+	030050 SizeInBits       =0x1
+	030100 Address          =0xB
+	030150 Flags            =0x0
+	030200 BitNumber        =0x1
+%%END%%
+
+%%FLAG%%
+	000002 UniqueID         =0x5070
+	000003 BaseFlags        =0x0
+	030005 Title            ="GEN OPT OPTION C - Bit 0 - OPNLP"
+	030011 DescSize         =0x100
+	030010 Desc             =""
+	030050 SizeInBits       =0x1
+	030100 Address          =0xB
+	030150 Flags            =0x0
+	030200 BitNumber        =0x0
+%%END%%
+
+%%FLAG%%
+	000002 UniqueID         =0x5071
+	000003 BaseFlags        =0x0
+	030005 Title            ="Fault Code 12 13 14 15 21 22 23 24 - Bit 7 - FC 12"
+	030011 DescSize         =0x100
+	030010 Desc             =""
+	030050 SizeInBits       =0x1
+	030100 Address          =0x2AD
+	030150 Flags            =0x0
+	030200 BitNumber        =0x7
+%%END%%
+
+%%FLAG%%
+	000002 UniqueID         =0x5072
+	000003 BaseFlags        =0x0
+	030005 Title            ="Fault Code 12 13 14 15 21 22 23 24 - Bit 6 - FC 13"
+	030011 DescSize         =0x100
+	030010 Desc             =""
+	030050 SizeInBits       =0x1
+	030100 Address          =0x2AD
+	030150 Flags            =0x0
+	030200 BitNumber        =0x6
+%%END%%
+
+%%FLAG%%
+	000002 UniqueID         =0x5073
+	000003 BaseFlags        =0x0
+	030005 Title            ="Fault Code 12 13 14 15 21 22 23 24 - Bit 5 - FC 14"
+	030011 DescSize         =0x100
+	030010 Desc             =""
+	030050 SizeInBits       =0x1
+	030100 Address          =0x2AD
+	030150 Flags            =0x0
+	030200 BitNumber        =0x5
+%%END%%
+
+%%FLAG%%
+	000002 UniqueID         =0x5074
+	000003 BaseFlags        =0x0
+	030005 Title            ="Fault Code 12 13 14 15 21 22 23 24 - Bit 4 - FC 15"
+	030011 DescSize         =0x100
+	030010 Desc             =""
+	030050 SizeInBits       =0x1
+	030100 Address          =0x2AD
+	030150 Flags            =0x0
+	030200 BitNumber        =0x4
+%%END%%
+
+%%FLAG%%
+	000002 UniqueID         =0x5075
+	000003 BaseFlags        =0x0
+	030005 Title            ="Fault Code 12 13 14 15 21 22 23 24 - Bit 3 - FC 21"
+	030011 DescSize         =0x100
+	030010 Desc             =""
+	030050 SizeInBits       =0x1
+	030100 Address          =0x2AD
+	030150 Flags            =0x0
+	030200 BitNumber        =0x3
+%%END%%
+
+%%FLAG%%
+	000002 UniqueID         =0x5076
+	000003 BaseFlags        =0x0
+	030005 Title            ="Fault Code 12 13 14 15 21 22 23 24 - Bit 2 - FC 22"
+	030011 DescSize         =0x100
+	030010 Desc             =""
+	030050 SizeInBits       =0x1
+	030100 Address          =0x2AD
+	030150 Flags            =0x0
+	030200 BitNumber        =0x2
+%%END%%
+
+%%FLAG%%
+	000002 UniqueID         =0x5077
+	000003 BaseFlags        =0x0
+	030005 Title            ="Fault Code 12 13 14 15 21 22 23 24 - Bit 1 - FC 23"
+	030011 DescSize         =0x100
+	030010 Desc             =""
+	030050 SizeInBits       =0x1
+	030100 Address          =0x2AD
+	030150 Flags            =0x0
+	030200 BitNumber        =0x1
+%%END%%
+
+%%FLAG%%
+	000002 UniqueID         =0x5078
+	000003 BaseFlags        =0x0
+	030005 Title            ="Fault Code 12 13 14 15 21 22 23 24 - Bit 0 - FC 24"
+	030011 DescSize         =0x100
+	030010 Desc             =""
+	030050 SizeInBits       =0x1
+	030100 Address          =0x2AD
+	030150 Flags            =0x0
+	030200 BitNumber        =0x0
+%%END%%
+
+%%FLAG%%
+	000002 UniqueID         =0x5079
+	000003 BaseFlags        =0x0
+	030005 Title            ="Fault Code 25 31 32 33 34 35 41 42 - Bit 7 - FC 25"
+	030011 DescSize         =0x100
+	030010 Desc             =""
+	030050 SizeInBits       =0x1
+	030100 Address          =0x2AE
+	030150 Flags            =0x0
+	030200 BitNumber        =0x7
+%%END%%
+
+%%FLAG%%
+	000002 UniqueID         =0x507A
+	000003 BaseFlags        =0x0
+	030005 Title            ="Fault Code 25 31 32 33 34 35 41 42 - Bit 6 - FC 31"
+	030011 DescSize         =0x100
+	030010 Desc             =""
+	030050 SizeInBits       =0x1
+	030100 Address          =0x2AE
+	030150 Flags            =0x0
+	030200 BitNumber        =0x6
+%%END%%
+
+%%FLAG%%
+	000002 UniqueID         =0x507B
+	000003 BaseFlags        =0x0
+	030005 Title            ="Fault Code 25 31 32 33 34 35 41 42 - Bit 5 - FC 32"
+	030011 DescSize         =0x100
+	030010 Desc             =""
+	030050 SizeInBits       =0x1
+	030100 Address          =0x2AE
+	030150 Flags            =0x0
+	030200 BitNumber        =0x5
+%%END%%
+
+%%FLAG%%
+	000002 UniqueID         =0x507C
+	000003 BaseFlags        =0x0
+	030005 Title            ="Fault Code 25 31 32 33 34 35 41 42 - Bit 4 - FC 33"
+	030011 DescSize         =0x100
+	030010 Desc             =""
+	030050 SizeInBits       =0x1
+	030100 Address          =0x2AE
+	030150 Flags            =0x0
+	030200 BitNumber        =0x4
+%%END%%
+
+%%FLAG%%
+	000002 UniqueID         =0x507D
+	000003 BaseFlags        =0x0
+	030005 Title            ="Fault Code 25 31 32 33 34 35 41 42 - Bit 3 - FC 34"
+	030011 DescSize         =0x100
+	030010 Desc             =""
+	030050 SizeInBits       =0x1
+	030100 Address          =0x2AE
+	030150 Flags            =0x0
+	030200 BitNumber        =0x3
+%%END%%
+
+%%FLAG%%
+	000002 UniqueID         =0x507E
+	000003 BaseFlags        =0x0
+	030005 Title            ="Fault Code 25 31 32 33 34 35 41 42 - Bit 2 - FC 35"
+	030011 DescSize         =0x100
+	030010 Desc             =""
+	030050 SizeInBits       =0x1
+	030100 Address          =0x2AE
+	030150 Flags            =0x0
+	030200 BitNumber        =0x2
+%%END%%
+
+%%FLAG%%
+	000002 UniqueID         =0x507F
+	000003 BaseFlags        =0x0
+	030005 Title            ="Fault Code 25 31 32 33 34 35 41 42 - Bit 1 - FC 41"
+	030011 DescSize         =0x100
+	030010 Desc             =""
+	030050 SizeInBits       =0x1
+	030100 Address          =0x2AE
+	030150 Flags            =0x0
+	030200 BitNumber        =0x1
+%%END%%
+
+%%FLAG%%
+	000002 UniqueID         =0x5080
+	000003 BaseFlags        =0x0
+	030005 Title            ="Fault Code 25 31 32 33 34 35 41 42 - Bit 0 - FC 42"
+	030011 DescSize         =0x100
+	030010 Desc             =""
+	030050 SizeInBits       =0x1
+	030100 Address          =0x2AE
+	030150 Flags            =0x0
+	030200 BitNumber        =0x0
+%%END%%
+
+%%FLAG%%
+	000002 UniqueID         =0x5081
+	000003 BaseFlags        =0x0
+	030005 Title            ="Fault Code 43 44 45 51 52 53 54 55 - Bit 7 - FC 43"
+	030011 DescSize         =0x100
+	030010 Desc             =""
+	030050 SizeInBits       =0x1
+	030100 Address          =0x2AF
+	030150 Flags            =0x0
+	030200 BitNumber        =0x7
+%%END%%
+
+%%FLAG%%
+	000002 UniqueID         =0x5082
+	000003 BaseFlags        =0x0
+	030005 Title            ="Fault Code 43 44 45 51 52 53 54 55 - Bit 6 - FC 44"
+	030011 DescSize         =0x100
+	030010 Desc             =""
+	030050 SizeInBits       =0x1
+	030100 Address          =0x2AF
+	030150 Flags            =0x0
+	030200 BitNumber        =0x6
+%%END%%
+
+%%FLAG%%
+	000002 UniqueID         =0x5083
+	000003 BaseFlags        =0x0
+	030005 Title            ="Fault Code 43 44 45 51 52 53 54 55 - Bit 5 - FC 45"
+	030011 DescSize         =0x100
+	030010 Desc             =""
+	030050 SizeInBits       =0x1
+	030100 Address          =0x2AF
+	030150 Flags            =0x0
+	030200 BitNumber        =0x5
+%%END%%
+
+%%FLAG%%
+	000002 UniqueID         =0x5084
+	000003 BaseFlags        =0x0
+	030005 Title            ="Fault Code 43 44 45 51 52 53 54 55 - Bit 4 - FC 51"
+	030011 DescSize         =0x100
+	030010 Desc             =""
+	030050 SizeInBits       =0x1
+	030100 Address          =0x2AF
+	030150 Flags            =0x0
+	030200 BitNumber        =0x4
+%%END%%
+
+%%FLAG%%
+	000002 UniqueID         =0x5085
+	000003 BaseFlags        =0x0
+	030005 Title            ="Fault Code 43 44 45 51 52 53 54 55 - Bit 3 - FC 52"
+	030011 DescSize         =0x100
+	030010 Desc             =""
+	030050 SizeInBits       =0x1
+	030100 Address          =0x2AF
+	030150 Flags            =0x0
+	030200 BitNumber        =0x3
+%%END%%
+
+%%FLAG%%
+	000002 UniqueID         =0x5086
+	000003 BaseFlags        =0x0
+	030005 Title            ="Fault Code 43 44 45 51 52 53 54 55 - Bit 2 - FC 53"
+	030011 DescSize         =0x100
+	030010 Desc             =""
+	030050 SizeInBits       =0x1
+	030100 Address          =0x2AF
+	030150 Flags            =0x0
+	030200 BitNumber        =0x2
+%%END%%
+
+%%FLAG%%
+	000002 UniqueID         =0x5087
+	000003 BaseFlags        =0x0
+	030005 Title            ="Fault Code 43 44 45 51 52 53 54 55 - Bit 1 - FC 54"
+	030011 DescSize         =0x100
+	030010 Desc             =""
+	030050 SizeInBits       =0x1
+	030100 Address          =0x2AF
+	030150 Flags            =0x0
+	030200 BitNumber        =0x1
+%%END%%
+
+%%FLAG%%
+	000002 UniqueID         =0x5091
+	000003 BaseFlags        =0x0
+	030005 Title            ="Fault Code 43 44 45 51 52 53 54 55 - Bit 0 - FC 55"
+	030011 DescSize         =0x100
+	030010 Desc             =""
+	030050 SizeInBits       =0x1
+	030100 Address          =0x2AF
+	030150 Flags            =0x0
+	030200 BitNumber        =0x0
+%%END%%
+
+%%TABLE%%
+	000002 UniqueID         =0x5092
+	000003 BaseFlags        =0x0
+	040005 Title            ="DGN M21 M22 TPS DEF"
+	040011 DescSize         =0x100
+	040010 Desc             =""
+	040050 SizeInBits       =0x8
+	040100 Address          =0x21
+	040150 Flags            =0x0
+	040200 Equation         =0.390625 * X + 0.000000,TH|0|0|0|0|
+	040205 OutType          =0x1
+	040210 DecimalPl        =0x2
+	040300 Rows             =0x6
+	040305 Cols             =0x1
+	040310 PopByCol         =0x0
+	040320 XUnits           ="% TPS"
+	040325 YUnits           ="RPM"
+	040330 ZUnits           =""
+	040350 XLabels          =
+	040352 XLabelType       =0x4
+	040354 XLabelEq         =(null)
+	040356 XLabelParam      =0x0
+	040360 YLabels          = 1000, 1800, 2600, 3400, 4200, 5000
+	040362 YLabelType       =0x4
+	040364 YLabelEq         =(null)
+	040366 YLabelParam      =0x0
+%%END%%
+
+%%TABLE%%
+	000002 UniqueID         =0x5093
+	000003 BaseFlags        =0x0
+	040005 Title            ="SPK RTD RPM IDX "
+	040011 DescSize         =0x100
+	040010 Desc             =""
+	040050 SizeInBits       =0x8
+	040100 Address          =0x50
+	040150 Flags            =0x0
+	040200 Equation         =1.000000 * X + 0.000000,TH|0|0|0|0|
+	040205 OutType          =0x1
+	040210 DecimalPl        =0x2
+	040300 Rows             =0x6
+	040305 Cols             =0x1
+	040310 PopByCol         =0x0
+	040320 XUnits           ="Index"
+	040325 YUnits           ="GEAR"
+	040330 ZUnits           =""
+	040350 XLabels          =
+	040352 XLabelType       =0x4
+	040354 XLabelEq         =(null)
+	040356 XLabelParam      =0x0
+	040360 YLabels          =    0,    1,    2,    3,    4,    5
+	040362 YLabelType       =0x4
+	040364 YLabelEq         =(null)
+	040366 YLabelParam      =0x0
+%%END%%
+
+%%TABLE%%
+	000002 UniqueID         =0x5094
+	000003 BaseFlags        =0x0
+	040005 Title            ="SPK RTD RPM SCFA"
+	040011 DescSize         =0x100
+	040010 Desc             =""
+	040050 SizeInBits       =0x8
+	040100 Address          =0x56
+	040150 Flags            =0x0
+	040200 Equation         =0.014063 * X + 0.000000,TH|0|0|0|0|
+	040205 OutType          =0x1
+	040210 DecimalPl        =0x2
+	040300 Rows             =0x6
+	040305 Cols             =0x1
+	040310 PopByCol         =0x0
+	040320 XUnits           ="Index"
+	040325 YUnits           ="GEAR"
+	040330 ZUnits           =""
+	040350 XLabels          =
+	040352 XLabelType       =0x4
+	040354 XLabelEq         =(null)
+	040356 XLabelParam      =0x0
+	040360 YLabels          =    0,    1,    2,    3,    4,    5
+	040362 YLabelType       =0x4
+	040364 YLabelEq         =(null)
+	040366 YLabelParam      =0x0
+%%END%%
+
+%%TABLE%%
+	000002 UniqueID         =0x5095
+	000003 BaseFlags        =0x0
+	040005 Title            ="SPK RTD RPM SCFD"
+	040011 DescSize         =0x100
+	040010 Desc             =""
+	040050 SizeInBits       =0x8
+	040100 Address          =0x5F
+	040150 Flags            =0x0
+	040200 Equation         =0.014063 * X + 0.000000,TH|0|0|0|0|
+	040205 OutType          =0x1
+	040210 DecimalPl        =0x2
+	040300 Rows             =0x6
+	040305 Cols             =0x1
+	040310 PopByCol         =0x0
+	040320 XUnits           ="Index"
+	040325 YUnits           ="GEAR"
+	040330 ZUnits           =""
+	040350 XLabels          =
+	040352 XLabelType       =0x4
+	040354 XLabelEq         =(null)
+	040356 XLabelParam      =0x0
+	040360 YLabels          =    0,    1,    2,    3,    4,    5
+	040362 YLabelType       =0x4
+	040364 YLabelEq         =(null)
+	040366 YLabelParam      =0x0
+%%END%%
+
+%%TABLE%%
+	000002 UniqueID         =0x5096
+	000003 BaseFlags        =0x0
+	040005 Title            ="SPK EST GR SPK "
+	040011 DescSize         =0x100
+	040010 Desc             =""
+	040050 SizeInBits       =0x8
+	040100 Address          =0x71
+	040150 Flags            =0x0
+	040200 Equation         =0.351562 * X + 0.000000,TH|0|0|0|0|
+	040205 OutType          =0x1
+	040210 DecimalPl        =0x2
+	040300 Rows             =0x8
+	040305 Cols             =0x11
+	040310 PopByCol         =0x0
+	040320 XUnits           ="%10*TPS"
+	040325 YUnits           ="RPM"
+	040330 ZUnits           =""
+	040350 XLabels          =  0, 16, 31, 47, 63, 78, 94,109,125,141,156,172,188,203,219,234,250
+	040352 XLabelType       =0x4
+	040354 XLabelEq         =(null)
+	040356 XLabelParam      =0x0
+	040360 YLabels          =  800, 1200, 1600, 2000, 2400, 2800, 3200, 3600
+	040362 YLabelType       =0x4
+	040364 YLabelEq         =(null)
+	040366 YLabelParam      =0x0
+%%END%%
+
+%%TABLE%%
+	000002 UniqueID         =0x5097
+	000003 BaseFlags        =0x0
+	040005 Title            ="SPK RTDGR SPK DELAY "
+	040011 DescSize         =0x100
+	040010 Desc             =""
+	040050 SizeInBits       =0x8
+	040100 Address          =0xF9
+	040150 Flags            =0x0
+	040200 Equation         =0.351562 * X + 0.000000,TH|0|0|0|0|
+	040205 OutType          =0x1
+	040210 DecimalPl        =0x2
+	040300 Rows             =0x9
+	040305 Cols             =0x1
+	040310 PopByCol         =0x0
+	040320 XUnits           ="Degrees"
+	040325 YUnits           ="TPS"
+	040330 ZUnits           =""
+	040350 XLabels          =
+	040352 XLabelType       =0x4
+	040354 XLabelEq         =(null)
+	040356 XLabelParam      =0x0
+	040360 YLabels          =    0,   13,   25,   38,   50,   63,   75,   88,  100
+	040362 YLabelType       =0x4
+	040364 YLabelEq         =(null)
+	040366 YLabelParam      =0x0
+%%END%%
+
+%%TABLE%%
+	000002 UniqueID         =0x5098
+	000003 BaseFlags        =0x0
+	040005 Title            ="SPK EST IAC ADV"
+	040011 DescSize         =0x100
+	040010 Desc             =""
+	040050 SizeInBits       =0x8
+	040100 Address          =0x106
+	040150 Flags            =0x0
+	040200 Equation         =0.351562 * X + 0.000000,TH|0|0|0|0|
+	040205 OutType          =0x1
+	040210 DecimalPl        =0x2
+	040300 Rows             =0xB
+	040305 Cols             =0x1
+	040310 PopByCol         =0x0
+	040320 XUnits           ="Degrees"
+	040325 YUnits           ="kpa"
+	040330 ZUnits           =""
+	040350 XLabels          =
+	040352 XLabelType       =0x4
+	040354 XLabelEq         =(null)
+	040356 XLabelParam      =0x0
+	040360 YLabels          =   20,   30,   40,   50,   60,   70,   80,   85,   90,   95,  100
+	040362 YLabelType       =0x4
+	040364 YLabelEq         =(null)
+	040366 YLabelParam      =0x0
+%%END%%
+
+%%TABLE%%
+	000002 UniqueID         =0x5099
+	000003 BaseFlags        =0x0
+	040005 Title            ="SPK EST MAIN ADV [degrees]"
+	040011 DescSize         =0x100
+	040010 Desc             =""
+	040050 SizeInBits       =0x8
+	040100 Address          =0x114
+	040150 Flags            =0x0
+	040200 Equation         =0.351562 * X + 0.000000,TH|0|0|0|0|
+	040205 OutType          =0x1
+	040210 DecimalPl        =0x2
+	040300 Rows             =0xC
+	040305 Cols             =0xB
+	040310 PopByCol         =0x0
+	040320 XUnits           ="kpa"
+	040325 YUnits           ="RPM"
+	040330 ZUnits           =""
+	040350 XLabels          = 20, 30, 40, 50, 60, 70, 80, 85, 90, 95,100
+	040352 XLabelType       =0x4
+	040354 XLabelEq         =(null)
+	040356 XLabelParam      =0x0
+	040360 YLabels          =  400,  800, 1200, 1600, 2000, 2400, 2800, 3200, 3600, 4000, 4400, 4800
+	040362 YLabelType       =0x4
+	040364 YLabelEq         =(null)
+	040366 YLabelParam      =0x0
+%%END%%
+
+%%TABLE%%
+	000002 UniqueID         =0x509A
+	000003 BaseFlags        =0x0
+	040005 Title            ="SPK EST CLT CRN [degrees]"
+	040011 DescSize         =0x100
+	040010 Desc             =""
+	040050 SizeInBits       =0x8
+	040100 Address          =0x19B
+	040150 Flags            =0x0
+	040200 Equation         =0.351562 * X + 0.000000,TH|0|0|0|0|
+	040205 OutType          =0x1
+	040210 DecimalPl        =0x2
+	040300 Rows             =0xC
+	040305 Cols             =0x5
+	040310 PopByCol         =0x0
+	040320 XUnits           ="kpa"
+	040325 YUnits           ="DEG C"
+	040330 ZUnits           =""
+	040350 XLabels          = 60, 70, 80, 90,100
+	040352 XLabelType       =0x4
+	040354 XLabelEq         =(null)
+	040356 XLabelParam      =0x0
+	040360 YLabels          =  -10,    2,   14,   26,   38,   50,   62,   74,   86,   98,  110,  122
+	040362 YLabelType       =0x4
+	040364 YLabelEq         =(null)
+	040366 YLabelParam      =0x0
+%%END%%
+
+%%TABLE%%
+	000002 UniqueID         =0x509B
+	000003 BaseFlags        =0x0
+	040005 Title            ="SPK EST ERG ADV [degrees]"
+	040011 DescSize         =0x100
+	040010 Desc             =""
+	040050 SizeInBits       =0x8
+	040100 Address          =0x1DA
+	040150 Flags            =0x0
+	040200 Equation         =1.000000 * X + 0.000000,TH|0|0|0|0|
+	040205 OutType          =0x1
+	040210 DecimalPl        =0x2
+	040300 Rows             =0xB
+	040305 Cols             =0xF
+	040310 PopByCol         =0x0
+	040320 XUnits           ="VAC"
+	040325 YUnits           ="RPM"
+	040330 ZUnits           =""
+	040350 XLabels          =  0,  3,  5,  8, 10, 13, 15, 18, 20, 30, 40, 50, 60, 70, 80
+	040352 XLabelType       =0x4
+	040354 XLabelEq         =(null)
+	040356 XLabelParam      =0x0
+	040360 YLabels          =  800, 1200, 1600, 2000, 2400, 2800, 3200, 3600, 4000, 4400, 4800
+	040362 YLabelType       =0x4
+	040364 YLabelEq         =(null)
+	040366 YLabelParam      =0x0
+%%END%%
+
+%%TABLE%%
+	000002 UniqueID         =0x509C
+	000003 BaseFlags        =0x0
+	040005 Title            ="SPK ESC ATK RAT"
+	040011 DescSize         =0x100
+	040010 Desc             =""
+	040050 SizeInBits       =0x8
+	040100 Address          =0x27F
+	040150 Flags            =0x0
+	040200 Equation         =0.001367 * X + 0.000000,TH|0|0|0|0|
+	040205 OutType          =0x1
+	040210 DecimalPl        =0x2
+	040300 Rows             =0x4
+	040305 Cols             =0x1
+	040310 PopByCol         =0x0
+	040320 XUnits           ="Deg/CNT"
+	040325 YUnits           ="RPM"
+	040330 ZUnits           =""
+	040350 XLabels          =
+	040352 XLabelType       =0x4
+	040354 XLabelEq         =(null)
+	040356 XLabelParam      =0x0
+	040360 YLabels          =  400, 2000, 3600, 5200
+	040362 YLabelType       =0x4
+	040364 YLabelEq         =(null)
+	040366 YLabelParam      =0x0
+%%END%%
+
+%%TABLE%%
+	000002 UniqueID         =0x509D
+	000003 BaseFlags        =0x0
+	040005 Title            ="SPK ESC RCV RAT"
+	040011 DescSize         =0x100
+	040010 Desc             =""
+	040050 SizeInBits       =0x8
+	040100 Address          =0x283
+	040150 Flags            =0x0
+	040200 Equation         =1.953120 * X + 0.000000,TH|0|0|0|0|
+	040205 OutType          =0x1
+	040210 DecimalPl        =0x2
+	040300 Rows             =0x4
+	040305 Cols             =0x1
+	040310 PopByCol         =0x0
+	040320 XUnits           ="% per msec"
+	040325 YUnits           ="RPM"
+	040330 ZUnits           =""
+	040350 XLabels          =
+	040352 XLabelType       =0x4
+	040354 XLabelEq         =(null)
+	040356 XLabelParam      =0x0
+	040360 YLabels          =  400, 2000, 3600, 5200
+	040362 YLabelType       =0x4
+	040364 YLabelEq         =(null)
+	040366 YLabelParam      =0x0
+%%END%%
+
+%%TABLE%%
+	000002 UniqueID         =0x509E
+	000003 BaseFlags        =0x0
+	040005 Title            ="SPK EST ALT CMP"
+	040011 DescSize         =0x100
+	040010 Desc             =""
+	040050 SizeInBits       =0x8
+	040100 Address          =0x28A
+	040150 Flags            =0x0
+	040200 Equation         =1.000000 * X + 0.000000,TH|0|0|0|0|
+	040205 OutType          =0x1
+	040210 DecimalPl        =0x2
+	040300 Rows             =0x2
+	040305 Cols             =0x6
+	040310 PopByCol         =0x0
+	040320 XUnits           ="VAC"
+	040325 YUnits           ="Baro"
+	040330 ZUnits           =""
+	040350 XLabels          = 25, 20, 15, 10,  5,  0
+	040352 XLabelType       =0x4
+	040354 XLabelEq         =(null)
+	040356 XLabelParam      =0x0
+	040360 YLabels          =   80,  100
+	040362 YLabelType       =0x4
+	040364 YLabelEq         =(null)
+	040366 YLabelParam      =0x0
+%%END%%
+
+%%TABLE%%
+	000002 UniqueID         =0x509F
+	000003 BaseFlags        =0x0
+	040005 Title            ="VAR BAR BAR OFS"
+	040011 DescSize         =0x100
+	040010 Desc             =""
+	040050 SizeInBits       =0x8
+	040100 Address          =0x29B
+	040150 Flags            =0x0
+	040200 Equation         =0.369000 * X + 0.000000,TH|0|0|0|0|
+	040205 OutType          =0x1
+	040210 DecimalPl        =0x2
+	040300 Rows             =0x3
+	040305 Cols             =0x6
+	040310 PopByCol         =0x0
+	040320 XUnits           ="% TPS"
+	040325 YUnits           ="RPM"
+	040330 ZUnits           =""
+	040350 XLabels          = 38, 50, 63, 75, 88,100
+	040352 XLabelType       =0x4
+	040354 XLabelEq         =(null)
+	040356 XLabelParam      =0x0
+	040360 YLabels          = 1200, 2400, 3600
+	040362 YLabelType       =0x4
+	040364 YLabelEq         =(null)
+	040366 YLabelParam      =0x0
+%%END%%
+
+%%TABLE%%
+	000002 UniqueID         =0x50A0
+	000003 BaseFlags        =0x0
+	040005 Title            ="OUT LIT RPM THR"
+	040011 DescSize         =0x100
+	040010 Desc             =""
+	040050 SizeInBits       =0x8
+	040100 Address          =0x305
+	040150 Flags            =0x0
+	040200 Equation         =25.000000 * X + 0.000000,TH|0|0|0|0|
+	040205 OutType          =0x1
+	040210 DecimalPl        =0x2
+	040300 Rows             =0x5
+	040305 Cols             =0x1
+	040310 PopByCol         =0x0
+	040320 XUnits           ="RPM"
+	040325 YUnits           ="TPS"
+	040330 ZUnits           =""
+	040350 XLabels          =
+	040352 XLabelType       =0x4
+	040354 XLabelEq         =(null)
+	040356 XLabelParam      =0x0
+	040360 YLabels          =    0,   25,   50,   75,  100
+	040362 YLabelType       =0x4
+	040364 YLabelEq         =(null)
+	040366 YLabelParam      =0x0
+%%END%%
+
+%%TABLE%%
+	000002 UniqueID         =0x50A1
+	000003 BaseFlags        =0x0
+	040005 Title            ="OUT TCC ULK TPS A "
+	040011 DescSize         =0x100
+	040010 Desc             =""
+	040050 SizeInBits       =0x8
+	040100 Address          =0x316
+	040150 Flags            =0x0
+	040200 Equation         =0.390625 * X + 0.000000,TH|0|0|0|0|
+	040205 OutType          =0x1
+	040210 DecimalPl        =0x2
+	040300 Rows             =0xB
+	040305 Cols             =0x1
+	040310 PopByCol         =0x0
+	040320 XUnits           ="% TPS"
+	040325 YUnits           ="KPH"
+	040330 ZUnits           =""
+	040350 XLabels          =
+	040352 XLabelType       =0x4
+	040354 XLabelEq         =(null)
+	040356 XLabelParam      =0x0
+	040360 YLabels          =   32,   40,   48,   56,   64,   72,   80,   88,   96,  104,  112
+	040362 YLabelType       =0x4
+	040364 YLabelEq         =(null)
+	040366 YLabelParam      =0x0
+%%END%%
+
+%%TABLE%%
+	000002 UniqueID         =0x50A2
+	000003 BaseFlags        =0x0
+	040005 Title            ="OUT TCC LOK TPS A "
+	040011 DescSize         =0x100
+	040010 Desc             =""
+	040050 SizeInBits       =0x8
+	040100 Address          =0x321
+	040150 Flags            =0x0
+	040200 Equation         =0.390625 * X + 0.000000,TH|0|0|0|0|
+	040205 OutType          =0x1
+	040210 DecimalPl        =0x2
+	040300 Rows             =0xB
+	040305 Cols             =0x1
+	040310 PopByCol         =0x0
+	040320 XUnits           ="% TPS"
+	040325 YUnits           ="KPH"
+	040330 ZUnits           =""
+	040350 XLabels          =
+	040352 XLabelType       =0x4
+	040354 XLabelEq         =(null)
+	040356 XLabelParam      =0x0
+	040360 YLabels          =   32,   40,   48,   56,   64,   72,   80,   88,   96,  104,  112
+	040362 YLabelType       =0x4
+	040364 YLabelEq         =(null)
+	040366 YLabelParam      =0x0
+%%END%%
+
+%%TABLE%%
+	000002 UniqueID         =0x50A3
+	000003 BaseFlags        =0x0
+	040005 Title            ="VAR OXY Q"
+	040011 DescSize         =0x100
+	040010 Desc             =""
+	040050 SizeInBits       =0x8
+	040100 Address          =0x382
+	040150 Flags            =0x0
+	040200 Equation         =0.390625 * X + 0.000000,TH|0|0|0|0|
+	040205 OutType          =0x1
+	040210 DecimalPl        =0x2
+	040300 Rows             =0x4
+	040305 Cols             =0x4
+	040310 PopByCol         =0x0
+	040320 XUnits           ="kPa"
+	040325 YUnits           ="RPM"
+	040330 ZUnits           =""
+	040350 XLabels          = 30, 40, 50, 60
+	040352 XLabelType       =0x4
+	040354 XLabelEq         =(null)
+	040356 XLabelParam      =0x0
+	040360 YLabels          =  800, 1600, 2400, 3200
+	040362 YLabelType       =0x4
+	040364 YLabelEq         =(null)
+	040366 YLabelParam      =0x0
+%%END%%
+
+%%TABLE%%
+	000002 UniqueID         =0x50A4
+	000003 BaseFlags        =0x0
+	040005 Title            ="FUL RUN INJ BIAS BAT"
+	040011 DescSize         =0x100
+	040010 Desc             =""
+	040050 SizeInBits       =0x8
+	040100 Address          =0x392
+	040150 Flags            =0x0
+	040200 Equation         =0.015259 * X + 0.000000,TH|0|0|0|0|
+	040205 OutType          =0x1
+	040210 DecimalPl        =0x2
+	040300 Rows             =0x8
+	040305 Cols             =0x1
+	040310 PopByCol         =0x0
+	040320 XUnits           ="msec "
+	040325 YUnits           ="volt"
+	040330 ZUnits           =""
+	040350 XLabels          =
+	040352 XLabelType       =0x4
+	040354 XLabelEq         =(null)
+	040356 XLabelParam      =0x0
+	040360 YLabels          =  4.8,  6.4,  8.0,  9.6, 11.2, 12.8, 14.4, 16.0
+	040362 YLabelType       =0x4
+	040364 YLabelEq         =(null)
+	040366 YLabelParam      =0x0
+%%END%%
+
+%%TABLE%%
+	000002 UniqueID         =0x50A5
+	000003 BaseFlags        =0x0
+	040005 Title            ="FUL RUN LIN INJ BIAS"
+	040011 DescSize         =0x100
+	040010 Desc             =""
+	040050 SizeInBits       =0x8
+	040100 Address          =0x39A
+	040150 Flags            =0x0
+	040200 Equation         =0.015259 * X + 0.000000,TH|0|0|0|0|
+	040205 OutType          =0x1
+	040210 DecimalPl        =0x2
+	040300 Rows             =0x11
+	040305 Cols             =0x1
+	040310 PopByCol         =0x0
+	040320 XUnits           ="msec "
+	040325 YUnits           ="msec"
+	040330 ZUnits           =""
+	040350 XLabels          =
+	040352 XLabelType       =0x4
+	040354 XLabelEq         =(null)
+	040356 XLabelParam      =0x0
+	040360 YLabels          =  0.0,  0.2,  0.5,  0.7,  1.0,  1.2,  1.5,  1.7,  2.0,  2.2,  2.4,  2.7,  2.9,  3.2,  3.4,  3.7,  3.9
+	040362 YLabelType       =0x4
+	040364 YLabelEq         =(null)
+	040366 YLabelParam      =0x0
+%%END%%
+
+%%TABLE%%
+	000002 UniqueID         =0x50A6
+	000003 BaseFlags        =0x0
+	040005 Title            ="FUL RUN EGR BPC [l-sec/g]"
+	040011 DescSize         =0x100
+	040010 Desc             =""
+	040050 SizeInBits       =0x8
+	040100 Address          =0x3AE
+	040150 Flags            =0x0
+	040200 Equation         =0.000930 * X + 0.000000,TH|0|0|0|0|
+	040205 OutType          =0x1
+	040210 DecimalPl        =0x2
+	040300 Rows             =0xB
+	040305 Cols             =0xF
+	040310 PopByCol         =0x0
+	040320 XUnits           ="vac "
+	040325 YUnits           ="RPM"
+	040330 ZUnits           =""
+	040350 XLabels          =  0,  3,  5,  8, 10, 13, 15, 18, 20, 30, 40, 50, 60, 70, 80
+	040352 XLabelType       =0x4
+	040354 XLabelEq         =(null)
+	040356 XLabelParam      =0x0
+	040360 YLabels          =  800, 1200, 1600, 2000, 2400, 2800, 3200, 3600, 4000, 4400, 4800
+	040362 YLabelType       =0x4
+	040364 YLabelEq         =(null)
+	040366 YLabelParam      =0x0
+%%END%%
+
+%%TABLE%%
+	000002 UniqueID         =0x50A7
+	000003 BaseFlags        =0x0
+	040005 Title            ="FUL RUN VE [%]"
+	040011 DescSize         =0x100
+	040010 Desc             =""
+	040050 SizeInBits       =0x8
+	040100 Address          =0x456
+	040150 Flags            =0x0
+	040200 Equation         =0.390625 * X + 0.000000,TH|0|0|0|0|
+	040205 OutType          =0x1
+	040210 DecimalPl        =0x2
+	040300 Rows             =0x11
+	040305 Cols             =0x9
+	040310 PopByCol         =0x0
+	040320 XUnits           ="kpa"
+	040325 YUnits           ="RPM"
+	040330 ZUnits           =""
+	040350 XLabels          = 20, 30, 40, 50, 60, 70, 80, 90,100
+	040352 XLabelType       =0x4
+	040354 XLabelEq         =(null)
+	040356 XLabelParam      =0x0
+	040360 YLabels          =  400,  600,  800, 1200, 1600, 2000, 2400, 2800, 3200, 3600, 4000, 4400, 4800, 5200, 5600, 6400, 7200
+	040362 YLabelType       =0x4
+	040364 YLabelEq         =(null)
+	040366 YLabelParam      =0x0
+%%END%%
+
+%%TABLE%%
+	000002 UniqueID         =0x50A8
+	000003 BaseFlags        =0x0
+	040005 Title            ="VAR CAT INV CAT"
+	040011 DescSize         =0x100
+	040010 Desc             =""
+	040050 SizeInBits       =0x8
+	040100 Address          =0x4EF
+	040150 Flags            =0x0
+	040200 Equation         =50000.000000 / X + 0.000000,TH|0|0|0|0|
+	040205 OutType          =0x1
+	040210 DecimalPl        =0x2
+	040300 Rows             =0x11
+	040305 Cols             =0x1
+	040310 PopByCol         =0x0
+	040320 XUnits           ="1/deg K"
+	040325 YUnits           ="Deg C"
+	040330 ZUnits           =""
+	040350 XLabels          =
+	040352 XLabelType       =0x4
+	040354 XLabelEq         =(null)
+	040356 XLabelParam      =0x0
+	040360 YLabels          =  152,  140,  128,  116,  104,   92,   80,   68,   56,   44,   32,   20,    8,   -4,  -16,  -28,  -40
+	040362 YLabelType       =0x4
+	040364 YLabelEq         =(null)
+	040366 YLabelParam      =0x0
+%%END%%
+
+%%TABLE%%
+	000002 UniqueID         =0x50A9
+	000003 BaseFlags        =0x0
+	040005 Title            ="FUL RUN BAT COMP "
+	040011 DescSize         =0x100
+	040010 Desc             =""
+	040050 SizeInBits       =0x8
+	040100 Address          =0x500
+	040150 Flags            =0x0
+	040200 Equation         =0.007843 * X + 0.000000,TH|0|0|0|0|
+	040205 OutType          =0x1
+	040210 DecimalPl        =0x2
+	040300 Rows             =0x8
+	040305 Cols             =0x1
+	040310 PopByCol         =0x0
+	040320 XUnits           ="factor"
+	040325 YUnits           ="volt"
+	040330 ZUnits           =""
+	040350 XLabels          =
+	040352 XLabelType       =0x4
+	040354 XLabelEq         =(null)
+	040356 XLabelParam      =0x0
+	040360 YLabels          =  4.8,  6.4,  8.0,  9.6, 11.2, 12.8, 14.4, 16.0
+	040362 YLabelType       =0x4
+	040364 YLabelEq         =(null)
+	040366 YLabelParam      =0x0
+%%END%%
+
+%%TABLE%%
+	000002 UniqueID         =0x50AA
+	000003 BaseFlags        =0x0
+	040005 Title            ="FUL TDE CLT FAC"
+	040011 DescSize         =0x100
+	040010 Desc             =""
+	040050 SizeInBits       =0x8
+	040100 Address          =0x508
+	040150 Flags            =0x0
+	040200 Equation         =0.031250 * X + 0.000000,TH|0|0|0|0|
+	040205 OutType          =0x1
+	040210 DecimalPl        =0x2
+	040300 Rows             =0xD
+	040305 Cols             =0x1
+	040310 PopByCol         =0x0
+	040320 XUnits           ="fac"
+	040325 YUnits           ="Deg C"
+	040330 ZUnits           =""
+	040350 XLabels          =
+	040352 XLabelType       =0x4
+	040354 XLabelEq         =(null)
+	040356 XLabelParam      =0x0
+	040360 YLabels          =  -28,  -16,   -4,    8,   20,   32,   44,   56,   68,   80,   92,  104,  116
+	040362 YLabelType       =0x4
+	040364 YLabelEq         =(null)
+	040366 YLabelParam      =0x0
+%%END%%
+
+%%TABLE%%
+	000002 UniqueID         =0x50AB
+	000003 BaseFlags        =0x0
+	040005 Title            ="FUL TAE D TPS FAC"
+	040011 DescSize         =0x100
+	040010 Desc             =""
+	040050 SizeInBits       =0x8
+	040100 Address          =0x515
+	040150 Flags            =0x0
+	040200 Equation         =0.390625 * X + 0.000000,TH|0|0|0|0|
+	040205 OutType          =0x1
+	040210 DecimalPl        =0x2
+	040300 Rows             =0x6
+	040305 Cols             =0x1
+	040310 PopByCol         =0x0
+	040320 XUnits           ="TPS"
+	040325 YUnits           ="RPM"
+	040330 ZUnits           =""
+	040350 XLabels          =
+	040352 XLabelType       =0x4
+	040354 XLabelEq         =(null)
+	040356 XLabelParam      =0x0
+	040360 YLabels          =  800, 1600, 2400, 3200, 4000, 4800
+	040362 YLabelType       =0x4
+	040364 YLabelEq         =(null)
+	040366 YLabelParam      =0x0
+%%END%%
+
+%%TABLE%%
+	000002 UniqueID         =0x50AC
+	000003 BaseFlags        =0x0
+	040005 Title            ="FUL TAE CLT FAC"
+	040011 DescSize         =0x100
+	040010 Desc             =""
+	040050 SizeInBits       =0x8
+	040100 Address          =0x51B
+	040150 Flags            =0x0
+	040200 Equation         =0.031250 * X + 0.000000,TH|0|0|0|0|
+	040205 OutType          =0x1
+	040210 DecimalPl        =0x2
+	040300 Rows             =0xD
+	040305 Cols             =0x1
+	040310 PopByCol         =0x0
+	040320 XUnits           ="fac"
+	040325 YUnits           ="Deg C"
+	040330 ZUnits           =""
+	040350 XLabels          =
+	040352 XLabelType       =0x4
+	040354 XLabelEq         =(null)
+	040356 XLabelParam      =0x0
+	040360 YLabels          =  -28,  -16,   -4,    8,   20,   32,   44,   56,   68,   80,   92,  104,  116
+	040362 YLabelType       =0x4
+	040364 YLabelEq         =(null)
+	040366 YLabelParam      =0x0
+%%END%%
+
+%%TABLE%%
+	000002 UniqueID         =0x50AD
+	000003 BaseFlags        =0x0
+	040005 Title            ="FUL TAE DEC FAC"
+	040011 DescSize         =0x100
+	040010 Desc             =""
+	040050 SizeInBits       =0x8
+	040100 Address          =0x528
+	040150 Flags            =0x0
+	040200 Equation         =0.390625 * X + 0.000000,TH|0|0|0|0|
+	040205 OutType          =0x1
+	040210 DecimalPl        =0x2
+	040300 Rows             =0x4
+	040305 Cols             =0x1
+	040310 PopByCol         =0x0
+	040320 XUnits           ="%"
+	040325 YUnits           ="DEG C"
+	040330 ZUnits           =""
+	040350 XLabels          =
+	040352 XLabelType       =0x4
+	040354 XLabelEq         =(null)
+	040356 XLabelParam      =0x0
+	040360 YLabels          =  -28,   20,   68,  116
+	040362 YLabelType       =0x4
+	040364 YLabelEq         =(null)
+	040366 YLabelParam      =0x0
+%%END%%
+
+%%TABLE%%
+	000002 UniqueID         =0x50AE
+	000003 BaseFlags        =0x0
+	040005 Title            ="FUL TDE MAP R"
+	040011 DescSize         =0x100
+	040010 Desc             =""
+	040050 SizeInBits       =0x8
+	040100 Address          =0x52C
+	040150 Flags            =0x0
+	040200 Equation         =0.390625 * X + 0.000000,TH|0|0|0|0|
+	040205 OutType          =0x1
+	040210 DecimalPl        =0x2
+	040300 Rows             =0x4
+	040305 Cols             =0x1
+	040310 PopByCol         =0x0
+	040320 XUnits           ="%"
+	040325 YUnits           ="DEG C"
+	040330 ZUnits           =""
+	040350 XLabels          =
+	040352 XLabelType       =0x4
+	040354 XLabelEq         =(null)
+	040356 XLabelParam      =0x0
+	040360 YLabels          =  -28,   20,   68,  116
+	040362 YLabelType       =0x4
+	040364 YLabelEq         =(null)
+	040366 YLabelParam      =0x0
+%%END%%
+
+%%TABLE%%
+	000002 UniqueID         =0x50AF
+	000003 BaseFlags        =0x0
+	040005 Title            ="FUL RUN AF TIM OUT "
+	040011 DescSize         =0x100
+	040010 Desc             =""
+	040050 SizeInBits       =0x8
+	040100 Address          =0x530
+	040150 Flags            =0x0
+	040200 Equation         =0.100000 * X + 0.000000,TH|0|0|0|0|
+	040205 OutType          =0x1
+	040210 DecimalPl        =0x2
+	040300 Rows             =0xD
+	040305 Cols             =0x1
+	040310 PopByCol         =0x0
+	040320 XUnits           ="AF RATIO"
+	040325 YUnits           ="DEG C"
+	040330 ZUnits           =""
+	040350 XLabels          =
+	040352 XLabelType       =0x4
+	040354 XLabelEq         =(null)
+	040356 XLabelParam      =0x0
+	040360 YLabels          =  -28,  -16,   -4,    8,   20,   32,   44,   56,   68,   80,   92,  104,  116
+	040362 YLabelType       =0x4
+	040364 YLabelEq         =(null)
+	040366 YLabelParam      =0x0
+%%END%%
+
+%%TABLE%%
+	000002 UniqueID         =0x50B0
+	000003 BaseFlags        =0x0
+	040005 Title            ="FUL RUN AF TIM FRQ "
+	040011 DescSize         =0x100
+	040010 Desc             =""
+	040050 SizeInBits       =0x8
+	040100 Address          =0x53D
+	040150 Flags            =0x0
+	040200 Equation         =0.025000 * X + 0.000000,TH|0|0|0|0|
+	040205 OutType          =0x1
+	040210 DecimalPl        =0x2
+	040300 Rows             =0xD
+	040305 Cols             =0x1
+	040310 PopByCol         =0x0
+	040320 XUnits           ="sec"
+	040325 YUnits           ="DEG C"
+	040330 ZUnits           =""
+	040350 XLabels          =
+	040352 XLabelType       =0x4
+	040354 XLabelEq         =(null)
+	040356 XLabelParam      =0x0
+	040360 YLabels          =  -28,  -16,   -4,    8,   20,   32,   44,   56,   68,   80,   92,  104,  116
+	040362 YLabelType       =0x4
+	040364 YLabelEq         =(null)
+	040366 YLabelParam      =0x0
+%%END%%
+
+%%TABLE%%
+	000002 UniqueID         =0x50B1
+	000003 BaseFlags        =0x0
+	040005 Title            ="????????????"
+	040011 DescSize         =0x100
+	040010 Desc             =""
+	040050 SizeInBits       =0x8
+	040100 Address          =0x54A
+	040150 Flags            =0x0
+	040200 Equation         =1.000000 * X + 0.000000,TH|0|0|0|0|
+	040205 OutType          =0x1
+	040210 DecimalPl        =0x2
+	040300 Rows             =0xD
+	040305 Cols             =0x1
+	040310 PopByCol         =0x0
+	040320 XUnits           ="????"
+	040325 YUnits           ="Deg C"
+	040330 ZUnits           =""
+	040350 XLabels          =
+	040352 XLabelType       =0x4
+	040354 XLabelEq         =(null)
+	040356 XLabelParam      =0x0
+	040360 YLabels          =  -28,  -16,   -4,    8,   20,   32,   44,   56,   68,   80,   92,  104,  116
+	040362 YLabelType       =0x4
+	040364 YLabelEq         =(null)
+	040366 YLabelParam      =0x0
+%%END%%
+
+%%TABLE%%
+	000002 UniqueID         =0x50C6
+	000003 BaseFlags        =0x0
+	040005 Title            ="FUL CRK BPW "
+	040011 DescSize         =0x100
+	040010 Desc             =""
+	040050 SizeInBits       =0x8
+	040100 Address          =0x557
+	040150 Flags            =0x0
+	040200 Equation         =0.488281 * X + 0.000000,TH|0|0|0|0|
+	040205 OutType          =0x1
+	040210 DecimalPl        =0x2
+	040300 Rows             =0xD
+	040305 Cols             =0x1
+	040310 PopByCol         =0x0
+	040320 XUnits           ="msec"
+	040325 YUnits           ="Deg C"
+	040330 ZUnits           =""
+	040350 XLabels          =
+	040352 XLabelType       =0x4
+	040354 XLabelEq         =(null)
+	040356 XLabelParam      =0x0
+	040360 YLabels          =  -28,  -16,   -4,    8,   20,   32,   44,   56,   68,   80,   92,  104,  116
+	040362 YLabelType       =0x4
+	040364 YLabelEq         =(null)
+	040366 YLabelParam      =0x0
+%%END%%
+
+%%TABLE%%
+	000002 UniqueID         =0x50C7
+	000003 BaseFlags        =0x0
+	040005 Title            ="FUL RUN COLD AF [AF Ratio] "
+	040011 DescSize         =0x100
+	040010 Desc             =""
+	040050 SizeInBits       =0x8
+	040100 Address          =0x567
+	040150 Flags            =0x0
+	040200 Equation         =0.100000 * X + 0.000000,TH|0|0|0|0|
+	040205 OutType          =0x1
+	040210 DecimalPl        =0x2
+	040300 Rows             =0xD
+	040305 Cols             =0x9
+	040310 PopByCol         =0x0
+	040320 XUnits           ="kpa"
+	040325 YUnits           ="Deg C"
+	040330 ZUnits           =""
+	040350 XLabels          = 20, 30, 40, 50, 60, 70, 80, 90,100
+	040352 XLabelType       =0x4
+	040354 XLabelEq         =(null)
+	040356 XLabelParam      =0x0
+	040360 YLabels          =  -40,  -28,  -16,   -4,    8,   20,   32,   44,   56,   68,   80,   92,  104
+	040362 YLabelType       =0x4
+	040364 YLabelEq         =(null)
+	040366 YLabelParam      =0x0
+%%END%%
+
+%%TABLE%%
+	000002 UniqueID         =0x50C8
+	000003 BaseFlags        =0x0
+	040005 Title            ="FUL IAC AF "
+	040011 DescSize         =0x100
+	040010 Desc             =""
+	040050 SizeInBits       =0x8
+	040100 Address          =0x5DC
+	040150 Flags            =0x0
+	040200 Equation         =0.100000 * X + 0.000000,TH|0|0|0|0|
+	040205 OutType          =0x1
+	040210 DecimalPl        =0x2
+	040300 Rows             =0x7
+	040305 Cols             =0x1
+	040310 PopByCol         =0x0
+	040320 XUnits           ="AF RATIO"
+	040325 YUnits           ="Deg C"
+	040330 ZUnits           =""
+	040350 XLabels          =
+	040352 XLabelType       =0x4
+	040354 XLabelEq         =(null)
+	040356 XLabelParam      =0x0
+	040360 YLabels          =  -28,   -4,   20,   44,   68,   92,  116
+	040362 YLabelType       =0x4
+	040364 YLabelEq         =(null)
+	040366 YLabelParam      =0x0
+%%END%%
+
+%%TABLE%%
+	000002 UniqueID         =0x50C9
+	000003 BaseFlags        =0x0
+	040005 Title            ="FUL RUN RUN AF [AF Ratio] "
+	040011 DescSize         =0x100
+	040010 Desc             =""
+	040050 SizeInBits       =0x8
+	040100 Address          =0x5E6
+	040150 Flags            =0x0
+	040200 Equation         =0.100000 * X + 0.000000,TH|0|0|0|0|
+	040205 OutType          =0x1
+	040210 DecimalPl        =0x2
+	040300 Rows             =0x10
+	040305 Cols             =0x9
+	040310 PopByCol         =0x0
+	040320 XUnits           ="kpa"
+	040325 YUnits           ="RPM"
+	040330 ZUnits           =""
+	040350 XLabels          = 20, 30, 40, 50, 60, 70, 80, 90,100
+	040352 XLabelType       =0x4
+	040354 XLabelEq         =(null)
+	040356 XLabelParam      =0x0
+	040360 YLabels          =  400,  600,  800, 1200, 1600, 2000, 2400, 2800, 3200, 3600, 4000, 4400, 4800, 5200, 5600, 6400
+	040362 YLabelType       =0x4
+	040364 YLabelEq         =(null)
+	040366 YLabelParam      =0x0
+%%END%%
+
+%%TABLE%%
+	000002 UniqueID         =0x50CA
+	000003 BaseFlags        =0x0
+	040005 Title            ="FUL RUN INJ DELAY [%] "
+	040011 DescSize         =0x100
+	040010 Desc             =""
+	040050 SizeInBits       =0x8
+	040100 Address          =0x679
+	040150 Flags            =0x0
+	040200 Equation         =0.390625 * X + 0.000000,TH|0|0|0|0|
+	040205 OutType          =0x1
+	040210 DecimalPl        =0x2
+	040300 Rows             =0x8
+	040305 Cols             =0x9
+	040310 PopByCol         =0x0
+	040320 XUnits           ="TPS"
+	040325 YUnits           ="RPM"
+	040330 ZUnits           =""
+	040350 XLabels          =  0, 13, 25, 38, 50, 63, 75, 88,100
+	040352 XLabelType       =0x4
+	040354 XLabelEq         =(null)
+	040356 XLabelParam      =0x0
+	040360 YLabels          =  400,  800, 1200, 1600, 2000, 2400, 2800, 3200
+	040362 YLabelType       =0x4
+	040364 YLabelEq         =(null)
+	040366 YLabelParam      =0x0
+%%END%%
+
+%%TABLE%%
+	000002 UniqueID         =0x50CB
+	000003 BaseFlags        =0x0
+	040005 Title            ="VAR CLT CAT FRAC [%] "
+	040011 DescSize         =0x100
+	040010 Desc             =""
+	040050 SizeInBits       =0x8
+	040100 Address          =0x6C4
+	040150 Flags            =0x0
+	040200 Equation         =0.390625 * X + 0.000000,TH|0|0|0|0|
+	040205 OutType          =0x1
+	040210 DecimalPl        =0x2
+	040300 Rows             =0x10
+	040305 Cols             =0x9
+	040310 PopByCol         =0x0
+	040320 XUnits           ="kpa"
+	040325 YUnits           ="RPM"
+	040330 ZUnits           =""
+	040350 XLabels          = 20, 30, 40, 50, 60, 70, 80, 90,100
+	040352 XLabelType       =0x4
+	040354 XLabelEq         =(null)
+	040356 XLabelParam      =0x0
+	040360 YLabels          =  400,  600,  800, 1200, 1600, 2000, 2400, 2800, 3200, 3600, 4000, 4400, 4800, 5200, 5600, 6400
+	040362 YLabelType       =0x4
+	040364 YLabelEq         =(null)
+	040366 YLabelParam      =0x0
+%%END%%
+
+%%TABLE%%
+	000002 UniqueID         =0x50CC
+	000003 BaseFlags        =0x0
+	040005 Title            ="IAC WUP INIT POS "
+	040011 DescSize         =0x100
+	040010 Desc             =""
+	040050 SizeInBits       =0x8
+	040100 Address          =0x788
+	040150 Flags            =0x0
+	040200 Equation         =1.000000 * X + 0.000000,TH|0|0|0|0|
+	040205 OutType          =0x1
+	040210 DecimalPl        =0x2
+	040300 Rows             =0xD
+	040305 Cols             =0x1
+	040310 PopByCol         =0x0
+	040320 XUnits           ="Steps"
+	040325 YUnits           ="DEG C"
+	040330 ZUnits           =""
+	040350 XLabels          =
+	040352 XLabelType       =0x4
+	040354 XLabelEq         =(null)
+	040356 XLabelParam      =0x0
+	040360 YLabels          =  -28,  -16,   -4,    8,   20,   32,   44,   56,   68,   80,   92,  104,  116
+	040362 YLabelType       =0x4
+	040364 YLabelEq         =(null)
+	040366 YLabelParam      =0x0
+%%END%%
+
+%%TABLE%%
+	000002 UniqueID         =0x50CD
+	000003 BaseFlags        =0x0
+	040005 Title            ="IAC TRA IAC POS "
+	040011 DescSize         =0x100
+	040010 Desc             =""
+	040050 SizeInBits       =0x8
+	040100 Address          =0x795
+	040150 Flags            =0x0
+	040200 Equation         =1.000000 * X + 0.000000,TH|0|0|0|0|
+	040205 OutType          =0x1
+	040210 DecimalPl        =0x2
+	040300 Rows             =0x4
+	040305 Cols             =0x1
+	040310 PopByCol         =0x0
+	040320 XUnits           ="STEPS"
+	040325 YUnits           ="KPA"
+	040330 ZUnits           =""
+	040350 XLabels          =
+	040352 XLabelType       =0x4
+	040354 XLabelEq         =(null)
+	040356 XLabelParam      =0x0
+	040360 YLabels          =   70,   80,   90,  100
+	040362 YLabelType       =0x4
+	040364 YLabelEq         =(null)
+	040366 YLabelParam      =0x0
+%%END%%
+
+%%TABLE%%
+	000002 UniqueID         =0x50CE
+	000003 BaseFlags        =0x0
+	040005 Title            ="IAC CLP DES RPM DR "
+	040011 DescSize         =0x100
+	040010 Desc             =""
+	040050 SizeInBits       =0x8
+	040100 Address          =0x799
+	040150 Flags            =0x0
+	040200 Equation         =6.250000 * X + 0.000000,TH|0|0|0|0|
+	040205 OutType          =0x1
+	040210 DecimalPl        =0x2
+	040300 Rows             =0x3
+	040305 Cols             =0x1
+	040310 PopByCol         =0x0
+	040320 XUnits           ="RPM"
+	040325 YUnits           ="VOLTS"
+	040330 ZUnits           =""
+	040350 XLabels          =
+	040352 XLabelType       =0x4
+	040354 XLabelEq         =(null)
+	040356 XLabelParam      =0x0
+	040360 YLabels          =  9.6, 11.2, 12.8
+	040362 YLabelType       =0x4
+	040364 YLabelEq         =(null)
+	040366 YLabelParam      =0x0
+%%END%%
+
+%%TABLE%%
+	000002 UniqueID         =0x50CF
+	000003 BaseFlags        =0x0
+	040005 Title            ="IAC CLP DES RPM PN "
+	040011 DescSize         =0x100
+	040010 Desc             =""
+	040050 SizeInBits       =0x8
+	040100 Address          =0x79C
+	040150 Flags            =0x0
+	040200 Equation         =6.250000 * X + 0.000000,TH|0|0|0|0|
+	040205 OutType          =0x1
+	040210 DecimalPl        =0x2
+	040300 Rows             =0x3
+	040305 Cols             =0x1
+	040310 PopByCol         =0x0
+	040320 XUnits           ="RPM"
+	040325 YUnits           ="VOLTS"
+	040330 ZUnits           =""
+	040350 XLabels          =
+	040352 XLabelType       =0x4
+	040354 XLabelEq         =(null)
+	040356 XLabelParam      =0x0
+	040360 YLabels          =  9.6, 11.2, 12.8
+	040362 YLabelType       =0x4
+	040364 YLabelEq         =(null)
+	040366 YLabelParam      =0x0
+%%END%%
+
+%%TABLE%%
+	000002 UniqueID         =0x50D0
+	000003 BaseFlags        =0x0
+	040005 Title            ="IAC CLP DES RPM MN "
+	040011 DescSize         =0x100
+	040010 Desc             =""
+	040050 SizeInBits       =0x8
+	040100 Address          =0x79F
+	040150 Flags            =0x0
+	040200 Equation         =6.250000 * X + 0.000000,TH|0|0|0|0|
+	040205 OutType          =0x1
+	040210 DecimalPl        =0x2
+	040300 Rows             =0x3
+	040305 Cols             =0x1
+	040310 PopByCol         =0x0
+	040320 XUnits           ="RPM"
+	040325 YUnits           ="VOLTS"
+	040330 ZUnits           =""
+	040350 XLabels          =
+	040352 XLabelType       =0x4
+	040354 XLabelEq         =(null)
+	040356 XLabelParam      =0x0
+	040360 YLabels          =  9.6, 11.2, 12.8
+	040362 YLabelType       =0x4
+	040364 YLabelEq         =(null)
+	040366 YLabelParam      =0x0
+%%END%%
+
+%%TABLE%%
+	000002 UniqueID         =0x50D1
+	000003 BaseFlags        =0x0
+	040005 Title            ="IAC WUP DEC TIM "
+	040011 DescSize         =0x100
+	040010 Desc             =""
+	040050 SizeInBits       =0x8
+	040100 Address          =0x7A2
+	040150 Flags            =0x0
+	040200 Equation         =0.200000 * X + 0.000000,TH|0|0|0|0|
+	040205 OutType          =0x1
+	040210 DecimalPl        =0x2
+	040300 Rows             =0xD
+	040305 Cols             =0x1
+	040310 PopByCol         =0x0
+	040320 XUnits           ="sec"
+	040325 YUnits           ="TEMP"
+	040330 ZUnits           =""
+	040350 XLabels          =
+	040352 XLabelType       =0x4
+	040354 XLabelEq         =(null)
+	040356 XLabelParam      =0x0
+	040360 YLabels          =  -28,  -16,   -4,    8,   20,   32,   44,   56,   68,   80,   92,  104,  116
+	040362 YLabelType       =0x4
+	040364 YLabelEq         =(null)
+	040366 YLabelParam      =0x0
+%%END%%
+
+%%TABLE%%
+	000002 UniqueID         =0x50D2
+	000003 BaseFlags        =0x0
+	040005 Title            ="IAC WUP RPM OFS"
+	040011 DescSize         =0x100
+	040010 Desc             =""
+	040050 SizeInBits       =0x8
+	040100 Address          =0x7AF
+	040150 Flags            =0x0
+	040200 Equation         =6.250000 * X + 0.000000,TH|0|0|0|0|
+	040205 OutType          =0x1
+	040210 DecimalPl        =0x2
+	040300 Rows             =0xD
+	040305 Cols             =0x1
+	040310 PopByCol         =0x0
+	040320 XUnits           ="rpm"
+	040325 YUnits           ="TEMP"
+	040330 ZUnits           =""
+	040350 XLabels          =
+	040352 XLabelType       =0x4
+	040354 XLabelEq         =(null)
+	040356 XLabelParam      =0x0
+	040360 YLabels          =  -28,  -16,   -4,    8,   20,   32,   44,   56,   68,   80,   92,  104,  116
+	040362 YLabelType       =0x4
+	040364 YLabelEq         =(null)
+	040366 YLabelParam      =0x0
+%%END%%
+
+%%TABLE%%
+	000002 UniqueID         =0x50D3
+	000003 BaseFlags        =0x0
+	040005 Title            ="IAC TRA IAC STEPS "
+	040011 DescSize         =0x100
+	040010 Desc             =""
+	040050 SizeInBits       =0x8
+	040100 Address          =0x7BC
+	040150 Flags            =0x0
+	040200 Equation         =1.000000 * X + 0.000000,TH|0|0|0|0|
+	040205 OutType          =0x1
+	040210 DecimalPl        =0x2
+	040300 Rows             =0x9
+	040305 Cols             =0x1
+	040310 PopByCol         =0x0
+	040320 XUnits           ="STEPS"
+	040325 YUnits           ="RPM"
+	040330 ZUnits           =""
+	040350 XLabels          =
+	040352 XLabelType       =0x4
+	040354 XLabelEq         =(null)
+	040356 XLabelParam      =0x0
+	040360 YLabels          =,,,,,,,,
+	040362 YLabelType       =0x4
+	040364 YLabelEq         =(null)
+	040366 YLabelParam      =0x0
+%%END%%
+
+%%TABLE%%
+	000002 UniqueID         =0x50D4
+	000003 BaseFlags        =0x0
+	040005 Title            ="IAC TRA IAC MAP  "
+	040011 DescSize         =0x100
+	040010 Desc             =""
+	040050 SizeInBits       =0x8
+	040100 Address          =0x7C5
+	040150 Flags            =0x0
+	040200 Equation         =0.368862 * X + 10.350300,TH|0|0|0|0|
+	040205 OutType          =0x1
+	040210 DecimalPl        =0x2
+	040300 Rows             =0x9
+	040305 Cols             =0x1
+	040310 PopByCol         =0x0
+	040320 XUnits           ="kpa"
+	040325 YUnits           ="RPM"
+	040330 ZUnits           =""
+	040350 XLabels          =
+	040352 XLabelType       =0x4
+	040354 XLabelEq         =(null)
+	040356 XLabelParam      =0x0
+	040360 YLabels          =,,,,,,,,
+	040362 YLabelType       =0x4
+	040364 YLabelEq         =(null)
+	040366 YLabelParam      =0x0
+%%END%%
+

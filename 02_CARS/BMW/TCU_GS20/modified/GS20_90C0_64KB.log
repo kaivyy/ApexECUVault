@@ -1,0 +1,3 @@
+Edit Log for GS20_90C0_64KB.bin created by TunerPro.
+**************************************************************************
+06/11/2025 18:08:29  Scalar:    TCC: Condition1 Vehicle Speed threshold changed from 80 kmh (0x5000) to 30 kmh (0x1E00).

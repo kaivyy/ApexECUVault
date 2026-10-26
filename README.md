@@ -2,10 +2,10 @@
 
 <p align="center">
   <img src="https://img.shields.io/badge/Status-100%25%20Authentic%20Verified-success?style=for-the-badge&logo=shield" alt="Status" />
-  <img src="https://img.shields.io/badge/Binary%20Dumps-3%2C062%20Files-blue?style=for-the-badge&logo=microchip" alt="BIN Dumps" />
+  <img src="https://img.shields.io/badge/Binary%20Dumps-3%2C076%20Files-blue?style=for-the-badge&logo=microchip" alt="BIN Dumps" />
   <img src="https://img.shields.io/badge/TunerPro%20XDF-2%2C451%20Maps-orange?style=for-the-badge&logo=gauge" alt="TunerPro XDFs" />
   <img src="https://img.shields.io/badge/EcuFlash%20XML-1%2C083%20Defs-green?style=for-the-badge&logo=xml" alt="EcuFlash XML" />
-  <img src="https://img.shields.io/badge/Total%20Assets-6%2C596%20Files-purple?style=for-the-badge&logo=database" alt="Total Assets" />
+  <img src="https://img.shields.io/badge/Total%20Assets-6%2C610%20Files-purple?style=for-the-badge&logo=database" alt="Total Assets" />
   <img src="https://img.shields.io/badge/Dossiers-282%20READMEs%20(100%25)-teal?style=for-the-badge&logo=readme" alt="README Coverage" />
 </p>
 
@@ -34,11 +34,11 @@ Whether you are performing standalone dynamometer remapping, reverse engineering
 
 | Asset Category | File Count | Storage Size | Description & Standards |
 | :--- | :---: | :---: | :--- |
-| **📦 Factory Binary Firmware & Dumps** | **3,062** | ~2.5 GB | Raw factory ROMs, Flash, MPC, and EEPROM dumps (`.bin`, `.hex`, `.rwd`, `.ori`, `.mpc`, `.rom`, `.mod`) |
+| **📦 Factory Binary Firmware & Dumps** | **3,076** | ~2.5 GB | Raw factory ROMs, Flash, MPC, and EEPROM dumps (`.bin`, `.hex`, `.rwd`, `.ori`, `.mpc`, `.rom`, `.mod`) |
 | **🗺️ TunerPro Definition Maps** | **2,451** | ~1.6 GB | 2D/3D calibration tables for fuel, ignition, boost target, WGDC, and limiters (`.xdf`, `.ecu`, `.adx`) |
 | **📑 EcuFlash & RomRaider XMLs** | **1,083** | ~45 MB | Standard OpenECU XML definitions with memory offsets and scaling formulas (`.xml`) |
 | **📚 Technical Documentation Dossiers** | **282** | ~8 MB | Comprehensive platform dossiers covering 100% of managed asset folders (`README.md`) |
-| **Total Curated Assets** | **6,596** | **4.18 GB** | Complete verified open-source automotive & motorcycle calibration database |
+| **Total Curated Assets** | **6,610** | **4.19 GB** | Complete verified open-source automotive & motorcycle calibration database |
 
 ---
 

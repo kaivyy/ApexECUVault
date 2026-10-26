@@ -1,35 +1,51 @@
-# 🏎️ Suite Kalibrasi ECU: MCLAREN 720S 4.0L Twin Turbo (2017-2024)
+# 720S 765LT M840T TWIN TURBO - ECU Calibration Suite
 
-Direktori ini memuat file kalibrasi biner firmware (**Original Pabrik** & **Stage 1 Tuned Remap**) beserta file definisi **TunerPro XDF XML** untuk **McLaren 720S 4.0L Twin Turbo**.
-
----
-
-## 📋 Informasi Spesifikasi & Identifikasi
-
-- **Merek / Model**: McLaren 720S 4.0L Twin Turbo
-- **Tahun Produksi**: 2017-2024
-- **Kode Part ECU**: `11A0123CP`
-- **Arsitektur ECU**: McLaren 720S 4.0L Twin-Turbo Flat-Plane M840T V8 (Bosch MED17.8.33 Dual ECU 4MB)
-- **Ukuran Flash ROM**: `4096 KB` (4,194,304 bytes)
-- **Tenaga Pabrik (Stock)**: 720HP (Rev Limit: 8200 RPM | Top Speed Limiter: 341 km/h)
-- **Potensi Stage 1 Remap**: 820HP_900NM_Boost1.7bar (Rev Limit: 8500 RPM | Top Speed Limiter: 360 km/h)
+**Repository Path**: `02_CARS/MCLAREN/720S_765LT_M840T_TWIN_TURBO`  
+**Classification**: `TunerPro Definition Map Suite (XDF Only)`  
+**Total Managed Assets**: `1 files` (0 binary dumps, 1 definition maps)  
 
 ---
 
-## 🗂️ Daftar File dalam Suite Ini
+## 1. Technical Platform Overview
 
-| Tipe File | Nama File | Ukuran | Deskripsi |
-| :--- | :--- | :---: | :--- |
-| **STOCK BIN** | `STOCK_ORIGINAL_11A0123CP_McLaren_720S_4.0L_Twin_Turbo_(2017-2024)_720HP.bin` | 4096 KB | Binary dump firmware asli pabrik murni (*unmodified baseline*). |
-| **REMAP STAGE 1** | `REMAP_STAGE1_11A0123CP_McLaren_720S_4.0L_Twin_Turbo_820HP_900NM_Boost1.7bar.bin` | 4096 KB | Kalibrasi tuning Stage 1 (peningkatan boost, timing pengapian, bukaan throttle, dan limiter). |
-| **TUNERPRO XDF** | `GENERATIONAL_11A0123CP_McLaren_720S_4.0L_Twin_Turbo_(2017-2024).xdf` | ~8-15 KB | Definisi peta TunerPro V5 lengkap dengan sumbu tabel (RPM, Load, Pedal) dan formula konversi. |
+Paket direktori `720S_765LT_M840T_TWIN_TURBO` menyediakan pustaka kalibrasi dan pemetaan ECU profesional yang ditujukan bagi teknisi otomotif, tuner, dan reverse engineer. Berkas di direktori ini mencakup kalibrasi firmware pabrikan (OEM), pembacaan perangkat keras (OBD2/BDM/Bench), serta tabel definisi TunerPro XDF untuk eksplorasi parameter mesin.
+
+### Mengapa Sebagian Berkas Memiliki Nama Berupa Angka / Kode?
+Nama berkas yang tersimpan merefleksikan identitas perangkat keras (Hardware ID), versi perangkat lunak (Software ID), atau nomor kalibrasi pabrikan asli (OEM Calibration ID):
+- **Bosch Part Numbers** (misal `0261xxxxxx`, `1037xxxxxx`): Standar identifikasi universal Bosch untuk ECU Motronic, MED17, EDC16, dan EDC17.
+- **BMW Software IDs** (misal `00005C64xxxxxx`, `10SW002828`): Alamat dan assembly identification number pada modul DME Siemens/Continental/Bosch.
+- **Denso / Toyota Calibration IDs** (misal `89663-xxxxx`): Nomor resmi Toyota Techstream / Denso MCU firmware flash.
+- **Keihin Part Numbers** (misal `37805-xxx-xxxx`, `38770-xxx`): Kode perakitan ECU Honda untuk verifikasi kecocokan checksum dan proteksi immobilizer.
+- **GM OS IDs** (misal `12587603`, `12212156`): Operating system ID kontroler GM Delphi P01/P59.
+
+> [!NOTE]
+> Mempertahankan kode dan nomor asli pabrikan pada penamaan berkas sangat krusial agar perangkat lunak kalibrasi (seperti **TunerPro**, **WinOLS**, atau **RomRaider**) dapat mengenali dan mencocokkan peta definisi (*definition maps*) secara otomatis tanpa merusak asosiasi header ECU.
 
 ---
 
-## 🛠️ Peta Tabel yang Didefinisikan dalam XDF
+## 2. Manifest Aset Berkas Fisik (100% Verified)
 
-1. **Fuel Injection & AFR Target**: Base fuel map, open-loop target lambda, cold enrichment.
-2. **Ignition Timing (BTDC)**: Optimal spark advance, knock recovery retard, low/high det maps.
-3. **Drive Modes & Throttle Response**: Bukaan katup gas elektronik (Manettino / ANIMA / Track / Sport Plus).
-4. **Turbo Boost & Wastegate** (jika berturbo): Target tekanan absolut boost (mbar) dan wastegate duty cycle.
-5. **Rev & Speed Limiters**: Hard fuel cut, soft spark retard, dan penghapusan governor kecepatan.
+Berikut adalah daftar lengkap berkas fisik yang tersimpan secara lokal di direktori ini:
+
+| Nama Berkas | Tipe / Format | Ukuran (Bytes) | Deskripsi Teknis & Identifikasi |
+| :--- | :--- | :--- | :--- |
+| `GENERATIONAL_11A0123CP_McLaren_720S_4.0L_Twin_Turbo_(2017-2024).xdf` | `.XDF` | `10,174` bytes | TunerPro Binary Definition Map |
+
+---
+
+## 3. Matriks Kalibrasi & Parameter Pemetaan
+
+Bagi berkas biner dan definisi TunerPro yang tersedia, struktur kalibrasi mencakup parameter esensial:
+- **Volumetric Efficiency & Fuel Delivery**: Kurva Base Fuel, Open/Closed Loop Transition, Injection Timing, dan Cranking Enrichment.
+- **Ignition Timing & Knock Control**: Peta Main Ignition Advance, Low/High Octane Timing, Knock Retard Thresholds, dan Dwell Timing.
+- **Airflow & Boost Management**: Peta Target Boost Pressure, Wastegate Duty Cycle (WGDC), MAF/MAP Scaling, dan Throttle Response Curves.
+- **Safety Limits & Thresholds**: Rev Limiter (Hard/Soft Cut), Top Speed Limiter (Vmax), Overboost Fuel Cut, dan Engine Protection Strategies.
+
+---
+
+## 4. Protokol Flashing & Panduan Keamanan
+
+1. **Pemeriksaan Checksum**: Selalu verifikasi dan kalkulasi ulang checksum sebelum menulis firmware kembali ke ECU guna mencegah kondisi *ECU bricking* atau *no-start*.
+2. **Pencadangan Full Read (Backup)**: Lakukan full backup (Flash + EEPROM / Microcontroller ROM) sebelum melakukan flashing kalibrasi yang dimodifikasi.
+3. **Tegangan Sumber Stabil**: Gunakan unit catu daya terstabilisasi (*bench battery maintainer*) dengan tegangan minimum 13.5V – 14.2V selama sesi flashing OBD2 atau Bootmode.
+4. **Kecocokan Hardware & Software**: Jangan pernah melakukan *cross-flashing* berkas kalibrasi ke ECU dengan nomor part hardware yang berbeda tanpa verifikasi arsitektur pinout dan transreceiver bus.

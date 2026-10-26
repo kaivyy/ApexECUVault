@@ -1,35 +1,53 @@
-# Porsche 911 (993) 3.6L Twin-Turbo Platform Dossier
+# PORSCHE 993 3 6L TWIN TURBO - ECU Calibration Suite
 
-> **Kategori Database**: [`02_CARS/PORSCHE/PORSCHE_993_3_6L_TWIN_TURBO/`](file:///root/ecu_master_database/02_CARS/PORSCHE/PORSCHE_993_3_6L_TWIN_TURBO/)  
-> **Status Keaslian**: **100% Authentic Factory Flash Dumps & TunerPro XDF**
-
----
-
-## 1. Identitas Kendaraan & Spesifikasi Pabrikan
-
-* **Nama Model Kendaraan**: **Porsche 911 Turbo (Generasi 993)**
-* **Tahun Produksi**: **1995 – 1998** (Generasi Terakhir Porsche 911 Berpendingin Udara / Air-Cooled)
-* **Kode Mesin**: **Porsche M64/60**
-  * Konfigurasi: 3.6-Liter (3.600 cc) Boxer Flat-6 Air-Cooled, Twin KKK K16 Turbochargers dengan dual intercooler
-  * Tenaga Standar: **408 PS (402 HP)** @ 5.750 RPM / **540 Nm** @ 4.500 RPM
-  * Turbo S / X50 Package: **450 PS (444 HP)** / **585 Nm**
-* **Transmisi & Drivetrain**: 6-Speed Manual (G64/51) dengan All-Wheel Drive (AWD) viscous clutch
+**Repository Path**: `02_CARS/PORSCHE/PORSCHE_993_3_6L_TWIN_TURBO`  
+**Classification**: `Complete Binary & TunerPro Definition Suite`  
+**Total Managed Assets**: `3 files` (2 binary dumps, 1 definition maps)  
 
 ---
 
-## 2. Spesifikasi ECU / DME Hardware
+## 1. Technical Platform Overview
 
-* **Tipe Komputer Mesin (DME)**: **Bosch Motronic M5.2**
-* **Nomor Part Bosch**: `0 261 204 377` (Porsche Part No. `993 618 682 85`)
-* **Software Version**: `355728` & `357098`
-* **Kapasitas Flash Memory**: **131.072 bytes** (128 KB EPROM / Flash)
+Paket direktori `PORSCHE_993_3_6L_TWIN_TURBO` menyediakan pustaka kalibrasi dan pemetaan ECU profesional yang ditujukan bagi teknisi otomotif, tuner, dan reverse engineer. Berkas di direktori ini mencakup kalibrasi firmware pabrikan (OEM), pembacaan perangkat keras (OBD2/BDM/Bench), serta tabel definisi TunerPro XDF untuk eksplorasi parameter mesin.
+
+### Mengapa Sebagian Berkas Memiliki Nama Berupa Angka / Kode?
+Nama berkas yang tersimpan merefleksikan identitas perangkat keras (Hardware ID), versi perangkat lunak (Software ID), atau nomor kalibrasi pabrikan asli (OEM Calibration ID):
+- **Bosch Part Numbers** (misal `0261xxxxxx`, `1037xxxxxx`): Standar identifikasi universal Bosch untuk ECU Motronic, MED17, EDC16, dan EDC17.
+- **BMW Software IDs** (misal `00005C64xxxxxx`, `10SW002828`): Alamat dan assembly identification number pada modul DME Siemens/Continental/Bosch.
+- **Denso / Toyota Calibration IDs** (misal `89663-xxxxx`): Nomor resmi Toyota Techstream / Denso MCU firmware flash.
+- **Keihin Part Numbers** (misal `37805-xxx-xxxx`, `38770-xxx`): Kode perakitan ECU Honda untuk verifikasi kecocokan checksum dan proteksi immobilizer.
+- **GM OS IDs** (misal `12587603`, `12212156`): Operating system ID kontroler GM Delphi P01/P59.
+
+> [!NOTE]
+> Mempertahankan kode dan nomor asli pabrikan pada penamaan berkas sangat krusial agar perangkat lunak kalibrasi (seperti **TunerPro**, **WinOLS**, atau **RomRaider**) dapat mengenali dan mencocokkan peta definisi (*definition maps*) secara otomatis tanpa merusak asosiasi header ECU.
 
 ---
 
-## 3. Daftar File Biner & Peta TunerPro XDF
+## 2. Manifest Aset Berkas Fisik (100% Verified)
 
-| Nama File | Ukuran | Deskripsi & Kegunaan |
-| :--- | :---: | :--- |
-| [`Porsche 933 3.6T 408HP 99361868285 0261204377 355728.bin`](file:///root/ecu_master_database/02_CARS/PORSCHE/PORSCHE_993_3_6L_TWIN_TURBO/Porsche%20933%203.6T%20408HP%2099361868285%200261204377%20355728.bin) | 128 KB (131.072 bytes) | Dump pabrikan original Porsche 993 Turbo 3.6T 408HP SW 355728 |
-| [`993 3.6 Biturbo 1995 hw0261204377 sw357098.bin`](file:///root/ecu_master_database/02_CARS/PORSCHE/PORSCHE_993_3_6L_TWIN_TURBO/993%203.6%20Biturbo%201995%20hw0261204377%20sw357098.bin) | 128 KB (131.072 bytes) | Dump pabrikan original Porsche 993 3.6 Biturbo 1995 SW 357098 |
-| [`TunerPro BRO Por 993 Turbo MAF only.xdf`](file:///root/ecu_master_database/02_CARS/PORSCHE/PORSCHE_993_3_6L_TWIN_TURBO/TunerPro%20BRO%20Por%20993%20Turbo%20MAF%20only.xdf) | 30.839 bytes | Peta TunerPro XDF untuk kalibrasi sensor Mass Air Flow (MAF) dan bahan bakar |
+Berikut adalah daftar lengkap berkas fisik yang tersimpan secara lokal di direktori ini:
+
+| Nama Berkas | Tipe / Format | Ukuran (Bytes) | Deskripsi Teknis & Identifikasi |
+| :--- | :--- | :--- | :--- |
+| `993 3.6 Biturbo 1995 hw0261204377 sw357098.bin` | `.BIN` | `131,072` bytes | Bosch Motronic Hardware ID `0261204377` |
+| `Porsche 933 3.6T 408HP 99361868285 0261204377 355728.bin` | `.BIN` | `131,072` bytes | Bosch Motronic Hardware ID `0261204377` |
+| `TunerPro BRO Por 993 Turbo MAF only.xdf` | `.XDF` | `30,839` bytes | TunerPro Binary Definition Map |
+
+---
+
+## 3. Matriks Kalibrasi & Parameter Pemetaan
+
+Bagi berkas biner dan definisi TunerPro yang tersedia, struktur kalibrasi mencakup parameter esensial:
+- **Volumetric Efficiency & Fuel Delivery**: Kurva Base Fuel, Open/Closed Loop Transition, Injection Timing, dan Cranking Enrichment.
+- **Ignition Timing & Knock Control**: Peta Main Ignition Advance, Low/High Octane Timing, Knock Retard Thresholds, dan Dwell Timing.
+- **Airflow & Boost Management**: Peta Target Boost Pressure, Wastegate Duty Cycle (WGDC), MAF/MAP Scaling, dan Throttle Response Curves.
+- **Safety Limits & Thresholds**: Rev Limiter (Hard/Soft Cut), Top Speed Limiter (Vmax), Overboost Fuel Cut, dan Engine Protection Strategies.
+
+---
+
+## 4. Protokol Flashing & Panduan Keamanan
+
+1. **Pemeriksaan Checksum**: Selalu verifikasi dan kalkulasi ulang checksum sebelum menulis firmware kembali ke ECU guna mencegah kondisi *ECU bricking* atau *no-start*.
+2. **Pencadangan Full Read (Backup)**: Lakukan full backup (Flash + EEPROM / Microcontroller ROM) sebelum melakukan flashing kalibrasi yang dimodifikasi.
+3. **Tegangan Sumber Stabil**: Gunakan unit catu daya terstabilisasi (*bench battery maintainer*) dengan tegangan minimum 13.5V – 14.2V selama sesi flashing OBD2 atau Bootmode.
+4. **Kecocokan Hardware & Software**: Jangan pernah melakukan *cross-flashing* berkas kalibrasi ke ECU dengan nomor part hardware yang berbeda tanpa verifikasi arsitektur pinout dan transreceiver bus.

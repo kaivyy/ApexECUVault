@@ -1,0 +1,78 @@
+# S63 TWIN TURBO V8 M5 M6 X5M - ECU Calibration Suite
+
+**Repository Path**: `02_CARS/BMW/S63_TWIN_TURBO_V8_M5_M6_X5M`  
+**Classification**: `Complete Binary & TunerPro Definition Suite`  
+**Total Managed Assets**: `28 files` (14 binary dumps, 14 definition maps)  
+
+---
+
+## 1. Technical Platform Overview
+
+Paket direktori `S63_TWIN_TURBO_V8_M5_M6_X5M` menyediakan pustaka kalibrasi dan pemetaan ECU profesional yang ditujukan bagi teknisi otomotif, tuner, dan reverse engineer. Berkas di direktori ini mencakup kalibrasi firmware pabrikan (OEM), pembacaan perangkat keras (OBD2/BDM/Bench), serta tabel definisi TunerPro XDF untuk eksplorasi parameter mesin.
+
+### Mengapa Sebagian Berkas Memiliki Nama Berupa Angka / Kode?
+Nama berkas yang tersimpan merefleksikan identitas perangkat keras (Hardware ID), versi perangkat lunak (Software ID), atau nomor kalibrasi pabrikan asli (OEM Calibration ID):
+- **Bosch Part Numbers** (misal `0261xxxxxx`, `1037xxxxxx`): Standar identifikasi universal Bosch untuk ECU Motronic, MED17, EDC16, dan EDC17.
+- **BMW Software IDs** (misal `00005C64xxxxxx`, `10SW002828`): Alamat dan assembly identification number pada modul DME Siemens/Continental/Bosch.
+- **Denso / Toyota Calibration IDs** (misal `89663-xxxxx`): Nomor resmi Toyota Techstream / Denso MCU firmware flash.
+- **Keihin Part Numbers** (misal `37805-xxx-xxxx`, `38770-xxx`): Kode perakitan ECU Honda untuk verifikasi kecocokan checksum dan proteksi immobilizer.
+- **GM OS IDs** (misal `12587603`, `12212156`): Operating system ID kontroler GM Delphi P01/P59.
+
+> [!NOTE]
+> Mempertahankan kode dan nomor asli pabrikan pada penamaan berkas sangat krusial agar perangkat lunak kalibrasi (seperti **TunerPro**, **WinOLS**, atau **RomRaider**) dapat mengenali dan mencocokkan peta definisi (*definition maps*) secara otomatis tanpa merusak asosiasi header ECU.
+
+---
+
+## 2. Manifest Aset Berkas Fisik (100% Verified)
+
+Berikut adalah daftar lengkap berkas fisik yang tersimpan secara lokal di direktori ini:
+
+| Nama Berkas | Tipe / Format | Ukuran (Bytes) | Deskripsi Teknis & Identifikasi |
+| :--- | :--- | :--- | :--- |
+| `000010CA3B8C01.xdf` | `.XDF` | `653,063` bytes | BMW DME Flash Calibration ID `000010ca3b8c01` |
+| `000010CA3B8C01_original.bin` | `.BIN` | `4,194,304` bytes | BMW DME Flash Calibration ID `000010ca3b8c01` |
+| `000010CA598C01.xdf` | `.XDF` | `645,472` bytes | BMW DME Flash Calibration ID `000010ca598c01` |
+| `000010CA598C01_original.bin` | `.BIN` | `4,194,304` bytes | BMW DME Flash Calibration ID `000010ca598c01` |
+| `00004ACF0A3204.xdf` | `.XDF` | `668,152` bytes | BMW DME Flash Calibration ID `00004acf0a3204` |
+| `00004ACF0A3204_original.bin` | `.BIN` | `8,388,608` bytes | BMW DME Flash Calibration ID `00004acf0a3204` |
+| `00004ACF147803.xdf` | `.XDF` | `673,911` bytes | BMW DME Flash Calibration ID `00004acf147803` |
+| `00004ACF147803_original.bin` | `.BIN` | `8,388,608` bytes | BMW DME Flash Calibration ID `00004acf147803` |
+| `00004ACF1E6E05.xdf` | `.XDF` | `668,376` bytes | BMW DME Flash Calibration ID `00004acf1e6e05` |
+| `00004ACF1E6E05_original.bin` | `.BIN` | `8,388,608` bytes | BMW DME Flash Calibration ID `00004acf1e6e05` |
+| `00004ACF1E7805.xdf` | `.XDF` | `668,376` bytes | BMW DME Flash Calibration ID `00004acf1e7805` |
+| `00004ACF1E7805_original.bin` | `.BIN` | `8,388,608` bytes | BMW DME Flash Calibration ID `00004acf1e7805` |
+| `00004ACF1E9605.xdf` | `.XDF` | `668,376` bytes | BMW DME Flash Calibration ID `00004acf1e9605` |
+| `00004ACF1E9605_original.bin` | `.BIN` | `8,388,608` bytes | BMW DME Flash Calibration ID `00004acf1e9605` |
+| `00004ACF1EA006.xdf` | `.XDF` | `668,376` bytes | BMW DME Flash Calibration ID `00004acf1ea006` |
+| `00004ACF1EA006_original.bin` | `.BIN` | `8,388,608` bytes | BMW DME Flash Calibration ID `00004acf1ea006` |
+| `00004ACF1EAA05.xdf` | `.XDF` | `668,376` bytes | BMW DME Flash Calibration ID `00004acf1eaa05` |
+| `00004ACF1EAA05_original.bin` | `.BIN` | `8,388,608` bytes | BMW DME Flash Calibration ID `00004acf1eaa05` |
+| `00004ACF1EB405.xdf` | `.XDF` | `668,376` bytes | BMW DME Flash Calibration ID `00004acf1eb405` |
+| `00004ACF1EB405_original.bin` | `.BIN` | `8,388,608` bytes | BMW DME Flash Calibration ID `00004acf1eb405` |
+| `00004ACF286E05.xdf` | `.XDF` | `690,160` bytes | BMW DME Flash Calibration ID `00004acf286e05` |
+| `00004ACF286E05_original.bin` | `.BIN` | `8,388,608` bytes | BMW DME Flash Calibration ID `00004acf286e05` |
+| `00004ACF287806.xdf` | `.XDF` | `690,159` bytes | BMW DME Flash Calibration ID `00004acf287806` |
+| `00004ACF287806_original.bin` | `.BIN` | `8,388,608` bytes | BMW DME Flash Calibration ID `00004acf287806` |
+| `00004ACF288205.xdf` | `.XDF` | `690,159` bytes | BMW DME Flash Calibration ID `00004acf288205` |
+| `00004ACF288205_original.bin` | `.BIN` | `8,388,608` bytes | BMW DME Flash Calibration ID `00004acf288205` |
+| `00004ACF289605.xdf` | `.XDF` | `690,159` bytes | BMW DME Flash Calibration ID `00004acf289605` |
+| `00004ACF289605_original.bin` | `.BIN` | `8,388,608` bytes | BMW DME Flash Calibration ID `00004acf289605` |
+
+---
+
+## 3. Matriks Kalibrasi & Parameter Pemetaan
+
+Bagi berkas biner dan definisi TunerPro yang tersedia, struktur kalibrasi mencakup parameter esensial:
+- **Volumetric Efficiency & Fuel Delivery**: Kurva Base Fuel, Open/Closed Loop Transition, Injection Timing, dan Cranking Enrichment.
+- **Ignition Timing & Knock Control**: Peta Main Ignition Advance, Low/High Octane Timing, Knock Retard Thresholds, dan Dwell Timing.
+- **Airflow & Boost Management**: Peta Target Boost Pressure, Wastegate Duty Cycle (WGDC), MAF/MAP Scaling, dan Throttle Response Curves.
+- **Safety Limits & Thresholds**: Rev Limiter (Hard/Soft Cut), Top Speed Limiter (Vmax), Overboost Fuel Cut, dan Engine Protection Strategies.
+
+---
+
+## 4. Protokol Flashing & Panduan Keamanan
+
+1. **Pemeriksaan Checksum**: Selalu verifikasi dan kalkulasi ulang checksum sebelum menulis firmware kembali ke ECU guna mencegah kondisi *ECU bricking* atau *no-start*.
+2. **Pencadangan Full Read (Backup)**: Lakukan full backup (Flash + EEPROM / Microcontroller ROM) sebelum melakukan flashing kalibrasi yang dimodifikasi.
+3. **Tegangan Sumber Stabil**: Gunakan unit catu daya terstabilisasi (*bench battery maintainer*) dengan tegangan minimum 13.5V – 14.2V selama sesi flashing OBD2 atau Bootmode.
+4. **Kecocokan Hardware & Software**: Jangan pernah melakukan *cross-flashing* berkas kalibrasi ke ECU dengan nomor part hardware yang berbeda tanpa verifikasi arsitektur pinout dan transreceiver bus.

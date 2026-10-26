@@ -16,7 +16,7 @@ Direktori ini memuat seluruh file kalibrasi biner firmware **Original / Asli Pab
 | | `DEFINITIONS_XDF` | 350Z, 370Z, G35, Titan, Sentra, Stagea, Maxima | VQ35DE, VQ37VHR, VK56DE (RomRaider XMLs) | 114 Definisi XML/XDF Asli |
 | **BMW** | `M_POWER_S58_G80_M3_M4` | BMW M3 G80, M4 G82, M2 G87 Competition | 3.0L Twin Turbo S58B30 (Bosch MG1 4MB) | 10 Dump Asli Pabrik & MapSwitchBase |
 | | `M_POWER_S63_F10_F90_M5_M6`| BMW M5 F10/F90, M6 F12/F13, X5M F85 | 4.4L Twin Turbo V8 S63B44 | 14 Dump Asli Pabrik (dmacpro91 archive) |
-| | `M_POWER_MSS65_M5_V10` | BMW E60 M5, E63 M6 | 5.0L V10 S85B50 (Siemens MSS65 Dual DME + SMG III TCU) | Dump Asli `INJ.BIN`, `IGN.BIN` + DAMOS A2L |
+| | `M_POWER_MSS65_M5_V10` | BMW E60 M5, E63 M6 | 5.0L V10 S85B50 (Siemens MSS65 Dual DME + SMG III TCU) | Dump Asli Fuel Injection Table, Ignition Timing Table + DAMOS A2L |
 | | `M_POWER_MSS54_M3_CSL` | BMW E46 M3 3.2L & M3 CSL | 3.2L S54B32 (Siemens MSS54/MSS54HP Dual MCU) | 107 Dump Asli Pabrik |
 | | `SIEMENS_MS43` | BMW E46 325i, 330i, E39 530i, X5 E53 | 3.0L M54B30 (Siemens MS43 512KB + GS20 TCU) | 22 Dump Asli Pabrik |
 | | `EDC16_320D_330XD` | BMW E90 330xd, E46 320d | M57 3.0d & M47 2.0d (Bosch EDC16 2MB) | Dump Asli ORI & Stage 1 EGR/DPF Off |
@@ -31,6 +31,6 @@ Direktori ini memuat seluruh file kalibrasi biner firmware **Original / Asli Pab
 | **TOYOTA & DAIHATSU** | `CLASSIC_4AGE_1UZ_FE` | Corolla Levin/Trueno AE86/AE92 4A-GE, Celsior/Soarer 1UZ-FE V8 | 1.6L 4A-GE Redtop/Blacktop, 4.0L 1UZ-FE V8 | 40 Dump Biner Chip Asli (SparkieDK Archive) |
 | | `INNOVA_FORTUNER_HILUX_DIESEL_2KD`| Innova 2.5, Fortuner 2.5, Hilux Vigo | 2.5L 2KD-FTV Common Rail | Definisi XDF & Pinout Asli |
 | **VOLVO & SAAB** | `VOLVO_ME7_T5_R` | Volvo 850, S60, V70, S80 T5 & R AWD/FWD | Bosch ME7 5-Cylinder Turbo | 118 Dump Asli Pabrik |
-| **FERRARI** | `FERRARI` | Ferrari 360 Modena & Challenge Stradale | 3.6L V8 (Bosch ME7.3H4 1MB) | Dump Asli Pabrik (`ferrari360.bin`) |
-| **PEUGEOT** | `PEUGEOT` | Peugeot 205 Turbo | Bosch Motronic | Dump Asli Pabrik (`PEUGTUR261200803.bin`) |
+| **FERRARI** | `FERRARI` | Ferrari 360 Modena & Challenge Stradale | 3.6L V8 (Bosch ME7.3H4 1MB) | Dump Asli Pabrik (Ferrari 360 Calibration) |
+| **PEUGEOT** | `PEUGEOT` | Peugeot 205 Turbo | Bosch Motronic | Dump Asli Pabrik (Peugeot Turbo Motronic) |
 | **MULTI-BRAND** | `MULTI_BRAND_COMMUNITY_TUNES`| Kumpulan dump biner Alfa Romeo, Fiat, Mercedes-Benz, Renault | Bosch Motronic, Magneti Marelli, Siemens | 137 Dump Asli Pabrik |

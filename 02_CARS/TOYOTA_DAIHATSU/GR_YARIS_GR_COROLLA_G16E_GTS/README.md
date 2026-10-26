@@ -1,35 +1,52 @@
-# 🏎️ Suite Kalibrasi ECU: TOYOTA GR Corolla 1.6T G16E-GTS (2022-2026)
+# GR YARIS GR COROLLA G16E GTS - ECU Calibration Suite
 
-Direktori ini memuat file kalibrasi biner firmware (**Original Pabrik** & **Stage 1 Tuned Remap**) beserta file definisi **TunerPro XDF XML** untuk **Toyota GR Corolla 1.6T G16E-GTS**.
-
----
-
-## 📋 Informasi Spesifikasi & Identifikasi
-
-- **Merek / Model**: Toyota GR Corolla 1.6T G16E-GTS
-- **Tahun Produksi**: 2022-2026
-- **Kode Part ECU**: `89663-12C80`
-- **Arsitektur ECU**: Toyota GR Corolla GZEA14 1.6L G16E-GTS High Output Triple Exhaust GR-FOUR
-- **Ukuran Flash ROM**: `2048 KB` (2,097,152 bytes)
-- **Tenaga Pabrik (Stock)**: 304HP (Rev Limit: 7200 RPM | Top Speed Limiter: 230 km/h)
-- **Potensi Stage 1 Remap**: 355HP_Boost1.9bar (Rev Limit: 7700 RPM | Top Speed Limiter: 290 km/h)
+**Repository Path**: `02_CARS/TOYOTA_DAIHATSU/GR_YARIS_GR_COROLLA_G16E_GTS`  
+**Classification**: `TunerPro Definition Map Suite (XDF Only)`  
+**Total Managed Assets**: `2 files` (0 binary dumps, 2 definition maps)  
 
 ---
 
-## 🗂️ Daftar File dalam Suite Ini
+## 1. Technical Platform Overview
 
-| Tipe File | Nama File | Ukuran | Deskripsi |
-| :--- | :--- | :---: | :--- |
-| **STOCK BIN** | `STOCK_ORIGINAL_89663-12C80_Toyota_GR_Corolla_1.6T_G16E-GTS_(2022-2026)_304HP.bin` | 2048 KB | Binary dump firmware asli pabrik murni (*unmodified baseline*). |
-| **REMAP STAGE 1** | `REMAP_STAGE1_89663-12C80_Toyota_GR_Corolla_1.6T_G16E-GTS_355HP_Boost1.9bar.bin` | 2048 KB | Kalibrasi tuning Stage 1 (peningkatan boost, timing pengapian, bukaan throttle, dan limiter). |
-| **TUNERPRO XDF** | `GENERATIONAL_89663-12C80_Toyota_GR_Corolla_1.6T_G16E-GTS_(2022-2026).xdf` | ~8-15 KB | Definisi peta TunerPro V5 lengkap dengan sumbu tabel (RPM, Load, Pedal) dan formula konversi. |
+Paket direktori `GR_YARIS_GR_COROLLA_G16E_GTS` menyediakan pustaka kalibrasi dan pemetaan ECU profesional yang ditujukan bagi teknisi otomotif, tuner, dan reverse engineer. Berkas di direktori ini mencakup kalibrasi firmware pabrikan (OEM), pembacaan perangkat keras (OBD2/BDM/Bench), serta tabel definisi TunerPro XDF untuk eksplorasi parameter mesin.
+
+### Mengapa Sebagian Berkas Memiliki Nama Berupa Angka / Kode?
+Nama berkas yang tersimpan merefleksikan identitas perangkat keras (Hardware ID), versi perangkat lunak (Software ID), atau nomor kalibrasi pabrikan asli (OEM Calibration ID):
+- **Bosch Part Numbers** (misal `0261xxxxxx`, `1037xxxxxx`): Standar identifikasi universal Bosch untuk ECU Motronic, MED17, EDC16, dan EDC17.
+- **BMW Software IDs** (misal `00005C64xxxxxx`, `10SW002828`): Alamat dan assembly identification number pada modul DME Siemens/Continental/Bosch.
+- **Denso / Toyota Calibration IDs** (misal `89663-xxxxx`): Nomor resmi Toyota Techstream / Denso MCU firmware flash.
+- **Keihin Part Numbers** (misal `37805-xxx-xxxx`, `38770-xxx`): Kode perakitan ECU Honda untuk verifikasi kecocokan checksum dan proteksi immobilizer.
+- **GM OS IDs** (misal `12587603`, `12212156`): Operating system ID kontroler GM Delphi P01/P59.
+
+> [!NOTE]
+> Mempertahankan kode dan nomor asli pabrikan pada penamaan berkas sangat krusial agar perangkat lunak kalibrasi (seperti **TunerPro**, **WinOLS**, atau **RomRaider**) dapat mengenali dan mencocokkan peta definisi (*definition maps*) secara otomatis tanpa merusak asosiasi header ECU.
 
 ---
 
-## 🛠️ Peta Tabel yang Didefinisikan dalam XDF
+## 2. Manifest Aset Berkas Fisik (100% Verified)
 
-1. **Fuel Injection & AFR Target**: Base fuel map, open-loop target lambda, cold enrichment.
-2. **Ignition Timing (BTDC)**: Optimal spark advance, knock recovery retard, low/high det maps.
-3. **Drive Modes & Throttle Response**: Bukaan katup gas elektronik (Manettino / ANIMA / Track / Sport Plus).
-4. **Turbo Boost & Wastegate** (jika berturbo): Target tekanan absolut boost (mbar) dan wastegate duty cycle.
-5. **Rev & Speed Limiters**: Hard fuel cut, soft spark retard, dan penghapusan governor kecepatan.
+Berikut adalah daftar lengkap berkas fisik yang tersimpan secara lokal di direktori ini:
+
+| Nama Berkas | Tipe / Format | Ukuran (Bytes) | Deskripsi Teknis & Identifikasi |
+| :--- | :--- | :--- | :--- |
+| `GENERATIONAL_89663-12C80_Toyota_GR_Corolla_1.6T_G16E-GTS_(2022-2026).xdf` | `.XDF` | `10,148` bytes | Toyota / Denso Factory Calibration ID `89663-12C80` |
+| `GENERATIONAL_89663-52Y10_Toyota_GR_Yaris_1.6T_G16E-GTS_(2020-2026).xdf` | `.XDF` | `10,192` bytes | Toyota / Denso Factory Calibration ID `89663-52Y10` |
+
+---
+
+## 3. Matriks Kalibrasi & Parameter Pemetaan
+
+Bagi berkas biner dan definisi TunerPro yang tersedia, struktur kalibrasi mencakup parameter esensial:
+- **Volumetric Efficiency & Fuel Delivery**: Kurva Base Fuel, Open/Closed Loop Transition, Injection Timing, dan Cranking Enrichment.
+- **Ignition Timing & Knock Control**: Peta Main Ignition Advance, Low/High Octane Timing, Knock Retard Thresholds, dan Dwell Timing.
+- **Airflow & Boost Management**: Peta Target Boost Pressure, Wastegate Duty Cycle (WGDC), MAF/MAP Scaling, dan Throttle Response Curves.
+- **Safety Limits & Thresholds**: Rev Limiter (Hard/Soft Cut), Top Speed Limiter (Vmax), Overboost Fuel Cut, dan Engine Protection Strategies.
+
+---
+
+## 4. Protokol Flashing & Panduan Keamanan
+
+1. **Pemeriksaan Checksum**: Selalu verifikasi dan kalkulasi ulang checksum sebelum menulis firmware kembali ke ECU guna mencegah kondisi *ECU bricking* atau *no-start*.
+2. **Pencadangan Full Read (Backup)**: Lakukan full backup (Flash + EEPROM / Microcontroller ROM) sebelum melakukan flashing kalibrasi yang dimodifikasi.
+3. **Tegangan Sumber Stabil**: Gunakan unit catu daya terstabilisasi (*bench battery maintainer*) dengan tegangan minimum 13.5V – 14.2V selama sesi flashing OBD2 atau Bootmode.
+4. **Kecocokan Hardware & Software**: Jangan pernah melakukan *cross-flashing* berkas kalibrasi ke ECU dengan nomor part hardware yang berbeda tanpa verifikasi arsitektur pinout dan transreceiver bus.

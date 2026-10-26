@@ -1,49 +1,52 @@
-# 📁 Suite Kalibrasi ECU: HONDA HR-V RS 1.5 VTEC Turbo (2022-2026)
+# WRV HRV NEW GEN L15ZF L15BG - ECU Calibration Suite
 
-Direktori ini memuat file kalibrasi biner firmware (**Original Pabrik** & **Stage 1 Tuned Remap**) beserta file definisi **TunerPro XDF XML** untuk **Honda HR-V RS 1.5 VTEC Turbo**.
-
----
-
-## 📋 Informasi Spesifikasi & Identifikasi
-
-- **Merek / Model**: Honda HR-V RS 1.5 VTEC Turbo
-- **Tahun Produksi**: 2022-2026
-- **Kode Part ECU**: `37820-64A-A01`
-- **Arsitektur ECU**: Honda HR-V RS RV5 1.5L VTEC Turbo L15BG (Keihin CAN 2MB)
-- **Ukuran Flash ROM**: `2048 KB` (2,097,152 bytes)
-- **Tenaga Pabrik (Stock)**: 177HP (Rev Limit: 6500 RPM | Top Speed Limiter: 200 km/h)
-- **Potensi Stage 1 Remap**: 215HP_Boost1.4bar (Rev Limit: 6900 RPM | Top Speed Limiter: 260 km/h)
+**Repository Path**: `02_CARS/HONDA_ACURA/WRV_HRV_NEW_GEN_L15ZF_L15BG`  
+**Classification**: `TunerPro Definition Map Suite (XDF Only)`  
+**Total Managed Assets**: `2 files` (0 binary dumps, 2 definition maps)  
 
 ---
 
-## 🗂️ Daftar File dalam Suite Ini
+## 1. Technical Platform Overview
 
-| Tipe File | Nama File | Ukuran | Deskripsi |
-| :--- | :--- | :---: | :--- |
-| **STOCK BIN** | `STOCK_ORIGINAL_37820-64A-A01_Honda_HR-V_RS_1.5_VTEC_Turbo_(2022-2026)_177HP.bin` | 2048 KB | Binary dump firmware asli pabrik murni (*unmodified calibration*). |
-| **REMAP STAGE 1** | `REMAP_STAGE1_37820-64A-A01_Honda_HR-V_RS_1.5_VTEC_Turbo_215HP_Boost1.4bar.bin` | 2048 KB | Kalibrasi tuning Stage 1 yang dioptimalkan (AFR/Rail, BTDC timing, DBW response, RPM & Speed limiter). |
-| **TUNERPRO XDF** | `GENERATIONAL_37820-64A-A01_Honda_HR-V_RS_1.5_VTEC_Turbo_(2022-2026).xdf` | ~8-15 KB | Definisi peta TunerPro V5 lengkap dengan sumbu tabel (RPM, Load, Pedal) dan formula konversi. |
+Paket direktori `WRV_HRV_NEW_GEN_L15ZF_L15BG` menyediakan pustaka kalibrasi dan pemetaan ECU profesional yang ditujukan bagi teknisi otomotif, tuner, dan reverse engineer. Berkas di direktori ini mencakup kalibrasi firmware pabrikan (OEM), pembacaan perangkat keras (OBD2/BDM/Bench), serta tabel definisi TunerPro XDF untuk eksplorasi parameter mesin.
 
----
+### Mengapa Sebagian Berkas Memiliki Nama Berupa Angka / Kode?
+Nama berkas yang tersimpan merefleksikan identitas perangkat keras (Hardware ID), versi perangkat lunak (Software ID), atau nomor kalibrasi pabrikan asli (OEM Calibration ID):
+- **Bosch Part Numbers** (misal `0261xxxxxx`, `1037xxxxxx`): Standar identifikasi universal Bosch untuk ECU Motronic, MED17, EDC16, dan EDC17.
+- **BMW Software IDs** (misal `00005C64xxxxxx`, `10SW002828`): Alamat dan assembly identification number pada modul DME Siemens/Continental/Bosch.
+- **Denso / Toyota Calibration IDs** (misal `89663-xxxxx`): Nomor resmi Toyota Techstream / Denso MCU firmware flash.
+- **Keihin Part Numbers** (misal `37805-xxx-xxxx`, `38770-xxx`): Kode perakitan ECU Honda untuk verifikasi kecocokan checksum dan proteksi immobilizer.
+- **GM OS IDs** (misal `12587603`, `12212156`): Operating system ID kontroler GM Delphi P01/P59.
 
-## 🛠️ Peta Tabel yang Didefinisikan dalam XDF
-
-Suite ini mencakup tabel-tabel kalibrasi utama:
-1. **Fuel Injection & AFR Target**: Base fuel map, open-loop target lambda, cold enrichment.
-2. **Ignition Timing (BTDC)**: Optimal spark advance, knock recovery retard, low/high det maps.
-3. **Drive-by-Wire (DBW) Throttle**: Pemetaan sudut pedal akselerator ke bukaan katup gas elektronik (menghilangkan lag pedal gas).
-4. **Variable Valve Timing (VVT / MIVEC / i-VTEC / CVVT)**: Sudut pergeseran kem intake/exhaust untuk efisiensi volumetrik maksimum.
-5. **Rev & Speed Limiters**: Hard fuel cut, soft spark retard, penghapusan governor kecepatan 180 km/h.
-### 💨 Parameter Turbo & Boost Target
-- **Target Tekanan Boost Stock**: ~1.0 bar absolut.
-- **Target Tekanan Boost Stage 1**: ~1.35 bar absolut.
-- **Wastegate Duty Cycle**: Dikalibrasi ulang untuk mencegah *boost spike* dan *overboost cut*.
-
+> [!NOTE]
+> Mempertahankan kode dan nomor asli pabrikan pada penamaan berkas sangat krusial agar perangkat lunak kalibrasi (seperti **TunerPro**, **WinOLS**, atau **RomRaider**) dapat mengenali dan mencocokkan peta definisi (*definition maps*) secara otomatis tanpa merusak asosiasi header ECU.
 
 ---
 
-## ⚠️ Panduan Keamanan Flashing
+## 2. Manifest Aset Berkas Fisik (100% Verified)
 
-1. **Selalu Buat Cadangan (Backup)**: Sebelum melakukan flashing binary modifikasi, baca (*read full flash*) dan simpan file asli dengan nama `STOCK_ORIGINAL_...bin`.
-2. **Stabilisator Tegangan**: Selalu gunakan *battery maintainer / stabilizer* 13.5V–14.0V selama proses flashing CANBUS untuk mencegah *bricked ECU*.
-3. **Koreksi Checksum**: Pastikan checksum tervalidasi sebelum menyalakan mesin.
+Berikut adalah daftar lengkap berkas fisik yang tersimpan secara lokal di direktori ini:
+
+| Nama Berkas | Tipe / Format | Ukuran (Bytes) | Deskripsi Teknis & Identifikasi |
+| :--- | :--- | :--- | :--- |
+| `GENERATIONAL_37820-63R-N01_Honda_WR-V_1.5_DOHC_i-VTEC_(2022-2026).xdf` | `.XDF` | `14,481` bytes | Honda OBD1/OBD2 ECU Hardware Code `37820-63R` |
+| `GENERATIONAL_37820-64A-A01_Honda_HR-V_RS_1.5_VTEC_Turbo_(2022-2026).xdf` | `.XDF` | `12,060` bytes | Honda OBD1/OBD2 ECU Hardware Code `37820-64A` |
+
+---
+
+## 3. Matriks Kalibrasi & Parameter Pemetaan
+
+Bagi berkas biner dan definisi TunerPro yang tersedia, struktur kalibrasi mencakup parameter esensial:
+- **Volumetric Efficiency & Fuel Delivery**: Kurva Base Fuel, Open/Closed Loop Transition, Injection Timing, dan Cranking Enrichment.
+- **Ignition Timing & Knock Control**: Peta Main Ignition Advance, Low/High Octane Timing, Knock Retard Thresholds, dan Dwell Timing.
+- **Airflow & Boost Management**: Peta Target Boost Pressure, Wastegate Duty Cycle (WGDC), MAF/MAP Scaling, dan Throttle Response Curves.
+- **Safety Limits & Thresholds**: Rev Limiter (Hard/Soft Cut), Top Speed Limiter (Vmax), Overboost Fuel Cut, dan Engine Protection Strategies.
+
+---
+
+## 4. Protokol Flashing & Panduan Keamanan
+
+1. **Pemeriksaan Checksum**: Selalu verifikasi dan kalkulasi ulang checksum sebelum menulis firmware kembali ke ECU guna mencegah kondisi *ECU bricking* atau *no-start*.
+2. **Pencadangan Full Read (Backup)**: Lakukan full backup (Flash + EEPROM / Microcontroller ROM) sebelum melakukan flashing kalibrasi yang dimodifikasi.
+3. **Tegangan Sumber Stabil**: Gunakan unit catu daya terstabilisasi (*bench battery maintainer*) dengan tegangan minimum 13.5V – 14.2V selama sesi flashing OBD2 atau Bootmode.
+4. **Kecocokan Hardware & Software**: Jangan pernah melakukan *cross-flashing* berkas kalibrasi ke ECU dengan nomor part hardware yang berbeda tanpa verifikasi arsitektur pinout dan transreceiver bus.

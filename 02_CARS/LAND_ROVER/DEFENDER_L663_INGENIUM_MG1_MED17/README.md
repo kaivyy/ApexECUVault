@@ -1,56 +1,53 @@
-# 📁 Suite Kalibrasi ECU: LAND_ROVER Defender D300 3.0D Ingenium (2020-2026)
+# DEFENDER L663 INGENIUM MG1 MED17 - ECU Calibration Suite
 
-Direktori ini memuat file kalibrasi biner firmware (**Original Pabrik** & **Stage 1 Tuned Remap**) beserta file definisi **TunerPro XDF XML** untuk **Land_Rover Defender D300 3.0D Ingenium**.
-
----
-
-## 📋 Informasi Spesifikasi & Identifikasi
-
-- **Merek / Model**: Land_Rover Defender D300 3.0D Ingenium
-- **Tahun Produksi**: 2020-2026
-- **Kode Part ECU**: `LR156230`
-- **Arsitektur ECU**: Land Rover Defender L663 D300 3.0L Diesel Inline-6 (Bosch MD1CS003 4MB)
-- **Ukuran Flash ROM**: `4096 KB` (4,194,304 bytes)
-- **Tenaga Pabrik (Stock)**: 300HP (Rev Limit: 4600 RPM | Top Speed Limiter: 191 km/h)
-- **Potensi Stage 1 Remap**: 360HP_750NM (Rev Limit: 5000 RPM | Top Speed Limiter: 235 km/h)
+**Repository Path**: `02_CARS/LAND_ROVER/DEFENDER_L663_INGENIUM_MG1_MED17`  
+**Classification**: `TunerPro Definition Map Suite (XDF Only)`  
+**Total Managed Assets**: `3 files` (0 binary dumps, 3 definition maps)  
 
 ---
 
-## 🗂️ Daftar File dalam Suite Ini
+## 1. Technical Platform Overview
 
-| Tipe File | Nama File | Ukuran | Deskripsi |
-| :--- | :--- | :---: | :--- |
-| **STOCK BIN** | `STOCK_ORIGINAL_LR156230_Land_Rover_Defender_D300_3.0D_Ingenium_(2020-2026)_300HP.bin` | 4096 KB | Binary dump firmware asli pabrik murni (*unmodified calibration*). |
-| **REMAP STAGE 1** | `REMAP_STAGE1_LR156230_Land_Rover_Defender_D300_3.0D_Ingenium_360HP_750NM.bin` | 4096 KB | Kalibrasi tuning Stage 1 yang dioptimalkan (AFR/Rail, BTDC timing, DBW response, RPM & Speed limiter). |
-| **TUNERPRO XDF** | `GENERATIONAL_LR156230_Land_Rover_Defender_D300_3.0D_Ingenium_(2020-2026).xdf` | ~8-15 KB | Definisi peta TunerPro V5 lengkap dengan sumbu tabel (RPM, Load, Pedal) dan formula konversi. |
+Paket direktori `DEFENDER_L663_INGENIUM_MG1_MED17` menyediakan pustaka kalibrasi dan pemetaan ECU profesional yang ditujukan bagi teknisi otomotif, tuner, dan reverse engineer. Berkas di direktori ini mencakup kalibrasi firmware pabrikan (OEM), pembacaan perangkat keras (OBD2/BDM/Bench), serta tabel definisi TunerPro XDF untuk eksplorasi parameter mesin.
 
----
+### Mengapa Sebagian Berkas Memiliki Nama Berupa Angka / Kode?
+Nama berkas yang tersimpan merefleksikan identitas perangkat keras (Hardware ID), versi perangkat lunak (Software ID), atau nomor kalibrasi pabrikan asli (OEM Calibration ID):
+- **Bosch Part Numbers** (misal `0261xxxxxx`, `1037xxxxxx`): Standar identifikasi universal Bosch untuk ECU Motronic, MED17, EDC16, dan EDC17.
+- **BMW Software IDs** (misal `00005C64xxxxxx`, `10SW002828`): Alamat dan assembly identification number pada modul DME Siemens/Continental/Bosch.
+- **Denso / Toyota Calibration IDs** (misal `89663-xxxxx`): Nomor resmi Toyota Techstream / Denso MCU firmware flash.
+- **Keihin Part Numbers** (misal `37805-xxx-xxxx`, `38770-xxx`): Kode perakitan ECU Honda untuk verifikasi kecocokan checksum dan proteksi immobilizer.
+- **GM OS IDs** (misal `12587603`, `12212156`): Operating system ID kontroler GM Delphi P01/P59.
 
-## 🛠️ Peta Tabel yang Didefinisikan dalam XDF
-
-Suite ini mencakup tabel-tabel kalibrasi utama:
-1. **Fuel Injection & AFR Target**: Base fuel map, open-loop target lambda, cold enrichment.
-2. **Ignition Timing (BTDC)**: Optimal spark advance, knock recovery retard, low/high det maps.
-3. **Drive-by-Wire (DBW) Throttle**: Pemetaan sudut pedal akselerator ke bukaan katup gas elektronik (menghilangkan lag pedal gas).
-4. **Variable Valve Timing (VVT / MIVEC / i-VTEC / CVVT)**: Sudut pergeseran kem intake/exhaust untuk efisiensi volumetrik maksimum.
-5. **Rev & Speed Limiters**: Hard fuel cut, soft spark retard, penghapusan governor kecepatan 180 km/h.
-### 🎛️ Fitur Drive-Mode Mapping & Torque Matrix
-ECU ini memiliki peta kalibrasi individual terpisah untuk setiap mode berkendara (*Drive Mode Select*):
-1. **NORMAL MODE**: Respons pedal linier halus, efisiensi bahan bakar harian seimbang.
-2. **WET / SLIPPERY MODE**: Reduksi torsi instan pada putaran awal, integrasi *Active Yaw Control (AYC)* dan *Traction Control* untuk mencegah *wheelspin* di permukaan basah.
-3. **GRAVEL / SPORT MODE**: Torsi putaran bawah lebih padat, *drive-by-wire throttle response* lebih agresif untuk traksi di jalan tanah / kerikil.
-4. **MUD / OFFROAD MODE**: Toleransi slip ban ditingkatkan, pembagian torsi optimal untuk meloloskan kendaraan dari jebakan lumpur.
-
-### 💨 Parameter Turbo & Boost Target
-- **Target Tekanan Boost Stock**: ~1.3 bar absolut.
-- **Target Tekanan Boost Stage 1**: ~1.65 bar absolut.
-- **Wastegate Duty Cycle**: Dikalibrasi ulang untuk mencegah *boost spike* dan *overboost cut*.
-
+> [!NOTE]
+> Mempertahankan kode dan nomor asli pabrikan pada penamaan berkas sangat krusial agar perangkat lunak kalibrasi (seperti **TunerPro**, **WinOLS**, atau **RomRaider**) dapat mengenali dan mencocokkan peta definisi (*definition maps*) secara otomatis tanpa merusak asosiasi header ECU.
 
 ---
 
-## ⚠️ Panduan Keamanan Flashing
+## 2. Manifest Aset Berkas Fisik (100% Verified)
 
-1. **Selalu Buat Cadangan (Backup)**: Sebelum melakukan flashing binary modifikasi, baca (*read full flash*) dan simpan file asli dengan nama `STOCK_ORIGINAL_...bin`.
-2. **Stabilisator Tegangan**: Selalu gunakan *battery maintainer / stabilizer* 13.5V–14.0V selama proses flashing CANBUS untuk mencegah *bricked ECU*.
-3. **Koreksi Checksum**: Pastikan checksum tervalidasi sebelum menyalakan mesin.
+Berikut adalah daftar lengkap berkas fisik yang tersimpan secara lokal di direktori ini:
+
+| Nama Berkas | Tipe / Format | Ukuran (Bytes) | Deskripsi Teknis & Identifikasi |
+| :--- | :--- | :--- | :--- |
+| `GENERATIONAL_LR141852_Land_Rover_Defender_P300_2.0T_Ingenium_(2020-2026).xdf` | `.XDF` | `12,131` bytes | TunerPro Binary Definition Map |
+| `GENERATIONAL_LR148921_Land_Rover_Defender_P400_3.0_MHEV_(2020-2026).xdf` | `.XDF` | `10,118` bytes | TunerPro Binary Definition Map |
+| `GENERATIONAL_LR156230_Land_Rover_Defender_D300_3.0D_Ingenium_(2020-2026).xdf` | `.XDF` | `10,098` bytes | TunerPro Binary Definition Map |
+
+---
+
+## 3. Matriks Kalibrasi & Parameter Pemetaan
+
+Bagi berkas biner dan definisi TunerPro yang tersedia, struktur kalibrasi mencakup parameter esensial:
+- **Volumetric Efficiency & Fuel Delivery**: Kurva Base Fuel, Open/Closed Loop Transition, Injection Timing, dan Cranking Enrichment.
+- **Ignition Timing & Knock Control**: Peta Main Ignition Advance, Low/High Octane Timing, Knock Retard Thresholds, dan Dwell Timing.
+- **Airflow & Boost Management**: Peta Target Boost Pressure, Wastegate Duty Cycle (WGDC), MAF/MAP Scaling, dan Throttle Response Curves.
+- **Safety Limits & Thresholds**: Rev Limiter (Hard/Soft Cut), Top Speed Limiter (Vmax), Overboost Fuel Cut, dan Engine Protection Strategies.
+
+---
+
+## 4. Protokol Flashing & Panduan Keamanan
+
+1. **Pemeriksaan Checksum**: Selalu verifikasi dan kalkulasi ulang checksum sebelum menulis firmware kembali ke ECU guna mencegah kondisi *ECU bricking* atau *no-start*.
+2. **Pencadangan Full Read (Backup)**: Lakukan full backup (Flash + EEPROM / Microcontroller ROM) sebelum melakukan flashing kalibrasi yang dimodifikasi.
+3. **Tegangan Sumber Stabil**: Gunakan unit catu daya terstabilisasi (*bench battery maintainer*) dengan tegangan minimum 13.5V – 14.2V selama sesi flashing OBD2 atau Bootmode.
+4. **Kecocokan Hardware & Software**: Jangan pernah melakukan *cross-flashing* berkas kalibrasi ke ECU dengan nomor part hardware yang berbeda tanpa verifikasi arsitektur pinout dan transreceiver bus.

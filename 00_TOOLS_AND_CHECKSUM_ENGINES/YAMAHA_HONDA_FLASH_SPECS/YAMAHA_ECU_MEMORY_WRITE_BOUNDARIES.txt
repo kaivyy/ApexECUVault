@@ -1,0 +1,26 @@
+General instructions YamahaFlasher.
+
+1. Always use only the original ROM file.
+2. Stop behind all other extra programs.
+3. Use software basically with admin rights.
+4. Not ever turn off the program between the ECU writing "Write"
+5. Be sure to use additional power. Then the motorcycle battery voltage does not drop too low.
+6. Remember to always check that the checksum fix address is correctly set and it is not located in write-protected ROM area.
+
+The program uses the Vag-com cable the (+12 volt, K-line, GND) pin.
+Check the Yamaha service manual ECU corresponding pin.
+
+Yamaha 64kb and 128kb ECU for only part of the ROM can be re-written (map area). The new checksum correction shall be applied to a blank ROM area that is not write-protected. 
+
+
+Yamaha ChecksumFix software
+
+64kb rom 0xFFFF
+Read area 0x1800 - 0xFFFF (file size 58kb)
+Write area 0x1800 - 0x7FFF
+protected area 0x0000 - 0x17FF and 0x8000 - 0xFFFF
+
+128kb rom 0x1FFFF
+Read area 0x00000 - 0x1FFFF (file size 128kb)
+Write area 0x00000 - 0x1BFFF
+protected area 0x1C000 - 0x1FFFF

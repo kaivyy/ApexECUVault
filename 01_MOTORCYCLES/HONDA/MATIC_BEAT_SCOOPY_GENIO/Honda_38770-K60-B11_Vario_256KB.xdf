@@ -1,0 +1,107 @@
+<!-- Written by Antigravity Auto Tuning Generator -->
+<XDFFORMAT version="1.60">
+  <XDFHEADER>
+    <flags>0x1</flags>
+    <deftitle>Honda Vario 125 eSP K60 (2015-2018) [38770-K60-B11]</deftitle>
+    <description>TunerPro Map Definition File (XDF) for Honda Vario 125 eSP K60 (2015-2018). Software/Hardware ID: 38770-K60-B11. Keihin/Shindengen 256KB Gen3 Architecture.</description>
+    <author>Indonesian Tuning Community</author>
+    <BASEOFFSET offset="0" subtract="0" />
+    <DEFAULTS datasizeinbits="16" signdata="0" outputtype="1" signedoutput="0" />
+    <CATEGORY index="0x0" name="Bahan Bakar (Fuel Injection)" />
+    <CATEGORY index="0x1" name="Sudut Pengapian (Ignition Timing)" />
+    <CATEGORY index="0x2" name="Rev Limiter (Pembatas Putaran Mesin)" />
+  </XDFHEADER>
+
+  <!-- 1. Fuel Main (35x29) -->
+  <XDFTABLE uniqueid="0x3001" flags="0x0">
+    <title>Fuel Map Main 35x29 (Tabel Bahan Bakar Utama)</title>
+    <description>Lebar pulsa injektor bahan bakar utama vs TPS dan RPM (ms)</description>
+    <CATEGORYMEM index="0" category="1" />
+    <XDFAXIS id="x" uniqueid="0x0">
+      <EMBEDDEDDATA mmedtypeflags="0x02" mmedaddress="0x0" mmedelementsizebits="16" mmedmajorstridebits="0" mmedminorstridebits="0" />
+      <units>TPS %</units>
+      <indexcount>29</indexcount>
+      <datatype>22</datatype>
+      <unittype>0</unittype>
+      <LABEL index="0" value="0.0%" /><LABEL index="1" value="0.8%" /><LABEL index="2" value="1.5%" /><LABEL index="3" value="2.5%" /><LABEL index="4" value="3.5%" /><LABEL index="5" value="5.0%" /><LABEL index="6" value="7.0%" /><LABEL index="7" value="9.0%" /><LABEL index="8" value="12.0%" /><LABEL index="9" value="15.0%" /><LABEL index="10" value="18.0%" /><LABEL index="11" value="22.0%" /><LABEL index="12" value="26.0%" /><LABEL index="13" value="30.0%" /><LABEL index="14" value="35.0%" /><LABEL index="15" value="40.0%" /><LABEL index="16" value="45.0%" /><LABEL index="17" value="50.0%" /><LABEL index="18" value="55.0%" /><LABEL index="19" value="60.0%" /><LABEL index="20" value="65.0%" /><LABEL index="21" value="70.0%" /><LABEL index="22" value="75.0%" /><LABEL index="23" value="80.0%" /><LABEL index="24" value="85.0%" /><LABEL index="25" value="90.0%" /><LABEL index="26" value="95.0%" /><LABEL index="27" value="98.0%" /><LABEL index="28" value="100.0%" />
+      <MATH equation="X"><VAR id="X" /></MATH>
+    </XDFAXIS>
+    <XDFAXIS id="y" uniqueid="0x0">
+      <EMBEDDEDDATA mmedtypeflags="0x02" mmedaddress="0x0" mmedelementsizebits="16" mmedmajorstridebits="0" mmedminorstridebits="0" />
+      <units>RPM</units>
+      <indexcount>35</indexcount>
+      <datatype>22</datatype>
+      <unittype>0</unittype>
+      <LABEL index="0" value="500" /><LABEL index="1" value="800" /><LABEL index="2" value="1100" /><LABEL index="3" value="1400" /><LABEL index="4" value="1700" /><LABEL index="5" value="2000" /><LABEL index="6" value="2300" /><LABEL index="7" value="2600" /><LABEL index="8" value="2900" /><LABEL index="9" value="3200" /><LABEL index="10" value="3500" /><LABEL index="11" value="3800" /><LABEL index="12" value="4100" /><LABEL index="13" value="4400" /><LABEL index="14" value="4700" /><LABEL index="15" value="5000" /><LABEL index="16" value="5300" /><LABEL index="17" value="5600" /><LABEL index="18" value="5900" /><LABEL index="19" value="6200" /><LABEL index="20" value="6500" /><LABEL index="21" value="6800" /><LABEL index="22" value="7100" /><LABEL index="23" value="7400" /><LABEL index="24" value="7700" /><LABEL index="25" value="8000" /><LABEL index="26" value="8300" /><LABEL index="27" value="8600" /><LABEL index="28" value="8900" /><LABEL index="29" value="9200" /><LABEL index="30" value="9500" /><LABEL index="31" value="9800" /><LABEL index="32" value="10100" /><LABEL index="33" value="10400" /><LABEL index="34" value="10700" />
+      <MATH equation="X"><VAR id="X" /></MATH>
+    </XDFAXIS>
+    <XDFAXIS id="z">
+      <EMBEDDEDDATA mmedtypeflags="0x02" mmedaddress="0x3A078" mmedelementsizebits="16" mmedmajorstridebits="0" mmedminorstridebits="0" />
+      <decimalplaces>3</decimalplaces>
+      <min>0.500</min>
+      <max>18.000</max>
+      <outputtype>1</outputtype>
+      <MATH equation="X/1000">
+        <VAR id="X" />
+      </MATH>
+    </XDFAXIS>
+  </XDFTABLE>
+
+  <!-- 2. Ignition Main (35x29) -->
+  <XDFTABLE uniqueid="0x3002" flags="0x0">
+    <title>Ignition Timing Main 35x29 (Sudut Pengapian Utama)</title>
+    <description>Sudut maju pengapian utama (°BTDC)</description>
+    <CATEGORYMEM index="0" category="2" />
+    <XDFAXIS id="x" uniqueid="0x0">
+      <EMBEDDEDDATA mmedtypeflags="0x02" mmedaddress="0x0" mmedelementsizebits="16" mmedmajorstridebits="0" mmedminorstridebits="0" />
+      <units>TPS %</units>
+      <indexcount>29</indexcount>
+      <datatype>22</datatype>
+      <unittype>0</unittype>
+      <LABEL index="0" value="0.0%" /><LABEL index="1" value="0.8%" /><LABEL index="2" value="1.5%" /><LABEL index="3" value="2.5%" /><LABEL index="4" value="3.5%" /><LABEL index="5" value="5.0%" /><LABEL index="6" value="7.0%" /><LABEL index="7" value="9.0%" /><LABEL index="8" value="12.0%" /><LABEL index="9" value="15.0%" /><LABEL index="10" value="18.0%" /><LABEL index="11" value="22.0%" /><LABEL index="12" value="26.0%" /><LABEL index="13" value="30.0%" /><LABEL index="14" value="35.0%" /><LABEL index="15" value="40.0%" /><LABEL index="16" value="45.0%" /><LABEL index="17" value="50.0%" /><LABEL index="18" value="55.0%" /><LABEL index="19" value="60.0%" /><LABEL index="20" value="65.0%" /><LABEL index="21" value="70.0%" /><LABEL index="22" value="75.0%" /><LABEL index="23" value="80.0%" /><LABEL index="24" value="85.0%" /><LABEL index="25" value="90.0%" /><LABEL index="26" value="95.0%" /><LABEL index="27" value="98.0%" /><LABEL index="28" value="100.0%" />
+      <MATH equation="X"><VAR id="X" /></MATH>
+    </XDFAXIS>
+    <XDFAXIS id="y" uniqueid="0x0">
+      <EMBEDDEDDATA mmedtypeflags="0x02" mmedaddress="0x0" mmedelementsizebits="16" mmedmajorstridebits="0" mmedminorstridebits="0" />
+      <units>RPM</units>
+      <indexcount>35</indexcount>
+      <datatype>22</datatype>
+      <unittype>0</unittype>
+      <LABEL index="0" value="500" /><LABEL index="1" value="800" /><LABEL index="2" value="1100" /><LABEL index="3" value="1400" /><LABEL index="4" value="1700" /><LABEL index="5" value="2000" /><LABEL index="6" value="2300" /><LABEL index="7" value="2600" /><LABEL index="8" value="2900" /><LABEL index="9" value="3200" /><LABEL index="10" value="3500" /><LABEL index="11" value="3800" /><LABEL index="12" value="4100" /><LABEL index="13" value="4400" /><LABEL index="14" value="4700" /><LABEL index="15" value="5000" /><LABEL index="16" value="5300" /><LABEL index="17" value="5600" /><LABEL index="18" value="5900" /><LABEL index="19" value="6200" /><LABEL index="20" value="6500" /><LABEL index="21" value="6800" /><LABEL index="22" value="7100" /><LABEL index="23" value="7400" /><LABEL index="24" value="7700" /><LABEL index="25" value="8000" /><LABEL index="26" value="8300" /><LABEL index="27" value="8600" /><LABEL index="28" value="8900" /><LABEL index="29" value="9200" /><LABEL index="30" value="9500" /><LABEL index="31" value="9800" /><LABEL index="32" value="10100" /><LABEL index="33" value="10400" /><LABEL index="34" value="10700" />
+      <MATH equation="X"><VAR id="X" /></MATH>
+    </XDFAXIS>
+    <XDFAXIS id="z">
+      <EMBEDDEDDATA mmedtypeflags="0x02" mmedaddress="0x3BA36" mmedelementsizebits="8" mmedmajorstridebits="0" mmedminorstridebits="0" />
+      <decimalplaces>2</decimalplaces>
+      <min>-15.00</min>
+      <max>80.00</max>
+      <outputtype>1</outputtype>
+      <MATH equation="X*0.3572-15.72">
+        <VAR id="X" />
+      </MATH>
+    </XDFAXIS>
+  </XDFTABLE>
+
+  <!-- 3. Rev Limiters -->
+  <XDFCONSTANT uniqueid="0x4001">
+    <title>Fuel Rev Limiter 1 (Potong Bensin)</title>
+    <description>Batas putaran mesin tertinggi pemotongan bahan bakar 1</description>
+    <CATEGORYMEM index="0" category="3" />
+    <EMBEDDEDDATA mmedtypeflags="0x02" mmedaddress="0x394F4" mmedelementsizebits="16" mmedmajorstridebits="0" mmedminorstridebits="0" />
+    <datatype>22</datatype>
+    <units>RPM</units>
+    <decimalplaces>0</decimalplaces>
+    <MATH equation="X"><VAR id="X" /></MATH>
+  </XDFCONSTANT>
+
+  <XDFCONSTANT uniqueid="0x4002">
+    <title>Spark Rev Limiter 1 (Potong Pengapian)</title>
+    <description>Batas putaran mesin tertinggi pemotongan pengapian 1</description>
+    <CATEGORYMEM index="0" category="3" />
+    <EMBEDDEDDATA mmedtypeflags="0x02" mmedaddress="0x395DE" mmedelementsizebits="16" mmedmajorstridebits="0" mmedminorstridebits="0" />
+    <datatype>22</datatype>
+    <units>RPM</units>
+    <decimalplaces>0</decimalplaces>
+    <MATH equation="X"><VAR id="X" /></MATH>
+  </XDFCONSTANT>
+</XDFFORMAT>

@@ -1,0 +1,13 @@
+# System & Temporary Files
+.DS_Store
+Thumbs.db
+*.tmp
+*.bak
+*~
+
+# Python cache
+__pycache__/
+*.py[cod]
+
+# Local Knowledge Graph Tool Output
+graphify-out/

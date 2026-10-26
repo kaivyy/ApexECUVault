@@ -1,0 +1,379 @@
+<!-- Written 12/25/2011 23:08:12 -->
+<XDFFORMAT version="1.50">
+  <XDFHEADER>
+    <flags>0x1</flags>
+    <fileversion>2.0</fileversion>
+    <deftitle>Siemens / Bendix Fenix 3A ECU</deftitle>
+    <description>Calculateur Renault Clio 1.8 16S catalys&#233;e&#013;&#010;&#013;&#010;Fenix3A - Version Soft 7852</description>
+    <author>Emmanuel MARTINET</author>
+    <baseoffset>0</baseoffset>
+    <adsassoc>.\XR25_Clio16S_cata_7852.adx</adsassoc>
+    <adscheck>0x0</adscheck>
+    <DEFAULTS datasizeinbits="8" sigdigits="2" outputtype="1" signed="0" lsbfirst="0" float="0" />
+    <REGION type="0xFFFFFFFF" startaddress="0x0" size="0x8000" regionflags="0x0" name="Binary File" desc="This region describes the bin file edited by this XDF" />
+    <CATEGORY index="0x0" name="Injection" />
+    <CATEGORY index="0x1" name="Avance" />
+    <CATEGORY index="0x2" name="Regime" />
+    <CATEGORY index="0x3" name="Programme" />
+  </XDFHEADER>
+  <XDFTABLE uniqueid="0x3BCA" flags="0x10">
+    <title>Version Programme</title>
+    <description>Permet d&apos;identifier la version du programme ouvert.&#013;&#010;</description>
+    <CATEGORYMEM index="0" category="4" />
+    <XDFAXIS id="x" uniqueid="0x0">
+      <EMBEDDEDDATA mmedelementsizebits="16" mmedmajorstridebits="-32" />
+      <indexcount>2</indexcount>
+      <min>1000.000000</min>
+      <outputtype>4</outputtype>
+      <datatype>0</datatype>
+      <unittype>0</unittype>
+      <DALINK index="0" />
+      <LABEL index="0" value="HEX 1" />
+      <LABEL index="1" value="HEX 2" />
+      <MATH equation="X">
+        <VAR id="X" />
+      </MATH>
+    </XDFAXIS>
+    <XDFAXIS id="y" uniqueid="0x0">
+      <EMBEDDEDDATA mmedelementsizebits="16" mmedmajorstridebits="-32" />
+      <indexcount>1</indexcount>
+      <min>1000.000000</min>
+      <outputtype>4</outputtype>
+      <datatype>0</datatype>
+      <unittype>0</unittype>
+      <DALINK index="0" />
+      <LABEL index="0" value="Version" />
+      <MATH equation="X">
+        <VAR id="X" />
+      </MATH>
+    </XDFAXIS>
+    <XDFAXIS id="z">
+      <EMBEDDEDDATA mmedaddress="0x2004" mmedelementsizebits="8" mmedrowcount="1" mmedcolcount="2" />
+      <decimalpl>2</decimalpl>
+      <min>0.000000</min>
+      <max>255.000000</max>
+      <outputtype>3</outputtype>
+      <MATH equation="X">
+        <VAR id="X" />
+      </MATH>
+    </XDFAXIS>
+  </XDFTABLE>
+  <XDFTABLE uniqueid="0x242D" flags="0x0">
+    <title>VDATE - Date eprom</title>
+    <description>Date de cr&#233;ation / modification de l&apos;eprom.</description>
+    <CATEGORYMEM index="0" category="4" />
+    <XDFAXIS id="x" uniqueid="0x0">
+      <EMBEDDEDDATA mmedelementsizebits="16" mmedmajorstridebits="-32" />
+      <indexcount>3</indexcount>
+      <min>1000.000000</min>
+      <outputtype>4</outputtype>
+      <datatype>0</datatype>
+      <unittype>0</unittype>
+      <DALINK index="0" />
+      <LABEL index="0" value="jour" />
+      <LABEL index="1" value="mois" />
+      <LABEL index="2" value="annee" />
+      <MATH equation="X">
+        <VAR id="X" />
+      </MATH>
+    </XDFAXIS>
+    <XDFAXIS id="y" uniqueid="0x0">
+      <EMBEDDEDDATA mmedelementsizebits="16" mmedmajorstridebits="-32" />
+      <indexcount>1</indexcount>
+      <min>1000.000000</min>
+      <outputtype>4</outputtype>
+      <datatype>0</datatype>
+      <unittype>0</unittype>
+      <DALINK index="0" />
+      <LABEL index="0" value="Date" />
+      <MATH equation="X">
+        <VAR id="X" />
+      </MATH>
+    </XDFAXIS>
+    <XDFAXIS id="z">
+      <EMBEDDEDDATA mmedaddress="0x43BD" mmedelementsizebits="8" mmedrowcount="1" mmedcolcount="3" />
+      <decimalpl>2</decimalpl>
+      <min>0.000000</min>
+      <max>255.000000</max>
+      <outputtype>3</outputtype>
+      <MATH equation="X">
+        <VAR id="X" />
+      </MATH>
+    </XDFAXIS>
+  </XDFTABLE>
+  <XDFTABLE uniqueid="0x6C28" flags="0x30">
+    <title>CARTA - Table Avance</title>
+    <description>Table gestion avance. A &#233;diter avec pr&#233;cision. Ce param&#232;tre influe fortement sur le couple et la consommation.&#013;&#010;&#013;&#010;Pression (mb) = NBhexa x 3,60  + 103&#013;&#010;avec NBhexa = 00 - 20 - 40 - 60 - 80 - A0 - C0 - E0 - 100&#013;&#010;&#013;&#010;R&#233;gimes = TABS</description>
+    <CATEGORYMEM index="0" category="2" />
+    <XDFAXIS id="x" uniqueid="0x0">
+      <EMBEDDEDDATA mmedaddress="0x07" mmedelementsizebits="8" mmedmajorstridebits="-32" />
+      <units>mBar</units>
+      <indexcount>9</indexcount>
+      <min>1000.000000</min>
+      <outputtype>4</outputtype>
+      <datatype>24</datatype>
+      <unittype>20</unittype>
+      <DALINK index="0" flags="0x4" />
+      <LABEL index="0" value="" />
+      <LABEL index="1" value="" />
+      <LABEL index="2" value="" />
+      <LABEL index="3" value="" />
+      <LABEL index="4" value="" />
+      <LABEL index="5" value="" />
+      <LABEL index="6" value="" />
+      <LABEL index="7" value="" />
+      <LABEL index="8" value="" />
+      <MATH equation="X">
+        <VAR id="X" />
+      </MATH>
+    </XDFAXIS>
+    <XDFAXIS id="y" uniqueid="0x0">
+      <EMBEDDEDDATA mmedaddress="0x22D4" mmedelementsizebits="8" mmedcolcount="15" mmedmajorstridebits="8" />
+      <units>Tr/min</units>
+      <indexcount>15</indexcount>
+      <decimalpl>4</decimalpl>
+      <min>1000.000000</min>
+      <outputtype>2</outputtype>
+      <embedinfo type="1" />
+      <datatype>6</datatype>
+      <unittype>4</unittype>
+      <DALINK index="0" flags="0x4" />
+      <MATH equation="32 * X">
+        <VAR id="X" />
+      </MATH>
+    </XDFAXIS>
+    <XDFAXIS id="z">
+      <EMBEDDEDDATA mmedaddress="0x21C4" mmedelementsizebits="8" mmedrowcount="15" mmedcolcount="9" />
+      <units>Degr&#232;s</units>
+      <decimalpl>2</decimalpl>
+      <min>0.000000</min>
+      <max>40.000000</max>
+      <outputtype>2</outputtype>
+      <MATH equation="X">
+        <VAR id="X" />
+      </MATH>
+    </XDFAXIS>
+  </XDFTABLE>
+  <XDFTABLE uniqueid="0x78BA" flags="0x30">
+    <title>CARTI - Table Injection</title>
+    <description>Table gestion des temps d&apos;injection. A &#233;diter avec pr&#233;cision. Ce param&#232;tre influe fortement sur la puissance et la consommation.&#013;&#010;&#013;&#010;Pression (mb) = NBhexa x 3,60  + 103&#013;&#010;avec NBhexa = 00 - 20 - 40 - 60 - 80 - A0 - C0 - E0 - 100&#013;&#010;&#013;&#010;R&#233;gimes = TABS</description>
+    <CATEGORYMEM index="0" category="1" />
+    <XDFAXIS id="x" uniqueid="0x0">
+      <EMBEDDEDDATA mmedaddress="0x07" mmedelementsizebits="8" mmedmajorstridebits="-32" />
+      <units>mBar</units>
+      <indexcount>9</indexcount>
+      <min>1000.000000</min>
+      <outputtype>4</outputtype>
+      <datatype>24</datatype>
+      <unittype>20</unittype>
+      <DALINK index="0" flags="0x4" />
+      <LABEL index="0" value="103" />
+      <LABEL index="1" value="218" />
+      <LABEL index="2" value="333" />
+      <LABEL index="3" value="448" />
+      <LABEL index="4" value="563" />
+      <LABEL index="5" value="679" />
+      <LABEL index="6" value="794" />
+      <LABEL index="7" value="909" />
+      <LABEL index="8" value="1024" />
+      <MATH equation="X">
+        <VAR id="X" />
+      </MATH>
+    </XDFAXIS>
+    <XDFAXIS id="y" uniqueid="0x0">
+      <EMBEDDEDDATA mmedaddress="0x22D4" mmedelementsizebits="8" mmedcolcount="15" mmedmajorstridebits="8" />
+      <units>Tr/min</units>
+      <indexcount>15</indexcount>
+      <decimalpl>4</decimalpl>
+      <min>1000.000000</min>
+      <outputtype>2</outputtype>
+      <embedinfo type="1" />
+      <datatype>6</datatype>
+      <unittype>4</unittype>
+      <DALINK index="0" flags="0x4" />
+      <MATH equation="32 * X">
+        <VAR id="X" />
+      </MATH>
+    </XDFAXIS>
+    <XDFAXIS id="z">
+      <EMBEDDEDDATA mmedaddress="0x224D" mmedelementsizebits="8" mmedrowcount="15" mmedcolcount="9" />
+      <units>ms</units>
+      <decimalpl>2</decimalpl>
+      <min>30.000000</min>
+      <max>215.000000</max>
+      <outputtype>2</outputtype>
+      <MATH equation="X">
+        <VAR id="X" />
+      </MATH>
+    </XDFAXIS>
+  </XDFTABLE>
+  <XDFTABLE uniqueid="0x4C2D" flags="0x0">
+    <title>TABS - Pas de r&#233;gimes</title>
+    <description>Pas de r&#233;gime moteur pour gestion CARTA et CARTI</description>
+    <CATEGORYMEM index="0" category="3" />
+    <XDFAXIS id="x" uniqueid="0x0">
+      <EMBEDDEDDATA mmedaddress="0x40F1" mmedelementsizebits="8" mmedcolcount="15" mmedmajorstridebits="8" />
+      <units>tr/min</units>
+      <indexcount>15</indexcount>
+      <min>1000.000000</min>
+      <outputtype>3</outputtype>
+      <embedinfo type="1" />
+      <datatype>0</datatype>
+      <unittype>0</unittype>
+      <DALINK index="0" />
+      <MATH equation="X">
+        <VAR id="X" />
+      </MATH>
+    </XDFAXIS>
+    <XDFAXIS id="y" uniqueid="0x0">
+      <EMBEDDEDDATA mmedelementsizebits="16" mmedmajorstridebits="-32" />
+      <units>tr/min</units>
+      <indexcount>1</indexcount>
+      <min>1000.000000</min>
+      <outputtype>4</outputtype>
+      <datatype>0</datatype>
+      <unittype>0</unittype>
+      <DALINK index="0" />
+      <LABEL index="0" value="" />
+      <MATH equation="X">
+        <VAR id="X" />
+      </MATH>
+    </XDFAXIS>
+    <XDFAXIS id="z">
+      <EMBEDDEDDATA mmedaddress="0x22D4" mmedelementsizebits="8" mmedrowcount="1" mmedcolcount="15" />
+      <units>tr/min</units>
+      <decimalpl>0</decimalpl>
+      <min>0.000000</min>
+      <max>255.000000</max>
+      <outputtype>2</outputtype>
+      <MATH equation="32 * X">
+        <VAR id="X" />
+      </MATH>
+    </XDFAXIS>
+  </XDFTABLE>
+  <XDFTABLE uniqueid="0x7B15" flags="0x0">
+    <title>REGMAX - R&#233;gime Maxi</title>
+    <description>R&#233;gime maximum du moteur. A cette valeur l&apos;ECU coupe l&apos;injection et ne reprends que lorsque N =&lt; REGREP. C&apos;est la valeur du rupteur</description>
+    <CATEGORYMEM index="0" category="3" />
+    <XDFAXIS id="x" uniqueid="0x0">
+      <EMBEDDEDDATA mmedelementsizebits="16" mmedmajorstridebits="-32" />
+      <units>tr/min</units>
+      <indexcount>1</indexcount>
+      <min>1000.000000</min>
+      <outputtype>4</outputtype>
+      <datatype>0</datatype>
+      <unittype>0</unittype>
+      <DALINK index="0" />
+      <LABEL index="0" value="" />
+      <MATH equation="X">
+        <VAR id="X" />
+      </MATH>
+    </XDFAXIS>
+    <XDFAXIS id="y" uniqueid="0x0">
+      <EMBEDDEDDATA mmedelementsizebits="16" mmedmajorstridebits="-32" />
+      <units>tr/min</units>
+      <indexcount>1</indexcount>
+      <min>1000.000000</min>
+      <outputtype>4</outputtype>
+      <datatype>0</datatype>
+      <unittype>0</unittype>
+      <DALINK index="0" />
+      <LABEL index="0" value="" />
+      <MATH equation="X">
+        <VAR id="X" />
+      </MATH>
+    </XDFAXIS>
+    <XDFAXIS id="z">
+      <EMBEDDEDDATA mmedaddress="0x211E" mmedelementsizebits="16" mmedrowcount="1" />
+      <units>tr/min</units>
+      <decimalpl>0</decimalpl>
+      <min>6200.000000</min>
+      <max>6500.000000</max>
+      <outputtype>2</outputtype>
+      <MATH equation="X">
+        <VAR id="X" />
+      </MATH>
+    </XDFAXIS>
+  </XDFTABLE>
+  <XDFTABLE uniqueid="0x7A37" flags="0x0">
+    <title>REGREP - R&#233;gime R&#233;atellage</title>
+    <description>R&#233;gime de r&#233;atellage du moteur apr&#232;s coupure rupteur &#224; REGMAX. A cette valeur l&apos;ECU reprends l&apos;injection apr&#232;s rupteur.</description>
+    <CATEGORYMEM index="0" category="3" />
+    <XDFAXIS id="x" uniqueid="0x0">
+      <EMBEDDEDDATA mmedelementsizebits="16" mmedmajorstridebits="-32" />
+      <units>tr/min</units>
+      <indexcount>1</indexcount>
+      <min>1000.000000</min>
+      <outputtype>4</outputtype>
+      <datatype>0</datatype>
+      <unittype>0</unittype>
+      <DALINK index="0" />
+      <LABEL index="0" value="Regime" />
+      <MATH equation="X">
+        <VAR id="X" />
+      </MATH>
+    </XDFAXIS>
+    <XDFAXIS id="y" uniqueid="0x0">
+      <EMBEDDEDDATA mmedelementsizebits="16" mmedmajorstridebits="-32" />
+      <units>tr/min</units>
+      <indexcount>1</indexcount>
+      <min>1000.000000</min>
+      <outputtype>4</outputtype>
+      <datatype>0</datatype>
+      <unittype>0</unittype>
+      <DALINK index="0" />
+      <LABEL index="0" value="Reattelage" />
+      <MATH equation="X">
+        <VAR id="X" />
+      </MATH>
+    </XDFAXIS>
+    <XDFAXIS id="z">
+      <EMBEDDEDDATA mmedaddress="0x2120" mmedelementsizebits="16" mmedrowcount="1" />
+      <units>tr/min</units>
+      <decimalpl>2</decimalpl>
+      <min>0.000000</min>
+      <max>255.000000</max>
+      <outputtype>2</outputtype>
+      <MATH equation="X">
+        <VAR id="X" />
+      </MATH>
+    </XDFAXIS>
+  </XDFTABLE>
+  <XDFTABLE uniqueid="0x2245" flags="0x0">
+    <title>Regime Ralenti</title>
+    <CATEGORYMEM index="0" category="3" />
+    <XDFAXIS id="x" uniqueid="0x0">
+      <EMBEDDEDDATA mmedelementsizebits="8" mmedmajorstridebits="-32" />
+      <indexcount>1</indexcount>
+      <datatype>0</datatype>
+      <unittype>0</unittype>
+      <DALINK index="0" />
+      <LABEL index="0" value="0.00" />
+      <MATH equation="X">
+        <VAR id="X" />
+      </MATH>
+    </XDFAXIS>
+    <XDFAXIS id="y" uniqueid="0x0">
+      <EMBEDDEDDATA mmedelementsizebits="8" mmedmajorstridebits="-32" />
+      <indexcount>1</indexcount>
+      <outputtype>4</outputtype>
+      <datatype>0</datatype>
+      <unittype>0</unittype>
+      <DALINK index="0" />
+      <LABEL index="0" value="0.00" />
+      <MATH equation="X">
+        <VAR id="X" />
+      </MATH>
+    </XDFAXIS>
+    <XDFAXIS id="z">
+      <EMBEDDEDDATA mmedaddress="0x22D5" mmedelementsizebits="8" mmedrowcount="1" />
+      <decimalpl>0</decimalpl>
+      <min>0.000000</min>
+      <max>255.000000</max>
+      <outputtype>2</outputtype>
+      <MATH equation="X*32">
+        <VAR id="X" />
+      </MATH>
+    </XDFAXIS>
+  </XDFTABLE>
+</XDFFORMAT>

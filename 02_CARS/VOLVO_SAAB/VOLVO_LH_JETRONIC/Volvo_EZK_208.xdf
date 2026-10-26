@@ -1,0 +1,388 @@
+XDF
+1.110000
+
+DO NOT HAND EDIT!!!! (Trust me)
+
+%%HEADER%%
+	001000 FileVers         =""
+	001005 DefTitle         ="EZK VOLVO 0 227 400 208 box, "
+	001007 DescSize         =0x1F
+	001006 Desc             ="software 2 227 355 740, EZK 116"
+	001010 Author           ="Raul The Aryan"
+	001030 BinSize          =0x8000
+	001035 BaseOffset       =0
+	001200 ADSAssoc         =""
+	001225 ADSCheck         =0x0
+	001300 GenFlags         =0x0
+	001325 ModeFlags        =0x0
+%%END%%
+
+%%TABLE%%
+	000002 UniqueID         =0x5BFE
+	040005 Title            ="Timing 16x9 (idle?) (raw)"
+	040011 DescSize         =0x1
+	040010 Desc             =""
+	040100 Address          =0x7B00
+	040150 Flags            =0x30
+	040200 ZEq              =X,TH|0|0|0|0|
+	040203 XOutType         =0x2
+	040304 YOutType         =0x4
+	040205 OutType          =0x2
+	040230 RangeLow         =0.0000
+	040240 RangeHigh        =255.0000
+	040300 Rows             =0x9
+	040305 Cols             =0x10
+	040320 XUnits           =""
+	040325 YUnits           =""
+	040330 ZUnits           =""
+	040350 XLabels          =00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00
+	040352 XLabelType       =0x2
+	040354 XEq              =X*40,TH|0|0|0|0|
+	040360 YLabels          =
+	040362 YLabelType       =0x4
+	040364 YEq              =X,TH|0|0|0|0|
+	040505 XLabelSource     =0x1
+	040600 XAddress         =0x7DA0
+	040610 XDataSize        =0x1
+	040620 XAddrStep        =1
+	040650 XOutputDig       =0x1
+	040660 XAxisMin         =1000.000000
+	040670 XAxisMax         =1000.000000
+	040760 YAxisMin         =1000.000000
+	040770 YAxisMax         =1000.000000
+%%END%%
+
+%%TABLE%%
+	000002 UniqueID         =0x130B
+	040005 Title            ="Timing 16x9 (idle?) (converted data)"
+	040011 DescSize         =0x1
+	040010 Desc             =""
+	040100 Address          =0x7B00
+	040150 Flags            =0x30
+	040200 ZEq              =X/8.7,TH|0|0|0|0|
+	040203 XOutType         =0x2
+	040304 YOutType         =0x4
+	040230 RangeLow         =0.0000
+	040240 RangeHigh        =255.0000
+	040300 Rows             =0x9
+	040305 Cols             =0x10
+	040320 XUnits           =""
+	040325 YUnits           =""
+	040330 ZUnits           =""
+	040350 XLabels          =00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00
+	040352 XLabelType       =0x2
+	040354 XEq              =X*40,TH|0|0|0|0|
+	040360 YLabels          =(null),(null),(null),(null),(null),(null),(null),(null),(null)
+	040362 YLabelType       =0x4
+	040364 YEq              =X,TH|0|0|0|0|
+	040505 XLabelSource     =0x1
+	040600 XAddress         =0x7DA0
+	040610 XDataSize        =0x1
+	040620 XAddrStep        =1
+	040650 XOutputDig       =0x1
+	040660 XAxisMin         =1000.000000
+	040670 XAxisMax         =1000.000000
+	040760 YAxisMin         =1000.000000
+	040770 YAxisMax         =1000.000000
+%%END%%
+
+%%TABLE%%
+	000002 UniqueID         =0x5BEA
+	040005 Title            ="Knock sensor sensitivity map"
+	040011 DescSize         =0xAF
+	040010 Desc             ="looks like knock sensor sensitivity map, 128 data means no extra  filtering, higher the value the more sensitivity. Lower the value less sensitive the knock sensor monitoring"
+	040100 Address          =0x7DC0
+	040150 Flags            =0x30
+	040200 ZEq              =X,TH|0|0|0|0|
+	040203 XOutType         =0x2
+	040304 YOutType         =0x2
+	040205 OutType          =0x2
+	040230 RangeLow         =90.0000
+	040240 RangeHigh        =160.0000
+	040300 Rows             =0xC
+	040305 Cols             =0x10
+	040320 XUnits           =""
+	040325 YUnits           =""
+	040330 ZUnits           =""
+	040350 XLabels          =00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00
+	040352 XLabelType       =0x2
+	040354 XEq              =X*40,TH|0|0|0|0|
+	040360 YLabels          =00,00,00,00,00,00,00,00,00,00,00,00
+	040362 YLabelType       =0x2
+	040364 YEq              =X,TH|0|0|0|0|
+	040505 XLabelSource     =0x1
+	040515 YLabelSource     =0x1
+	040600 XAddress         =0x7DA0
+	040610 XDataSize        =0x1
+	040620 XAddrStep        =1
+	040650 XOutputDig       =0x1
+	040660 XAxisMin         =1000.000000
+	040670 XAxisMax         =1000.000000
+	040700 YAddress         =0x7D94
+	040710 YDataSize        =0x1
+	040720 YAddrStep        =1
+	040750 YOutputDig       =0x1
+	040760 YAxisMin         =1000.000000
+	040770 YAxisMax         =1000.000000
+%%END%%
+
+%%TABLE%%
+	000002 UniqueID         =0x3688
+	040005 Title            ="2D Timing 1x38(raw)"
+	040011 DescSize         =0x1
+	040010 Desc             =""
+	040100 Address          =0x7D40
+	040150 Flags            =0x30
+	040200 ZEq              =X,TH|0|0|0|0|
+	040203 XOutType         =0x4
+	040304 YOutType         =0x2
+	040205 OutType          =0x2
+	040230 RangeLow         =0.0000
+	040240 RangeHigh        =255.0000
+	040300 Rows             =0x26
+	040305 Cols             =0x1
+	040320 XUnits           =""
+	040325 YUnits           =""
+	040330 ZUnits           =""
+	040350 XLabels          =
+	040352 XLabelType       =0x4
+	040354 XEq              =X,TH|0|0|0|0|
+	040360 YLabels          =00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00
+	040362 YLabelType       =0x2
+	040364 YEq              =X,TH|0|0|0|0|
+	040600 XAddress         =0x7DA0
+	040610 XDataSize        =0x1
+	040620 XAddrStep        =1
+	040650 XOutputDig       =0x1
+	040660 XAxisMin         =1000.000000
+	040670 XAxisMax         =1000.000000
+	040710 YDataSize        =0x1
+	040720 YAddrStep        =1
+	040750 YOutputDig       =0x1
+	040760 YAxisMin         =1000.000000
+	040770 YAxisMax         =1000.000000
+%%END%%
+
+%%TABLE%%
+	000002 UniqueID         =0x6EAA
+	040005 Title            ="2D Timing 1x38(converted data)"
+	040011 DescSize         =0x1
+	040010 Desc             =""
+	040100 Address          =0x7D40
+	040150 Flags            =0x30
+	040200 ZEq              =X/8.7,TH|0|0|0|0|
+	040203 XOutType         =0x4
+	040304 YOutType         =0x4
+	040205 OutType          =0x2
+	040230 RangeLow         =0.0000
+	040240 RangeHigh        =255.0000
+	040300 Rows             =0x26
+	040305 Cols             =0x1
+	040320 XUnits           =""
+	040325 YUnits           =""
+	040330 ZUnits           =""
+	040350 XLabels          =
+	040352 XLabelType       =0x4
+	040354 XEq              =X,TH|0|0|0|0|
+	040360 YLabels          =
+	040362 YLabelType       =0x4
+	040364 YEq              =X,TH|0|0|0|0|
+	040660 XAxisMin         =1000.000000
+	040670 XAxisMax         =1000.000000
+	040760 YAxisMin         =1000.000000
+	040770 YAxisMax         =1000.000000
+%%END%%
+
+%%TABLE%%
+	000002 UniqueID         =0x6550
+	040005 Title            ="Timing 16x8(raw)"
+	040011 DescSize         =0x1
+	040010 Desc             =""
+	040100 Address          =0x7E80
+	040150 Flags            =0x30
+	040200 ZEq              =X,TH|0|0|0|0|
+	040203 XOutType         =0x2
+	040304 YOutType         =0x2
+	040205 OutType          =0x2
+	040230 RangeLow         =0.0000
+	040240 RangeHigh        =255.0000
+	040300 Rows             =0x8
+	040305 Cols             =0x10
+	040320 XUnits           =""
+	040325 YUnits           ="load %"
+	040330 ZUnits           =""
+	040350 XLabels          =00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00
+	040352 XLabelType       =0x2
+	040354 XEq              =X*40,TH|0|0|0|0|
+	040360 YLabels          =00,00,00,00,00,00,00,00
+	040362 YLabelType       =0x2
+	040364 YEq              =(X/255)*100,TH|0|0|0|0|
+	040505 XLabelSource     =0x1
+	040515 YLabelSource     =0x1
+	040600 XAddress         =0x7DA0
+	040610 XDataSize        =0x1
+	040620 XAddrStep        =1
+	040650 XOutputDig       =0x1
+	040660 XAxisMin         =1000.000000
+	040670 XAxisMax         =1000.000000
+	040700 YAddress         =0x7D94
+	040710 YDataSize        =0x1
+	040720 YAddrStep        =1
+	040750 YOutputDig       =0x1
+	040760 YAxisMin         =1000.000000
+	040770 YAxisMax         =1000.000000
+%%END%%
+
+%%TABLE%%
+	000002 UniqueID         =0x4444
+	040005 Title            ="Timing 16x8(converted data))"
+	040011 DescSize         =0x1
+	040010 Desc             =""
+	040100 Address          =0x7E80
+	040150 Flags            =0x30
+	040200 ZEq              =X/8.7,TH|0|0|0|0|
+	040203 XOutType         =0x2
+	040304 YOutType         =0x4
+	040205 OutType          =0x2
+	040230 RangeLow         =0.0000
+	040240 RangeHigh        =255.0000
+	040300 Rows             =0x8
+	040305 Cols             =0x10
+	040320 XUnits           =""
+	040325 YUnits           =""
+	040330 ZUnits           =""
+	040350 XLabels          =00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00
+	040352 XLabelType       =0x2
+	040354 XEq              =X*40,TH|0|0|0|0|
+	040360 YLabels          =
+	040362 YLabelType       =0x4
+	040364 YEq              =X,TH|0|0|0|0|
+	040505 XLabelSource     =0x1
+	040600 XAddress         =0x7DA0
+	040610 XDataSize        =0x1
+	040620 XAddrStep        =1
+	040650 XOutputDig       =0x1
+	040660 XAxisMin         =1000.000000
+	040670 XAxisMax         =1000.000000
+	040760 YAxisMin         =1000.000000
+	040770 YAxisMax         =1000.000000
+%%END%%
+
+%%TABLE%%
+	000002 UniqueID         =0x3681
+	040005 Title            ="Rev limiting map 1x8(raw)"
+	040011 DescSize         =0x1D
+	040010 Desc             ="data x 40 = rev limit in RPM"
+	040100 Address          =0x7F40
+	040150 Flags            =0x30
+	040200 ZEq              =X,TH|0|0|0|0|
+	040203 XOutType         =0x4
+	040304 YOutType         =0x4
+	040205 OutType          =0x2
+	040230 RangeLow         =0.0000
+	040240 RangeHigh        =255.0000
+	040300 Rows             =0x8
+	040305 Cols             =0x1
+	040320 XUnits           =""
+	040325 YUnits           =""
+	040330 ZUnits           =""
+	040350 XLabels          =
+	040352 XLabelType       =0x4
+	040354 XEq              =X,TH|0|0|0|0|
+	040360 YLabels          =
+	040362 YLabelType       =0x4
+	040364 YEq              =X,TH|0|0|0|0|
+	040660 XAxisMin         =1000.000000
+	040670 XAxisMax         =1000.000000
+	040760 YAxisMin         =1000.000000
+	040770 YAxisMax         =1000.000000
+%%END%%
+
+%%TABLE%%
+	000002 UniqueID         =0x17E4
+	040005 Title            ="Rev limiting map 1x8(converted data)"
+	040011 DescSize         =0x1D
+	040010 Desc             ="data x 40 = rev limit in RPM"
+	040100 Address          =0x7F40
+	040200 ZEq              =X*40,TH|0|0|0|0|
+	040203 XOutType         =0x4
+	040304 YOutType         =0x4
+	040205 OutType          =0x2
+	040230 RangeLow         =0.0000
+	040240 RangeHigh        =255.0000
+	040300 Rows             =0x8
+	040305 Cols             =0x1
+	040320 XUnits           =""
+	040325 YUnits           =""
+	040330 ZUnits           =""
+	040350 XLabels          =(null)
+	040352 XLabelType       =0x4
+	040354 XEq              =X,TH|0|0|0|0|
+	040360 YLabels          =rev,rev,rev,rev,rev,rev,rev,rev
+	040362 YLabelType       =0x4
+	040364 YEq              =X,TH|0|0|0|0|
+	040660 XAxisMin         =1000.000000
+	040670 XAxisMax         =1000.000000
+	040760 YAxisMin         =1000.000000
+	040770 YAxisMax         =1000.000000
+%%END%%
+
+%%TABLE%%
+	000002 UniqueID         =0x1A03
+	040005 Title            ="2D Timing 1x29(raw)"
+	040011 DescSize         =0x1
+	040010 Desc             =""
+	040100 Address          =0x7FC0
+	040150 Flags            =0x30
+	040200 ZEq              =X,TH|0|0|0|0|
+	040203 XOutType         =0x4
+	040304 YOutType         =0x4
+	040205 OutType          =0x2
+	040230 RangeLow         =100.0000
+	040240 RangeHigh        =200.0000
+	040300 Rows             =0x1D
+	040305 Cols             =0x1
+	040320 XUnits           =""
+	040325 YUnits           =""
+	040330 ZUnits           =""
+	040350 XLabels          =
+	040352 XLabelType       =0x4
+	040354 XEq              =X,TH|0|0|0|0|
+	040360 YLabels          =
+	040362 YLabelType       =0x4
+	040364 YEq              =X,TH|0|0|0|0|
+	040660 XAxisMin         =1000.000000
+	040670 XAxisMax         =1000.000000
+	040760 YAxisMin         =1000.000000
+	040770 YAxisMax         =1000.000000
+%%END%%
+
+%%TABLE%%
+	000002 UniqueID         =0x7A50
+	040005 Title            ="2D Timing 1x29(converted data)"
+	040011 DescSize         =0x1
+	040010 Desc             =""
+	040100 Address          =0x7FC0
+	040150 Flags            =0x30
+	040200 ZEq              =X/8.7,TH|0|0|0|0|
+	040203 XOutType         =0x4
+	040304 YOutType         =0x4
+	040230 RangeLow         =0.0000
+	040240 RangeHigh        =255.0000
+	040300 Rows             =0x1D
+	040305 Cols             =0x1
+	040320 XUnits           =""
+	040325 YUnits           ="rpm"
+	040330 ZUnits           =""
+	040350 XLabels          =(null)
+	040352 XLabelType       =0x4
+	040354 XEq              =X,TH|0|0|0|0|
+	040360 YLabels          =,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+	040362 YLabelType       =0x4
+	040364 YEq              =X,TH|0|0|0|0|
+	040660 XAxisMin         =1000.000000
+	040670 XAxisMax         =1000.000000
+	040760 YAxisMin         =1000.000000
+	040770 YAxisMax         =1000.000000
+%%END%%
+

@@ -1,0 +1,260 @@
+XDF
+1.110000
+
+DO NOT HAND EDIT!!!! (Trust me)
+
+%%HEADER%%
+	001000 FileVers         ="1.0"
+	001005 DefTitle         ="Siemens / Bendix Fenix 3A ECU"
+	001007 DescSize         =0x37
+	001006 Desc             ="Calculateur Renault R25 V6\r\nFenix3A\r\nVersion Soft 33 0A"
+	001010 Author           ="Emmanuel MARTINET - http://www.fenixecu.com"
+	001030 BinSize          =0x1FFF
+	001035 BaseOffset       =0
+	001200 ADSAssoc         =""
+	001225 ADSCheck         =0x0
+	001300 GenFlags         =0x0
+	001325 ModeFlags        =0x0
+	002000 Category0        ="Injection"
+	002001 Category1        ="Avance"
+	002002 Category2        ="Regime"
+	002003 Category3        ="Programme"
+%%END%%
+
+%%TABLE%%
+	000002 UniqueID         =0x3BCA
+	000100 Cat0ID           =0x4
+	040005 Title            ="Version Programme"
+	040011 DescSize         =0xA5
+	040010 Desc             ="Permet d'identifier la version du programme ouvert.\r\n\r\nPour les Renault Clio 16S cette valeur doit être :\r\n74 94 : modèle non catalysée\r\n78 52/53 : modèle catalysée"
+	040100 Address          =0x4
+	040200 ZEq              =X,TH|0|0|0|0|
+	040203 XOutType         =0x4
+	040304 YOutType         =0x4
+	040205 OutType          =0x3
+	040230 RangeLow         =0.0000
+	040240 RangeHigh        =255.0000
+	040300 Rows             =0x1
+	040305 Cols             =0x2
+	040320 XUnits           =""
+	040325 YUnits           =""
+	040330 ZUnits           =""
+	040350 XLabels          =HEX 1,HEX 2
+	040352 XLabelType       =0x4
+	040354 XEq              =X,TH|0|0|0|0|
+	040360 YLabels          =Version
+	040362 YLabelType       =0x4
+	040364 YEq              =X,TH|0|0|0|0|
+	040660 XAxisMin         =1000.000000
+	040670 XAxisMax         =1000.000000
+	040760 YAxisMin         =1000.000000
+	040770 YAxisMax         =1000.000000
+%%END%%
+
+%%TABLE%%
+	000002 UniqueID         =0x3382
+	000100 Cat0ID           =0x4
+	040005 Title            ="Version de calibration"
+	040011 DescSize         =0xA6
+	040010 Desc             ="Numéro de révision de la calibration cartographique faite par Renault. Ce numéro apparaît dans la trame de diagnostic XR25 et permet l'adéquation programme/véhicule."
+	040100 Address          =0x6
+	040200 ZEq              =X,TH|0|0|0|0|
+	040203 XOutType         =0x4
+	040304 YOutType         =0x4
+	040205 OutType          =0x3
+	040210 DecimalPl        =0x0
+	040230 RangeLow         =0.0000
+	040240 RangeHigh        =255.0000
+	040300 Rows             =0x1
+	040305 Cols             =0x1
+	040320 XUnits           =""
+	040325 YUnits           =""
+	040330 ZUnits           =""
+	040350 XLabels          =revision
+	040352 XLabelType       =0x4
+	040354 XEq              =X,TH|0|0|0|0|
+	040360 YLabels          =Calibration
+	040362 YLabelType       =0x4
+	040364 YEq              =X,TH|0|0|0|0|
+	040660 XAxisMin         =1000.000000
+	040670 XAxisMax         =1000.000000
+	040760 YAxisMin         =1000.000000
+	040770 YAxisMax         =1000.000000
+%%END%%
+
+%%TABLE%%
+	000002 UniqueID         =0x6C28
+	000100 Cat0ID           =0x2
+	040005 Title            ="CARTA - Table Avance"
+	040011 DescSize         =0xE4
+	040010 Desc             ="Table gestion avance. A éditer avec précision. Ce paramètre influe fortement sur le couple et la consommation.\r\n\r\nPression (mb) = NBhexa x 3,60  + 103\r\navec NBhexa = 00 - 20 - 40 - 60 - 80 - A0 - C0 - E0 - 100\r\n\r\nRégimes = TABS"
+	040100 Address          =0x7
+	040150 Flags            =0x30
+	040200 ZEq              =X,TH|0|0|0|0|
+	040203 XOutType         =0x4
+	040304 YOutType         =0x2
+	040205 OutType          =0x2
+	040230 RangeLow         =30.0000
+	040240 RangeHigh        =56.0000
+	040300 Rows             =0xD
+	040305 Cols             =0x9
+	040320 XUnits           ="mBar"
+	040325 YUnits           ="Tr/min"
+	040330 ZUnits           ="Degrès"
+	040350 XLabels          =103,218,333,448,563,679,794,909,1024
+	040352 XLabelType       =0x4
+	040354 XEq              =X,TH|0|0|0|0|
+	040360 YLabels          =00,00,00,00,00,00,00,00,00,00,00,00,00
+	040362 YLabelType       =0x2
+	040364 YEq              =25 * X,TH|0|0|0|0|
+	040515 YLabelSource     =0x1
+	040600 XAddress         =0x7
+	040610 XDataSize        =0x1
+	040620 XAddrStep        =0
+	040660 XAxisMin         =1000.000000
+	040670 XAxisMax         =1000.000000
+	040700 YAddress         =0xF1
+	040710 YDataSize        =0x1
+	040720 YAddrStep        =1
+	040750 YOutputDig       =0x4
+	040760 YAxisMin         =1000.000000
+	040770 YAxisMax         =1000.000000
+%%END%%
+
+%%TABLE%%
+	000002 UniqueID         =0x78BA
+	000100 Cat0ID           =0x1
+	040005 Title            ="CARTI - Table Injection"
+	040011 DescSize         =0x12D
+	040010 Desc             ="Table de gestion de  l'ouverture des injecteurs. Cette table joue sur le temps d'injection. A éditer avec précision. Ce paramètre influe fortement sur la puissance et la consommation.\r\n\r\nPression (mb) = NBhexa x 3,60  + 103\r\navec NBhexa = 00 - 20 - 40 - 60 - 80 - A0 - C0 - E0 - 100\r\n\r\nRégimes = TABS"
+	040100 Address          =0x7C
+	040150 Flags            =0x30
+	040200 ZEq              =X,TH|0|0|0|0|
+	040203 XOutType         =0x4
+	040304 YOutType         =0x2
+	040205 OutType          =0x2
+	040230 RangeLow         =100.0000
+	040240 RangeHigh        =190.0000
+	040300 Rows             =0xD
+	040305 Cols             =0x9
+	040320 XUnits           ="mBar"
+	040325 YUnits           ="Tr/min"
+	040330 ZUnits           ="ms"
+	040350 XLabels          =103,218,333,448,563,679,794,909,1024
+	040352 XLabelType       =0x4
+	040354 XEq              =X,TH|0|0|0|0|
+	040360 YLabels          =00,00,00,00,00,00,00,00,00,00,00,00,00
+	040362 YLabelType       =0x2
+	040364 YEq              =25 * X,TH|0|0|0|0|
+	040515 YLabelSource     =0x1
+	040600 XAddress         =0x7
+	040610 XDataSize        =0x1
+	040620 XAddrStep        =0
+	040660 XAxisMin         =1000.000000
+	040670 XAxisMax         =1000.000000
+	040700 YAddress         =0xF1
+	040710 YDataSize        =0x1
+	040720 YAddrStep        =1
+	040750 YOutputDig       =0x4
+	040760 YAxisMin         =1000.000000
+	040770 YAxisMax         =1000.000000
+%%END%%
+
+%%TABLE%%
+	000002 UniqueID         =0x4C2D
+	000100 Cat0ID           =0x3
+	040005 Title            ="TABS - Pas de régimes"
+	040011 DescSize         =0x31
+	040010 Desc             ="Pas de régime moteur pour gestion CARTA et CARTI"
+	040100 Address          =0xF1
+	040200 ZEq              =25 * X,TH|0|0|0|0|
+	040203 XOutType         =0x3
+	040304 YOutType         =0x4
+	040205 OutType          =0x2
+	040210 DecimalPl        =0x0
+	040230 RangeLow         =0.0000
+	040240 RangeHigh        =255.0000
+	040300 Rows             =0x1
+	040305 Cols             =0xD
+	040320 XUnits           ="tr/min"
+	040325 YUnits           ="tr/min"
+	040330 ZUnits           ="tr/min"
+	040350 XLabels          =,,,,,,,,,,,,
+	040352 XLabelType       =0x3
+	040354 XEq              =X,TH|0|0|0|0|
+	040360 YLabels          =Tr/min
+	040362 YLabelType       =0x4
+	040364 YEq              =X,TH|0|0|0|0|
+	040505 XLabelSource     =0x1
+	040600 XAddress         =0xF1
+	040610 XDataSize        =0x1
+	040620 XAddrStep        =1
+	040660 XAxisMin         =1000.000000
+	040670 XAxisMax         =1000.000000
+	040760 YAxisMin         =1000.000000
+	040770 YAxisMax         =1000.000000
+%%END%%
+
+%%TABLE%%
+	000002 UniqueID         =0x7B15
+	000100 Cat0ID           =0x3
+	040005 Title            ="REGMAX - Régime Maxi"
+	040011 DescSize         =0x84
+	040010 Desc             ="Régime maximum du moteur. A cette valeur l'ECU coupe l'injection et ne reprends que lorsque N =< REGREP. C'est la valeur du rupteur"
+	040050 SizeInBits       =0x10
+	040100 Address          =0x258
+	040200 ZEq              =X,TH|0|0|0|0|
+	040203 XOutType         =0x4
+	040304 YOutType         =0x4
+	040205 OutType          =0x2
+	040210 DecimalPl        =0x0
+	040230 RangeLow         =0.0000
+	040240 RangeHigh        =255.0000
+	040300 Rows             =0x1
+	040305 Cols             =0x1
+	040320 XUnits           ="tr/min"
+	040325 YUnits           ="tr/min"
+	040330 ZUnits           ="tr/min"
+	040350 XLabels          =Regime
+	040352 XLabelType       =0x4
+	040354 XEq              =X,TH|0|0|0|0|
+	040360 YLabels          =Rupteur
+	040362 YLabelType       =0x4
+	040364 YEq              =X,TH|0|0|0|0|
+	040660 XAxisMin         =1000.000000
+	040670 XAxisMax         =1000.000000
+	040760 YAxisMin         =1000.000000
+	040770 YAxisMax         =1000.000000
+%%END%%
+
+%%TABLE%%
+	000002 UniqueID         =0x7A37
+	000100 Cat0ID           =0x3
+	040005 Title            ="REGREP - Régime Réatellage"
+	040011 DescSize         =0x78
+	040010 Desc             ="Régime de réatellage du moteur après coupure rupteur à REGMAX. A cette valeur l'ECU reprends l'injection après rupteur."
+	040050 SizeInBits       =0x10
+	040100 Address          =0x25A
+	040200 ZEq              =X,TH|0|0|0|0|
+	040203 XOutType         =0x4
+	040304 YOutType         =0x4
+	040205 OutType          =0x2
+	040230 RangeLow         =0.0000
+	040240 RangeHigh        =255.0000
+	040300 Rows             =0x1
+	040305 Cols             =0x1
+	040320 XUnits           ="tr/min"
+	040325 YUnits           ="tr/min"
+	040330 ZUnits           ="tr/min"
+	040350 XLabels          =Regime
+	040352 XLabelType       =0x4
+	040354 XEq              =X,TH|0|0|0|0|
+	040360 YLabels          =Reattelage
+	040362 YLabelType       =0x4
+	040364 YEq              =X,TH|0|0|0|0|
+	040660 XAxisMin         =1000.000000
+	040670 XAxisMax         =1000.000000
+	040760 YAxisMin         =1000.000000
+	040770 YAxisMax         =1000.000000
+%%END%%
+

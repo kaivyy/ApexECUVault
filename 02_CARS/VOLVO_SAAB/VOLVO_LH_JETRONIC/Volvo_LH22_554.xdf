@@ -1,0 +1,159 @@
+XDF
+1.110000
+
+DO NOT HAND EDIT!!!! (Trust me)
+
+%%HEADER%%
+	001000 FileVers         =""
+	001005 DefTitle         ="VOLVO LH2.2 554 XDF"
+	001007 DescSize         =0x1F
+	001006 Desc             ="XDF fo chippable 554 volvo ecu"
+	001010 Author           ="Raul the Aryan"
+	001030 BinSize          =0x1000
+	001035 BaseOffset       =0
+	001200 ADSAssoc         =""
+	001225 ADSCheck         =0x0
+	001300 GenFlags         =0x0
+	001325 ModeFlags        =0x0
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x6EDA
+	020005 Title            ="Injector constant"
+	020011 DescSize         =0x62
+	020010 Desc             ="for when tuning for bigger injectors, turn the value down when bigger injectors installed, 128dec"
+	020020 Units            =""
+	020100 Address          =0xCA7
+	020200 Equation         =x*(1/128),TH|0|0|0|0|
+%%END%%
+
+%%CONSTANT%%
+	000002 UniqueID         =0x5333
+	020005 Title            ="RPM limit"
+	020011 DescSize         =0x2D
+	020010 Desc             ="increase the value to raise rev limit 251dec"
+	020020 Units            =""
+	020100 Address          =0x5CC
+	020200 Equation         =X,TH|0|0|0|0|
+%%END%%
+
+%%TABLE%%
+	000002 UniqueID         =0xFA8
+	040005 Title            ="Full load enrichment"
+	040011 DescSize         =0x3F
+	040010 Desc             ="this map is used when throttle switch is switched to full open"
+	040100 Address          =0x825
+	040150 Flags            =0x30
+	040200 ZEq              =X,TH|0|0|0|0|
+	040203 XOutType         =0x4
+	040304 YOutType         =0x4
+	040205 OutType          =0x2
+	040230 RangeLow         =0.0000
+	040240 RangeHigh        =60.0000
+	040300 Rows             =0x1
+	040305 Cols             =0x11
+	040320 XUnits           =""
+	040325 YUnits           =""
+	040330 ZUnits           =""
+	040350 XLabels          =6899,4855,3745,3048,2570,2222,1956,1748,1579,1324,1140,1001,892,732,621,539,480
+	040352 XLabelType       =0x4
+	040354 XEq              =X,TH|0|0|0|0|
+	040360 YLabels          =enrich
+	040362 YLabelType       =0x4
+	040364 YEq              =X,TH|0|0|0|0|
+	040660 XAxisMin         =1000.000000
+	040670 XAxisMax         =1000.000000
+	040760 YAxisMin         =1000.000000
+	040770 YAxisMax         =1000.000000
+%%END%%
+
+%%TABLE%%
+	000002 UniqueID         =0x5C15
+	040005 Title            ="Warmup enrichment"
+	040011 DescSize         =0x1
+	040010 Desc             =""
+	040100 Address          =0x802
+	040150 Flags            =0x30
+	040200 ZEq              =X,TH|0|0|0|0|
+	040203 XOutType         =0x4
+	040304 YOutType         =0x4
+	040205 OutType          =0x2
+	040230 RangeLow         =0.0000
+	040240 RangeHigh        =100.0000
+	040300 Rows             =0x1
+	040305 Cols             =0xF
+	040320 XUnits           =""
+	040325 YUnits           =""
+	040330 ZUnits           =""
+	040350 XLabels          =99,99,72,56,45,36,28,21,14,8,1,-6,-14,-25,-40
+	040352 XLabelType       =0x4
+	040354 XEq              =X,TH|0|0|0|0|
+	040360 YLabels          =enrich
+	040362 YLabelType       =0x4
+	040364 YEq              =X,TH|0|0|0|0|
+	040660 XAxisMin         =1000.000000
+	040670 XAxisMax         =1000.000000
+	040760 YAxisMin         =1000.000000
+	040770 YAxisMax         =1000.000000
+%%END%%
+
+%%TABLE%%
+	000002 UniqueID         =0x7739
+	040005 Title            ="Acceleration enrichment"
+	040011 DescSize         =0x63
+	040010 Desc             ="instant load enrichment, based on air flow meter voltage spike when throttle is suddenly depressed"
+	040100 Address          =0x837
+	040150 Flags            =0x30
+	040200 ZEq              =X,TH|0|0|0|0|
+	040203 XOutType         =0x4
+	040304 YOutType         =0x4
+	040205 OutType          =0x2
+	040230 RangeLow         =100.0000
+	040240 RangeHigh        =255.0000
+	040300 Rows             =0x1
+	040305 Cols             =0x9
+	040320 XUnits           =""
+	040325 YUnits           =""
+	040330 ZUnits           =""
+	040350 XLabels          =99,72,45,28,14,1,-14,-40,-40
+	040352 XLabelType       =0x4
+	040354 XEq              =X,TH|0|0|0|0|
+	040360 YLabels          =enrich
+	040362 YLabelType       =0x4
+	040364 YEq              =X,TH|0|0|0|0|
+	040660 XAxisMin         =1000.000000
+	040670 XAxisMax         =1000.000000
+	040760 YAxisMin         =1000.000000
+	040770 YAxisMax         =1000.000000
+%%END%%
+
+%%TABLE%%
+	000002 UniqueID         =0x44A8
+	040005 Title            ="Idle speed"
+	040011 DescSize         =0x28
+	040010 Desc             ="idle speed control based on temperature"
+	040100 Address          =0x873
+	040150 Flags            =0x30
+	040200 ZEq              =X,TH|0|0|0|0|
+	040203 XOutType         =0x4
+	040304 YOutType         =0x4
+	040205 OutType          =0x2
+	040230 RangeLow         =90.0000
+	040240 RangeHigh        =255.0000
+	040300 Rows             =0x1
+	040305 Cols             =0x9
+	040320 XUnits           =""
+	040325 YUnits           =""
+	040330 ZUnits           =""
+	040350 XLabels          =99,72,45,28,14,1,-14,-40,-40
+	040352 XLabelType       =0x4
+	040354 XEq              =X,TH|0|0|0|0|
+	040360 YLabels          =speed
+	040362 YLabelType       =0x4
+	040364 YEq              =X,TH|0|0|0|0|
+	040660 XAxisMin         =1000.000000
+	040670 XAxisMax         =1000.000000
+	040760 YAxisMin         =1000.000000
+	040770 YAxisMax         =1000.000000
+%%END%%
+

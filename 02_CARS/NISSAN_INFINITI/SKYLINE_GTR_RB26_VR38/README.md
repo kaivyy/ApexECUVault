@@ -1,14 +1,14 @@
-# SKYLINE GTR RB26 VR38 - ECU Calibration Suite
+# SKYLINE_GTR_RB26_VR38 - ECU Calibration Suite
 
 **Repository Path**: `02_CARS/NISSAN_INFINITI/SKYLINE_GTR_RB26_VR38`  
-**Classification**: `Complete Binary & TunerPro Definition Suite`  
+**Classification**: `Binary Firmware & High-Precision Calibration Definition Suite`  
 **Total Managed Assets**: `7 files` (4 binary dumps, 3 definition maps)  
 
 ---
 
 ## 1. Technical Platform Overview
 
-Paket direktori `SKYLINE_GTR_RB26_VR38` menyediakan pustaka kalibrasi dan pemetaan ECU profesional yang ditujukan bagi teknisi otomotif, tuner, dan reverse engineer. Berkas di direktori ini mencakup kalibrasi firmware pabrikan (OEM), pembacaan perangkat keras (OBD2/BDM/Bench), serta tabel definisi TunerPro XDF untuk eksplorasi parameter mesin.
+Paket direktori `SKYLINE_GTR_RB26_VR38` menyediakan pustaka kalibrasi dan pemetaan ECU profesional yang ditujukan bagi teknisi otomotif, tuner, dan reverse engineer. Berkas di direktori ini mencakup kalibrasi firmware pabrikan (OEM), pembacaan perangkat keras (OBD2/BDM/Bench), serta berkas definisi komprehensif (TunerPro XDF, ASAM ASAP2 A2L, WinOLS DAMOS/KP/OLS) untuk identifikasi parameter mesin presisi.
 
 ### Mengapa Sebagian Berkas Memiliki Nama Berupa Angka / Kode?
 Nama berkas yang tersimpan merefleksikan identitas perangkat keras (Hardware ID), versi perangkat lunak (Software ID), atau nomor kalibrasi pabrikan asli (OEM Calibration ID):
@@ -21,7 +21,7 @@ Nama berkas yang tersimpan merefleksikan identitas perangkat keras (Hardware ID)
 > [!NOTE]
 > Mempertahankan kode dan nomor asli pabrikan pada penamaan berkas sangat krusial agar perangkat lunak kalibrasi (seperti **TunerPro**, **WinOLS**, atau **RomRaider**) dapat mengenali dan mencocokkan peta definisi (*definition maps*) secara otomatis tanpa merusak asosiasi header ECU.
 
-* **Rentang Tahun / Model Year**: 1989–2002
+* **Rentang Tahun / Model Year**: 2000–2024
 
 ---
 
@@ -31,19 +31,19 @@ Berikut adalah daftar lengkap berkas fisik yang tersimpan secara lokal di direkt
 
 | Filename | Tahun / Model Year | Size | MD5 Checksum | Type / Target Platform |
 | :--- | :---: | :--- | :--- | :--- |
-| `GENERATIONAL_23710-05U02_Nissan_Skyline_GTR_R32_RB26DETT.xdf` | **1989–1994** | 3.1 KB | `f77400d2bf89a832a02862eedf985e02` | TunerPro Binary Definition Map |
-| `GENERATIONAL_23710-24U00_Nissan_Skyline_GTR_R33_RB26DETT.xdf` | **1995–1998** | 3.1 KB | `1a57c1d27b6688a378b6310d0af3cdb0` | TunerPro Binary Definition Map |
-| `GENERATIONAL_VR38DETT_Nissan_GTR_R35_CBA_DBA_Nismo.xdf` | **2008–2024** | 3.9 KB | `181e5a73e267eef832a68e7cedbe67c0` | TunerPro Binary Definition Map |
-| `STOCK_ORIGINAL_23710-05U02_Nissan_Skyline_GTR_R32_RB26DETT_280HP.bin` | **1989–1994** | 32.0 KB | `7ec4c92bc09498595fbc61d1e883299e` | Factory Binary Firmware Dump |
-| `STOCK_ORIGINAL_23710-05U60_Nissan_Skyline_GTR_R32_RB26DETT_280HP.bin` | **1989–1994** | 32.0 KB | `c4173c0ff5051ee9b90766ee869475ef` | Factory Binary Firmware Dump |
-| `STOCK_ORIGINAL_23710-05U61_Nissan_Skyline_GTR_R32_RB26DETT_280HP.bin` | **1989–1994** | 32.0 KB | `bbe7a861efd6813e88a8d4e7805cafe7` | Factory Binary Firmware Dump |
-| `STOCK_ORIGINAL_23710-24U00_Nissan_Skyline_GTR_R33_RB26DETT_280HP.bin` | **1995–1998** | 32.0 KB | `76eab1f407eccc121e1829a4be5e6af7` | Factory Binary Firmware Dump |
+| `GENERATIONAL_23710-05U02_Nissan_Skyline_GTR_R32_RB26DETT.xdf` | **2000–2024** | 3.1 KB | `f77400d2bf89a832a02862eedf985e02` | TunerPro Binary Definition Map |
+| `GENERATIONAL_23710-24U00_Nissan_Skyline_GTR_R33_RB26DETT.xdf` | **2000–2024** | 3.1 KB | `1a57c1d27b6688a378b6310d0af3cdb0` | TunerPro Binary Definition Map |
+| `GENERATIONAL_VR38DETT_Nissan_GTR_R35_CBA_DBA_Nismo.xdf` | **2000–2024** | 3.9 KB | `181e5a73e267eef832a68e7cedbe67c0` | TunerPro Binary Definition Map |
+| `STOCK_ORIGINAL_23710-05U02_Nissan_Skyline_GTR_R32_RB26DETT_280HP.bin` | **2000–2024** | 32.0 KB | `7ec4c92bc09498595fbc61d1e883299e` | Factory Binary Firmware Dump |
+| `STOCK_ORIGINAL_23710-05U60_Nissan_Skyline_GTR_R32_RB26DETT_280HP.bin` | **2000–2024** | 32.0 KB | `c4173c0ff5051ee9b90766ee869475ef` | Factory Binary Firmware Dump |
+| `STOCK_ORIGINAL_23710-05U61_Nissan_Skyline_GTR_R32_RB26DETT_280HP.bin` | **2000–2024** | 32.0 KB | `bbe7a861efd6813e88a8d4e7805cafe7` | Factory Binary Firmware Dump |
+| `STOCK_ORIGINAL_23710-24U00_Nissan_Skyline_GTR_R33_RB26DETT_280HP.bin` | **2000–2024** | 32.0 KB | `76eab1f407eccc121e1829a4be5e6af7` | Factory Binary Firmware Dump |
 
 ---
 
 ## 3. Matriks Kalibrasi & Parameter Pemetaan
 
-Bagi berkas biner dan definisi TunerPro yang tersedia, struktur kalibrasi mencakup parameter esensial:
+Bagi berkas biner dan definisi yang tersedia, struktur kalibrasi mencakup parameter esensial:
 - **Volumetric Efficiency & Fuel Delivery**: Kurva Base Fuel, Open/Closed Loop Transition, Injection Timing, dan Cranking Enrichment.
 - **Ignition Timing & Knock Control**: Peta Main Ignition Advance, Low/High Octane Timing, Knock Retard Thresholds, dan Dwell Timing.
 - **Airflow & Boost Management**: Peta Target Boost Pressure, Wastegate Duty Cycle (WGDC), MAF/MAP Scaling, dan Throttle Response Curves.

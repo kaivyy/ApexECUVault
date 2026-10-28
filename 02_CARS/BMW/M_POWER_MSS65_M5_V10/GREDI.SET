@@ -1,0 +1,71 @@
+6
+5
+34
+2
+INJ.A2L
+inj.bin
+IGN.A2L
+ign.bin
+0
+0
+
+0
+0
+
+0
+0
+
+1 K_VERS_PROG
+1 vers_prog
+1 K_VERS_PROZ
+1 vers_index
+1 K_VERS_NAME
+2 vers_prog
+1 K_VERS_DATEN
+2 vers_index
+1 r5msTaskCtr
+2 K_VERS_PROG
+2 r5msTaskCtr
+2 K_VERS_PROZ
+1 n
+2 K_VERS_NAME
+2 K_VERS_DATEN
+2 pwg_soll
+1 egas_ist_dk_b1
+1 egas_ist_dk_b2
+1 egas_ist_lls_b1
+1 egas_ist_lls_b2
+1 zustand_motor
+1 vers_boot
+2 vers_boot
+-1
+Gredi.rec
+
+5
+1000000 0 0 0.010000 0.000000 0.000000 0.000000 0.005000
+0 2 2
+
+
+0
+0
+0
+0
+-1
+-1
+-1
+1 255 0 v_rad_vr
+1 255 0 v_rad_hl
+1 255 0 v_rad_hr
+1 255 0 v_rad_st
+1 255 0 v_vorne
+1 255 0 v_hinten
+-1
+1 30
+-1
+1 0 -1 v_rad_vr
+1 0 -2 v_rad_hl
+1 0 -3 v_rad_hr
+1 0 -4 v_rad_st
+1 0 -5 v_vorne
+1 0 -6 v_hinten
+-1

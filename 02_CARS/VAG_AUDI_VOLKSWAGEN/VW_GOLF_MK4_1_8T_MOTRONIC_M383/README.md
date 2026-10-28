@@ -1,14 +1,14 @@
-# VW GOLF MK4 1 8T MOTRONIC M383 - ECU Calibration Suite
+# VW_GOLF_MK4_1_8T_MOTRONIC_M383 - ECU Calibration Suite
 
 **Repository Path**: `02_CARS/VAG_AUDI_VOLKSWAGEN/VW_GOLF_MK4_1_8T_MOTRONIC_M383`  
-**Classification**: `Complete Binary & TunerPro Definition Suite`  
-**Total Managed Assets**: `2 files` (1 binary dumps, 1 definition maps)  
+**Classification**: `Binary Firmware & High-Precision Calibration Definition Suite`  
+**Total Managed Assets**: `8 files` (2 binary dumps, 6 definition maps)  
 
 ---
 
 ## 1. Technical Platform Overview
 
-Paket direktori `VW_GOLF_MK4_1_8T_MOTRONIC_M383` menyediakan pustaka kalibrasi dan pemetaan ECU profesional yang ditujukan bagi teknisi otomotif, tuner, dan reverse engineer. Berkas di direktori ini mencakup kalibrasi firmware pabrikan (OEM), pembacaan perangkat keras (OBD2/BDM/Bench), serta tabel definisi TunerPro XDF untuk eksplorasi parameter mesin.
+Paket direktori `VW_GOLF_MK4_1_8T_MOTRONIC_M383` menyediakan pustaka kalibrasi dan pemetaan ECU profesional yang ditujukan bagi teknisi otomotif, tuner, dan reverse engineer. Berkas di direktori ini mencakup kalibrasi firmware pabrikan (OEM), pembacaan perangkat keras (OBD2/BDM/Bench), serta berkas definisi komprehensif (TunerPro XDF, ASAM ASAP2 A2L, WinOLS DAMOS/KP/OLS) untuk identifikasi parameter mesin presisi.
 
 ### Mengapa Sebagian Berkas Memiliki Nama Berupa Angka / Kode?
 Nama berkas yang tersimpan merefleksikan identitas perangkat keras (Hardware ID), versi perangkat lunak (Software ID), atau nomor kalibrasi pabrikan asli (OEM Calibration ID):
@@ -33,12 +33,18 @@ Berikut adalah daftar lengkap berkas fisik yang tersimpan secara lokal di direkt
 | :--- | :---: | :--- | :--- | :--- |
 | `06A906018CG.bin` | **1997–2003** | 256.0 KB | `aabef5afb1e93f854afffc0b56c09eb0` | Factory Binary Firmware Dump |
 | `06A906018CG.xdf` | **1997–2003** | 13.7 KB | `552fd32f775b09972617e10d68c93abb` | TunerPro Binary Definition Map |
+| `06A906032HF-0006.dam` | **1997–2003** | 1.94 MB | `92d517c005b858fca9d11199b48b819b` | WinOLS DAMOS Definition Map |
+| `06A906032HS.kp` | **1997–2003** | 215.7 KB | `6919a8e6a9e1bffae0d63d8eb9b49bd5` | WinOLS Map Definition Pack |
+| `06A906032LP.kp` | **1997–2003** | 224.7 KB | `552107494f3c3ac13808d763e40eb2b6` | WinOLS Map Definition Pack |
+| `06A906032S-0004.dam` | **1997–2003** | 1.66 MB | `7d189ba9af5990b50d4226b3c43410ec` | WinOLS DAMOS Definition Map |
+| `8N0906018CB.bin` | **1997–2003** | 1.00 MB | `58f898b7bdd97a61117a060717b7de6d` | Factory Binary Firmware Dump |
+| `8N0906018CB.kp` | **1997–2003** | 209.7 KB | `9a1504469cbdfbaada6a99ad3b4067e8` | WinOLS Map Definition Pack |
 
 ---
 
 ## 3. Matriks Kalibrasi & Parameter Pemetaan
 
-Bagi berkas biner dan definisi TunerPro yang tersedia, struktur kalibrasi mencakup parameter esensial:
+Bagi berkas biner dan definisi yang tersedia, struktur kalibrasi mencakup parameter esensial:
 - **Volumetric Efficiency & Fuel Delivery**: Kurva Base Fuel, Open/Closed Loop Transition, Injection Timing, dan Cranking Enrichment.
 - **Ignition Timing & Knock Control**: Peta Main Ignition Advance, Low/High Octane Timing, Knock Retard Thresholds, dan Dwell Timing.
 - **Airflow & Boost Management**: Peta Target Boost Pressure, Wastegate Duty Cycle (WGDC), MAF/MAP Scaling, dan Throttle Response Curves.

@@ -1,14 +1,14 @@
 # Experimental- Need Testing - ECU Calibration Suite
 
 **Repository Path**: `02_CARS/GM_CHEVROLET/LS_V8_GEN3_GEN4/.XDF Files/P59_1Mb/Experimental- Need Testing`  
-**Classification**: `Complete Binary & TunerPro Definition Suite`  
+**Classification**: `Binary Firmware & High-Precision Calibration Definition Suite`  
 **Total Managed Assets**: `12 files` (9 binary dumps, 3 definition maps)  
 
 ---
 
 ## 1. Technical Platform Overview
 
-Paket direktori `Experimental- Need Testing` menyediakan pustaka kalibrasi dan pemetaan ECU profesional yang ditujukan bagi teknisi otomotif, tuner, dan reverse engineer. Berkas di direktori ini mencakup kalibrasi firmware pabrikan (OEM), pembacaan perangkat keras (OBD2/BDM/Bench), serta tabel definisi TunerPro XDF untuk eksplorasi parameter mesin.
+Paket direktori `Experimental- Need Testing` menyediakan pustaka kalibrasi dan pemetaan ECU profesional yang ditujukan bagi teknisi otomotif, tuner, dan reverse engineer. Berkas di direktori ini mencakup kalibrasi firmware pabrikan (OEM), pembacaan perangkat keras (OBD2/BDM/Bench), serta berkas definisi komprehensif (TunerPro XDF, ASAM ASAP2 A2L, WinOLS DAMOS/KP/OLS) untuk identifikasi parameter mesin presisi.
 
 ### Mengapa Sebagian Berkas Memiliki Nama Berupa Angka / Kode?
 Nama berkas yang tersimpan merefleksikan identitas perangkat keras (Hardware ID), versi perangkat lunak (Software ID), atau nomor kalibrasi pabrikan asli (OEM Calibration ID):
@@ -21,7 +21,7 @@ Nama berkas yang tersimpan merefleksikan identitas perangkat keras (Hardware ID)
 > [!NOTE]
 > Mempertahankan kode dan nomor asli pabrikan pada penamaan berkas sangat krusial agar perangkat lunak kalibrasi (seperti **TunerPro**, **WinOLS**, atau **RomRaider**) dapat mengenali dan mencocokkan peta definisi (*definition maps*) secara otomatis tanpa merusak asosiasi header ECU.
 
-* **Rentang Tahun / Model Year**: OEM Production
+* **Rentang Tahun / Model Year**: 2000–2024
 
 ---
 
@@ -36,19 +36,19 @@ Berikut adalah daftar lengkap berkas fisik yang tersimpan secara lokal di direkt
 | `'04 GMC 1T 4x4 8.1 L18 os12587603.bin` | **2004** | 1.00 MB | `52d7d7c7d6de397b5e7d86f83d4658d0` | Factory Binary Firmware Dump |
 | `03_Sierra_LM7_4L60E_DBW_OS12587603.bin` | **2003** | 1.00 MB | `412a4d7cfb38fe24fc00f5a09dd40d83` | Factory Binary Firmware Dump |
 | `12587603 - 2004 1mb.xdf` | **2004** | 782.7 KB | `7ca8ac43e3015035e137d442666d4001` | TunerPro Binary Definition Map |
-| `12592433-imperial.xdf` | **OEM Production** | 604.7 KB | `306a247281aebb94e518e5cc43972fd8` | TunerPro Binary Definition Map |
-| `12592433-metric.xdf` | **OEM Production** | 597.7 KB | `ac7d67a9da799047e4921457247ca6d5` | TunerPro Binary Definition Map |
+| `12592433-imperial.xdf` | **2000–2024** | 604.7 KB | `306a247281aebb94e518e5cc43972fd8` | TunerPro Binary Definition Map |
+| `12592433-metric.xdf` | **2000–2024** | 597.7 KB | `ac7d67a9da799047e4921457247ca6d5` | TunerPro Binary Definition Map |
 | `2004 2500 LQ4 Auto 2wd stock OS12587603.bin` | **2004** | 1.00 MB | `59698a2f43fc1bd1c080ef9e65bbc7bc` | Factory Binary Firmware Dump |
 | `2004 Escalade 5.3AutoStock OS12587603.bin` | **2004** | 1.00 MB | `a01110a0bd863433c5129748d54b613f` | Factory Binary Firmware Dump |
-| `C1500_5.3L_OS12587603.bin` | **2003–2007 (P59)** | 1.00 MB | `d093d51c6966f57825d77d158f8b9e4c` | Factory Binary Firmware Dump |
-| `Chevy_1500_4x2_LM7 _OS12587603.bin` | **2003–2007 (P59)** | 1.00 MB | `a88e7062f3019e59b12314f56ed985d0` | Factory Binary Firmware Dump |
-| `Chevy_1500_4x4_MPV_L59_12587603.bin` | **2003–2007 (P59)** | 1.00 MB | `1428a0038c2a3385befca2350796017c` | Factory Binary Firmware Dump |
+| `C1500_5.3L_OS12587603.bin` | **2000–2024** | 1.00 MB | `d093d51c6966f57825d77d158f8b9e4c` | Factory Binary Firmware Dump |
+| `Chevy_1500_4x2_LM7 _OS12587603.bin` | **2000–2024** | 1.00 MB | `a88e7062f3019e59b12314f56ed985d0` | Factory Binary Firmware Dump |
+| `Chevy_1500_4x4_MPV_L59_12587603.bin` | **2000–2024** | 1.00 MB | `1428a0038c2a3385befca2350796017c` | Factory Binary Firmware Dump |
 
 ---
 
 ## 3. Matriks Kalibrasi & Parameter Pemetaan
 
-Bagi berkas biner dan definisi TunerPro yang tersedia, struktur kalibrasi mencakup parameter esensial:
+Bagi berkas biner dan definisi yang tersedia, struktur kalibrasi mencakup parameter esensial:
 - **Volumetric Efficiency & Fuel Delivery**: Kurva Base Fuel, Open/Closed Loop Transition, Injection Timing, dan Cranking Enrichment.
 - **Ignition Timing & Knock Control**: Peta Main Ignition Advance, Low/High Octane Timing, Knock Retard Thresholds, dan Dwell Timing.
 - **Airflow & Boost Management**: Peta Target Boost Pressure, Wastegate Duty Cycle (WGDC), MAF/MAP Scaling, dan Throttle Response Curves.

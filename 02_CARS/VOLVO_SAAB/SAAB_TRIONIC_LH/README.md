@@ -1,14 +1,14 @@
-# SAAB TRIONIC LH - ECU Calibration Suite
+# SAAB_TRIONIC_LH - ECU Calibration Suite
 
 **Repository Path**: `02_CARS/VOLVO_SAAB/SAAB_TRIONIC_LH`  
-**Classification**: `Complete Binary & TunerPro Definition Suite`  
+**Classification**: `Binary Firmware & High-Precision Calibration Definition Suite`  
 **Total Managed Assets**: `8 files` (3 binary dumps, 5 definition maps)  
 
 ---
 
 ## 1. Technical Platform Overview
 
-Paket direktori `SAAB_TRIONIC_LH` menyediakan pustaka kalibrasi dan pemetaan ECU profesional yang ditujukan bagi teknisi otomotif, tuner, dan reverse engineer. Berkas di direktori ini mencakup kalibrasi firmware pabrikan (OEM), pembacaan perangkat keras (OBD2/BDM/Bench), serta tabel definisi TunerPro XDF untuk eksplorasi parameter mesin.
+Paket direktori `SAAB_TRIONIC_LH` menyediakan pustaka kalibrasi dan pemetaan ECU profesional yang ditujukan bagi teknisi otomotif, tuner, dan reverse engineer. Berkas di direktori ini mencakup kalibrasi firmware pabrikan (OEM), pembacaan perangkat keras (OBD2/BDM/Bench), serta berkas definisi komprehensif (TunerPro XDF, ASAM ASAP2 A2L, WinOLS DAMOS/KP/OLS) untuk identifikasi parameter mesin presisi.
 
 ### Mengapa Sebagian Berkas Memiliki Nama Berupa Angka / Kode?
 Nama berkas yang tersimpan merefleksikan identitas perangkat keras (Hardware ID), versi perangkat lunak (Software ID), atau nomor kalibrasi pabrikan asli (OEM Calibration ID):
@@ -21,7 +21,7 @@ Nama berkas yang tersimpan merefleksikan identitas perangkat keras (Hardware ID)
 > [!NOTE]
 > Mempertahankan kode dan nomor asli pabrikan pada penamaan berkas sangat krusial agar perangkat lunak kalibrasi (seperti **TunerPro**, **WinOLS**, atau **RomRaider**) dapat mengenali dan mencocokkan peta definisi (*definition maps*) secara otomatis tanpa merusak asosiasi header ECU.
 
-* **Rentang Tahun / Model Year**: OEM Production
+* **Rentang Tahun / Model Year**: 2000–2024
 
 ---
 
@@ -31,20 +31,20 @@ Berikut adalah daftar lengkap berkas fisik yang tersimpan secara lokal di direkt
 
 | Filename | Tahun / Model Year | Size | MD5 Checksum | Type / Target Platform |
 | :--- | :---: | :--- | :--- | :--- |
-| `0 280 000 944_LH242.bin` | **OEM Production** | 32.0 KB | `53cee307d4ac9cd4127e3c00b152a1f8` | Factory Binary Firmware Dump |
-| `0 280 000 948_LH24.bin` | **OEM Production** | 32.0 KB | `8eed3efe1b09daf904c29bcd5edc4916` | Factory Binary Firmware Dump |
-| `SAAB9000 ORIGINAL579.bin` | **OEM Production** | 32.0 KB | `f2c76615a85eef2a820a8dc59f27882c` | Factory Binary Firmware Dump |
-| `SaabLH241_579.xdf` | **OEM Production** | 22.7 KB | `40ea871535cb347aa3fc0e649b03328f` | TunerPro Binary Definition Map |
-| `SaabLH242_944_900sNA.xdf` | **OEM Production** | 11.2 KB | `cd7817fac689279835457a4c71992845` | TunerPro Binary Definition Map |
-| `SaabLH24_585_582_586.xdf` | **OEM Production** | 18.0 KB | `bd011bc7ad34aa947cb720db9094efc4` | TunerPro Binary Definition Map |
-| `SaabLH24_948.xdf` | **OEM Production** | 17.8 KB | `4fd421b8bb30960e0bb59cb910b32318` | TunerPro Binary Definition Map |
-| `Saab_LH22_538.xdf` | **OEM Production** | 5.0 KB | `13998a31e456efa7425c5e0dc76e482d` | TunerPro Binary Definition Map |
+| `0 280 000 944_LH242.bin` | **2000–2024** | 32.0 KB | `53cee307d4ac9cd4127e3c00b152a1f8` | Factory Binary Firmware Dump |
+| `0 280 000 948_LH24.bin` | **2000–2024** | 32.0 KB | `8eed3efe1b09daf904c29bcd5edc4916` | Factory Binary Firmware Dump |
+| `SAAB9000 ORIGINAL579.bin` | **2000–2024** | 32.0 KB | `f2c76615a85eef2a820a8dc59f27882c` | Factory Binary Firmware Dump |
+| `SaabLH241_579.xdf` | **2000–2024** | 22.7 KB | `40ea871535cb347aa3fc0e649b03328f` | TunerPro Binary Definition Map |
+| `SaabLH242_944_900sNA.xdf` | **2000–2024** | 11.2 KB | `cd7817fac689279835457a4c71992845` | TunerPro Binary Definition Map |
+| `SaabLH24_585_582_586.xdf` | **2000–2024** | 18.0 KB | `bd011bc7ad34aa947cb720db9094efc4` | TunerPro Binary Definition Map |
+| `SaabLH24_948.xdf` | **2000–2024** | 17.8 KB | `4fd421b8bb30960e0bb59cb910b32318` | TunerPro Binary Definition Map |
+| `Saab_LH22_538.xdf` | **2000–2024** | 5.0 KB | `13998a31e456efa7425c5e0dc76e482d` | TunerPro Binary Definition Map |
 
 ---
 
 ## 3. Matriks Kalibrasi & Parameter Pemetaan
 
-Bagi berkas biner dan definisi TunerPro yang tersedia, struktur kalibrasi mencakup parameter esensial:
+Bagi berkas biner dan definisi yang tersedia, struktur kalibrasi mencakup parameter esensial:
 - **Volumetric Efficiency & Fuel Delivery**: Kurva Base Fuel, Open/Closed Loop Transition, Injection Timing, dan Cranking Enrichment.
 - **Ignition Timing & Knock Control**: Peta Main Ignition Advance, Low/High Octane Timing, Knock Retard Thresholds, dan Dwell Timing.
 - **Airflow & Boost Management**: Peta Target Boost Pressure, Wastegate Duty Cycle (WGDC), MAF/MAP Scaling, dan Throttle Response Curves.

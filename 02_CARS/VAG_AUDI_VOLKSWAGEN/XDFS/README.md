@@ -1,14 +1,14 @@
 # XDFS - ECU Calibration Suite
 
 **Repository Path**: `02_CARS/VAG_AUDI_VOLKSWAGEN/XDFS`  
-**Classification**: `TunerPro Definition Map Suite (XDF Only)`  
+**Classification**: `ECU Definition & Map Pack Suite (ASAP2 / WinOLS / TunerPro)`  
 **Total Managed Assets**: `5 files` (0 binary dumps, 5 definition maps)  
 
 ---
 
 ## 1. Technical Platform Overview
 
-Paket direktori `XDFS` menyediakan pustaka kalibrasi dan pemetaan ECU profesional yang ditujukan bagi teknisi otomotif, tuner, dan reverse engineer. Berkas di direktori ini mencakup kalibrasi firmware pabrikan (OEM), pembacaan perangkat keras (OBD2/BDM/Bench), serta tabel definisi TunerPro XDF untuk eksplorasi parameter mesin.
+Paket direktori `XDFS` menyediakan pustaka kalibrasi dan pemetaan ECU profesional yang ditujukan bagi teknisi otomotif, tuner, dan reverse engineer. Berkas di direktori ini mencakup kalibrasi firmware pabrikan (OEM), pembacaan perangkat keras (OBD2/BDM/Bench), serta berkas definisi komprehensif (TunerPro XDF, ASAM ASAP2 A2L, WinOLS DAMOS/KP/OLS) untuk identifikasi parameter mesin presisi.
 
 ### Mengapa Sebagian Berkas Memiliki Nama Berupa Angka / Kode?
 Nama berkas yang tersimpan merefleksikan identitas perangkat keras (Hardware ID), versi perangkat lunak (Software ID), atau nomor kalibrasi pabrikan asli (OEM Calibration ID):
@@ -21,7 +21,7 @@ Nama berkas yang tersimpan merefleksikan identitas perangkat keras (Hardware ID)
 > [!NOTE]
 > Mempertahankan kode dan nomor asli pabrikan pada penamaan berkas sangat krusial agar perangkat lunak kalibrasi (seperti **TunerPro**, **WinOLS**, atau **RomRaider**) dapat mengenali dan mencocokkan peta definisi (*definition maps*) secara otomatis tanpa merusak asosiasi header ECU.
 
-* **Rentang Tahun / Model Year**: 1989–2006
+* **Rentang Tahun / Model Year**: 2000–2024
 
 ---
 
@@ -31,17 +31,17 @@ Berikut adalah daftar lengkap berkas fisik yang tersimpan secara lokal di direkt
 
 | Filename | Tahun / Model Year | Size | MD5 Checksum | Type / Target Platform |
 | :--- | :---: | :--- | :--- | :--- |
-| `8D0907551M-20190711.xdf` | **1989–2006** | 491.8 KB | `7df7ce24a3cea3ad5215b51ab89a417f` | TunerPro Binary Definition Map |
-| `Golf_VR6_ecu117_soft529.xdf` | **1989–2006** | 27.6 KB | `7cbe4b10860d1d40f087ac2d655a4bcf` | TunerPro Binary Definition Map |
-| `Golf_VR6_ecu219_soft109.xdf` | **1989–2006** | 25.3 KB | `93c2f128474ea3f5af2045256d221f45` | TunerPro Binary Definition Map |
-| `Golf_VR6_ecu496_soft205.xdf` | **1989–2006** | 24.1 KB | `5f9424238e7691caa0a70a003a400e40` | TunerPro Binary Definition Map |
-| `VW_OBD1_ABA.xdf` | **1989–2006** | 54.2 KB | `3d12dbe4f2803cc59ce072881ab97d8a` | TunerPro Binary Definition Map |
+| `8D0907551M-20190711.xdf` | **2000–2024** | 491.8 KB | `7df7ce24a3cea3ad5215b51ab89a417f` | TunerPro Binary Definition Map |
+| `Golf_VR6_ecu117_soft529.xdf` | **2000–2024** | 27.6 KB | `7cbe4b10860d1d40f087ac2d655a4bcf` | TunerPro Binary Definition Map |
+| `Golf_VR6_ecu219_soft109.xdf` | **2000–2024** | 25.3 KB | `93c2f128474ea3f5af2045256d221f45` | TunerPro Binary Definition Map |
+| `Golf_VR6_ecu496_soft205.xdf` | **2000–2024** | 24.1 KB | `5f9424238e7691caa0a70a003a400e40` | TunerPro Binary Definition Map |
+| `VW_OBD1_ABA.xdf` | **2000–2024** | 54.2 KB | `3d12dbe4f2803cc59ce072881ab97d8a` | TunerPro Binary Definition Map |
 
 ---
 
 ## 3. Matriks Kalibrasi & Parameter Pemetaan
 
-Bagi berkas biner dan definisi TunerPro yang tersedia, struktur kalibrasi mencakup parameter esensial:
+Bagi berkas biner dan definisi yang tersedia, struktur kalibrasi mencakup parameter esensial:
 - **Volumetric Efficiency & Fuel Delivery**: Kurva Base Fuel, Open/Closed Loop Transition, Injection Timing, dan Cranking Enrichment.
 - **Ignition Timing & Knock Control**: Peta Main Ignition Advance, Low/High Octane Timing, Knock Retard Thresholds, dan Dwell Timing.
 - **Airflow & Boost Management**: Peta Target Boost Pressure, Wastegate Duty Cycle (WGDC), MAF/MAP Scaling, dan Throttle Response Curves.

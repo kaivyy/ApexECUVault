@@ -1,28 +1,25 @@
-# SUZUKI GSX-R600 & GSX-R750 - Supersport ECU Calibration Suite
+# SUPERSPORT_GSXR600_GSXR750 - ECU Calibration Suite
 
 **Repository Path**: `01_MOTORCYCLES/SUZUKI/SUPERSPORT_GSXR600_GSXR750`  
-**Classification**: `Universal ECU Firmware & Calibration Suite`  
+**Classification**: `Binary Firmware & High-Precision Calibration Definition Suite`  
 **Total Managed Assets**: `5 files` (2 binary dumps, 3 definition maps)  
 
 ---
 
 ## 1. Technical Platform Overview
 
-Koleksi komprehensif kalibrasi ECU OEM Denso untuk jajaran supersport Suzuki GSX-R600 dan GSX-R750 generasi K6 hingga L9 (2006-2020). Meliputi pembacaan firmware flash biner asli pabrikan Denso 1,048,576 bytes (1MB) seperti G750K9 (part number 32920-38H00) dan varian restriksi G750K9G, serta definisi TunerPro XDF untuk pemetaan IAP/TPS fuel injection, secondary throttle plates (STP), per-gear ignition timing, rev limiter (15,000 RPM GSX-R750 / 16,000 RPM GSX-R600), dan penyesuaian sensor O2/Pair valve.
-
-### Detail Arsitektur Kontroler & Komunikasi:
-- **Keluarga ECU / Controller Family**: `Denso 32-Bit Engine Control Module`
-- **Arsitektur MCU & Memori**: `Renesas SuperH SH7054 / SH7058 (512KB / 1024KB Flash)`
-- **Protokol Diagnostik & Flashing**: `K-Line (SDS ISO 14230 KWP2000) / Bench Bootmode (AUD / JTAG)`
+Paket direktori `SUPERSPORT_GSXR600_GSXR750` menyediakan pustaka kalibrasi dan pemetaan ECU profesional yang ditujukan bagi teknisi otomotif, tuner, dan reverse engineer. Berkas di direktori ini mencakup kalibrasi firmware pabrikan (OEM), pembacaan perangkat keras (OBD2/BDM/Bench), serta berkas definisi komprehensif (TunerPro XDF, ASAM ASAP2 A2L, WinOLS DAMOS/KP/OLS) untuk identifikasi parameter mesin presisi.
 
 ### Mengapa Sebagian Berkas Memiliki Nama Berupa Angka / Kode?
 Nama berkas yang tersimpan merefleksikan identitas perangkat keras (Hardware ID), versi perangkat lunak (Software ID), atau nomor kalibrasi pabrikan asli (OEM Calibration ID):
-- **Suzuki Part Numbers** (`32920-xxxxx`, `32990-xxxxx`): Nomor komponen resmi Suzuki Genuine Parts (SGP) untuk unit ECM/ECU Denso.
-- **Denso Software IDs** (misal `DJ0HSE01`, `DJ55SE00`, `DJE4SE01`, `DJF4SE00`, `5JCZSJA0`): Kode revisi software pabrik yang tertanam di blok ROM Denso.
-- **TunerPro XDF Maps** (`.xdf`): File deskriptor matematis yang memetakan offset memori hex ke unit engineering nyata (RPM, ms, derajat pengapian, kPa).
+- **Bosch Part Numbers** (misal `0261xxxxxx`, `1037xxxxxx`): Standar identifikasi universal Bosch untuk ECU Motronic, MED17, EDC16, dan EDC17.
+- **BMW Software IDs** (misal `00005C64xxxxxx`, `10SW002828`): Alamat dan assembly identification number pada modul DME Siemens/Continental/Bosch.
+- **Denso / Toyota Calibration IDs** (misal `89663-xxxxx`): Nomor resmi Toyota Techstream / Denso MCU firmware flash.
+- **Keihin Part Numbers** (misal `37805-xxx-xxxx`, `38770-xxx`): Kode perakitan ECU Honda untuk verifikasi kecocokan checksum dan proteksi immobilizer.
+- **GM OS IDs** (misal `12587603`, `12212156`): Operating system ID kontroler GM Delphi P01/P59.
 
 > [!NOTE]
-> Mempertahankan kode dan nomor asli pabrikan pada penamaan berkas sangat krusial agar perangkat lunak kalibrasi (seperti **TunerPro**, **WinOLS**, atau **BusaECUeditor**) dapat mengenali dan mencocokkan peta definisi (*definition maps*) secara otomatis tanpa merusak asosiasi header ECU.
+> Mempertahankan kode dan nomor asli pabrikan pada penamaan berkas sangat krusial agar perangkat lunak kalibrasi (seperti **TunerPro**, **WinOLS**, atau **RomRaider**) dapat mengenali dan mencocokkan peta definisi (*definition maps*) secara otomatis tanpa merusak asosiasi header ECU.
 
 * **Rentang Tahun / Model Year**: 2008–2010
 
@@ -44,17 +41,17 @@ Berikut adalah daftar lengkap berkas fisik yang tersimpan secara lokal di direkt
 
 ## 3. Matriks Kalibrasi & Parameter Pemetaan
 
-Bagi berkas biner dan definisi TunerPro yang tersedia, struktur kalibrasi mencakup parameter esensial:
-- **Volumetric Efficiency & Fuel Delivery**: Kurva Base Fuel (IAP vs RPM untuk low-throttle opening, TPS vs RPM untuk high-throttle), Primary & Secondary Injector Balance, Decel Fuel Cut, dan Cranking Enrichment.
-- **Ignition Timing & Knock Control**: Peta Main Ignition Advance independen per silinder (Cylinder 1-4 / Pair), Mode Selection (A/B/C Power Modes), MS0/MS1 Maps, dan Dwell Timing.
-- **Airflow & ETV / STP Management**: Electronic Throttle Valve (ETV / Drive-by-Wire) Target Angle per mode berkendara, Secondary Throttle Valve (STP) control, dan Exhaust Control Valve (SET Valve) positioning.
-- **Safety Limits & Motorsport Thresholds**: Rev Limiter (Hard & Soft Cut), Top Speed Limiter (Vmax 299 km/h restriction removal), Launch Control RPM limiter, Quickshifter kill-time duration, dan Pit Lane Limiter.
+Bagi berkas biner dan definisi yang tersedia, struktur kalibrasi mencakup parameter esensial:
+- **Volumetric Efficiency & Fuel Delivery**: Kurva Base Fuel, Open/Closed Loop Transition, Injection Timing, dan Cranking Enrichment.
+- **Ignition Timing & Knock Control**: Peta Main Ignition Advance, Low/High Octane Timing, Knock Retard Thresholds, dan Dwell Timing.
+- **Airflow & Boost Management**: Peta Target Boost Pressure, Wastegate Duty Cycle (WGDC), MAF/MAP Scaling, dan Throttle Response Curves.
+- **Safety Limits & Thresholds**: Rev Limiter (Hard/Soft Cut), Top Speed Limiter (Vmax), Overboost Fuel Cut, dan Engine Protection Strategies.
 
 ---
 
 ## 4. Protokol Flashing & Panduan Keamanan
 
-1. **Pemeriksaan Checksum**: Selalu verifikasi dan kalkulasi ulang checksum sebelum menulis firmware kembali ke ECU guna mencegah kondisi *ECU bricking* atau *no-start*. Algoritma checksum Denso Suzuki menggunakan standar CRC-16/CCITT-FALSE pada rentang blok memori yang ditentukan.
+1. **Pemeriksaan Checksum**: Selalu verifikasi dan kalkulasi ulang checksum sebelum menulis firmware kembali ke ECU guna mencegah kondisi *ECU bricking* atau *no-start*.
 2. **Pencadangan Full Read (Backup)**: Lakukan full backup (Flash + EEPROM / Microcontroller ROM) sebelum melakukan flashing kalibrasi yang dimodifikasi.
-3. **Tegangan Sumber Stabil**: Gunakan unit catu daya terstabilisasi (*bench battery maintainer*) dengan tegangan minimum 13.5V – 14.2V selama sesi flashing OBD/K-Line atau Bootmode.
+3. **Tegangan Sumber Stabil**: Gunakan unit catu daya terstabilisasi (*bench battery maintainer*) dengan tegangan minimum 13.5V – 14.2V selama sesi flashing OBD2 atau Bootmode.
 4. **Kecocokan Hardware & Software**: Jangan pernah melakukan *cross-flashing* berkas kalibrasi ke ECU dengan nomor part hardware yang berbeda tanpa verifikasi arsitektur pinout dan transreceiver bus.

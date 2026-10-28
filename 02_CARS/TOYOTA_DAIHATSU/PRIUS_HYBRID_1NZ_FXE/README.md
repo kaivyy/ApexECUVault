@@ -1,10 +1,27 @@
-# PRIUS HYBRID 1NZ FXE Calibration Suite
+# PRIUS_HYBRID_1NZ_FXE - ECU Calibration Suite
 
-## 1. Technical Overview
-Koleksi biner kalibrasi pabrikan OEM dan definisi tuning untuk modul ECU platform PRIUS HYBRID 1NZ FXE.
+**Repository Path**: `02_CARS/TOYOTA_DAIHATSU/PRIUS_HYBRID_1NZ_FXE`  
+**Classification**: `OEM Binary Firmware & Factory Calibration Suite`  
+**Total Managed Assets**: `4 files` (4 binary dumps, 0 definition maps)  
+
+---
+
+## 1. Technical Platform Overview
+
+Paket direktori `PRIUS_HYBRID_1NZ_FXE` menyediakan pustaka kalibrasi dan pemetaan ECU profesional yang ditujukan bagi teknisi otomotif, tuner, dan reverse engineer. Berkas di direktori ini mencakup kalibrasi firmware pabrikan (OEM), pembacaan perangkat keras (OBD2/BDM/Bench), serta berkas definisi komprehensif (TunerPro XDF, ASAM ASAP2 A2L, WinOLS DAMOS/KP/OLS) untuk identifikasi parameter mesin presisi.
+
+### Mengapa Sebagian Berkas Memiliki Nama Berupa Angka / Kode?
+Nama berkas yang tersimpan merefleksikan identitas perangkat keras (Hardware ID), versi perangkat lunak (Software ID), atau nomor kalibrasi pabrikan asli (OEM Calibration ID):
+- **Bosch Part Numbers** (misal `0261xxxxxx`, `1037xxxxxx`): Standar identifikasi universal Bosch untuk ECU Motronic, MED17, EDC16, dan EDC17.
+- **BMW Software IDs** (misal `00005C64xxxxxx`, `10SW002828`): Alamat dan assembly identification number pada modul DME Siemens/Continental/Bosch.
+- **Denso / Toyota Calibration IDs** (misal `89663-xxxxx`): Nomor resmi Toyota Techstream / Denso MCU firmware flash.
+- **Keihin Part Numbers** (misal `37805-xxx-xxxx`, `38770-xxx`): Kode perakitan ECU Honda untuk verifikasi kecocokan checksum dan proteksi immobilizer.
+- **GM OS IDs** (misal `12587603`, `12212156`): Operating system ID kontroler GM Delphi P01/P59.
+
+> [!NOTE]
+> Mempertahankan kode dan nomor asli pabrikan pada penamaan berkas sangat krusial agar perangkat lunak kalibrasi (seperti **TunerPro**, **WinOLS**, atau **RomRaider**) dapat mengenali dan mencocokkan peta definisi (*definition maps*) secara otomatis tanpa merusak asosiasi header ECU.
 
 * **Rentang Tahun / Model Year**: 2003–2009
-* **Total File Terdaftar**: 4 file (100% fisik terverifikasi, Zero Synthetic)
 
 ---
 
@@ -14,14 +31,26 @@ Berikut adalah daftar lengkap berkas fisik yang tersimpan secara lokal di direkt
 
 | Filename | Tahun / Model Year | Size | MD5 Checksum | Type / Target Platform |
 | :--- | :---: | :--- | :--- | :--- |
-| `89663-47051.bin` | **2003–2009** | 496.0 KB | `5eea4d975e47830bf15385d16e22c608` | Factory Binary (Toyota Prius 1.5hyb 1NZFXE) |
-| `89663-47052.bin` | **2003–2009** | 496.0 KB | `9401d11ad8673eed15badbf0a85f90f7` | Factory Binary (Toyota Prius 1.5hyb 1NZFXE) |
-| `89663-47054.bin` | **2003–2009** | 496.0 KB | `2d8669d15ebd6acceeb5d824d7a8bda7` | Factory Binary (Toyota Prius 1.5hyb 1NZFXE) |
-| `89663-47102.bin` | **2003–2009** | 496.0 KB | `157c8dd5f6adfb605eeb5e713010d762` | Factory Binary (Toyota Prius 1.5hyb 1NZFXE) |
+| `89663-47051.bin` | **2003–2009** | 496.0 KB | `5eea4d975e47830bf15385d16e22c608` | Factory Binary Firmware Dump |
+| `89663-47052.bin` | **2003–2009** | 496.0 KB | `9401d11ad8673eed15badbf0a85f90f7` | Factory Binary Firmware Dump |
+| `89663-47054.bin` | **2003–2009** | 496.0 KB | `2d8669d15ebd6acceeb5d824d7a8bda7` | Factory Binary Firmware Dump |
+| `89663-47102.bin` | **2003–2009** | 496.0 KB | `157c8dd5f6adfb605eeb5e713010d762` | Factory Binary Firmware Dump |
 
 ---
 
-## 3. Panduan Penggunaan & Integritas
-1. **Verifikasi Checksum**: Selalu bandingkan hash MD5 file sebelum melakukan flashing ke modul kontrol kendaraan.
-2. **Standard Tuning**: Gunakan software TunerPro RT v5.00+ untuk memuat file biner (`.bin`) bersama file definisi (`.xdf`) yang sesuai.
-3. **Peringatan Keselamatan**: Pemetaan injeksi bahan bakar dan sudut pengapian harus selalu dipantau dengan sensor wideband AFR pada beban dyno.
+## 3. Matriks Kalibrasi & Parameter Pemetaan
+
+Bagi berkas biner dan definisi yang tersedia, struktur kalibrasi mencakup parameter esensial:
+- **Volumetric Efficiency & Fuel Delivery**: Kurva Base Fuel, Open/Closed Loop Transition, Injection Timing, dan Cranking Enrichment.
+- **Ignition Timing & Knock Control**: Peta Main Ignition Advance, Low/High Octane Timing, Knock Retard Thresholds, dan Dwell Timing.
+- **Airflow & Boost Management**: Peta Target Boost Pressure, Wastegate Duty Cycle (WGDC), MAF/MAP Scaling, dan Throttle Response Curves.
+- **Safety Limits & Thresholds**: Rev Limiter (Hard/Soft Cut), Top Speed Limiter (Vmax), Overboost Fuel Cut, dan Engine Protection Strategies.
+
+---
+
+## 4. Protokol Flashing & Panduan Keamanan
+
+1. **Pemeriksaan Checksum**: Selalu verifikasi dan kalkulasi ulang checksum sebelum menulis firmware kembali ke ECU guna mencegah kondisi *ECU bricking* atau *no-start*.
+2. **Pencadangan Full Read (Backup)**: Lakukan full backup (Flash + EEPROM / Microcontroller ROM) sebelum melakukan flashing kalibrasi yang dimodifikasi.
+3. **Tegangan Sumber Stabil**: Gunakan unit catu daya terstabilisasi (*bench battery maintainer*) dengan tegangan minimum 13.5V – 14.2V selama sesi flashing OBD2 atau Bootmode.
+4. **Kecocokan Hardware & Software**: Jangan pernah melakukan *cross-flashing* berkas kalibrasi ke ECU dengan nomor part hardware yang berbeda tanpa verifikasi arsitektur pinout dan transreceiver bus.

@@ -1,14 +1,14 @@
-# MUSTANG GT ECOBOOST - ECU Calibration Suite
+# MUSTANG_GT_ECOBOOST - ECU Calibration Suite
 
 **Repository Path**: `02_CARS/FORD/MUSTANG_GT_ECOBOOST`  
-**Classification**: `TunerPro Definition Map Suite (XDF Only)`  
+**Classification**: `ECU Definition & Map Pack Suite (ASAP2 / WinOLS / TunerPro)`  
 **Total Managed Assets**: `8 files` (0 binary dumps, 8 definition maps)  
 
 ---
 
 ## 1. Technical Platform Overview
 
-Paket direktori `MUSTANG_GT_ECOBOOST` menyediakan pustaka kalibrasi dan pemetaan ECU profesional yang ditujukan bagi teknisi otomotif, tuner, dan reverse engineer. Berkas di direktori ini mencakup kalibrasi firmware pabrikan (OEM), pembacaan perangkat keras (OBD2/BDM/Bench), serta tabel definisi TunerPro XDF untuk eksplorasi parameter mesin.
+Paket direktori `MUSTANG_GT_ECOBOOST` menyediakan pustaka kalibrasi dan pemetaan ECU profesional yang ditujukan bagi teknisi otomotif, tuner, dan reverse engineer. Berkas di direktori ini mencakup kalibrasi firmware pabrikan (OEM), pembacaan perangkat keras (OBD2/BDM/Bench), serta berkas definisi komprehensif (TunerPro XDF, ASAM ASAP2 A2L, WinOLS DAMOS/KP/OLS) untuk identifikasi parameter mesin presisi.
 
 ### Mengapa Sebagian Berkas Memiliki Nama Berupa Angka / Kode?
 Nama berkas yang tersimpan merefleksikan identitas perangkat keras (Hardware ID), versi perangkat lunak (Software ID), atau nomor kalibrasi pabrikan asli (OEM Calibration ID):
@@ -21,7 +21,7 @@ Nama berkas yang tersimpan merefleksikan identitas perangkat keras (Hardware ID)
 > [!NOTE]
 > Mempertahankan kode dan nomor asli pabrikan pada penamaan berkas sangat krusial agar perangkat lunak kalibrasi (seperti **TunerPro**, **WinOLS**, atau **RomRaider**) dapat mengenali dan mencocokkan peta definisi (*definition maps*) secara otomatis tanpa merusak asosiasi header ECU.
 
-* **Rentang Tahun / Model Year**: OEM Production
+* **Rentang Tahun / Model Year**: 2000–2024
 
 ---
 
@@ -31,20 +31,20 @@ Berikut adalah daftar lengkap berkas fisik yang tersimpan secara lokal di direkt
 
 | Filename | Tahun / Model Year | Size | MD5 Checksum | Type / Target Platform |
 | :--- | :---: | :--- | :--- | :--- |
-| `CBAZA.xdf` | **OEM Production** | 309.9 KB | `dc4628312362aa97968951d40fc5891d` | TunerPro Binary Definition Map |
-| `CDAN4.xdf` | **OEM Production** | 168.7 KB | `5e134df0c835951cd23c969d405d9d6c` | TunerPro Binary Definition Map |
-| `CRAJ0.xdf` | **OEM Production** | 210.7 KB | `00a2acf2a4905fd93bf8c95119e4148e` | TunerPro Binary Definition Map |
+| `CBAZA.xdf` | **2000–2024** | 309.9 KB | `dc4628312362aa97968951d40fc5891d` | TunerPro Binary Definition Map |
+| `CDAN4.xdf` | **2000–2024** | 168.7 KB | `5e134df0c835951cd23c969d405d9d6c` | TunerPro Binary Definition Map |
+| `CRAJ0.xdf` | **2000–2024** | 210.7 KB | `00a2acf2a4905fd93bf8c95119e4148e` | TunerPro Binary Definition Map |
 | `GENERATIONAL_CR3A-12A650-B_Ford_Mustang_GT_5.0_Coyote_Gen1_2011_2014.xdf` | **2011–2014** | 3.0 KB | `dc68a2105d651c774b5b4d85e75f76ce` | TunerPro Binary Definition Map |
 | `GENERATIONAL_FR3A-12A650-C_Ford_Mustang_2.3L_EcoBoost_2015_2023.xdf` | **2015–2023** | 3.0 KB | `727b97d54c93eff21e8394e7e8161a9c` | TunerPro Binary Definition Map |
 | `GENERATIONAL_JR3A-12A650-A_Ford_Mustang_GT_5.0_Coyote_Gen3_2018_2023.xdf` | **2018–2023** | 3.0 KB | `9f050604ecdcb1d103c66d05f61ff128` | TunerPro Binary Definition Map |
-| `GUFA.xdf` | **OEM Production** | 483.4 KB | `28d3c5bdf66182cff4b39850ebd44814` | TunerPro Binary Definition Map |
-| `GUFB.xdf` | **OEM Production** | 485.1 KB | `f5b62ef9f570031f3f6f79cd05f58e79` | TunerPro Binary Definition Map |
+| `GUFA.xdf` | **2000–2024** | 483.4 KB | `28d3c5bdf66182cff4b39850ebd44814` | TunerPro Binary Definition Map |
+| `GUFB.xdf` | **2000–2024** | 485.1 KB | `f5b62ef9f570031f3f6f79cd05f58e79` | TunerPro Binary Definition Map |
 
 ---
 
 ## 3. Matriks Kalibrasi & Parameter Pemetaan
 
-Bagi berkas biner dan definisi TunerPro yang tersedia, struktur kalibrasi mencakup parameter esensial:
+Bagi berkas biner dan definisi yang tersedia, struktur kalibrasi mencakup parameter esensial:
 - **Volumetric Efficiency & Fuel Delivery**: Kurva Base Fuel, Open/Closed Loop Transition, Injection Timing, dan Cranking Enrichment.
 - **Ignition Timing & Knock Control**: Peta Main Ignition Advance, Low/High Octane Timing, Knock Retard Thresholds, dan Dwell Timing.
 - **Airflow & Boost Management**: Peta Target Boost Pressure, Wastegate Duty Cycle (WGDC), MAF/MAP Scaling, dan Throttle Response Curves.

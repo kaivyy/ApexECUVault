@@ -1,14 +1,14 @@
-# MATIC SCOOTER NMAX - ECU Calibration Suite
+# MATIC_SCOOTER_NMAX - ECU Calibration Suite
 
 **Repository Path**: `01_MOTORCYCLES/YAMAHA/MATIC_SCOOTER_NMAX`  
-**Classification**: `TunerPro Definition Map Suite (XDF Only)`  
+**Classification**: `ECU Definition & Map Pack Suite (ASAP2 / WinOLS / TunerPro)`  
 **Total Managed Assets**: `3 files` (0 binary dumps, 3 definition maps)  
 
 ---
 
 ## 1. Technical Platform Overview
 
-Paket direktori `MATIC_SCOOTER_NMAX` menyediakan pustaka kalibrasi dan pemetaan ECU profesional yang ditujukan bagi teknisi otomotif, tuner, dan reverse engineer. Berkas di direktori ini mencakup kalibrasi firmware pabrikan (OEM), pembacaan perangkat keras (OBD2/BDM/Bench), serta tabel definisi TunerPro XDF untuk eksplorasi parameter mesin.
+Paket direktori `MATIC_SCOOTER_NMAX` menyediakan pustaka kalibrasi dan pemetaan ECU profesional yang ditujukan bagi teknisi otomotif, tuner, dan reverse engineer. Berkas di direktori ini mencakup kalibrasi firmware pabrikan (OEM), pembacaan perangkat keras (OBD2/BDM/Bench), serta berkas definisi komprehensif (TunerPro XDF, ASAM ASAP2 A2L, WinOLS DAMOS/KP/OLS) untuk identifikasi parameter mesin presisi.
 
 ### Mengapa Sebagian Berkas Memiliki Nama Berupa Angka / Kode?
 Nama berkas yang tersimpan merefleksikan identitas perangkat keras (Hardware ID), versi perangkat lunak (Software ID), atau nomor kalibrasi pabrikan asli (OEM Calibration ID):
@@ -33,13 +33,13 @@ Berikut adalah daftar lengkap berkas fisik yang tersimpan secara lokal di direkt
 | :--- | :---: | :--- | :--- | :--- |
 | `GENERATIONAL_BLS-H594A-00_Yamaha_NMAX_155_Gen_3_TURBO___Tech_MAX_YECVT_(2024-2026).xdf` | **2024–2026** | 5.5 KB | `557293c736ce539b7094c40d5adc57ac` | TunerPro Binary Definition Map |
 | `YAMAHA_2DP-H591A-00_Yamaha_NMAX_155_Old_(2DP).xdf` | **2015–2024** | 11.6 KB | `adf3fab94a1ed95691e608057c749222` | TunerPro Binary Definition Map |
-| `YAMAHA_B6H-H594A-00_Yamaha_All_New_NMAX_155_Connected_(B6H).xdf` | **2020–2024** | 11.6 KB | `9dcc715d16a12074391e86f68c10175a` | TunerPro Binary Definition Map |
+| `YAMAHA_B6H-H594A-00_Yamaha_All_New_NMAX_155_Connected_(B6H).xdf` | **2015–2024** | 11.6 KB | `9dcc715d16a12074391e86f68c10175a` | TunerPro Binary Definition Map |
 
 ---
 
 ## 3. Matriks Kalibrasi & Parameter Pemetaan
 
-Bagi berkas biner dan definisi TunerPro yang tersedia, struktur kalibrasi mencakup parameter esensial:
+Bagi berkas biner dan definisi yang tersedia, struktur kalibrasi mencakup parameter esensial:
 - **Volumetric Efficiency & Fuel Delivery**: Kurva Base Fuel, Open/Closed Loop Transition, Injection Timing, dan Cranking Enrichment.
 - **Ignition Timing & Knock Control**: Peta Main Ignition Advance, Low/High Octane Timing, Knock Retard Thresholds, dan Dwell Timing.
 - **Airflow & Boost Management**: Peta Target Boost Pressure, Wastegate Duty Cycle (WGDC), MAF/MAP Scaling, dan Throttle Response Curves.

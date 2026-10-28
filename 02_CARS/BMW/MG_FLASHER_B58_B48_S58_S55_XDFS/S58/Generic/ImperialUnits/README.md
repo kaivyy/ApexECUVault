@@ -1,14 +1,14 @@
 # ImperialUnits - ECU Calibration Suite
 
 **Repository Path**: `02_CARS/BMW/MG_FLASHER_B58_B48_S58_S55_XDFS/S58/Generic/ImperialUnits`  
-**Classification**: `TunerPro Definition Map Suite (XDF Only)`  
-**Total Managed Assets**: `14 files` (0 binary dumps, 14 definition maps)  
+**Classification**: `ECU Definition & Map Pack Suite (ASAP2 / WinOLS / TunerPro)`  
+**Total Managed Assets**: `28 files` (0 binary dumps, 28 definition maps)  
 
 ---
 
 ## 1. Technical Platform Overview
 
-Paket direktori `ImperialUnits` menyediakan pustaka kalibrasi dan pemetaan ECU profesional yang ditujukan bagi teknisi otomotif, tuner, dan reverse engineer. Berkas di direktori ini mencakup kalibrasi firmware pabrikan (OEM), pembacaan perangkat keras (OBD2/BDM/Bench), serta tabel definisi TunerPro XDF untuk eksplorasi parameter mesin.
+Paket direktori `ImperialUnits` menyediakan pustaka kalibrasi dan pemetaan ECU profesional yang ditujukan bagi teknisi otomotif, tuner, dan reverse engineer. Berkas di direktori ini mencakup kalibrasi firmware pabrikan (OEM), pembacaan perangkat keras (OBD2/BDM/Bench), serta berkas definisi komprehensif (TunerPro XDF, ASAM ASAP2 A2L, WinOLS DAMOS/KP/OLS) untuk identifikasi parameter mesin presisi.
 
 ### Mengapa Sebagian Berkas Memiliki Nama Berupa Angka / Kode?
 Nama berkas yang tersimpan merefleksikan identitas perangkat keras (Hardware ID), versi perangkat lunak (Software ID), atau nomor kalibrasi pabrikan asli (OEM Calibration ID):
@@ -32,25 +32,39 @@ Berikut adalah daftar lengkap berkas fisik yang tersimpan secara lokal di direkt
 | Filename | Tahun / Model Year | Size | MD5 Checksum | Type / Target Platform |
 | :--- | :---: | :--- | :--- | :--- |
 | `F4C9G577B_5c64-010_090_007.ImperialUnits.xdf` | **2015–2026** | 988.3 KB | `1493729dc786aed92e6c85519fe94a9f` | TunerPro Binary Definition Map |
+| `F4C9G577B_5c64-010_090_007.a2l` | **2015–2026** | 397.8 KB | `052f4bc11c818ea6bfa84e0b6894b75c` | ASAM ASAP2 ECU Description File |
 | `F4C9G595B_5c64-010_100_005.ImperialUnits.xdf` | **2015–2026** | 988.3 KB | `1493729dc786aed92e6c85519fe94a9f` | TunerPro Binary Definition Map |
+| `F4C9G595B_5c64-010_100_005.a2l` | **2015–2026** | 397.8 KB | `85c0bf9dbb96212af4413c1fc67808bf` | ASAM ASAP2 ECU Description File |
 | `F4C9G5F5B_5c64-010_130_005.ImperialUnits.xdf` | **2015–2026** | 988.3 KB | `f8c5f4aeb4bd5352a72bf3aca07fb71e` | TunerPro Binary Definition Map |
+| `F4C9G5F5B_5c64-010_130_005.a2l` | **2015–2026** | 397.8 KB | `1b3e49d222d19543b6cb5f410d12e6fb` | ASAM ASAP2 ECU Description File |
 | `F4C9G5H5B_5c64-010_140_005.ImperialUnits.xdf` | **2015–2026** | 988.3 KB | `db7387f6c5444fefa867fb37ff86d5a8` | TunerPro Binary Definition Map |
+| `F4C9G5H5B_5c64-010_140_005.a2l` | **2015–2026** | 397.8 KB | `b1ed85b908c22aa5a0fe113e816aaceb` | ASAM ASAP2 ECU Description File |
 | `F4C9L8A6B_5c64-020_050_006.ImperialUnits.xdf` | **2015–2026** | 1009.3 KB | `ec6e8d363c9fce6eeb4449ce67580b4f` | TunerPro Binary Definition Map |
+| `F4C9L8A6B_5c64-020_050_006.a2l` | **2015–2026** | 404.3 KB | `24481f8ee270d825db40b030fa1fe7b4` | ASAM ASAP2 ECU Description File |
 | `F4C9L8C5B_5c64-020_060_005.ImperialUnits.xdf` | **2015–2026** | 1009.3 KB | `59b6044785f12373de4123548df0a0c8` | TunerPro Binary Definition Map |
+| `F4C9L8C5B_5c64-020_060_005.a2l` | **2015–2026** | 404.3 KB | `f7f75a7600b6fad3f8b646330c893f95` | ASAM ASAP2 ECU Description File |
 | `F4C9L8E6B_5c64-020_070_006.ImperialUnits.xdf` | **2015–2026** | 1009.3 KB | `9c5031213ee1da018fa18b72d13c684e` | TunerPro Binary Definition Map |
+| `F4C9L8E6B_5c64-020_070_006.a2l` | **2015–2026** | 404.3 KB | `b85e36b7570620915892ba8f5d47b146` | ASAM ASAP2 ECU Description File |
 | `F4C9L8G7B_5c64-020_080_007.ImperialUnits.xdf` | **2015–2026** | 1009.3 KB | `920d1257ef4e6899a1f9b2985771a794` | TunerPro Binary Definition Map |
+| `F4C9L8G7B_5c64-020_080_007.a2l` | **2015–2026** | 404.3 KB | `7b43ed226f6b8151b762a367b32f1678` | ASAM ASAP2 ECU Description File |
 | `F4C9L8J5B_5c64-020_090_005.ImperialUnits.xdf` | **2015–2026** | 1009.3 KB | `5de1a7725792b0dd5a9dcb55a719e32b` | TunerPro Binary Definition Map |
+| `F4C9L8J5B_5c64-020_090_005.a2l` | **2015–2026** | 404.3 KB | `f6c1ec5390689f3533e1d34ec362f3cd` | ASAM ASAP2 ECU Description File |
 | `F4C9L8N6B_5c64-020_110_006.ImperialUnits.xdf` | **2015–2026** | 1009.3 KB | `f77e4818b319f80677236fd549d7d647` | TunerPro Binary Definition Map |
+| `F4C9L8N6B_5c64-020_110_006.a2l` | **2015–2026** | 404.3 KB | `1f96bb1fe263067e033e1f99c051fb57` | ASAM ASAP2 ECU Description File |
 | `F4C9L8R5B_5c64-020_130_005.ImperialUnits.xdf` | **2015–2026** | 1009.3 KB | `276e45939ede1e3da7db5d941f6b8ccf` | TunerPro Binary Definition Map |
+| `F4C9L8R5B_5c64-020_130_005.a2l` | **2015–2026** | 404.3 KB | `f4ffee2f04ff1f6671f7285508d8d778` | ASAM ASAP2 ECU Description File |
 | `F4C9L8R6B_5c64-020_135_006.ImperialUnits.xdf` | **2015–2026** | 1009.3 KB | `276e45939ede1e3da7db5d941f6b8ccf` | TunerPro Binary Definition Map |
+| `F4C9L8R6B_5c64-020_135_006.a2l` | **2015–2026** | 404.3 KB | `63349f4c92564cd6faf6c0fd13f1f47f` | ASAM ASAP2 ECU Description File |
 | `F4C9L8Y8B_5c64-020_200_008.ImperialUnits.xdf` | **2015–2026** | 1009.3 KB | `1fd69f67aa63fedd1ec0abf2fd988504` | TunerPro Binary Definition Map |
+| `F4C9L8Y8B_5c64-020_200_008.a2l` | **2015–2026** | 401.9 KB | `5ff71e840cb407c88481feda8d8db9ec` | ASAM ASAP2 ECU Description File |
 | `F4C9LU16B_aed2-020_060_006.ImperialUnits.xdf` | **2015–2026** | 1009.3 KB | `9faa48350ff4b9e6271289ed5c15ebf3` | TunerPro Binary Definition Map |
+| `F4C9LU16B_aed2-020_060_006.a2l` | **2015–2026** | 404.3 KB | `aa7a29e3ae7567ab941d1d720914bea3` | ASAM ASAP2 ECU Description File |
 
 ---
 
 ## 3. Matriks Kalibrasi & Parameter Pemetaan
 
-Bagi berkas biner dan definisi TunerPro yang tersedia, struktur kalibrasi mencakup parameter esensial:
+Bagi berkas biner dan definisi yang tersedia, struktur kalibrasi mencakup parameter esensial:
 - **Volumetric Efficiency & Fuel Delivery**: Kurva Base Fuel, Open/Closed Loop Transition, Injection Timing, dan Cranking Enrichment.
 - **Ignition Timing & Knock Control**: Peta Main Ignition Advance, Low/High Octane Timing, Knock Retard Thresholds, dan Dwell Timing.
 - **Airflow & Boost Management**: Peta Target Boost Pressure, Wastegate Duty Cycle (WGDC), MAF/MAP Scaling, dan Throttle Response Curves.

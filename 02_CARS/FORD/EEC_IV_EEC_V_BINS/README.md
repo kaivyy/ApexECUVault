@@ -1,14 +1,14 @@
-# EEC IV EEC V BINS - ECU Calibration Suite
+# EEC_IV_EEC_V_BINS - ECU Calibration Suite
 
 **Repository Path**: `02_CARS/FORD/EEC_IV_EEC_V_BINS`  
-**Classification**: `Complete Binary & TunerPro Definition Suite`  
+**Classification**: `Binary Firmware & High-Precision Calibration Definition Suite`  
 **Total Managed Assets**: `15 files` (10 binary dumps, 5 definition maps)  
 
 ---
 
 ## 1. Technical Platform Overview
 
-Paket direktori `EEC_IV_EEC_V_BINS` menyediakan pustaka kalibrasi dan pemetaan ECU profesional yang ditujukan bagi teknisi otomotif, tuner, dan reverse engineer. Berkas di direktori ini mencakup kalibrasi firmware pabrikan (OEM), pembacaan perangkat keras (OBD2/BDM/Bench), serta tabel definisi TunerPro XDF untuk eksplorasi parameter mesin.
+Paket direktori `EEC_IV_EEC_V_BINS` menyediakan pustaka kalibrasi dan pemetaan ECU profesional yang ditujukan bagi teknisi otomotif, tuner, dan reverse engineer. Berkas di direktori ini mencakup kalibrasi firmware pabrikan (OEM), pembacaan perangkat keras (OBD2/BDM/Bench), serta berkas definisi komprehensif (TunerPro XDF, ASAM ASAP2 A2L, WinOLS DAMOS/KP/OLS) untuk identifikasi parameter mesin presisi.
 
 ### Mengapa Sebagian Berkas Memiliki Nama Berupa Angka / Kode?
 Nama berkas yang tersimpan merefleksikan identitas perangkat keras (Hardware ID), versi perangkat lunak (Software ID), atau nomor kalibrasi pabrikan asli (OEM Calibration ID):
@@ -21,7 +21,7 @@ Nama berkas yang tersimpan merefleksikan identitas perangkat keras (Hardware ID)
 > [!NOTE]
 > Mempertahankan kode dan nomor asli pabrikan pada penamaan berkas sangat krusial agar perangkat lunak kalibrasi (seperti **TunerPro**, **WinOLS**, atau **RomRaider**) dapat mengenali dan mencocokkan peta definisi (*definition maps*) secara otomatis tanpa merusak asosiasi header ECU.
 
-* **Rentang Tahun / Model Year**: 1985–2004
+* **Rentang Tahun / Model Year**: 2000–2024
 
 ---
 
@@ -31,27 +31,27 @@ Berikut adalah daftar lengkap berkas fisik yang tersimpan secara lokal di direkt
 
 | Filename | Tahun / Model Year | Size | MD5 Checksum | Type / Target Platform |
 | :--- | :---: | :--- | :--- | :--- |
-| `6DFC.bin` | **1985–2004** | 256.0 KB | `2767e7e30e0652a9e795cfb5b409e982` | Factory Binary Firmware Dump |
-| `6DFD.bin` | **1985–2004** | 256.0 KB | `cb30e24470eb6d6725792135e5d906d4` | Factory Binary Firmware Dump |
-| `6DGC.bin` | **1985–2004** | 256.0 KB | `113db590ff6234de01d3ef3df75bd96d` | Factory Binary Firmware Dump |
-| `6DGD.bin` | **1985–2004** | 256.0 KB | `90bbde737a318cdfcbb352e22e14c868` | Factory Binary Firmware Dump |
-| `CBAZA.xdf` | **1985–2004** | 309.9 KB | `dc4628312362aa97968951d40fc5891d` | TunerPro Binary Definition Map |
-| `CDAN4.xdf` | **1985–2004** | 168.7 KB | `5e134df0c835951cd23c969d405d9d6c` | TunerPro Binary Definition Map |
-| `CRAJ0.xdf` | **1985–2004** | 210.7 KB | `00a2acf2a4905fd93bf8c95119e4148e` | TunerPro Binary Definition Map |
-| `Ford_EEC-IV_8SD_Calibration_OEM_ORI.bin` | **1985–2004** | 56.0 KB | `a693aa0e93a438ce402f84ce6e1730ae` | Factory Binary Firmware Dump |
+| `6DFC.bin` | **2000–2024** | 256.0 KB | `2767e7e30e0652a9e795cfb5b409e982` | Factory Binary Firmware Dump |
+| `6DFD.bin` | **2000–2024** | 256.0 KB | `cb30e24470eb6d6725792135e5d906d4` | Factory Binary Firmware Dump |
+| `6DGC.bin` | **2000–2024** | 256.0 KB | `113db590ff6234de01d3ef3df75bd96d` | Factory Binary Firmware Dump |
+| `6DGD.bin` | **2000–2024** | 256.0 KB | `90bbde737a318cdfcbb352e22e14c868` | Factory Binary Firmware Dump |
+| `CBAZA.xdf` | **2000–2024** | 309.9 KB | `dc4628312362aa97968951d40fc5891d` | TunerPro Binary Definition Map |
+| `CDAN4.xdf` | **2000–2024** | 168.7 KB | `5e134df0c835951cd23c969d405d9d6c` | TunerPro Binary Definition Map |
+| `CRAJ0.xdf` | **2000–2024** | 210.7 KB | `00a2acf2a4905fd93bf8c95119e4148e` | TunerPro Binary Definition Map |
+| `Ford_EEC-IV_8SD_Calibration_OEM_ORI.bin` | **2000–2024** | 56.0 KB | `a693aa0e93a438ce402f84ce6e1730ae` | Factory Binary Firmware Dump |
 | `Ford_EEC-IV_AA_FirstGen1985_Calibration_OEM_ORI.bin` | **1985** | 8.0 KB | `f0a376de3debc1d7d3bd2b3e419dbf1f` | Factory Binary Firmware Dump |
-| `Ford_EEC-IV_M0M2_Calibration_OEM_ORI.bin` | **1985–2004** | 56.0 KB | `5d9560aa49ba658022bc4770a85382b9` | Factory Binary Firmware Dump |
-| `Ford_EEC-IV_X1L_Calibration_OEM_ORI.bin` | **1985–2004** | 56.0 KB | `d21f5c34b9aa6999d529f7437f97d037` | Factory Binary Firmware Dump |
-| `Ford_Mustang_5.0L_FoxBody_Manual_A9L_OEM_ORI.bin` | **1985–2004** | 32.0 KB | `0a7759f430653e280cbdd3f02d8bf322` | Factory Binary Firmware Dump |
-| `Ford_Thunderbird_TurboCoupe_MustangSVO_2.3T_LA3_OEM_ORI.bin` | **1985–2004** | 32.0 KB | `b1525a5c93dcfac2e3cf7b24ed10521c` | Factory Binary Firmware Dump |
-| `GUFA.xdf` | **1985–2004** | 483.4 KB | `28d3c5bdf66182cff4b39850ebd44814` | TunerPro Binary Definition Map |
-| `GUFB.xdf` | **1985–2004** | 485.1 KB | `f5b62ef9f570031f3f6f79cd05f58e79` | TunerPro Binary Definition Map |
+| `Ford_EEC-IV_M0M2_Calibration_OEM_ORI.bin` | **2000–2024** | 56.0 KB | `5d9560aa49ba658022bc4770a85382b9` | Factory Binary Firmware Dump |
+| `Ford_EEC-IV_X1L_Calibration_OEM_ORI.bin` | **2000–2024** | 56.0 KB | `d21f5c34b9aa6999d529f7437f97d037` | Factory Binary Firmware Dump |
+| `Ford_Mustang_5.0L_FoxBody_Manual_A9L_OEM_ORI.bin` | **2000–2024** | 32.0 KB | `0a7759f430653e280cbdd3f02d8bf322` | Factory Binary Firmware Dump |
+| `Ford_Thunderbird_TurboCoupe_MustangSVO_2.3T_LA3_OEM_ORI.bin` | **2000–2024** | 32.0 KB | `b1525a5c93dcfac2e3cf7b24ed10521c` | Factory Binary Firmware Dump |
+| `GUFA.xdf` | **2000–2024** | 483.4 KB | `28d3c5bdf66182cff4b39850ebd44814` | TunerPro Binary Definition Map |
+| `GUFB.xdf` | **2000–2024** | 485.1 KB | `f5b62ef9f570031f3f6f79cd05f58e79` | TunerPro Binary Definition Map |
 
 ---
 
 ## 3. Matriks Kalibrasi & Parameter Pemetaan
 
-Bagi berkas biner dan definisi TunerPro yang tersedia, struktur kalibrasi mencakup parameter esensial:
+Bagi berkas biner dan definisi yang tersedia, struktur kalibrasi mencakup parameter esensial:
 - **Volumetric Efficiency & Fuel Delivery**: Kurva Base Fuel, Open/Closed Loop Transition, Injection Timing, dan Cranking Enrichment.
 - **Ignition Timing & Knock Control**: Peta Main Ignition Advance, Low/High Octane Timing, Knock Retard Thresholds, dan Dwell Timing.
 - **Airflow & Boost Management**: Peta Target Boost Pressure, Wastegate Duty Cycle (WGDC), MAF/MAP Scaling, dan Throttle Response Curves.

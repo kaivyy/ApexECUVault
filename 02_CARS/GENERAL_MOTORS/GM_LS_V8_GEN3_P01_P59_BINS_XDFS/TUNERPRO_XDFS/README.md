@@ -1,14 +1,14 @@
-# TUNERPRO XDFS - ECU Calibration Suite
+# TUNERPRO_XDFS - ECU Calibration Suite
 
 **Repository Path**: `02_CARS/GENERAL_MOTORS/GM_LS_V8_GEN3_P01_P59_BINS_XDFS/TUNERPRO_XDFS`  
-**Classification**: `TunerPro Definition Map Suite (XDF Only)`  
+**Classification**: `ECU Definition & Map Pack Suite (ASAP2 / WinOLS / TunerPro)`  
 **Total Managed Assets**: `33 files` (0 binary dumps, 33 definition maps)  
 
 ---
 
 ## 1. Technical Platform Overview
 
-Paket direktori `TUNERPRO_XDFS` menyediakan pustaka kalibrasi dan pemetaan ECU profesional yang ditujukan bagi teknisi otomotif, tuner, dan reverse engineer. Berkas di direktori ini mencakup kalibrasi firmware pabrikan (OEM), pembacaan perangkat keras (OBD2/BDM/Bench), serta tabel definisi TunerPro XDF untuk eksplorasi parameter mesin.
+Paket direktori `TUNERPRO_XDFS` menyediakan pustaka kalibrasi dan pemetaan ECU profesional yang ditujukan bagi teknisi otomotif, tuner, dan reverse engineer. Berkas di direktori ini mencakup kalibrasi firmware pabrikan (OEM), pembacaan perangkat keras (OBD2/BDM/Bench), serta berkas definisi komprehensif (TunerPro XDF, ASAM ASAP2 A2L, WinOLS DAMOS/KP/OLS) untuk identifikasi parameter mesin presisi.
 
 ### Mengapa Sebagian Berkas Memiliki Nama Berupa Angka / Kode?
 Nama berkas yang tersimpan merefleksikan identitas perangkat keras (Hardware ID), versi perangkat lunak (Software ID), atau nomor kalibrasi pabrikan asli (OEM Calibration ID):
@@ -21,7 +21,7 @@ Nama berkas yang tersimpan merefleksikan identitas perangkat keras (Hardware ID)
 > [!NOTE]
 > Mempertahankan kode dan nomor asli pabrikan pada penamaan berkas sangat krusial agar perangkat lunak kalibrasi (seperti **TunerPro**, **WinOLS**, atau **RomRaider**) dapat mengenali dan mencocokkan peta definisi (*definition maps*) secara otomatis tanpa merusak asosiasi header ECU.
 
-* **Rentang Tahun / Model Year**: 1989–2006
+* **Rentang Tahun / Model Year**: 2000–2024
 
 ---
 
@@ -35,10 +35,10 @@ Berikut adalah daftar lengkap berkas fisik yang tersimpan secara lokal di direkt
 | `12208322 - 2001 512k.xdf` | **2001** | 617.5 KB | `0742ffff2c2ca927c638c6f546073edd` | TunerPro Binary Definition Map |
 | `12209203 - 2002 512k V1.xdf` | **2002** | 588.1 KB | `b706e5a686283cbf25f9cd2dda54f58f` | TunerPro Binary Definition Map |
 | `12212156 - 2002 512k V1.xdf` | **2002** | 588.1 KB | `56f1f73f8e4306b4d97913a794f5ef3f` | TunerPro Binary Definition Map |
-| `12216125_TCS.xdf` | **1989–2006** | 695 B | `7b84d08b2d44a8cdbc61132ef9e7909d` | TunerPro Binary Definition Map |
+| `12216125_TCS.xdf` | **2000–2024** | 695 B | `7b84d08b2d44a8cdbc61132ef9e7909d` | TunerPro Binary Definition Map |
 | `12587603 - 2004 1mb.xdf` | **2004** | 782.7 KB | `7ca8ac43e3015035e137d442666d4001` | TunerPro Binary Definition Map |
-| `12592433-imperial.xdf` | **1989–2006** | 604.7 KB | `306a247281aebb94e518e5cc43972fd8` | TunerPro Binary Definition Map |
-| `12592433-metric.xdf` | **1989–2006** | 597.7 KB | `ac7d67a9da799047e4921457247ca6d5` | TunerPro Binary Definition Map |
+| `12592433-imperial.xdf` | **2000–2024** | 604.7 KB | `306a247281aebb94e518e5cc43972fd8` | TunerPro Binary Definition Map |
+| `12592433-metric.xdf` | **2000–2024** | 597.7 KB | `ac7d67a9da799047e4921457247ca6d5` | TunerPro Binary Definition Map |
 | `No Password - OS12212156 - 2002 512kB PCM - v5_old.xdf` | **2002** | 1.21 MB | `c4989670035ca4edee4cb2e87f4c7427` | TunerPro Binary Definition Map |
 | `No Password - Operating System 12202088 - 512Kb PCM - 2001 model year.xdf` | **2001** | 606.3 KB | `e0e2725eb85329fb2fa5262998d3b217` | TunerPro Binary Definition Map |
 | `No Password - Operating System 12208322 - 512Kb PCM - 2001 model year.xdf` | **2001** | 606.3 KB | `27c61d6fefe65a4da3d973b9392e3879` | TunerPro Binary Definition Map |
@@ -69,7 +69,7 @@ Berikut adalah daftar lengkap berkas fisik yang tersimpan secara lokal di direkt
 
 ## 3. Matriks Kalibrasi & Parameter Pemetaan
 
-Bagi berkas biner dan definisi TunerPro yang tersedia, struktur kalibrasi mencakup parameter esensial:
+Bagi berkas biner dan definisi yang tersedia, struktur kalibrasi mencakup parameter esensial:
 - **Volumetric Efficiency & Fuel Delivery**: Kurva Base Fuel, Open/Closed Loop Transition, Injection Timing, dan Cranking Enrichment.
 - **Ignition Timing & Knock Control**: Peta Main Ignition Advance, Low/High Octane Timing, Knock Retard Thresholds, dan Dwell Timing.
 - **Airflow & Boost Management**: Peta Target Boost Pressure, Wastegate Duty Cycle (WGDC), MAF/MAP Scaling, dan Throttle Response Curves.

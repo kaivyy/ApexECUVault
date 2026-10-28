@@ -1,14 +1,14 @@
-# AUDI S4 B5 ME7 2 7T - ECU Calibration Suite
+# AUDI_S4_B5_ME7_2_7T - ECU Calibration Suite
 
 **Repository Path**: `02_CARS/VAG_AUDI_VOLKSWAGEN/AUDI_S4_B5_ME7_2_7T`  
-**Classification**: `Complete Binary & TunerPro Definition Suite`  
-**Total Managed Assets**: `7 files` (5 binary dumps, 2 definition maps)  
+**Classification**: `Binary Firmware & High-Precision Calibration Definition Suite`  
+**Total Managed Assets**: `9 files` (5 binary dumps, 4 definition maps)  
 
 ---
 
 ## 1. Technical Platform Overview
 
-Paket direktori `AUDI_S4_B5_ME7_2_7T` menyediakan pustaka kalibrasi dan pemetaan ECU profesional yang ditujukan bagi teknisi otomotif, tuner, dan reverse engineer. Berkas di direktori ini mencakup kalibrasi firmware pabrikan (OEM), pembacaan perangkat keras (OBD2/BDM/Bench), serta tabel definisi TunerPro XDF untuk eksplorasi parameter mesin.
+Paket direktori `AUDI_S4_B5_ME7_2_7T` menyediakan pustaka kalibrasi dan pemetaan ECU profesional yang ditujukan bagi teknisi otomotif, tuner, dan reverse engineer. Berkas di direktori ini mencakup kalibrasi firmware pabrikan (OEM), pembacaan perangkat keras (OBD2/BDM/Bench), serta berkas definisi komprehensif (TunerPro XDF, ASAM ASAP2 A2L, WinOLS DAMOS/KP/OLS) untuk identifikasi parameter mesin presisi.
 
 ### Mengapa Sebagian Berkas Memiliki Nama Berupa Angka / Kode?
 Nama berkas yang tersimpan merefleksikan identitas perangkat keras (Hardware ID), versi perangkat lunak (Software ID), atau nomor kalibrasi pabrikan asli (OEM Calibration ID):
@@ -21,7 +21,7 @@ Nama berkas yang tersimpan merefleksikan identitas perangkat keras (Hardware ID)
 > [!NOTE]
 > Mempertahankan kode dan nomor asli pabrikan pada penamaan berkas sangat krusial agar perangkat lunak kalibrasi (seperti **TunerPro**, **WinOLS**, atau **RomRaider**) dapat mengenali dan mencocokkan peta definisi (*definition maps*) secara otomatis tanpa merusak asosiasi header ECU.
 
-* **Rentang Tahun / Model Year**: OEM Production
+* **Rentang Tahun / Model Year**: 1999–2002
 
 ---
 
@@ -31,19 +31,21 @@ Berikut adalah daftar lengkap berkas fisik yang tersimpan secara lokal di direkt
 
 | Filename | Tahun / Model Year | Size | MD5 Checksum | Type / Target Platform |
 | :--- | :---: | :--- | :--- | :--- |
-| `8D0907551M-0002 (16Bit KFZW).bin` | **OEM Production** | 1.00 MB | `7cf3feb94b32e877b1d30eed34e57997` | Factory Binary Firmware Dump |
-| `8D0907551M-0002 (stock MAP 5120 16Bit KFZW).bin` | **OEM Production** | 1.00 MB | `f11bfcc8df64c11bd858ee413f940386` | Factory Binary Firmware Dump |
-| `8D0907551M-0002 (stock MAP 5120).bin` | **OEM Production** | 1.00 MB | `9e2598740860ba3548821914b523b8d9` | Factory Binary Firmware Dump |
-| `8D0907551M-0002.bin` | **OEM Production** | 1.00 MB | `d56d9801e27145a77fc7bab1164e54eb` | Factory Binary Firmware Dump |
-| `8D0907551M-002_5120-stock_map-nyet.bin` | **OEM Production** | 1.00 MB | `533e3a19b75ba0f6d922c4208d684e32` | Factory Binary Firmware Dump |
-| `8D0907551M-20170411-16bit-kfzw.xdf` | **OEM Production** | 493.1 KB | `f6d19bcf33e6a35e842ddb2ab46fa343` | TunerPro Binary Definition Map |
-| `8D0907551M-20190711.xdf` | **OEM Production** | 491.8 KB | `7df7ce24a3cea3ad5215b51ab89a417f` | TunerPro Binary Definition Map |
+| `4Z7907551AA.kp` | **1999–2002** | 20.4 KB | `64318b2e1ad17db7cd98e7d2b44c240b` | WinOLS Map Definition Pack |
+| `4Z7907551R.kp` | **1999–2002** | 2.32 MB | `7919ca7138e62600f808f15c30b0ad17` | WinOLS Map Definition Pack |
+| `8D0907551M-0002 (16Bit KFZW).bin` | **1999–2002** | 1.00 MB | `7cf3feb94b32e877b1d30eed34e57997` | Factory Binary Firmware Dump |
+| `8D0907551M-0002 (stock MAP 5120 16Bit KFZW).bin` | **1999–2002** | 1.00 MB | `f11bfcc8df64c11bd858ee413f940386` | Factory Binary Firmware Dump |
+| `8D0907551M-0002 (stock MAP 5120).bin` | **1999–2002** | 1.00 MB | `9e2598740860ba3548821914b523b8d9` | Factory Binary Firmware Dump |
+| `8D0907551M-0002.bin` | **1999–2002** | 1.00 MB | `d56d9801e27145a77fc7bab1164e54eb` | Factory Binary Firmware Dump |
+| `8D0907551M-002_5120-stock_map-nyet.bin` | **1999–2002** | 1.00 MB | `533e3a19b75ba0f6d922c4208d684e32` | Factory Binary Firmware Dump |
+| `8D0907551M-20170411-16bit-kfzw.xdf` | **1999–2002** | 493.1 KB | `f6d19bcf33e6a35e842ddb2ab46fa343` | TunerPro Binary Definition Map |
+| `8D0907551M-20190711.xdf` | **1999–2002** | 491.8 KB | `7df7ce24a3cea3ad5215b51ab89a417f` | TunerPro Binary Definition Map |
 
 ---
 
 ## 3. Matriks Kalibrasi & Parameter Pemetaan
 
-Bagi berkas biner dan definisi TunerPro yang tersedia, struktur kalibrasi mencakup parameter esensial:
+Bagi berkas biner dan definisi yang tersedia, struktur kalibrasi mencakup parameter esensial:
 - **Volumetric Efficiency & Fuel Delivery**: Kurva Base Fuel, Open/Closed Loop Transition, Injection Timing, dan Cranking Enrichment.
 - **Ignition Timing & Knock Control**: Peta Main Ignition Advance, Low/High Octane Timing, Knock Retard Thresholds, dan Dwell Timing.
 - **Airflow & Boost Management**: Peta Target Boost Pressure, Wastegate Duty Cycle (WGDC), MAF/MAP Scaling, dan Throttle Response Curves.

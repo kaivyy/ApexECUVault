@@ -1,14 +1,14 @@
-# NINJA 250 FI Z250 - ECU Calibration Suite
+# NINJA_250_FI_Z250 - ECU Calibration Suite
 
 **Repository Path**: `01_MOTORCYCLES/KAWASAKI/NINJA_250_FI_Z250`  
-**Classification**: `TunerPro Definition Map Suite (XDF Only)`  
+**Classification**: `ECU Definition & Map Pack Suite (ASAP2 / WinOLS / TunerPro)`  
 **Total Managed Assets**: `4 files` (0 binary dumps, 4 definition maps)  
 
 ---
 
 ## 1. Technical Platform Overview
 
-Paket direktori `NINJA_250_FI_Z250` menyediakan pustaka kalibrasi dan pemetaan ECU profesional yang ditujukan bagi teknisi otomotif, tuner, dan reverse engineer. Berkas di direktori ini mencakup kalibrasi firmware pabrikan (OEM), pembacaan perangkat keras (OBD2/BDM/Bench), serta tabel definisi TunerPro XDF untuk eksplorasi parameter mesin.
+Paket direktori `NINJA_250_FI_Z250` menyediakan pustaka kalibrasi dan pemetaan ECU profesional yang ditujukan bagi teknisi otomotif, tuner, dan reverse engineer. Berkas di direktori ini mencakup kalibrasi firmware pabrikan (OEM), pembacaan perangkat keras (OBD2/BDM/Bench), serta berkas definisi komprehensif (TunerPro XDF, ASAM ASAP2 A2L, WinOLS DAMOS/KP/OLS) untuk identifikasi parameter mesin presisi.
 
 ### Mengapa Sebagian Berkas Memiliki Nama Berupa Angka / Kode?
 Nama berkas yang tersimpan merefleksikan identitas perangkat keras (Hardware ID), versi perangkat lunak (Software ID), atau nomor kalibrasi pabrikan asli (OEM Calibration ID):
@@ -21,7 +21,7 @@ Nama berkas yang tersimpan merefleksikan identitas perangkat keras (Hardware ID)
 > [!NOTE]
 > Mempertahankan kode dan nomor asli pabrikan pada penamaan berkas sangat krusial agar perangkat lunak kalibrasi (seperti **TunerPro**, **WinOLS**, atau **RomRaider**) dapat mengenali dan mencocokkan peta definisi (*definition maps*) secara otomatis tanpa merusak asosiasi header ECU.
 
-* **Rentang Tahun / Model Year**: 2013–2024
+* **Rentang Tahun / Model Year**: 2000–2024
 
 ---
 
@@ -33,14 +33,14 @@ Berikut adalah daftar lengkap berkas fisik yang tersimpan secara lokal di direkt
 | :--- | :---: | :--- | :--- | :--- |
 | `GENERATIONAL_21175-0810_Kawasaki_Ninja_250_FI_Gen_1_2013_2017_32PS.xdf` | **2013–2017** | 2.5 KB | `35faa75362c61689380f4cf7305334f0` | TunerPro Binary Definition Map |
 | `GENERATIONAL_21175-1339_Kawasaki_New_Ninja_250_Gen_2_2018_2025_39PS.xdf` | **2018–2025** | 2.5 KB | `121210dc08dcc7c520f5643602935cb1` | TunerPro Binary Definition Map |
-| `KAWASAKI_21175-0810_Kawasaki_Ninja_250_FI___Z250_(EX250L).xdf` | **2013–2024** | 9.4 KB | `ffed4bb2e6e673c338012312bcff9257` | TunerPro Binary Definition Map |
-| `KAWASAKI_21175-1323_Kawasaki_Ninja_250_New_Facelift_(EX250P).xdf` | **2013–2024** | 9.4 KB | `fc35dac0a402beb90bc505d001521d2c` | TunerPro Binary Definition Map |
+| `KAWASAKI_21175-0810_Kawasaki_Ninja_250_FI___Z250_(EX250L).xdf` | **2000–2024** | 9.4 KB | `ffed4bb2e6e673c338012312bcff9257` | TunerPro Binary Definition Map |
+| `KAWASAKI_21175-1323_Kawasaki_Ninja_250_New_Facelift_(EX250P).xdf` | **2000–2024** | 9.4 KB | `fc35dac0a402beb90bc505d001521d2c` | TunerPro Binary Definition Map |
 
 ---
 
 ## 3. Matriks Kalibrasi & Parameter Pemetaan
 
-Bagi berkas biner dan definisi TunerPro yang tersedia, struktur kalibrasi mencakup parameter esensial:
+Bagi berkas biner dan definisi yang tersedia, struktur kalibrasi mencakup parameter esensial:
 - **Volumetric Efficiency & Fuel Delivery**: Kurva Base Fuel, Open/Closed Loop Transition, Injection Timing, dan Cranking Enrichment.
 - **Ignition Timing & Knock Control**: Peta Main Ignition Advance, Low/High Octane Timing, Knock Retard Thresholds, dan Dwell Timing.
 - **Airflow & Boost Management**: Peta Target Boost Pressure, Wastegate Duty Cycle (WGDC), MAF/MAP Scaling, dan Throttle Response Curves.

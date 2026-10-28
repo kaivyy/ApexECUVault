@@ -1,14 +1,14 @@
-# FORTUNER 1GR FE 4 0L V6 - ECU Calibration Suite
+# FORTUNER_1GR_FE_4_0L_V6 - ECU Calibration Suite
 
 **Repository Path**: `02_CARS/TOYOTA_DAIHATSU/FORTUNER_1GR_FE_4_0L_V6`  
-**Classification**: `Complete Binary & TunerPro Definition Suite`  
+**Classification**: `Binary Firmware & High-Precision Calibration Definition Suite`  
 **Total Managed Assets**: `5 files` (4 binary dumps, 1 definition maps)  
 
 ---
 
 ## 1. Technical Platform Overview
 
-Paket direktori `FORTUNER_1GR_FE_4_0L_V6` menyediakan pustaka kalibrasi dan pemetaan ECU profesional yang ditujukan bagi teknisi otomotif, tuner, dan reverse engineer. Berkas di direktori ini mencakup kalibrasi firmware pabrikan (OEM), pembacaan perangkat keras (OBD2/BDM/Bench), serta tabel definisi TunerPro XDF untuk eksplorasi parameter mesin.
+Paket direktori `FORTUNER_1GR_FE_4_0L_V6` menyediakan pustaka kalibrasi dan pemetaan ECU profesional yang ditujukan bagi teknisi otomotif, tuner, dan reverse engineer. Berkas di direktori ini mencakup kalibrasi firmware pabrikan (OEM), pembacaan perangkat keras (OBD2/BDM/Bench), serta berkas definisi komprehensif (TunerPro XDF, ASAM ASAP2 A2L, WinOLS DAMOS/KP/OLS) untuk identifikasi parameter mesin presisi.
 
 ### Mengapa Sebagian Berkas Memiliki Nama Berupa Angka / Kode?
 Nama berkas yang tersimpan merefleksikan identitas perangkat keras (Hardware ID), versi perangkat lunak (Software ID), atau nomor kalibrasi pabrikan asli (OEM Calibration ID):
@@ -21,7 +21,7 @@ Nama berkas yang tersimpan merefleksikan identitas perangkat keras (Hardware ID)
 > [!NOTE]
 > Mempertahankan kode dan nomor asli pabrikan pada penamaan berkas sangat krusial agar perangkat lunak kalibrasi (seperti **TunerPro**, **WinOLS**, atau **RomRaider**) dapat mengenali dan mencocokkan peta definisi (*definition maps*) secara otomatis tanpa merusak asosiasi header ECU.
 
-* **Rentang Tahun / Model Year**: 2005–2020
+* **Rentang Tahun / Model Year**: 2005–2015
 
 ---
 
@@ -32,7 +32,7 @@ Berikut adalah daftar lengkap berkas fisik yang tersimpan secara lokal di direkt
 | Filename | Tahun / Model Year | Size | MD5 Checksum | Type / Target Platform |
 | :--- | :---: | :--- | :--- | :--- |
 | `TOYOTA_4RUNNER_FORTUNER_2006_4.0L_V6_1GRFE_89663-35292.bin` | **2006** | 384.0 KB | `1669b796a63862e27247ef5b65ad7410` | Factory Binary Firmware Dump |
-| `TOYOTA_89663-F0852_1GR.xdf` | **2005–2020** | 9.8 KB | `dd2f881036a4995cd44ae636f78e1db5` | TunerPro Binary Definition Map |
+| `TOYOTA_89663-F0852_1GR.xdf` | **2005–2015** | 9.8 KB | `dd2f881036a4995cd44ae636f78e1db5` | TunerPro Binary Definition Map |
 | `TOYOTA_FJ_CRUISER_FORTUNER_2011_4.0L_V6_1GRFE_89663-YWK01.bin` | **2011** | 736.0 KB | `b95a0ca3d0ed2e095d52b84ff552f1d8` | Factory Binary Firmware Dump |
 | `TOYOTA_FORTUNER_PRADO_LC120_2008_4.0L_V6_1GRFE_89663-60551.bin` | **2008** | 736.0 KB | `3f49683123aaf9dcabdaa8e5f2a03ae7` | Factory Binary Firmware Dump |
 | `TOYOTA_FORTUNER_PRADO_LC150_2014_4.0L_V6_1GRFE_89663-60E64.bin` | **2014** | 992.0 KB | `9b47aa92031ba832eb652c8b2353987b` | Factory Binary Firmware Dump |
@@ -41,7 +41,7 @@ Berikut adalah daftar lengkap berkas fisik yang tersimpan secara lokal di direkt
 
 ## 3. Matriks Kalibrasi & Parameter Pemetaan
 
-Bagi berkas biner dan definisi TunerPro yang tersedia, struktur kalibrasi mencakup parameter esensial:
+Bagi berkas biner dan definisi yang tersedia, struktur kalibrasi mencakup parameter esensial:
 - **Volumetric Efficiency & Fuel Delivery**: Kurva Base Fuel, Open/Closed Loop Transition, Injection Timing, dan Cranking Enrichment.
 - **Ignition Timing & Knock Control**: Peta Main Ignition Advance, Low/High Octane Timing, Knock Retard Thresholds, dan Dwell Timing.
 - **Airflow & Boost Management**: Peta Target Boost Pressure, Wastegate Duty Cycle (WGDC), MAF/MAP Scaling, dan Throttle Response Curves.

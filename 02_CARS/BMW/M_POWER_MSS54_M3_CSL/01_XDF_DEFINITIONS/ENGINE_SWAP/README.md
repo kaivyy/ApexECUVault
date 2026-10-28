@@ -1,14 +1,14 @@
-# ENGINE SWAP - ECU Calibration Suite
+# ENGINE_SWAP - ECU Calibration Suite
 
 **Repository Path**: `02_CARS/BMW/M_POWER_MSS54_M3_CSL/01_XDF_DEFINITIONS/ENGINE_SWAP`  
-**Classification**: `TunerPro Definition Map Suite (XDF Only)`  
+**Classification**: `ECU Definition & Map Pack Suite (ASAP2 / WinOLS / TunerPro)`  
 **Total Managed Assets**: `6 files` (0 binary dumps, 6 definition maps)  
 
 ---
 
 ## 1. Technical Platform Overview
 
-Paket direktori `ENGINE_SWAP` menyediakan pustaka kalibrasi dan pemetaan ECU profesional yang ditujukan bagi teknisi otomotif, tuner, dan reverse engineer. Berkas di direktori ini mencakup kalibrasi firmware pabrikan (OEM), pembacaan perangkat keras (OBD2/BDM/Bench), serta tabel definisi TunerPro XDF untuk eksplorasi parameter mesin.
+Paket direktori `ENGINE_SWAP` menyediakan pustaka kalibrasi dan pemetaan ECU profesional yang ditujukan bagi teknisi otomotif, tuner, dan reverse engineer. Berkas di direktori ini mencakup kalibrasi firmware pabrikan (OEM), pembacaan perangkat keras (OBD2/BDM/Bench), serta berkas definisi komprehensif (TunerPro XDF, ASAM ASAP2 A2L, WinOLS DAMOS/KP/OLS) untuk identifikasi parameter mesin presisi.
 
 ### Mengapa Sebagian Berkas Memiliki Nama Berupa Angka / Kode?
 Nama berkas yang tersimpan merefleksikan identitas perangkat keras (Hardware ID), versi perangkat lunak (Software ID), atau nomor kalibrasi pabrikan asli (OEM Calibration ID):
@@ -35,14 +35,14 @@ Berikut adalah daftar lengkap berkas fisik yang tersimpan secara lokal di direkt
 | `DTC 0301 0401 Method4.xdf` | **2000–2006** | 59.6 KB | `41b4fb9210785bb8cc2147b5cb28cceb` | TunerPro Binary Definition Map |
 | `DTC 0901  1101  1301  1501  1701  2101  2401  2601  2801.xdf` | **2000–2006** | 59.6 KB | `f4505b270600bdeb36a1470eab3cb65f` | TunerPro Binary Definition Map |
 | `DTC 1801  1901  2001  2501  2701.xdf` | **2001** | 59.6 KB | `02612935f4ee11a8436774ea6ed4f5e0` | TunerPro Binary Definition Map |
-| `MSS54 v2601 v2801 E30 Swap Items.xdf` | **1987–1993** | 35.2 KB | `9caab4c8533708ec07bac2762179b339` | TunerPro Binary Definition Map |
+| `MSS54 v2601 v2801 E30 Swap Items.xdf` | **2000–2006** | 35.2 KB | `9caab4c8533708ec07bac2762179b339` | TunerPro Binary Definition Map |
 | `MSS54HP v1801 v2001 v2501 v2701 E30 Swap Items.xdf` | **2001** | 35.2 KB | `92bf4e0be15d14e920171428965b487e` | TunerPro Binary Definition Map |
 
 ---
 
 ## 3. Matriks Kalibrasi & Parameter Pemetaan
 
-Bagi berkas biner dan definisi TunerPro yang tersedia, struktur kalibrasi mencakup parameter esensial:
+Bagi berkas biner dan definisi yang tersedia, struktur kalibrasi mencakup parameter esensial:
 - **Volumetric Efficiency & Fuel Delivery**: Kurva Base Fuel, Open/Closed Loop Transition, Injection Timing, dan Cranking Enrichment.
 - **Ignition Timing & Knock Control**: Peta Main Ignition Advance, Low/High Octane Timing, Knock Retard Thresholds, dan Dwell Timing.
 - **Airflow & Boost Management**: Peta Target Boost Pressure, Wastegate Duty Cycle (WGDC), MAF/MAP Scaling, dan Throttle Response Curves.

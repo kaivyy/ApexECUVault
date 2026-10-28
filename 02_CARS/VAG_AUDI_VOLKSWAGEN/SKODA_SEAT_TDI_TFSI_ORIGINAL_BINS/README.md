@@ -1,27 +1,22 @@
-# SKODA & SEAT - VAG Group TDI & TFSI Original Calibration Dumps
+# SKODA_SEAT_TDI_TFSI_ORIGINAL_BINS - ECU Calibration Suite
 
 **Repository Path**: `02_CARS/VAG_AUDI_VOLKSWAGEN/SKODA_SEAT_TDI_TFSI_ORIGINAL_BINS`  
-**Classification**: `Universal ECU Firmware & Calibration Suite`  
-**Total Managed Assets**: `206 files` (206 binary dumps, 0 definition maps)  
+**Classification**: `OEM Binary Firmware & Factory Calibration Suite`  
+**Total Managed Assets**: `206 files` (205 binary dumps, 1 definition maps)  
 
 ---
 
 ## 1. Technical Platform Overview
 
-Koleksi 206 berkas biner original hardware dumps (.ori/.bin) untuk jajaran kendaraan platform VAG merk Skoda (Octavia I/II, Fabia I/II, Superb I/II, Roomster) dan Seat (Leon 1M/1P, Ibiza 6L/6J, Toledo, Altea, Cordoba). Meliputi mesin 1.4 TDI, 1.9 TDI (Pumpe Düse PD100, PD105, PD130, PD150, PD160 Cupra), 2.0 TDI (PD140, PD170), 1.8T 20V (150/180/210/225 PS), dan 2.0 TFSI/TSI EA113/EA888. Berbagi arsitektur ECU dan engine block 100% dengan Volkswagen Golf/Passat dan Audi A3/A4.
-
-### Detail Arsitektur Kontroler & Komunikasi:
-- **Keluarga ECU / Controller Family**: `Bosch EDC15P, EDC15VM+, EDC16U1, EDC16U34, Motronic ME7.5, MED9.1, MED17`
-- **Arsitektur MCU & Memori**: `Infineon C167 / ST10F275 / Motorola MPC562 / MPC564 / Tricore TC1766 512KB-2MB Flash`
-- **Protokol Diagnostik & Flashing**: `KWP1281 / KWP2000 (TP 2.0 over CAN) / UDS (ISO 14229) / BDM100`
+Paket direktori `SKODA_SEAT_TDI_TFSI_ORIGINAL_BINS` menyediakan pustaka kalibrasi dan pemetaan ECU profesional yang ditujukan bagi teknisi otomotif, tuner, dan reverse engineer. Berkas di direktori ini mencakup kalibrasi firmware pabrikan (OEM), pembacaan perangkat keras (OBD2/BDM/Bench), serta berkas definisi komprehensif (TunerPro XDF, ASAM ASAP2 A2L, WinOLS DAMOS/KP/OLS) untuk identifikasi parameter mesin presisi.
 
 ### Mengapa Sebagian Berkas Memiliki Nama Berupa Angka / Kode?
 Nama berkas yang tersimpan merefleksikan identitas perangkat keras (Hardware ID), versi perangkat lunak (Software ID), atau nomor kalibrasi pabrikan asli (OEM Calibration ID):
 - **Bosch Part Numbers** (misal `0261xxxxxx`, `1037xxxxxx`): Standar identifikasi universal Bosch untuk ECU Motronic, MED17, EDC16, dan EDC17.
-- **BMW Software IDs** (misal `00005C64xxxxxx`, `10SW002828`, `0110C6`, `MS430069`): Alamat dan assembly identification number pada modul DME Siemens/Continental/Bosch.
-- **Denso / Toyota Calibration IDs** (misal `89663-xxxxx`, `32920-xxxxx`): Nomor resmi Denso MCU firmware flash untuk mobil dan motor.
-- **Keihin Part Numbers** (misal `37805-xxx-xxxx`, `38770-xxx-xxxx`): Kode perakitan ECU Honda untuk verifikasi kecocokan checksum dan proteksi immobilizer.
-- **VAG Hardware / Software IDs** (misal `038906012xx`, `03G906021xx`, `8D0907558xx`): Nomor bagian resmi Volkswagen Audi Group untuk identifikasi kalibrasi mesin EDC15, EDC16, dan ME7.
+- **BMW Software IDs** (misal `00005C64xxxxxx`, `10SW002828`): Alamat dan assembly identification number pada modul DME Siemens/Continental/Bosch.
+- **Denso / Toyota Calibration IDs** (misal `89663-xxxxx`): Nomor resmi Toyota Techstream / Denso MCU firmware flash.
+- **Keihin Part Numbers** (misal `37805-xxx-xxxx`, `38770-xxx`): Kode perakitan ECU Honda untuk verifikasi kecocokan checksum dan proteksi immobilizer.
+- **GM OS IDs** (misal `12587603`, `12212156`): Operating system ID kontroler GM Delphi P01/P59.
 
 > [!NOTE]
 > Mempertahankan kode dan nomor asli pabrikan pada penamaan berkas sangat krusial agar perangkat lunak kalibrasi (seperti **TunerPro**, **WinOLS**, atau **RomRaider**) dapat mengenali dan mencocokkan peta definisi (*definition maps*) secara otomatis tanpa merusak asosiasi header ECU.
@@ -161,7 +156,7 @@ Berikut adalah daftar lengkap berkas fisik yang tersimpan secara lokal di direkt
 | `Skoda Octavia 2  1.4i 036906032BF.ori` | **2000–2012** | 1.00 MB | `0aa9ab4e806cbc230ddc584f72623297` | Factory Binary Firmware Dump |
 | `Skoda Octavia 2  2.0FSI 150PS 0261S02259 378588.ori` | **2000–2012** | 2.00 MB | `10461d79a40468e643741740046a96bd` | Factory Binary Firmware Dump |
 | `Skoda Octavia 2.0 170HP RS 03G906018EL  9953.ori` | **2000–2012** | 244.0 KB | `ffb74809b9871fbae32f5d6fcfc68918` | Factory Binary Firmware Dump |
-| `Skoda Octavia 2.0FSI 0261S02018 06F906056R 372560.ori` | **2017–2023** | 2.00 MB | `d039aa6c3c5e01b3a8b6e28b1eaad92f` | Factory Binary Firmware Dump |
+| `Skoda Octavia 2.0FSI 0261S02018 06F906056R 372560.ori` | **2000–2012** | 2.00 MB | `d039aa6c3c5e01b3a8b6e28b1eaad92f` | Factory Binary Firmware Dump |
 | `Skoda Octavia 2.0TDI 140HP 03G906021LD_0281013187_391532.ori` | **2000–2012** | 2.00 MB | `f2ef94dc287309791ea216e50713d7ab` | Factory Binary Firmware Dump |
 | `Skoda Octavia 2.0TDI 140HP 03G906021LD_0281013187_Skoda Octavia 2.0TDI 140HP 03G906021LD_0281013187_381024.ori` | **2000–2012** | 2.00 MB | `07daee3d5d131f0091451e15c3c6ac82` | Factory Binary Firmware Dump |
 | `Skoda Octavia Scount 2.0TDI 140HP 03G906021MC 390602.ori` | **2000–2012** | 2.00 MB | `76f8f5dbcecf7c9dd089c7416e0856dc` | Factory Binary Firmware Dump |
@@ -229,7 +224,7 @@ Berikut adalah daftar lengkap berkas fisik yang tersimpan secara lokal di direkt
 | `Skoda superb 1.9TDI 105HP 3G906021QN 1037395404.ori` | **2000–2012** | 2.00 MB | `bbdba47daebe82f91a5adcacb37d855d` | Factory Binary Firmware Dump |
 | `Skoda superb 1.9TDI 130HP 038906019EG 0281010928 363744.ori` | **2000–2012** | 512.0 KB | `5c9c635b3f23ce630740b6c0599d5524` | Factory Binary Firmware Dump |
 | `Skoda_Fabia_D1900_R4V2T_74kW_0281010289_038906019AF_1056_1037352972_crc146360EC.ori` | **2000–2012** | 512.0 KB | `d6d886d60fc5d6dc7bdab98f3fb500a1` | Factory Binary Firmware Dump |
-| `Skoda_Fabia_D1900_R4V2T_74kW_0281010289_038906019AF_1110_1037354466_crcCBCBF822.ori` | **2014–2020** | 512.0 KB | `62b053d7647975641f50a77d00d3b369` | Factory Binary Firmware Dump |
+| `Skoda_Fabia_D1900_R4V2T_74kW_0281010289_038906019AF_1110_1037354466_crcCBCBF822.ori` | **2000–2012** | 512.0 KB | `62b053d7647975641f50a77d00d3b369` | Factory Binary Firmware Dump |
 | `Skoda_Octavia_1,9_TDI_105PS_0281011883_03G906016DJ_6250_1037371259.ori` | **2000–2012** | 1.00 MB | `15d0dcad65d2ad217b12c40776da2d9a` | Factory Binary Firmware Dump |
 | `Skoda_Octavia_2,0TFSI_200PS_0261S02114_1Z0907115_377701.ori` | **2000–2012** | 2.00 MB | `7646a895db889f6549a8aeb5e94c11fb` | Factory Binary Firmware Dump |
 | `Skoda_Octavia_B1800_R4V5_92kW_0261204373_06A906018H_V05_1037358798_crc2ABE377E.ori` | **2000–2012** | 128.0 KB | `a4689061b702f291dcbf7d36a8b88279` | Factory Binary Firmware Dump |
@@ -247,11 +242,11 @@ Berikut adalah daftar lengkap berkas fisik yang tersimpan secara lokal di direkt
 
 ## 3. Matriks Kalibrasi & Parameter Pemetaan
 
-Bagi berkas biner dan definisi TunerPro / RomRaider yang tersedia, struktur kalibrasi mencakup parameter esensial:
-- **Volumetric Efficiency & Fuel Delivery**: Kurva Base Fuel, Open/Closed Loop Transition, Injection Timing, Smoke Limiter, Torque-to-Fuel Limiter, dan Cranking Enrichment.
+Bagi berkas biner dan definisi yang tersedia, struktur kalibrasi mencakup parameter esensial:
+- **Volumetric Efficiency & Fuel Delivery**: Kurva Base Fuel, Open/Closed Loop Transition, Injection Timing, dan Cranking Enrichment.
 - **Ignition Timing & Knock Control**: Peta Main Ignition Advance, Low/High Octane Timing, Knock Retard Thresholds, dan Dwell Timing.
-- **Airflow & Boost Management**: Peta Target Boost Pressure, Wastegate Duty Cycle (WGDC / N75 Map), MAF/MAP Scaling, dan Throttle Response Curves (Driver Wish).
-- **Safety Limits & Thresholds**: Rev Limiter (Hard/Soft Cut), Top Speed Limiter (Vmax), Overboost Fuel Cut, EGT (Exhaust Gas Temperature) Protection, dan Engine Protection Strategies.
+- **Airflow & Boost Management**: Peta Target Boost Pressure, Wastegate Duty Cycle (WGDC), MAF/MAP Scaling, dan Throttle Response Curves.
+- **Safety Limits & Thresholds**: Rev Limiter (Hard/Soft Cut), Top Speed Limiter (Vmax), Overboost Fuel Cut, dan Engine Protection Strategies.
 
 ---
 

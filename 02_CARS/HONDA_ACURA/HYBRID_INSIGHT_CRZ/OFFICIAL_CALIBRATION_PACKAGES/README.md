@@ -1,19 +1,27 @@
-# HYBRID INSIGHT CR-Z OFFICIAL CALIBRATIONS - ECU Calibration Suite
+# OFFICIAL_CALIBRATION_PACKAGES - ECU Calibration Suite
 
 **Repository Path**: `02_CARS/HONDA_ACURA/HYBRID_INSIGHT_CRZ/OFFICIAL_CALIBRATION_PACKAGES`  
-**Classification**: `Binary Flash Memory & OEM Firmware Dump Suite`  
-**Total Managed Assets**: `437 files` (437 binary/calibration dumps, 0 definition maps)  
+**Classification**: `OEM Binary Firmware & Factory Calibration Suite`  
+**Total Managed Assets**: `437 files` (437 binary dumps, 0 definition maps)  
 
 ---
 
 ## 1. Technical Platform Overview
 
-Paket direktori `OFFICIAL_CALIBRATION_PACKAGES` menyediakan pustaka kalibrasi dan pemetaan ECU profesional untuk Honda Hybrid Fleet (CR-Z, Insight, Civic Hybrid) Factory Calibration Firmware Packages. Berkas di direktori ini mencakup kalibrasi firmware pabrikan (OEM), pembacaan perangkat keras (OBD2/BDM/Bench), serta tabel definisi TunerPro XDF untuk eksplorasi parameter mesin.
+Paket direktori `OFFICIAL_CALIBRATION_PACKAGES` menyediakan pustaka kalibrasi dan pemetaan ECU profesional yang ditujukan bagi teknisi otomotif, tuner, dan reverse engineer. Berkas di direktori ini mencakup kalibrasi firmware pabrikan (OEM), pembacaan perangkat keras (OBD2/BDM/Bench), serta berkas definisi komprehensif (TunerPro XDF, ASAM ASAP2 A2L, WinOLS DAMOS/KP/OLS) untuk identifikasi parameter mesin presisi.
 
 ### Mengapa Sebagian Berkas Memiliki Nama Berupa Angka / Kode?
-Nama berkas merefleksikan identitas perangkat keras (Hardware ID), versi perangkat lunak (Software ID), atau nomor kalibrasi pabrikan asli (OEM Calibration ID) untuk menjaga kecocokan header pada TunerPro dan alat flasher.
+Nama berkas yang tersimpan merefleksikan identitas perangkat keras (Hardware ID), versi perangkat lunak (Software ID), atau nomor kalibrasi pabrikan asli (OEM Calibration ID):
+- **Bosch Part Numbers** (misal `0261xxxxxx`, `1037xxxxxx`): Standar identifikasi universal Bosch untuk ECU Motronic, MED17, EDC16, dan EDC17.
+- **BMW Software IDs** (misal `00005C64xxxxxx`, `10SW002828`): Alamat dan assembly identification number pada modul DME Siemens/Continental/Bosch.
+- **Denso / Toyota Calibration IDs** (misal `89663-xxxxx`): Nomor resmi Toyota Techstream / Denso MCU firmware flash.
+- **Keihin Part Numbers** (misal `37805-xxx-xxxx`, `38770-xxx`): Kode perakitan ECU Honda untuk verifikasi kecocokan checksum dan proteksi immobilizer.
+- **GM OS IDs** (misal `12587603`, `12212156`): Operating system ID kontroler GM Delphi P01/P59.
 
-* **Rentang Tahun / Model Year**: OEM Production
+> [!NOTE]
+> Mempertahankan kode dan nomor asli pabrikan pada penamaan berkas sangat krusial agar perangkat lunak kalibrasi (seperti **TunerPro**, **WinOLS**, atau **RomRaider**) dapat mengenali dan mencocokkan peta definisi (*definition maps*) secara otomatis tanpa merusak asosiasi header ECU.
+
+* **Rentang Tahun / Model Year**: 2010–2016
 
 ---
 
@@ -23,448 +31,459 @@ Berikut adalah daftar lengkap berkas fisik yang tersimpan secara lokal di direkt
 
 | Filename | Tahun / Model Year | Size | MD5 Checksum | Type / Target Platform |
 | :--- | :---: | :--- | :--- | :--- |
-| `1K001-PZA-A020.rwd` | **OEM Production** | 62.0 KB | `bd636ca11d3377772bcc10f70c790ee6` | Factory Binary Firmware Dump |
-| `1K001-PZA-A050-M1.rwd` | **OEM Production** | 62.4 KB | `a6a1fa4de62fd393726a6e19aed6d031` | Factory Binary Firmware Dump |
-| `1K001-PZA-A120-M1.rwd` | **OEM Production** | 62.1 KB | `e19f61f72ea1acce8325774fe20074ec` | Factory Binary Firmware Dump |
-| `1K001-PZA-A130-M1.rwd` | **OEM Production** | 62.1 KB | `34f057e98b351eddd571c37e624810ec` | Factory Binary Firmware Dump |
-| `1K001-PZA-A220-M1.rwd` | **OEM Production** | 61.6 KB | `6e808a4025173cc40e9cd432996c5696` | Factory Binary Firmware Dump |
-| `1K001-PZA-A230-M1.rwd` | **OEM Production** | 61.6 KB | `bc03bc1900712c621f4981c729f272d7` | Factory Binary Firmware Dump |
-| `1K001-PZA-A320-M1.rwd` | **OEM Production** | 62.5 KB | `68646da254a2d6fe28334370d81a75ee` | Factory Binary Firmware Dump |
-| `1K001-PZA-A330-M1.rwd` | **OEM Production** | 62.5 KB | `249213b9bd82a78c558f063a3131ee5d` | Factory Binary Firmware Dump |
-| `1K001-PZA-A530.rwd` | **OEM Production** | 62.0 KB | `0cf88489dfc626ded86abeea7ec72023` | Factory Binary Firmware Dump |
-| `1K001-PZA-A560-M1.rwd` | **OEM Production** | 62.4 KB | `055d9d7131c2c55513828bd62a0f885f` | Factory Binary Firmware Dump |
-| `1K001-PZA-A620-M1.rwd` | **OEM Production** | 62.1 KB | `61d20cf6967d072ebb9034a1cabf6f69` | Factory Binary Firmware Dump |
-| `1K001-PZA-A630-M1.rwd` | **OEM Production** | 62.1 KB | `ac5e63c97b562d865739e42192c48dbb` | Factory Binary Firmware Dump |
-| `1K001-PZA-A720-M1.rwd` | **OEM Production** | 61.5 KB | `4b15d401b848771650466c8983d4ada6` | Factory Binary Firmware Dump |
-| `1K001-PZA-A730-M1.rwd` | **OEM Production** | 61.5 KB | `250b99b51d5ba8d09669b45a23d425f7` | Factory Binary Firmware Dump |
-| `1K001-PZA-A820-M1.rwd` | **OEM Production** | 62.4 KB | `8872fd997dabb962820c24804ffc7d0a` | Factory Binary Firmware Dump |
-| `1K001-PZA-A830-M1.rwd` | **OEM Production** | 62.5 KB | `07ef6cc034c7ddcb8ec57a41047800d9` | Factory Binary Firmware Dump |
-| `1K001-PZA-L040-M1.rwd` | **OEM Production** | 62.4 KB | `4e00cf0b413a34f8b4e7cd6d510de5c1` | Factory Binary Firmware Dump |
-| `1K001-RBJ-A040-M1.rwd` | **OEM Production** | 432.1 KB | `8bac746bbdb3d13d4dd794e8432f94e6` | Factory Binary Firmware Dump |
-| `1K001-RBJ-A520-M1.rwd` | **OEM Production** | 432.1 KB | `737e38430d26c677f983200f83745747` | Factory Binary Firmware Dump |
-| `1K001-RBJ-A530-M1.rwd` | **OEM Production** | 432.2 KB | `ec96df4066091e4d55764fd337b8f2a0` | Factory Binary Firmware Dump |
-| `1K001-RBJ-D530-M1.rwd` | **OEM Production** | 432.1 KB | `c2a992211ee15da69c2e3a21eaac419b` | Factory Binary Firmware Dump |
-| `1K001-RBJ-E040-M1.rwd` | **OEM Production** | 432.1 KB | `2c5e46088829ea3073875d2a2bd9bc7a` | Factory Binary Firmware Dump |
-| `1K001-RBJ-H520-M1.rwd` | **OEM Production** | 432.1 KB | `7db5ddc8701ca9b2a4fb94c0eb4e7245` | Factory Binary Firmware Dump |
-| `1K001-RBJ-J040-M1.rwd` | **OEM Production** | 432.1 KB | `04e8868b9ca6731d824f151821cf1de4` | Factory Binary Firmware Dump |
-| `1K001-RBJ-J530-M1.rwd` | **OEM Production** | 432.1 KB | `28820d5bc391bade70d3ff17f6694034` | Factory Binary Firmware Dump |
-| `1K001-RBJ-J540-M1.rwd` | **OEM Production** | 432.1 KB | `151f5cec1b5d6ba67ec94f8f113a42da` | Factory Binary Firmware Dump |
-| `1K001-RMX-A040-M1.rwd` | **OEM Production** | 192.1 KB | `755bc621183e0626af17fc6f9e9b3fde` | Factory Binary Firmware Dump |
-| `1K001-RMX-A080-M1.rwd` | **OEM Production** | 192.2 KB | `5846daedcc32e6c6294872b3bd24749e` | Factory Binary Firmware Dump |
-| `1K001-RMX-E030-M1.rwd` | **OEM Production** | 192.1 KB | `bac9bc62f3976d43eb20dcd692ebeda0` | Factory Binary Firmware Dump |
-| `1K001-RMX-E070-M1.rwd` | **OEM Production** | 192.2 KB | `7a6f40d61da09de83b7c61ad11b834c7` | Factory Binary Firmware Dump |
-| `1K001-RMX-J030-M1.rwd` | **OEM Production** | 192.1 KB | `1542cc5f07c6558a25c68931dde27be1` | Factory Binary Firmware Dump |
-| `1K001-RMX-J070-M1.rwd` | **OEM Production** | 192.2 KB | `fbc2aaf58e92ef5bc2c31b241fa0187f` | Factory Binary Firmware Dump |
-| `1K001-RTW-A110-M1.rwd` | **OEM Production** | 432.1 KB | `b40eae74a4513f5cdaeda3f558a692cb` | Factory Binary Firmware Dump |
-| `1K001-RTW-A220-M1.rwd` | **OEM Production** | 432.1 KB | `9e3d43fba2c2e19f1a25be3de5b16b4c` | Factory Binary Firmware Dump |
-| `1K001-RTW-A720-M1.rwd` | **OEM Production** | 432.1 KB | `752b257848d6a724f57f337d4deed779` | Factory Binary Firmware Dump |
-| `1K001-RTW-D520-M1.rwd` | **OEM Production** | 432.1 KB | `2e1528e9e6982ab0eba4693bf6679786` | Factory Binary Firmware Dump |
-| `1K001-RTW-J120-M1.rwd` | **OEM Production** | 432.2 KB | `30bb0c3ca95bbdcd9dfda4bbaf33cc76` | Factory Binary Firmware Dump |
-| `1K101-PZA-3050-M1.rwd` | **OEM Production** | 41.1 KB | `b45e9da557e4d9e62ac6cf4a84a7301e` | Factory Binary Firmware Dump |
-| `1K101-PZA-3060-M1.rwd` | **OEM Production** | 42.0 KB | `753cf02d0c53fbef6d554603fc503110` | Factory Binary Firmware Dump |
-| `1K101-PZA-3070-M1.rwd` | **OEM Production** | 43.4 KB | `507c584cb9873fba35e7951e50ce618a` | Factory Binary Firmware Dump |
-| `1K101-PZA-3150.rwd` | **OEM Production** | 41.2 KB | `6cf81069ed64757ff5b7712fc3cb1eb6` | Factory Binary Firmware Dump |
-| `1K101-PZA-3160.rwd` | **OEM Production** | 42.1 KB | `ee325ad3b08577aae617f971fbd82a14` | Factory Binary Firmware Dump |
-| `1K101-PZA-3170.rwd` | **OEM Production** | 43.5 KB | `796d21f10307437b5cdc6db90c4ab969` | Factory Binary Firmware Dump |
-| `1K101-PZA-3250.rwd` | **OEM Production** | 41.3 KB | `f4e2aa0a4d47546eae5a32e872b38687` | Factory Binary Firmware Dump |
-| `1K101-PZA-3260.rwd` | **OEM Production** | 42.2 KB | `2e996cd86c40fecdcf14687c9843ac27` | Factory Binary Firmware Dump |
-| `1K101-PZA-3270.rwd` | **OEM Production** | 43.6 KB | `4e0c56e6d4913b23cbb71c832b8eca57` | Factory Binary Firmware Dump |
-| `1K101-PZA-4050.rwd` | **OEM Production** | 40.8 KB | `18679b09908ac94d807382efbc1131ce` | Factory Binary Firmware Dump |
-| `1K101-PZA-4060.rwd` | **OEM Production** | 40.8 KB | `be8877aeeb04b14ff4186aef424d2327` | Factory Binary Firmware Dump |
-| `1K101-PZA-4070.rwd` | **OEM Production** | 40.7 KB | `ec4900a06791c89358ad378bbb5780f6` | Factory Binary Firmware Dump |
-| `1K101-PZA-4150.rwd` | **OEM Production** | 41.8 KB | `517613f548a59649721f5a681c631483` | Factory Binary Firmware Dump |
-| `1K101-PZA-4160.rwd` | **OEM Production** | 41.8 KB | `32aebc1dd3e3cfe4e5c372def307374e` | Factory Binary Firmware Dump |
-| `1K101-PZA-4170.rwd` | **OEM Production** | 41.8 KB | `e0ed3a1a14914e051339234907dc541e` | Factory Binary Firmware Dump |
-| `1K101-PZA-A050-M1.rwd` | **OEM Production** | 43.2 KB | `e64cf6978334352506bd96220d423600` | Factory Binary Firmware Dump |
-| `1K101-PZA-A220-M1.rwd` | **OEM Production** | 41.1 KB | `33ac9db8cc5a046fbc2e7aa21d4dd27c` | Factory Binary Firmware Dump |
-| `1K101-PZA-A230-M1.rwd` | **OEM Production** | 41.2 KB | `45dda8d575e6cca99e5d9c3571559df0` | Factory Binary Firmware Dump |
-| `1K101-PZA-A240-M1.rwd` | **OEM Production** | 41.3 KB | `d1eb5682a32bb43692098a50e219150e` | Factory Binary Firmware Dump |
-| `1K101-PZA-A320-M1.rwd` | **OEM Production** | 42.0 KB | `1014ef51c4451fdb2c6b2a421a0063db` | Factory Binary Firmware Dump |
-| `1K101-PZA-A330-M1.rwd` | **OEM Production** | 42.1 KB | `1795700335df3e6ff3534fdaadab1db8` | Factory Binary Firmware Dump |
-| `1K101-PZA-A340-M1.rwd` | **OEM Production** | 42.2 KB | `a400de857d748b7a58238d37cbbf56e4` | Factory Binary Firmware Dump |
-| `1K101-PZA-A420-M1.rwd` | **OEM Production** | 43.4 KB | `e2b540f23eb97379f9799b7d2c75dd47` | Factory Binary Firmware Dump |
-| `1K101-PZA-A430-M1.rwd` | **OEM Production** | 43.5 KB | `016c6a1b6ce0303a6c50a2cbec21e779` | Factory Binary Firmware Dump |
-| `1K101-PZA-A440-M1.rwd` | **OEM Production** | 43.6 KB | `85d7c7d91e093a41eccdc2704c25e7be` | Factory Binary Firmware Dump |
-| `1K101-PZA-A560-M1.rwd` | **OEM Production** | 43.2 KB | `bbc9157491a220341d7b204d45445c29` | Factory Binary Firmware Dump |
-| `1K101-PZA-A610-M1.rwd` | **OEM Production** | 41.2 KB | `abc72d15a8d9c193d1490e5329d6a0d7` | Factory Binary Firmware Dump |
-| `1K101-PZA-A620-M1.rwd` | **OEM Production** | 41.3 KB | `44d13d6329f803face41ae3672c2ab87` | Factory Binary Firmware Dump |
-| `1K101-PZA-A710-M1.rwd` | **OEM Production** | 42.1 KB | `d4b719e4a5ac2d48a33d9c81b6a3925f` | Factory Binary Firmware Dump |
-| `1K101-PZA-A720-M1.rwd` | **OEM Production** | 42.2 KB | `360f564ecd4439dba46d15c2a639dea2` | Factory Binary Firmware Dump |
-| `1K101-PZA-A810-M1.rwd` | **OEM Production** | 43.5 KB | `ee423c96029cd10d43a91587d472c540` | Factory Binary Firmware Dump |
-| `1K101-PZA-A820-M1.rwd` | **OEM Production** | 43.6 KB | `169846a40b72b0375518f93cb884960e` | Factory Binary Firmware Dump |
-| `1K101-PZA-C110-M1.rwd` | **OEM Production** | 41.3 KB | `3e4135d7a3c69826f077ad5ff98fb478` | Factory Binary Firmware Dump |
-| `1K101-PZA-C210-M1.rwd` | **OEM Production** | 42.2 KB | `46456a0d07fb0da502baffd0ed486b15` | Factory Binary Firmware Dump |
-| `1K101-PZA-C310-M1.rwd` | **OEM Production** | 43.6 KB | `e752710418c5611eea0e7dd79a09bd04` | Factory Binary Firmware Dump |
-| `1K101-PZA-L040-M1.rwd` | **OEM Production** | 43.2 KB | `c6143a5cde4a3f9c8ca7375303def51d` | Factory Binary Firmware Dump |
-| `1K101-PZA-L520-M1.rwd` | **OEM Production** | 40.7 KB | `70eb944b5aa2699b0a82b9ea2f17dc5a` | Factory Binary Firmware Dump |
-| `1K101-RBJ-A040-M1.rwd` | **OEM Production** | 320.1 KB | `8b47f4f19adb3e1567be9e687d891372` | Factory Binary Firmware Dump |
-| `1K101-RBJ-A050-M1.rwd` | **OEM Production** | 320.2 KB | `0abec66f222f2fa1f8436b5f41386122` | Factory Binary Firmware Dump |
-| `1K101-RBJ-A060-M1.rwd` | **OEM Production** | 320.2 KB | `ada11438a18c54bca3a1b49389246e9e` | Factory Binary Firmware Dump |
-| `1K101-RBJ-A530-M1.rwd` | **OEM Production** | 320.1 KB | `908692424ec73072ecbb515349bffd74` | Factory Binary Firmware Dump |
-| `1K101-RBJ-A550-M1.rwd` | **OEM Production** | 320.2 KB | `0a4a4037f4d31a92693699bf7dad41fd` | Factory Binary Firmware Dump |
-| `1K101-RBJ-A610-M1.rwd` | **OEM Production** | 320.1 KB | `60cce19bcc382595ede28f451b36af2e` | Factory Binary Firmware Dump |
-| `1K101-RBJ-A620-M1.rwd` | **OEM Production** | 320.1 KB | `623d005c798081f98ffd3e5e1b3234cd` | Factory Binary Firmware Dump |
-| `1K101-RBJ-D610-M1.rwd` | **OEM Production** | 320.1 KB | `89f2659bd416a14285a0fd58799cb42a` | Factory Binary Firmware Dump |
-| `1K101-RBJ-D630-M1.rwd` | **OEM Production** | 320.2 KB | `28e6bfd56e6b230bba3bb0bc0d9de296` | Factory Binary Firmware Dump |
-| `1K101-RBJ-E040-M1.rwd` | **OEM Production** | 320.1 KB | `b89d5c6c45907210da8ad68d50f68947` | Factory Binary Firmware Dump |
-| `1K101-RBJ-E060-M1.rwd` | **OEM Production** | 320.2 KB | `7458d5b13fe321892c75b9c5be9b2f3d` | Factory Binary Firmware Dump |
-| `1K101-RBJ-H540-M1.rwd` | **OEM Production** | 320.1 KB | `22cb24ca3044309fb69032eac6912fbd` | Factory Binary Firmware Dump |
-| `1K101-RBJ-J040-M1.rwd` | **OEM Production** | 320.1 KB | `548f17707d2a9ae1ac4d3801c03f4d7c` | Factory Binary Firmware Dump |
-| `1K101-RBJ-J060-M1.rwd` | **OEM Production** | 320.2 KB | `1c5f51c1aa14a53fb676a9580cffc632` | Factory Binary Firmware Dump |
-| `1K101-RBJ-J540-M1.rwd` | **OEM Production** | 320.1 KB | `428d274c34fec01e0226e777506521b3` | Factory Binary Firmware Dump |
-| `1K101-RBJ-J550-M1.rwd` | **OEM Production** | 320.1 KB | `9c25a2e39ce8074322c5687d1e04bbc1` | Factory Binary Firmware Dump |
-| `1K101-RBJ-J610-M1.rwd` | **OEM Production** | 320.1 KB | `98d7dec85a0e8af524fa6ee4350de576` | Factory Binary Firmware Dump |
-| `1K101-RBJ-J630-M1.rwd` | **OEM Production** | 320.2 KB | `821bf3a4174c9cda650ffade19203bca` | Factory Binary Firmware Dump |
-| `1K101-RMX-A060-M1.rwd` | **OEM Production** | 320.1 KB | `60b879188c43ece695c85ef8d638b796` | Factory Binary Firmware Dump |
-| `1K101-RMX-A080-M1.rwd` | **OEM Production** | 320.1 KB | `8c763eff3b90f5d599d89c495bbd96da` | Factory Binary Firmware Dump |
-| `1K101-RMX-A110-M1.rwd` | **OEM Production** | 320.1 KB | `886777ea9017d64a914ea51d6451444d` | Factory Binary Firmware Dump |
-| `1K101-RMX-A120-M1.rwd` | **OEM Production** | 320.2 KB | `b99eacd7881144e1286ca44dc4dcc689` | Factory Binary Firmware Dump |
-| `1K101-RMX-A130-M1.rwd` | **OEM Production** | 320.2 KB | `c6610b0bbd3a3af595640147a54e8478` | Factory Binary Firmware Dump |
-| `1K101-RMX-A210-M1.rwd` | **OEM Production** | 320.2 KB | `25ad07b494dd8383035fcf20309b6183` | Factory Binary Firmware Dump |
-| `1K101-RMX-A230-M1.rwd` | **OEM Production** | 320.2 KB | `081b2d8e3bcb22294b0c3436b95e79f4` | Factory Binary Firmware Dump |
-| `1K101-RMX-A240-M1.rwd` | **OEM Production** | 320.3 KB | `ba4ba2b2e38703aa1328b76cb871d198` | Factory Binary Firmware Dump |
-| `1K101-RMX-A250-M1.rwd` | **OEM Production** | 320.3 KB | `62400e3243bed7133a8fc6bd41384dc1` | Factory Binary Firmware Dump |
-| `1K101-RMX-A410-M1.rwd` | **OEM Production** | 320.2 KB | `bc0d9a8d074d3834c9a9d742e066be11` | Factory Binary Firmware Dump |
-| `1K101-RMX-A420-M1.rwd` | **OEM Production** | 320.2 KB | `7ed5ade70031aea45ff6dc03b2955fd1` | Factory Binary Firmware Dump |
-| `1K101-RMX-A610-M1.rwd` | **OEM Production** | 320.2 KB | `5dd38467ed486ffc191dd91993c00b84` | Factory Binary Firmware Dump |
-| `1K101-RMX-A620-M1.rwd` | **OEM Production** | 320.3 KB | `a9b028e48bdf7dc17874f25d059cbe88` | Factory Binary Firmware Dump |
-| `1K101-RMX-A630-M1.rwd` | **OEM Production** | 320.3 KB | `2c46655ec2df53beabcb1e1eb2d15574` | Factory Binary Firmware Dump |
-| `1K101-RMX-A810-M1.rwd` | **OEM Production** | 320.3 KB | `376b1ec819ac5c523285bd4f4460892a` | Factory Binary Firmware Dump |
-| `1K101-RMX-E020-M1.rwd` | **OEM Production** | 320.1 KB | `7dcfbbdcb1655b4dd2f8f32cb879f420` | Factory Binary Firmware Dump |
-| `1K101-RMX-E060-M1.rwd` | **OEM Production** | 320.1 KB | `60eff55567365c1ecdd927805c0ccb3d` | Factory Binary Firmware Dump |
-| `1K101-RMX-E070-M1.rwd` | **OEM Production** | 320.2 KB | `b8f200ccf355943ed2b79c29d8e13aad` | Factory Binary Firmware Dump |
-| `1K101-RMX-E080-M1.rwd` | **OEM Production** | 320.2 KB | `901144fadbcfe52878829bc053e54498` | Factory Binary Firmware Dump |
-| `1K101-RMX-E210-M1.rwd` | **OEM Production** | 320.2 KB | `c09eab5ee8407a000090af824e931d55` | Factory Binary Firmware Dump |
-| `1K101-RMX-E230-M1.rwd` | **OEM Production** | 320.2 KB | `6f7e8ba80c8aeec4b358a3b12cb48edc` | Factory Binary Firmware Dump |
-| `1K101-RMX-E240-M1.rwd` | **OEM Production** | 320.3 KB | `eb755c9a470ab0a4a930ca48cf521f70` | Factory Binary Firmware Dump |
-| `1K101-RMX-E250-M1.rwd` | **OEM Production** | 320.4 KB | `8e7537208b1c807d04f50e76d5f14ed9` | Factory Binary Firmware Dump |
-| `1K101-RMX-E410-M1.rwd` | **OEM Production** | 320.2 KB | `d83d241e9acceb07fc0f1ebaa9b83267` | Factory Binary Firmware Dump |
-| `1K101-RMX-E420-M1.rwd` | **OEM Production** | 320.2 KB | `93c8df2ab1a0cad9f118e79cd4ca7bde` | Factory Binary Firmware Dump |
-| `1K101-RMX-E610-M1.rwd` | **OEM Production** | 320.2 KB | `2d30977fd5327feb42921afe749be9d7` | Factory Binary Firmware Dump |
-| `1K101-RMX-E620-M1.rwd` | **OEM Production** | 320.3 KB | `d3c61997b8ad782e7b4d1a3fe61feb8b` | Factory Binary Firmware Dump |
-| `1K101-RMX-E630-M1.rwd` | **OEM Production** | 320.4 KB | `406b7794e611b3d1d7904d949e05ae70` | Factory Binary Firmware Dump |
-| `1K101-RMX-E810-M1.rwd` | **OEM Production** | 320.4 KB | `445d1aa549dcbc59335f3230b3686c87` | Factory Binary Firmware Dump |
-| `1K101-RMX-J130-M1.rwd` | **OEM Production** | 320.1 KB | `d3161e3324d7cbfed4c53e6d2626ea78` | Factory Binary Firmware Dump |
-| `1K101-RMX-J140-M1.rwd` | **OEM Production** | 320.1 KB | `6166f13f4ef13972bd523f8a641c3d90` | Factory Binary Firmware Dump |
-| `1K101-RMX-J150-M1.rwd` | **OEM Production** | 320.2 KB | `5dfb561dd99a24f099cadbddf3ca157e` | Factory Binary Firmware Dump |
-| `1K101-RMX-J160-M1.rwd` | **OEM Production** | 320.2 KB | `e91c85764c6825543238507f6513f47b` | Factory Binary Firmware Dump |
-| `1K101-RMX-J230-M1.rwd` | **OEM Production** | 320.1 KB | `93d25c6d7ed8b6562c109b030e2d17ff` | Factory Binary Firmware Dump |
-| `1K101-RMX-J240-M1.rwd` | **OEM Production** | 320.2 KB | `6f697b997b0b7cb717b634cb61900387` | Factory Binary Firmware Dump |
-| `1K101-RMX-J250-M1.rwd` | **OEM Production** | 320.2 KB | `f700e7af34764fe35e2a552927365956` | Factory Binary Firmware Dump |
-| `1K101-RMX-J410-M1.rwd` | **OEM Production** | 320.2 KB | `1bd0c19d703f87ad26dd62e9b97324e7` | Factory Binary Firmware Dump |
-| `1K101-RMX-J420-M1.rwd` | **OEM Production** | 320.2 KB | `d84be475e81ba863d3a620614f0aeda6` | Factory Binary Firmware Dump |
-| `1K101-RMX-J610-M1.rwd` | **OEM Production** | 320.2 KB | `aa79f62b85852c751e73f2e30353de98` | Factory Binary Firmware Dump |
-| `1K101-RMX-J620-M1.rwd` | **OEM Production** | 320.3 KB | `f612c08d1db9424a956328d5d3bd2cf0` | Factory Binary Firmware Dump |
-| `1K101-RMX-J630-M1.rwd` | **OEM Production** | 320.3 KB | `eaf3267dbda2df85c5d6e71c418e6e62` | Factory Binary Firmware Dump |
-| `1K101-RMX-J710-M1.rwd` | **OEM Production** | 320.2 KB | `802dc49c0a196c8683f439d4ee73f5c3` | Factory Binary Firmware Dump |
-| `1K101-RMX-J720-M1.rwd` | **OEM Production** | 320.2 KB | `82910213e4bdf84c6abb03fb268323c9` | Factory Binary Firmware Dump |
-| `1K101-RMX-J730-M1.rwd` | **OEM Production** | 320.2 KB | `b25e89e6847b3eab710be0bd1bb35441` | Factory Binary Firmware Dump |
-| `1K101-RMX-Z010-M1.rwd` | **OEM Production** | 320.1 KB | `919463a07e63fd0d4b93fdbcce6182cb` | Factory Binary Firmware Dump |
-| `1K101-RMX-Z030-M1.rwd` | **OEM Production** | 320.2 KB | `5cd54d9b103330dca5d8e1f4e909db98` | Factory Binary Firmware Dump |
-| `1K101-RMX-Z050-M1.rwd` | **OEM Production** | 320.2 KB | `fba8fecc700768cef4ca5cb33296c4ac` | Factory Binary Firmware Dump |
-| `1K101-RMX-Z060-M1.rwd` | **OEM Production** | 320.3 KB | `ea029bb467bb404fcd26d988f4e44933` | Factory Binary Firmware Dump |
-| `1K101-RMX-Z070-M1.rwd` | **OEM Production** | 320.3 KB | `406661ea481bebaa6fc21d0bcbaf6b02` | Factory Binary Firmware Dump |
-| `1K101-RMX-Z810-M1.rwd` | **OEM Production** | 320.3 KB | `40463ed6ac103b0d2839b26d9e6e5967` | Factory Binary Firmware Dump |
-| `1K101-RTW-A030-M1.rwd` | **OEM Production** | 320.1 KB | `1684478985e047729c77798d7639a5b1` | Factory Binary Firmware Dump |
-| `1K101-RTW-A040-M1.rwd` | **OEM Production** | 320.1 KB | `7f2138e39abf95e3008bd6e80274ab28` | Factory Binary Firmware Dump |
-| `1K101-RTW-A110-M1.rwd` | **OEM Production** | 320.1 KB | `d4852df71f13f2884bb036b060192ee0` | Factory Binary Firmware Dump |
-| `1K101-RTW-A120-M1.rwd` | **OEM Production** | 320.1 KB | `f9abaa70029a29aeaa83324ebe35872a` | Factory Binary Firmware Dump |
-| `1K101-RTW-A220-M1.rwd` | **OEM Production** | 448.1 KB | `08c5b9b32eb09d591b2ac3fad5a8e5f4` | Factory Binary Firmware Dump |
-| `1K101-RTW-A230-M1.rwd` | **OEM Production** | 448.1 KB | `ddc4f6bb7824a9043b008040b919569d` | Factory Binary Firmware Dump |
-| `1K101-RTW-A530-M1.rwd` | **OEM Production** | 320.1 KB | `98ba230ad7fa1e1f5fac3bc942ea3b14` | Factory Binary Firmware Dump |
-| `1K101-RTW-A540-M1.rwd` | **OEM Production** | 320.2 KB | `8de2507b2197dcecb23a5eb24012fa5b` | Factory Binary Firmware Dump |
-| `1K101-RTW-A610-M1.rwd` | **OEM Production** | 320.1 KB | `a27082e62014839545335d4efee8afa6` | Factory Binary Firmware Dump |
-| `1K101-RTW-A620-M1.rwd` | **OEM Production** | 320.1 KB | `45c5db3663f6540402479a82a56e764c` | Factory Binary Firmware Dump |
-| `1K101-RTW-A720-M1.rwd` | **OEM Production** | 448.1 KB | `bea45ed0241ccc3cd8be8a0a3dae079e` | Factory Binary Firmware Dump |
-| `1K101-RTW-A730-M1.rwd` | **OEM Production** | 448.1 KB | `9f2c44d2a7db23be4816ebef49170f45` | Factory Binary Firmware Dump |
-| `1K101-RTW-H530-M1.rwd` | **OEM Production** | 320.1 KB | `e81ea47084911651f7ec55b90a13ddce` | Factory Binary Firmware Dump |
-| `1K101-RTW-J040-M1.rwd` | **OEM Production** | 320.1 KB | `ed1bceebaa26835da8fb38ed4ca2f5fc` | Factory Binary Firmware Dump |
-| `1K101-RTW-J050-M1.rwd` | **OEM Production** | 320.1 KB | `4bdf140973b3f78dd260565c56d66f3e` | Factory Binary Firmware Dump |
-| `1K101-RTW-J110-M1.rwd` | **OEM Production** | 320.1 KB | `a27a096d5fbed4d80de1f45bb02cd429` | Factory Binary Firmware Dump |
-| `1K101-RTW-J140-M1.rwd` | **OEM Production** | 320.2 KB | `6935f133d50c432c88239acb9a898dfb` | Factory Binary Firmware Dump |
-| `1K101-RTW-J540-M1.rwd` | **OEM Production** | 320.1 KB | `b2269470aee59ad591b526e11aa30c6e` | Factory Binary Firmware Dump |
-| `1K101-RTW-J550-M1.rwd` | **OEM Production** | 320.1 KB | `86da3e414a88ee2cf6c7b10f2ce43cc5` | Factory Binary Firmware Dump |
-| `1K101-RTW-J610-M1.rwd` | **OEM Production** | 320.1 KB | `d64fb0fc43cfede7df8d7841a0b5d28e` | Factory Binary Firmware Dump |
-| `1K101-RTW-J630-M1.rwd` | **OEM Production** | 320.2 KB | `ddf05bf92ba01c035cfc7c25fa3e4240` | Factory Binary Firmware Dump |
-| `28125-PZA-3060.rwd` | **OEM Production** | 88.9 KB | `8eccc473dc9c0240b57965029921ec34` | Factory Binary Firmware Dump |
-| `28125-PZA-3070.rwd` | **OEM Production** | 88.9 KB | `8a6421bda0fcf95bca47285890a0cd2c` | Factory Binary Firmware Dump |
-| `28125-PZA-3090.rwd` | **OEM Production** | 90.3 KB | `52793c0f55a37fbe449cc7be8d8e84eb` | Factory Binary Firmware Dump |
-| `28125-PZA-4050.rwd` | **OEM Production** | 91.4 KB | `08386d85c7cabfeb399c7fce3b95615c` | Factory Binary Firmware Dump |
-| `37805-PZA-3050.rwd` | **OEM Production** | 348.2 KB | `7216891e9b0b902d2c923eb74c6ccac0` | Factory Binary Firmware Dump |
-| `37805-PZA-3060.rwd` | **OEM Production** | 348.2 KB | `b55e0a354549693e2e4008683a13cd9b` | Factory Binary Firmware Dump |
-| `37805-PZA-3170.rwd` | **OEM Production** | 312.0 KB | `ffa9c7340c9dc38e59f6fe1e540e9dd4` | Factory Binary Firmware Dump |
-| `37805-PZA-3180.rwd` | **OEM Production** | 312.0 KB | `60942adf5c2f9604cdf2781346978d75` | Factory Binary Firmware Dump |
-| `37805-PZA-3190.rwd` | **OEM Production** | 312.0 KB | `ae050a942421ee13888f63442682648d` | Factory Binary Firmware Dump |
-| `37805-PZA-3270.rwd` | **OEM Production** | 312.3 KB | `fb1dcd59b2526b835cbe020a3294af91` | Factory Binary Firmware Dump |
-| `37805-PZA-3280.rwd` | **OEM Production** | 312.3 KB | `3bdeb8f008c29fd0b4f7f7076e465b08` | Factory Binary Firmware Dump |
-| `37805-PZA-3290.rwd` | **OEM Production** | 312.3 KB | `9f2ba631a3fcf35cc4a302cd29f6d112` | Factory Binary Firmware Dump |
-| `37805-PZA-4060.rwd` | **OEM Production** | 358.0 KB | `7abf2b9c68afcd24b00c1e255a508593` | Factory Binary Firmware Dump |
-| `37805-PZA-4070.rwd` | **OEM Production** | 358.0 KB | `7de54d37ca9764d2293b41c9b25b8d80` | Factory Binary Firmware Dump |
-| `37805-PZA-4150.rwd` | **OEM Production** | 312.0 KB | `3968c00d6f3e24e6fe020b558130d0f9` | Factory Binary Firmware Dump |
-| `37805-PZA-4180.rwd` | **OEM Production** | 358.2 KB | `a034c8280015726119b59b8584ead0e4` | Factory Binary Firmware Dump |
-| `37805-PZA-4190.rwd` | **OEM Production** | 358.2 KB | `3daf373bdc4cdd86ba77254910e42ed8` | Factory Binary Firmware Dump |
-| `37805-PZA-4250.rwd` | **OEM Production** | 312.3 KB | `83418002582c269e7ff690835d83fc04` | Factory Binary Firmware Dump |
-| `37805-PZA-4280.rwd` | **OEM Production** | 358.4 KB | `634b5fec1cec173c537084080ef0f8e5` | Factory Binary Firmware Dump |
-| `37805-PZA-4290.rwd` | **OEM Production** | 358.4 KB | `c1c2386456d43ef16f001bef63e4fd4a` | Factory Binary Firmware Dump |
-| `37805-PZA-5150.rwd` | **OEM Production** | 358.2 KB | `350ef300c02cc9448bfddbeca3ab7ef2` | Factory Binary Firmware Dump |
-| `37805-PZA-5250.rwd` | **OEM Production** | 358.4 KB | `3a1e920d489a9aed5c4176f262573eba` | Factory Binary Firmware Dump |
-| `37805-PZA-A160-M1.rwd` | **OEM Production** | 369.3 KB | `f867f081da9eedc2203fb0d9892b4bc1` | Factory Binary Firmware Dump |
-| `37805-PZA-A170-M1.rwd` | **OEM Production** | 371.7 KB | `fb8563fc3e3e9a5f0f1a4a2c23c4120e` | Factory Binary Firmware Dump |
-| `37805-PZA-A650-M1.rwd` | **OEM Production** | 369.2 KB | `87bbaa85757580fbe7fd1cfc521b4d85` | Factory Binary Firmware Dump |
-| `37805-PZA-A660-M1.rwd` | **OEM Production** | 371.7 KB | `5552a26f87ebb2c0a42938ff02d356cc` | Factory Binary Firmware Dump |
-| `37805-PZA-C650-M1.rwd` | **OEM Production** | 369.2 KB | `6fa5e9a5d56feafce4ee17596b00049d` | Factory Binary Firmware Dump |
-| `37805-PZA-C660-M1.rwd` | **OEM Production** | 371.7 KB | `c9ab6e3529edd59fafa7c5c16272dabd` | Factory Binary Firmware Dump |
-| `37805-PZA-L150-M1.rwd` | **OEM Production** | 369.1 KB | `0014fc802ae2370cbfd2daa8df50ad49` | Factory Binary Firmware Dump |
-| `37805-PZA-L640-M1.rwd` | **OEM Production** | 368.6 KB | `bc554b56040b1c17c5aef86fcca37956` | Factory Binary Firmware Dump |
-| `37805-RBJ-3050-M1.rwd` | **OEM Production** | 992.2 KB | `cf325c0267f75ba30c061966e4870e9e` | Factory Binary Firmware Dump |
-| `37805-RBJ-3060-M1.rwd` | **OEM Production** | 992.2 KB | `5f67425b5e54080cba01611a89a13461` | Factory Binary Firmware Dump |
-| `37805-RBJ-A420-M1.rwd` | **OEM Production** | 992.1 KB | `03013033f278df034db3e95a90933fe0` | Factory Binary Firmware Dump |
-| `37805-RBJ-A540-M1.rwd` | **OEM Production** | 992.1 KB | `5175923da5730387b5334aec4b835759` | Factory Binary Firmware Dump |
-| `37805-RBJ-A550-M1.rwd` | **OEM Production** | 992.2 KB | `2ee495c9994087593a6391c369eaafa1` | Factory Binary Firmware Dump |
-| `37805-RBJ-A640-M1.rwd` | **OEM Production** | 992.1 KB | `72685c76631247c9938af48990b4aab4` | Factory Binary Firmware Dump |
-| `37805-RBJ-A650-M1.rwd` | **OEM Production** | 992.2 KB | `5c574dcdc0305975c37dea810fa4492a` | Factory Binary Firmware Dump |
-| `37805-RBJ-D520-M1.rwd` | **OEM Production** | 992.1 KB | `9d1862e74ee8b6bee53a5952343222b9` | Factory Binary Firmware Dump |
-| `37805-RBJ-E550-M1.rwd` | **OEM Production** | 992.2 KB | `958a0610eba93f02e8084d5f9c2a6a13` | Factory Binary Firmware Dump |
-| `37805-RBJ-E560-M1.rwd` | **OEM Production** | 992.2 KB | `b5b904b254461586e105c702e8e377c5` | Factory Binary Firmware Dump |
-| `37805-RBJ-E650-M1.rwd` | **OEM Production** | 992.2 KB | `5a210f45ba08103c403c45a8c09c94e6` | Factory Binary Firmware Dump |
-| `37805-RBJ-E660-M1.rwd` | **OEM Production** | 992.2 KB | `0126f5a07a5c989751164914d2a903ae` | Factory Binary Firmware Dump |
-| `37805-RBJ-E750-M1.rwd` | **OEM Production** | 992.2 KB | `230c799c7ad91b2be9f37aa41e4e9b33` | Factory Binary Firmware Dump |
-| `37805-RBJ-E760-M1.rwd` | **OEM Production** | 992.2 KB | `cfc22d775a5bcb5918e152d4955f163f` | Factory Binary Firmware Dump |
-| `37805-RBJ-E780-M1.rwd` | **OEM Production** | 992.1 KB | `7a93ce057210be6b88eb9c8febd7224d` | Factory Binary Firmware Dump |
-| `37805-RBJ-J510-M1.rwd` | **OEM Production** | 992.1 KB | `aacac5763dbb61a19236fe59f331c171` | Factory Binary Firmware Dump |
-| `37805-RBJ-J520-M1.rwd` | **OEM Production** | 992.1 KB | `c4e72c489aeca6225ca29acc975627f3` | Factory Binary Firmware Dump |
-| `37805-RBJ-J530-M1.rwd` | **OEM Production** | 992.1 KB | `4162a5ca6073cb665900160a15dad6d0` | Factory Binary Firmware Dump |
-| `37805-RBJ-J540-M1.rwd` | **OEM Production** | 992.1 KB | `0bd546b33924d1af6d629fa8a663e25b` | Factory Binary Firmware Dump |
-| `37805-RBJ-J550-M1.rwd` | **OEM Production** | 992.2 KB | `a78792096ed4d5babad0696ff48b4e74` | Factory Binary Firmware Dump |
-| `37805-RBJ-J570-M1.rwd` | **OEM Production** | 992.1 KB | `c357818db4b4af19c0fed235a2b0147c` | Factory Binary Firmware Dump |
-| `37805-RBJ-J610-M1.rwd` | **OEM Production** | 992.1 KB | `dfda020f80ae52d01f7bce5e5da238b2` | Factory Binary Firmware Dump |
-| `37805-RBJ-J620-M1.rwd` | **OEM Production** | 992.1 KB | `95266feaba46b2cc1306d89609e783f1` | Factory Binary Firmware Dump |
-| `37805-RBJ-J630-M1.rwd` | **OEM Production** | 992.1 KB | `c308b72e7e58eaa8ba71fee935ad71f8` | Factory Binary Firmware Dump |
-| `37805-RBJ-J640-M1.rwd` | **OEM Production** | 992.1 KB | `a524c282a595ace18e3a41c6e512cb2c` | Factory Binary Firmware Dump |
-| `37805-RBJ-J650-M1.rwd` | **OEM Production** | 992.2 KB | `e9f4a0c8c00e9a8675481e96ca892234` | Factory Binary Firmware Dump |
-| `37805-RBJ-J670-M1.rwd` | **OEM Production** | 992.1 KB | `d7c6094f73ca6413685982e3352f5481` | Factory Binary Firmware Dump |
-| `37805-RBJ-L040-M1.rwd` | **OEM Production** | 1.94 MB | `5f7c01e86d04c8ccac3a9a8a709a2e14` | Factory Binary Firmware Dump |
-| `37805-RBJ-L130-M1.rwd` | **OEM Production** | 1.94 MB | `fd503cb8e6f72fcffa7403852f826028` | Factory Binary Firmware Dump |
-| `37805-RBJ-L420-M1.rwd` | **OEM Production** | 992.1 KB | `54e4a026a98ca19f3645701efd0f8acb` | Factory Binary Firmware Dump |
-| `37805-RBJ-L440-M1.rwd` | **OEM Production** | 992.1 KB | `e94ecd789b2703a219c81b594c90c0ff` | Factory Binary Firmware Dump |
-| `37805-RBJ-L540-M1.rwd` | **OEM Production** | 992.1 KB | `64d1aa1f8c74fe3114e4e5e40ef2f24b` | Factory Binary Firmware Dump |
-| `37805-RBJ-L550-M1.rwd` | **OEM Production** | 992.2 KB | `9498169ce07db1edead7aa32a106b33a` | Factory Binary Firmware Dump |
-| `37805-RBJ-L640-M1.rwd` | **OEM Production** | 992.1 KB | `1a0bee6eb6e606c2f0bb21251a3fef87` | Factory Binary Firmware Dump |
-| `37805-RBJ-L650-M1.rwd` | **OEM Production** | 992.2 KB | `2dcc90ee89fb0f71643017f3813fb47b` | Factory Binary Firmware Dump |
-| `37805-RMX-3050.rwd` | **OEM Production** | 992.2 KB | `9562d144fc5a4c3b1f67b15cf5baca3a` | Factory Binary Firmware Dump |
-| `37805-RMX-3060.rwd` | **OEM Production** | 992.1 KB | `0c5d85d3c61e3ee263eca0f2df4c4d5b` | Factory Binary Firmware Dump |
-| `37805-RMX-3070.rwd` | **OEM Production** | 992.1 KB | `f96578c00325d6cc79d2fc1848bb1485` | Factory Binary Firmware Dump |
-| `37805-RMX-3090.rwd` | **OEM Production** | 992.1 KB | `76579ea9e3ddeb5e823a2ae4b029f671` | Factory Binary Firmware Dump |
-| `37805-RMX-3150.rwd` | **OEM Production** | 992.2 KB | `383794ec442c71e71d0485385825c98c` | Factory Binary Firmware Dump |
-| `37805-RMX-3160.rwd` | **OEM Production** | 992.2 KB | `f8f8332be0440ec72f3b2ba01a1259e6` | Factory Binary Firmware Dump |
-| `37805-RMX-3170.rwd` | **OEM Production** | 992.2 KB | `c488e5fe47b051a8890c79426274ef02` | Factory Binary Firmware Dump |
-| `37805-RMX-3190.rwd` | **OEM Production** | 992.2 KB | `32fe5f3eafb388a600130f719e164b04` | Factory Binary Firmware Dump |
-| `37805-RMX-3250.rwd` | **OEM Production** | 992.2 KB | `80c0b06d98d9d70b66c193f445f89463` | Factory Binary Firmware Dump |
-| `37805-RMX-4050.rwd` | **OEM Production** | 992.1 KB | `54373449897f5c88161f82b0e496a5ed` | Factory Binary Firmware Dump |
-| `37805-RMX-4060.rwd` | **OEM Production** | 992.1 KB | `312fe0647b5f371e6bb3400c6ef55a6a` | Factory Binary Firmware Dump |
-| `37805-RMX-4070.rwd` | **OEM Production** | 992.1 KB | `5949be41d222dafb3cde2bf9b20cdb51` | Factory Binary Firmware Dump |
-| `37805-RMX-4080.rwd` | **OEM Production** | 992.2 KB | `9d94fd2a05f1bfeb0637533444758b69` | Factory Binary Firmware Dump |
-| `37805-RMX-4090.rwd` | **OEM Production** | 992.1 KB | `f33607c7b285eb4ca57809afac615211` | Factory Binary Firmware Dump |
-| `37805-RMX-4150.rwd` | **OEM Production** | 992.1 KB | `31615b6469c286df4bf9ee7fe95b5b7d` | Factory Binary Firmware Dump |
-| `37805-RMX-4160.rwd` | **OEM Production** | 992.2 KB | `139e80f8d7806cd73b11d4a99dc32b4a` | Factory Binary Firmware Dump |
-| `37805-RMX-4170.rwd` | **OEM Production** | 992.2 KB | `e46712c423cb4b205211b4b8edd63a11` | Factory Binary Firmware Dump |
-| `37805-RMX-4180.rwd` | **OEM Production** | 992.2 KB | `95eab2e2aec1da686f000ea76360ac73` | Factory Binary Firmware Dump |
-| `37805-RMX-4190.rwd` | **OEM Production** | 992.1 KB | `21088663dd92b039262eb856afa45931` | Factory Binary Firmware Dump |
-| `37805-RMX-5050.rwd` | **OEM Production** | 992.1 KB | `03151f4ff960a64abdb3707332673fa1` | Factory Binary Firmware Dump |
-| `37805-RMX-5060.rwd` | **OEM Production** | 992.1 KB | `a48bc21b67260c1e333e66daddd63fc6` | Factory Binary Firmware Dump |
-| `37805-RMX-5070.rwd` | **OEM Production** | 992.1 KB | `16c7ea31581c3c617b9f52979908557a` | Factory Binary Firmware Dump |
-| `37805-RMX-5080.rwd` | **OEM Production** | 992.2 KB | `b955083da8d6e3a4d15bf09ddfa740d4` | Factory Binary Firmware Dump |
-| `37805-RMX-5090.rwd` | **OEM Production** | 992.2 KB | `f816d04d68e8381b5954820df1d1a7cf` | Factory Binary Firmware Dump |
-| `37805-RMX-5150.rwd` | **OEM Production** | 992.2 KB | `0cebadfd74875289fc444044a781585f` | Factory Binary Firmware Dump |
-| `37805-RMX-5160.rwd` | **OEM Production** | 992.2 KB | `468e44f9f5847acde9d1cd0e7c726f75` | Factory Binary Firmware Dump |
-| `37805-RMX-5170.rwd` | **OEM Production** | 992.2 KB | `52a2b6c4ee3034efb28e094fe7d7d962` | Factory Binary Firmware Dump |
-| `37805-RMX-5180.rwd` | **OEM Production** | 992.2 KB | `7730307fb2989b454264dc85a19f7743` | Factory Binary Firmware Dump |
-| `37805-RMX-5190.rwd` | **OEM Production** | 992.2 KB | `a7492c4d7ca6dd81c3877009eef6ad64` | Factory Binary Firmware Dump |
-| `37805-RMX-5270.rwd` | **OEM Production** | 992.2 KB | `fc9eafcd938fe78631bb87dcc94b6d7b` | Factory Binary Firmware Dump |
-| `37805-RMX-9530-M1.rwd` | **OEM Production** | 992.1 KB | `30d9efa209f8fa2782b8b255f1c26ae2` | Factory Binary Firmware Dump |
-| `37805-RMX-9540-M1.rwd` | **OEM Production** | 992.1 KB | `b99d74d99512fbf87e4a398c6fd5d30f` | Factory Binary Firmware Dump |
-| `37805-RMX-9620-M1.rwd` | **OEM Production** | 992.1 KB | `f248309df3b710ae70dbf9d4df77fd07` | Factory Binary Firmware Dump |
-| `37805-RMX-9660-M1.rwd` | **OEM Production** | 992.1 KB | `984165c1d3711594dbe6c630718af580` | Factory Binary Firmware Dump |
-| `37805-RMX-9670-M1.rwd` | **OEM Production** | 992.1 KB | `509d525e349608eece681d2520c09acd` | Factory Binary Firmware Dump |
-| `37805-RMX-9720-M1.rwd` | **OEM Production** | 992.1 KB | `d526786ac8b25b91174839d88a4191a0` | Factory Binary Firmware Dump |
-| `37805-RMX-9760-M1.rwd` | **OEM Production** | 992.1 KB | `ca8a91292cdb42bfc79c9ae42e6f350d` | Factory Binary Firmware Dump |
-| `37805-RMX-9770-M1.rwd` | **OEM Production** | 992.1 KB | `eb53753b318e9ca96ddcec36db7d9f10` | Factory Binary Firmware Dump |
-| `37805-RMX-9820-M1.rwd` | **OEM Production** | 992.1 KB | `be3a7f3148b5f5d3874762d758a7c6d4` | Factory Binary Firmware Dump |
-| `37805-RMX-9850-M1.rwd` | **OEM Production** | 992.1 KB | `9b2c46a9a4c2c1ec3e323d796e31d69e` | Factory Binary Firmware Dump |
-| `37805-RMX-9860-M1.rwd` | **OEM Production** | 992.1 KB | `265d397f60684e5616d70dd6f58c3366` | Factory Binary Firmware Dump |
-| `37805-RMX-9920-M1.rwd` | **OEM Production** | 992.1 KB | `1022938075f025ac35fa8c8310fca6b6` | Factory Binary Firmware Dump |
-| `37805-RMX-9950-M1.rwd` | **OEM Production** | 992.1 KB | `bea03b8703777a627c64d34f328a421a` | Factory Binary Firmware Dump |
-| `37805-RMX-9960-M1.rwd` | **OEM Production** | 992.1 KB | `9c1c8712806fc8acc7d1477cd7e66d7b` | Factory Binary Firmware Dump |
-| `37805-RMX-A030-M1.rwd` | **OEM Production** | 992.1 KB | `d5dd393e37fef3add8c7a1492beae686` | Factory Binary Firmware Dump |
-| `37805-RMX-A060-M1.rwd` | **OEM Production** | 992.1 KB | `358ac798e7e1b1628b64b8be3a567030` | Factory Binary Firmware Dump |
-| `37805-RMX-A070-M1.rwd` | **OEM Production** | 992.1 KB | `aee4b6bbc72c42a88177d0816f35c0e4` | Factory Binary Firmware Dump |
-| `37805-RMX-A130-M1.rwd` | **OEM Production** | 992.1 KB | `7c2ba1faae6b010c6236f0ed728bcc1a` | Factory Binary Firmware Dump |
-| `37805-RMX-A140-M1.rwd` | **OEM Production** | 992.1 KB | `37a653252848265eeb4e55d3a4e0021d` | Factory Binary Firmware Dump |
-| `37805-RMX-A580-M1.rwd` | **OEM Production** | 992.2 KB | `686b129d7e809694fb1d173c62549f59` | Factory Binary Firmware Dump |
-| `37805-RMX-A610-M1.rwd` | **OEM Production** | 992.2 KB | `2ba927951bc62af62aa131e9f5c027c9` | Factory Binary Firmware Dump |
-| `37805-RMX-A620-M1.rwd` | **OEM Production** | 992.2 KB | `122074fb1f9ce165f7eacadae801d401` | Factory Binary Firmware Dump |
-| `37805-RMX-A630-M1.rwd` | **OEM Production** | 992.2 KB | `5209328002fc7ffdbf664a336b5f325d` | Factory Binary Firmware Dump |
-| `37805-RMX-D030-M1.rwd` | **OEM Production** | 992.1 KB | `f1c42094542d4163062eeb8cb0da6788` | Factory Binary Firmware Dump |
-| `37805-RMX-D040-M1.rwd` | **OEM Production** | 992.1 KB | `f8c221564fecfd48aa629b47b8d78d0d` | Factory Binary Firmware Dump |
-| `37805-RMX-D520-M1.rwd` | **OEM Production** | 992.1 KB | `814b1a65e772e3e417b30b774977dbfe` | Factory Binary Firmware Dump |
-| `37805-RMX-E030-M1.rwd` | **OEM Production** | 992.1 KB | `5320e00eca390630916ec3262c2798d3` | Factory Binary Firmware Dump |
-| `37805-RMX-E060-M1.rwd` | **OEM Production** | 992.1 KB | `93104b0ad126c506ebaed452665c0fde` | Factory Binary Firmware Dump |
-| `37805-RMX-E070-M1.rwd` | **OEM Production** | 992.1 KB | `38e5836161e348e82e54f8fec04a2ba1` | Factory Binary Firmware Dump |
-| `37805-RMX-E530-M1.rwd` | **OEM Production** | 992.1 KB | `3071df5fba9706d3ec94144f29d30843` | Factory Binary Firmware Dump |
-| `37805-RMX-E550-M1.rwd` | **OEM Production** | 992.2 KB | `fa2e320ef5bbd53c797ab9688eed90cb` | Factory Binary Firmware Dump |
-| `37805-RMX-E560-M1.rwd` | **OEM Production** | 992.2 KB | `ce1d88ad1147abc0ec7973b6921de13a` | Factory Binary Firmware Dump |
-| `37805-RMX-E570-M1.rwd` | **OEM Production** | 992.2 KB | `05aa37aef9d7aeffccf9bf64586e4564` | Factory Binary Firmware Dump |
-| `37805-RMX-H540-M1.rwd` | **OEM Production** | 992.1 KB | `c1c68f724c53b6afc905fa19c84e731f` | Factory Binary Firmware Dump |
-| `37805-RMX-H630-M1.rwd` | **OEM Production** | 992.1 KB | `0bf11d6c2495089668348a57b13340b9` | Factory Binary Firmware Dump |
-| `37805-RMX-H830-M1.rwd` | **OEM Production** | 992.1 KB | `6d4ea77902dd393cefc3385291bbd25d` | Factory Binary Firmware Dump |
-| `37805-RMX-H840-M1.rwd` | **OEM Production** | 992.1 KB | `edf7279f74bf50025d9741f3bd2c30fa` | Factory Binary Firmware Dump |
-| `37805-RMX-J320-M1.rwd` | **OEM Production** | 992.1 KB | `8c2d2781df24ab8fde854c1f28d2082e` | Factory Binary Firmware Dump |
-| `37805-RMX-J360-M1.rwd` | **OEM Production** | 992.1 KB | `bd4c1a7d14b1c9de3fd34376bc3c668c` | Factory Binary Firmware Dump |
-| `37805-RMX-J370-M1.rwd` | **OEM Production** | 992.1 KB | `36e98bfc6d501b600a088ff80a185db8` | Factory Binary Firmware Dump |
-| `37805-RMX-J420-M1.rwd` | **OEM Production** | 992.1 KB | `90cb7121e3999524d393636403436b9c` | Factory Binary Firmware Dump |
-| `37805-RMX-J460-M1.rwd` | **OEM Production** | 992.1 KB | `746c33a3fb3cfa32a75e88fac41c1198` | Factory Binary Firmware Dump |
-| `37805-RMX-J470-M1.rwd` | **OEM Production** | 992.1 KB | `3000331bc1650935e8ddb2edd89bcd5d` | Factory Binary Firmware Dump |
-| `37805-RMX-J530-M1.rwd` | **OEM Production** | 992.1 KB | `5777bf861e67f9ff238bfe9bbeea01f7` | Factory Binary Firmware Dump |
-| `37805-RMX-J550-M1.rwd` | **OEM Production** | 992.2 KB | `b8bf34f4256059cf2ea4827cb352f3b6` | Factory Binary Firmware Dump |
-| `37805-RMX-J560-M1.rwd` | **OEM Production** | 992.2 KB | `db29aba97ce3c99b2dee6b2d451b35b4` | Factory Binary Firmware Dump |
-| `37805-RMX-J570-M1.rwd` | **OEM Production** | 992.2 KB | `5bb6c600f966f1afe7a4bc4d93033769` | Factory Binary Firmware Dump |
-| `37805-RMX-J580-M1.rwd` | **OEM Production** | 992.2 KB | `3d4dfa05359e71bfe30b0f1861f6c585` | Factory Binary Firmware Dump |
-| `37805-RMX-J630-M1.rwd` | **OEM Production** | 992.1 KB | `f4516508e5e0b1bce4e6911e335c10ca` | Factory Binary Firmware Dump |
-| `37805-RMX-J650-M1.rwd` | **OEM Production** | 992.2 KB | `5ee7a2782453b5dfbdde778c2c90b0be` | Factory Binary Firmware Dump |
-| `37805-RMX-J660-M1.rwd` | **OEM Production** | 992.2 KB | `18589618de30f5f060336e1a8685273f` | Factory Binary Firmware Dump |
-| `37805-RMX-J670-M1.rwd` | **OEM Production** | 992.2 KB | `e6375b92a8164a5711d07d70361f5719` | Factory Binary Firmware Dump |
-| `37805-RMX-J680-M1.rwd` | **OEM Production** | 992.2 KB | `bab8fea92e958fb9507b8eb5af3e5341` | Factory Binary Firmware Dump |
-| `37805-RMX-J730-M1.rwd` | **OEM Production** | 992.1 KB | `10af373778d603d99803cf8117076c50` | Factory Binary Firmware Dump |
-| `37805-RMX-J750-M1.rwd` | **OEM Production** | 992.2 KB | `51ffd7cf5a81d1460e7ffc5f862e0726` | Factory Binary Firmware Dump |
-| `37805-RMX-J760-M1.rwd` | **OEM Production** | 992.2 KB | `176d8b00d8e892c118edd93e8eced12a` | Factory Binary Firmware Dump |
-| `37805-RMX-J770-M1.rwd` | **OEM Production** | 992.2 KB | `31f8162ba0c41fed8449f209aa6cd542` | Factory Binary Firmware Dump |
-| `37805-RMX-J780-M1.rwd` | **OEM Production** | 992.2 KB | `9c9b3e917526cab0db8316e73fc0922c` | Factory Binary Firmware Dump |
-| `37805-RMX-J830-M1.rwd` | **OEM Production** | 992.1 KB | `d8fd2cee14bf23189a98d1787d5836af` | Factory Binary Firmware Dump |
-| `37805-RMX-J850-M1.rwd` | **OEM Production** | 992.2 KB | `e263dec12557484702d20c98d2bd818d` | Factory Binary Firmware Dump |
-| `37805-RMX-J860-M1.rwd` | **OEM Production** | 992.2 KB | `6092752e4a4794712329065b50971697` | Factory Binary Firmware Dump |
-| `37805-RMX-J870-M1.rwd` | **OEM Production** | 992.2 KB | `b5ea31d3ca459770a3fd11063daddb1e` | Factory Binary Firmware Dump |
-| `37805-RMX-J880-M1.rwd` | **OEM Production** | 992.2 KB | `18b70c5fb5df2e66cd3fe8ca2f16844e` | Factory Binary Firmware Dump |
-| `37805-RMX-N020-M1.rwd` | **OEM Production** | 992.1 KB | `fa6b697fc225751bbe17213bc4cfe1f3` | Factory Binary Firmware Dump |
-| `37805-RMX-Q030-M1.rwd` | **OEM Production** | 992.1 KB | `4cabc3b22b9b338de5a129af2e5f5b0a` | Factory Binary Firmware Dump |
-| `37805-RMX-Q040-M1.rwd` | **OEM Production** | 992.1 KB | `552883c70ed802a157c9fc552325e311` | Factory Binary Firmware Dump |
-| `37805-RMX-Q120-M1.rwd` | **OEM Production** | 992.1 KB | `598e4089495431086472ae68fbf32280` | Factory Binary Firmware Dump |
-| `37805-RMX-Q140-M1.rwd` | **OEM Production** | 992.1 KB | `20538dfa1b6a51e33526ac9dc5b532f7` | Factory Binary Firmware Dump |
-| `37805-RMX-Q150-M1.rwd` | **OEM Production** | 992.1 KB | `fc6f47d4e699c40b1ad7aa87a5d4a207` | Factory Binary Firmware Dump |
-| `37805-RMX-Q520-M1.rwd` | **OEM Production** | 992.1 KB | `b6118994cee2d26f60cdb8bd2f48026e` | Factory Binary Firmware Dump |
-| `37805-RMX-Q540-M1.rwd` | **OEM Production** | 992.1 KB | `a215198ba82ec20c90a4afca3ae24d95` | Factory Binary Firmware Dump |
-| `37805-RMX-Q550-M1.rwd` | **OEM Production** | 992.2 KB | `5e9a5a171aa605dac8843c5f7b4593dd` | Factory Binary Firmware Dump |
-| `37805-RMX-Q560-M1.rwd` | **OEM Production** | 992.2 KB | `96cdd3d8263ce8591fc0fcc349f36160` | Factory Binary Firmware Dump |
-| `37805-RMX-X020-M1.rwd` | **OEM Production** | 992.1 KB | `80ce72216cc3701c9e52706f971ad31d` | Factory Binary Firmware Dump |
-| `37805-RMX-X050-M1.rwd` | **OEM Production** | 992.1 KB | `abc799710c6450d7938cec9ac34c9236` | Factory Binary Firmware Dump |
-| `37805-RMX-X060-M1.rwd` | **OEM Production** | 992.1 KB | `254eaa044371138f3973ac24fa318219` | Factory Binary Firmware Dump |
-| `37805-RMX-X530-M1.rwd` | **OEM Production** | 992.1 KB | `945363c674a5aa981b2ec52312adc266` | Factory Binary Firmware Dump |
-| `37805-RMX-X540-M1.rwd` | **OEM Production** | 992.1 KB | `e2d750e5e94d7a9c393bdb8907cb9f39` | Factory Binary Firmware Dump |
-| `37805-RMX-X550-M1.rwd` | **OEM Production** | 992.2 KB | `3070b0b4d9b7068c552bb1470b0ac8b2` | Factory Binary Firmware Dump |
-| `37805-RMX-Z020-M1.rwd` | **OEM Production** | 992.1 KB | `4aaf06674915a674264a88f86966bf2c` | Factory Binary Firmware Dump |
-| `37805-RMX-Z050-M1.rwd` | **OEM Production** | 992.1 KB | `ef4de3fb77b71c2517cda8ce33fc622e` | Factory Binary Firmware Dump |
-| `37805-RMX-Z060-M1.rwd` | **OEM Production** | 992.1 KB | `e1fede0f8c8e6a77765aa373cfaca485` | Factory Binary Firmware Dump |
-| `37805-RMX-Z530-M1.rwd` | **OEM Production** | 992.1 KB | `3649cd605ae2ea113aed35cefdef1281` | Factory Binary Firmware Dump |
-| `37805-RMX-Z550-M1.rwd` | **OEM Production** | 992.2 KB | `1f847e5d746baaa46e234c668d230ed3` | Factory Binary Firmware Dump |
-| `37805-RMX-Z560-M1.rwd` | **OEM Production** | 992.2 KB | `b6650e4a51c38610a9a62d06f137e5ab` | Factory Binary Firmware Dump |
-| `37805-RTW-A050-M1.rwd` | **OEM Production** | 992.2 KB | `6c32a5eeac61726798691ec2216715e4` | Factory Binary Firmware Dump |
-| `37805-RTW-A230-M1.rwd` | **OEM Production** | 1.94 MB | `452ca336126e4f3054d23c22ac10c598` | Factory Binary Firmware Dump |
-| `37805-RTW-A550-M1.rwd` | **OEM Production** | 992.2 KB | `ab74ac47300a450a8ae047c7ac954d09` | Factory Binary Firmware Dump |
-| `37805-RTW-A830-M1.rwd` | **OEM Production** | 1.94 MB | `b0f59e983aebc2b4c08e9fd6236d0a18` | Factory Binary Firmware Dump |
-| `37805-RTW-E060-M1.rwd` | **OEM Production** | 992.1 KB | `cbde87d90f0091ed452593fd45f26456` | Factory Binary Firmware Dump |
-| `37805-RTW-J050-M1.rwd` | **OEM Production** | 992.1 KB | `0875dea105289b8c8e395193848e5b6c` | Factory Binary Firmware Dump |
-| `37805-RTW-J550-M1.rwd` | **OEM Production** | 992.2 KB | `2f54161694551aeaba837a76dd692874` | Factory Binary Firmware Dump |
-| `37805-RTW-N010-M1.rwd` | **OEM Production** | 992.1 KB | `153ec9345b08c29f80498b550fbf4d9e` | Factory Binary Firmware Dump |
-| `37806-RBJ-3050-M1.rwd` | **OEM Production** | 480.2 KB | `e7f1123ceb422b3657df1c8502cef6cf` | Factory Binary Firmware Dump |
-| `37806-RBJ-3060-M1.rwd` | **OEM Production** | 480.2 KB | `9c8dfb44712bcc953a27056ae07afdbe` | Factory Binary Firmware Dump |
-| `37806-RBJ-3070-M1.rwd` | **OEM Production** | 480.2 KB | `349c8e445dac8fa3f700916b128e592c` | Factory Binary Firmware Dump |
-| `37806-RBJ-A540-M1.rwd` | **OEM Production** | 480.1 KB | `b4ed20ce9e14b13e7d3b12c9304aaf3c` | Factory Binary Firmware Dump |
-| `37806-RBJ-A550-M1.rwd` | **OEM Production** | 480.2 KB | `75f9e3f5eb9b4410cb2dd125c8f32ec3` | Factory Binary Firmware Dump |
-| `37806-RBJ-A640-M1.rwd` | **OEM Production** | 480.1 KB | `3bf83d524d6673a930db52014314898d` | Factory Binary Firmware Dump |
-| `37806-RBJ-A650-M1.rwd` | **OEM Production** | 480.2 KB | `1f371c3ba49fe6237f93a0283cf988b3` | Factory Binary Firmware Dump |
-| `37806-RBJ-E510-M1.rwd` | **OEM Production** | 480.1 KB | `acdfeac191bc59bf04e05875d7014302` | Factory Binary Firmware Dump |
-| `37806-RBJ-E520-M1.rwd` | **OEM Production** | 480.1 KB | `8e912bd7562628c297d9dc2c2f109737` | Factory Binary Firmware Dump |
-| `37806-RBJ-E530-M1.rwd` | **OEM Production** | 480.1 KB | `8cedef47ffed2959544565c0a5d93a94` | Factory Binary Firmware Dump |
-| `37806-RBJ-E540-M1.rwd` | **OEM Production** | 480.1 KB | `623dec4843569c209cb45d5070850423` | Factory Binary Firmware Dump |
-| `37806-RBJ-E550-M1.rwd` | **OEM Production** | 480.2 KB | `585c3bfd40620655627eb3b38277afbd` | Factory Binary Firmware Dump |
-| `37806-RBJ-E610-M1.rwd` | **OEM Production** | 480.1 KB | `d88f09284216bb339c7b6f36c5126203` | Factory Binary Firmware Dump |
-| `37806-RBJ-E620-M1.rwd` | **OEM Production** | 480.1 KB | `4dedb3e37ada731f01e18034fd145599` | Factory Binary Firmware Dump |
-| `37806-RBJ-E630-M1.rwd` | **OEM Production** | 480.1 KB | `141cb062cc1a1cf74800f03e8cde34ab` | Factory Binary Firmware Dump |
-| `37806-RBJ-E640-M1.rwd` | **OEM Production** | 480.1 KB | `3b900801436602cc13ba3953b8f729e0` | Factory Binary Firmware Dump |
-| `37806-RBJ-E650-M1.rwd` | **OEM Production** | 480.2 KB | `c1a62ee06b9303a4c0452707e96c4d2e` | Factory Binary Firmware Dump |
-| `37806-RBJ-E670-M1.rwd` | **OEM Production** | 480.1 KB | `fc6b02e370c2dec577f4b83b15c1c944` | Factory Binary Firmware Dump |
-| `37806-RBJ-E710-M1.rwd` | **OEM Production** | 480.1 KB | `3c9f8de4fe13b46d1968a696b6566360` | Factory Binary Firmware Dump |
-| `37806-RBJ-E720-M1.rwd` | **OEM Production** | 480.1 KB | `179e89d4a2b93d1792fb382e6f804248` | Factory Binary Firmware Dump |
-| `37806-RBJ-E730-M1.rwd` | **OEM Production** | 480.1 KB | `fd45d2c3d95045faee8fff62be6bc5a3` | Factory Binary Firmware Dump |
-| `37806-RBJ-E740-M1.rwd` | **OEM Production** | 480.1 KB | `66132b53430ee757a442df27b688c40e` | Factory Binary Firmware Dump |
-| `37806-RBJ-E750-M1.rwd` | **OEM Production** | 480.2 KB | `779b3a9f9549c55e859e887fe3db683d` | Factory Binary Firmware Dump |
-| `37806-RBJ-E770-M1.rwd` | **OEM Production** | 480.1 KB | `3f71914262acb555a4a2697e768c2a0c` | Factory Binary Firmware Dump |
-| `37806-RBJ-J510-M1.rwd` | **OEM Production** | 480.1 KB | `a68328002ef76d3289791ebb36b6b11f` | Factory Binary Firmware Dump |
-| `37806-RBJ-J520-M1.rwd` | **OEM Production** | 480.1 KB | `3f02bccc9f15d4c12cd1ac38b2bd93d9` | Factory Binary Firmware Dump |
-| `37806-RBJ-J530-M1.rwd` | **OEM Production** | 480.1 KB | `2669072fda1deba6c28f88d79fc8e953` | Factory Binary Firmware Dump |
-| `37806-RBJ-J540-M1.rwd` | **OEM Production** | 480.1 KB | `302d308794727e3c52357f1b56a84f10` | Factory Binary Firmware Dump |
-| `37806-RBJ-J550-M1.rwd` | **OEM Production** | 480.2 KB | `a6bb6a3efe9bc4f2c1fe4c7112845608` | Factory Binary Firmware Dump |
-| `37806-RBJ-J570-M1.rwd` | **OEM Production** | 480.1 KB | `bd877fd0d35e129ba1ef011a5bb60064` | Factory Binary Firmware Dump |
-| `37806-RBJ-J610-M1.rwd` | **OEM Production** | 480.1 KB | `9422fecd64ec1da70208147d20b68d04` | Factory Binary Firmware Dump |
-| `37806-RBJ-J620-M1.rwd` | **OEM Production** | 480.1 KB | `d03e5e4e5c4a5bb8a3809df8a9400891` | Factory Binary Firmware Dump |
-| `37806-RBJ-J630-M1.rwd` | **OEM Production** | 480.1 KB | `7c4a68574dd3838bb80aa0a96cc6aec8` | Factory Binary Firmware Dump |
-| `37806-RBJ-J640-M1.rwd` | **OEM Production** | 480.1 KB | `dead3bc65297a1af10a3a5c6c5039d36` | Factory Binary Firmware Dump |
-| `37806-RBJ-J650-M1.rwd` | **OEM Production** | 480.2 KB | `e81a3d6561691a4a9d4b2b4cbf3a8d0d` | Factory Binary Firmware Dump |
-| `37806-RBJ-J670-M1.rwd` | **OEM Production** | 480.1 KB | `3740b5b5418df4a320a0f62fd5fbe9fa` | Factory Binary Firmware Dump |
-| `37806-RBJ-J710-M1.rwd` | **OEM Production** | 480.1 KB | `e58f0cf8744219d24d223fd11e791ab8` | Factory Binary Firmware Dump |
-| `37806-RBJ-J720-M1.rwd` | **OEM Production** | 480.1 KB | `507611fe8ced6c09370aadae7e7ef16f` | Factory Binary Firmware Dump |
-| `37806-RBJ-J730-M1.rwd` | **OEM Production** | 480.1 KB | `d8b594c37fa9ccf54054f4badaf5e619` | Factory Binary Firmware Dump |
-| `37806-RBJ-J740-M1.rwd` | **OEM Production** | 480.1 KB | `f83cd31822b297854ad466b98eb00d60` | Factory Binary Firmware Dump |
-| `37806-RBJ-J750-M1.rwd` | **OEM Production** | 480.2 KB | `4b6aec796cd5f033749d782644865a82` | Factory Binary Firmware Dump |
-| `37806-RBJ-J770-M1.rwd` | **OEM Production** | 480.1 KB | `97fe7dada1bdcaf3afe5d5b8b34317ed` | Factory Binary Firmware Dump |
-| `37806-RMX-3050.rwd` | **OEM Production** | 480.1 KB | `1dacfefbce456ec1d43b1939ec8f2d1f` | Factory Binary Firmware Dump |
-| `37806-RMX-3060.rwd` | **OEM Production** | 480.1 KB | `cef3337af00f68da24188b8c71d157e0` | Factory Binary Firmware Dump |
-| `37806-RMX-3090.rwd` | **OEM Production** | 480.1 KB | `361dddc37736266ba4ab38066780eed8` | Factory Binary Firmware Dump |
-| `37806-RMX-4050.rwd` | **OEM Production** | 480.1 KB | `4e5513de69c39e4f71f05e97397866d9` | Factory Binary Firmware Dump |
-| `37806-RMX-4060.rwd` | **OEM Production** | 480.1 KB | `00b31de6b278062aa6a38834f7541165` | Factory Binary Firmware Dump |
-| `37806-RMX-4080.rwd` | **OEM Production** | 480.1 KB | `2d256dcbd6dddb38a1cf90206ad65b1e` | Factory Binary Firmware Dump |
-| `37806-RMX-4090.rwd` | **OEM Production** | 480.1 KB | `10c936a35f69108dd1117575ef6d47a8` | Factory Binary Firmware Dump |
-| `37806-RMX-5050.rwd` | **OEM Production** | 480.1 KB | `3ea50451ff8c0f009aa2ad29dc9f17a1` | Factory Binary Firmware Dump |
-| `37806-RMX-5060.rwd` | **OEM Production** | 480.1 KB | `eb9dd1d1f3e48e9a044ea5c31e010a9b` | Factory Binary Firmware Dump |
-| `37806-RMX-5070.rwd` | **OEM Production** | 480.1 KB | `aeb11aa4e0f8ac603495a008762cff94` | Factory Binary Firmware Dump |
-| `37806-RMX-5090.rwd` | **OEM Production** | 480.1 KB | `3b3c8e44a0240e532e6beae3314ebc27` | Factory Binary Firmware Dump |
-| `37806-RMX-9520-M1.rwd` | **OEM Production** | 480.1 KB | `73fc5434dfd5e6fa2a36dd7fe120cadf` | Factory Binary Firmware Dump |
-| `37806-RMX-9530-M1.rwd` | **OEM Production** | 480.1 KB | `45c31f4cda7c69bc281c147012144fbc` | Factory Binary Firmware Dump |
-| `37806-RMX-9630-M1.rwd` | **OEM Production** | 480.1 KB | `c9567ed84fbff0b3fdcf61c88e02e62b` | Factory Binary Firmware Dump |
-| `37806-RMX-9830-M1.rwd` | **OEM Production** | 480.1 KB | `353c53d81d5680ce88a926dc51532766` | Factory Binary Firmware Dump |
-| `37806-RMX-9920-M1.rwd` | **OEM Production** | 480.1 KB | `f0c36bbd64212bd73c965cec5b0bbbf4` | Factory Binary Firmware Dump |
-| `37806-RMX-A030-M1.rwd` | **OEM Production** | 480.1 KB | `25a459d4eff8b40d536b0c4cbf4c3c6e` | Factory Binary Firmware Dump |
-| `37806-RMX-A550-M1.rwd` | **OEM Production** | 480.2 KB | `c8c120cb3baea14c98c6a13953869366` | Factory Binary Firmware Dump |
-| `37806-RMX-A560-M1.rwd` | **OEM Production** | 480.2 KB | `9af475ab81f17545cfbb080c2c61ffe5` | Factory Binary Firmware Dump |
-| `37806-RMX-D010-M1.rwd` | **OEM Production** | 480.1 KB | `1ac19514018056fcd43c07da02995c9c` | Factory Binary Firmware Dump |
-| `37806-RMX-E030-M1.rwd` | **OEM Production** | 480.1 KB | `2d72c43df616198705b9f03a404ff0a0` | Factory Binary Firmware Dump |
-| `37806-RMX-E520-M1.rwd` | **OEM Production** | 480.1 KB | `c3031963362d21d5599a530c8f9e611c` | Factory Binary Firmware Dump |
-| `37806-RMX-E530-M1.rwd` | **OEM Production** | 480.1 KB | `71745f38f4c07e1d70a2ac95a099458f` | Factory Binary Firmware Dump |
-| `37806-RMX-H620-M1.rwd` | **OEM Production** | 480.1 KB | `ee7f71e6b4245ac28cb6d5f1ea85bc0f` | Factory Binary Firmware Dump |
-| `37806-RMX-J330-M1.rwd` | **OEM Production** | 480.1 KB | `2c7bab747af225dd9aa61728a4a3cd0b` | Factory Binary Firmware Dump |
-| `37806-RMX-J530-M1.rwd` | **OEM Production** | 480.1 KB | `fa4273e2621c04362358135accbc6103` | Factory Binary Firmware Dump |
-| `37806-RMX-J540-M1.rwd` | **OEM Production** | 480.1 KB | `82352c1e3b0599856e5c23e9f1b7c149` | Factory Binary Firmware Dump |
-| `37806-RMX-J630-M1.rwd` | **OEM Production** | 480.1 KB | `3bef3e459404f009266dea76b20c50aa` | Factory Binary Firmware Dump |
-| `37806-RMX-J640-M1.rwd` | **OEM Production** | 480.1 KB | `9d74daf2a3fa4def2f1572320659bb35` | Factory Binary Firmware Dump |
-| `37806-RMX-J830-M1.rwd` | **OEM Production** | 480.1 KB | `2e2fbe9c47588717b4efe13087b6e52a` | Factory Binary Firmware Dump |
-| `37806-RMX-J840-M1.rwd` | **OEM Production** | 480.1 KB | `76dfd6e85a95bca5f91aa676790be1cd` | Factory Binary Firmware Dump |
-| `37806-RMX-Q120-M1.rwd` | **OEM Production** | 480.1 KB | `a25e1c6f7a845a4b9234cd1f7f0e66da` | Factory Binary Firmware Dump |
-| `37806-RMX-Q520-M1.rwd` | **OEM Production** | 480.1 KB | `aaae669002e2ba19402cbf884bb41837` | Factory Binary Firmware Dump |
-| `37806-RMX-Q530-M1.rwd` | **OEM Production** | 480.1 KB | `909385bdc3e2f2c27df892b76f3d4871` | Factory Binary Firmware Dump |
-| `37806-RMX-X030-M1.rwd` | **OEM Production** | 480.1 KB | `c42752197d7ac0dae7722d68c6b3c2cf` | Factory Binary Firmware Dump |
-| `37806-RMX-X520-M1.rwd` | **OEM Production** | 480.1 KB | `74095c5213d230e0b5b01a9a29db9374` | Factory Binary Firmware Dump |
-| `37806-RMX-X530-M1.rwd` | **OEM Production** | 480.1 KB | `81ca42e1abdf42c8a0a38171672c592e` | Factory Binary Firmware Dump |
-| `37806-RMX-Z030-M1.rwd` | **OEM Production** | 480.1 KB | `f6ed4f573659b86e06bbc8050646d792` | Factory Binary Firmware Dump |
-| `37806-RMX-Z520-M1.rwd` | **OEM Production** | 480.1 KB | `909921afdf4ebabd62cb22652683e1e8` | Factory Binary Firmware Dump |
-| `37806-RMX-Z530-M1.rwd` | **OEM Production** | 480.1 KB | `2b45730bc416fcc00e2f1d045ef621d7` | Factory Binary Firmware Dump |
-| `37806-RTW-A550-M1.rwd` | **OEM Production** | 480.2 KB | `ff971251dd04eae92b75aff55e342a23` | Factory Binary Firmware Dump |
-| `37806-RTW-J540-M1.rwd` | **OEM Production** | 480.1 KB | `1899a9e2a89e2ebcdc599dce20f7c20b` | Factory Binary Firmware Dump |
-| `37806-RTW-J550-M1.rwd` | **OEM Production** | 480.2 KB | `6d762710d09a327745cb70ec09787428` | Factory Binary Firmware Dump |
-| `37806-RTW-J580-M1.rwd` | **OEM Production** | 480.1 KB | `8c631ecbbcd5322ac5e89eb69d660b1a` | Factory Binary Firmware Dump |
+| `1K001-PZA-A020.rwd` | **2010–2016** | 62.0 KB | `bd636ca11d3377772bcc10f70c790ee6` | Factory Binary Firmware Dump |
+| `1K001-PZA-A050-M1.rwd` | **2010–2016** | 62.4 KB | `a6a1fa4de62fd393726a6e19aed6d031` | Factory Binary Firmware Dump |
+| `1K001-PZA-A120-M1.rwd` | **2010–2016** | 62.1 KB | `e19f61f72ea1acce8325774fe20074ec` | Factory Binary Firmware Dump |
+| `1K001-PZA-A130-M1.rwd` | **2010–2016** | 62.1 KB | `34f057e98b351eddd571c37e624810ec` | Factory Binary Firmware Dump |
+| `1K001-PZA-A220-M1.rwd` | **2010–2016** | 61.6 KB | `6e808a4025173cc40e9cd432996c5696` | Factory Binary Firmware Dump |
+| `1K001-PZA-A230-M1.rwd` | **2010–2016** | 61.6 KB | `bc03bc1900712c621f4981c729f272d7` | Factory Binary Firmware Dump |
+| `1K001-PZA-A320-M1.rwd` | **2010–2016** | 62.5 KB | `68646da254a2d6fe28334370d81a75ee` | Factory Binary Firmware Dump |
+| `1K001-PZA-A330-M1.rwd` | **2010–2016** | 62.5 KB | `249213b9bd82a78c558f063a3131ee5d` | Factory Binary Firmware Dump |
+| `1K001-PZA-A530.rwd` | **2010–2016** | 62.0 KB | `0cf88489dfc626ded86abeea7ec72023` | Factory Binary Firmware Dump |
+| `1K001-PZA-A560-M1.rwd` | **2010–2016** | 62.4 KB | `055d9d7131c2c55513828bd62a0f885f` | Factory Binary Firmware Dump |
+| `1K001-PZA-A620-M1.rwd` | **2010–2016** | 62.1 KB | `61d20cf6967d072ebb9034a1cabf6f69` | Factory Binary Firmware Dump |
+| `1K001-PZA-A630-M1.rwd` | **2010–2016** | 62.1 KB | `ac5e63c97b562d865739e42192c48dbb` | Factory Binary Firmware Dump |
+| `1K001-PZA-A720-M1.rwd` | **2010–2016** | 61.5 KB | `4b15d401b848771650466c8983d4ada6` | Factory Binary Firmware Dump |
+| `1K001-PZA-A730-M1.rwd` | **2010–2016** | 61.5 KB | `250b99b51d5ba8d09669b45a23d425f7` | Factory Binary Firmware Dump |
+| `1K001-PZA-A820-M1.rwd` | **2010–2016** | 62.4 KB | `8872fd997dabb962820c24804ffc7d0a` | Factory Binary Firmware Dump |
+| `1K001-PZA-A830-M1.rwd` | **2010–2016** | 62.5 KB | `07ef6cc034c7ddcb8ec57a41047800d9` | Factory Binary Firmware Dump |
+| `1K001-PZA-L040-M1.rwd` | **2010–2016** | 62.4 KB | `4e00cf0b413a34f8b4e7cd6d510de5c1` | Factory Binary Firmware Dump |
+| `1K001-RBJ-A040-M1.rwd` | **2010–2016** | 432.1 KB | `8bac746bbdb3d13d4dd794e8432f94e6` | Factory Binary Firmware Dump |
+| `1K001-RBJ-A520-M1.rwd` | **2010–2016** | 432.1 KB | `737e38430d26c677f983200f83745747` | Factory Binary Firmware Dump |
+| `1K001-RBJ-A530-M1.rwd` | **2010–2016** | 432.2 KB | `ec96df4066091e4d55764fd337b8f2a0` | Factory Binary Firmware Dump |
+| `1K001-RBJ-D530-M1.rwd` | **2010–2016** | 432.1 KB | `c2a992211ee15da69c2e3a21eaac419b` | Factory Binary Firmware Dump |
+| `1K001-RBJ-E040-M1.rwd` | **2010–2016** | 432.1 KB | `2c5e46088829ea3073875d2a2bd9bc7a` | Factory Binary Firmware Dump |
+| `1K001-RBJ-H520-M1.rwd` | **2010–2016** | 432.1 KB | `7db5ddc8701ca9b2a4fb94c0eb4e7245` | Factory Binary Firmware Dump |
+| `1K001-RBJ-J040-M1.rwd` | **2010–2016** | 432.1 KB | `04e8868b9ca6731d824f151821cf1de4` | Factory Binary Firmware Dump |
+| `1K001-RBJ-J530-M1.rwd` | **2010–2016** | 432.1 KB | `28820d5bc391bade70d3ff17f6694034` | Factory Binary Firmware Dump |
+| `1K001-RBJ-J540-M1.rwd` | **2010–2016** | 432.1 KB | `151f5cec1b5d6ba67ec94f8f113a42da` | Factory Binary Firmware Dump |
+| `1K001-RMX-A040-M1.rwd` | **2010–2016** | 192.1 KB | `755bc621183e0626af17fc6f9e9b3fde` | Factory Binary Firmware Dump |
+| `1K001-RMX-A080-M1.rwd` | **2010–2016** | 192.2 KB | `5846daedcc32e6c6294872b3bd24749e` | Factory Binary Firmware Dump |
+| `1K001-RMX-E030-M1.rwd` | **2010–2016** | 192.1 KB | `bac9bc62f3976d43eb20dcd692ebeda0` | Factory Binary Firmware Dump |
+| `1K001-RMX-E070-M1.rwd` | **2010–2016** | 192.2 KB | `7a6f40d61da09de83b7c61ad11b834c7` | Factory Binary Firmware Dump |
+| `1K001-RMX-J030-M1.rwd` | **2010–2016** | 192.1 KB | `1542cc5f07c6558a25c68931dde27be1` | Factory Binary Firmware Dump |
+| `1K001-RMX-J070-M1.rwd` | **2010–2016** | 192.2 KB | `fbc2aaf58e92ef5bc2c31b241fa0187f` | Factory Binary Firmware Dump |
+| `1K001-RTW-A110-M1.rwd` | **2010–2016** | 432.1 KB | `b40eae74a4513f5cdaeda3f558a692cb` | Factory Binary Firmware Dump |
+| `1K001-RTW-A220-M1.rwd` | **2010–2016** | 432.1 KB | `9e3d43fba2c2e19f1a25be3de5b16b4c` | Factory Binary Firmware Dump |
+| `1K001-RTW-A720-M1.rwd` | **2010–2016** | 432.1 KB | `752b257848d6a724f57f337d4deed779` | Factory Binary Firmware Dump |
+| `1K001-RTW-D520-M1.rwd` | **2010–2016** | 432.1 KB | `2e1528e9e6982ab0eba4693bf6679786` | Factory Binary Firmware Dump |
+| `1K001-RTW-J120-M1.rwd` | **2010–2016** | 432.2 KB | `30bb0c3ca95bbdcd9dfda4bbaf33cc76` | Factory Binary Firmware Dump |
+| `1K101-PZA-3050-M1.rwd` | **2010–2016** | 41.1 KB | `b45e9da557e4d9e62ac6cf4a84a7301e` | Factory Binary Firmware Dump |
+| `1K101-PZA-3060-M1.rwd` | **2010–2016** | 42.0 KB | `753cf02d0c53fbef6d554603fc503110` | Factory Binary Firmware Dump |
+| `1K101-PZA-3070-M1.rwd` | **2010–2016** | 43.4 KB | `507c584cb9873fba35e7951e50ce618a` | Factory Binary Firmware Dump |
+| `1K101-PZA-3150.rwd` | **2010–2016** | 41.2 KB | `6cf81069ed64757ff5b7712fc3cb1eb6` | Factory Binary Firmware Dump |
+| `1K101-PZA-3160.rwd` | **2010–2016** | 42.1 KB | `ee325ad3b08577aae617f971fbd82a14` | Factory Binary Firmware Dump |
+| `1K101-PZA-3170.rwd` | **2010–2016** | 43.5 KB | `796d21f10307437b5cdc6db90c4ab969` | Factory Binary Firmware Dump |
+| `1K101-PZA-3250.rwd` | **2010–2016** | 41.3 KB | `f4e2aa0a4d47546eae5a32e872b38687` | Factory Binary Firmware Dump |
+| `1K101-PZA-3260.rwd` | **2010–2016** | 42.2 KB | `2e996cd86c40fecdcf14687c9843ac27` | Factory Binary Firmware Dump |
+| `1K101-PZA-3270.rwd` | **2010–2016** | 43.6 KB | `4e0c56e6d4913b23cbb71c832b8eca57` | Factory Binary Firmware Dump |
+| `1K101-PZA-4050.rwd` | **2010–2016** | 40.8 KB | `18679b09908ac94d807382efbc1131ce` | Factory Binary Firmware Dump |
+| `1K101-PZA-4060.rwd` | **2010–2016** | 40.8 KB | `be8877aeeb04b14ff4186aef424d2327` | Factory Binary Firmware Dump |
+| `1K101-PZA-4070.rwd` | **2010–2016** | 40.7 KB | `ec4900a06791c89358ad378bbb5780f6` | Factory Binary Firmware Dump |
+| `1K101-PZA-4150.rwd` | **2010–2016** | 41.8 KB | `517613f548a59649721f5a681c631483` | Factory Binary Firmware Dump |
+| `1K101-PZA-4160.rwd` | **2010–2016** | 41.8 KB | `32aebc1dd3e3cfe4e5c372def307374e` | Factory Binary Firmware Dump |
+| `1K101-PZA-4170.rwd` | **2010–2016** | 41.8 KB | `e0ed3a1a14914e051339234907dc541e` | Factory Binary Firmware Dump |
+| `1K101-PZA-A050-M1.rwd` | **2010–2016** | 43.2 KB | `e64cf6978334352506bd96220d423600` | Factory Binary Firmware Dump |
+| `1K101-PZA-A220-M1.rwd` | **2010–2016** | 41.1 KB | `33ac9db8cc5a046fbc2e7aa21d4dd27c` | Factory Binary Firmware Dump |
+| `1K101-PZA-A230-M1.rwd` | **2010–2016** | 41.2 KB | `45dda8d575e6cca99e5d9c3571559df0` | Factory Binary Firmware Dump |
+| `1K101-PZA-A240-M1.rwd` | **2010–2016** | 41.3 KB | `d1eb5682a32bb43692098a50e219150e` | Factory Binary Firmware Dump |
+| `1K101-PZA-A320-M1.rwd` | **2010–2016** | 42.0 KB | `1014ef51c4451fdb2c6b2a421a0063db` | Factory Binary Firmware Dump |
+| `1K101-PZA-A330-M1.rwd` | **2010–2016** | 42.1 KB | `1795700335df3e6ff3534fdaadab1db8` | Factory Binary Firmware Dump |
+| `1K101-PZA-A340-M1.rwd` | **2010–2016** | 42.2 KB | `a400de857d748b7a58238d37cbbf56e4` | Factory Binary Firmware Dump |
+| `1K101-PZA-A420-M1.rwd` | **2010–2016** | 43.4 KB | `e2b540f23eb97379f9799b7d2c75dd47` | Factory Binary Firmware Dump |
+| `1K101-PZA-A430-M1.rwd` | **2010–2016** | 43.5 KB | `016c6a1b6ce0303a6c50a2cbec21e779` | Factory Binary Firmware Dump |
+| `1K101-PZA-A440-M1.rwd` | **2010–2016** | 43.6 KB | `85d7c7d91e093a41eccdc2704c25e7be` | Factory Binary Firmware Dump |
+| `1K101-PZA-A560-M1.rwd` | **2010–2016** | 43.2 KB | `bbc9157491a220341d7b204d45445c29` | Factory Binary Firmware Dump |
+| `1K101-PZA-A610-M1.rwd` | **2010–2016** | 41.2 KB | `abc72d15a8d9c193d1490e5329d6a0d7` | Factory Binary Firmware Dump |
+| `1K101-PZA-A620-M1.rwd` | **2010–2016** | 41.3 KB | `44d13d6329f803face41ae3672c2ab87` | Factory Binary Firmware Dump |
+| `1K101-PZA-A710-M1.rwd` | **2010–2016** | 42.1 KB | `d4b719e4a5ac2d48a33d9c81b6a3925f` | Factory Binary Firmware Dump |
+| `1K101-PZA-A720-M1.rwd` | **2010–2016** | 42.2 KB | `360f564ecd4439dba46d15c2a639dea2` | Factory Binary Firmware Dump |
+| `1K101-PZA-A810-M1.rwd` | **2010–2016** | 43.5 KB | `ee423c96029cd10d43a91587d472c540` | Factory Binary Firmware Dump |
+| `1K101-PZA-A820-M1.rwd` | **2010–2016** | 43.6 KB | `169846a40b72b0375518f93cb884960e` | Factory Binary Firmware Dump |
+| `1K101-PZA-C110-M1.rwd` | **2010–2016** | 41.3 KB | `3e4135d7a3c69826f077ad5ff98fb478` | Factory Binary Firmware Dump |
+| `1K101-PZA-C210-M1.rwd` | **2010–2016** | 42.2 KB | `46456a0d07fb0da502baffd0ed486b15` | Factory Binary Firmware Dump |
+| `1K101-PZA-C310-M1.rwd` | **2010–2016** | 43.6 KB | `e752710418c5611eea0e7dd79a09bd04` | Factory Binary Firmware Dump |
+| `1K101-PZA-L040-M1.rwd` | **2010–2016** | 43.2 KB | `c6143a5cde4a3f9c8ca7375303def51d` | Factory Binary Firmware Dump |
+| `1K101-PZA-L520-M1.rwd` | **2010–2016** | 40.7 KB | `70eb944b5aa2699b0a82b9ea2f17dc5a` | Factory Binary Firmware Dump |
+| `1K101-RBJ-A040-M1.rwd` | **2010–2016** | 320.1 KB | `8b47f4f19adb3e1567be9e687d891372` | Factory Binary Firmware Dump |
+| `1K101-RBJ-A050-M1.rwd` | **2010–2016** | 320.2 KB | `0abec66f222f2fa1f8436b5f41386122` | Factory Binary Firmware Dump |
+| `1K101-RBJ-A060-M1.rwd` | **2010–2016** | 320.2 KB | `ada11438a18c54bca3a1b49389246e9e` | Factory Binary Firmware Dump |
+| `1K101-RBJ-A530-M1.rwd` | **2010–2016** | 320.1 KB | `908692424ec73072ecbb515349bffd74` | Factory Binary Firmware Dump |
+| `1K101-RBJ-A550-M1.rwd` | **2010–2016** | 320.2 KB | `0a4a4037f4d31a92693699bf7dad41fd` | Factory Binary Firmware Dump |
+| `1K101-RBJ-A610-M1.rwd` | **2010–2016** | 320.1 KB | `60cce19bcc382595ede28f451b36af2e` | Factory Binary Firmware Dump |
+| `1K101-RBJ-A620-M1.rwd` | **2010–2016** | 320.1 KB | `623d005c798081f98ffd3e5e1b3234cd` | Factory Binary Firmware Dump |
+| `1K101-RBJ-D610-M1.rwd` | **2010–2016** | 320.1 KB | `89f2659bd416a14285a0fd58799cb42a` | Factory Binary Firmware Dump |
+| `1K101-RBJ-D630-M1.rwd` | **2010–2016** | 320.2 KB | `28e6bfd56e6b230bba3bb0bc0d9de296` | Factory Binary Firmware Dump |
+| `1K101-RBJ-E040-M1.rwd` | **2010–2016** | 320.1 KB | `b89d5c6c45907210da8ad68d50f68947` | Factory Binary Firmware Dump |
+| `1K101-RBJ-E060-M1.rwd` | **2010–2016** | 320.2 KB | `7458d5b13fe321892c75b9c5be9b2f3d` | Factory Binary Firmware Dump |
+| `1K101-RBJ-H540-M1.rwd` | **2010–2016** | 320.1 KB | `22cb24ca3044309fb69032eac6912fbd` | Factory Binary Firmware Dump |
+| `1K101-RBJ-J040-M1.rwd` | **2010–2016** | 320.1 KB | `548f17707d2a9ae1ac4d3801c03f4d7c` | Factory Binary Firmware Dump |
+| `1K101-RBJ-J060-M1.rwd` | **2010–2016** | 320.2 KB | `1c5f51c1aa14a53fb676a9580cffc632` | Factory Binary Firmware Dump |
+| `1K101-RBJ-J540-M1.rwd` | **2010–2016** | 320.1 KB | `428d274c34fec01e0226e777506521b3` | Factory Binary Firmware Dump |
+| `1K101-RBJ-J550-M1.rwd` | **2010–2016** | 320.1 KB | `9c25a2e39ce8074322c5687d1e04bbc1` | Factory Binary Firmware Dump |
+| `1K101-RBJ-J610-M1.rwd` | **2010–2016** | 320.1 KB | `98d7dec85a0e8af524fa6ee4350de576` | Factory Binary Firmware Dump |
+| `1K101-RBJ-J630-M1.rwd` | **2010–2016** | 320.2 KB | `821bf3a4174c9cda650ffade19203bca` | Factory Binary Firmware Dump |
+| `1K101-RMX-A060-M1.rwd` | **2010–2016** | 320.1 KB | `60b879188c43ece695c85ef8d638b796` | Factory Binary Firmware Dump |
+| `1K101-RMX-A080-M1.rwd` | **2010–2016** | 320.1 KB | `8c763eff3b90f5d599d89c495bbd96da` | Factory Binary Firmware Dump |
+| `1K101-RMX-A110-M1.rwd` | **2010–2016** | 320.1 KB | `886777ea9017d64a914ea51d6451444d` | Factory Binary Firmware Dump |
+| `1K101-RMX-A120-M1.rwd` | **2010–2016** | 320.2 KB | `b99eacd7881144e1286ca44dc4dcc689` | Factory Binary Firmware Dump |
+| `1K101-RMX-A130-M1.rwd` | **2010–2016** | 320.2 KB | `c6610b0bbd3a3af595640147a54e8478` | Factory Binary Firmware Dump |
+| `1K101-RMX-A210-M1.rwd` | **2010–2016** | 320.2 KB | `25ad07b494dd8383035fcf20309b6183` | Factory Binary Firmware Dump |
+| `1K101-RMX-A230-M1.rwd` | **2010–2016** | 320.2 KB | `081b2d8e3bcb22294b0c3436b95e79f4` | Factory Binary Firmware Dump |
+| `1K101-RMX-A240-M1.rwd` | **2010–2016** | 320.3 KB | `ba4ba2b2e38703aa1328b76cb871d198` | Factory Binary Firmware Dump |
+| `1K101-RMX-A250-M1.rwd` | **2010–2016** | 320.3 KB | `62400e3243bed7133a8fc6bd41384dc1` | Factory Binary Firmware Dump |
+| `1K101-RMX-A410-M1.rwd` | **2010–2016** | 320.2 KB | `bc0d9a8d074d3834c9a9d742e066be11` | Factory Binary Firmware Dump |
+| `1K101-RMX-A420-M1.rwd` | **2010–2016** | 320.2 KB | `7ed5ade70031aea45ff6dc03b2955fd1` | Factory Binary Firmware Dump |
+| `1K101-RMX-A610-M1.rwd` | **2010–2016** | 320.2 KB | `5dd38467ed486ffc191dd91993c00b84` | Factory Binary Firmware Dump |
+| `1K101-RMX-A620-M1.rwd` | **2010–2016** | 320.3 KB | `a9b028e48bdf7dc17874f25d059cbe88` | Factory Binary Firmware Dump |
+| `1K101-RMX-A630-M1.rwd` | **2010–2016** | 320.3 KB | `2c46655ec2df53beabcb1e1eb2d15574` | Factory Binary Firmware Dump |
+| `1K101-RMX-A810-M1.rwd` | **2010–2016** | 320.3 KB | `376b1ec819ac5c523285bd4f4460892a` | Factory Binary Firmware Dump |
+| `1K101-RMX-E020-M1.rwd` | **2010–2016** | 320.1 KB | `7dcfbbdcb1655b4dd2f8f32cb879f420` | Factory Binary Firmware Dump |
+| `1K101-RMX-E060-M1.rwd` | **2010–2016** | 320.1 KB | `60eff55567365c1ecdd927805c0ccb3d` | Factory Binary Firmware Dump |
+| `1K101-RMX-E070-M1.rwd` | **2010–2016** | 320.2 KB | `b8f200ccf355943ed2b79c29d8e13aad` | Factory Binary Firmware Dump |
+| `1K101-RMX-E080-M1.rwd` | **2010–2016** | 320.2 KB | `901144fadbcfe52878829bc053e54498` | Factory Binary Firmware Dump |
+| `1K101-RMX-E210-M1.rwd` | **2010–2016** | 320.2 KB | `c09eab5ee8407a000090af824e931d55` | Factory Binary Firmware Dump |
+| `1K101-RMX-E230-M1.rwd` | **2010–2016** | 320.2 KB | `6f7e8ba80c8aeec4b358a3b12cb48edc` | Factory Binary Firmware Dump |
+| `1K101-RMX-E240-M1.rwd` | **2010–2016** | 320.3 KB | `eb755c9a470ab0a4a930ca48cf521f70` | Factory Binary Firmware Dump |
+| `1K101-RMX-E250-M1.rwd` | **2010–2016** | 320.4 KB | `8e7537208b1c807d04f50e76d5f14ed9` | Factory Binary Firmware Dump |
+| `1K101-RMX-E410-M1.rwd` | **2010–2016** | 320.2 KB | `d83d241e9acceb07fc0f1ebaa9b83267` | Factory Binary Firmware Dump |
+| `1K101-RMX-E420-M1.rwd` | **2010–2016** | 320.2 KB | `93c8df2ab1a0cad9f118e79cd4ca7bde` | Factory Binary Firmware Dump |
+| `1K101-RMX-E610-M1.rwd` | **2010–2016** | 320.2 KB | `2d30977fd5327feb42921afe749be9d7` | Factory Binary Firmware Dump |
+| `1K101-RMX-E620-M1.rwd` | **2010–2016** | 320.3 KB | `d3c61997b8ad782e7b4d1a3fe61feb8b` | Factory Binary Firmware Dump |
+| `1K101-RMX-E630-M1.rwd` | **2010–2016** | 320.4 KB | `406b7794e611b3d1d7904d949e05ae70` | Factory Binary Firmware Dump |
+| `1K101-RMX-E810-M1.rwd` | **2010–2016** | 320.4 KB | `445d1aa549dcbc59335f3230b3686c87` | Factory Binary Firmware Dump |
+| `1K101-RMX-J130-M1.rwd` | **2010–2016** | 320.1 KB | `d3161e3324d7cbfed4c53e6d2626ea78` | Factory Binary Firmware Dump |
+| `1K101-RMX-J140-M1.rwd` | **2010–2016** | 320.1 KB | `6166f13f4ef13972bd523f8a641c3d90` | Factory Binary Firmware Dump |
+| `1K101-RMX-J150-M1.rwd` | **2010–2016** | 320.2 KB | `5dfb561dd99a24f099cadbddf3ca157e` | Factory Binary Firmware Dump |
+| `1K101-RMX-J160-M1.rwd` | **2010–2016** | 320.2 KB | `e91c85764c6825543238507f6513f47b` | Factory Binary Firmware Dump |
+| `1K101-RMX-J230-M1.rwd` | **2010–2016** | 320.1 KB | `93d25c6d7ed8b6562c109b030e2d17ff` | Factory Binary Firmware Dump |
+| `1K101-RMX-J240-M1.rwd` | **2010–2016** | 320.2 KB | `6f697b997b0b7cb717b634cb61900387` | Factory Binary Firmware Dump |
+| `1K101-RMX-J250-M1.rwd` | **2010–2016** | 320.2 KB | `f700e7af34764fe35e2a552927365956` | Factory Binary Firmware Dump |
+| `1K101-RMX-J410-M1.rwd` | **2010–2016** | 320.2 KB | `1bd0c19d703f87ad26dd62e9b97324e7` | Factory Binary Firmware Dump |
+| `1K101-RMX-J420-M1.rwd` | **2010–2016** | 320.2 KB | `d84be475e81ba863d3a620614f0aeda6` | Factory Binary Firmware Dump |
+| `1K101-RMX-J610-M1.rwd` | **2010–2016** | 320.2 KB | `aa79f62b85852c751e73f2e30353de98` | Factory Binary Firmware Dump |
+| `1K101-RMX-J620-M1.rwd` | **2010–2016** | 320.3 KB | `f612c08d1db9424a956328d5d3bd2cf0` | Factory Binary Firmware Dump |
+| `1K101-RMX-J630-M1.rwd` | **2010–2016** | 320.3 KB | `eaf3267dbda2df85c5d6e71c418e6e62` | Factory Binary Firmware Dump |
+| `1K101-RMX-J710-M1.rwd` | **2010–2016** | 320.2 KB | `802dc49c0a196c8683f439d4ee73f5c3` | Factory Binary Firmware Dump |
+| `1K101-RMX-J720-M1.rwd` | **2010–2016** | 320.2 KB | `82910213e4bdf84c6abb03fb268323c9` | Factory Binary Firmware Dump |
+| `1K101-RMX-J730-M1.rwd` | **2010–2016** | 320.2 KB | `b25e89e6847b3eab710be0bd1bb35441` | Factory Binary Firmware Dump |
+| `1K101-RMX-Z010-M1.rwd` | **2010–2016** | 320.1 KB | `919463a07e63fd0d4b93fdbcce6182cb` | Factory Binary Firmware Dump |
+| `1K101-RMX-Z030-M1.rwd` | **2010–2016** | 320.2 KB | `5cd54d9b103330dca5d8e1f4e909db98` | Factory Binary Firmware Dump |
+| `1K101-RMX-Z050-M1.rwd` | **2010–2016** | 320.2 KB | `fba8fecc700768cef4ca5cb33296c4ac` | Factory Binary Firmware Dump |
+| `1K101-RMX-Z060-M1.rwd` | **2010–2016** | 320.3 KB | `ea029bb467bb404fcd26d988f4e44933` | Factory Binary Firmware Dump |
+| `1K101-RMX-Z070-M1.rwd` | **2010–2016** | 320.3 KB | `406661ea481bebaa6fc21d0bcbaf6b02` | Factory Binary Firmware Dump |
+| `1K101-RMX-Z810-M1.rwd` | **2010–2016** | 320.3 KB | `40463ed6ac103b0d2839b26d9e6e5967` | Factory Binary Firmware Dump |
+| `1K101-RTW-A030-M1.rwd` | **2010–2016** | 320.1 KB | `1684478985e047729c77798d7639a5b1` | Factory Binary Firmware Dump |
+| `1K101-RTW-A040-M1.rwd` | **2010–2016** | 320.1 KB | `7f2138e39abf95e3008bd6e80274ab28` | Factory Binary Firmware Dump |
+| `1K101-RTW-A110-M1.rwd` | **2010–2016** | 320.1 KB | `d4852df71f13f2884bb036b060192ee0` | Factory Binary Firmware Dump |
+| `1K101-RTW-A120-M1.rwd` | **2010–2016** | 320.1 KB | `f9abaa70029a29aeaa83324ebe35872a` | Factory Binary Firmware Dump |
+| `1K101-RTW-A220-M1.rwd` | **2010–2016** | 448.1 KB | `08c5b9b32eb09d591b2ac3fad5a8e5f4` | Factory Binary Firmware Dump |
+| `1K101-RTW-A230-M1.rwd` | **2010–2016** | 448.1 KB | `ddc4f6bb7824a9043b008040b919569d` | Factory Binary Firmware Dump |
+| `1K101-RTW-A530-M1.rwd` | **2010–2016** | 320.1 KB | `98ba230ad7fa1e1f5fac3bc942ea3b14` | Factory Binary Firmware Dump |
+| `1K101-RTW-A540-M1.rwd` | **2010–2016** | 320.2 KB | `8de2507b2197dcecb23a5eb24012fa5b` | Factory Binary Firmware Dump |
+| `1K101-RTW-A610-M1.rwd` | **2010–2016** | 320.1 KB | `a27082e62014839545335d4efee8afa6` | Factory Binary Firmware Dump |
+| `1K101-RTW-A620-M1.rwd` | **2010–2016** | 320.1 KB | `45c5db3663f6540402479a82a56e764c` | Factory Binary Firmware Dump |
+| `1K101-RTW-A720-M1.rwd` | **2010–2016** | 448.1 KB | `bea45ed0241ccc3cd8be8a0a3dae079e` | Factory Binary Firmware Dump |
+| `1K101-RTW-A730-M1.rwd` | **2010–2016** | 448.1 KB | `9f2c44d2a7db23be4816ebef49170f45` | Factory Binary Firmware Dump |
+| `1K101-RTW-H530-M1.rwd` | **2010–2016** | 320.1 KB | `e81ea47084911651f7ec55b90a13ddce` | Factory Binary Firmware Dump |
+| `1K101-RTW-J040-M1.rwd` | **2010–2016** | 320.1 KB | `ed1bceebaa26835da8fb38ed4ca2f5fc` | Factory Binary Firmware Dump |
+| `1K101-RTW-J050-M1.rwd` | **2010–2016** | 320.1 KB | `4bdf140973b3f78dd260565c56d66f3e` | Factory Binary Firmware Dump |
+| `1K101-RTW-J110-M1.rwd` | **2010–2016** | 320.1 KB | `a27a096d5fbed4d80de1f45bb02cd429` | Factory Binary Firmware Dump |
+| `1K101-RTW-J140-M1.rwd` | **2010–2016** | 320.2 KB | `6935f133d50c432c88239acb9a898dfb` | Factory Binary Firmware Dump |
+| `1K101-RTW-J540-M1.rwd` | **2010–2016** | 320.1 KB | `b2269470aee59ad591b526e11aa30c6e` | Factory Binary Firmware Dump |
+| `1K101-RTW-J550-M1.rwd` | **2010–2016** | 320.1 KB | `86da3e414a88ee2cf6c7b10f2ce43cc5` | Factory Binary Firmware Dump |
+| `1K101-RTW-J610-M1.rwd` | **2010–2016** | 320.1 KB | `d64fb0fc43cfede7df8d7841a0b5d28e` | Factory Binary Firmware Dump |
+| `1K101-RTW-J630-M1.rwd` | **2010–2016** | 320.2 KB | `ddf05bf92ba01c035cfc7c25fa3e4240` | Factory Binary Firmware Dump |
+| `28125-PZA-3060.rwd` | **2010–2016** | 88.9 KB | `8eccc473dc9c0240b57965029921ec34` | Factory Binary Firmware Dump |
+| `28125-PZA-3070.rwd` | **2010–2016** | 88.9 KB | `8a6421bda0fcf95bca47285890a0cd2c` | Factory Binary Firmware Dump |
+| `28125-PZA-3090.rwd` | **2010–2016** | 90.3 KB | `52793c0f55a37fbe449cc7be8d8e84eb` | Factory Binary Firmware Dump |
+| `28125-PZA-4050.rwd` | **2010–2016** | 91.4 KB | `08386d85c7cabfeb399c7fce3b95615c` | Factory Binary Firmware Dump |
+| `37805-PZA-3050.rwd` | **2010–2016** | 348.2 KB | `7216891e9b0b902d2c923eb74c6ccac0` | Factory Binary Firmware Dump |
+| `37805-PZA-3060.rwd` | **2010–2016** | 348.2 KB | `b55e0a354549693e2e4008683a13cd9b` | Factory Binary Firmware Dump |
+| `37805-PZA-3170.rwd` | **2010–2016** | 312.0 KB | `ffa9c7340c9dc38e59f6fe1e540e9dd4` | Factory Binary Firmware Dump |
+| `37805-PZA-3180.rwd` | **2010–2016** | 312.0 KB | `60942adf5c2f9604cdf2781346978d75` | Factory Binary Firmware Dump |
+| `37805-PZA-3190.rwd` | **2010–2016** | 312.0 KB | `ae050a942421ee13888f63442682648d` | Factory Binary Firmware Dump |
+| `37805-PZA-3270.rwd` | **2010–2016** | 312.3 KB | `fb1dcd59b2526b835cbe020a3294af91` | Factory Binary Firmware Dump |
+| `37805-PZA-3280.rwd` | **2010–2016** | 312.3 KB | `3bdeb8f008c29fd0b4f7f7076e465b08` | Factory Binary Firmware Dump |
+| `37805-PZA-3290.rwd` | **2010–2016** | 312.3 KB | `9f2ba631a3fcf35cc4a302cd29f6d112` | Factory Binary Firmware Dump |
+| `37805-PZA-4060.rwd` | **2010–2016** | 358.0 KB | `7abf2b9c68afcd24b00c1e255a508593` | Factory Binary Firmware Dump |
+| `37805-PZA-4070.rwd` | **2010–2016** | 358.0 KB | `7de54d37ca9764d2293b41c9b25b8d80` | Factory Binary Firmware Dump |
+| `37805-PZA-4150.rwd` | **2010–2016** | 312.0 KB | `3968c00d6f3e24e6fe020b558130d0f9` | Factory Binary Firmware Dump |
+| `37805-PZA-4180.rwd` | **2010–2016** | 358.2 KB | `a034c8280015726119b59b8584ead0e4` | Factory Binary Firmware Dump |
+| `37805-PZA-4190.rwd` | **2010–2016** | 358.2 KB | `3daf373bdc4cdd86ba77254910e42ed8` | Factory Binary Firmware Dump |
+| `37805-PZA-4250.rwd` | **2010–2016** | 312.3 KB | `83418002582c269e7ff690835d83fc04` | Factory Binary Firmware Dump |
+| `37805-PZA-4280.rwd` | **2010–2016** | 358.4 KB | `634b5fec1cec173c537084080ef0f8e5` | Factory Binary Firmware Dump |
+| `37805-PZA-4290.rwd` | **2010–2016** | 358.4 KB | `c1c2386456d43ef16f001bef63e4fd4a` | Factory Binary Firmware Dump |
+| `37805-PZA-5150.rwd` | **2010–2016** | 358.2 KB | `350ef300c02cc9448bfddbeca3ab7ef2` | Factory Binary Firmware Dump |
+| `37805-PZA-5250.rwd` | **2010–2016** | 358.4 KB | `3a1e920d489a9aed5c4176f262573eba` | Factory Binary Firmware Dump |
+| `37805-PZA-A160-M1.rwd` | **2010–2016** | 369.3 KB | `f867f081da9eedc2203fb0d9892b4bc1` | Factory Binary Firmware Dump |
+| `37805-PZA-A170-M1.rwd` | **2010–2016** | 371.7 KB | `fb8563fc3e3e9a5f0f1a4a2c23c4120e` | Factory Binary Firmware Dump |
+| `37805-PZA-A650-M1.rwd` | **2010–2016** | 369.2 KB | `87bbaa85757580fbe7fd1cfc521b4d85` | Factory Binary Firmware Dump |
+| `37805-PZA-A660-M1.rwd` | **2010–2016** | 371.7 KB | `5552a26f87ebb2c0a42938ff02d356cc` | Factory Binary Firmware Dump |
+| `37805-PZA-C650-M1.rwd` | **2010–2016** | 369.2 KB | `6fa5e9a5d56feafce4ee17596b00049d` | Factory Binary Firmware Dump |
+| `37805-PZA-C660-M1.rwd` | **2010–2016** | 371.7 KB | `c9ab6e3529edd59fafa7c5c16272dabd` | Factory Binary Firmware Dump |
+| `37805-PZA-L150-M1.rwd` | **2010–2016** | 369.1 KB | `0014fc802ae2370cbfd2daa8df50ad49` | Factory Binary Firmware Dump |
+| `37805-PZA-L640-M1.rwd` | **2010–2016** | 368.6 KB | `bc554b56040b1c17c5aef86fcca37956` | Factory Binary Firmware Dump |
+| `37805-RBJ-3050-M1.rwd` | **2010–2016** | 992.2 KB | `cf325c0267f75ba30c061966e4870e9e` | Factory Binary Firmware Dump |
+| `37805-RBJ-3060-M1.rwd` | **2010–2016** | 992.2 KB | `5f67425b5e54080cba01611a89a13461` | Factory Binary Firmware Dump |
+| `37805-RBJ-A420-M1.rwd` | **2010–2016** | 992.1 KB | `03013033f278df034db3e95a90933fe0` | Factory Binary Firmware Dump |
+| `37805-RBJ-A540-M1.rwd` | **2010–2016** | 992.1 KB | `5175923da5730387b5334aec4b835759` | Factory Binary Firmware Dump |
+| `37805-RBJ-A550-M1.rwd` | **2010–2016** | 992.2 KB | `2ee495c9994087593a6391c369eaafa1` | Factory Binary Firmware Dump |
+| `37805-RBJ-A640-M1.rwd` | **2010–2016** | 992.1 KB | `72685c76631247c9938af48990b4aab4` | Factory Binary Firmware Dump |
+| `37805-RBJ-A650-M1.rwd` | **2010–2016** | 992.2 KB | `5c574dcdc0305975c37dea810fa4492a` | Factory Binary Firmware Dump |
+| `37805-RBJ-D520-M1.rwd` | **2010–2016** | 992.1 KB | `9d1862e74ee8b6bee53a5952343222b9` | Factory Binary Firmware Dump |
+| `37805-RBJ-E550-M1.rwd` | **2010–2016** | 992.2 KB | `958a0610eba93f02e8084d5f9c2a6a13` | Factory Binary Firmware Dump |
+| `37805-RBJ-E560-M1.rwd` | **2010–2016** | 992.2 KB | `b5b904b254461586e105c702e8e377c5` | Factory Binary Firmware Dump |
+| `37805-RBJ-E650-M1.rwd` | **2010–2016** | 992.2 KB | `5a210f45ba08103c403c45a8c09c94e6` | Factory Binary Firmware Dump |
+| `37805-RBJ-E660-M1.rwd` | **2010–2016** | 992.2 KB | `0126f5a07a5c989751164914d2a903ae` | Factory Binary Firmware Dump |
+| `37805-RBJ-E750-M1.rwd` | **2010–2016** | 992.2 KB | `230c799c7ad91b2be9f37aa41e4e9b33` | Factory Binary Firmware Dump |
+| `37805-RBJ-E760-M1.rwd` | **2010–2016** | 992.2 KB | `cfc22d775a5bcb5918e152d4955f163f` | Factory Binary Firmware Dump |
+| `37805-RBJ-E780-M1.rwd` | **2010–2016** | 992.1 KB | `7a93ce057210be6b88eb9c8febd7224d` | Factory Binary Firmware Dump |
+| `37805-RBJ-J510-M1.rwd` | **2010–2016** | 992.1 KB | `aacac5763dbb61a19236fe59f331c171` | Factory Binary Firmware Dump |
+| `37805-RBJ-J520-M1.rwd` | **2010–2016** | 992.1 KB | `c4e72c489aeca6225ca29acc975627f3` | Factory Binary Firmware Dump |
+| `37805-RBJ-J530-M1.rwd` | **2010–2016** | 992.1 KB | `4162a5ca6073cb665900160a15dad6d0` | Factory Binary Firmware Dump |
+| `37805-RBJ-J540-M1.rwd` | **2010–2016** | 992.1 KB | `0bd546b33924d1af6d629fa8a663e25b` | Factory Binary Firmware Dump |
+| `37805-RBJ-J550-M1.rwd` | **2010–2016** | 992.2 KB | `a78792096ed4d5babad0696ff48b4e74` | Factory Binary Firmware Dump |
+| `37805-RBJ-J570-M1.rwd` | **2010–2016** | 992.1 KB | `c357818db4b4af19c0fed235a2b0147c` | Factory Binary Firmware Dump |
+| `37805-RBJ-J610-M1.rwd` | **2010–2016** | 992.1 KB | `dfda020f80ae52d01f7bce5e5da238b2` | Factory Binary Firmware Dump |
+| `37805-RBJ-J620-M1.rwd` | **2010–2016** | 992.1 KB | `95266feaba46b2cc1306d89609e783f1` | Factory Binary Firmware Dump |
+| `37805-RBJ-J630-M1.rwd` | **2010–2016** | 992.1 KB | `c308b72e7e58eaa8ba71fee935ad71f8` | Factory Binary Firmware Dump |
+| `37805-RBJ-J640-M1.rwd` | **2010–2016** | 992.1 KB | `a524c282a595ace18e3a41c6e512cb2c` | Factory Binary Firmware Dump |
+| `37805-RBJ-J650-M1.rwd` | **2010–2016** | 992.2 KB | `e9f4a0c8c00e9a8675481e96ca892234` | Factory Binary Firmware Dump |
+| `37805-RBJ-J670-M1.rwd` | **2010–2016** | 992.1 KB | `d7c6094f73ca6413685982e3352f5481` | Factory Binary Firmware Dump |
+| `37805-RBJ-L040-M1.rwd` | **2010–2016** | 1.94 MB | `5f7c01e86d04c8ccac3a9a8a709a2e14` | Factory Binary Firmware Dump |
+| `37805-RBJ-L130-M1.rwd` | **2010–2016** | 1.94 MB | `fd503cb8e6f72fcffa7403852f826028` | Factory Binary Firmware Dump |
+| `37805-RBJ-L420-M1.rwd` | **2010–2016** | 992.1 KB | `54e4a026a98ca19f3645701efd0f8acb` | Factory Binary Firmware Dump |
+| `37805-RBJ-L440-M1.rwd` | **2010–2016** | 992.1 KB | `e94ecd789b2703a219c81b594c90c0ff` | Factory Binary Firmware Dump |
+| `37805-RBJ-L540-M1.rwd` | **2010–2016** | 992.1 KB | `64d1aa1f8c74fe3114e4e5e40ef2f24b` | Factory Binary Firmware Dump |
+| `37805-RBJ-L550-M1.rwd` | **2010–2016** | 992.2 KB | `9498169ce07db1edead7aa32a106b33a` | Factory Binary Firmware Dump |
+| `37805-RBJ-L640-M1.rwd` | **2010–2016** | 992.1 KB | `1a0bee6eb6e606c2f0bb21251a3fef87` | Factory Binary Firmware Dump |
+| `37805-RBJ-L650-M1.rwd` | **2010–2016** | 992.2 KB | `2dcc90ee89fb0f71643017f3813fb47b` | Factory Binary Firmware Dump |
+| `37805-RMX-3050.rwd` | **2010–2016** | 992.2 KB | `9562d144fc5a4c3b1f67b15cf5baca3a` | Factory Binary Firmware Dump |
+| `37805-RMX-3060.rwd` | **2010–2016** | 992.1 KB | `0c5d85d3c61e3ee263eca0f2df4c4d5b` | Factory Binary Firmware Dump |
+| `37805-RMX-3070.rwd` | **2010–2016** | 992.1 KB | `f96578c00325d6cc79d2fc1848bb1485` | Factory Binary Firmware Dump |
+| `37805-RMX-3090.rwd` | **2010–2016** | 992.1 KB | `76579ea9e3ddeb5e823a2ae4b029f671` | Factory Binary Firmware Dump |
+| `37805-RMX-3150.rwd` | **2010–2016** | 992.2 KB | `383794ec442c71e71d0485385825c98c` | Factory Binary Firmware Dump |
+| `37805-RMX-3160.rwd` | **2010–2016** | 992.2 KB | `f8f8332be0440ec72f3b2ba01a1259e6` | Factory Binary Firmware Dump |
+| `37805-RMX-3170.rwd` | **2010–2016** | 992.2 KB | `c488e5fe47b051a8890c79426274ef02` | Factory Binary Firmware Dump |
+| `37805-RMX-3190.rwd` | **2010–2016** | 992.2 KB | `32fe5f3eafb388a600130f719e164b04` | Factory Binary Firmware Dump |
+| `37805-RMX-3250.rwd` | **2010–2016** | 992.2 KB | `80c0b06d98d9d70b66c193f445f89463` | Factory Binary Firmware Dump |
+| `37805-RMX-4050.rwd` | **2010–2016** | 992.1 KB | `54373449897f5c88161f82b0e496a5ed` | Factory Binary Firmware Dump |
+| `37805-RMX-4060.rwd` | **2010–2016** | 992.1 KB | `312fe0647b5f371e6bb3400c6ef55a6a` | Factory Binary Firmware Dump |
+| `37805-RMX-4070.rwd` | **2010–2016** | 992.1 KB | `5949be41d222dafb3cde2bf9b20cdb51` | Factory Binary Firmware Dump |
+| `37805-RMX-4080.rwd` | **2010–2016** | 992.2 KB | `9d94fd2a05f1bfeb0637533444758b69` | Factory Binary Firmware Dump |
+| `37805-RMX-4090.rwd` | **2010–2016** | 992.1 KB | `f33607c7b285eb4ca57809afac615211` | Factory Binary Firmware Dump |
+| `37805-RMX-4150.rwd` | **2010–2016** | 992.1 KB | `31615b6469c286df4bf9ee7fe95b5b7d` | Factory Binary Firmware Dump |
+| `37805-RMX-4160.rwd` | **2010–2016** | 992.2 KB | `139e80f8d7806cd73b11d4a99dc32b4a` | Factory Binary Firmware Dump |
+| `37805-RMX-4170.rwd` | **2010–2016** | 992.2 KB | `e46712c423cb4b205211b4b8edd63a11` | Factory Binary Firmware Dump |
+| `37805-RMX-4180.rwd` | **2010–2016** | 992.2 KB | `95eab2e2aec1da686f000ea76360ac73` | Factory Binary Firmware Dump |
+| `37805-RMX-4190.rwd` | **2010–2016** | 992.1 KB | `21088663dd92b039262eb856afa45931` | Factory Binary Firmware Dump |
+| `37805-RMX-5050.rwd` | **2010–2016** | 992.1 KB | `03151f4ff960a64abdb3707332673fa1` | Factory Binary Firmware Dump |
+| `37805-RMX-5060.rwd` | **2010–2016** | 992.1 KB | `a48bc21b67260c1e333e66daddd63fc6` | Factory Binary Firmware Dump |
+| `37805-RMX-5070.rwd` | **2010–2016** | 992.1 KB | `16c7ea31581c3c617b9f52979908557a` | Factory Binary Firmware Dump |
+| `37805-RMX-5080.rwd` | **2010–2016** | 992.2 KB | `b955083da8d6e3a4d15bf09ddfa740d4` | Factory Binary Firmware Dump |
+| `37805-RMX-5090.rwd` | **2010–2016** | 992.2 KB | `f816d04d68e8381b5954820df1d1a7cf` | Factory Binary Firmware Dump |
+| `37805-RMX-5150.rwd` | **2010–2016** | 992.2 KB | `0cebadfd74875289fc444044a781585f` | Factory Binary Firmware Dump |
+| `37805-RMX-5160.rwd` | **2010–2016** | 992.2 KB | `468e44f9f5847acde9d1cd0e7c726f75` | Factory Binary Firmware Dump |
+| `37805-RMX-5170.rwd` | **2010–2016** | 992.2 KB | `52a2b6c4ee3034efb28e094fe7d7d962` | Factory Binary Firmware Dump |
+| `37805-RMX-5180.rwd` | **2010–2016** | 992.2 KB | `7730307fb2989b454264dc85a19f7743` | Factory Binary Firmware Dump |
+| `37805-RMX-5190.rwd` | **2010–2016** | 992.2 KB | `a7492c4d7ca6dd81c3877009eef6ad64` | Factory Binary Firmware Dump |
+| `37805-RMX-5270.rwd` | **2010–2016** | 992.2 KB | `fc9eafcd938fe78631bb87dcc94b6d7b` | Factory Binary Firmware Dump |
+| `37805-RMX-9530-M1.rwd` | **2010–2016** | 992.1 KB | `30d9efa209f8fa2782b8b255f1c26ae2` | Factory Binary Firmware Dump |
+| `37805-RMX-9540-M1.rwd` | **2010–2016** | 992.1 KB | `b99d74d99512fbf87e4a398c6fd5d30f` | Factory Binary Firmware Dump |
+| `37805-RMX-9620-M1.rwd` | **2010–2016** | 992.1 KB | `f248309df3b710ae70dbf9d4df77fd07` | Factory Binary Firmware Dump |
+| `37805-RMX-9660-M1.rwd` | **2010–2016** | 992.1 KB | `984165c1d3711594dbe6c630718af580` | Factory Binary Firmware Dump |
+| `37805-RMX-9670-M1.rwd` | **2010–2016** | 992.1 KB | `509d525e349608eece681d2520c09acd` | Factory Binary Firmware Dump |
+| `37805-RMX-9720-M1.rwd` | **2010–2016** | 992.1 KB | `d526786ac8b25b91174839d88a4191a0` | Factory Binary Firmware Dump |
+| `37805-RMX-9760-M1.rwd` | **2010–2016** | 992.1 KB | `ca8a91292cdb42bfc79c9ae42e6f350d` | Factory Binary Firmware Dump |
+| `37805-RMX-9770-M1.rwd` | **2010–2016** | 992.1 KB | `eb53753b318e9ca96ddcec36db7d9f10` | Factory Binary Firmware Dump |
+| `37805-RMX-9820-M1.rwd` | **2010–2016** | 992.1 KB | `be3a7f3148b5f5d3874762d758a7c6d4` | Factory Binary Firmware Dump |
+| `37805-RMX-9850-M1.rwd` | **2010–2016** | 992.1 KB | `9b2c46a9a4c2c1ec3e323d796e31d69e` | Factory Binary Firmware Dump |
+| `37805-RMX-9860-M1.rwd` | **2010–2016** | 992.1 KB | `265d397f60684e5616d70dd6f58c3366` | Factory Binary Firmware Dump |
+| `37805-RMX-9920-M1.rwd` | **2010–2016** | 992.1 KB | `1022938075f025ac35fa8c8310fca6b6` | Factory Binary Firmware Dump |
+| `37805-RMX-9950-M1.rwd` | **2010–2016** | 992.1 KB | `bea03b8703777a627c64d34f328a421a` | Factory Binary Firmware Dump |
+| `37805-RMX-9960-M1.rwd` | **2010–2016** | 992.1 KB | `9c1c8712806fc8acc7d1477cd7e66d7b` | Factory Binary Firmware Dump |
+| `37805-RMX-A030-M1.rwd` | **2010–2016** | 992.1 KB | `d5dd393e37fef3add8c7a1492beae686` | Factory Binary Firmware Dump |
+| `37805-RMX-A060-M1.rwd` | **2010–2016** | 992.1 KB | `358ac798e7e1b1628b64b8be3a567030` | Factory Binary Firmware Dump |
+| `37805-RMX-A070-M1.rwd` | **2010–2016** | 992.1 KB | `aee4b6bbc72c42a88177d0816f35c0e4` | Factory Binary Firmware Dump |
+| `37805-RMX-A130-M1.rwd` | **2010–2016** | 992.1 KB | `7c2ba1faae6b010c6236f0ed728bcc1a` | Factory Binary Firmware Dump |
+| `37805-RMX-A140-M1.rwd` | **2010–2016** | 992.1 KB | `37a653252848265eeb4e55d3a4e0021d` | Factory Binary Firmware Dump |
+| `37805-RMX-A580-M1.rwd` | **2010–2016** | 992.2 KB | `686b129d7e809694fb1d173c62549f59` | Factory Binary Firmware Dump |
+| `37805-RMX-A610-M1.rwd` | **2010–2016** | 992.2 KB | `2ba927951bc62af62aa131e9f5c027c9` | Factory Binary Firmware Dump |
+| `37805-RMX-A620-M1.rwd` | **2010–2016** | 992.2 KB | `122074fb1f9ce165f7eacadae801d401` | Factory Binary Firmware Dump |
+| `37805-RMX-A630-M1.rwd` | **2010–2016** | 992.2 KB | `5209328002fc7ffdbf664a336b5f325d` | Factory Binary Firmware Dump |
+| `37805-RMX-D030-M1.rwd` | **2010–2016** | 992.1 KB | `f1c42094542d4163062eeb8cb0da6788` | Factory Binary Firmware Dump |
+| `37805-RMX-D040-M1.rwd` | **2010–2016** | 992.1 KB | `f8c221564fecfd48aa629b47b8d78d0d` | Factory Binary Firmware Dump |
+| `37805-RMX-D520-M1.rwd` | **2010–2016** | 992.1 KB | `814b1a65e772e3e417b30b774977dbfe` | Factory Binary Firmware Dump |
+| `37805-RMX-E030-M1.rwd` | **2010–2016** | 992.1 KB | `5320e00eca390630916ec3262c2798d3` | Factory Binary Firmware Dump |
+| `37805-RMX-E060-M1.rwd` | **2010–2016** | 992.1 KB | `93104b0ad126c506ebaed452665c0fde` | Factory Binary Firmware Dump |
+| `37805-RMX-E070-M1.rwd` | **2010–2016** | 992.1 KB | `38e5836161e348e82e54f8fec04a2ba1` | Factory Binary Firmware Dump |
+| `37805-RMX-E530-M1.rwd` | **2010–2016** | 992.1 KB | `3071df5fba9706d3ec94144f29d30843` | Factory Binary Firmware Dump |
+| `37805-RMX-E550-M1.rwd` | **2010–2016** | 992.2 KB | `fa2e320ef5bbd53c797ab9688eed90cb` | Factory Binary Firmware Dump |
+| `37805-RMX-E560-M1.rwd` | **2010–2016** | 992.2 KB | `ce1d88ad1147abc0ec7973b6921de13a` | Factory Binary Firmware Dump |
+| `37805-RMX-E570-M1.rwd` | **2010–2016** | 992.2 KB | `05aa37aef9d7aeffccf9bf64586e4564` | Factory Binary Firmware Dump |
+| `37805-RMX-H540-M1.rwd` | **2010–2016** | 992.1 KB | `c1c68f724c53b6afc905fa19c84e731f` | Factory Binary Firmware Dump |
+| `37805-RMX-H630-M1.rwd` | **2010–2016** | 992.1 KB | `0bf11d6c2495089668348a57b13340b9` | Factory Binary Firmware Dump |
+| `37805-RMX-H830-M1.rwd` | **2010–2016** | 992.1 KB | `6d4ea77902dd393cefc3385291bbd25d` | Factory Binary Firmware Dump |
+| `37805-RMX-H840-M1.rwd` | **2010–2016** | 992.1 KB | `edf7279f74bf50025d9741f3bd2c30fa` | Factory Binary Firmware Dump |
+| `37805-RMX-J320-M1.rwd` | **2010–2016** | 992.1 KB | `8c2d2781df24ab8fde854c1f28d2082e` | Factory Binary Firmware Dump |
+| `37805-RMX-J360-M1.rwd` | **2010–2016** | 992.1 KB | `bd4c1a7d14b1c9de3fd34376bc3c668c` | Factory Binary Firmware Dump |
+| `37805-RMX-J370-M1.rwd` | **2010–2016** | 992.1 KB | `36e98bfc6d501b600a088ff80a185db8` | Factory Binary Firmware Dump |
+| `37805-RMX-J420-M1.rwd` | **2010–2016** | 992.1 KB | `90cb7121e3999524d393636403436b9c` | Factory Binary Firmware Dump |
+| `37805-RMX-J460-M1.rwd` | **2010–2016** | 992.1 KB | `746c33a3fb3cfa32a75e88fac41c1198` | Factory Binary Firmware Dump |
+| `37805-RMX-J470-M1.rwd` | **2010–2016** | 992.1 KB | `3000331bc1650935e8ddb2edd89bcd5d` | Factory Binary Firmware Dump |
+| `37805-RMX-J530-M1.rwd` | **2010–2016** | 992.1 KB | `5777bf861e67f9ff238bfe9bbeea01f7` | Factory Binary Firmware Dump |
+| `37805-RMX-J550-M1.rwd` | **2010–2016** | 992.2 KB | `b8bf34f4256059cf2ea4827cb352f3b6` | Factory Binary Firmware Dump |
+| `37805-RMX-J560-M1.rwd` | **2010–2016** | 992.2 KB | `db29aba97ce3c99b2dee6b2d451b35b4` | Factory Binary Firmware Dump |
+| `37805-RMX-J570-M1.rwd` | **2010–2016** | 992.2 KB | `5bb6c600f966f1afe7a4bc4d93033769` | Factory Binary Firmware Dump |
+| `37805-RMX-J580-M1.rwd` | **2010–2016** | 992.2 KB | `3d4dfa05359e71bfe30b0f1861f6c585` | Factory Binary Firmware Dump |
+| `37805-RMX-J630-M1.rwd` | **2010–2016** | 992.1 KB | `f4516508e5e0b1bce4e6911e335c10ca` | Factory Binary Firmware Dump |
+| `37805-RMX-J650-M1.rwd` | **2010–2016** | 992.2 KB | `5ee7a2782453b5dfbdde778c2c90b0be` | Factory Binary Firmware Dump |
+| `37805-RMX-J660-M1.rwd` | **2010–2016** | 992.2 KB | `18589618de30f5f060336e1a8685273f` | Factory Binary Firmware Dump |
+| `37805-RMX-J670-M1.rwd` | **2010–2016** | 992.2 KB | `e6375b92a8164a5711d07d70361f5719` | Factory Binary Firmware Dump |
+| `37805-RMX-J680-M1.rwd` | **2010–2016** | 992.2 KB | `bab8fea92e958fb9507b8eb5af3e5341` | Factory Binary Firmware Dump |
+| `37805-RMX-J730-M1.rwd` | **2010–2016** | 992.1 KB | `10af373778d603d99803cf8117076c50` | Factory Binary Firmware Dump |
+| `37805-RMX-J750-M1.rwd` | **2010–2016** | 992.2 KB | `51ffd7cf5a81d1460e7ffc5f862e0726` | Factory Binary Firmware Dump |
+| `37805-RMX-J760-M1.rwd` | **2010–2016** | 992.2 KB | `176d8b00d8e892c118edd93e8eced12a` | Factory Binary Firmware Dump |
+| `37805-RMX-J770-M1.rwd` | **2010–2016** | 992.2 KB | `31f8162ba0c41fed8449f209aa6cd542` | Factory Binary Firmware Dump |
+| `37805-RMX-J780-M1.rwd` | **2010–2016** | 992.2 KB | `9c9b3e917526cab0db8316e73fc0922c` | Factory Binary Firmware Dump |
+| `37805-RMX-J830-M1.rwd` | **2010–2016** | 992.1 KB | `d8fd2cee14bf23189a98d1787d5836af` | Factory Binary Firmware Dump |
+| `37805-RMX-J850-M1.rwd` | **2010–2016** | 992.2 KB | `e263dec12557484702d20c98d2bd818d` | Factory Binary Firmware Dump |
+| `37805-RMX-J860-M1.rwd` | **2010–2016** | 992.2 KB | `6092752e4a4794712329065b50971697` | Factory Binary Firmware Dump |
+| `37805-RMX-J870-M1.rwd` | **2010–2016** | 992.2 KB | `b5ea31d3ca459770a3fd11063daddb1e` | Factory Binary Firmware Dump |
+| `37805-RMX-J880-M1.rwd` | **2010–2016** | 992.2 KB | `18b70c5fb5df2e66cd3fe8ca2f16844e` | Factory Binary Firmware Dump |
+| `37805-RMX-N020-M1.rwd` | **2010–2016** | 992.1 KB | `fa6b697fc225751bbe17213bc4cfe1f3` | Factory Binary Firmware Dump |
+| `37805-RMX-Q030-M1.rwd` | **2010–2016** | 992.1 KB | `4cabc3b22b9b338de5a129af2e5f5b0a` | Factory Binary Firmware Dump |
+| `37805-RMX-Q040-M1.rwd` | **2010–2016** | 992.1 KB | `552883c70ed802a157c9fc552325e311` | Factory Binary Firmware Dump |
+| `37805-RMX-Q120-M1.rwd` | **2010–2016** | 992.1 KB | `598e4089495431086472ae68fbf32280` | Factory Binary Firmware Dump |
+| `37805-RMX-Q140-M1.rwd` | **2010–2016** | 992.1 KB | `20538dfa1b6a51e33526ac9dc5b532f7` | Factory Binary Firmware Dump |
+| `37805-RMX-Q150-M1.rwd` | **2010–2016** | 992.1 KB | `fc6f47d4e699c40b1ad7aa87a5d4a207` | Factory Binary Firmware Dump |
+| `37805-RMX-Q520-M1.rwd` | **2010–2016** | 992.1 KB | `b6118994cee2d26f60cdb8bd2f48026e` | Factory Binary Firmware Dump |
+| `37805-RMX-Q540-M1.rwd` | **2010–2016** | 992.1 KB | `a215198ba82ec20c90a4afca3ae24d95` | Factory Binary Firmware Dump |
+| `37805-RMX-Q550-M1.rwd` | **2010–2016** | 992.2 KB | `5e9a5a171aa605dac8843c5f7b4593dd` | Factory Binary Firmware Dump |
+| `37805-RMX-Q560-M1.rwd` | **2010–2016** | 992.2 KB | `96cdd3d8263ce8591fc0fcc349f36160` | Factory Binary Firmware Dump |
+| `37805-RMX-X020-M1.rwd` | **2010–2016** | 992.1 KB | `80ce72216cc3701c9e52706f971ad31d` | Factory Binary Firmware Dump |
+| `37805-RMX-X050-M1.rwd` | **2010–2016** | 992.1 KB | `abc799710c6450d7938cec9ac34c9236` | Factory Binary Firmware Dump |
+| `37805-RMX-X060-M1.rwd` | **2010–2016** | 992.1 KB | `254eaa044371138f3973ac24fa318219` | Factory Binary Firmware Dump |
+| `37805-RMX-X530-M1.rwd` | **2010–2016** | 992.1 KB | `945363c674a5aa981b2ec52312adc266` | Factory Binary Firmware Dump |
+| `37805-RMX-X540-M1.rwd` | **2010–2016** | 992.1 KB | `e2d750e5e94d7a9c393bdb8907cb9f39` | Factory Binary Firmware Dump |
+| `37805-RMX-X550-M1.rwd` | **2010–2016** | 992.2 KB | `3070b0b4d9b7068c552bb1470b0ac8b2` | Factory Binary Firmware Dump |
+| `37805-RMX-Z020-M1.rwd` | **2010–2016** | 992.1 KB | `4aaf06674915a674264a88f86966bf2c` | Factory Binary Firmware Dump |
+| `37805-RMX-Z050-M1.rwd` | **2010–2016** | 992.1 KB | `ef4de3fb77b71c2517cda8ce33fc622e` | Factory Binary Firmware Dump |
+| `37805-RMX-Z060-M1.rwd` | **2010–2016** | 992.1 KB | `e1fede0f8c8e6a77765aa373cfaca485` | Factory Binary Firmware Dump |
+| `37805-RMX-Z530-M1.rwd` | **2010–2016** | 992.1 KB | `3649cd605ae2ea113aed35cefdef1281` | Factory Binary Firmware Dump |
+| `37805-RMX-Z550-M1.rwd` | **2010–2016** | 992.2 KB | `1f847e5d746baaa46e234c668d230ed3` | Factory Binary Firmware Dump |
+| `37805-RMX-Z560-M1.rwd` | **2010–2016** | 992.2 KB | `b6650e4a51c38610a9a62d06f137e5ab` | Factory Binary Firmware Dump |
+| `37805-RTW-A050-M1.rwd` | **2010–2016** | 992.2 KB | `6c32a5eeac61726798691ec2216715e4` | Factory Binary Firmware Dump |
+| `37805-RTW-A230-M1.rwd` | **2010–2016** | 1.94 MB | `452ca336126e4f3054d23c22ac10c598` | Factory Binary Firmware Dump |
+| `37805-RTW-A550-M1.rwd` | **2010–2016** | 992.2 KB | `ab74ac47300a450a8ae047c7ac954d09` | Factory Binary Firmware Dump |
+| `37805-RTW-A830-M1.rwd` | **2010–2016** | 1.94 MB | `b0f59e983aebc2b4c08e9fd6236d0a18` | Factory Binary Firmware Dump |
+| `37805-RTW-E060-M1.rwd` | **2010–2016** | 992.1 KB | `cbde87d90f0091ed452593fd45f26456` | Factory Binary Firmware Dump |
+| `37805-RTW-J050-M1.rwd` | **2010–2016** | 992.1 KB | `0875dea105289b8c8e395193848e5b6c` | Factory Binary Firmware Dump |
+| `37805-RTW-J550-M1.rwd` | **2010–2016** | 992.2 KB | `2f54161694551aeaba837a76dd692874` | Factory Binary Firmware Dump |
+| `37805-RTW-N010-M1.rwd` | **2010–2016** | 992.1 KB | `153ec9345b08c29f80498b550fbf4d9e` | Factory Binary Firmware Dump |
+| `37806-RBJ-3050-M1.rwd` | **2010–2016** | 480.2 KB | `e7f1123ceb422b3657df1c8502cef6cf` | Factory Binary Firmware Dump |
+| `37806-RBJ-3060-M1.rwd` | **2010–2016** | 480.2 KB | `9c8dfb44712bcc953a27056ae07afdbe` | Factory Binary Firmware Dump |
+| `37806-RBJ-3070-M1.rwd` | **2010–2016** | 480.2 KB | `349c8e445dac8fa3f700916b128e592c` | Factory Binary Firmware Dump |
+| `37806-RBJ-A540-M1.rwd` | **2010–2016** | 480.1 KB | `b4ed20ce9e14b13e7d3b12c9304aaf3c` | Factory Binary Firmware Dump |
+| `37806-RBJ-A550-M1.rwd` | **2010–2016** | 480.2 KB | `75f9e3f5eb9b4410cb2dd125c8f32ec3` | Factory Binary Firmware Dump |
+| `37806-RBJ-A640-M1.rwd` | **2010–2016** | 480.1 KB | `3bf83d524d6673a930db52014314898d` | Factory Binary Firmware Dump |
+| `37806-RBJ-A650-M1.rwd` | **2010–2016** | 480.2 KB | `1f371c3ba49fe6237f93a0283cf988b3` | Factory Binary Firmware Dump |
+| `37806-RBJ-E510-M1.rwd` | **2010–2016** | 480.1 KB | `acdfeac191bc59bf04e05875d7014302` | Factory Binary Firmware Dump |
+| `37806-RBJ-E520-M1.rwd` | **2010–2016** | 480.1 KB | `8e912bd7562628c297d9dc2c2f109737` | Factory Binary Firmware Dump |
+| `37806-RBJ-E530-M1.rwd` | **2010–2016** | 480.1 KB | `8cedef47ffed2959544565c0a5d93a94` | Factory Binary Firmware Dump |
+| `37806-RBJ-E540-M1.rwd` | **2010–2016** | 480.1 KB | `623dec4843569c209cb45d5070850423` | Factory Binary Firmware Dump |
+| `37806-RBJ-E550-M1.rwd` | **2010–2016** | 480.2 KB | `585c3bfd40620655627eb3b38277afbd` | Factory Binary Firmware Dump |
+| `37806-RBJ-E610-M1.rwd` | **2010–2016** | 480.1 KB | `d88f09284216bb339c7b6f36c5126203` | Factory Binary Firmware Dump |
+| `37806-RBJ-E620-M1.rwd` | **2010–2016** | 480.1 KB | `4dedb3e37ada731f01e18034fd145599` | Factory Binary Firmware Dump |
+| `37806-RBJ-E630-M1.rwd` | **2010–2016** | 480.1 KB | `141cb062cc1a1cf74800f03e8cde34ab` | Factory Binary Firmware Dump |
+| `37806-RBJ-E640-M1.rwd` | **2010–2016** | 480.1 KB | `3b900801436602cc13ba3953b8f729e0` | Factory Binary Firmware Dump |
+| `37806-RBJ-E650-M1.rwd` | **2010–2016** | 480.2 KB | `c1a62ee06b9303a4c0452707e96c4d2e` | Factory Binary Firmware Dump |
+| `37806-RBJ-E670-M1.rwd` | **2010–2016** | 480.1 KB | `fc6b02e370c2dec577f4b83b15c1c944` | Factory Binary Firmware Dump |
+| `37806-RBJ-E710-M1.rwd` | **2010–2016** | 480.1 KB | `3c9f8de4fe13b46d1968a696b6566360` | Factory Binary Firmware Dump |
+| `37806-RBJ-E720-M1.rwd` | **2010–2016** | 480.1 KB | `179e89d4a2b93d1792fb382e6f804248` | Factory Binary Firmware Dump |
+| `37806-RBJ-E730-M1.rwd` | **2010–2016** | 480.1 KB | `fd45d2c3d95045faee8fff62be6bc5a3` | Factory Binary Firmware Dump |
+| `37806-RBJ-E740-M1.rwd` | **2010–2016** | 480.1 KB | `66132b53430ee757a442df27b688c40e` | Factory Binary Firmware Dump |
+| `37806-RBJ-E750-M1.rwd` | **2010–2016** | 480.2 KB | `779b3a9f9549c55e859e887fe3db683d` | Factory Binary Firmware Dump |
+| `37806-RBJ-E770-M1.rwd` | **2010–2016** | 480.1 KB | `3f71914262acb555a4a2697e768c2a0c` | Factory Binary Firmware Dump |
+| `37806-RBJ-J510-M1.rwd` | **2010–2016** | 480.1 KB | `a68328002ef76d3289791ebb36b6b11f` | Factory Binary Firmware Dump |
+| `37806-RBJ-J520-M1.rwd` | **2010–2016** | 480.1 KB | `3f02bccc9f15d4c12cd1ac38b2bd93d9` | Factory Binary Firmware Dump |
+| `37806-RBJ-J530-M1.rwd` | **2010–2016** | 480.1 KB | `2669072fda1deba6c28f88d79fc8e953` | Factory Binary Firmware Dump |
+| `37806-RBJ-J540-M1.rwd` | **2010–2016** | 480.1 KB | `302d308794727e3c52357f1b56a84f10` | Factory Binary Firmware Dump |
+| `37806-RBJ-J550-M1.rwd` | **2010–2016** | 480.2 KB | `a6bb6a3efe9bc4f2c1fe4c7112845608` | Factory Binary Firmware Dump |
+| `37806-RBJ-J570-M1.rwd` | **2010–2016** | 480.1 KB | `bd877fd0d35e129ba1ef011a5bb60064` | Factory Binary Firmware Dump |
+| `37806-RBJ-J610-M1.rwd` | **2010–2016** | 480.1 KB | `9422fecd64ec1da70208147d20b68d04` | Factory Binary Firmware Dump |
+| `37806-RBJ-J620-M1.rwd` | **2010–2016** | 480.1 KB | `d03e5e4e5c4a5bb8a3809df8a9400891` | Factory Binary Firmware Dump |
+| `37806-RBJ-J630-M1.rwd` | **2010–2016** | 480.1 KB | `7c4a68574dd3838bb80aa0a96cc6aec8` | Factory Binary Firmware Dump |
+| `37806-RBJ-J640-M1.rwd` | **2010–2016** | 480.1 KB | `dead3bc65297a1af10a3a5c6c5039d36` | Factory Binary Firmware Dump |
+| `37806-RBJ-J650-M1.rwd` | **2010–2016** | 480.2 KB | `e81a3d6561691a4a9d4b2b4cbf3a8d0d` | Factory Binary Firmware Dump |
+| `37806-RBJ-J670-M1.rwd` | **2010–2016** | 480.1 KB | `3740b5b5418df4a320a0f62fd5fbe9fa` | Factory Binary Firmware Dump |
+| `37806-RBJ-J710-M1.rwd` | **2010–2016** | 480.1 KB | `e58f0cf8744219d24d223fd11e791ab8` | Factory Binary Firmware Dump |
+| `37806-RBJ-J720-M1.rwd` | **2010–2016** | 480.1 KB | `507611fe8ced6c09370aadae7e7ef16f` | Factory Binary Firmware Dump |
+| `37806-RBJ-J730-M1.rwd` | **2010–2016** | 480.1 KB | `d8b594c37fa9ccf54054f4badaf5e619` | Factory Binary Firmware Dump |
+| `37806-RBJ-J740-M1.rwd` | **2010–2016** | 480.1 KB | `f83cd31822b297854ad466b98eb00d60` | Factory Binary Firmware Dump |
+| `37806-RBJ-J750-M1.rwd` | **2010–2016** | 480.2 KB | `4b6aec796cd5f033749d782644865a82` | Factory Binary Firmware Dump |
+| `37806-RBJ-J770-M1.rwd` | **2010–2016** | 480.1 KB | `97fe7dada1bdcaf3afe5d5b8b34317ed` | Factory Binary Firmware Dump |
+| `37806-RMX-3050.rwd` | **2010–2016** | 480.1 KB | `1dacfefbce456ec1d43b1939ec8f2d1f` | Factory Binary Firmware Dump |
+| `37806-RMX-3060.rwd` | **2010–2016** | 480.1 KB | `cef3337af00f68da24188b8c71d157e0` | Factory Binary Firmware Dump |
+| `37806-RMX-3090.rwd` | **2010–2016** | 480.1 KB | `361dddc37736266ba4ab38066780eed8` | Factory Binary Firmware Dump |
+| `37806-RMX-4050.rwd` | **2010–2016** | 480.1 KB | `4e5513de69c39e4f71f05e97397866d9` | Factory Binary Firmware Dump |
+| `37806-RMX-4060.rwd` | **2010–2016** | 480.1 KB | `00b31de6b278062aa6a38834f7541165` | Factory Binary Firmware Dump |
+| `37806-RMX-4080.rwd` | **2010–2016** | 480.1 KB | `2d256dcbd6dddb38a1cf90206ad65b1e` | Factory Binary Firmware Dump |
+| `37806-RMX-4090.rwd` | **2010–2016** | 480.1 KB | `10c936a35f69108dd1117575ef6d47a8` | Factory Binary Firmware Dump |
+| `37806-RMX-5050.rwd` | **2010–2016** | 480.1 KB | `3ea50451ff8c0f009aa2ad29dc9f17a1` | Factory Binary Firmware Dump |
+| `37806-RMX-5060.rwd` | **2010–2016** | 480.1 KB | `eb9dd1d1f3e48e9a044ea5c31e010a9b` | Factory Binary Firmware Dump |
+| `37806-RMX-5070.rwd` | **2010–2016** | 480.1 KB | `aeb11aa4e0f8ac603495a008762cff94` | Factory Binary Firmware Dump |
+| `37806-RMX-5090.rwd` | **2010–2016** | 480.1 KB | `3b3c8e44a0240e532e6beae3314ebc27` | Factory Binary Firmware Dump |
+| `37806-RMX-9520-M1.rwd` | **2010–2016** | 480.1 KB | `73fc5434dfd5e6fa2a36dd7fe120cadf` | Factory Binary Firmware Dump |
+| `37806-RMX-9530-M1.rwd` | **2010–2016** | 480.1 KB | `45c31f4cda7c69bc281c147012144fbc` | Factory Binary Firmware Dump |
+| `37806-RMX-9630-M1.rwd` | **2010–2016** | 480.1 KB | `c9567ed84fbff0b3fdcf61c88e02e62b` | Factory Binary Firmware Dump |
+| `37806-RMX-9830-M1.rwd` | **2010–2016** | 480.1 KB | `353c53d81d5680ce88a926dc51532766` | Factory Binary Firmware Dump |
+| `37806-RMX-9920-M1.rwd` | **2010–2016** | 480.1 KB | `f0c36bbd64212bd73c965cec5b0bbbf4` | Factory Binary Firmware Dump |
+| `37806-RMX-A030-M1.rwd` | **2010–2016** | 480.1 KB | `25a459d4eff8b40d536b0c4cbf4c3c6e` | Factory Binary Firmware Dump |
+| `37806-RMX-A550-M1.rwd` | **2010–2016** | 480.2 KB | `c8c120cb3baea14c98c6a13953869366` | Factory Binary Firmware Dump |
+| `37806-RMX-A560-M1.rwd` | **2010–2016** | 480.2 KB | `9af475ab81f17545cfbb080c2c61ffe5` | Factory Binary Firmware Dump |
+| `37806-RMX-D010-M1.rwd` | **2010–2016** | 480.1 KB | `1ac19514018056fcd43c07da02995c9c` | Factory Binary Firmware Dump |
+| `37806-RMX-E030-M1.rwd` | **2010–2016** | 480.1 KB | `2d72c43df616198705b9f03a404ff0a0` | Factory Binary Firmware Dump |
+| `37806-RMX-E520-M1.rwd` | **2010–2016** | 480.1 KB | `c3031963362d21d5599a530c8f9e611c` | Factory Binary Firmware Dump |
+| `37806-RMX-E530-M1.rwd` | **2010–2016** | 480.1 KB | `71745f38f4c07e1d70a2ac95a099458f` | Factory Binary Firmware Dump |
+| `37806-RMX-H620-M1.rwd` | **2010–2016** | 480.1 KB | `ee7f71e6b4245ac28cb6d5f1ea85bc0f` | Factory Binary Firmware Dump |
+| `37806-RMX-J330-M1.rwd` | **2010–2016** | 480.1 KB | `2c7bab747af225dd9aa61728a4a3cd0b` | Factory Binary Firmware Dump |
+| `37806-RMX-J530-M1.rwd` | **2010–2016** | 480.1 KB | `fa4273e2621c04362358135accbc6103` | Factory Binary Firmware Dump |
+| `37806-RMX-J540-M1.rwd` | **2010–2016** | 480.1 KB | `82352c1e3b0599856e5c23e9f1b7c149` | Factory Binary Firmware Dump |
+| `37806-RMX-J630-M1.rwd` | **2010–2016** | 480.1 KB | `3bef3e459404f009266dea76b20c50aa` | Factory Binary Firmware Dump |
+| `37806-RMX-J640-M1.rwd` | **2010–2016** | 480.1 KB | `9d74daf2a3fa4def2f1572320659bb35` | Factory Binary Firmware Dump |
+| `37806-RMX-J830-M1.rwd` | **2010–2016** | 480.1 KB | `2e2fbe9c47588717b4efe13087b6e52a` | Factory Binary Firmware Dump |
+| `37806-RMX-J840-M1.rwd` | **2010–2016** | 480.1 KB | `76dfd6e85a95bca5f91aa676790be1cd` | Factory Binary Firmware Dump |
+| `37806-RMX-Q120-M1.rwd` | **2010–2016** | 480.1 KB | `a25e1c6f7a845a4b9234cd1f7f0e66da` | Factory Binary Firmware Dump |
+| `37806-RMX-Q520-M1.rwd` | **2010–2016** | 480.1 KB | `aaae669002e2ba19402cbf884bb41837` | Factory Binary Firmware Dump |
+| `37806-RMX-Q530-M1.rwd` | **2010–2016** | 480.1 KB | `909385bdc3e2f2c27df892b76f3d4871` | Factory Binary Firmware Dump |
+| `37806-RMX-X030-M1.rwd` | **2010–2016** | 480.1 KB | `c42752197d7ac0dae7722d68c6b3c2cf` | Factory Binary Firmware Dump |
+| `37806-RMX-X520-M1.rwd` | **2010–2016** | 480.1 KB | `74095c5213d230e0b5b01a9a29db9374` | Factory Binary Firmware Dump |
+| `37806-RMX-X530-M1.rwd` | **2010–2016** | 480.1 KB | `81ca42e1abdf42c8a0a38171672c592e` | Factory Binary Firmware Dump |
+| `37806-RMX-Z030-M1.rwd` | **2010–2016** | 480.1 KB | `f6ed4f573659b86e06bbc8050646d792` | Factory Binary Firmware Dump |
+| `37806-RMX-Z520-M1.rwd` | **2010–2016** | 480.1 KB | `909921afdf4ebabd62cb22652683e1e8` | Factory Binary Firmware Dump |
+| `37806-RMX-Z530-M1.rwd` | **2010–2016** | 480.1 KB | `2b45730bc416fcc00e2f1d045ef621d7` | Factory Binary Firmware Dump |
+| `37806-RTW-A550-M1.rwd` | **2010–2016** | 480.2 KB | `ff971251dd04eae92b75aff55e342a23` | Factory Binary Firmware Dump |
+| `37806-RTW-J540-M1.rwd` | **2010–2016** | 480.1 KB | `1899a9e2a89e2ebcdc599dce20f7c20b` | Factory Binary Firmware Dump |
+| `37806-RTW-J550-M1.rwd` | **2010–2016** | 480.2 KB | `6d762710d09a327745cb70ec09787428` | Factory Binary Firmware Dump |
+| `37806-RTW-J580-M1.rwd` | **2010–2016** | 480.1 KB | `8c631ecbbcd5322ac5e89eb69d660b1a` | Factory Binary Firmware Dump |
 
 ---
 
-## 3. Protokol Flashing & Panduan Keamanan
+## 3. Matriks Kalibrasi & Parameter Pemetaan
 
-1. **Pemeriksaan Checksum**: Selalu verifikasi dan kalkulasi ulang checksum sebelum menulis firmware kembali ke ECU.
-2. **Pencadangan Full Read (Backup)**: Lakukan full backup sebelum melakukan flashing kalibrasi.
-3. **Tegangan Catu Daya**: Pastikan kestabilan tegangan catu daya 13.5V – 14.2V selama proses penulisan firmware.
+Bagi berkas biner dan definisi yang tersedia, struktur kalibrasi mencakup parameter esensial:
+- **Volumetric Efficiency & Fuel Delivery**: Kurva Base Fuel, Open/Closed Loop Transition, Injection Timing, dan Cranking Enrichment.
+- **Ignition Timing & Knock Control**: Peta Main Ignition Advance, Low/High Octane Timing, Knock Retard Thresholds, dan Dwell Timing.
+- **Airflow & Boost Management**: Peta Target Boost Pressure, Wastegate Duty Cycle (WGDC), MAF/MAP Scaling, dan Throttle Response Curves.
+- **Safety Limits & Thresholds**: Rev Limiter (Hard/Soft Cut), Top Speed Limiter (Vmax), Overboost Fuel Cut, dan Engine Protection Strategies.
+
+---
+
+## 4. Protokol Flashing & Panduan Keamanan
+
+1. **Pemeriksaan Checksum**: Selalu verifikasi dan kalkulasi ulang checksum sebelum menulis firmware kembali ke ECU guna mencegah kondisi *ECU bricking* atau *no-start*.
+2. **Pencadangan Full Read (Backup)**: Lakukan full backup (Flash + EEPROM / Microcontroller ROM) sebelum melakukan flashing kalibrasi yang dimodifikasi.
+3. **Tegangan Sumber Stabil**: Gunakan unit catu daya terstabilisasi (*bench battery maintainer*) dengan tegangan minimum 13.5V – 14.2V selama sesi flashing OBD2 atau Bootmode.
+4. **Kecocokan Hardware & Software**: Jangan pernah melakukan *cross-flashing* berkas kalibrasi ke ECU dengan nomor part hardware yang berbeda tanpa verifikasi arsitektur pinout dan transreceiver bus.

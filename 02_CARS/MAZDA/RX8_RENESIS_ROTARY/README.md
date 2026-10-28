@@ -1,14 +1,14 @@
-# RX8 RENESIS ROTARY - ECU Calibration Suite
+# RX8_RENESIS_ROTARY - ECU Calibration Suite
 
 **Repository Path**: `02_CARS/MAZDA/RX8_RENESIS_ROTARY`  
-**Classification**: `TunerPro Definition Map Suite (XDF Only)`  
+**Classification**: `ECU Definition & Map Pack Suite (ASAP2 / WinOLS / TunerPro)`  
 **Total Managed Assets**: `3 files` (0 binary dumps, 3 definition maps)  
 
 ---
 
 ## 1. Technical Platform Overview
 
-Paket direktori `RX8_RENESIS_ROTARY` menyediakan pustaka kalibrasi dan pemetaan ECU profesional yang ditujukan bagi teknisi otomotif, tuner, dan reverse engineer. Berkas di direktori ini mencakup kalibrasi firmware pabrikan (OEM), pembacaan perangkat keras (OBD2/BDM/Bench), serta tabel definisi TunerPro XDF untuk eksplorasi parameter mesin.
+Paket direktori `RX8_RENESIS_ROTARY` menyediakan pustaka kalibrasi dan pemetaan ECU profesional yang ditujukan bagi teknisi otomotif, tuner, dan reverse engineer. Berkas di direktori ini mencakup kalibrasi firmware pabrikan (OEM), pembacaan perangkat keras (OBD2/BDM/Bench), serta berkas definisi komprehensif (TunerPro XDF, ASAM ASAP2 A2L, WinOLS DAMOS/KP/OLS) untuk identifikasi parameter mesin presisi.
 
 ### Mengapa Sebagian Berkas Memiliki Nama Berupa Angka / Kode?
 Nama berkas yang tersimpan merefleksikan identitas perangkat keras (Hardware ID), versi perangkat lunak (Software ID), atau nomor kalibrasi pabrikan asli (OEM Calibration ID):
@@ -21,7 +21,7 @@ Nama berkas yang tersimpan merefleksikan identitas perangkat keras (Hardware ID)
 > [!NOTE]
 > Mempertahankan kode dan nomor asli pabrikan pada penamaan berkas sangat krusial agar perangkat lunak kalibrasi (seperti **TunerPro**, **WinOLS**, atau **RomRaider**) dapat mengenali dan mencocokkan peta definisi (*definition maps*) secara otomatis tanpa merusak asosiasi header ECU.
 
-* **Rentang Tahun / Model Year**: OEM Production
+* **Rentang Tahun / Model Year**: 2000–2024
 
 ---
 
@@ -31,15 +31,15 @@ Berikut adalah daftar lengkap berkas fisik yang tersimpan secara lokal di direkt
 
 | Filename | Tahun / Model Year | Size | MD5 Checksum | Type / Target Platform |
 | :--- | :---: | :--- | :--- | :--- |
-| `logger_rx8_defs.xml` | **OEM Production** | 13.4 KB | `67c8fbcb84f42e431c8a5227881b3f8c` | ECU / ASAP2 Calibration Map Definition |
-| `rx8_defs.xml` | **OEM Production** | 1.64 MB | `bef723a2422f2afe9eb75a62eb3272b7` | ECU / ASAP2 Calibration Map Definition |
-| `rx8_defs_N3ZHEC_fixed.xml` | **OEM Production** | 1.64 MB | `8b5e5a3348e886a42906c1810ffa6612` | ECU / ASAP2 Calibration Map Definition |
+| `logger_rx8_defs.xml` | **2000–2024** | 13.4 KB | `67c8fbcb84f42e431c8a5227881b3f8c` | ECU / XML Calibration Map Definition |
+| `rx8_defs.xml` | **2000–2024** | 1.64 MB | `bef723a2422f2afe9eb75a62eb3272b7` | ECU / XML Calibration Map Definition |
+| `rx8_defs_N3ZHEC_fixed.xml` | **2000–2024** | 1.64 MB | `8b5e5a3348e886a42906c1810ffa6612` | ECU / XML Calibration Map Definition |
 
 ---
 
 ## 3. Matriks Kalibrasi & Parameter Pemetaan
 
-Bagi berkas biner dan definisi TunerPro yang tersedia, struktur kalibrasi mencakup parameter esensial:
+Bagi berkas biner dan definisi yang tersedia, struktur kalibrasi mencakup parameter esensial:
 - **Volumetric Efficiency & Fuel Delivery**: Kurva Base Fuel, Open/Closed Loop Transition, Injection Timing, dan Cranking Enrichment.
 - **Ignition Timing & Knock Control**: Peta Main Ignition Advance, Low/High Octane Timing, Knock Retard Thresholds, dan Dwell Timing.
 - **Airflow & Boost Management**: Peta Target Boost Pressure, Wastegate Duty Cycle (WGDC), MAF/MAP Scaling, dan Throttle Response Curves.

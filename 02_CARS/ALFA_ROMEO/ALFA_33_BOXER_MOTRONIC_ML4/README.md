@@ -1,30 +1,27 @@
-# ALFA ROMEO 33 BOXER - Bosch Motronic ML4.1 Calibration Suite
+# ALFA_33_BOXER_MOTRONIC_ML4 - ECU Calibration Suite
 
 **Repository Path**: `02_CARS/ALFA_ROMEO/ALFA_33_BOXER_MOTRONIC_ML4`  
-**Classification**: `Universal ECU Firmware & Calibration Suite`  
+**Classification**: `Binary Firmware & High-Precision Calibration Definition Suite`  
 **Total Managed Assets**: `3 files` (2 binary dumps, 1 definition maps)  
 
 ---
 
 ## 1. Technical Platform Overview
 
-Koleksi berkas biner firmware asli (32,768 bytes) untuk unit ECU Bosch Motronic ML4.1 pada jajaran mesin legendaris Alfa Romeo Boxer 4-silinder (1.7L 8V & 16V) pada Alfa Romeo 33 (Type 905/907). Disertai dengan peta definisi TunerPro XDF komprehensif (33.xdf) untuk tuning kurva bahan bakar pengapian injeksi multi-point, dwell timing, cold start enrichment, dan rev limiter.
-
-### Detail Arsitektur Kontroler & Komunikasi:
-- **Keluarga ECU / Controller Family**: `Bosch Motronic ML4.1 (Digital Engine Management)`
-- **Arsitektur MCU & Memori**: `Intel 8051 / 8052 Microcontroller (27C256 / 27C512 32KB EPROM)`
-- **Protokol Diagnostik & Flashing**: `Bosch 3-Pin Diagnostic K-Line / EPROM Programmer Read`
+Paket direktori `ALFA_33_BOXER_MOTRONIC_ML4` menyediakan pustaka kalibrasi dan pemetaan ECU profesional yang ditujukan bagi teknisi otomotif, tuner, dan reverse engineer. Berkas di direktori ini mencakup kalibrasi firmware pabrikan (OEM), pembacaan perangkat keras (OBD2/BDM/Bench), serta berkas definisi komprehensif (TunerPro XDF, ASAM ASAP2 A2L, WinOLS DAMOS/KP/OLS) untuk identifikasi parameter mesin presisi.
 
 ### Mengapa Sebagian Berkas Memiliki Nama Berupa Angka / Kode?
 Nama berkas yang tersimpan merefleksikan identitas perangkat keras (Hardware ID), versi perangkat lunak (Software ID), atau nomor kalibrasi pabrikan asli (OEM Calibration ID):
-- **OEM Part Numbers** (misal `0261xxxxxx`, `12587603`, `38770-xxx`, `23710-xxxxx`): Standar identifikasi universal pabrikan untuk ECU dan nomor perakitan modul.
-- **Operating System / Software IDs** (misal `52373027`, `12592618`, `BG11_ECE_HS_008`, `PY3-A02`): Alamat dan software baseline pabrik yang tertanam di blok memori ROM.
-- **TunerPro XDF Maps & A2L Definitions**: File deskriptor matematis yang memetakan offset memori hex ke unit engineering nyata (RPM, ms injeksi, derajat pengapian, kPa, persen bukaan katup).
+- **Bosch Part Numbers** (misal `0261xxxxxx`, `1037xxxxxx`): Standar identifikasi universal Bosch untuk ECU Motronic, MED17, EDC16, dan EDC17.
+- **BMW Software IDs** (misal `00005C64xxxxxx`, `10SW002828`): Alamat dan assembly identification number pada modul DME Siemens/Continental/Bosch.
+- **Denso / Toyota Calibration IDs** (misal `89663-xxxxx`): Nomor resmi Toyota Techstream / Denso MCU firmware flash.
+- **Keihin Part Numbers** (misal `37805-xxx-xxxx`, `38770-xxx`): Kode perakitan ECU Honda untuk verifikasi kecocokan checksum dan proteksi immobilizer.
+- **GM OS IDs** (misal `12587603`, `12212156`): Operating system ID kontroler GM Delphi P01/P59.
 
 > [!NOTE]
-> Mempertahankan kode dan nomor asli pabrikan pada penamaan berkas sangat krusial agar perangkat lunak kalibrasi (seperti **TunerPro**, **WinOLS**, atau **EcuFlash**) dapat mengenali dan mencocokkan peta definisi (*definition maps*) secara otomatis tanpa merusak asosiasi header ECU.
+> Mempertahankan kode dan nomor asli pabrikan pada penamaan berkas sangat krusial agar perangkat lunak kalibrasi (seperti **TunerPro**, **WinOLS**, atau **RomRaider**) dapat mengenali dan mencocokkan peta definisi (*definition maps*) secara otomatis tanpa merusak asosiasi header ECU.
 
-* **Rentang Tahun / Model Year**: 1990–1994
+* **Rentang Tahun / Model Year**: 2000–2024
 
 ---
 
@@ -34,19 +31,19 @@ Berikut adalah daftar lengkap berkas fisik yang tersimpan secara lokal di direkt
 
 | Filename | Tahun / Model Year | Size | MD5 Checksum | Type / Target Platform |
 | :--- | :---: | :--- | :--- | :--- |
-| `33.xdf` | **1990–1994** | 256.9 KB | `2b7db8bd69600f856b4e40507d3f7e9c` | TunerPro Binary Definition Map |
-| `Alfa_33_142.bin` | **1990–1994** | 32.0 KB | `c263d146a503534626162104ad4c60cf` | Factory Binary Firmware Dump |
-| `Alfa_33_147.bin` | **1990–1994** | 32.0 KB | `f86b523e99af61729c2daa2f9fac1e89` | Factory Binary Firmware Dump |
+| `33.xdf` | **2000–2024** | 256.9 KB | `2b7db8bd69600f856b4e40507d3f7e9c` | TunerPro Binary Definition Map |
+| `Alfa_33_142.bin` | **2000–2024** | 32.0 KB | `c263d146a503534626162104ad4c60cf` | Factory Binary Firmware Dump |
+| `Alfa_33_147.bin` | **2000–2024** | 32.0 KB | `f86b523e99af61729c2daa2f9fac1e89` | Factory Binary Firmware Dump |
 
 ---
 
 ## 3. Matriks Kalibrasi & Parameter Pemetaan
 
 Bagi berkas biner dan definisi yang tersedia, struktur kalibrasi mencakup parameter esensial:
-- **Volumetric Efficiency & Fuel Delivery**: Kurva Base Fuel, Open/Closed Loop Transition, Injection Timing, MAF/MAP Transfer Functions, Smoke Limiter, dan Cranking Enrichment.
-- **Ignition Timing & Knock Control**: Peta Main Ignition Advance independen, High/Low Octane Timing Tables, Knock Retard Thresholds, dan Dwell Timing.
-- **Airflow, Boost & Cam Phasing**: Target Boost Pressure, Wastegate Duty Cycle (WGDC), Electronic Throttle Valve (Drive-by-Wire) Angle, dan Variable Cam Phasing (VANOS, VTC, VTEC).
-- **Safety Limits & Thresholds**: Rev Limiter (Hard & Soft Cut), Top Speed Limiter (Vmax), Overboost Protection, dan Engine Protection Strategies.
+- **Volumetric Efficiency & Fuel Delivery**: Kurva Base Fuel, Open/Closed Loop Transition, Injection Timing, dan Cranking Enrichment.
+- **Ignition Timing & Knock Control**: Peta Main Ignition Advance, Low/High Octane Timing, Knock Retard Thresholds, dan Dwell Timing.
+- **Airflow & Boost Management**: Peta Target Boost Pressure, Wastegate Duty Cycle (WGDC), MAF/MAP Scaling, dan Throttle Response Curves.
+- **Safety Limits & Thresholds**: Rev Limiter (Hard/Soft Cut), Top Speed Limiter (Vmax), Overboost Fuel Cut, dan Engine Protection Strategies.
 
 ---
 

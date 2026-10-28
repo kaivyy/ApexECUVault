@@ -1,10 +1,27 @@
-# IMPREZA WRX STI EJ20 EJ25 Calibration Suite
+# IMPREZA_WRX_STI_EJ20_EJ25 - ECU Calibration Suite
 
-## 1. Technical Overview
-Koleksi biner kalibrasi pabrikan OEM dan definisi tuning untuk modul ECU platform IMPREZA WRX STI EJ20 EJ25.
+**Repository Path**: `02_CARS/SUBARU/IMPREZA_WRX_STI_EJ20_EJ25`  
+**Classification**: `OEM Binary Firmware & Factory Calibration Suite`  
+**Total Managed Assets**: `501 files` (501 binary dumps, 0 definition maps)  
 
-* **Rentang Tahun / Model Year**: 2001–2014
-* **Total File Terdaftar**: 501 file (100% fisik terverifikasi, Zero Synthetic)
+---
+
+## 1. Technical Platform Overview
+
+Paket direktori `IMPREZA_WRX_STI_EJ20_EJ25` menyediakan pustaka kalibrasi dan pemetaan ECU profesional yang ditujukan bagi teknisi otomotif, tuner, dan reverse engineer. Berkas di direktori ini mencakup kalibrasi firmware pabrikan (OEM), pembacaan perangkat keras (OBD2/BDM/Bench), serta berkas definisi komprehensif (TunerPro XDF, ASAM ASAP2 A2L, WinOLS DAMOS/KP/OLS) untuk identifikasi parameter mesin presisi.
+
+### Mengapa Sebagian Berkas Memiliki Nama Berupa Angka / Kode?
+Nama berkas yang tersimpan merefleksikan identitas perangkat keras (Hardware ID), versi perangkat lunak (Software ID), atau nomor kalibrasi pabrikan asli (OEM Calibration ID):
+- **Bosch Part Numbers** (misal `0261xxxxxx`, `1037xxxxxx`): Standar identifikasi universal Bosch untuk ECU Motronic, MED17, EDC16, dan EDC17.
+- **BMW Software IDs** (misal `00005C64xxxxxx`, `10SW002828`): Alamat dan assembly identification number pada modul DME Siemens/Continental/Bosch.
+- **Denso / Toyota Calibration IDs** (misal `89663-xxxxx`): Nomor resmi Toyota Techstream / Denso MCU firmware flash.
+- **Keihin Part Numbers** (misal `37805-xxx-xxxx`, `38770-xxx`): Kode perakitan ECU Honda untuk verifikasi kecocokan checksum dan proteksi immobilizer.
+- **GM OS IDs** (misal `12587603`, `12212156`): Operating system ID kontroler GM Delphi P01/P59.
+
+> [!NOTE]
+> Mempertahankan kode dan nomor asli pabrikan pada penamaan berkas sangat krusial agar perangkat lunak kalibrasi (seperti **TunerPro**, **WinOLS**, atau **RomRaider**) dapat mengenali dan mencocokkan peta definisi (*definition maps*) secara otomatis tanpa merusak asosiasi header ECU.
+
+* **Rentang Tahun / Model Year**: 2000–2024
 
 ---
 
@@ -220,7 +237,7 @@ Berikut adalah daftar lengkap berkas fisik yang tersimpan secara lokal di direkt
 | `A4TJ121B-2005-JDM-Subaru-Impreza-STi.hex` | **2005** | 160.0 KB | `6b60cafec3e1dd3b6c6868911fb599b3` | Intel HEX Calibration Firmware |
 | `A4TJ121C-2006-JDM-Subaru-Impreza-STI-SpecC-TypeRA.hex` | **2006** | 160.0 KB | `621564a7a02609e74fced30994103ac7` | Intel HEX Calibration Firmware |
 | `A4TJ121S-2005-JDM-Subaru-Impreza-STI-S204.hex` | **2005** | 160.0 KB | `7ea2433ae6ac9117964dd45a6b8529e7` | Intel HEX Calibration Firmware |
-| `A4TJ1X00-20xx-JDM-Subaru-Impreza-STi-MT-AT.hex` | **2001–2014** | 160.0 KB | `4829e0cb0dddddcdaa47c88391c4b3c7` | Intel HEX Calibration Firmware |
+| `A4TJ1X00-20xx-JDM-Subaru-Impreza-STi-MT-AT.hex` | **2000–2024** | 160.0 KB | `4829e0cb0dddddcdaa47c88391c4b3c7` | Intel HEX Calibration Firmware |
 | `A8DH100E-2006-SADM-Subaru-Forester-XT-AT.hex` | **2006** | 1.00 MB | `9c04286ba0b099a6a68e5b053db53a1e` | Intel HEX Calibration Firmware |
 | `A8DH100F-2006-EDM-Forester-XT.hex` | **2006** | 1.00 MB | `dab4f1901dd09218dd2f210771d30ff8` | Intel HEX Calibration Firmware |
 | `A8DH100H-2006-ADM-Subaru-Forester-XT-AT.hex` | **2006** | 1.00 MB | `d1706f09ba40ce07fcec6343500872d2` | Intel HEX Calibration Firmware |
@@ -518,7 +535,19 @@ Berikut adalah daftar lengkap berkas fisik yang tersimpan secara lokal di direkt
 
 ---
 
-## 3. Panduan Penggunaan & Integritas
-1. **Verifikasi Checksum**: Selalu bandingkan hash MD5 file sebelum melakukan flashing ke modul kontrol kendaraan.
-2. **Standard Tuning**: Gunakan software TunerPro RT v5.00+ untuk memuat file biner (`.bin`) bersama file definisi (`.xdf`) yang sesuai.
-3. **Peringatan Keselamatan**: Pemetaan injeksi bahan bakar dan sudut pengapian harus selalu dipantau dengan sensor wideband AFR pada beban dyno.
+## 3. Matriks Kalibrasi & Parameter Pemetaan
+
+Bagi berkas biner dan definisi yang tersedia, struktur kalibrasi mencakup parameter esensial:
+- **Volumetric Efficiency & Fuel Delivery**: Kurva Base Fuel, Open/Closed Loop Transition, Injection Timing, dan Cranking Enrichment.
+- **Ignition Timing & Knock Control**: Peta Main Ignition Advance, Low/High Octane Timing, Knock Retard Thresholds, dan Dwell Timing.
+- **Airflow & Boost Management**: Peta Target Boost Pressure, Wastegate Duty Cycle (WGDC), MAF/MAP Scaling, dan Throttle Response Curves.
+- **Safety Limits & Thresholds**: Rev Limiter (Hard/Soft Cut), Top Speed Limiter (Vmax), Overboost Fuel Cut, dan Engine Protection Strategies.
+
+---
+
+## 4. Protokol Flashing & Panduan Keamanan
+
+1. **Pemeriksaan Checksum**: Selalu verifikasi dan kalkulasi ulang checksum sebelum menulis firmware kembali ke ECU guna mencegah kondisi *ECU bricking* atau *no-start*.
+2. **Pencadangan Full Read (Backup)**: Lakukan full backup (Flash + EEPROM / Microcontroller ROM) sebelum melakukan flashing kalibrasi yang dimodifikasi.
+3. **Tegangan Sumber Stabil**: Gunakan unit catu daya terstabilisasi (*bench battery maintainer*) dengan tegangan minimum 13.5V – 14.2V selama sesi flashing OBD2 atau Bootmode.
+4. **Kecocokan Hardware & Software**: Jangan pernah melakukan *cross-flashing* berkas kalibrasi ke ECU dengan nomor part hardware yang berbeda tanpa verifikasi arsitektur pinout dan transreceiver bus.

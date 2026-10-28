@@ -1,14 +1,14 @@
-# PASSAT 1 9TDI EDC16U34 WINOLS - ECU Calibration Suite
+# PASSAT_1_9TDI_EDC16U34_WINOLS - ECU Calibration Suite
 
 **Repository Path**: `02_CARS/VAG_AUDI_VOLKSWAGEN/PASSAT_1_9TDI_EDC16U34_WINOLS`  
-**Classification**: `TunerPro Definition Map Suite (XDF Only)`  
-**Total Managed Assets**: `1 files` (0 binary dumps, 1 definition maps)  
+**Classification**: `ECU Definition & Map Pack Suite (ASAP2 / WinOLS / TunerPro)`  
+**Total Managed Assets**: `2 files` (0 binary dumps, 2 definition maps)  
 
 ---
 
 ## 1. Technical Platform Overview
 
-Paket direktori `PASSAT_1_9TDI_EDC16U34_WINOLS` menyediakan pustaka kalibrasi dan pemetaan ECU profesional yang ditujukan bagi teknisi otomotif, tuner, dan reverse engineer. Berkas di direktori ini mencakup kalibrasi firmware pabrikan (OEM), pembacaan perangkat keras (OBD2/BDM/Bench), serta tabel definisi TunerPro XDF untuk eksplorasi parameter mesin.
+Paket direktori `PASSAT_1_9TDI_EDC16U34_WINOLS` menyediakan pustaka kalibrasi dan pemetaan ECU profesional yang ditujukan bagi teknisi otomotif, tuner, dan reverse engineer. Berkas di direktori ini mencakup kalibrasi firmware pabrikan (OEM), pembacaan perangkat keras (OBD2/BDM/Bench), serta berkas definisi komprehensif (TunerPro XDF, ASAM ASAP2 A2L, WinOLS DAMOS/KP/OLS) untuk identifikasi parameter mesin presisi.
 
 ### Mengapa Sebagian Berkas Memiliki Nama Berupa Angka / Kode?
 Nama berkas yang tersimpan merefleksikan identitas perangkat keras (Hardware ID), versi perangkat lunak (Software ID), atau nomor kalibrasi pabrikan asli (OEM Calibration ID):
@@ -21,7 +21,7 @@ Nama berkas yang tersimpan merefleksikan identitas perangkat keras (Hardware ID)
 > [!NOTE]
 > Mempertahankan kode dan nomor asli pabrikan pada penamaan berkas sangat krusial agar perangkat lunak kalibrasi (seperti **TunerPro**, **WinOLS**, atau **RomRaider**) dapat mengenali dan mencocokkan peta definisi (*definition maps*) secara otomatis tanpa merusak asosiasi header ECU.
 
-* **Rentang Tahun / Model Year**: OEM Production
+* **Rentang Tahun / Model Year**: 2005–2010
 
 ---
 
@@ -31,14 +31,14 @@ Berikut adalah daftar lengkap berkas fisik yang tersimpan secara lokal di direkt
 
 | Filename | Tahun / Model Year | Size | MD5 Checksum | Type / Target Platform |
 | :--- | :---: | :--- | :--- | :--- |
-| `PassatMaps.kp` | **OEM Production** | 393.8 KB | `d600f854fc3218bc0fb458fde2ce40b2` | WinOLS Map Definition Pack |
-| `VW PASSAT 1.9 PD EDC16U34.ols` | **OEM Production** | 6.95 MB | `d19df2b46af28762014df77f9ddef688` | WinOLS Project Workspace |
+| `PassatMaps.kp` | **2005–2010** | 393.8 KB | `d600f854fc3218bc0fb458fde2ce40b2` | WinOLS Map Definition Pack |
+| `VW PASSAT 1.9 PD EDC16U34.ols` | **2005–2010** | 6.95 MB | `d19df2b46af28762014df77f9ddef688` | WinOLS Project Workspace |
 
 ---
 
 ## 3. Matriks Kalibrasi & Parameter Pemetaan
 
-Bagi berkas biner dan definisi TunerPro yang tersedia, struktur kalibrasi mencakup parameter esensial:
+Bagi berkas biner dan definisi yang tersedia, struktur kalibrasi mencakup parameter esensial:
 - **Volumetric Efficiency & Fuel Delivery**: Kurva Base Fuel, Open/Closed Loop Transition, Injection Timing, dan Cranking Enrichment.
 - **Ignition Timing & Knock Control**: Peta Main Ignition Advance, Low/High Octane Timing, Knock Retard Thresholds, dan Dwell Timing.
 - **Airflow & Boost Management**: Peta Target Boost Pressure, Wastegate Duty Cycle (WGDC), MAF/MAP Scaling, dan Throttle Response Curves.

@@ -1,14 +1,14 @@
-# SPORT YZF R15 R25 - ECU Calibration Suite
+# SPORT_YZF_R15_R25 - ECU Calibration Suite
 
 **Repository Path**: `01_MOTORCYCLES/YAMAHA/SPORT_YZF_R15_R25`  
-**Classification**: `Complete Binary & TunerPro Definition Suite`  
+**Classification**: `Binary Firmware & High-Precision Calibration Definition Suite`  
 **Total Managed Assets**: `6 files` (1 binary dumps, 5 definition maps)  
 
 ---
 
 ## 1. Technical Platform Overview
 
-Paket direktori `SPORT_YZF_R15_R25` menyediakan pustaka kalibrasi dan pemetaan ECU profesional yang ditujukan bagi teknisi otomotif, tuner, dan reverse engineer. Berkas di direktori ini mencakup kalibrasi firmware pabrikan (OEM), pembacaan perangkat keras (OBD2/BDM/Bench), serta tabel definisi TunerPro XDF untuk eksplorasi parameter mesin.
+Paket direktori `SPORT_YZF_R15_R25` menyediakan pustaka kalibrasi dan pemetaan ECU profesional yang ditujukan bagi teknisi otomotif, tuner, dan reverse engineer. Berkas di direktori ini mencakup kalibrasi firmware pabrikan (OEM), pembacaan perangkat keras (OBD2/BDM/Bench), serta berkas definisi komprehensif (TunerPro XDF, ASAM ASAP2 A2L, WinOLS DAMOS/KP/OLS) untuk identifikasi parameter mesin presisi.
 
 ### Mengapa Sebagian Berkas Memiliki Nama Berupa Angka / Kode?
 Nama berkas yang tersimpan merefleksikan identitas perangkat keras (Hardware ID), versi perangkat lunak (Software ID), atau nomor kalibrasi pabrikan asli (OEM Calibration ID):
@@ -35,14 +35,14 @@ Berikut adalah daftar lengkap berkas fisik yang tersimpan secara lokal di direkt
 | `GENERATIONAL_BDJ-H591A-00_Yamaha_YZF_R15M_V4_2022_2025_CANBUS_QS_TC.xdf` | **2022–2025** | 2.5 KB | `cc78fcc3faa88201a34895680ebfa3e1` | TunerPro Binary Definition Map |
 | `YAMAHA_1WD-H591A-00_Yamaha_YZF-R25___MT-25_(1WD_B02).xdf` | **2014–2025** | 6.5 KB | `c4f5474425a0c7b35eaac07b0b411ec4` | TunerPro Binary Definition Map |
 | `YAMAHA_BBD-H594A-00_Yamaha_YZF-R15_V4___R15M_(BBD).xdf` | **2014–2025** | 11.6 KB | `688afd29f60c9f125793df52baafe568` | TunerPro Binary Definition Map |
-| `YAMAHA_BK6-H594A-00_Yamaha_YZF-R15_V3_VVA_(BK6).xdf` | **2017–2021** | 11.6 KB | `722516ce18a2645ea1314beb012997d4` | TunerPro Binary Definition Map |
+| `YAMAHA_BK6-H594A-00_Yamaha_YZF-R15_V3_VVA_(BK6).xdf` | **2014–2025** | 11.6 KB | `722516ce18a2645ea1314beb012997d4` | TunerPro Binary Definition Map |
 | `YZF-R125_B5G0.bin` | **2014–2025** | 27.0 KB | `b96862cf560be96c73a12991d692ccae` | Factory Binary Firmware Dump |
 
 ---
 
 ## 3. Matriks Kalibrasi & Parameter Pemetaan
 
-Bagi berkas biner dan definisi TunerPro yang tersedia, struktur kalibrasi mencakup parameter esensial:
+Bagi berkas biner dan definisi yang tersedia, struktur kalibrasi mencakup parameter esensial:
 - **Volumetric Efficiency & Fuel Delivery**: Kurva Base Fuel, Open/Closed Loop Transition, Injection Timing, dan Cranking Enrichment.
 - **Ignition Timing & Knock Control**: Peta Main Ignition Advance, Low/High Octane Timing, Knock Retard Thresholds, dan Dwell Timing.
 - **Airflow & Boost Management**: Peta Target Boost Pressure, Wastegate Duty Cycle (WGDC), MAF/MAP Scaling, dan Throttle Response Curves.

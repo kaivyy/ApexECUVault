@@ -1,14 +1,14 @@
 # OS 12216125 - ECU Calibration Suite
 
 **Repository Path**: `02_CARS/GM_CHEVROLET/LS_V8_GEN3_GEN4/.XDF Files/P01_512Kb/Experimental-Need Testing/OS 12216125`  
-**Classification**: `Complete Binary & TunerPro Definition Suite`  
+**Classification**: `Binary Firmware & High-Precision Calibration Definition Suite`  
 **Total Managed Assets**: `8 files` (5 binary dumps, 3 definition maps)  
 
 ---
 
 ## 1. Technical Platform Overview
 
-Paket direktori `OS 12216125` menyediakan pustaka kalibrasi dan pemetaan ECU profesional yang ditujukan bagi teknisi otomotif, tuner, dan reverse engineer. Berkas di direktori ini mencakup kalibrasi firmware pabrikan (OEM), pembacaan perangkat keras (OBD2/BDM/Bench), serta tabel definisi TunerPro XDF untuk eksplorasi parameter mesin.
+Paket direktori `OS 12216125` menyediakan pustaka kalibrasi dan pemetaan ECU profesional yang ditujukan bagi teknisi otomotif, tuner, dan reverse engineer. Berkas di direktori ini mencakup kalibrasi firmware pabrikan (OEM), pembacaan perangkat keras (OBD2/BDM/Bench), serta berkas definisi komprehensif (TunerPro XDF, ASAM ASAP2 A2L, WinOLS DAMOS/KP/OLS) untuk identifikasi parameter mesin presisi.
 
 ### Mengapa Sebagian Berkas Memiliki Nama Berupa Angka / Kode?
 Nama berkas yang tersimpan merefleksikan identitas perangkat keras (Hardware ID), versi perangkat lunak (Software ID), atau nomor kalibrasi pabrikan asli (OEM Calibration ID):
@@ -21,7 +21,7 @@ Nama berkas yang tersimpan merefleksikan identitas perangkat keras (Hardware ID)
 > [!NOTE]
 > Mempertahankan kode dan nomor asli pabrikan pada penamaan berkas sangat krusial agar perangkat lunak kalibrasi (seperti **TunerPro**, **WinOLS**, atau **RomRaider**) dapat mengenali dan mencocokkan peta definisi (*definition maps*) secara otomatis tanpa merusak asosiasi header ECU.
 
-* **Rentang Tahun / Model Year**: OEM Production
+* **Rentang Tahun / Model Year**: 2000–2024
 
 ---
 
@@ -34,7 +34,7 @@ Berikut adalah daftar lengkap berkas fisik yang tersimpan secara lokal di direkt
 | `'02 Chevy 2500 4x4 8.1 L18 os12216125 (1).bin` | **2002** | 512.0 KB | `f41649ab0448db95db40f7661fcb21fc` | Factory Binary Firmware Dump |
 | `'02 Chevy 2500 4x4 8.1 L18 os12216125.bin` | **2002** | 512.0 KB | `f41649ab0448db95db40f7661fcb21fc` | Factory Binary Firmware Dump |
 | `'02 Chevy K1500 5.3L os12216125 (1).bin` | **2002** | 512.0 KB | `57b8a2bbed76b86b16295c48b0f2a8a7` | Factory Binary Firmware Dump |
-| `12216125_TCS.xdf` | **OEM Production** | 695 B | `7b84d08b2d44a8cdbc61132ef9e7909d` | TunerPro Binary Definition Map |
+| `12216125_TCS.xdf` | **2000–2024** | 695 B | `7b84d08b2d44a8cdbc61132ef9e7909d` | TunerPro Binary Definition Map |
 | `2002 1500 5.3 12216125.bin` | **2002** | 512.0 KB | `3546d82cd8c5216cde4307c3c88d2d50` | Factory Binary Firmware Dump |
 | `2002 5.3L Flex 2wd with Traction Stock 12216125.bin` | **2002** | 512.0 KB | `42e83a12d3f370a1ad1ee934363de924` | Factory Binary Firmware Dump |
 | `No Password - Operating System 12216125 - 512Kb PCM - 2002 model year - 5.3L Flex Fuel and 8.1L engines.xdf` | **2002** | 628.3 KB | `8d83c2bdaf00aec95378160e8a0325a7` | TunerPro Binary Definition Map |
@@ -44,7 +44,7 @@ Berikut adalah daftar lengkap berkas fisik yang tersimpan secara lokal di direkt
 
 ## 3. Matriks Kalibrasi & Parameter Pemetaan
 
-Bagi berkas biner dan definisi TunerPro yang tersedia, struktur kalibrasi mencakup parameter esensial:
+Bagi berkas biner dan definisi yang tersedia, struktur kalibrasi mencakup parameter esensial:
 - **Volumetric Efficiency & Fuel Delivery**: Kurva Base Fuel, Open/Closed Loop Transition, Injection Timing, dan Cranking Enrichment.
 - **Ignition Timing & Knock Control**: Peta Main Ignition Advance, Low/High Octane Timing, Knock Retard Thresholds, dan Dwell Timing.
 - **Airflow & Boost Management**: Peta Target Boost Pressure, Wastegate Duty Cycle (WGDC), MAF/MAP Scaling, dan Throttle Response Curves.

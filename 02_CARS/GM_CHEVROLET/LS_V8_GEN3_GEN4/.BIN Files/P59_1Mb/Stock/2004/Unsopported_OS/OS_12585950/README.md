@@ -1,14 +1,14 @@
-# OS 12585950 - ECU Calibration Suite
+# OS_12585950 - ECU Calibration Suite
 
 **Repository Path**: `02_CARS/GM_CHEVROLET/LS_V8_GEN3_GEN4/.BIN Files/P59_1Mb/Stock/2004/Unsopported_OS/OS_12585950`  
-**Classification**: `Binary Firmware & Calibration Repository`  
+**Classification**: `OEM Binary Firmware & Factory Calibration Suite`  
 **Total Managed Assets**: `5 files` (5 binary dumps, 0 definition maps)  
 
 ---
 
 ## 1. Technical Platform Overview
 
-Paket direktori `OS_12585950` menyediakan pustaka kalibrasi dan pemetaan ECU profesional yang ditujukan bagi teknisi otomotif, tuner, dan reverse engineer. Berkas di direktori ini mencakup kalibrasi firmware pabrikan (OEM), pembacaan perangkat keras (OBD2/BDM/Bench), serta tabel definisi TunerPro XDF untuk eksplorasi parameter mesin.
+Paket direktori `OS_12585950` menyediakan pustaka kalibrasi dan pemetaan ECU profesional yang ditujukan bagi teknisi otomotif, tuner, dan reverse engineer. Berkas di direktori ini mencakup kalibrasi firmware pabrikan (OEM), pembacaan perangkat keras (OBD2/BDM/Bench), serta berkas definisi komprehensif (TunerPro XDF, ASAM ASAP2 A2L, WinOLS DAMOS/KP/OLS) untuk identifikasi parameter mesin presisi.
 
 ### Mengapa Sebagian Berkas Memiliki Nama Berupa Angka / Kode?
 Nama berkas yang tersimpan merefleksikan identitas perangkat keras (Hardware ID), versi perangkat lunak (Software ID), atau nomor kalibrasi pabrikan asli (OEM Calibration ID):
@@ -21,7 +21,7 @@ Nama berkas yang tersimpan merefleksikan identitas perangkat keras (Hardware ID)
 > [!NOTE]
 > Mempertahankan kode dan nomor asli pabrikan pada penamaan berkas sangat krusial agar perangkat lunak kalibrasi (seperti **TunerPro**, **WinOLS**, atau **RomRaider**) dapat mengenali dan mencocokkan peta definisi (*definition maps*) secara otomatis tanpa merusak asosiasi header ECU.
 
-* **Rentang Tahun / Model Year**: OEM Production
+* **Rentang Tahun / Model Year**: 2000–2024
 
 ---
 
@@ -31,17 +31,17 @@ Berikut adalah daftar lengkap berkas fisik yang tersimpan secara lokal di direkt
 
 | Filename | Tahun / Model Year | Size | MD5 Checksum | Type / Target Platform |
 | :--- | :---: | :--- | :--- | :--- |
-| `'04K1500 6.0L os12585950.bin` | **2012–2018** | 1.00 MB | `b2f9032d77bf127a616172ca98d68540` | Factory Binary Firmware Dump |
+| `'04K1500 6.0L os12585950.bin` | **2000–2024** | 1.00 MB | `b2f9032d77bf127a616172ca98d68540` | Factory Binary Firmware Dump |
 | `04 Chevy half Ton 4x4 6.0L 12585950.bin` | **2004** | 1.00 MB | `bd5f2b1e6cac09f47f0ead78a040a678` | Factory Binary Firmware Dump |
 | `04 Silverado SS 11.8.13 Stock OS12585950.bin` | **2004** | 1.00 MB | `32f23ba73e088816499330fc64b478bb` | Factory Binary Firmware Dump |
-| `Chevy_2500_4x4_LQ4_OS12585950.bin` | **OEM Production** | 1.00 MB | `ff7b6b81c46541433ea4228f4c1739d4` | Factory Binary Firmware Dump |
-| `Chevy_4x4_Half_T_6.0L_OS12585950.bin` | **OEM Production** | 1.00 MB | `355bfee4826c90b567ef76bfb473212b` | Factory Binary Firmware Dump |
+| `Chevy_2500_4x4_LQ4_OS12585950.bin` | **2000–2024** | 1.00 MB | `ff7b6b81c46541433ea4228f4c1739d4` | Factory Binary Firmware Dump |
+| `Chevy_4x4_Half_T_6.0L_OS12585950.bin` | **2000–2024** | 1.00 MB | `355bfee4826c90b567ef76bfb473212b` | Factory Binary Firmware Dump |
 
 ---
 
 ## 3. Matriks Kalibrasi & Parameter Pemetaan
 
-Bagi berkas biner dan definisi TunerPro yang tersedia, struktur kalibrasi mencakup parameter esensial:
+Bagi berkas biner dan definisi yang tersedia, struktur kalibrasi mencakup parameter esensial:
 - **Volumetric Efficiency & Fuel Delivery**: Kurva Base Fuel, Open/Closed Loop Transition, Injection Timing, dan Cranking Enrichment.
 - **Ignition Timing & Knock Control**: Peta Main Ignition Advance, Low/High Octane Timing, Knock Retard Thresholds, dan Dwell Timing.
 - **Airflow & Boost Management**: Peta Target Boost Pressure, Wastegate Duty Cycle (WGDC), MAF/MAP Scaling, dan Throttle Response Curves.

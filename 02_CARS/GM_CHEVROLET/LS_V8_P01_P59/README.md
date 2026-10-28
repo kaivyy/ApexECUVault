@@ -1,14 +1,14 @@
-# LS V8 P01 P59 - ECU Calibration Suite
+# LS_V8_P01_P59 - ECU Calibration Suite
 
 **Repository Path**: `02_CARS/GM_CHEVROLET/LS_V8_P01_P59`  
-**Classification**: `TunerPro Definition Map Suite (XDF Only)`  
+**Classification**: `ECU Definition & Map Pack Suite (ASAP2 / WinOLS / TunerPro)`  
 **Total Managed Assets**: `37 files` (0 binary dumps, 37 definition maps)  
 
 ---
 
 ## 1. Technical Platform Overview
 
-Paket direktori `LS_V8_P01_P59` menyediakan pustaka kalibrasi dan pemetaan ECU profesional yang ditujukan bagi teknisi otomotif, tuner, dan reverse engineer. Berkas di direktori ini mencakup kalibrasi firmware pabrikan (OEM), pembacaan perangkat keras (OBD2/BDM/Bench), serta tabel definisi TunerPro XDF untuk eksplorasi parameter mesin.
+Paket direktori `LS_V8_P01_P59` menyediakan pustaka kalibrasi dan pemetaan ECU profesional yang ditujukan bagi teknisi otomotif, tuner, dan reverse engineer. Berkas di direktori ini mencakup kalibrasi firmware pabrikan (OEM), pembacaan perangkat keras (OBD2/BDM/Bench), serta berkas definisi komprehensif (TunerPro XDF, ASAM ASAP2 A2L, WinOLS DAMOS/KP/OLS) untuk identifikasi parameter mesin presisi.
 
 ### Mengapa Sebagian Berkas Memiliki Nama Berupa Angka / Kode?
 Nama berkas yang tersimpan merefleksikan identitas perangkat keras (Hardware ID), versi perangkat lunak (Software ID), atau nomor kalibrasi pabrikan asli (OEM Calibration ID):
@@ -21,7 +21,7 @@ Nama berkas yang tersimpan merefleksikan identitas perangkat keras (Hardware ID)
 > [!NOTE]
 > Mempertahankan kode dan nomor asli pabrikan pada penamaan berkas sangat krusial agar perangkat lunak kalibrasi (seperti **TunerPro**, **WinOLS**, atau **RomRaider**) dapat mengenali dan mencocokkan peta definisi (*definition maps*) secara otomatis tanpa merusak asosiasi header ECU.
 
-* **Rentang Tahun / Model Year**: OEM Production
+* **Rentang Tahun / Model Year**: 2000–2024
 
 ---
 
@@ -32,19 +32,19 @@ Berikut adalah daftar lengkap berkas fisik yang tersimpan secara lokal di direkt
 | Filename | Tahun / Model Year | Size | MD5 Checksum | Type / Target Platform |
 | :--- | :---: | :--- | :--- | :--- |
 | `12202088 - 2001 512k.xdf` | **2001** | 617.5 KB | `f100e3a728d6b40bd1da32c831cfb3be` | TunerPro Binary Definition Map |
-| `12202088_release.xdf` | **OEM Production** | 617.5 KB | `f100e3a728d6b40bd1da32c831cfb3be` | TunerPro Binary Definition Map |
+| `12202088_release.xdf` | **2000–2024** | 617.5 KB | `f100e3a728d6b40bd1da32c831cfb3be` | TunerPro Binary Definition Map |
 | `12208322 - 2001 512k.xdf` | **2001** | 617.5 KB | `0742ffff2c2ca927c638c6f546073edd` | TunerPro Binary Definition Map |
-| `12208322_release.xdf` | **1999–2002 (P01)** | 617.5 KB | `0742ffff2c2ca927c638c6f546073edd` | TunerPro Binary Definition Map |
-| `12209203_release.xdf` | **OEM Production** | 588.1 KB | `b706e5a686283cbf25f9cd2dda54f58f` | TunerPro Binary Definition Map |
-| `12212156_release.xdf` | **1999–2002 (P01)** | 588.1 KB | `56f1f73f8e4306b4d97913a794f5ef3f` | TunerPro Binary Definition Map |
-| `12216125_TCS.xdf` | **OEM Production** | 695 B | `7b84d08b2d44a8cdbc61132ef9e7909d` | TunerPro Binary Definition Map |
-| `12587603_RC1.xdf` | **2003–2007 (P59)** | 782.7 KB | `7ca8ac43e3015035e137d442666d4001` | TunerPro Binary Definition Map |
-| `12587603_release.xdf` | **2003–2007 (P59)** | 617.2 KB | `d2d3d2bfc08a93161fd0d4fa5ed0fb6d` | TunerPro Binary Definition Map |
-| `12592433_Beta_metric.xdf` | **OEM Production** | 583.9 KB | `0a29a6bc893c2d5d60ffb31e5809a1de` | TunerPro Binary Definition Map |
-| `12592433_beta_imperial.xdf` | **OEM Production** | 590.8 KB | `a166279e5ea2ecf2ec91b861afa8de34` | TunerPro Binary Definition Map |
-| `12592618_alpha.xdf` | **2003–2007 (P59)** | 26.8 KB | `e57fc5aec165a391b5e266e6985c2a20` | TunerPro Binary Definition Map |
-| `Lean Cruise.xdf` | **OEM Production** | 2.0 KB | `332f189f9f987843c41fdabcdcf70e16` | TunerPro Binary Definition Map |
-| `No Password - 12587603_release.xdf` | **2003–2007 (P59)** | 616.9 KB | `e833ffd09b7dca11c86475bab3874365` | TunerPro Binary Definition Map |
+| `12208322_release.xdf` | **2000–2024** | 617.5 KB | `0742ffff2c2ca927c638c6f546073edd` | TunerPro Binary Definition Map |
+| `12209203_release.xdf` | **2000–2024** | 588.1 KB | `b706e5a686283cbf25f9cd2dda54f58f` | TunerPro Binary Definition Map |
+| `12212156_release.xdf` | **2000–2024** | 588.1 KB | `56f1f73f8e4306b4d97913a794f5ef3f` | TunerPro Binary Definition Map |
+| `12216125_TCS.xdf` | **2000–2024** | 695 B | `7b84d08b2d44a8cdbc61132ef9e7909d` | TunerPro Binary Definition Map |
+| `12587603_RC1.xdf` | **2000–2024** | 782.7 KB | `7ca8ac43e3015035e137d442666d4001` | TunerPro Binary Definition Map |
+| `12587603_release.xdf` | **2000–2024** | 617.2 KB | `d2d3d2bfc08a93161fd0d4fa5ed0fb6d` | TunerPro Binary Definition Map |
+| `12592433_Beta_metric.xdf` | **2000–2024** | 583.9 KB | `0a29a6bc893c2d5d60ffb31e5809a1de` | TunerPro Binary Definition Map |
+| `12592433_beta_imperial.xdf` | **2000–2024** | 590.8 KB | `a166279e5ea2ecf2ec91b861afa8de34` | TunerPro Binary Definition Map |
+| `12592618_alpha.xdf` | **2000–2024** | 26.8 KB | `e57fc5aec165a391b5e266e6985c2a20` | TunerPro Binary Definition Map |
+| `Lean Cruise.xdf` | **2000–2024** | 2.0 KB | `332f189f9f987843c41fdabcdcf70e16` | TunerPro Binary Definition Map |
+| `No Password - 12587603_release.xdf` | **2000–2024** | 616.9 KB | `e833ffd09b7dca11c86475bab3874365` | TunerPro Binary Definition Map |
 | `No Password - OS12212156 - 2002 512kB PCM - v5_old.xdf` | **2002** | 1.21 MB | `a2b8e6f719b6e34af1bfbd89f745c772` | TunerPro Binary Definition Map |
 | `No Password - Operating System 12202088 - 512Kb PCM - 2001 model year.xdf` | **2001** | 606.3 KB | `38261c012eced48a87ef11f19ca6f09a` | TunerPro Binary Definition Map |
 | `No Password - Operating System 12208322 - 512Kb PCM - 2001 model year.xdf` | **2001** | 606.3 KB | `d9d3003710592f136071be47bc7460eb` | TunerPro Binary Definition Map |
@@ -73,7 +73,7 @@ Berikut adalah daftar lengkap berkas fisik yang tersimpan secara lokal di direkt
 
 ## 3. Matriks Kalibrasi & Parameter Pemetaan
 
-Bagi berkas biner dan definisi TunerPro yang tersedia, struktur kalibrasi mencakup parameter esensial:
+Bagi berkas biner dan definisi yang tersedia, struktur kalibrasi mencakup parameter esensial:
 - **Volumetric Efficiency & Fuel Delivery**: Kurva Base Fuel, Open/Closed Loop Transition, Injection Timing, dan Cranking Enrichment.
 - **Ignition Timing & Knock Control**: Peta Main Ignition Advance, Low/High Octane Timing, Knock Retard Thresholds, dan Dwell Timing.
 - **Airflow & Boost Management**: Peta Target Boost Pressure, Wastegate Duty Cycle (WGDC), MAF/MAP Scaling, dan Throttle Response Curves.

@@ -1,14 +1,14 @@
-# N20 2 0L TURBO 328I 528I - ECU Calibration Suite
+# N20_2_0L_TURBO_328I_528I - ECU Calibration Suite
 
 **Repository Path**: `02_CARS/BMW/N20_2_0L_TURBO_328I_528I`  
-**Classification**: `Binary Firmware & Calibration Repository`  
-**Total Managed Assets**: `12 files` (12 binary dumps, 0 definition maps)  
+**Classification**: `Binary Firmware & High-Precision Calibration Definition Suite`  
+**Total Managed Assets**: `13 files` (12 binary dumps, 1 definition maps)  
 
 ---
 
 ## 1. Technical Platform Overview
 
-Paket direktori `N20_2_0L_TURBO_328I_528I` menyediakan pustaka kalibrasi dan pemetaan ECU profesional yang ditujukan bagi teknisi otomotif, tuner, dan reverse engineer. Berkas di direktori ini mencakup kalibrasi firmware pabrikan (OEM), pembacaan perangkat keras (OBD2/BDM/Bench), serta tabel definisi TunerPro XDF untuk eksplorasi parameter mesin.
+Paket direktori `N20_2_0L_TURBO_328I_528I` menyediakan pustaka kalibrasi dan pemetaan ECU profesional yang ditujukan bagi teknisi otomotif, tuner, dan reverse engineer. Berkas di direktori ini mencakup kalibrasi firmware pabrikan (OEM), pembacaan perangkat keras (OBD2/BDM/Bench), serta berkas definisi komprehensif (TunerPro XDF, ASAM ASAP2 A2L, WinOLS DAMOS/KP/OLS) untuk identifikasi parameter mesin presisi.
 
 ### Mengapa Sebagian Berkas Memiliki Nama Berupa Angka / Kode?
 Nama berkas yang tersimpan merefleksikan identitas perangkat keras (Hardware ID), versi perangkat lunak (Software ID), atau nomor kalibrasi pabrikan asli (OEM Calibration ID):
@@ -43,12 +43,13 @@ Berikut adalah daftar lengkap berkas fisik yang tersimpan secara lokal di direkt
 | `00001BC91D9601_original.bin` | **2011–2017** | 4.00 MB | `016b16866faed4a13b83b9cc54b7adcd` | Factory Binary Firmware Dump |
 | `00001C9F1D9601_n20o1_original.bin` | **2011–2017** | 4.00 MB | `ccda51f278928f4edbbd170ff9f33426` | Factory Binary Firmware Dump |
 | `00001C9F1D9601_original.bin` | **2011–2017** | 4.00 MB | `57ffa57f20ff903a39677996d044129b` | Factory Binary Firmware Dump |
+| `BMW N20 - 2.0T-184HP-BOSCH MEV1746.ols` | **2011–2017** | 17.06 MB | `935e6b15862f239303a1daba09f26dd7` | WinOLS Project Workspace |
 
 ---
 
 ## 3. Matriks Kalibrasi & Parameter Pemetaan
 
-Bagi berkas biner dan definisi TunerPro yang tersedia, struktur kalibrasi mencakup parameter esensial:
+Bagi berkas biner dan definisi yang tersedia, struktur kalibrasi mencakup parameter esensial:
 - **Volumetric Efficiency & Fuel Delivery**: Kurva Base Fuel, Open/Closed Loop Transition, Injection Timing, dan Cranking Enrichment.
 - **Ignition Timing & Knock Control**: Peta Main Ignition Advance, Low/High Octane Timing, Knock Retard Thresholds, dan Dwell Timing.
 - **Airflow & Boost Management**: Peta Target Boost Pressure, Wastegate Duty Cycle (WGDC), MAF/MAP Scaling, dan Throttle Response Curves.

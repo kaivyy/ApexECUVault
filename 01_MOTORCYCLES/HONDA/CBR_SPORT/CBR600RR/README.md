@@ -1,14 +1,14 @@
 # CBR600RR - ECU Calibration Suite
 
 **Repository Path**: `01_MOTORCYCLES/HONDA/CBR_SPORT/CBR600RR`  
-**Classification**: `Binary Firmware & Calibration Repository`  
+**Classification**: `OEM Binary Firmware & Factory Calibration Suite`  
 **Total Managed Assets**: `11 files` (11 binary dumps, 0 definition maps)  
 
 ---
 
 ## 1. Technical Platform Overview
 
-Paket direktori `CBR600RR` menyediakan pustaka kalibrasi dan pemetaan ECU profesional yang ditujukan bagi teknisi otomotif, tuner, dan reverse engineer. Berkas di direktori ini mencakup kalibrasi firmware pabrikan (OEM), pembacaan perangkat keras (OBD2/BDM/Bench), serta tabel definisi TunerPro XDF untuk eksplorasi parameter mesin.
+Paket direktori `CBR600RR` menyediakan pustaka kalibrasi dan pemetaan ECU profesional yang ditujukan bagi teknisi otomotif, tuner, dan reverse engineer. Berkas di direktori ini mencakup kalibrasi firmware pabrikan (OEM), pembacaan perangkat keras (OBD2/BDM/Bench), serta berkas definisi komprehensif (TunerPro XDF, ASAM ASAP2 A2L, WinOLS DAMOS/KP/OLS) untuk identifikasi parameter mesin presisi.
 
 ### Mengapa Sebagian Berkas Memiliki Nama Berupa Angka / Kode?
 Nama berkas yang tersimpan merefleksikan identitas perangkat keras (Hardware ID), versi perangkat lunak (Software ID), atau nomor kalibrasi pabrikan asli (OEM Calibration ID):
@@ -21,7 +21,7 @@ Nama berkas yang tersimpan merefleksikan identitas perangkat keras (Hardware ID)
 > [!NOTE]
 > Mempertahankan kode dan nomor asli pabrikan pada penamaan berkas sangat krusial agar perangkat lunak kalibrasi (seperti **TunerPro**, **WinOLS**, atau **RomRaider**) dapat mengenali dan mencocokkan peta definisi (*definition maps*) secara otomatis tanpa merusak asosiasi header ECU.
 
-* **Rentang Tahun / Model Year**: 2003–2024
+* **Rentang Tahun / Model Year**: 2000–2024
 
 ---
 
@@ -31,23 +31,23 @@ Berikut adalah daftar lengkap berkas fisik yang tersimpan secara lokal di direkt
 
 | Filename | Tahun / Model Year | Size | MD5 Checksum | Type / Target Platform |
 | :--- | :---: | :--- | :--- | :--- |
-| `38770-MEE-612.bin` | **2003–2024** | 256.0 KB | `aecce9ae133d3dfd3bda9205f09f05ea` | Factory Binary Firmware Dump |
-| `38770-MEE-622.bin` | **2003–2024** | 256.0 KB | `2742e3c741f55c578b81fea8c6fc6a6d` | Factory Binary Firmware Dump |
-| `38770-MEE-F02.bin` | **2003–2024** | 256.0 KB | `cc6fdd6e9d2035cfb7af143e3642814b` | Factory Binary Firmware Dump |
-| `38770-MFJ-A02.bin` | **2003–2024** | 256.0 KB | `b061d41db86aec0e346967361250b344` | Factory Binary Firmware Dump |
-| `38770-MFJ-D04.bin` | **2003–2024** | 256.0 KB | `9743fe4c0ffa263869cc6c405394ac0c` | Factory Binary Firmware Dump |
-| `38770-MFJ-F03.bin` | **2003–2024** | 256.0 KB | `5de5263aa9d7767f26945e9cf85c272c` | Factory Binary Firmware Dump |
-| `38770-MGM-D11.bin` | **2003–2024** | 256.0 KB | `773d00c4f51ac9d5868d533aa3a85fe9` | Factory Binary Firmware Dump |
-| `38770-MJC-A01.bin` | **2003–2024** | 256.0 KB | `4a3c7f75593a162aaf1adce606590e63` | Factory Binary Firmware Dump |
-| `38770-MJC-D01.bin` | **2003–2024** | 256.0 KB | `210ae00bd01f4dc1de3aa09264886d6e` | Factory Binary Firmware Dump |
-| `38770-N1A-D11.bin` | **2003–2024** | 256.0 KB | `68f033b3e7f5f5aa05fce050446d095e` | Factory Binary Firmware Dump |
-| `38770-NL3-750.bin` | **2003–2024** | 256.0 KB | `4480e3c59a2f0f692efaff227321cd79` | Factory Binary Firmware Dump |
+| `38770-MEE-612.bin` | **2000–2024** | 256.0 KB | `aecce9ae133d3dfd3bda9205f09f05ea` | Factory Binary Firmware Dump |
+| `38770-MEE-622.bin` | **2000–2024** | 256.0 KB | `2742e3c741f55c578b81fea8c6fc6a6d` | Factory Binary Firmware Dump |
+| `38770-MEE-F02.bin` | **2000–2024** | 256.0 KB | `cc6fdd6e9d2035cfb7af143e3642814b` | Factory Binary Firmware Dump |
+| `38770-MFJ-A02.bin` | **2000–2024** | 256.0 KB | `b061d41db86aec0e346967361250b344` | Factory Binary Firmware Dump |
+| `38770-MFJ-D04.bin` | **2000–2024** | 256.0 KB | `9743fe4c0ffa263869cc6c405394ac0c` | Factory Binary Firmware Dump |
+| `38770-MFJ-F03.bin` | **2000–2024** | 256.0 KB | `5de5263aa9d7767f26945e9cf85c272c` | Factory Binary Firmware Dump |
+| `38770-MGM-D11.bin` | **2000–2024** | 256.0 KB | `773d00c4f51ac9d5868d533aa3a85fe9` | Factory Binary Firmware Dump |
+| `38770-MJC-A01.bin` | **2000–2024** | 256.0 KB | `4a3c7f75593a162aaf1adce606590e63` | Factory Binary Firmware Dump |
+| `38770-MJC-D01.bin` | **2000–2024** | 256.0 KB | `210ae00bd01f4dc1de3aa09264886d6e` | Factory Binary Firmware Dump |
+| `38770-N1A-D11.bin` | **2000–2024** | 256.0 KB | `68f033b3e7f5f5aa05fce050446d095e` | Factory Binary Firmware Dump |
+| `38770-NL3-750.bin` | **2000–2024** | 256.0 KB | `4480e3c59a2f0f692efaff227321cd79` | Factory Binary Firmware Dump |
 
 ---
 
 ## 3. Matriks Kalibrasi & Parameter Pemetaan
 
-Bagi berkas biner dan definisi TunerPro yang tersedia, struktur kalibrasi mencakup parameter esensial:
+Bagi berkas biner dan definisi yang tersedia, struktur kalibrasi mencakup parameter esensial:
 - **Volumetric Efficiency & Fuel Delivery**: Kurva Base Fuel, Open/Closed Loop Transition, Injection Timing, dan Cranking Enrichment.
 - **Ignition Timing & Knock Control**: Peta Main Ignition Advance, Low/High Octane Timing, Knock Retard Thresholds, dan Dwell Timing.
 - **Airflow & Boost Management**: Peta Target Boost Pressure, Wastegate Duty Cycle (WGDC), MAF/MAP Scaling, dan Throttle Response Curves.

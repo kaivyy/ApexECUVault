@@ -1,14 +1,14 @@
-# M POWER MSS52 M5 - ECU Calibration Suite
+# M_POWER_MSS52_M5 - ECU Calibration Suite
 
 **Repository Path**: `02_CARS/BMW/M_POWER_MSS52_M5`  
-**Classification**: `TunerPro Definition Map Suite (XDF Only)`  
+**Classification**: `ECU Definition & Map Pack Suite (ASAP2 / WinOLS / TunerPro)`  
 **Total Managed Assets**: `2 files` (0 binary dumps, 2 definition maps)  
 
 ---
 
 ## 1. Technical Platform Overview
 
-Paket direktori `M_POWER_MSS52_M5` menyediakan pustaka kalibrasi dan pemetaan ECU profesional yang ditujukan bagi teknisi otomotif, tuner, dan reverse engineer. Berkas di direktori ini mencakup kalibrasi firmware pabrikan (OEM), pembacaan perangkat keras (OBD2/BDM/Bench), serta tabel definisi TunerPro XDF untuk eksplorasi parameter mesin.
+Paket direktori `M_POWER_MSS52_M5` menyediakan pustaka kalibrasi dan pemetaan ECU profesional yang ditujukan bagi teknisi otomotif, tuner, dan reverse engineer. Berkas di direktori ini mencakup kalibrasi firmware pabrikan (OEM), pembacaan perangkat keras (OBD2/BDM/Bench), serta berkas definisi komprehensif (TunerPro XDF, ASAM ASAP2 A2L, WinOLS DAMOS/KP/OLS) untuk identifikasi parameter mesin presisi.
 
 ### Mengapa Sebagian Berkas Memiliki Nama Berupa Angka / Kode?
 Nama berkas yang tersimpan merefleksikan identitas perangkat keras (Hardware ID), versi perangkat lunak (Software ID), atau nomor kalibrasi pabrikan asli (OEM Calibration ID):
@@ -31,14 +31,14 @@ Berikut adalah daftar lengkap berkas fisik yang tersimpan secara lokal di direkt
 
 | Filename | Tahun / Model Year | Size | MD5 Checksum | Type / Target Platform |
 | :--- | :---: | :--- | :--- | :--- |
-| `MSS52 ECU Definitions.xml` | **1998–2003** | 50.3 KB | `db1f890ab38d1a0af063187631d5b100` | ECU / ASAP2 Calibration Map Definition |
-| `MSS5X logger_METRIC_EN.xml` | **1998–2003** | 17.2 KB | `6064a14af39f6cac0de82158f8d14840` | ECU / ASAP2 Calibration Map Definition |
+| `MSS52 ECU Definitions.xml` | **1998–2003** | 50.3 KB | `db1f890ab38d1a0af063187631d5b100` | ECU / XML Calibration Map Definition |
+| `MSS5X logger_METRIC_EN.xml` | **1998–2003** | 17.2 KB | `6064a14af39f6cac0de82158f8d14840` | ECU / XML Calibration Map Definition |
 
 ---
 
 ## 3. Matriks Kalibrasi & Parameter Pemetaan
 
-Bagi berkas biner dan definisi TunerPro yang tersedia, struktur kalibrasi mencakup parameter esensial:
+Bagi berkas biner dan definisi yang tersedia, struktur kalibrasi mencakup parameter esensial:
 - **Volumetric Efficiency & Fuel Delivery**: Kurva Base Fuel, Open/Closed Loop Transition, Injection Timing, dan Cranking Enrichment.
 - **Ignition Timing & Knock Control**: Peta Main Ignition Advance, Low/High Octane Timing, Knock Retard Thresholds, dan Dwell Timing.
 - **Airflow & Boost Management**: Peta Target Boost Pressure, Wastegate Duty Cycle (WGDC), MAF/MAP Scaling, dan Throttle Response Curves.

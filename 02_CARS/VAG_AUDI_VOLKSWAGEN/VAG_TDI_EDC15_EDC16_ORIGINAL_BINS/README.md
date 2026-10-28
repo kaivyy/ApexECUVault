@@ -1,27 +1,22 @@
-# VOLKSWAGEN & AUDI - Bosch EDC15, EDC16 & Motronic ME7 Original Master Suite
+# VAG_TDI_EDC15_EDC16_ORIGINAL_BINS - ECU Calibration Suite
 
 **Repository Path**: `02_CARS/VAG_AUDI_VOLKSWAGEN/VAG_TDI_EDC15_EDC16_ORIGINAL_BINS`  
-**Classification**: `Universal ECU Firmware & Calibration Suite`  
-**Total Managed Assets**: `882 files` (880 binary dumps, 2 definition maps)  
+**Classification**: `Binary Firmware & High-Precision Calibration Definition Suite`  
+**Total Managed Assets**: `879 files` (864 binary dumps, 15 definition maps)  
 
 ---
 
 ## 1. Technical Platform Overview
 
-Pustaka master terbesar kalibrasi biner asli pabrikan dengan 882 berkas biner terverifikasi (.ori/.bin) untuk kendaraan Volkswagen (Golf IV/V, Passat B5/B6, Bora, Jetta, Polo, Sharan, Touareg, Transporter T4/T5, Crafter) dan Audi (A3 8L/8P, A4 B5/B6/B7, A6 C5/C6, TT 8N/8J). Meliputi varian mesin diesel 1.9 TDI VP/PD (AGR, ALH, ASV, ATD, AXR, AJM, ASZ, ARL), 2.0 TDI PD/CR (BKD, BKP, BMM, BMH, BMN), 2.5 TDI V6, 3.0 TDI V6, serta varian bensin 1.8 Turbo 20V (AGU, AUM, AUQ, BAM, APX) dan 2.0 TFSI (AXX, BWA, BWE, CDL).
-
-### Detail Arsitektur Kontroler & Komunikasi:
-- **Keluarga ECU / Controller Family**: `Bosch EDC15V, EDC15VM, EDC15P, EDC16U1, EDC16U31, EDC16U34, EDC16CP34, ME7.5, MED9.1`
-- **Arsitektur MCU & Memori**: `Infineon C167CR / ST10F275 / Motorola MPC555 / MPC562 / MPC564 256KB-2MB Flash`
-- **Protokol Diagnostik & Flashing**: `KWP1281 / KWP2000 (ISO 14230 / TP 2.0) / UDS / BDM100`
+Paket direktori `VAG_TDI_EDC15_EDC16_ORIGINAL_BINS` menyediakan pustaka kalibrasi dan pemetaan ECU profesional yang ditujukan bagi teknisi otomotif, tuner, dan reverse engineer. Berkas di direktori ini mencakup kalibrasi firmware pabrikan (OEM), pembacaan perangkat keras (OBD2/BDM/Bench), serta berkas definisi komprehensif (TunerPro XDF, ASAM ASAP2 A2L, WinOLS DAMOS/KP/OLS) untuk identifikasi parameter mesin presisi.
 
 ### Mengapa Sebagian Berkas Memiliki Nama Berupa Angka / Kode?
 Nama berkas yang tersimpan merefleksikan identitas perangkat keras (Hardware ID), versi perangkat lunak (Software ID), atau nomor kalibrasi pabrikan asli (OEM Calibration ID):
 - **Bosch Part Numbers** (misal `0261xxxxxx`, `1037xxxxxx`): Standar identifikasi universal Bosch untuk ECU Motronic, MED17, EDC16, dan EDC17.
-- **BMW Software IDs** (misal `00005C64xxxxxx`, `10SW002828`, `0110C6`, `MS430069`): Alamat dan assembly identification number pada modul DME Siemens/Continental/Bosch.
-- **Denso / Toyota Calibration IDs** (misal `89663-xxxxx`, `32920-xxxxx`): Nomor resmi Denso MCU firmware flash untuk mobil dan motor.
-- **Keihin Part Numbers** (misal `37805-xxx-xxxx`, `38770-xxx-xxxx`): Kode perakitan ECU Honda untuk verifikasi kecocokan checksum dan proteksi immobilizer.
-- **VAG Hardware / Software IDs** (misal `038906012xx`, `03G906021xx`, `8D0907558xx`): Nomor bagian resmi Volkswagen Audi Group untuk identifikasi kalibrasi mesin EDC15, EDC16, dan ME7.
+- **BMW Software IDs** (misal `00005C64xxxxxx`, `10SW002828`): Alamat dan assembly identification number pada modul DME Siemens/Continental/Bosch.
+- **Denso / Toyota Calibration IDs** (misal `89663-xxxxx`): Nomor resmi Toyota Techstream / Denso MCU firmware flash.
+- **Keihin Part Numbers** (misal `37805-xxx-xxxx`, `38770-xxx`): Kode perakitan ECU Honda untuk verifikasi kecocokan checksum dan proteksi immobilizer.
+- **GM OS IDs** (misal `12587603`, `12212156`): Operating system ID kontroler GM Delphi P01/P59.
 
 > [!NOTE]
 > Mempertahankan kode dan nomor asli pabrikan pada penamaan berkas sangat krusial agar perangkat lunak kalibrasi (seperti **TunerPro**, **WinOLS**, atau **RomRaider**) dapat mengenali dan mencocokkan peta definisi (*definition maps*) secara otomatis tanpa merusak asosiasi header ECU.
@@ -150,8 +145,8 @@ Berikut adalah daftar lengkap berkas fisik yang tersimpan secara lokal di direkt
 | `A6TD7550.ORI` | **1998–2009** | 128.0 KB | `808de13beba30b8cd7237d0011a6e52d` | Factory Binary Firmware Dump |
 | `A6_2.0L_98y_024D.bin` | **1998–2009** | 32.0 KB | `4853c212a09588311733937bfb954797` | Factory Binary Firmware Dump |
 | `A8 4_0 V8 275Ks org.binS.bin` | **1998–2009** | 1.00 MB | `8f042a81055c3b0ee5cc0979237a1cad` | Factory Binary Firmware Dump |
-| `AM29F800B_1c.BIN` | **2014–2020** | 1.00 MB | `8f575fda9e64a924d23bacad55e02d6d` | Factory Binary Firmware Dump |
-| `AM29F800B_2.BIN` | **2014–2020** | 1.00 MB | `e100243c1b6cef0f6ede4b10134e9ddc` | Factory Binary Firmware Dump |
+| `AM29F800B_1c.BIN` | **1998–2009** | 1.00 MB | `8f575fda9e64a924d23bacad55e02d6d` | Factory Binary Firmware Dump |
+| `AM29F800B_2.BIN` | **1998–2009** | 1.00 MB | `e100243c1b6cef0f6ede4b10134e9ddc` | Factory Binary Firmware Dump |
 | `AT156ES.ori` | **1998–2009** | 512.0 KB | `73039bbabc34a86c06abf8f5c6ede8ea` | Factory Binary Firmware Dump |
 | `AUDI A4 2.5TDI 150HP 0281001945 8D0907401F 766-767.ori` | **1998–2009** | 256.0 KB | `263fa09d0882ab575d5e17b4bb4c5b0a` | Factory Binary Firmware Dump |
 | `AUDI S4 2.7 V6  0261206376  8D0907551E 350221.ori` | **1998–2009** | 512.0 KB | `534588a2f5ad0b4b876212f477b15b98` | Factory Binary Firmware Dump |
@@ -568,7 +563,7 @@ Berikut adalah daftar lengkap berkas fisik yang tersimpan secara lokal di direkt
 | `VW Passat 1.9TDI 105HP 03G906021AB 381562.ori` | **1998–2009** | 2.00 MB | `310f95e88915c09faa53a64843bb0d46` | Factory Binary Firmware Dump |
 | `VW Passat 1.9TDI 105HP 03G906021NK 382417.ori` | **1998–2009** | 2.00 MB | `2fac6e8648f99d7006957e8d5e825304` | Factory Binary Firmware Dump |
 | `VW Passat 2.0 TDI BHW 136HP 038906016R 0281011982 371877.ori` | **1998–2009** | 512.0 KB | `c27a15e0889353aadff360f26515e9fd` | Factory Binary Firmware Dump |
-| `VW Passat 2.0FSI 150HP 06F906056AN 0261S02135 376502.ori` | **2017–2023** | 2.00 MB | `3586e8059484d97c44452747e508cb44` | Factory Binary Firmware Dump |
+| `VW Passat 2.0FSI 150HP 06F906056AN 0261S02135 376502.ori` | **1998–2009** | 2.00 MB | `3586e8059484d97c44452747e508cb44` | Factory Binary Firmware Dump |
 | `VW Passat 2.0TDI  170HP 3L906022BM 396091.ori` | **1998–2009** | 2.00 MB | `8845c5be3aea78f2a93c84e1bc19ffef` | Factory Binary Firmware Dump |
 | `VW Passat 2.0TDI 140HP  03G906021AB 03G906021MT 382427.ori` | **1998–2009** | 2.00 MB | `a805f89294609bcaa2dc5b633211e9c6` | Factory Binary Firmware Dump |
 | `VW Passat 2.0TDI 140HP 0281012925_03G906021AD_378328.ori` | **1998–2009** | 2.00 MB | `0533cbdfcfb89d692d2bfa11a884764f` | Factory Binary Firmware Dump |
@@ -920,11 +915,11 @@ Berikut adalah daftar lengkap berkas fisik yang tersimpan secara lokal di direkt
 
 ## 3. Matriks Kalibrasi & Parameter Pemetaan
 
-Bagi berkas biner dan definisi TunerPro / RomRaider yang tersedia, struktur kalibrasi mencakup parameter esensial:
-- **Volumetric Efficiency & Fuel Delivery**: Kurva Base Fuel, Open/Closed Loop Transition, Injection Timing, Smoke Limiter, Torque-to-Fuel Limiter, dan Cranking Enrichment.
+Bagi berkas biner dan definisi yang tersedia, struktur kalibrasi mencakup parameter esensial:
+- **Volumetric Efficiency & Fuel Delivery**: Kurva Base Fuel, Open/Closed Loop Transition, Injection Timing, dan Cranking Enrichment.
 - **Ignition Timing & Knock Control**: Peta Main Ignition Advance, Low/High Octane Timing, Knock Retard Thresholds, dan Dwell Timing.
-- **Airflow & Boost Management**: Peta Target Boost Pressure, Wastegate Duty Cycle (WGDC / N75 Map), MAF/MAP Scaling, dan Throttle Response Curves (Driver Wish).
-- **Safety Limits & Thresholds**: Rev Limiter (Hard/Soft Cut), Top Speed Limiter (Vmax), Overboost Fuel Cut, EGT (Exhaust Gas Temperature) Protection, dan Engine Protection Strategies.
+- **Airflow & Boost Management**: Peta Target Boost Pressure, Wastegate Duty Cycle (WGDC), MAF/MAP Scaling, dan Throttle Response Curves.
+- **Safety Limits & Thresholds**: Rev Limiter (Hard/Soft Cut), Top Speed Limiter (Vmax), Overboost Fuel Cut, dan Engine Protection Strategies.
 
 ---
 

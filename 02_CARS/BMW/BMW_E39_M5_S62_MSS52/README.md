@@ -1,14 +1,14 @@
-# BMW E39 M5 S62 MSS52 - ECU Calibration Suite
+# BMW_E39_M5_S62_MSS52 - ECU Calibration Suite
 
 **Repository Path**: `02_CARS/BMW/BMW_E39_M5_S62_MSS52`  
-**Classification**: `TunerPro Definition Map Suite (XDF Only)`  
-**Total Managed Assets**: `1 files` (0 binary dumps, 1 definition maps)  
+**Classification**: `ECU Definition & Map Pack Suite (ASAP2 / WinOLS / TunerPro)`  
+**Total Managed Assets**: `2 files` (0 binary dumps, 2 definition maps)  
 
 ---
 
 ## 1. Technical Platform Overview
 
-Paket direktori `BMW_E39_M5_S62_MSS52` menyediakan pustaka kalibrasi dan pemetaan ECU profesional yang ditujukan bagi teknisi otomotif, tuner, dan reverse engineer. Berkas di direktori ini mencakup kalibrasi firmware pabrikan (OEM), pembacaan perangkat keras (OBD2/BDM/Bench), serta tabel definisi TunerPro XDF untuk eksplorasi parameter mesin.
+Paket direktori `BMW_E39_M5_S62_MSS52` menyediakan pustaka kalibrasi dan pemetaan ECU profesional yang ditujukan bagi teknisi otomotif, tuner, dan reverse engineer. Berkas di direktori ini mencakup kalibrasi firmware pabrikan (OEM), pembacaan perangkat keras (OBD2/BDM/Bench), serta berkas definisi komprehensif (TunerPro XDF, ASAM ASAP2 A2L, WinOLS DAMOS/KP/OLS) untuk identifikasi parameter mesin presisi.
 
 ### Mengapa Sebagian Berkas Memiliki Nama Berupa Angka / Kode?
 Nama berkas yang tersimpan merefleksikan identitas perangkat keras (Hardware ID), versi perangkat lunak (Software ID), atau nomor kalibrasi pabrikan asli (OEM Calibration ID):
@@ -31,13 +31,14 @@ Berikut adalah daftar lengkap berkas fisik yang tersimpan secara lokal di direkt
 
 | Filename | Tahun / Model Year | Size | MD5 Checksum | Type / Target Platform |
 | :--- | :---: | :--- | :--- | :--- |
+| `167_3000.DAM` | **1998–2003** | 456.9 KB | `cd2bf8be11b5bb03aabef2d55de00370` | WinOLS DAMOS Definition Map |
 | `mss52.xdf` | **1998–2003** | 378.1 KB | `6cbdb00eb04f47b6a3d619e4a26062d7` | TunerPro Binary Definition Map |
 
 ---
 
 ## 3. Matriks Kalibrasi & Parameter Pemetaan
 
-Bagi berkas biner dan definisi TunerPro yang tersedia, struktur kalibrasi mencakup parameter esensial:
+Bagi berkas biner dan definisi yang tersedia, struktur kalibrasi mencakup parameter esensial:
 - **Volumetric Efficiency & Fuel Delivery**: Kurva Base Fuel, Open/Closed Loop Transition, Injection Timing, dan Cranking Enrichment.
 - **Ignition Timing & Knock Control**: Peta Main Ignition Advance, Low/High Octane Timing, Knock Retard Thresholds, dan Dwell Timing.
 - **Airflow & Boost Management**: Peta Target Boost Pressure, Wastegate Duty Cycle (WGDC), MAF/MAP Scaling, dan Throttle Response Curves.

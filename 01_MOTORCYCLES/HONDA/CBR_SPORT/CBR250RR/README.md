@@ -1,14 +1,14 @@
 # CBR250RR - ECU Calibration Suite
 
 **Repository Path**: `01_MOTORCYCLES/HONDA/CBR_SPORT/CBR250RR`  
-**Classification**: `Complete Binary & TunerPro Definition Suite`  
+**Classification**: `Binary Firmware & High-Precision Calibration Definition Suite`  
 **Total Managed Assets**: `6 files` (4 binary dumps, 2 definition maps)  
 
 ---
 
 ## 1. Technical Platform Overview
 
-Paket direktori `CBR250RR` menyediakan pustaka kalibrasi dan pemetaan ECU profesional yang ditujukan bagi teknisi otomotif, tuner, dan reverse engineer. Berkas di direktori ini mencakup kalibrasi firmware pabrikan (OEM), pembacaan perangkat keras (OBD2/BDM/Bench), serta tabel definisi TunerPro XDF untuk eksplorasi parameter mesin.
+Paket direktori `CBR250RR` menyediakan pustaka kalibrasi dan pemetaan ECU profesional yang ditujukan bagi teknisi otomotif, tuner, dan reverse engineer. Berkas di direktori ini mencakup kalibrasi firmware pabrikan (OEM), pembacaan perangkat keras (OBD2/BDM/Bench), serta berkas definisi komprehensif (TunerPro XDF, ASAM ASAP2 A2L, WinOLS DAMOS/KP/OLS) untuk identifikasi parameter mesin presisi.
 
 ### Mengapa Sebagian Berkas Memiliki Nama Berupa Angka / Kode?
 Nama berkas yang tersimpan merefleksikan identitas perangkat keras (Hardware ID), versi perangkat lunak (Software ID), atau nomor kalibrasi pabrikan asli (OEM Calibration ID):
@@ -31,18 +31,18 @@ Berikut adalah daftar lengkap berkas fisik yang tersimpan secara lokal di direkt
 
 | Filename | Tahun / Model Year | Size | MD5 Checksum | Type / Target Platform |
 | :--- | :---: | :--- | :--- | :--- |
-| `38770-K64-N01.bin` | **2016–2019** | 1.00 MB | `e0c12d43c50c7c285df0307bef13f4b5` | Factory Binary Firmware Dump |
-| `38770-K64-R02.bin` | **2017–2024** | 1.00 MB | `f87f1dc65059e08f496e62fd0872a6e7` | Factory Binary Firmware Dump |
-| `CBR250RR-38770-K64-N04_BIN.bin` | **2016–2019** | 1.00 MB | `c069d5b2d1476a728ba14a43ef73dc7a` | Factory Binary Firmware Dump |
-| `CBR250RR-38770-K64-ND1_BIN.bin` | **2020–2022** | 1.00 MB | `5c616504f3b6306adff2ad04a17ab68c` | Factory Binary Firmware Dump |
-| `CBR250RR_38770-K64-N04_PUBLIC_v1.xdf` | **2016–2019** | 89.0 KB | `8beae407f19171868ea92c8f56748426` | TunerPro Binary Definition Map |
-| `CBR250RR_38770-K64-ND1_PUBLIC_v1.xdf` | **2020–2022** | 83.3 KB | `cb0b660f54754f38efbc1ad750aa4967` | TunerPro Binary Definition Map |
+| `38770-K64-N01.bin` | **2016–2026** | 1.00 MB | `e0c12d43c50c7c285df0307bef13f4b5` | Factory Binary Firmware Dump |
+| `38770-K64-R02.bin` | **2016–2026** | 1.00 MB | `f87f1dc65059e08f496e62fd0872a6e7` | Factory Binary Firmware Dump |
+| `CBR250RR-38770-K64-N04_BIN.bin` | **2016–2026** | 1.00 MB | `c069d5b2d1476a728ba14a43ef73dc7a` | Factory Binary Firmware Dump |
+| `CBR250RR-38770-K64-ND1_BIN.bin` | **2016–2026** | 1.00 MB | `5c616504f3b6306adff2ad04a17ab68c` | Factory Binary Firmware Dump |
+| `CBR250RR_38770-K64-N04_PUBLIC_v1.xdf` | **2016–2026** | 89.0 KB | `8beae407f19171868ea92c8f56748426` | TunerPro Binary Definition Map |
+| `CBR250RR_38770-K64-ND1_PUBLIC_v1.xdf` | **2016–2026** | 83.3 KB | `cb0b660f54754f38efbc1ad750aa4967` | TunerPro Binary Definition Map |
 
 ---
 
 ## 3. Matriks Kalibrasi & Parameter Pemetaan
 
-Bagi berkas biner dan definisi TunerPro yang tersedia, struktur kalibrasi mencakup parameter esensial:
+Bagi berkas biner dan definisi yang tersedia, struktur kalibrasi mencakup parameter esensial:
 - **Volumetric Efficiency & Fuel Delivery**: Kurva Base Fuel, Open/Closed Loop Transition, Injection Timing, dan Cranking Enrichment.
 - **Ignition Timing & Knock Control**: Peta Main Ignition Advance, Low/High Octane Timing, Knock Retard Thresholds, dan Dwell Timing.
 - **Airflow & Boost Management**: Peta Target Boost Pressure, Wastegate Duty Cycle (WGDC), MAF/MAP Scaling, dan Throttle Response Curves.

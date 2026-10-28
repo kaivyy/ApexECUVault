@@ -1,14 +1,14 @@
-# AVANZA XENIA RUSH TERIOS 3SZ 1NR 2NR - ECU Calibration Suite
+# AVANZA_XENIA_RUSH_TERIOS_3SZ_1NR_2NR - ECU Calibration Suite
 
 **Repository Path**: `02_CARS/TOYOTA_DAIHATSU/AVANZA_XENIA_RUSH_TERIOS_3SZ_1NR_2NR`  
-**Classification**: `Complete Binary & TunerPro Definition Suite`  
+**Classification**: `Binary Firmware & High-Precision Calibration Definition Suite`  
 **Total Managed Assets**: `3 files` (2 binary dumps, 1 definition maps)  
 
 ---
 
 ## 1. Technical Platform Overview
 
-Paket direktori `AVANZA_XENIA_RUSH_TERIOS_3SZ_1NR_2NR` menyediakan pustaka kalibrasi dan pemetaan ECU profesional yang ditujukan bagi teknisi otomotif, tuner, dan reverse engineer. Berkas di direktori ini mencakup kalibrasi firmware pabrikan (OEM), pembacaan perangkat keras (OBD2/BDM/Bench), serta tabel definisi TunerPro XDF untuk eksplorasi parameter mesin.
+Paket direktori `AVANZA_XENIA_RUSH_TERIOS_3SZ_1NR_2NR` menyediakan pustaka kalibrasi dan pemetaan ECU profesional yang ditujukan bagi teknisi otomotif, tuner, dan reverse engineer. Berkas di direktori ini mencakup kalibrasi firmware pabrikan (OEM), pembacaan perangkat keras (OBD2/BDM/Bench), serta berkas definisi komprehensif (TunerPro XDF, ASAM ASAP2 A2L, WinOLS DAMOS/KP/OLS) untuk identifikasi parameter mesin presisi.
 
 ### Mengapa Sebagian Berkas Memiliki Nama Berupa Angka / Kode?
 Nama berkas yang tersimpan merefleksikan identitas perangkat keras (Hardware ID), versi perangkat lunak (Software ID), atau nomor kalibrasi pabrikan asli (OEM Calibration ID):
@@ -21,7 +21,7 @@ Nama berkas yang tersimpan merefleksikan identitas perangkat keras (Hardware ID)
 > [!NOTE]
 > Mempertahankan kode dan nomor asli pabrikan pada penamaan berkas sangat krusial agar perangkat lunak kalibrasi (seperti **TunerPro**, **WinOLS**, atau **RomRaider**) dapat mengenali dan mencocokkan peta definisi (*definition maps*) secara otomatis tanpa merusak asosiasi header ECU.
 
-* **Rentang Tahun / Model Year**: 2006–2021
+* **Rentang Tahun / Model Year**: 2006–2024
 
 ---
 
@@ -31,7 +31,7 @@ Berikut adalah daftar lengkap berkas fisik yang tersimpan secara lokal di direkt
 
 | Filename | Tahun / Model Year | Size | MD5 Checksum | Type / Target Platform |
 | :--- | :---: | :--- | :--- | :--- |
-| `TOYOTA_89560-BZxxx_AVANZA.xdf` | **2006–2021** | 9.8 KB | `7de0ad35ff80d6796906b9820357ef5b` | TunerPro Binary Definition Map |
+| `TOYOTA_89560-BZxxx_AVANZA.xdf` | **2006–2024** | 9.8 KB | `7de0ad35ff80d6796906b9820357ef5b` | TunerPro Binary Definition Map |
 | `TOYOTA_AVANZA_AURIS_2016_1.3L_DUAL_VVTI_1NRFE_89663-52J01.bin` | **2016** | 736.0 KB | `ecfa3c713447b1b1229dfe9ebf40de4c` | Factory Binary Firmware Dump |
 | `TOYOTA_AVANZA_COROLLA_2015_1.3L_DUAL_VVTI_1NRFE_89663-02E73.bin` | **2015** | 992.0 KB | `01c750bb362506d8026022a952303b60` | Factory Binary Firmware Dump |
 
@@ -39,7 +39,7 @@ Berikut adalah daftar lengkap berkas fisik yang tersimpan secara lokal di direkt
 
 ## 3. Matriks Kalibrasi & Parameter Pemetaan
 
-Bagi berkas biner dan definisi TunerPro yang tersedia, struktur kalibrasi mencakup parameter esensial:
+Bagi berkas biner dan definisi yang tersedia, struktur kalibrasi mencakup parameter esensial:
 - **Volumetric Efficiency & Fuel Delivery**: Kurva Base Fuel, Open/Closed Loop Transition, Injection Timing, dan Cranking Enrichment.
 - **Ignition Timing & Knock Control**: Peta Main Ignition Advance, Low/High Octane Timing, Knock Retard Thresholds, dan Dwell Timing.
 - **Airflow & Boost Management**: Peta Target Boost Pressure, Wastegate Duty Cycle (WGDC), MAF/MAP Scaling, dan Throttle Response Curves.

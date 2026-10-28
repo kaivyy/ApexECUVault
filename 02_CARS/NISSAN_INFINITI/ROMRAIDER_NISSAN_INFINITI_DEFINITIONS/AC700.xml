@@ -1,0 +1,16 @@
+<rom base="CF000">
+	<romid>
+		<xmlid>AC700</xmlid>
+		<caseid>5ZVSUNH</caseid>
+		<internalidaddress>A14E</internalidaddress>
+		<internalidstring>AC700</internalidstring>
+		<ecuid>1AC700</ecuid>
+		<year>2005</year>
+		<market></market>
+		<make>Infiniti</make>
+		<model>G35</model>
+		<submodel>Base</submodel>
+		<transmission>AT</transmission>
+		<memmodel>SH7058</memmodel>
+	</romid>
+</rom>

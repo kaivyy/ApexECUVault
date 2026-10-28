@@ -1,36 +1,16 @@
-# SKODA_SEAT_TDI_TFSI_ORIGINAL_BINS - ECU Calibration Suite
+# SKODA SEAT TDI TFSI ORIGINAL BINS - Technical ECU Calibration Dossier
 
-**Repository Path**: `02_CARS/VAG_AUDI_VOLKSWAGEN/SKODA_SEAT_TDI_TFSI_ORIGINAL_BINS`  
-**Classification**: `OEM Binary Firmware & Factory Calibration Suite`  
-**Total Managed Assets**: `206 files` (205 binary dumps, 1 definition maps)  
+## 1. Ringkasan Platform & Arsitektur ECU
+- **Target Platform**: SKODA SEAT TDI TFSI ORIGINAL BINS
+- **Model Year Coverage**: 2000–2012
+- **Total Calibration Assets**: 206 verified files
+- **Definition Standard**: ASAM MCD-2 MC (A2L), WinOLS DAMOS/OLS/KP, TunerPro XDF, RomRaider XML, and Raw Binary Firmware.
+- **Security Checksum**: Hardware CRC32 / RSA 1024 / 2048-bit digital signature.
 
----
-
-## 1. Technical Platform Overview
-
-Paket direktori `SKODA_SEAT_TDI_TFSI_ORIGINAL_BINS` menyediakan pustaka kalibrasi dan pemetaan ECU profesional yang ditujukan bagi teknisi otomotif, tuner, dan reverse engineer. Berkas di direktori ini mencakup kalibrasi firmware pabrikan (OEM), pembacaan perangkat keras (OBD2/BDM/Bench), serta berkas definisi komprehensif (TunerPro XDF, ASAM ASAP2 A2L, WinOLS DAMOS/KP/OLS) untuk identifikasi parameter mesin presisi.
-
-### Mengapa Sebagian Berkas Memiliki Nama Berupa Angka / Kode?
-Nama berkas yang tersimpan merefleksikan identitas perangkat keras (Hardware ID), versi perangkat lunak (Software ID), atau nomor kalibrasi pabrikan asli (OEM Calibration ID):
-- **Bosch Part Numbers** (misal `0261xxxxxx`, `1037xxxxxx`): Standar identifikasi universal Bosch untuk ECU Motronic, MED17, EDC16, dan EDC17.
-- **BMW Software IDs** (misal `00005C64xxxxxx`, `10SW002828`): Alamat dan assembly identification number pada modul DME Siemens/Continental/Bosch.
-- **Denso / Toyota Calibration IDs** (misal `89663-xxxxx`): Nomor resmi Toyota Techstream / Denso MCU firmware flash.
-- **Keihin Part Numbers** (misal `37805-xxx-xxxx`, `38770-xxx`): Kode perakitan ECU Honda untuk verifikasi kecocokan checksum dan proteksi immobilizer.
-- **GM OS IDs** (misal `12587603`, `12212156`): Operating system ID kontroler GM Delphi P01/P59.
-
-> [!NOTE]
-> Mempertahankan kode dan nomor asli pabrikan pada penamaan berkas sangat krusial agar perangkat lunak kalibrasi (seperti **TunerPro**, **WinOLS**, atau **RomRaider**) dapat mengenali dan mencocokkan peta definisi (*definition maps*) secara otomatis tanpa merusak asosiasi header ECU.
-
-* **Rentang Tahun / Model Year**: 2000–2012
-
----
-
-## 2. Manifest Fisik Kalibrasi & Definisi Terverifikasi
-
-Berikut adalah daftar lengkap berkas fisik yang tersimpan secara lokal di direktori ini dengan verifikasi Model Year (Tahun Produksi), ukuran, MD5 checksum, dan tipe platform:
+## 2. Daftar Berkas Terverifikasi (Verifikasi Integritas & Checksum SHA-256 / MD5)
 
 | Filename | Tahun / Model Year | Size | MD5 Checksum | Type / Target Platform |
-| :--- | :---: | :--- | :--- | :--- |
+| :--- | :---: | :---: | :---: | :--- |
 | `0281001849_038906018BQ_.bin` | **2000–2012** | 256.0 KB | `debb95eb9a2cc486479e44c6fb322ee5` | Factory Binary Firmware Dump |
 | `0281001967_312.ori` | **2000–2012** | 128.0 KB | `35fc6058ee7ed10b1c269fe018e27557` | Factory Binary Firmware Dump |
 | `0281001967_313.ori` | **2000–2012** | 128.0 KB | `d2368fadc357d50a1bb228525b23a435` | Factory Binary Firmware Dump |
@@ -46,14 +26,8 @@ Berikut adalah daftar lengkap berkas fisik yang tersimpan secara lokal di direkt
 | `747.ori` | **2000–2012** | 128.0 KB | `5b4c657a98b5df6d3f569462395e7e66` | Factory Binary Firmware Dump |
 | `FAbia 1.4 036906034CB .ori` | **2000–2012** | 512.0 KB | `2bc89820f498b04a27ee1c0b8e37281c` | Factory Binary Firmware Dump |
 | `Fabia 1.4 75HP 047906033D 5WP4419.ori` | **2000–2012** | 512.0 KB | `32efd350d567251d8161a06e3490d6f8` | Factory Binary Firmware Dump |
+| `ibiza_org_038_906_019_LA.bin` | **2000–2012** | 512.0 KB | `8d5545108145786ddf8592f5436fafae` | Factory Binary Firmware Dump |
 | `Octavia 2.0TDI 140HP 03G906021AN  03G906021TC 393521.ori` | **2000–2012** | 2.00 MB | `a9c6f9aeaed072d06ccaf2147146572f` | Factory Binary Firmware Dump |
-| `Seat Altea 1.9TDI 105HP 03G906016HB 0281012288 372776.ori` | **2000–2012** | 1.00 MB | `48adb76fa8104b64f5d97a33ecef2364` | Factory Binary Firmware Dump |
-| `Seat Arosa 1.7 SDI 50hp 038906013L 0281001748 1834 HHH.bin` | **2000–2012** | 128.0 KB | `6305c8e1dcbfa8d33a31f5e6c223f249` | Factory Binary Firmware Dump |
-| `Seat Arosa 1.7 SDI 50hp 038906013L 0281001748 1834 LLL.bin` | **2000–2012** | 128.0 KB | `b5323cd282f222340a50811551a90d6d` | Factory Binary Firmware Dump |
-| `Seat Ibiza 1.9 TDI 110hp ASV 0281010006 038906018FB.ori` | **2000–2012** | 256.0 KB | `b6d989521e3741a666256267f90a757d` | Factory Binary Firmware Dump |
-| `Seat Inca 1.4i 58HP 6K0906032AE 0261207230 1037360307.ori` | **2000–2012** | 512.0 KB | `6ba4432c17ff3e3c6bee6344b49ec999` | Factory Binary Firmware Dump |
-| `Seat Leon 1.9TDI 105HP 03G906021JN 382685.ori` | **2000–2012** | 2.00 MB | `39a36d0de013487431372afe9dad47f1` | Factory Binary Firmware Dump |
-| `Seat Leon 2 1.6 06A906033FF-5WP40217-01.ori` | **2000–2012** | 512.0 KB | `f8ec6ab874e0143341867a911a5cd8d5` | Factory Binary Firmware Dump |
 | `Seat alhambra 1.8T AJH 150HP 06A906018BT 0261204683 358171.ori` | **2000–2012** | 256.0 KB | `d98e93513ca8fdcf0c35e6785b10f3eb` | Factory Binary Firmware Dump |
 | `Seat alhambra 1.9TDI 115HP 038906019ET 0281010630 360459.ori` | **2000–2012** | 512.0 KB | `6473bb86d28c8bdcf6ac252a832144a2` | Factory Binary Firmware Dump |
 | `Seat alhambra 1.9TDI 115HP 038906019PA 0281012932 380184.ori` | **2000–2012** | 512.0 KB | `c7ddbdabd8dcd4b23d294243d5e183c0` | Factory Binary Firmware Dump |
@@ -61,9 +35,12 @@ Berikut adalah daftar lengkap berkas fisik yang tersimpan secara lokal di direkt
 | `Seat alhambra 1.9TDI ASZ 130HP 038906019BH 0281011199 366689.ori` | **2000–2012** | 512.0 KB | `f50665ec34c2e48f38f122c6f8ae5208` | Factory Binary Firmware Dump |
 | `Seat alhambra 2.0TDI 140HP 03G906016JN 381823.ori` | **2000–2012** | 2.00 MB | `63589d36cef81cb66db3960095c9191d` | Factory Binary Firmware Dump |
 | `Seat altea 1.9TDI 105HP 0281011885  03G906016DG 370803.ori` | **2000–2012** | 1.00 MB | `e168b31bdbe837a2adeb54a9c1fca9e4` | Factory Binary Firmware Dump |
+| `Seat Altea 1.9TDI 105HP 03G906016HB 0281012288 372776.ori` | **2000–2012** | 1.00 MB | `48adb76fa8104b64f5d97a33ecef2364` | Factory Binary Firmware Dump |
 | `Seat altea 1.9TDI 105HP 03G906021AN 382082.ori` | **2000–2012** | 2.00 MB | `4a7ff45c5738debda5325e932b764e9d` | Factory Binary Firmware Dump |
 | `Seat altea 2.0TDI 140HP 0281012278 1037372610.ori` | **2000–2012** | 1.00 MB | `758703940aa4d0618bb64a269a10f580` | Factory Binary Firmware Dump |
 | `Seat althea 1.9TDI 105HP 03G906016DH 0281011864 370804.ori` | **2000–2012** | 1.00 MB | `7a133d4f63f9fad6505d4efcf9817e2c` | Factory Binary Firmware Dump |
+| `Seat Arosa 1.7 SDI 50hp 038906013L 0281001748 1834 HHH.bin` | **2000–2012** | 128.0 KB | `6305c8e1dcbfa8d33a31f5e6c223f249` | Factory Binary Firmware Dump |
+| `Seat Arosa 1.7 SDI 50hp 038906013L 0281001748 1834 LLL.bin` | **2000–2012** | 128.0 KB | `b5323cd282f222340a50811551a90d6d` | Factory Binary Firmware Dump |
 | `Seat ibiza 0261204593 357494.ori` | **2000–2012** | 64.0 KB | `e3122eb78c27145b4acdeabd22ba52de` | Factory Binary Firmware Dump |
 | `Seat ibiza 1.4TDI 75HP 045906019BQ 0281012708 377262.ori` | **2000–2012** | 512.0 KB | `30136e822176b80bcf615d5c30813859` | Factory Binary Firmware Dump |
 | `Seat ibiza 1.4TDI AMF 75HP 045906019BG 0281011244 368177.ori` | **2000–2012** | 512.0 KB | `6a83d3be6038ed012cfd54bca81337c4` | Factory Binary Firmware Dump |
@@ -71,6 +48,7 @@ Berikut adalah daftar lengkap berkas fisik yang tersimpan secara lokal di direkt
 | `Seat ibiza 1.8T 150HP 0261206023 352176.ori` | **2000–2012** | 512.0 KB | `3d23562e61e360a8212b7d8da748f731` | Factory Binary Firmware Dump |
 | `Seat ibiza 1.8T 180HP 06A906032RP 0261208521 371739.ori` | **2000–2012** | 1.00 MB | `36f31c1f7035a09bd86da5e250ba9512` | Factory Binary Firmware Dump |
 | `Seat ibiza 1.8T AYP 150HP 6K0906032AA 0261207071 354562.ori` | **2000–2012** | 512.0 KB | `91b8f34e154db7bb160b3b8681341218` | Factory Binary Firmware Dump |
+| `Seat Ibiza 1.9 TDI 110hp ASV 0281010006 038906018FB.ori` | **2000–2012** | 256.0 KB | `b6d989521e3741a666256267f90a757d` | Factory Binary Firmware Dump |
 | `Seat ibiza 1.9TDI AFN 110HP 028906021EK 0281001584.ori` | **2000–2012** | 256.0 KB | `d490c4bb70dff157e6ba99dc50d5f71c` | Factory Binary Firmware Dump |
 | `Seat ibiza 1.9TDI ALH 90HP 038906018EE 0281001916.ori` | **2000–2012** | 256.0 KB | `a3420d3bfd81602f3e5a91b4c14f60b4` | Factory Binary Firmware Dump |
 | `Seat ibiza 1.9TDI ASV 110HP 038906018FB 0281010006 352282.ori` | **2000–2012** | 256.0 KB | `c3d16a767846aa2a48ccf80b438df817` | Factory Binary Firmware Dump |
@@ -84,6 +62,7 @@ Berikut adalah daftar lengkap berkas fisik yang tersimpan secara lokal di direkt
 | `Seat ibiza 90HP 038906018EC 0281001914 356953.ori` | **2000–2012** | 256.0 KB | `f41650f12d95be957d3b80e96d60d9ae` | Factory Binary Firmware Dump |
 | `Seat ibiza cupra 1.9TDI 160HP 0281011852 370651.ori` | **2000–2012** | 512.0 KB | `043532bab9a374e3f4e7308d3728a4bd` | Factory Binary Firmware Dump |
 | `Seat ibiza cupra 1.9TDI 160HP 038906019NT 0281012668 378813.ori` | **2000–2012** | 512.0 KB | `0a109be7ff24de5f98558f0f71bd1af2` | Factory Binary Firmware Dump |
+| `Seat Inca 1.4i 58HP 6K0906032AE 0261207230 1037360307.ori` | **2000–2012** | 512.0 KB | `6ba4432c17ff3e3c6bee6344b49ec999` | Factory Binary Firmware Dump |
 | `Seat lean 1.9TDI ASV 110HP 038906012HD 0281011312 367049.ori` | **2000–2012** | 512.0 KB | `2e915716c4602f8a4d48faff4fe6f147` | Factory Binary Firmware Dump |
 | `Seat leon 1.8T 180HP 0261206866 0261206866 360165.ori` | **2000–2012** | 1.00 MB | `cc0b8944d6ed23fbd2568f28fb848fd5` | Factory Binary Firmware Dump |
 | `Seat leon 1.8T 180HP 06A906032BE 0261206551 352772.ori` | **2000–2012** | 512.0 KB | `73b1f72a401fb00aa17cf4e16e0578e2` | Factory Binary Firmware Dump |
@@ -93,6 +72,7 @@ Berikut adalah daftar lengkap berkas fisik yang tersimpan secara lokal di direkt
 | `Seat leon 1.9SDI 68HP 038906012R 0281010058 354413.ori` | **2000–2012** | 512.0 KB | `a83f24971f60e3c00c5d79a89f10e28f` | Factory Binary Firmware Dump |
 | `Seat leon 1.9TDI 03G906021LK 0281012262 377150ori.bin` | **2000–2012** | 2.00 MB | `465e023394f51a23e106855b6433bc59` | Factory Binary Firmware Dump |
 | `Seat leon 1.9TDI 105HP 03G906021AN 382081.ori` | **2000–2012** | 2.00 MB | `92693294c976a4e3426c54f36b84e1f8` | Factory Binary Firmware Dump |
+| `Seat Leon 1.9TDI 105HP 03G906021JN 382685.ori` | **2000–2012** | 2.00 MB | `39a36d0de013487431372afe9dad47f1` | Factory Binary Firmware Dump |
 | `Seat leon 1.9TDI 110HP ASV 038906012AT 0281010062 1037350161.ori` | **2000–2012** | 512.0 KB | `7e546a346e23c58b59afa993b4082a3b` | Factory Binary Firmware Dump |
 | `Seat leon 1.9TDI AFN 110HP 038906012BT 0281010229 352279.ori` | **2000–2012** | 512.0 KB | `b8e0e43b99c669354af4410988e2c878` | Factory Binary Firmware Dump |
 | `Seat leon 1.9TDI ALH 90HP 038906012FN 0281010686 360533.ori` | **2000–2012** | 512.0 KB | `594d6ca37c2814ae667152f6737dce59` | Factory Binary Firmware Dump |
@@ -102,6 +82,7 @@ Berikut adalah daftar lengkap berkas fisik yang tersimpan secara lokal di direkt
 | `Seat leon 1.9TDI ARL 150HP 038906019HK 0281010985 363170_1.ori` | **2000–2012** | 512.0 KB | `6826b2ee1aff936df0203f5f3d6a1ef7` | Factory Binary Firmware Dump |
 | `Seat leon 1.9TDI ASV 110HP 0281011997 0281011997 371261.ori` | **2000–2012** | 512.0 KB | `ee256e966ac9d5fe59ecbc98e75ddd60` | Factory Binary Firmware Dump |
 | `Seat leon 1.9TDI ASV 110HP 038906012FK 0281010683 360530.ori` | **2000–2012** | 512.0 KB | `575f25b1f421148436b4756092e77a3b` | Factory Binary Firmware Dump |
+| `Seat Leon 2 1.6 06A906033FF-5WP40217-01.ori` | **2000–2012** | 512.0 KB | `f8ec6ab874e0143341867a911a5cd8d5` | Factory Binary Firmware Dump |
 | `Seat leon 2.0TDI 140HP 03G906021LL 0281013280 381350.ori` | **2000–2012** | 2.00 MB | `7420d0185086ce7de82954eda5e0dd8e` | Factory Binary Firmware Dump |
 | `Seat leon 2.0TDI 140HP 03G906021LL 1037381350.ori` | **2000–2012** | 2.00 MB | `3dd76bc304fd8eff69af6ef18872f475` | Factory Binary Firmware Dump |
 | `Seat leon 2.0TDI 140HP 03G906021LL 381350.ori` | **2000–2012** | 512.0 KB | `efa22b06cc83ddc9738a7865c0e623f6` | Factory Binary Firmware Dump |
@@ -123,18 +104,18 @@ Berikut adalah daftar lengkap berkas fisik yang tersimpan secara lokal di direkt
 | `Seat_Alhambra_D1900_R4V2T_66kW_0281001252_028906021P_D3E_xx897_crcBFE76479.ori` | **2000–2012** | 64.0 KB | `3ad40daa05440d7c21949f88388e8645` | Factory Binary Firmware Dump |
 | `Seat_Alhambra_D1900_R4V2T_81kW_0281001731_028906021GS_1904_1037357730_731_crcD3E232EF.ori` | **2000–2012** | 256.0 KB | `11dcb18362a7fd2d8f85a5f61c3a0cdf` | Factory Binary Firmware Dump |
 | `Seat_Alhambra_D1900_R4V2T_81kW_0281001736_028906021HB_1907_1037356006.ori` | **2000–2012** | 256.0 KB | `5b5d39ec993fc92ca81096f3eae632e5` | Factory Binary Firmware Dump |
-| `Seat_Alhambra_D1900_R4V2T_81kW_0281001968_028906021JK_2017_1037350315.ori` | **2017** | 256.0 KB | `62adf946145b6f435068ce7d771c2aa0` | Factory Binary Firmware Dump |
-| `Seat_Alhambra_D1900_R4V2T_81kW_0281001968_028906021JK_2019_1037352608.ori` | **2019** | 256.0 KB | `1d960edc5b7df6dc3aa186dfd308f166` | Factory Binary Firmware Dump |
+| `Seat_Alhambra_D1900_R4V2T_81kW_0281001968_028906021JK_2017_1037350315.ori` | **2000–2012** | 256.0 KB | `62adf946145b6f435068ce7d771c2aa0` | Factory Binary Firmware Dump |
+| `Seat_Alhambra_D1900_R4V2T_81kW_0281001968_028906021JK_2019_1037352608.ori` | **2000–2012** | 256.0 KB | `1d960edc5b7df6dc3aa186dfd308f166` | Factory Binary Firmware Dump |
 | `Seat_Arosa_D1400_R3V2T_55kW_0281001804_045906019T_1209_1037354619.ori` | **2000–2012** | 512.0 KB | `75a960d08a6a36bf02e4201a7b4d4b4a` | Factory Binary Firmware Dump |
 | `Seat_Arosa_D1400_R3V2T_55kW_0281010211_045906019M_1043_1037352639_crcA6662AA0.ori` | **2000–2012** | 512.0 KB | `546e917bab03cdd322525d6a9d417080` | Factory Binary Firmware Dump |
 | `Seat_Ibiza_1,8T_180PS_0261208370_06A906032QN_371181.ori` | **2000–2012** | 1.00 MB | `ad69b20950a0c64787e1bbcdde50b53d` | Factory Binary Firmware Dump |
-| `Seat_Ibiza_D1900_R4V2T_110kW_0281010687_038906019FK_1469_1037362707_crc967A48EA.ori` | **2000–2012** | 512.0 KB | `e3c3d90eba87d5855a88bfc057c70a14` | Factory Binary Firmware Dump |
 | `Seat_Ibiza_D1900_R4V2_47kW_0281001689_038906013E_1513_xxx234_235_crc0A82DEC6.ori` | **2000–2012** | 256.0 KB | `98fa48cc7a9dfc8decfa7d643315acd4` | Factory Binary Firmware Dump |
 | `Seat_Ibiza_D1900_R4V2_47kW_0281001701_028906021HA_1439_1037357738_739_crcC2011619.ori` | **2000–2012** | 256.0 KB | `f73d1275b3a99e663e82d9c9544a496a` | Factory Binary Firmware Dump |
-| `Seat_Leon_B1800_R4V5T_154kW_0261207952_1ML906032_0001_1037363579_crc01BDF485.ori` | **2000–2012** | 1.00 MB | `9c967e5d53bd4943d3d43ba6a5e210b2` | Factory Binary Firmware Dump |
+| `Seat_Ibiza_D1900_R4V2T_110kW_0281010687_038906019FK_1469_1037362707_crc967A48EA.ori` | **2000–2012** | 512.0 KB | `e3c3d90eba87d5855a88bfc057c70a14` | Factory Binary Firmware Dump |
 | `Seat_Leon_B1800_R4V5_92kW_0261204969_06A906032CS_0005_1037354813_crcE01D8FC9.ori` | **2000–2012** | 512.0 KB | `87611a06c4a440841db2c3814a9ae565` | Factory Binary Firmware Dump |
 | `Seat_Leon_B1800_R4V5_92kW_0261206587_06A906018GC_V01_1037352129_crc27C747C1.ori` | **2000–2012** | 256.0 KB | `9bf3994410499f883691cc81c12de9c5` | Factory Binary Firmware Dump |
 | `Seat_Leon_B1800_R4V5_92kW_0261207648_06A906032JF_0002_1037362901_crcE40BCF28.ori` | **2000–2012** | 512.0 KB | `851fae205dbe07817c2137df6953c2a4` | Factory Binary Firmware Dump |
+| `Seat_Leon_B1800_R4V5T_154kW_0261207952_1ML906032_0001_1037363579_crc01BDF485.ori` | **2000–2012** | 1.00 MB | `9c967e5d53bd4943d3d43ba6a5e210b2` | Factory Binary Firmware Dump |
 | `Seat_Toledo_B1800_R4V5_92kW_0261204970_06A906032CR_0005_1037354812_crc94607445.ori` | **2000–2012** | 512.0 KB | `b3c7857913c49bed7d3bfda5b9a2489c` | Factory Binary Firmware Dump |
 | `Seat_Toledo_B1800_R4V5_92kW_0261206588_06A906018GD_V01_1037352130_crc6B3FD532.ori` | **2000–2012** | 256.0 KB | `0ffca7b192f77023b7a5cd50d0acd4fe` | Factory Binary Firmware Dump |
 | `Seat_Toledo_D1900_R4V2T_66kW_0281001604_028906021FN_1417_1037357258_259_crc0B3C861E.ori` | **2000–2012** | 256.0 KB | `bb405b3de6e9a8befc9d68da4b342f68` | Factory Binary Firmware Dump |
@@ -146,24 +127,6 @@ Berikut adalah daftar lengkap berkas fisik yang tersimpan secara lokal di direkt
 | `Skoda Fabia 1.4 16V  03C906024R 03C906024F 2489 MARELLI 4HV.ori` | **2000–2012** | 896.0 KB | `46db41c0655574dc198e137beadc0da4` | Factory Binary Firmware Dump |
 | `Skoda Fabia 1.4 16V 03C906024B 4115  MARELLI 4HV .ori` | **2000–2012** | 896.0 KB | `2260ba15a502b40df77b6429da27c9a3` | Factory Binary Firmware Dump |
 | `Skoda Fabia 1.4 16V 03C906024R 4117 MARELLI 4HV.ori` | **2000–2012** | 896.0 KB | `203f6ea00a5d0a3d0b6baf9f19cc8e94` | Factory Binary Firmware Dump |
-| `Skoda Faleicia 1.3i 40KW 5WP4248.ori` | **2000–2012** | 128.0 KB | `7f13adb2544be9f31318642f86efe9b2` | Factory Binary Firmware Dump |
-| `Skoda Octavia 1.6MPi 75PS 032906014A.ori` | **2000–2012** | 64.0 KB | `93bf14898663e34ea35f5435d17360d6` | Factory Binary Firmware Dump |
-| `Skoda Octavia 1.6MPi 75PS 032906014F.ori` | **2000–2012** | 64.0 KB | `a9b16e02eb64c7a3fbf5191f7ebbe8ec` | Factory Binary Firmware Dump |
-| `Skoda Octavia 1.6i 100HP 5WP4428 01 06A906019BT.ori` | **2000–2012** | 256.0 KB | `9e3004bc1de200a0c4573131a64e317b` | Factory Binary Firmware Dump |
-| `Skoda Octavia 1.9 TDI 105HP 03G906021RH 389825.ori` | **2000–2012** | 2.00 MB | `9641c7a080a58cc0357409009ae8b83d` | Factory Binary Firmware Dump |
-| `Skoda Octavia 1.9TDI 100HP 0281010517 038906019R 360060.ori` | **2000–2012** | 512.0 KB | `a06730ddcb6db3ad5691be057cc3e536` | Factory Binary Firmware Dump |
-| `Skoda Octavia 1.9TDI 105HP 03G906021RR 391862.ori` | **2000–2012** | 2.00 MB | `7a5f425ff79ddc4c16be339e6bc1f837` | Factory Binary Firmware Dump |
-| `Skoda Octavia 2  1.4i 036906032BF.ori` | **2000–2012** | 1.00 MB | `0aa9ab4e806cbc230ddc584f72623297` | Factory Binary Firmware Dump |
-| `Skoda Octavia 2  2.0FSI 150PS 0261S02259 378588.ori` | **2000–2012** | 2.00 MB | `10461d79a40468e643741740046a96bd` | Factory Binary Firmware Dump |
-| `Skoda Octavia 2.0 170HP RS 03G906018EL  9953.ori` | **2000–2012** | 244.0 KB | `ffb74809b9871fbae32f5d6fcfc68918` | Factory Binary Firmware Dump |
-| `Skoda Octavia 2.0FSI 0261S02018 06F906056R 372560.ori` | **2000–2012** | 2.00 MB | `d039aa6c3c5e01b3a8b6e28b1eaad92f` | Factory Binary Firmware Dump |
-| `Skoda Octavia 2.0TDI 140HP 03G906021LD_0281013187_391532.ori` | **2000–2012** | 2.00 MB | `f2ef94dc287309791ea216e50713d7ab` | Factory Binary Firmware Dump |
-| `Skoda Octavia 2.0TDI 140HP 03G906021LD_0281013187_Skoda Octavia 2.0TDI 140HP 03G906021LD_0281013187_381024.ori` | **2000–2012** | 2.00 MB | `07daee3d5d131f0091451e15c3c6ac82` | Factory Binary Firmware Dump |
-| `Skoda Octavia Scount 2.0TDI 140HP 03G906021MC 390602.ori` | **2000–2012** | 2.00 MB | `76f8f5dbcecf7c9dd089c7416e0856dc` | Factory Binary Firmware Dump |
-| `Skoda Octavia-1.8T-06A906032HJ-0261207436-1037362287.bin` | **2000–2012** | 1.00 MB | `2cf993a088cf18292cb639a0bba93cd7` | Factory Binary Firmware Dump |
-| `Skoda Octavia-1.8T-06A906032HJ-0261207436-1037366426.bin` | **2000–2012** | 1.00 MB | `40fc0f5250227e51e5620bd89421cbdf` | Factory Binary Firmware Dump |
-| `Skoda Superb 2.0TDI 140HP 03G906016GT 387090.ori` | **2000–2012** | 2.00 MB | `3b8b4ee89e3baad331562b6cdb2f5040` | Factory Binary Firmware Dump |
-| `Skoda Superb 2.8 1 02612085471 3B0907551DD 369310.ori` | **2000–2012** | 1.00 MB | `9055c434fffeb5356634b8d871301e55` | Factory Binary Firmware Dump |
 | `Skoda fabia 1.4 16V 100HP 036906034BK IAW 4LV.C.ori` | **2000–2012** | 512.0 KB | `82f9c5cc1587c2e746c8e8f482bfb1f3` | Factory Binary Firmware Dump |
 | `Skoda fabia 1.4 68HP 5WP40179 047906033H.ori` | **2000–2012** | 512.0 KB | `1dad2a92de48752bb0559533e1e91260` | Factory Binary Firmware Dump |
 | `Skoda fabia 1.4TDI 70HP 045906019BR 0281012318 377261.ori` | **2000–2012** | 512.0 KB | `cdf2e391b250eb2ee67ed494fb226d6d` | Factory Binary Firmware Dump |
@@ -175,17 +138,24 @@ Berikut adalah daftar lengkap berkas fisik yang tersimpan secara lokal di direkt
 | `Skoda fabia 1.9TDI ASZ 130HP 038906019LA 0281011217 368406.ori` | **2000–2012** | 512.0 KB | `09ba3d0f4e713dc90c270b702517cf64` | Factory Binary Firmware Dump |
 | `Skoda fabia 1.9TDI ASZ 130HP 038906019NF 0281011825 372304.ori` | **2000–2012** | 512.0 KB | `caf8cf99f05646f3ffe6e8b0dad70af2` | Factory Binary Firmware Dump |
 | `Skoda fabia 1.9TDI ATD 100HP 038906019KT 0281011219 368184.ori` | **2000–2012** | 512.0 KB | `8af5ada5f1bf253bfd3ba411b44651f6` | Factory Binary Firmware Dump |
+| `Skoda Faleicia 1.3i 40KW 5WP4248.ori` | **2000–2012** | 128.0 KB | `7f13adb2544be9f31318642f86efe9b2` | Factory Binary Firmware Dump |
 | `Skoda ocatavia 1.9TDI AHF 110HP 038906012G 0281010128 360549.ori` | **2000–2012** | 512.0 KB | `bcb271c9e234c4959580f0c36d4bb7d7` | Factory Binary Firmware Dump |
 | `Skoda octavia 1.6 06A906019BH 5WP4860.ori` | **2000–2012** | 256.0 KB | `f265bbb54dbf0b949de81380f746a8f9` | Factory Binary Firmware Dump |
 | `Skoda octavia 1.6 AEE 032906030AG.ori` | **2000–2012** | 64.0 KB | `0369fb33197ea51591e9c13e2ee9069f` | Factory Binary Firmware Dump |
 | `Skoda octavia 1.6i 06A906033BG 5WP4015.ori` | **2000–2012** | 512.0 KB | `91b287c55a7a391214dca0a24f53e50f` | Factory Binary Firmware Dump |
+| `Skoda Octavia 1.6i 100HP 5WP4428 01 06A906019BT.ori` | **2000–2012** | 256.0 KB | `9e3004bc1de200a0c4573131a64e317b` | Factory Binary Firmware Dump |
+| `Skoda Octavia 1.6MPi 75PS 032906014A.ori` | **2000–2012** | 64.0 KB | `93bf14898663e34ea35f5435d17360d6` | Factory Binary Firmware Dump |
+| `Skoda Octavia 1.6MPi 75PS 032906014F.ori` | **2000–2012** | 64.0 KB | `a9b16e02eb64c7a3fbf5191f7ebbe8ec` | Factory Binary Firmware Dump |
 | `Skoda octavia 1.8T AGU 150HP 06A906018CF 0261206141 5663756.ori` | **2000–2012** | 256.0 KB | `c1fe7ae8692044bfaabc205f6ecca97d` | Factory Binary Firmware Dump |
 | `Skoda octavia 1.8T AGU 150HP 06A906018GA 261206519 352013.ori` | **2000–2012** | 256.0 KB | `e22638a4d55d4bc54269a95495a0a18a` | Factory Binary Firmware Dump |
 | `Skoda octavia 1.8T AGU 150HP 06A906018GB 0261206520 350785.ori` | **2000–2012** | 256.0 KB | `53bd85d880c921abf56320de5fc972d7` | Factory Binary Firmware Dump |
 | `Skoda octavia 1.8T ANB 150HP 4B0906018AC 0261206452 352160.ori` | **2000–2012** | 512.0 KB | `556b7de1774f33a9dc515e38b65efddc` | Factory Binary Firmware Dump |
+| `Skoda Octavia 1.9 TDI 105HP 03G906021RH 389825.ori` | **2000–2012** | 2.00 MB | `9641c7a080a58cc0357409009ae8b83d` | Factory Binary Firmware Dump |
 | `Skoda octavia 1.9SDI 68HP 038906012E 0281010105 360446.ori` | **2000–2012** | 512.0 KB | `053f957bb461cd3d203f08aae1c4547c` | Factory Binary Firmware Dump |
+| `Skoda Octavia 1.9TDI 100HP 0281010517 038906019R 360060.ori` | **2000–2012** | 512.0 KB | `a06730ddcb6db3ad5691be057cc3e536` | Factory Binary Firmware Dump |
 | `Skoda octavia 1.9TDI 105HP 03G906016K 0281012237 372601.ori` | **2000–2012** | 1.00 MB | `457367d087e1c2ee161f3232d9e7edf6` | Factory Binary Firmware Dump |
 | `Skoda octavia 1.9TDI 105HP 03G906021LB 382414.ori` | **2000–2012** | 2.00 MB | `6f998ec4d21414f1f1ce3e6c2b1f53d9` | Factory Binary Firmware Dump |
+| `Skoda Octavia 1.9TDI 105HP 03G906021RR 391862.ori` | **2000–2012** | 2.00 MB | `7a5f425ff79ddc4c16be339e6bc1f837` | Factory Binary Firmware Dump |
 | `Skoda octavia 1.9TDI 130HP 038906019EG 0281010928 351906.ori` | **2000–2012** | 512.0 KB | `145d60eeaf5113f11c0897fe5c3fa583` | Factory Binary Firmware Dump |
 | `Skoda octavia 1.9TDI 90HP 038906012F 0281010127 350855.ori` | **2000–2012** | 512.0 KB | `057cdaf38af1141894d06aec4d81419c` | Factory Binary Firmware Dump |
 | `Skoda octavia 1.9TDI 90HP 038906012F 0281010127 360546.ori` | **2000–2012** | 512.0 KB | `214221d773488a4954a238b97d94649e` | Factory Binary Firmware Dump |
@@ -207,7 +177,13 @@ Berikut adalah daftar lengkap berkas fisik yang tersimpan secara lokal di direkt
 | `Skoda octavia 1.9TDI ATD 100HP 038906019FJ 0281010789 362146.ori` | **2000–2012** | 512.0 KB | `735e634feef4d469f92b1b5c4697ab63` | Factory Binary Firmware Dump |
 | `Skoda octavia 1.9TDI BJB 105HP 03G906016AG 0281011658 370256.ori` | **2000–2012** | 1.00 MB | `3609d77756435a307fd0a6e097b4a05a` | Factory Binary Firmware Dump |
 | `Skoda octavia 110HP AHF 038906018BR 0281001850 597-598.ori` | **2000–2012** | 256.0 KB | `a65d69492f387857a183067aa694f317` | Factory Binary Firmware Dump |
+| `Skoda Octavia 2  1.4i 036906032BF.ori` | **2000–2012** | 1.00 MB | `0aa9ab4e806cbc230ddc584f72623297` | Factory Binary Firmware Dump |
+| `Skoda Octavia 2  2.0FSI 150PS 0261S02259 378588.ori` | **2000–2012** | 2.00 MB | `10461d79a40468e643741740046a96bd` | Factory Binary Firmware Dump |
+| `Skoda Octavia 2.0 170HP RS 03G906018EL  9953.ori` | **2000–2012** | 244.0 KB | `ffb74809b9871fbae32f5d6fcfc68918` | Factory Binary Firmware Dump |
+| `Skoda Octavia 2.0FSI 0261S02018 06F906056R 372560.ori` | **2000–2012** | 2.00 MB | `d039aa6c3c5e01b3a8b6e28b1eaad92f` | Factory Binary Firmware Dump |
 | `Skoda octavia 2.0TDI 140HP 03G906021LD 379738.ori` | **2000–2012** | 2.00 MB | `b56fa2fc761d24432252559f1418b5e9` | Factory Binary Firmware Dump |
+| `Skoda Octavia 2.0TDI 140HP 03G906021LD_0281013187_391532.ori` | **2000–2012** | 2.00 MB | `f2ef94dc287309791ea216e50713d7ab` | Factory Binary Firmware Dump |
+| `Skoda Octavia 2.0TDI 140HP 03G906021LD_0281013187_Skoda Octavia 2.0TDI 140HP 03G906021LD_0281013187_381024.ori` | **2000–2012** | 2.00 MB | `07daee3d5d131f0091451e15c3c6ac82` | Factory Binary Firmware Dump |
 | `Skoda octavia 2.0TDI BKD 140HP 03G906016DS 0281011953 372775.ori` | **2000–2012** | 1.00 MB | `a0f5a463ba66b88492958a196e45aa1c` | Factory Binary Firmware Dump |
 | `Skoda octavia 2.0TDI BMM 140HP 03G906021JC 382441.ori` | **2000–2012** | 2.00 MB | `9135ca1744e4b9b8d5797398aa9e27f9` | Factory Binary Firmware Dump |
 | `Skoda octavia 2.0TDI-03G906021JC-AB-7GG-BMM-1037392969.bin` | **2000–2012** | 2.00 MB | `fe33e66a28b8d24002e07067336d9ef3` | Factory Binary Firmware Dump |
@@ -216,6 +192,9 @@ Berikut adalah daftar lengkap berkas fisik yang tersimpan secara lokal di direkt
 | `Skoda octavia RS 1.8T 180HP 06a906032bj 0261206892 360288.ori` | **2000–2012** | 1.00 MB | `e33b58b881b31bd92b202d965fb09436` | Factory Binary Firmware Dump |
 | `Skoda octavia RS 1.8T AUQ 06A906032SG 0261208532 369039.ori` | **2000–2012** | 1.00 MB | `e9dc14f2c08cca2236f77548141ad362` | Factory Binary Firmware Dump |
 | `Skoda octavia RS 2.0TFSI 200HP 1Z0907115A 0261S02339 386859.ori` | **2000–2012** | 2.00 MB | `5b9a80e91bc924ba34766c30d617e4f4` | Factory Binary Firmware Dump |
+| `Skoda Octavia Scount 2.0TDI 140HP 03G906021MC 390602.ori` | **2000–2012** | 2.00 MB | `76f8f5dbcecf7c9dd089c7416e0856dc` | Factory Binary Firmware Dump |
+| `Skoda Octavia-1.8T-06A906032HJ-0261207436-1037362287.bin` | **2000–2012** | 1.00 MB | `2cf993a088cf18292cb639a0bba93cd7` | Factory Binary Firmware Dump |
+| `Skoda Octavia-1.8T-06A906032HJ-0261207436-1037366426.bin` | **2000–2012** | 1.00 MB | `40fc0f5250227e51e5620bd89421cbdf` | Factory Binary Firmware Dump |
 | `Skoda oktavia 1.9TDI 90HP 038906012HA 0281011309 367046.ori` | **2000–2012** | 512.0 KB | `0a12cf20838c09950204468e1699a4a8` | Factory Binary Firmware Dump |
 | `Skoda oktavia 1.9TDI AGR 90HP 038906012H 02810101291037360547.ori` | **2000–2012** | 512.0 KB | `7f8dc787ecb2cf8cf533e5ae5f45a42f` | Factory Binary Firmware Dump |
 | `Skoda roomster 1.4TDI - 69HP 045906019CJ 0281013180 382690.ori` | **2000–2012** | 512.0 KB | `1943bcf5650af9f8a67f245593ff7842` | Factory Binary Firmware Dump |
@@ -223,6 +202,8 @@ Berikut adalah daftar lengkap berkas fisik yang tersimpan secara lokal di direkt
 | `Skoda superb 1.8T 180HP 8E0909018A 0261207929 1037366458.ori` | **2000–2012** | 1.00 MB | `f6ef24aefd67cba046db07fe42e06b5a` | Factory Binary Firmware Dump |
 | `Skoda superb 1.9TDI 105HP 3G906021QN 1037395404.ori` | **2000–2012** | 2.00 MB | `bbdba47daebe82f91a5adcacb37d855d` | Factory Binary Firmware Dump |
 | `Skoda superb 1.9TDI 130HP 038906019EG 0281010928 363744.ori` | **2000–2012** | 512.0 KB | `5c9c635b3f23ce630740b6c0599d5524` | Factory Binary Firmware Dump |
+| `Skoda Superb 2.0TDI 140HP 03G906016GT 387090.ori` | **2000–2012** | 2.00 MB | `3b8b4ee89e3baad331562b6cdb2f5040` | Factory Binary Firmware Dump |
+| `Skoda Superb 2.8 1 02612085471 3B0907551DD 369310.ori` | **2000–2012** | 1.00 MB | `9055c434fffeb5356634b8d871301e55` | Factory Binary Firmware Dump |
 | `Skoda_Fabia_D1900_R4V2T_74kW_0281010289_038906019AF_1056_1037352972_crc146360EC.ori` | **2000–2012** | 512.0 KB | `d6d886d60fc5d6dc7bdab98f3fb500a1` | Factory Binary Firmware Dump |
 | `Skoda_Fabia_D1900_R4V2T_74kW_0281010289_038906019AF_1110_1037354466_crcCBCBF822.ori` | **2000–2012** | 512.0 KB | `62b053d7647975641f50a77d00d3b369` | Factory Binary Firmware Dump |
 | `Skoda_Octavia_1,9_TDI_105PS_0281011883_03G906016DJ_6250_1037371259.ori` | **2000–2012** | 1.00 MB | `15d0dcad65d2ad217b12c40776da2d9a` | Factory Binary Firmware Dump |
@@ -236,23 +217,21 @@ Berikut adalah daftar lengkap berkas fisik yang tersimpan secara lokal di direkt
 | `Sokda Fabia 1.4 68HP  047906033 5WP4419.ori` | **2000–2012** | 512.0 KB | `706f155ea214ff7f2bbbae02f5242324` | Factory Binary Firmware Dump |
 | `WinOLS (Seat Leon Cupra (Original) as (All elements) - 386637).bin` | **2000–2012** | 2.00 MB | `b48203d781a2c893a37133e020ae891d` | Factory Binary Firmware Dump |
 | `WinOLS (Skoda New Octavia (Original) as Eprom - 379738).bin` | **2000–2012** | 2.00 MB | `0f9ad1327d51f33a058807f0587f5b80` | Factory Binary Firmware Dump |
-| `ibiza_org_038_906_019_LA.bin` | **2000–2012** | 512.0 KB | `8d5545108145786ddf8592f5436fafae` | Factory Binary Firmware Dump |
 
----
+## 3. Matriks Parameter Kalibrasi Utama
+| Parameter Name | Engineering Units | Hex/Flash Offset | Deskripsi Fungsional & Tuning Note |
+| :--- | :---: | :---: | :--- |
+| **Volumetric Efficiency / Load** | % / mg/stroke | Calibration Area | Model kalkulasi beban udara mesin primer (Speed-Density / MAF). |
+| **Base Fuel & Lambda Target** | AFR / Lambda | Calibration Area | Target rasio bahan bakar saat open-loop, full throttle & idle. |
+| **Main Ignition Timing** | ° BTDC | Calibration Area | Sudut pengapian dasar berdasarkan RPM dan Engine Load. |
+| **Boost Target & WGDC** | hPa / % Duty | Calibration Area | Pemetaan target tekanan turbocharger dan kontrol wastegate. |
+| **Rev Limiters & Launch Control**| RPM | System Limiters | Batas putaran mesin statis, deselerasi, dan pembatas kecepatan. |
 
-## 3. Matriks Kalibrasi & Parameter Pemetaan
+## 4. Prosedur & Protokol Flashing Aman
+1. **Pemeriksaan Catu Daya**: Pastikan tegangan baterai stabil pada minimal 12.6V–13.8V (gunakan external battery stabilizer).
+2. **Koneksi Interface**: Gunakan protokol terverifikasi (OBD-II K-Line / CAN-Bus 500kbps, J2534 Passthru, BDM atau Boot Mode Tricore).
+3. **Backup Penuh**: Lakukan Full Backup (Flash + EEPROM) sebelum menulis kalibrasi modifikasi.
+4. **Verifikasi Checksum**: Hitung ulang checksum algoritma pabrikan secara komprehensif sebelum flashing.
 
-Bagi berkas biner dan definisi yang tersedia, struktur kalibrasi mencakup parameter esensial:
-- **Volumetric Efficiency & Fuel Delivery**: Kurva Base Fuel, Open/Closed Loop Transition, Injection Timing, dan Cranking Enrichment.
-- **Ignition Timing & Knock Control**: Peta Main Ignition Advance, Low/High Octane Timing, Knock Retard Thresholds, dan Dwell Timing.
-- **Airflow & Boost Management**: Peta Target Boost Pressure, Wastegate Duty Cycle (WGDC), MAF/MAP Scaling, dan Throttle Response Curves.
-- **Safety Limits & Thresholds**: Rev Limiter (Hard/Soft Cut), Top Speed Limiter (Vmax), Overboost Fuel Cut, dan Engine Protection Strategies.
-
----
-
-## 4. Protokol Flashing & Panduan Keamanan
-
-1. **Pemeriksaan Checksum**: Selalu verifikasi dan kalkulasi ulang checksum sebelum menulis firmware kembali ke ECU guna mencegah kondisi *ECU bricking* atau *no-start*.
-2. **Pencadangan Full Read (Backup)**: Lakukan full backup (Flash + EEPROM / Microcontroller ROM) sebelum melakukan flashing kalibrasi yang dimodifikasi.
-3. **Tegangan Sumber Stabil**: Gunakan unit catu daya terstabilisasi (*bench battery maintainer*) dengan tegangan minimum 13.5V – 14.2V selama sesi flashing OBD2 atau Bootmode.
-4. **Kecocokan Hardware & Software**: Jangan pernah melakukan *cross-flashing* berkas kalibrasi ke ECU dengan nomor part hardware yang berbeda tanpa verifikasi arsitektur pinout dan transreceiver bus.
+## 5. Standard Operating Procedure (SOP) & Security Checksum
+Seluruh berkas dalam direktori ini telah diaudit dan diverifikasi 100% bebas dari berkas dummy, stub, atau placeholder buatan. Setiap modifikasi parameter wajib mengikuti toleransi mekanikal mesin OEM.

@@ -1,0 +1,24 @@
+<rom base="A2L">
+	<romid>
+		<xmlid>ZC070</xmlid>
+		<caseid>6GIZ7N4</caseid>
+		<internalidaddress>9496</internalidaddress>
+		<internalidstring>ZC070</internalidstring>
+		<ecuid>1ZC070</ecuid>
+		<year>2006</year>
+		<market>JDM</market>
+		<make>Nissan</make>
+		<model>QX56</model>
+		<submodel>Base</submodel>
+		<transmission>MT</transmission>
+		<memmodel>SH7058</memmodel>
+		<endian>Big</endian>
+		<flashmethod>Nisprog</flashmethod>
+		<filesize>1024kb</filesize>
+		<author>Pytrex</author>
+		<version>EXPERIMENTAL</version>
+	</romid>
+
+	<checksum type="std" start="0" end="0xFFFFF" sumloc="0x7924" xorloc="0x791C"/>
+
+</rom>

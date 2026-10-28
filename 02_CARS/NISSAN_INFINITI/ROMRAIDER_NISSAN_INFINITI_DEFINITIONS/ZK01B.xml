@@ -1,0 +1,16 @@
+<rom base="CF42C">
+	<romid>
+		<xmlid>ZK01B</xmlid>
+		<caseid>6ZVYXN00</caseid>
+		<internalidaddress>2401</internalidaddress>
+		<internalidstring>ZK01B</internalidstring>
+		<ecuid>1ZK01B</ecuid>
+		<year>2006</year>
+		<market>USDM</market>
+		<make>Nissan</make>
+		<model>Maxima</model>
+		<submodel>Base</submodel>
+		<transmission>AT</transmission>
+		<memmodel>SH7058</memmodel>
+	</romid>
+</rom>

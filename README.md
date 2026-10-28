@@ -2,11 +2,11 @@
 
 <p align="center">
   <img src="https://img.shields.io/badge/Status-100%25%20Authentic%20Verified-success?style=for-the-badge&logo=shield" alt="Status" />
-  <img src="https://img.shields.io/badge/Binary%20Dumps-8%2C215%20Files-blue?style=for-the-badge&logo=microchip" alt="BIN Dumps" />
-  <img src="https://img.shields.io/badge/TunerPro%20XDF-2%2C654%20Maps-orange?style=for-the-badge&logo=gauge" alt="TunerPro XDFs" />
+  <img src="https://img.shields.io/badge/Binary%20Dumps-8%2C944%20Files-blue?style=for-the-badge&logo=microchip" alt="BIN Dumps" />
+  <img src="https://img.shields.io/badge/TunerPro%20XDF-3%2C945%20Maps-orange?style=for-the-badge&logo=gauge" alt="TunerPro XDFs" />
   <img src="https://img.shields.io/badge/EcuFlash%20XML-1%2C086%20Defs-green?style=for-the-badge&logo=xml" alt="EcuFlash XML" />
-  <img src="https://img.shields.io/badge/Total%20Assets-13%2C546%20Files-purple?style=for-the-badge&logo=database" alt="Total Assets" />
-  <img src="https://img.shields.io/badge/Dossiers-331%20READMEs%20(100%25)-teal?style=for-the-badge&logo=readme" alt="README Coverage" />
+  <img src="https://img.shields.io/badge/Total%20Assets-17%2C118%20Files-purple?style=for-the-badge&logo=database" alt="Total Assets" />
+  <img src="https://img.shields.io/badge/Dossiers-382%20READMEs%20(100%25)-teal?style=for-the-badge&logo=readme" alt="README Coverage" />
 </p>
 
 <p align="center">
@@ -28,7 +28,8 @@ Whether you are performing standalone dynamometer remapping, reverse engineering
 * **Cryptographic & Header Integrity**: Audited against SHA-256 cross-reference hashes, factory part numbers, and internal memory headers.
 * **100% Dossier Coverage (0 Phantom References)**: Every asset directory contains an exhaustive, technical `README.md` dossier describing exact platform specs, microcontroller architecture, decoded hardware/software part IDs, and flashing safety protocols.
 * **Verified WinOLS DAMOS, ASAP2 A2L & WinOLS Map Pack Catalog**: Lihat katalog master 1,580+ berkas definisi tingkat lanjut di [`DAFTAR_DEFINISI_DAMOS_A2L_KP_OLS_TERVERIFIKASI.md`](DAFTAR_DEFINISI_DAMOS_A2L_KP_OLS_TERVERIFIKASI.md).
-* **Verified BIN & XDF Pairs Matrix**: Lihat katalog lengkap pasangan firmware biner dan peta kalibrasi terverifikasi di [`DAFTAR_PASANGAN_BIN_XDF_TERVERIFIKASI.md`](DAFTAR_PASANGAN_BIN_XDF_TERVERIFIKASI.md).
+* **Verified BIN & XDF Pairs Matrix**: Lihat katalog lengkap pasangan firmware biner dan peta kalibrasi TunerPro terverifikasi di [`DAFTAR_PASANGAN_BIN_XDF_TERVERIFIKASI.md`](DAFTAR_PASANGAN_BIN_XDF_TERVERIFIKASI.md).
+* **Verified DAMOS, A2L, .KP & .OLS Pairs Matrix**: Lihat katalog pasangan firmware biner dengan definisi industri EVC WinOLS & ASAP2 di [`DAFTAR_PASANGAN_BIN_DAMOS_A2L_KP_TERVERIFIKASI.md`](DAFTAR_PASANGAN_BIN_DAMOS_A2L_KP_TERVERIFIKASI.md).
 * **Model Year (Tahun Produksi) Precision**: Setiap entri berkas kalibrasi dan direktori platform dilengkapi metadata tahun produksi/generasi presisi (`1980–2026`) yang dipetakan secara akurat terhadap kode sasis pabrikan (Nissan BNR32/S13/Z32, BMW E/F/G, Toyota Engine Families, Keihin/Denso Part IDs) guna memastikan keandalan kompatibilitas flasher.
 
 ---
@@ -37,13 +38,11 @@ Whether you are performing standalone dynamometer remapping, reverse engineering
 
 | Asset Category | File Count | Storage Size | Description & Standards |
 | :--- | :---: | :---: | :--- |
-| **📦 Factory Binary Firmware & Dumps** | **8,215** | ~8.2 GB | Raw factory ROMs, Flash, MPC, and EEPROM dumps (`.bin` 3,710, `.rwd` 2,576, `.ori` 1,332, `.hex` 542, `.s19` 20, `.tun` 16, `.std` 12, `.mod` 12, `.rom` 8, `.mpc` 5, `.fls` 2) |
-| **🗺️ TunerPro Definition Maps** | **2,654** | ~1.8 GB | 2D/3D calibration tables for fuel, ignition, boost target, WGDC, and limiters (`.xdf`, `.ecu`, `.adx`) |
-| **📑 ASAM ASAP2 ECU Descriptions (`.a2l`)** | **1,497** | ~2.1 GB | Official ASAM MCD-2 MC definition files for modern and heritage engines (BMW B48, B58, S58, N63, S63, MS43, MS45, EDC15/16/17, Audi ME7/MED9) |
-| **📑 EcuFlash & RomRaider XMLs** | **1,086** | ~46 MB | Standard OpenECU XML definitions with memory offsets and scaling formulas (`.xml`) |
-| **📂 WinOLS DAMOS, Map Packs & Workspaces** | **84** | ~180 MB | Authentic WinOLS Workspaces (`.ols` 45), Map Definition Packs (`.kp` 26), and DAMOS functional maps (`.dam` 13) |
-| **📚 Technical Documentation Dossiers** | **331** | ~14 MB | Comprehensive platform dossiers covering 100% of managed asset folders (`README.md`) with 0 phantoms |
-| **Total Curated Assets** | **13,546** | **12.33 GB** | Complete verified open-source automotive & motorcycle calibration database |
+| **📦 Factory Binary Firmware & Dumps** | **8,944** | ~8.8 GB | Raw factory ROMs, Flash, MPC, and EEPROM dumps (`.bin` 4,427, `.rwd` 2,576, `.ori` 1,332, `.hex` 551, `.tun` 16, `.mod` 12, `.std` 12, `.rom` 8, `.mpc` 5, `.fls` 2, `.s19` 2, `.ctz` 1) |
+| **🗺️ TunerPro Definition Maps** | **3,945** | ~2.6 GB | 2D/3D calibration tables for fuel, ignition, boost target, WGDC, and limiters (`.xdf`, `.ecu`, `.adx`) |
+| **📑 ASAM ASAP2 & WinOLS Definitions** | **2,527** | ~4.2 GB | ASAM MCD-2 MC (`.a2l` 2,417), WinOLS Project Workspaces (`.ols` 48), WinOLS Map Packs (`.kp` 46), and WinOLS DAMOS (`.dam` 16) |
+| **📋 EcuFlash & RomRaider Definitions**| **1,702** | ~420 MB | Open-source XML definitions for Subaru, Mitsubishi Evolution, BMW, Nissan, Mazda, and Honda (`.xml`) |
+| **TOTAL MANAGED CALIBRATION ASSETS** | **17,118** | **~15.97 GB** | **100% Genuine Physical Files • 0 Phantoms • 0 Unregistered Assets** |
 
 ---
 

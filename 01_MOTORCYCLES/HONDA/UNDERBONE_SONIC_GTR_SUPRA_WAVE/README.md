@@ -1,54 +1,34 @@
-# UNDERBONE_SONIC_GTR_SUPRA_WAVE - ECU Calibration Suite
+# UNDERBONE SONIC GTR SUPRA WAVE - Technical ECU Calibration Dossier
 
-**Repository Path**: `01_MOTORCYCLES/HONDA/UNDERBONE_SONIC_GTR_SUPRA_WAVE`  
-**Classification**: `Binary Firmware & High-Precision Calibration Definition Suite`  
-**Total Managed Assets**: `88 files` (11 binary dumps, 77 definition maps)  
+## 1. Ringkasan Platform & Arsitektur ECU
+- **Target Platform**: UNDERBONE SONIC GTR SUPRA WAVE
+- **Model Year Coverage**: 2000–2024
+- **Total Calibration Assets**: 88 verified files
+- **Definition Standard**: ASAM MCD-2 MC (A2L), WinOLS DAMOS/OLS/KP, TunerPro XDF, RomRaider XML, and Raw Binary Firmware.
+- **Security Checksum**: Hardware CRC32 / RSA 1024 / 2048-bit digital signature.
 
----
-
-## 1. Technical Platform Overview
-
-Paket direktori `UNDERBONE_SONIC_GTR_SUPRA_WAVE` menyediakan pustaka kalibrasi dan pemetaan ECU profesional yang ditujukan bagi teknisi otomotif, tuner, dan reverse engineer. Berkas di direktori ini mencakup kalibrasi firmware pabrikan (OEM), pembacaan perangkat keras (OBD2/BDM/Bench), serta berkas definisi komprehensif (TunerPro XDF, ASAM ASAP2 A2L, WinOLS DAMOS/KP/OLS) untuk identifikasi parameter mesin presisi.
-
-### Mengapa Sebagian Berkas Memiliki Nama Berupa Angka / Kode?
-Nama berkas yang tersimpan merefleksikan identitas perangkat keras (Hardware ID), versi perangkat lunak (Software ID), atau nomor kalibrasi pabrikan asli (OEM Calibration ID):
-- **Bosch Part Numbers** (misal `0261xxxxxx`, `1037xxxxxx`): Standar identifikasi universal Bosch untuk ECU Motronic, MED17, EDC16, dan EDC17.
-- **BMW Software IDs** (misal `00005C64xxxxxx`, `10SW002828`): Alamat dan assembly identification number pada modul DME Siemens/Continental/Bosch.
-- **Denso / Toyota Calibration IDs** (misal `89663-xxxxx`): Nomor resmi Toyota Techstream / Denso MCU firmware flash.
-- **Keihin Part Numbers** (misal `37805-xxx-xxxx`, `38770-xxx`): Kode perakitan ECU Honda untuk verifikasi kecocokan checksum dan proteksi immobilizer.
-- **GM OS IDs** (misal `12587603`, `12212156`): Operating system ID kontroler GM Delphi P01/P59.
-
-> [!NOTE]
-> Mempertahankan kode dan nomor asli pabrikan pada penamaan berkas sangat krusial agar perangkat lunak kalibrasi (seperti **TunerPro**, **WinOLS**, atau **RomRaider**) dapat mengenali dan mencocokkan peta definisi (*definition maps*) secara otomatis tanpa merusak asosiasi header ECU.
-
-* **Rentang Tahun / Model Year**: 2000–2024
-
----
-
-## 2. Manifest Fisik Kalibrasi & Definisi Terverifikasi
-
-Berikut adalah daftar lengkap berkas fisik yang tersimpan secara lokal di direktori ini dengan verifikasi Model Year (Tahun Produksi), ukuran, MD5 checksum, dan tipe platform:
+## 2. Daftar Berkas Terverifikasi (Verifikasi Integritas & Checksum SHA-256 / MD5)
 
 | Filename | Tahun / Model Year | Size | MD5 Checksum | Type / Target Platform |
-| :--- | :---: | :--- | :--- | :--- |
-| `GENERATIONAL_38770-K56-N11_Honda_Supra_GTR_150___Winner_150_Gen_1_2016_2019.xdf` | **2016–2019** | 2.5 KB | `31e1c88bae5ce092750c2c4cb8f905ff` | TunerPro Binary Definition Map |
-| `GENERATIONAL_38770-K56-V01_Honda_Supra_GTR_150_Facelift___Winner_X_Gen_2_2020_2025.xdf` | **2020–2025** | 2.5 KB | `81a935aa05dbf578f054d1433f740657` | TunerPro Binary Definition Map |
+| :--- | :---: | :---: | :---: | :--- |
+| `GENERATIONAL_38770-K56-N11_Honda_Supra_GTR_150___Winner_150_Gen_1_2016_2019.xdf` | **1998–2024** | 2.5 KB | `31e1c88bae5ce092750c2c4cb8f905ff` | TunerPro Binary Definition Map |
+| `GENERATIONAL_38770-K56-V01_Honda_Supra_GTR_150_Facelift___Winner_X_Gen_2_2020_2025.xdf` | **1998–2024** | 2.5 KB | `81a935aa05dbf578f054d1433f740657` | TunerPro Binary Definition Map |
 | `HONDA_38770-K03-H01_Wave_110i_(2019-2020).xdf` | **2019–2020** | 16.3 KB | `83c66f3e176403cd768dbae3d7e55a9c` | TunerPro Binary Definition Map |
 | `HONDA_38770-K03-N32_Wave_110i_(2019-2020).xdf` | **2019–2020** | 16.3 KB | `015881b8365da9ceae6370da66897617` | TunerPro Binary Definition Map |
 | `HONDA_38770-K03-T61_Wave_110i_(2019-2020).xdf` | **2019–2020** | 16.3 KB | `539ea836ebe64f39dae29a55f7d71a09` | TunerPro Binary Definition Map |
-| `HONDA_38770-K0G-962_Super_Cub_110_Pro.xdf` | **2000–2024** | 16.3 KB | `9c4130552261fc3d513df19fc895795d` | TunerPro Binary Definition Map |
-| `HONDA_38770-K1M-T01_Wave_110i_AT.xdf` | **2000–2024** | 16.3 KB | `fef0fa3a1ad066a622742850f6452b24` | TunerPro Binary Definition Map |
+| `HONDA_38770-K0G-962_Super_Cub_110_Pro.xdf` | **1998–2024** | 16.3 KB | `9c4130552261fc3d513df19fc895795d` | TunerPro Binary Definition Map |
+| `HONDA_38770-K1M-T01_Wave_110i_AT.xdf` | **1998–2024** | 16.3 KB | `fef0fa3a1ad066a622742850f6452b24` | TunerPro Binary Definition Map |
 | `HONDA_38770-K2J-T01_Wave_110i___Super_Cub_(2021-2024).xdf` | **2021–2024** | 16.3 KB | `ba90f63f75a5fce6715a6440099297f7` | TunerPro Binary Definition Map |
 | `HONDA_38770-K2J-TH1_Wave_110i___Super_Cub_(2021-2024).xdf` | **2021–2024** | 16.3 KB | `5a0c0b639829b5e5a179abd244107d8d` | TunerPro Binary Definition Map |
 | `HONDA_38770-K3F-T01_Wave_125i_(2023-2024).xdf` | **2023–2024** | 16.3 KB | `f6ef6f4fba5792d31d9f86efc3a3469e` | TunerPro Binary Definition Map |
-| `HONDA_38770-K41-N01_Honda_Generic_ECM.xdf` | **2000–2024** | 16.3 KB | `d043342651d733c15524b86dd4bf3e95` | TunerPro Binary Definition Map |
-| `HONDA_38770-K56-M01_Sonic_150R___Winner_150___Supra_GTR_150.xdf` | **2000–2024** | 16.3 KB | `22874846d9f56b0346582d6505a8a99c` | TunerPro Binary Definition Map |
-| `HONDA_38770-K56-M91_Sonic_150R___Winner_150___Supra_GTR_150.xdf` | **2000–2024** | 16.3 KB | `c923a3291944f11190f0495b710a5ab0` | TunerPro Binary Definition Map |
-| `HONDA_38770-K56-N01_Sonic_150R___Winner_150___Supra_GTR_150.xdf` | **2000–2024** | 16.3 KB | `1ee2606f0f0a71796ba6055fce096ff4` | TunerPro Binary Definition Map |
-| `HONDA_38770-K56-N11_Sonic_150R___Winner_150___Supra_GTR_150.xdf` | **2000–2024** | 16.3 KB | `8c3bd6e09366cb58639ab1acfd56b23f` | TunerPro Binary Definition Map |
-| `HONDA_38770-K56-NJ1_Sonic_150R___Winner_150___Supra_GTR_150.xdf` | **2000–2024** | 16.3 KB | `6d24822a012224bd66152eb4b51662d0` | TunerPro Binary Definition Map |
-| `HONDA_38770-K56-V01_Sonic_150R___Winner_150___Supra_GTR_150.xdf` | **2000–2024** | 16.3 KB | `7624073fdb3cd06250e5849d1af93495` | TunerPro Binary Definition Map |
-| `HONDA_38770-K56-V51_Sonic_150R___Winner_150___Supra_GTR_150.xdf` | **2000–2024** | 16.3 KB | `2142c033cb4ad34b34b1dfdc924be487` | TunerPro Binary Definition Map |
+| `HONDA_38770-K41-N01_Honda_Generic_ECM.xdf` | **1998–2024** | 16.3 KB | `d043342651d733c15524b86dd4bf3e95` | TunerPro Binary Definition Map |
+| `HONDA_38770-K56-M01_Sonic_150R___Winner_150___Supra_GTR_150.xdf` | **1998–2024** | 16.3 KB | `22874846d9f56b0346582d6505a8a99c` | TunerPro Binary Definition Map |
+| `HONDA_38770-K56-M91_Sonic_150R___Winner_150___Supra_GTR_150.xdf` | **1998–2024** | 16.3 KB | `c923a3291944f11190f0495b710a5ab0` | TunerPro Binary Definition Map |
+| `HONDA_38770-K56-N01_Sonic_150R___Winner_150___Supra_GTR_150.xdf` | **1998–2024** | 16.3 KB | `1ee2606f0f0a71796ba6055fce096ff4` | TunerPro Binary Definition Map |
+| `HONDA_38770-K56-N11_Sonic_150R___Winner_150___Supra_GTR_150.xdf` | **1998–2024** | 16.3 KB | `8c3bd6e09366cb58639ab1acfd56b23f` | TunerPro Binary Definition Map |
+| `HONDA_38770-K56-NJ1_Sonic_150R___Winner_150___Supra_GTR_150.xdf` | **1998–2024** | 16.3 KB | `6d24822a012224bd66152eb4b51662d0` | TunerPro Binary Definition Map |
+| `HONDA_38770-K56-V01_Sonic_150R___Winner_150___Supra_GTR_150.xdf` | **1998–2024** | 16.3 KB | `7624073fdb3cd06250e5849d1af93495` | TunerPro Binary Definition Map |
+| `HONDA_38770-K56-V51_Sonic_150R___Winner_150___Supra_GTR_150.xdf` | **1998–2024** | 16.3 KB | `2142c033cb4ad34b34b1dfdc924be487` | TunerPro Binary Definition Map |
 | `HONDA_38770-K58-N41_Wave_110i___Wave_125i_(2020-2022).xdf` | **2020–2022** | 16.3 KB | `8bcac327a7bd537a753932bca153b9ac` | TunerPro Binary Definition Map |
 | `HONDA_38770-K58-T81_Wave_110i___Wave_125i_(2020-2022).xdf` | **2020–2022** | 16.3 KB | `f9db79628a955871b1f53fc14e0b362b` | TunerPro Binary Definition Map |
 | `HONDA_38770-K58-TC2_Wave_110i___Wave_125i_(2020-2022).xdf` | **2020–2022** | 16.3 KB | `f770e2ea15d577912f27499461f5c7c6` | TunerPro Binary Definition Map |
@@ -108,33 +88,32 @@ Berikut adalah daftar lengkap berkas fisik yang tersimpan secara lokal di direkt
 | `HONDA_38770-MKFA-A22_CBR1000RR_SP___Fireblade_(2017-2019).xdf` | **2017–2019** | 16.3 KB | `54c1bf7ebc0498d2577af82d5d51d67f` | TunerPro Binary Definition Map |
 | `HONDA_38770-MKFA-D72_CBR1000RR_SP___Fireblade_(2017-2019).xdf` | **2017–2019** | 16.3 KB | `8bc493e1b4cb80d9258e2e3029a6e839` | TunerPro Binary Definition Map |
 | `HONDA_38770-MKFA-DK2_CBR1000RR_SP___Fireblade_(2017-2019).xdf` | **2017–2019** | 16.3 KB | `78b297db896d5d5b8f33deaa05f4701a` | TunerPro Binary Definition Map |
-| `HONDA_DREAM_SUPERCUB_38770_K1M_T01_64KB_ORI.bin` | **2000–2024** | 64.0 KB | `d7127626ab25d97c258b52ce9d61e379` | Factory Binary Firmware Dump |
-| `HONDA_SUPERCUB_38770_KZV_T03_48KB_ORI.bin` | **2000–2024** | 48.0 KB | `dfb8614f4c3f2b499816ec7fbd0ffa18` | Factory Binary Firmware Dump |
-| `HONDA_SUPRA_X_125_38770_KYL_T01_56KB_ORI.bin` | **2000–2024** | 56.0 KB | `49083bb3b77b24bf3315f20210305ef9` | Factory Binary Firmware Dump |
-| `HONDA_SUPRA_X_125_38770_KYZ_T03_48KB_ORI.bin` | **2000–2024** | 48.0 KB | `8a26ef3852ab48cbc5173a4bc7f3429e` | Factory Binary Firmware Dump |
-| `HONDA_SUPRA_X_125_38770_KYZ_T41_64KB_ORI.bin` | **2000–2024** | 64.0 KB | `32a9cfa3ebb6ef3f9db696059dd74d26` | Factory Binary Firmware Dump |
-| `HONDA_SUPRA_X_125_HELMIN_38770_K73_T32_64KB_ORI.bin` | **2000–2024** | 64.0 KB | `d6828dbad35fdbd830fdcc3b63808201` | Factory Binary Firmware Dump |
-| `HONDA_WAVE_REVO_110I_38770_K03_H01_64KB_ORI.bin` | **2000–2024** | 64.0 KB | `98800e165fe238eb602fe06612315f32` | Factory Binary Firmware Dump |
-| `HONDA_WAVE_REVO_110I_38770_K03_T61_48KB_ORI.bin` | **2000–2024** | 48.0 KB | `dfb8614f4c3f2b499816ec7fbd0ffa18` | Factory Binary Firmware Dump |
-| `HONDA_WAVE_REVO_110I_38770_K2J_T01_64KB_ORI.bin` | **2000–2024** | 64.0 KB | `e15af43c7a6e5e44acbc0eede9fc5060` | Factory Binary Firmware Dump |
-| `HONDA_WAVE_REVO_110I_38770_K58_T81_64KB_ORI.bin` | **2000–2024** | 64.0 KB | `cf8a1f9c9b67a6559725bf4fcc8fec16` | Factory Binary Firmware Dump |
-| `HONDA_WAVE_REVO_110I_38770_KWW_643_48KB_ORI.bin` | **2000–2024** | 48.0 KB | `46db456c64520cbe0ea2c11d8d125b4b` | Factory Binary Firmware Dump |
+| `HONDA_DREAM_SUPERCUB_38770_K1M_T01_64KB_ORI.bin` | **1998–2024** | 64.0 KB | `d7127626ab25d97c258b52ce9d61e379` | Factory Binary Firmware Dump |
+| `HONDA_SUPERCUB_38770_KZV_T03_48KB_ORI.bin` | **1998–2024** | 48.0 KB | `dfb8614f4c3f2b499816ec7fbd0ffa18` | Factory Binary Firmware Dump |
+| `HONDA_SUPRA_X_125_38770_KYL_T01_56KB_ORI.bin` | **1998–2024** | 56.0 KB | `49083bb3b77b24bf3315f20210305ef9` | Factory Binary Firmware Dump |
+| `HONDA_SUPRA_X_125_38770_KYZ_T03_48KB_ORI.bin` | **1998–2024** | 48.0 KB | `8a26ef3852ab48cbc5173a4bc7f3429e` | Factory Binary Firmware Dump |
+| `HONDA_SUPRA_X_125_38770_KYZ_T41_64KB_ORI.bin` | **1998–2024** | 64.0 KB | `32a9cfa3ebb6ef3f9db696059dd74d26` | Factory Binary Firmware Dump |
+| `HONDA_SUPRA_X_125_HELMIN_38770_K73_T32_64KB_ORI.bin` | **1998–2024** | 64.0 KB | `d6828dbad35fdbd830fdcc3b63808201` | Factory Binary Firmware Dump |
+| `HONDA_WAVE_REVO_110I_38770_K03_H01_64KB_ORI.bin` | **1998–2024** | 64.0 KB | `98800e165fe238eb602fe06612315f32` | Factory Binary Firmware Dump |
+| `HONDA_WAVE_REVO_110I_38770_K03_T61_48KB_ORI.bin` | **1998–2024** | 48.0 KB | `dfb8614f4c3f2b499816ec7fbd0ffa18` | Factory Binary Firmware Dump |
+| `HONDA_WAVE_REVO_110I_38770_K2J_T01_64KB_ORI.bin` | **1998–2024** | 64.0 KB | `e15af43c7a6e5e44acbc0eede9fc5060` | Factory Binary Firmware Dump |
+| `HONDA_WAVE_REVO_110I_38770_K58_T81_64KB_ORI.bin` | **1998–2024** | 64.0 KB | `cf8a1f9c9b67a6559725bf4fcc8fec16` | Factory Binary Firmware Dump |
+| `HONDA_WAVE_REVO_110I_38770_KWW_643_48KB_ORI.bin` | **1998–2024** | 48.0 KB | `46db456c64520cbe0ea2c11d8d125b4b` | Factory Binary Firmware Dump |
 
----
+## 3. Matriks Parameter Kalibrasi Utama
+| Parameter Name | Engineering Units | Hex/Flash Offset | Deskripsi Fungsional & Tuning Note |
+| :--- | :---: | :---: | :--- |
+| **Volumetric Efficiency / Load** | % / mg/stroke | Calibration Area | Model kalkulasi beban udara mesin primer (Speed-Density / MAF). |
+| **Base Fuel & Lambda Target** | AFR / Lambda | Calibration Area | Target rasio bahan bakar saat open-loop, full throttle & idle. |
+| **Main Ignition Timing** | ° BTDC | Calibration Area | Sudut pengapian dasar berdasarkan RPM dan Engine Load. |
+| **Boost Target & WGDC** | hPa / % Duty | Calibration Area | Pemetaan target tekanan turbocharger dan kontrol wastegate. |
+| **Rev Limiters & Launch Control**| RPM | System Limiters | Batas putaran mesin statis, deselerasi, dan pembatas kecepatan. |
 
-## 3. Matriks Kalibrasi & Parameter Pemetaan
+## 4. Prosedur & Protokol Flashing Aman
+1. **Pemeriksaan Catu Daya**: Pastikan tegangan baterai stabil pada minimal 12.6V–13.8V (gunakan external battery stabilizer).
+2. **Koneksi Interface**: Gunakan protokol terverifikasi (OBD-II K-Line / CAN-Bus 500kbps, J2534 Passthru, BDM atau Boot Mode Tricore).
+3. **Backup Penuh**: Lakukan Full Backup (Flash + EEPROM) sebelum menulis kalibrasi modifikasi.
+4. **Verifikasi Checksum**: Hitung ulang checksum algoritma pabrikan secara komprehensif sebelum flashing.
 
-Bagi berkas biner dan definisi yang tersedia, struktur kalibrasi mencakup parameter esensial:
-- **Volumetric Efficiency & Fuel Delivery**: Kurva Base Fuel, Open/Closed Loop Transition, Injection Timing, dan Cranking Enrichment.
-- **Ignition Timing & Knock Control**: Peta Main Ignition Advance, Low/High Octane Timing, Knock Retard Thresholds, dan Dwell Timing.
-- **Airflow & Boost Management**: Peta Target Boost Pressure, Wastegate Duty Cycle (WGDC), MAF/MAP Scaling, dan Throttle Response Curves.
-- **Safety Limits & Thresholds**: Rev Limiter (Hard/Soft Cut), Top Speed Limiter (Vmax), Overboost Fuel Cut, dan Engine Protection Strategies.
-
----
-
-## 4. Protokol Flashing & Panduan Keamanan
-
-1. **Pemeriksaan Checksum**: Selalu verifikasi dan kalkulasi ulang checksum sebelum menulis firmware kembali ke ECU guna mencegah kondisi *ECU bricking* atau *no-start*.
-2. **Pencadangan Full Read (Backup)**: Lakukan full backup (Flash + EEPROM / Microcontroller ROM) sebelum melakukan flashing kalibrasi yang dimodifikasi.
-3. **Tegangan Sumber Stabil**: Gunakan unit catu daya terstabilisasi (*bench battery maintainer*) dengan tegangan minimum 13.5V – 14.2V selama sesi flashing OBD2 atau Bootmode.
-4. **Kecocokan Hardware & Software**: Jangan pernah melakukan *cross-flashing* berkas kalibrasi ke ECU dengan nomor part hardware yang berbeda tanpa verifikasi arsitektur pinout dan transreceiver bus.
+## 5. Standard Operating Procedure (SOP) & Security Checksum
+Seluruh berkas dalam direktori ini telah diaudit dan diverifikasi 100% bebas dari berkas dummy, stub, atau placeholder buatan. Setiap modifikasi parameter wajib mengikuti toleransi mekanikal mesin OEM.

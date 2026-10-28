@@ -1,0 +1,42 @@
+<container xmlns="http://symfony.com/schema/dic/services"
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xsi:schemaLocation="http://symfony.com/schema/dic/services/services-1.0.xsd">
+    <services>
+        <service id="sonata.admin.rom" class="ripnet\EvoBundle\Admin\ROMAdmin">
+            <tag name="sonata.admin" manager_type="orm" group="OpenECU" label="ROMs"/>
+            <argument />
+            <argument>ripnet\EvoBundle\Entity\ROM</argument>
+            <argument />
+        </service>
+        <service id="sonata.admin.scaling" class="ripnet\EvoBundle\Admin\ScalingAdmin">
+            <tag name="sonata.admin" manager_type="orm" group="OpenECU" label="Scalings"/>
+            <argument />
+            <argument>ripnet\EvoBundle\Entity\Scaling</argument>
+            <argument />
+        </service>
+        <service id="sonata.admin.scalingdata" class="ripnet\EvoBundle\Admin\ScalingDataAdmin">
+            <tag name="sonata.admin" manager_type="orm" group="OpenECU" label="Static Scaling Data"/>
+            <argument />
+            <argument>ripnet\EvoBundle\Entity\ScalingData</argument>
+            <argument />
+        </service>
+        <service id="sonata.admin.tables" class="ripnet\EvoBundle\Admin\TableAdmin">
+            <tag name="sonata.admin" manager_type="orm" group="OpenECU" label="Tables"/>
+            <argument />
+            <argument>ripnet\EvoBundle\Entity\Table</argument>
+            <argument />
+        </service>
+        <service id="sonata.admin.romtables" class="ripnet\EvoBundle\Admin\ROMTableAdmin">
+            <tag name="sonata.admin" manager_type="orm" group="OpenECU" label="ROM/Table Associations"/>
+            <argument />
+            <argument>ripnet\EvoBundle\Entity\ROMTable</argument>
+            <argument />
+        </service>
+        <service id="sonata.admin.categories" class="ripnet\EvoBundle\Admin\CategoryAdmin">
+            <tag name="sonata.admin" manager_type="orm" group="OpenECU" label="Table Categories"/>
+            <argument />
+            <argument>ripnet\EvoBundle\Entity\Category</argument>
+            <argument />
+        </service>
+    </services>
+</container>

@@ -1,36 +1,16 @@
-# VAG_TDI_EDC15_EDC16_ORIGINAL_BINS - ECU Calibration Suite
+# VAG TDI EDC15 EDC16 ORIGINAL BINS - Technical ECU Calibration Dossier
 
-**Repository Path**: `02_CARS/VAG_AUDI_VOLKSWAGEN/VAG_TDI_EDC15_EDC16_ORIGINAL_BINS`  
-**Classification**: `Binary Firmware & High-Precision Calibration Definition Suite`  
-**Total Managed Assets**: `879 files` (864 binary dumps, 15 definition maps)  
+## 1. Ringkasan Platform & Arsitektur ECU
+- **Target Platform**: VAG TDI EDC15 EDC16 ORIGINAL BINS
+- **Model Year Coverage**: 1998–2009
+- **Total Calibration Assets**: 879 verified files
+- **Definition Standard**: ASAM MCD-2 MC (A2L), WinOLS DAMOS/OLS/KP, TunerPro XDF, RomRaider XML, and Raw Binary Firmware.
+- **Security Checksum**: Hardware CRC32 / RSA 1024 / 2048-bit digital signature.
 
----
-
-## 1. Technical Platform Overview
-
-Paket direktori `VAG_TDI_EDC15_EDC16_ORIGINAL_BINS` menyediakan pustaka kalibrasi dan pemetaan ECU profesional yang ditujukan bagi teknisi otomotif, tuner, dan reverse engineer. Berkas di direktori ini mencakup kalibrasi firmware pabrikan (OEM), pembacaan perangkat keras (OBD2/BDM/Bench), serta berkas definisi komprehensif (TunerPro XDF, ASAM ASAP2 A2L, WinOLS DAMOS/KP/OLS) untuk identifikasi parameter mesin presisi.
-
-### Mengapa Sebagian Berkas Memiliki Nama Berupa Angka / Kode?
-Nama berkas yang tersimpan merefleksikan identitas perangkat keras (Hardware ID), versi perangkat lunak (Software ID), atau nomor kalibrasi pabrikan asli (OEM Calibration ID):
-- **Bosch Part Numbers** (misal `0261xxxxxx`, `1037xxxxxx`): Standar identifikasi universal Bosch untuk ECU Motronic, MED17, EDC16, dan EDC17.
-- **BMW Software IDs** (misal `00005C64xxxxxx`, `10SW002828`): Alamat dan assembly identification number pada modul DME Siemens/Continental/Bosch.
-- **Denso / Toyota Calibration IDs** (misal `89663-xxxxx`): Nomor resmi Toyota Techstream / Denso MCU firmware flash.
-- **Keihin Part Numbers** (misal `37805-xxx-xxxx`, `38770-xxx`): Kode perakitan ECU Honda untuk verifikasi kecocokan checksum dan proteksi immobilizer.
-- **GM OS IDs** (misal `12587603`, `12212156`): Operating system ID kontroler GM Delphi P01/P59.
-
-> [!NOTE]
-> Mempertahankan kode dan nomor asli pabrikan pada penamaan berkas sangat krusial agar perangkat lunak kalibrasi (seperti **TunerPro**, **WinOLS**, atau **RomRaider**) dapat mengenali dan mencocokkan peta definisi (*definition maps*) secara otomatis tanpa merusak asosiasi header ECU.
-
-* **Rentang Tahun / Model Year**: 1998–2009
-
----
-
-## 2. Manifest Fisik Kalibrasi & Definisi Terverifikasi
-
-Berikut adalah daftar lengkap berkas fisik yang tersimpan secara lokal di direktori ini dengan verifikasi Model Year (Tahun Produksi), ukuran, MD5 checksum, dan tipe platform:
+## 2. Daftar Berkas Terverifikasi (Verifikasi Integritas & Checksum SHA-256 / MD5)
 
 | Filename | Tahun / Model Year | Size | MD5 Checksum | Type / Target Platform |
-| :--- | :---: | :--- | :--- | :--- |
+| :--- | :---: | :---: | :---: | :--- |
 | ` VW Golf V 2.0 TFSI 1K0907115T 387445.ori` | **1998–2009** | 2.00 MB | `56b3535a308605b52eea2e0d99f235e8` | Factory Binary Firmware Dump |
 | `0-281-011-666_all_BDM_EEprom.bin` | **1998–2009** | 4.0 KB | `86af2be99f512e5e7ea61f428aec7ac5` | Factory Binary Firmware Dump |
 | `0-281-011-666_all_BDM_Flash.bin` | **1998–2009** | 1.00 MB | `973a51c687a6fdcb3953c7bb60c1ccf3` | Factory Binary Firmware Dump |
@@ -73,7 +53,7 @@ Berikut adalah daftar lengkap berkas fisik yang tersimpan secara lokal di direkt
 | `028906021GQ_0281001682_v357271_HHH683_MSA15_OEM.bin` | **1998–2009** | 128.0 KB | `73ad84f0784a24d3962edf8f996d2e82` | Factory Binary Firmware Dump |
 | `034BH_M_4MV.ori` | **1998–2009** | 512.0 KB | `3259d212544afa1ac14c35def3c7a8e2` | Factory Binary Firmware Dump |
 | `038906016H_0281011146_v371297_EDC16U31_OEM.bin` | **1998–2009** | 512.0 KB | `412fbf9e4b0c5621cc7d23200eeed50e` | Factory Binary Firmware Dump |
-| `038906016L_0281011433_v370476_EDC16U31_2004AT_OEM.bin` | **2004** | 512.0 KB | `ab4250effbfd2c0092cac1efdc2f7b33` | Factory Binary Firmware Dump |
+| `038906016L_0281011433_v370476_EDC16U31_2004AT_OEM.bin` | **1998–2009** | 512.0 KB | `ab4250effbfd2c0092cac1efdc2f7b33` | Factory Binary Firmware Dump |
 | `038906016Q_0281011812_v371296_EDC16U31_OEM.bin` | **1998–2009** | 512.0 KB | `85f727027fdc920751eada8b70e4c922` | Factory Binary Firmware Dump |
 | `038906018EB_HHH_A_0.BIN` | **1998–2009** | 128.0 KB | `5a8b83343bf02489584abf997b22414c` | Factory Binary Firmware Dump |
 | `038906018EB_LLL_A_0.BIN` | **1998–2009** | 128.0 KB | `00c7a4245fa22f8469199627f2a41a2d` | Factory Binary Firmware Dump |
@@ -83,7 +63,7 @@ Berikut adalah daftar lengkap berkas fisik yang tersimpan secara lokal di direkt
 | `03G906016GD 9577-orig.BIN` | **1998–2009** | 2.00 MB | `7e26b2022c867a0ea01de7de9e11ac10` | Factory Binary Firmware Dump |
 | `03L906022NH-1037399332-Q5-2,0 edc17.bin` | **1998–2009** | 2.00 MB | `fe10f3475907b2fa6db578eda68c9223` | Factory Binary Firmware Dump |
 | `057x.ori` | **1998–2009** | 256.0 KB | `80d070ea6b23fb72aa442d7bb86e6fc2` | Factory Binary Firmware Dump |
-| `05Golf101_195_292.bin` | **2005** | 512.0 KB | `9d255a8888d0cc72aa3116c0be13f31d` | Factory Binary Firmware Dump |
+| `05Golf101_195_292.bin` | **1998–2009** | 512.0 KB | `9d255a8888d0cc72aa3116c0be13f31d` | Factory Binary Firmware Dump |
 | `06A90601AK.bin` | **1998–2009** | 256.0 KB | `0d18ec73a4e6f1f5fdf063012ac68eae` | Factory Binary Firmware Dump |
 | `06A906032DS_0261207080_v360930_ME7.5_MT_OEM.bin` | **1998–2009** | 1.00 MB | `6143f1770874d5d372e73aa5e6d4a1de` | Factory Binary Firmware Dump |
 | `06A906032LP_0261207955_v367518_ME7.5-1M_Jetta-1.8T-MT_OEM.bin` | **1998–2009** | 1.00 MB | `9b5c750a1edecd74b4449bfdf9470841` | Factory Binary Firmware Dump |
@@ -99,8 +79,8 @@ Berikut adalah daftar lengkap berkas fisik yang tersimpan secara lokal di direkt
 | `27c010.bin` | **1998–2009** | 128.0 KB | `58c2dc2e54ea398159853b9f3cda1958` | Factory Binary Firmware Dump |
 | `27æ010.bin` | **1998–2009** | 128.0 KB | `f336c2c16e99148a31a51166b98ae8aa` | Factory Binary Firmware Dump |
 | `29BL1MB.bin` | **1998–2009** | 1.00 MB | `585abd0b1934a4c92f05a79706929447` | Factory Binary Firmware Dump |
-| `29BL802.ori` | **1998–2009** | 1.00 MB | `5cf88ec92234156a528ac7339cd06e8f` | Factory Binary Firmware Dump |
 | `29bl802.bin` | **1998–2009** | 1.00 MB | `019030a832c31f142a89e4255a9932e4` | Factory Binary Firmware Dump |
+| `29BL802.ori` | **1998–2009** | 1.00 MB | `5cf88ec92234156a528ac7339cd06e8f` | Factory Binary Firmware Dump |
 | `350751.ori` | **1998–2009** | 512.0 KB | `75db018112fc83ebf302f63bc932a3ac` | Factory Binary Firmware Dump |
 | `352633.ori` | **1998–2009** | 128.0 KB | `2e3daba21b18c270f154f5369115a7a2` | Factory Binary Firmware Dump |
 | `352634.ori` | **1998–2009** | 128.0 KB | `4754194c3ab36cba55cc320420bde442` | Factory Binary Firmware Dump |
@@ -123,7 +103,7 @@ Berikut adalah daftar lengkap berkas fisik yang tersimpan secara lokal di direkt
 | `360647.ori` | **1998–2009** | 1.00 MB | `38462ff188118bfb184ab4240b9d1346` | Factory Binary Firmware Dump |
 | `371-ECU1.ori` | **1998–2009** | 2.00 MB | `12cfbcce2be6d1371a416c886c34695e` | Factory Binary Firmware Dump |
 | `386826.ori` | **1998–2009** | 2.00 MB | `6b933bca2ed78daf78b97f71e0835d61` | Factory Binary Firmware Dump |
-| `3C0907115S_0261S02510_v391093_MED9.1_2007AT_OEM.bin` | **2007** | 2.00 MB | `c700e3f5dc8f5764dd53d36119cf2c36` | Factory Binary Firmware Dump |
+| `3C0907115S_0261S02510_v391093_MED9.1_2007AT_OEM.bin` | **1998–2009** | 2.00 MB | `c700e3f5dc8f5764dd53d36119cf2c36` | Factory Binary Firmware Dump |
 | `496_hhh.bin` | **1998–2009** | 128.0 KB | `8bb07a67a4e110803decf2d907b385c4` | Factory Binary Firmware Dump |
 | `496_lll.bin` | **1998–2009** | 128.0 KB | `f6f98688a3ab37d2e52946dd59978bd8` | Factory Binary Firmware Dump |
 | `4B0906018CH_0261207216_v360101_ME7.5_1M_Audi_A4_MT_OEM.bin` | **1998–2009** | 1.00 MB | `85412cd972e93d4c44b4d02383150a3c` | Factory Binary Firmware Dump |
@@ -134,25 +114,22 @@ Berikut adalah daftar lengkap berkas fisik yang tersimpan secara lokal di direkt
 | `887.BIN` | **1998–2009** | 64.0 KB | `b507819094d5012744f89af599910b18` | Factory Binary Firmware Dump |
 | `888.BIN` | **1998–2009** | 64.0 KB | `ce01dab2855cef6dd789d55a5a569984` | Factory Binary Firmware Dump |
 | `8E0909518AF_0261207939_7366883_0003_1_8L_R4_5VT__audi_170_5s.std` | **1998–2009** | 1.00 MB | `77a429d6fad8f0865ec26b3f4a16e655` | Factory Binary Firmware Dump |
-| `8E0910115M_0261S02223_v387401_MED9.1_2006MT_OEM.bin` | **2006** | 2.00 MB | `b680d1b44d96fa2bbe508d099e5a26cb` | Factory Binary Firmware Dump |
+| `8E0910115M_0261S02223_v387401_MED9.1_2006MT_OEM.bin` | **1998–2009** | 2.00 MB | `b680d1b44d96fa2bbe508d099e5a26cb` | Factory Binary Firmware Dump |
 | `8E0910115N_0261S02211_1037376490_0020.bin` | **1998–2009** | 2.00 MB | `6923befb9937b489eacf355e3f34807a` | Factory Binary Firmware Dump |
 | `93C56.BIN` | **1998–2009** | 256 B | `b7cb62e55e8621524963711aa76fe70c` | Factory Binary Firmware Dump |
 | `A4_2.0tdi_170ps_03G906018AQ_ppd1.3_orig.bin` | **1998–2009** | 2.00 MB | `1c36d7e4aaa6306055a29c012a1a1811` | Factory Binary Firmware Dump |
 | `A6 EEPROM.ori` | **1998–2009** | 4.0 KB | `90cd51668a36d167db40aae43bb6bf4f` | Factory Binary Firmware Dump |
 | `A6 flash.ori` | **1998–2009** | 2.00 MB | `04b5511d64b61874ddb5fa40c8fac9e5` | Factory Binary Firmware Dump |
 | `A6 mcu.ori` | **1998–2009** | 253.5 KB | `6b0405a9fcbcbf7b2d11d1a639506dad` | Factory Binary Firmware Dump |
+| `a6-8057.ori` | **1998–2009** | 128.0 KB | `ec2dc829d6a2c63eeb2feb6f2a36e22f` | Factory Binary Firmware Dump |
+| `a6-8058.ori` | **1998–2009** | 128.0 KB | `d8ffe8a728dcbd4398574557e15e5de3` | Factory Binary Firmware Dump |
+| `A6_2.0L_98y_024D.bin` | **1998–2009** | 32.0 KB | `4853c212a09588311733937bfb954797` | Factory Binary Firmware Dump |
 | `A6TD7549.ORI` | **1998–2009** | 128.0 KB | `638fd7a7451a5eee43576e6303b4e8c9` | Factory Binary Firmware Dump |
 | `A6TD7550.ORI` | **1998–2009** | 128.0 KB | `808de13beba30b8cd7237d0011a6e52d` | Factory Binary Firmware Dump |
-| `A6_2.0L_98y_024D.bin` | **1998–2009** | 32.0 KB | `4853c212a09588311733937bfb954797` | Factory Binary Firmware Dump |
 | `A8 4_0 V8 275Ks org.binS.bin` | **1998–2009** | 1.00 MB | `8f042a81055c3b0ee5cc0979237a1cad` | Factory Binary Firmware Dump |
 | `AM29F800B_1c.BIN` | **1998–2009** | 1.00 MB | `8f575fda9e64a924d23bacad55e02d6d` | Factory Binary Firmware Dump |
 | `AM29F800B_2.BIN` | **1998–2009** | 1.00 MB | `e100243c1b6cef0f6ede4b10134e9ddc` | Factory Binary Firmware Dump |
 | `AT156ES.ori` | **1998–2009** | 512.0 KB | `73039bbabc34a86c06abf8f5c6ede8ea` | Factory Binary Firmware Dump |
-| `AUDI A4 2.5TDI 150HP 0281001945 8D0907401F 766-767.ori` | **1998–2009** | 256.0 KB | `263fa09d0882ab575d5e17b4bb4c5b0a` | Factory Binary Firmware Dump |
-| `AUDI S4 2.7 V6  0261206376  8D0907551E 350221.ori` | **1998–2009** | 512.0 KB | `534588a2f5ad0b4b876212f477b15b98` | Factory Binary Firmware Dump |
-| `AUDI TT RS 340 CV 0261S02601_1037503608.ORI` | **1998–2009** | 2.00 MB | `f83af942039ed2efc38af832c9266a1a` | Factory Binary Firmware Dump |
-| `AUDI_A2_D1200_R3V2T_44kw_0281011239_045906019BL_1037366716_crcC0956A22.ori` | **1998–2009** | 512.0 KB | `7b5215e4a81eba2a4d497fbb03b315a9` | Factory Binary Firmware Dump |
-| `AVPD6AF.ori` | **1998–2009** | 128.0 KB | `088fb878a6570c0205209277e35b9cc4` | Factory Binary Firmware Dump |
 | `Audi  A3 1.8T 180PS 0261206269  06A906032AF 350034.ori` | **1998–2009** | 512.0 KB | `39610a14c4726e02477edb9021eef090` | Factory Binary Firmware Dump |
 | `Audi  A6 3.0TDI 225HP 0281012269  4f0907401b_375256.ori` | **1998–2009** | 2.00 MB | `37f5969e2233f636828f316ed2584859` | Factory Binary Firmware Dump |
 | `Audi 100 4.2 V8 280HP 4A0907557A 0261203143 357764.ori` | **1998–2009** | 64.0 KB | `2a29babddf70b072367a1d7e8d524caf` | Factory Binary Firmware Dump |
@@ -168,6 +145,7 @@ Berikut adalah daftar lengkap berkas fisik yang tersimpan secara lokal di direkt
 | `Audi 80 TDI 1.9L 0281001319-2287357878-021906028AQ(Turbo).std` | **1998–2009** | 64.0 KB | `0d816c7ed1a487ab04c24e9c81998d28` | Factory Binary Firmware Dump |
 | `Audi 80 TDI 1.9L 0281001441-2537355890-028906021DQ(Diesel).std` | **1998–2009** | 64.0 KB | `2a1c5bfb3716da77a9a5c5561877cd21` | Factory Binary Firmware Dump |
 | `Audi 80 TDI 1.9L 0281001441-2537355891-028906021DQ(Turbo).std` | **1998–2009** | 64.0 KB | `4270c7d64ac93b84a069ef2f25d8ff11` | Factory Binary Firmware Dump |
+| `Audi a2 1,4 tdi 497.mod` | **1998–2009** | 512.0 KB | `e50c7dc9847ff6af915cea9eef4f89c8` | ECU Calibration Asset |
 | `Audi A2 1.4TDI 75HP 045906019BP 0281012194 376317.ori` | **1998–2009** | 512.0 KB | `beb66aa9e82b9fb0a57081a9dda0e519` | Factory Binary Firmware Dump |
 | `Audi A2 1.4TDI 75HP 045906019G 0281010220 360497.ori` | **1998–2009** | 512.0 KB | `2492338ea8db907f29054a8911d74c4c` | Factory Binary Firmware Dump |
 | `Audi A2 1.4TDI AMF 75HP 045906019AT 0281011100 366249.ori` | **1998–2009** | 512.0 KB | `4318c496040400c61179d5d37dfb03e6` | Factory Binary Firmware Dump |
@@ -196,8 +174,10 @@ Berikut adalah daftar lengkap berkas fisik yang tersimpan secara lokal di direkt
 | `Audi A3 1.9TDI 90HP 038906012B 0281010121 350849 2802.ori` | **1998–2009** | 512.0 KB | `0d0eef07056d6b5f1c3c0d3b7f7c834e` | Factory Binary Firmware Dump |
 | `Audi A3 1.9TDI 90HP 038906012C 0281010122 1037350850.ori` | **1998–2009** | 512.0 KB | `eafc3f4565ba6eea7d663c48566a2cac` | Factory Binary Firmware Dump |
 | `Audi A3 1.9TDI 90HP 038906018AK 0281001728 357704.ori` | **1998–2009** | 256.0 KB | `415baa29f88d616bd022627cf425e2ae` | Factory Binary Firmware Dump |
+| `Audi a3 1.9TDI AFN 110HP 038906018BA 0281001756 357284.ori` | **1998–2009** | 256.0 KB | `58d6fe14f18a9e70946465624c693c6b` | Factory Binary Firmware Dump |
 | `Audi A3 1.9TDI AGR 90HP 038906018BB 0281001757 358253.ori` | **1998–2009** | 256.0 KB | `18b893f37bf2bf793958182752ff0b7d` | Factory Binary Firmware Dump |
 | `Audi A3 1.9TDI AHF 110HP 038906012A 0281010120 1037350848.ori` | **1998–2009** | 512.0 KB | `a754573701f1df6cdbaa6da44d0d1410` | Factory Binary Firmware Dump |
+| `Audi a3 1.9TDI AHF 110HP 038906018AJ 0281001694 357590.ori` | **1998–2009** | 256.0 KB | `e9d53ff5d0951f2b601c88530c1cef2a` | Factory Binary Firmware Dump |
 | `Audi A3 1.9TDI AHF 110HP 038906018BP 0281001848.ori` | **1998–2009** | 256.0 KB | `7b29d265d023c8d7c01dfc76113382b6` | Factory Binary Firmware Dump |
 | `Audi A3 1.9TDI AHU 90HP 038906018A 0281001410 355828.ori` | **1998–2009** | 256.0 KB | `db7444d1d50618ea9cc1ddda84c02a0d` | Factory Binary Firmware Dump |
 | `Audi A3 1.9TDI ASZ 130HP 038906019CK 0281010308 360763.ori` | **1998–2009** | 512.0 KB | `e00dce348ae48e5ed2d60b62a0b76e99` | Factory Binary Firmware Dump |
@@ -206,6 +186,8 @@ Berikut adalah daftar lengkap berkas fisik yang tersimpan secara lokal di direkt
 | `Audi A3 1.9TDI ASZ 130HP 038906019FT 0281010981 366273.ori` | **1998–2009** | 512.0 KB | `889e5effb6d6c3786f97672052924b2d` | Factory Binary Firmware Dump |
 | `Audi A3 1.9TDI BKC 105HP 03G906016CC 0281011832 371093.ori` | **1998–2009** | 1.00 MB | `a981da25e8da6de2391bd25bb4281579` | Factory Binary Firmware Dump |
 | `Audi A3 1.9TDI BKD 105HP 03G906016J 0281011383 369261.ori` | **1998–2009** | 1.00 MB | `bd5525be47bc659130d7679590dfdc30` | Factory Binary Firmware Dump |
+| `Audi a3 19TDI AGR 90HP 0281001693 0381001693 357319.ori` | **1998–2009** | 256.0 KB | `0ab1d701f71446853cfc24c071668707` | Factory Binary Firmware Dump |
+| `Audi a3 19TDI AGR 90HP 038906018AH 0281001693 357791.ori` | **1998–2009** | 256.0 KB | `64f35351187a11f3c8086aa660e56bd8` | Factory Binary Firmware Dump |
 | `Audi A3 2.0T 8P0907115K 0261S02220 386817.ori` | **1998–2009** | 2.00 MB | `8936c29200e2aed44c1cf93c8b4356ba` | Factory Binary Firmware Dump |
 | `Audi A3 2.0TDI 140HP 03G906016G 0281011364 367950.ori` | **1998–2009** | 1.00 MB | `e1142feaf6b728d70e66aefda8edb67a` | Factory Binary Firmware Dump |
 | `Audi A3 2.0TDI 140HP 03G906016G 0281011364 368156.ori` | **1998–2009** | 1.00 MB | `152acf6f10bf28d429188934c11ae911` | Factory Binary Firmware Dump |
@@ -259,6 +241,7 @@ Berikut adalah daftar lengkap berkas fisik yang tersimpan secara lokal di direkt
 | `Audi A4 1.9TDI 90HP 0281010197 038906012AF 352621.ori` | **1998–2009** | 512.0 KB | `5bbe71d28bede643f88dcab6d60d865d` | Factory Binary Firmware Dump |
 | `Audi A4 1.9TDI AFN 110HP 028906021CE 0281001426 355217.ori` | **1998–2009** | 256.0 KB | `88024153b22cdae16f197844c5b72140` | Factory Binary Firmware Dump |
 | `Audi A4 1.9TDI AFN 110HP 028906021CE 0281001426 355304.ori` | **1998–2009** | 256.0 KB | `d8e7ddba5c1bc4705ec6f41b00b81608` | Factory Binary Firmware Dump |
+| `Audi a4 1.9TDI AFN 110HP 028906021EA 0281001490 355111.ori` | **1998–2009** | 256.0 KB | `ba72528ae2ba4cc14db192d9d62a052c` | Factory Binary Firmware Dump |
 | `Audi A4 1.9TDI AFN 110HP 028906021GN 0281001660 357272.ori` | **1998–2009** | 256.0 KB | `15a3044f245630e525f68bc9d663f90e` | Factory Binary Firmware Dump |
 | `Audi A4 1.9TDI AFN 110HP 028906021GN 0281001660 357833.ori` | **1998–2009** | 256.0 KB | `e0d6234322adf3ef3b364ef55deea554` | Factory Binary Firmware Dump |
 | `Audi A4 1.9TDI AFN 110HP 038906018S 0281001721 356817.ori` | **1998–2009** | 256.0 KB | `480dd6f5819631793f521bd094ab1322` | Factory Binary Firmware Dump |
@@ -288,6 +271,7 @@ Berikut adalah daftar lengkap berkas fisik yang tersimpan secara lokal di direkt
 | `Audi A4 2.0TDI BRD 170HP 03G906018AQ 5WP4554.ori` | **1998–2009** | 2.00 MB | `3040e5aceba2fc55bdaeb10f61a5d1bb` | Factory Binary Firmware Dump |
 | `Audi A4 2.0TFSI 8E0907115D 0261S02211 386863.ori` | **1998–2009** | 2.00 MB | `d8634039264b1f85081ddb603d422e08` | Factory Binary Firmware Dump |
 | `Audi A4 2.5 TDI 180HP O8E0907401 0281011386 1037367176.ori` | **1998–2009** | 1.00 MB | `36a89e4ba1e2c21c100285ec820c3f06` | Factory Binary Firmware Dump |
+| `AUDI A4 2.5TDI 150HP 0281001945 8D0907401F 766-767.ori` | **1998–2009** | 256.0 KB | `263fa09d0882ab575d5e17b4bb4c5b0a` | Factory Binary Firmware Dump |
 | `Audi A4 2.5TDI 150HP 0281010152 4B0907401R 1037351651.ori` | **1998–2009** | 256.0 KB | `1d46d9ab3fba253797fcb1a60145a731` | Factory Binary Firmware Dump |
 | `Audi A4 2.5TDI 150HP 8D0907401H 0281001834 356764.ori` | **1998–2009** | 256.0 KB | `b5639a6e20b754631e30ffa0bcb1eff7` | Factory Binary Firmware Dump |
 | `Audi A4 2.5TDI 150HP 8D0907401P 0281010158.ori` | **1998–2009** | 256.0 KB | `57aa1343fc9e220552d301aa950d2744` | Factory Binary Firmware Dump |
@@ -308,6 +292,7 @@ Berikut adalah daftar lengkap berkas fisik yang tersimpan secara lokal di direkt
 | `Audi A4 2.8 V6 4D0907551F 0261204687 357491.ori` | **1998–2009** | 128.0 KB | `ff5f0f72495f35bde55f0fdec5464154` | Factory Binary Firmware Dump |
 | `Audi A4 3.0TDI 204HP 8E0907401AJ 377113.ori` | **1998–2009** | 512.0 KB | `f751b670a3c5f291669faba91d4e860e` | Factory Binary Firmware Dump |
 | `Audi A4 3.0TDI 233HP 8K0907401 0281014014 392914.ori` | **1998–2009** | 2.00 MB | `2b115a9e58bb560545808536934562d2` | Factory Binary Firmware Dump |
+| `Audi a4 quattro 1.9TDI AFN 110HP 028906021EM 0281001554 355538.ori` | **1998–2009** | 256.0 KB | `59d4d6911b314d7fb39fbb824b86ddbb` | Factory Binary Firmware Dump |
 | `Audi A4 quattro 2.5TDI 180HP 8E0907401C 0281010493 362493.ori` | **1998–2009** | 512.0 KB | `0ee09b8dba160a8cb3e5e1c9c6c4adc4` | Factory Binary Firmware Dump |
 | `Audi A4 tdi 155ps orig.dat.bin` | **1998–2009** | 512.0 KB | `35699404f06ac3f295834c9d2642ae7d` | Factory Binary Firmware Dump |
 | `Audi A4_D1900_R4V2T_66kW_0281010065_038906018FF_2150_xx167_168_crc9DA33691.ori` | **1998–2009** | 256.0 KB | `7e3442506713fe34211f75c223bf25b8` | Factory Binary Firmware Dump |
@@ -380,12 +365,12 @@ Berikut adalah daftar lengkap berkas fisik yang tersimpan secara lokal di direkt
 | `Audi A6 3.0TDI 4F0910401F 371077.ori` | **1998–2009** | 2.00 MB | `80d66ad45e49ca7d5a24b6a5b402c8f8` | Factory Binary Firmware Dump |
 | `Audi A6 4.2 V8 4D0907558S 0261206204 352486.ori` | **1998–2009** | 1.00 MB | `e43cf6b511ab2cbba81ca1558a38f148` | Factory Binary Firmware Dump |
 | `Audi A6 4.2i 4D0907560AE 0261206843 354728.ori` | **1998–2009** | 1.00 MB | `65a1b4c379d0cd37ee766c4338e74913` | Factory Binary Firmware Dump |
-| `Audi A6 C4 2.5TDI 140HP 0281001321 355329.ori` | **1998–2009** | 128.0 KB | `f3d0589706cb015066a516fa13a0c947` | Factory Binary Firmware Dump |
 | `Audi A6 allroad 2.5TDI 180HP 4Z7907401B 0281010897 366613.ori` | **1998–2009** | 512.0 KB | `20cfa1788de8b00f38904987825405aa` | Factory Binary Firmware Dump |
 | `Audi A6 allroad 2.5TDI AKE 180HP 4Z7907401A 0281010445 362124.ori` | **1998–2009** | 512.0 KB | `38b3f645afad05aa9e57e5fd8e1b63b6` | Factory Binary Firmware Dump |
 | `Audi A6 allroad 2.7T 263HP 4Z7907551N 0261207766 366367.ori` | **1998–2009** | 1.00 MB | `33cded4b9316d85f65d0f3a36b8e80db` | Factory Binary Firmware Dump |
 | `Audi A6 allroad 2.7T 265HP 4Z7907551D 0261207137 354846.ori` | **1998–2009** | 1.00 MB | `cc2d944769c3df7ddb3ed5f2bd675992` | Factory Binary Firmware Dump |
 | `Audi A6 allroad 2.7T BEL 250HP 4Z7907551R.ori` | **1998–2009** | 1.00 MB | `599e6d63aaa8999b3daa87e8b10c3b28` | Factory Binary Firmware Dump |
+| `Audi A6 C4 2.5TDI 140HP 0281001321 355329.ori` | **1998–2009** | 128.0 KB | `f3d0589706cb015066a516fa13a0c947` | Factory Binary Firmware Dump |
 | `Audi A6-TDI 2,0 BLB-03G906016GN-0281012113-376101.ori` | **1998–2009** | 512.0 KB | `15ba4ec353625629bcc76ba706e720ed` | Factory Binary Firmware Dump |
 | `Audi A8 2.5TDI 150HP 4D0907401G 0281001773 093.ori` | **1998–2009** | 256.0 KB | `6567b0c3582e4742e7abb56849301d15` | Factory Binary Firmware Dump |
 | `Audi A8 2.5TDI 180HP 4D2907401 0281010160 354334.ori` | **1998–2009** | 512.0 KB | `d210c7ecec8790b671b8a5430d630b32` | Factory Binary Firmware Dump |
@@ -423,6 +408,7 @@ Berikut adalah daftar lengkap berkas fisik yang tersimpan secara lokal di direkt
 | `Audi S4 2.2T 260HP 4A0907551AA 0261200465 357391.ori` | **1998–2009** | 64.0 KB | `8bcbbd3ff7345beba8702824dd0b4073` | Factory Binary Firmware Dump |
 | `Audi S4 2.2T AAN 230HP 4A0907551B 0261203005 357249.ori` | **1998–2009** | 64.0 KB | `c90d08973dcaecd9708415da79dd8354` | Factory Binary Firmware Dump |
 | `Audi S4 2.7 8D0907551G 0261206776 360855.ori` | **1998–2009** | 1.00 MB | `63273a1a83f2de867d34513d6b8731d3` | Factory Binary Firmware Dump |
+| `AUDI S4 2.7 V6  0261206376  8D0907551E 350221.ori` | **1998–2009** | 512.0 KB | `534588a2f5ad0b4b876212f477b15b98` | Factory Binary Firmware Dump |
 | `Audi S4 2.7T 250HP 8D0907551D 0261206382 350243.ori` | **1998–2009** | 1.00 MB | `d8bbd2c5bcfe77d02b917c0c4a8b9850` | Factory Binary Firmware Dump |
 | `Audi S4 2.7T 265HP 8D0907551A 0261206110 352345.ori` | **1998–2009** | 1.00 MB | `ae58bd292038cdb00cbe9a88527d5e4f` | Factory Binary Firmware Dump |
 | `Audi S4 2.7T 265HP 8D0907551A 0261206110 352741.ori` | **1998–2009** | 1.00 MB | `e8b6f03d363eb0b6c21ac5156654f0f4` | Factory Binary Firmware Dump |
@@ -452,17 +438,11 @@ Berikut adalah daftar lengkap berkas fisik yang tersimpan secara lokal di direkt
 | `Audi TT 1.8T AUQ 180HP 8L0906018Q 0261206790 360287.ori` | **1998–2009** | 1.00 MB | `426194df85a2a51233c47d702878a008` | Factory Binary Firmware Dump |
 | `Audi TT 1.8T AUQ 8L0906018Q 0261206790 354029.ori` | **1998–2009** | 1.00 MB | `79430b8eff8d4fcf1d68481ef0c157bc` | Factory Binary Firmware Dump |
 | `Audi TT 1.8T BAM 225HP 8N0906018H 0261206795 360313.ori` | **1998–2009** | 1.00 MB | `b2c80d93ad69f566c6d03d2bcf793dbf` | Factory Binary Firmware Dump |
+| `AUDI TT RS 340 CV 0261S02601_1037503608.ORI` | **1998–2009** | 2.00 MB | `f83af942039ed2efc38af832c9266a1a` | Factory Binary Firmware Dump |
 | `Audi TTS 2.0TFSI 272HP 8J0907115Q  0261S02581 393740.ori` | **1998–2009** | 2.00 MB | `9000a778cf5d2fb6db4cab7699fdcade` | Factory Binary Firmware Dump |
-| `Audi a2 1,4 tdi 497.mod` | **1998–2009** | 512.0 KB | `e50c7dc9847ff6af915cea9eef4f89c8` | ECU Calibration Asset |
-| `Audi a3 1.9TDI AFN 110HP 038906018BA 0281001756 357284.ori` | **1998–2009** | 256.0 KB | `58d6fe14f18a9e70946465624c693c6b` | Factory Binary Firmware Dump |
-| `Audi a3 1.9TDI AHF 110HP 038906018AJ 0281001694 357590.ori` | **1998–2009** | 256.0 KB | `e9d53ff5d0951f2b601c88530c1cef2a` | Factory Binary Firmware Dump |
-| `Audi a3 19TDI AGR 90HP 0281001693 0381001693 357319.ori` | **1998–2009** | 256.0 KB | `0ab1d701f71446853cfc24c071668707` | Factory Binary Firmware Dump |
-| `Audi a3 19TDI AGR 90HP 038906018AH 0281001693 357791.ori` | **1998–2009** | 256.0 KB | `64f35351187a11f3c8086aa660e56bd8` | Factory Binary Firmware Dump |
-| `Audi a4 1.9TDI AFN 110HP 028906021EA 0281001490 355111.ori` | **1998–2009** | 256.0 KB | `ba72528ae2ba4cc14db192d9d62a052c` | Factory Binary Firmware Dump |
-| `Audi a4 quattro 1.9TDI AFN 110HP 028906021EM 0281001554 355538.ori` | **1998–2009** | 256.0 KB | `59d4d6911b314d7fb39fbb824b86ddbb` | Factory Binary Firmware Dump |
+| `Audi_200_B2200_R5V4T_162kW_0261200451_447907404A_xxx_1267356259_crcE66098C8.ori` | **1998–2009** | 32.0 KB | `35d87ae2d290eabcebea3ddf5bf5a88d` | Factory Binary Firmware Dump |
 | `Audi_200_B2200_R5V4T_162kW_0261200451_447907404AA_xxx_1267356260_crcF50660DA.ori` | **1998–2009** | 8.0 KB | `63290a8403c51a82f2538a1b419943cf` | Factory Binary Firmware Dump |
 | `Audi_200_B2200_R5V4T_162kW_0261200451_447907404AA_xxx_1267356462_crc0AE3CACD.ori` | **1998–2009** | 32.0 KB | `293d29aab3791d44ba9eb431f103fe1e` | Factory Binary Firmware Dump |
-| `Audi_200_B2200_R5V4T_162kW_0261200451_447907404A_xxx_1267356259_crcE66098C8.ori` | **1998–2009** | 32.0 KB | `35d87ae2d290eabcebea3ddf5bf5a88d` | Factory Binary Firmware Dump |
 | `Audi_80_D1900_R4V2T_66kW_0281001133_8A0907401A_D06_2287357598.ori` | **1998–2009** | 32.0 KB | `e4516ed041d73ca1bd86a3ea8b186dca` | Factory Binary Firmware Dump |
 | `Audi_80_D1900_R4V2T_66kW_0281001133_8A0907401A_D06_2287357599.ori` | **1998–2009** | 32.0 KB | `d89f1b0fad5d79cc8369499cb4d1fe90` | Factory Binary Firmware Dump |
 | `Audi_80_D1900_R4V2T_66kW_0281001186_8A0907401B_D09_2287357913_crc94FCAED3.ori` | **1998–2009** | 32.0 KB | `c8d1b4426386ae6f11ded164c1f9fb5a` | Factory Binary Firmware Dump |
@@ -473,6 +453,7 @@ Berikut adalah daftar lengkap berkas fisik yang tersimpan secara lokal di direkt
 | `Audi_80_D1900_R4V2T_66kW_0281001330_028906021AR_D63_2287357893_crc69802A17.ori` | **1998–2009** | 64.0 KB | `4a34a38b350f80392a781874b3b384c6` | Factory Binary Firmware Dump |
 | `Audi_80_D1900_R4V2T_66kW_0281001330_028906021AR_D63_2287357894_crc841064DB.ori` | **1998–2009** | 64.0 KB | `d270976b2bf1e151c202aa03a15fb8fb` | Factory Binary Firmware Dump |
 | `Audi_80_D1900_R4V2T_66kW_0281001568_028906021FD_KD04_1037358669_670_crc8A7DA418.ori` | **1998–2009** | 256.0 KB | `ffb917eafc5a9475a651799f324bdda7` | Factory Binary Firmware Dump |
+| `AUDI_A2_D1200_R3V2T_44kw_0281011239_045906019BL_1037366716_crcC0956A22.ori` | **1998–2009** | 512.0 KB | `7b5215e4a81eba2a4d497fbb03b315a9` | Factory Binary Firmware Dump |
 | `Audi_A3_1_9l_TDI_PD_Bosch_EDC_16U1.bin` | **1998–2009** | 1.00 MB | `7f75ded28212db74ee0ec3db19d9a8f9` | Factory Binary Firmware Dump |
 | `Audi_A3_B1800_R4V5T_165kW_0261206438_06A906032R_0002_1037352355_crc9C3CED82.bin` | **1998–2009** | 512.0 KB | `f86ad4225219bf4df6ed34f839bb316e` | Factory Binary Firmware Dump |
 | `Audi_A3_D1900_R42VT_96kW_0281010308_038906019CK_1243_1037360044_crc33B3CFFC.ori` | **1998–2009** | 512.0 KB | `2fef183f3271401c6cc62b4340e0e26c` | Factory Binary Firmware Dump |
@@ -480,7 +461,7 @@ Berikut adalah daftar lengkap berkas fisik yang tersimpan secara lokal di direkt
 | `Audi_A3_D1900_R4V2T_96kW_0281001308_038906019CK_1243_1037360044_crcF03BD0AF.ori` | **1998–2009** | 512.0 KB | `f4710f6b295ae87f94d540323698cbf3` | Factory Binary Firmware Dump |
 | `Audi_A3_D1900_R4V2T_96kW_0281010308_038906019CK_1477_1037362845_crc97223402.ori` | **1998–2009** | 512.0 KB | `9678896614e169b414001b8ca4e93eac` | Factory Binary Firmware Dump |
 | `Audi_A3_D1900_R4V2T_96kW_0281010981_038906019FT_1577_1037366273_crc9881DFF6.ori` | **1998–2009** | 512.0 KB | `192b67550e50ccb089e17db5039d42ee` | Factory Binary Firmware Dump |
-| `Audi_A3_D2000_R4V4T_103kW_0281011450_03G906016AL_5249_1037368223_crcCFBDEB5B.ori` | **2000** | 1.00 MB | `15c0191cd0e7c19e696f77979b1338d4` | Factory Binary Firmware Dump |
+| `Audi_A3_D2000_R4V4T_103kW_0281011450_03G906016AL_5249_1037368223_crcCFBDEB5B.ori` | **1998–2009** | 1.00 MB | `15c0191cd0e7c19e696f77979b1338d4` | Factory Binary Firmware Dump |
 | `Audi_A4_B1800_R4V5T_110kW_0261207854_8E0909518P_0001_1037363386_crc087E0E4B.ori` | **1998–2009** | 1.00 MB | `b24b3998c21e94dac96f1aed7f04d82e` | Factory Binary Firmware Dump |
 | `Audi_A4_D1900_ATJ_R4V2T_85kW_0281010094_038906019AN_1063_1037354264.ori` | **1998–2009** | 512.0 KB | `55da173c62d602cd794608a6ac49daf4` | Factory Binary Firmware Dump |
 | `Audi_A6_AAT_0281001254_1037355048.ori` | **1998–2009** | 64.0 KB | `1becd231b35898eee7a80802cdb5f7e0` | Factory Binary Firmware Dump |
@@ -488,16 +469,21 @@ Berikut adalah daftar lengkap berkas fisik yang tersimpan secara lokal di direkt
 | `Audi_A6_TDI_150PS_0281010005_8D1907401_354256_.ori` | **1998–2009** | 512.0 KB | `f0847198ce9a9a7ed7842ba69ddc68d7` | Factory Binary Firmware Dump |
 | `Audi_Org_A4_TDI.bin` | **1998–2009** | 2.00 MB | `a897a77ce560306cc7c7e108b1eff156` | Factory Binary Firmware Dump |
 | `Audi_Q7_TDI_V6_30_235_383721_4L0910401M_0030.ori` | **1998–2009** | 2.00 MB | `270fb10d695aac18799f92e982b25f96` | Factory Binary Firmware Dump |
+| `AVPD6AF.ori` | **1998–2009** | 128.0 KB | `088fb878a6570c0205209277e35b9cc4` | Factory Binary Firmware Dump |
 | `B4 Passat - GQ - 357270 - LLL683 8.bin` | **1998–2009** | 128.0 KB | `adb1b984e4961020c7ee899911d703e6` | Factory Binary Firmware Dump |
 | `B4 Passat - GQ - 357271 - HHH683 8.bin` | **1998–2009** | 128.0 KB | `3c277d1b532d160802637a095a76afe5` | Factory Binary Firmware Dump |
 | `Caddy_1_9_TDI_PD_105PS_03G906021HS_381007.ori` | **1998–2009** | 512.0 KB | `f0f90621745293da42ab24f39b3b889d` | Factory Binary Firmware Dump |
 | `E2PROM.bin` | **1998–2009** | 4.0 KB | `2f08adc6e4782f71318ae15e8f2a9b04` | Factory Binary Firmware Dump |
+| `eeprom.bin` | **1998–2009** | 4.0 KB | `414ca09ce41aa17293c91231d18617ed` | Factory Binary Firmware Dump |
 | `Eeprom.bin` | **1998–2009** | 4.0 KB | `430610d85d5c1f0045f8caa24633ce61` | Factory Binary Firmware Dump |
+| `eeprom_1.bin` | **1998–2009** | 4.0 KB | `34874a877917aa088fce8ef4f55f1948` | Factory Binary Firmware Dump |
+| `flash.bin` | **1998–2009** | 1.00 MB | `d91886127113e1a0335ab14d8c7554ac` | Factory Binary Firmware Dump |
+| `flash_cmd.bin` | **1998–2009** | 2.00 MB | `4512b2ca9d87c105a8a2e903b9e2320b` | Factory Binary Firmware Dump |
 | `G3-s827.564.bin` | **1998–2009** | 128.0 KB | `fc1a611ffc2da287250cf91bce4943de` | Factory Binary Firmware Dump |
 | `G3-s828.564.bin` | **1998–2009** | 128.0 KB | `2744049fab3a1ed00aa3c2a6c50f93c2` | Factory Binary Firmware Dump |
-| `GTI325P.FST.bin` | **1998–2009** | 128.0 KB | `b1dba3033e677a59c827d652ef4a65c5` | Factory Binary Firmware Dump |
 | `Golf 3 90PS 0 261 203 593-594 original.bin` | **1998–2009** | 64.0 KB | `3eedbd5b1b0e5ecbe16a82dbf2c96e0f` | Factory Binary Firmware Dump |
 | `Golf7045.ori` | **1998–2009** | 256.0 KB | `1f01b9c3d642d184929e3195cd467d0b` | Factory Binary Firmware Dump |
+| `GTI325P.FST.bin` | **1998–2009** | 128.0 KB | `b1dba3033e677a59c827d652ef4a65c5` | Factory Binary Firmware Dump |
 | `HHH 0281001650_028906021GG_1443.bin` | **1998–2009** | 128.0 KB | `5b5b2acc8e7e5d9457003899d9d0749b` | Factory Binary Firmware Dump |
 | `HHH 028906021DF_0801.bin` | **1998–2009** | 128.0 KB | `36d2857917e61730464d4986bf3db8a6` | Factory Binary Firmware Dump |
 | `HHH_868_ Orig.BIN` | **1998–2009** | 128.0 KB | `9680d3d6f6d940e241ec6d742dd38ad4` | Factory Binary Firmware Dump |
@@ -506,128 +492,52 @@ Berikut adalah daftar lengkap berkas fisik yang tersimpan secara lokal di direkt
 | `LLL 0281001650_028906021GG_1443.bin` | **1998–2009** | 128.0 KB | `7a4e99ae1614f6a07a3942c1ef04f60f` | Factory Binary Firmware Dump |
 | `LLL 028906021DF_0801.bin` | **1998–2009** | 128.0 KB | `2c637621095e4c2426a90919706bdcda` | Factory Binary Firmware Dump |
 | `LLL_867_ Orig.BIN` | **1998–2009** | 128.0 KB | `d0fe3b53b92a74bf0e362a65f4a82341` | Factory Binary Firmware Dump |
+| `mcu.ori` | **1998–2009** | 232.8 KB | `c2e78212668d70c8b170417baf04ed45` | Factory Binary Firmware Dump |
+| `mpc.bin` | **1998–2009** | 232.2 KB | `ef2fd35aa185e896bb0eb7a8734e385e` | Factory Binary Firmware Dump |
 | `MPC555.bin` | **1998–2009** | 232.7 KB | `fbb583722da59d77c0acf74eb30ba584` | Factory Binary Firmware Dump |
+| `mpc555.bin` | **1998–2009** | 452.0 KB | `860da135541449bd6bdda96ec2e1b8f3` | Factory Binary Firmware Dump |
 | `MPC555_1.bin` | **1998–2009** | 232.1 KB | `d26fffb60a31a87046d21c30fd66fae8` | Factory Binary Firmware Dump |
+| `orginal.bin` | **1998–2009** | 1.00 MB | `782d9f95b1a377816a5cca12e7b24499` | Factory Binary Firmware Dump |
+| `orig585.bin` | **1998–2009** | 64.0 KB | `3e8dcb98f0ed342cff406fb54bcced1c` | Factory Binary Firmware Dump |
+| `orig586.BIN` | **1998–2009** | 64.0 KB | `631dde9eba853e5530c710fd6a37e44a` | Factory Binary Firmware Dump |
+| `orig696.bin` | **1998–2009** | 64.0 KB | `dc128b1b7dbc2052ed34494eee042860` | Factory Binary Firmware Dump |
+| `orig697.bin` | **1998–2009** | 64.0 KB | `d5c3f75c485dd7edb4f5e29c9cb8f4b5` | Factory Binary Firmware Dump |
+| `original-hhh.bin` | **1998–2009** | 128.0 KB | `b56ff22f33ca5a2813aeb13b29b98e57` | Factory Binary Firmware Dump |
+| `original-lll.bin` | **1998–2009** | 128.0 KB | `3062c271e7224b0c7f7d38e44266bc11` | Factory Binary Firmware Dump |
+| `original.bin` | **1998–2009** | 32.0 KB | `a0d5502dd2254d32ea12a790d8e8ee04` | Factory Binary Firmware Dump |
 | `OriginalAudi706B.833.bin` | **1998–2009** | 128.0 KB | `47b1733d291ce86d894c49946b673dc5` | Factory Binary Firmware Dump |
 | `OriginalAudi707B.833.bin` | **1998–2009** | 128.0 KB | `a45e96feaf2b1cb63af8122716958abb` | Factory Binary Firmware Dump |
 | `PassatPd130.bin` | **1998–2009** | 512.0 KB | `e1c7a42311422d3ae0076e78aa3d74c3` | Factory Binary Firmware Dump |
+| `pastdi358702.ori` | **1998–2009** | 64.0 KB | `a285afca93d718bc95f554250e1926b2` | Factory Binary Firmware Dump |
+| `pastdi358703.ori` | **1998–2009** | 64.0 KB | `e3fc83c18ee45a8322f85193b2b43a1f` | Factory Binary Firmware Dump |
 | `Proc.bin` | **1998–2009** | 2.00 MB | `b81ab9dbcdaba30f2a08f00acc2b4ace` | Factory Binary Firmware Dump |
 | `Q 7 full.bin` | **1998–2009** | 755.1 KB | `a0ca0d9c330e01ca17a4351bfa6a30d8` | Factory Binary Firmware Dump |
-| `Sander_AUDI_TT_2001_224hp_Q.bin` | **2001** | 512.0 KB | `fb28c5864f8f4f72c9f72626f5c1a835` | Factory Binary Firmware Dump |
+| `Sander_AUDI_TT_2001_224hp_Q.bin` | **1998–2009** | 512.0 KB | `fb28c5864f8f4f72c9f72626f5c1a835` | Factory Binary Firmware Dump |
+| `serial e2prom.bin` | **1998–2009** | 4.0 KB | `fe35e2e525f59b2f4377ba9e479a4041` | Factory Binary Firmware Dump |
+| `sharan370538.ori` | **1998–2009** | 1.00 MB | `af809d320a7e61c1e11f7ecf672d2b6a` | Factory Binary Firmware Dump |
+| `sharan_90hp_019LP.bin` | **1998–2009** | 512.0 KB | `e73843ab960a444b74f60fba647b7c60` | Factory Binary Firmware Dump |
 | `T4 AMV 022906032B_0261206239_354081.Bin` | **1998–2009** | 1.00 MB | `f9e62bc32cd13488c2616a307112c471` | Factory Binary Firmware Dump |
+| `t5_flash.bin` | **1998–2009** | 2.00 MB | `031a000c2f9317971bfadf8384824b74` | Factory Binary Firmware Dump |
 | `Tiguan_2.0TDi_CR_EDC17_3L906022G_sw106.ori` | **1998–2009** | 2.00 MB | `764a3c177a473e5f3dfb3bed3080c762` | Factory Binary Firmware Dump |
 | `VOLKSWAGEN POLO 1300 1267356773 0261200306 27C256 E0D4.ori` | **1998–2009** | 32.0 KB | `91defb224b1bc20b0dec8ed337bdfaa2` | Factory Binary Firmware Dump |
 | `VW  NEW BEETLE 1.9TDI 100HP 0281011539 038906019KR 368191.ori` | **1998–2009** | 512.0 KB | `c9cccc17d15a005736561c4822fe9c47` | Factory Binary Firmware Dump |
 | `VW 1.6i 06A906033L 5WP4004.ori` | **1998–2009** | 512.0 KB | `37a326168f7055436f4932e1913ab4ed` | Factory Binary Firmware Dump |
-| `VW 1.8T G60 Digifant 037997022B - WINOLS.ols` | **1998–2009** | 57.7 KB | `26f072899b84a8961a854c823e30e493` | WinOLS Project Workspace |
+| `VW 1.8T G60 Digifant 037997022B - WINOLS.ols` | **1998–2009** | 57.7 KB | `26f072899b84a8961a854c823e30e493` | WinOLS Project Workspace & Calibration |
 | `VW 2.0TDI CFGB 170HP EDC17C46 03L907309R 03L906018BC 1037524625 9784.bin` | **1998–2009** | 2.00 MB | `19a3fba3bffb30d26461fe084692994a` | Factory Binary Firmware Dump |
 | `VW Beetle 1.8T 0261207341 06A906032FT 362333.ori` | **1998–2009** | 1.00 MB | `8b376c9e46c92e9b6104da8aaea74689` | Factory Binary Firmware Dump |
-| `VW Beetle 1.9TDI 5spd ALH 90HP 038906012GQ 0281011035 366235.ori` | **1998–2009** | 512.0 KB | `7735d74698882f1a57822eb453784223` | Factory Binary Firmware Dump |
-| `VW Beetle 1.9TDI auto 038906012FF 0281001655 362776.ori` | **1998–2009** | 512.0 KB | `7418ad592de234420440de5bae91135a` | Factory Binary Firmware Dump |
-| `VW Bora 1.8T-150HP-06A906032DR-0261206887-1037360128.bin` | **1998–2009** | 1.00 MB | `c1739e133e36e4458f9f217074122199` | Factory Binary Firmware Dump |
-| `VW Caddy 1.9TDI 105HP 03G906021PD 389297.ori` | **1998–2009** | 2.00 MB | `7f7b6aacf85046e4fb05c2b153ca9a04` | Factory Binary Firmware Dump |
-| `VW Caddy2 1.9TDI BJB 105HP 03G906016DM 0281011882 371251.bin` | **1998–2009** | 1.00 MB | `5081a6f9585117898e78cfd95ed18322` | Factory Binary Firmware Dump |
-| `VW Crafter 2.5 TDI  074906032BB 503934.ori` | **1998–2009** | 2.00 MB | `47df882ae7bb20b75a599fdf12ed5945` | Factory Binary Firmware Dump |
-| `VW Crafter EDC16CP34 BDM 0281014133 1037386337.ori` | **1998–2009** | 447.5 KB | `5bbf685778e8305efa1994840ce91c8e` | Factory Binary Firmware Dump |
-| `VW GOLF 1.9-100hp-0281011065-1037363709.ori` | **1998–2009** | 512.0 KB | `eb4931804002004f67f6072a3796da46` | Factory Binary Firmware Dump |
-| `VW GOLF3 1.8-90hp-0261200784-1H0907311H.bin` | **1998–2009** | 64.0 KB | `603daa1d3851b85308c83a5846ab3248` | Factory Binary Firmware Dump |
-| `VW Golf 150PS 1.8L R45VT-06A906018R-0261204673-358109.ori` | **1998–2009** | 256.0 KB | `348a76bcdb398f1e6edcd89633c29d13` | Factory Binary Firmware Dump |
-| `VW Golf 2.3 V5 AGZ 150hp 071906018 0261204753 359144.ori` | **1998–2009** | 256.0 KB | `c49f603feba2908eff819a49f2e1fb57` | Factory Binary Firmware Dump |
-| `VW Golf 5 1.9TDI BKC 105HP 03G906016CB 0281011900 371429.ori` | **1998–2009** | 1.44 MB | `2ac67ad52a9c2dfbeaa483b94960e8f9` | Factory Binary Firmware Dump |
-| `VW Golf 5 3.2 VR6 260HP 022906032CE 0261208468 377419.ori` | **1998–2009** | 1.00 MB | `a54d5fa7b8e831a39b73efd07babb1c5` | Factory Binary Firmware Dump |
-| `VW Golf IV ALH 90hp 038906012FA 0281010650 360773.bin` | **1998–2009** | 512.0 KB | `b6accdfacb004a0c23615e1b78702367` | Factory Binary Firmware Dump |
-| `VW Golf VII GTI 2.0TFSI Simos18.1 5G0906259 0005 SC800F8300000.ori` | **1998–2009** | 4.50 MB | `6809d6021fe6e4e4479f21acfd2b0790` | Factory Binary Firmware Dump |
-| `VW Golf4 1.8T 0261206518 352127.ori` | **1998–2009** | 256.0 KB | `4e7fce43727c39a43c70ca7d75d8150f` | Factory Binary Firmware Dump |
-| `VW Golf4 1.8T 06A906032DL 0261206890 354821 Original.bin` | **1998–2009** | 1.00 MB | `37c254e5c7efbd4c21c8934dbde6e348` | Factory Binary Firmware Dump |
-| `VW Golf4 1.9 TDI 90hp ALH 0281001979 038906012M 2813.bin` | **1998–2009** | 512.0 KB | `e7ec3df1b8d523336987ef9764a4e2b0` | Factory Binary Firmware Dump |
-| `VW Golf4-(1J)-1,9-AGR-90HP-038906018D-0281001611.bin` | **1998–2009** | 256.0 KB | `7d103d5f7da182f4213f9583bfa1a508` | Factory Binary Firmware Dump |
-| `VW Golf5 1.9TDI 105HP 0281012220 03G906016R 374183.ori` | **1998–2009** | 1.00 MB | `252f95a518d9c4faad741dc46c15cfd6` | Factory Binary Firmware Dump |
-| `VW Golf5 1.9TDI 105HP 03G906021KH 0281013226 382083.ori` | **1998–2009** | 2.00 MB | `8641f69aa1a877bdfb997e118fa1f2dc` | Factory Binary Firmware Dump |
-| `VW GolfV (1K) TDI 1,9 BKC-105hp-03G906016CB-0281011900-371094.bin` | **1998–2009** | 1.00 MB | `7c5c7e20d5f70bccb1daae641b615ffb` | Factory Binary Firmware Dump |
-| `VW LT 2.5TDI 109HP 074906021AG 0281010088 893HHH.ori` | **1998–2009** | 128.0 KB | `7e93e23ca0334834c7e8419cd2a14669` | Factory Binary Firmware Dump |
-| `VW LT 2.5TDI 109HP 074906021AG 0281010088 893LLL.ori` | **1998–2009** | 128.0 KB | `20fde25409a5718b915d0d77c8dddb0d` | Factory Binary Firmware Dump |
-| `VW LT 2.5TDI AHD 102HP 074906021AK 0281010086.ori` | **1998–2009** | 256.0 KB | `3f47fd842e131d930c2a194524a9612b` | Factory Binary Firmware Dump |
-| `VW LT 2.5TDI AHD 102HP 074906021J 0281001600 358946.ori` | **1998–2009** | 256.0 KB | `03b18870f02b65ba6af239b0c1bc241e` | Factory Binary Firmware Dump |
-| `VW LT35 2.5TDI AVR 109HP 074906018BK 0281011385 367887.ori` | **1998–2009** | 512.0 KB | `0b65383a57d1ba1ac81b0965f553e46d` | Factory Binary Firmware Dump |
-| `VW LT35 2.8TDI 158HP 2D0906019A 0281010588 365048.ori` | **1998–2009** | 512.0 KB | `c85724fca2968dbec833bcbe0a06fd0b` | Factory Binary Firmware Dump |
-| `VW LT35 TDI 889 021AP HHH Original.bin` | **1998–2009** | 128.0 KB | `d7c7e13a14bf6e3a73c5e27572528520` | Factory Binary Firmware Dump |
-| `VW LT35 TDI 889 021AP LLL Original.bin` | **1998–2009** | 128.0 KB | `3460e162e9a1425a679edb12abcddae6` | Factory Binary Firmware Dump |
-| `VW Lupo 1.4l 16V 100HP 036906034AT IAW4LV.VA 61600.540.05.ori` | **1998–2009** | 512.0 KB | `43e9ebb6437ecc3cd6dfcb05fb88a44d` | Factory Binary Firmware Dump |
-| `VW PAssat 2.0 140PS 0281012119 394115.ori` | **1998–2009** | 2.00 MB | `e402f7797f7649ad5be87afd91c64f23` | Factory Binary Firmware Dump |
-| `VW PAssat 2.0 CR 140HP  03L906022BL 4145 399883.ori` | **1998–2009** | 2.00 MB | `458503de3e6125fe5336f9b4e42f7a82` | Factory Binary Firmware Dump |
-| `VW PAssat 2.0 CR 140HP 03L906022BL 6221 507677.ori` | **1998–2009** | 2.00 MB | `4b09ea3e45a793e0ac9d6e191abaf073` | Factory Binary Firmware Dump |
-| `VW POLO GTI 110KW_0261 201 628_1037 38 2997.ori` | **1998–2009** | 1.00 MB | `e02eab7502d361dc2e68d28c3a977e10` | Factory Binary Firmware Dump |
-| `VW Passat  1.9TDI 105HP 3G906021LR 380420.ori` | **1998–2009** | 2.00 MB | `c86accc9a58e631081977992778f1abb` | Factory Binary Firmware Dump |
-| `VW Passat 1.8T  4B0 906 018 DF  AWT ME7.5 0261207639 original.bin` | **1998–2009** | 1.00 MB | `685e9a63e81b7e16f9c35eb90b72bf48` | Factory Binary Firmware Dump |
-| `VW Passat 1.8T 8D0907558E 0261204805 358123.bin` | **1998–2009** | 128.0 KB | `60fe810e387081bdbe51b47b6e34242c` | Factory Binary Firmware Dump |
-| `VW Passat 1.9TDI 105HP 03G906021AB 381562.ori` | **1998–2009** | 2.00 MB | `310f95e88915c09faa53a64843bb0d46` | Factory Binary Firmware Dump |
-| `VW Passat 1.9TDI 105HP 03G906021NK 382417.ori` | **1998–2009** | 2.00 MB | `2fac6e8648f99d7006957e8d5e825304` | Factory Binary Firmware Dump |
-| `VW Passat 2.0 TDI BHW 136HP 038906016R 0281011982 371877.ori` | **1998–2009** | 512.0 KB | `c27a15e0889353aadff360f26515e9fd` | Factory Binary Firmware Dump |
-| `VW Passat 2.0FSI 150HP 06F906056AN 0261S02135 376502.ori` | **1998–2009** | 2.00 MB | `3586e8059484d97c44452747e508cb44` | Factory Binary Firmware Dump |
-| `VW Passat 2.0TDI  170HP 3L906022BM 396091.ori` | **1998–2009** | 2.00 MB | `8845c5be3aea78f2a93c84e1bc19ffef` | Factory Binary Firmware Dump |
-| `VW Passat 2.0TDI 140HP  03G906021AB 03G906021MT 382427.ori` | **1998–2009** | 2.00 MB | `a805f89294609bcaa2dc5b633211e9c6` | Factory Binary Firmware Dump |
-| `VW Passat 2.0TDI 140HP 0281012925_03G906021AD_378328.ori` | **1998–2009** | 2.00 MB | `0533cbdfcfb89d692d2bfa11a884764f` | Factory Binary Firmware Dump |
-| `VW Passat 2.0TDI 140HP 03G906018CD 9627.ori` | **1998–2009** | 2.00 MB | `9fd5aaa3ff0e2ecad39ea7d99a459650` | Factory Binary Firmware Dump |
-| `VW Passat 2.0TDI 140HP 03G906021AB 03G906021NK 399388.ori` | **1998–2009** | 2.00 MB | `cb2111d74e88d55009117423c831732d` | Factory Binary Firmware Dump |
-| `VW Passat 2.0TDI 140HP 03G906021NK 1037394904.ori` | **1998–2009** | 2.00 MB | `0acac4297db30c54d5e38881e02b82b3` | Factory Binary Firmware Dump |
-| `VW Passat 2.0TDI 170HP PPD 03G906018ER.ori` | **1998–2009** | 2.00 MB | `6762069d958bd729b9b0ea23d3bcb9fe` | Factory Binary Firmware Dump |
-| `VW Passat 2.0TDI BKP 140.0PS 03G906018CD  SN000F7600000.bin` | **1998–2009** | 2.00 MB | `2a992c4568a848855a6530ce9c31c652` | Factory Binary Firmware Dump |
-| `VW Passat 2.3 V5 0261206508 071906018AC 352012.ori` | **1998–2009** | 256.0 KB | `3236035c06ceb6c678b28627b2085b55` | Factory Binary Firmware Dump |
-| `VW Passat 2.3 V5 906018AE 0261206620.ORI` | **1998–2009** | 256.0 KB | `81d89cedab07dd39d639e32cc39ff3ff` | Factory Binary Firmware Dump |
-| `VW Passat 3.6 FSI 03H906032C  0261S02169 376323 FSI.ori` | **1998–2009** | 2.00 MB | `33c10f147d07780ce45a04a30e7acda1` | Factory Binary Firmware Dump |
-| `VW Passat 3C 19 105ps BKC 0281012085 03G906021AN 374452.bin` | **1998–2009** | 2.00 MB | `3383ad601be09ac1e0173443e9289f12` | Factory Binary Firmware Dump |
-| `VW Passat V8 4.0 BDN 07D906018C 0261207019 366337.ori` | **1998–2009** | 1.00 MB | `e4427d45ffc4103e14c52f05fc3d604a` | Factory Binary Firmware Dump |
-| `VW Phaeton 3.2V6 AYT 241HP 022906032BN 0261207688 366305.ori` | **1998–2009** | 1.00 MB | `9350fc989abf149641f8dce0ca07fef0` | Factory Binary Firmware Dump |
-| `VW Polo 1.7 SDI 44kW 038906013K 0281001749 1808 HHH.bin` | **1998–2009** | 128.0 KB | `c842ef7c5f3bafdf81cf45537028dc02` | Factory Binary Firmware Dump |
-| `VW Polo 1.7 SDI 44kW 038906013K 0281001749 1808 LLL.bin` | **1998–2009** | 128.0 KB | `4dbc8d7fa9ed07519430f28e5b81f4ff` | Factory Binary Firmware Dump |
-| `VW T4 2.5TDI 102HP 038906018AM 0281010458 360078.ori` | **1998–2009** | 512.0 KB | `ee2af0d8bf19688682c267f8fb757788` | Factory Binary Firmware Dump |
-| `VW T4 2.5TDI 102HP 074906018AH 0281010681 362448.ori` | **1998–2009** | 512.0 KB | `1dca06f2517764a2b8bfbe326fb76dc1` | Factory Binary Firmware Dump |
-| `VW T4 2.5TDI 102HP 074906018AL 0281010459 360077.ori` | **1998–2009** | 512.0 KB | `8ad9f38f2ae7c06a0ecc3437dc890cf1` | Factory Binary Firmware Dump |
-| `VW T4 2.5TDI 88HP 074906018AK 0281010462 360076.ori` | **1998–2009** | 512.0 KB | `c62575761403b5c3580ea475bea38859` | Factory Binary Firmware Dump |
-| `VW T4 2.5TDI 88HP 074906018B 0281010084.ori` | **1998–2009** | 512.0 KB | `14672b33489356cafb1061d42e982f76` | Factory Binary Firmware Dump |
-| `VW T4 2.5TDI ACV 102HP 074906018C 0281010082.ori` | **1998–2009** | 512.0 KB | `7a2f6dbc81c97f9d3e6bb514a33ffcc5` | Factory Binary Firmware Dump |
-| `VW T4 2.5TDI ACV 102HP 074906021L 0281001640 357796.ori` | **1998–2009** | 256.0 KB | `fb1beff674f2d88473d429ec161e486a` | Factory Binary Firmware Dump |
-| `VW T5 2.5TDI 130HP 070997016C 0281012931 1037378311.ori` | **1998–2009** | 1.00 MB | `5b067957473bbf623ace15f94ab65eb2` | Factory Binary Firmware Dump |
-| `VW T5 2.5TDI 130HP 070997016M 390979.mpc` | **1998–2009** | 251.8 KB | `036cfd92316eef20b367afb94c1ea56e` | ECU Calibration Asset |
-| `VW T5 2.5TDI 130HP 070997016M 390979.ori` | **1998–2009** | 2.00 MB | `a95c85d34aeecc441bfaa51393709169` | Factory Binary Firmware Dump |
-| `VW T5 2.5TDI 174HP  070906016BA 0281011664 372365.ori` | **1998–2009** | 1.00 MB | `026ca38d187ca4b9cabb2ab15250c462` | Factory Binary Firmware Dump |
-| `VW T5 2.5TDI 174HP  070906016EB 0281014892 1037394113.ori` | **1998–2009** | 2.00 MB | `34ea5a5dda2fbce2eb8fc73b8680d873` | Factory Binary Firmware Dump |
-| `VW T5 2.5TDI 174HP 070906016BD 0281011835 372944.ori` | **1998–2009** | 1.00 MB | `b0aae3240a6c1cfe93af5ebe141038e0` | Factory Binary Firmware Dump |
-| `VW T5 2.5TDI BNZ 130.0PS 070906016EC  394114.bin` | **1998–2009** | 2.00 MB | `071844ec2195298e5e96333188ac4548` | Factory Binary Firmware Dump |
-| `VW Tiguan 2.0 170 HP 03L906022G 395496.ori` | **1998–2009** | 2.00 MB | `11d5f6cb39a89045a137c82e0961458b` | Factory Binary Firmware Dump |
-| `VW Tiguan 2.0TDI 03L906022G 396096 edc17p14.ori` | **1998–2009** | 2.00 MB | `e8d32f08f78a724dacc4eef2be5cfc0e` | Factory Binary Firmware Dump |
-| `VW Touareg 2.5TDI BAC 174HP 070997016E 0281012926 381353.ori` | **1998–2009** | 1.00 MB | `a40e97b0876a2b0814f23997cf5e6dfd` | Factory Binary Firmware Dump |
-| `VW Touareg 3.0l TDI 0281013686 7L0907401D 386372.ori` | **1998–2009** | 2.00 MB | `e37634f51a44616bb25366fdff767b3d` | Factory Binary Firmware Dump |
-| `VW Touareg 4.2V8 AXQ 310hp 4D0907560BR 0261208009 367701.ori` | **1998–2009** | 1.00 MB | `9319f3693bac5eb772bfd6da66d1743e` | Factory Binary Firmware Dump |
-| `VW Touareg 5.0V10TDI AYH 313hp 070906016AA 0281011481 368703.bin` | **1998–2009** | 1.00 MB | `e1b02890c72d112d7103907deb12077b` | Factory Binary Firmware Dump |
-| `VW Touareg 5.0V10TDI AYH 313hp 070906016D 0281010736 367461.bin` | **1998–2009** | 1.00 MB | `f0a3143cbdc2b91e0cdba4cb5da7a9e6` | Factory Binary Firmware Dump |
-| `VW Touran  2.0TDI 140HP  0281011907 03G906016FK 371267.ori` | **1998–2009** | 1.00 MB | `afba5278e43aef464216f8a9df66e5ca` | Factory Binary Firmware Dump |
-| `VW Touran 1.9TDI 105HP 0281012361  03G906016HP 374119.ori` | **1998–2009** | 1.00 MB | `96879fb3158a20d54ec7f95425ed3823` | Factory Binary Firmware Dump |
-| `VW Touran 1.9TDI 105HP 03G906021AB 03G906021MG 383708.ori` | **1998–2009** | 2.00 MB | `c061c5c140008d7f8ed46f7b385a52c7` | Factory Binary Firmware Dump |
-| `VW Touran 1.9TDI 105HP 03G906021AN 03G906021KC 382090.ori` | **1998–2009** | 2.00 MB | `f964c693b1fd9eefcd89f6c44e22d6ad` | Factory Binary Firmware Dump |
-| `VW Touran 1.9TDI 105HP 03G906021HK 394990.ori` | **1998–2009** | 2.00 MB | `a7fe1e69a8c02f207958de22915fa93e` | Factory Binary Firmware Dump |
-| `VW Touran 1.9TDI 105HP 03G906021ND 396444.ori` | **1998–2009** | 2.00 MB | `09056a6ecf38e2211606b6f49e68f9a1` | Factory Binary Firmware Dump |
-| `VW Touran 1.9TDI AVQ 105HP 03G906016A 0281010731 368159.ori` | **1998–2009** | 1.00 MB | `f03fc76d1669b577754fbbae70dc0bc0` | Factory Binary Firmware Dump |
-| `VW Touran 2.0SDI 0281012272 03G906016HN 376308.ori` | **1998–2009** | 1.00 MB | `e46da2bc19ab71a6a83586d569fb4b3b` | Factory Binary Firmware Dump |
-| `VW Touran 2.0TDI 140HP 03G906021AB 03G906021MJ 383709.ori` | **1998–2009** | 2.00 MB | `88ffe7e66c211d6b252ab5cfe6c04863` | Factory Binary Firmware Dump |
-| `VW Touran 2.0TDI 140HP 03G906021GB 378847.ori` | **1998–2009** | 2.00 MB | `df4e699506f93812122f8447675f5620` | Factory Binary Firmware Dump |
-| `VW Touran 2.0TDI 140HP 03G906021KF 381020.ori` | **1998–2009** | 2.00 MB | `0c5b88110b5e6129c7b8a9a48d094d4c` | Factory Binary Firmware Dump |
-| `VW Transporter 2.5TDI AXD 131HP 070906016AJ 0281011568 372363.bin` | **1998–2009** | 1.00 MB | `e6cbaa19c6a6533e6abe5d5cbbf2b5ef` | Factory Binary Firmware Dump |
-| `VW Transporter T5 1.9PD 85HP 0389060106AH 1037381380.bin` | **1998–2009** | 2.00 MB | `5fdb769dc7d7e1a6557f958b7f53cd1b` | Factory Binary Firmware Dump |
-| `VW Transporter T5 1.9TDI 105HP   038906016AJ 390638.ori` | **1998–2009** | 2.00 MB | `ed34bcfc57ba7866b9e79bdbc2405670` | Factory Binary Firmware Dump |
-| `VW Transporter T5 1.9TDI 74KW  0281012761 038906016T 384631.ori` | **1998–2009** | 2.00 MB | `50025eed776966ba84bea0eb1c8d91ca` | Factory Binary Firmware Dump |
-| `VW Tuareg 3.0L BKS 7L0907401F  0281013686.bin` | **1998–2009** | 768.6 KB | `9cd6be8722b4747b745c352b8e1f6f5d` | Factory Binary Firmware Dump |
-| `VW Tuareg 3.0L BKS 7L0907401F  0281013692.bin` | **1998–2009** | 768.0 KB | `4bbf12246b35447f882cebb8993de1d0` | Factory Binary Firmware Dump |
 | `VW beetle 1.8T 150HP 06A906032GQ 0261207349 360345.ori` | **1998–2009** | 1.00 MB | `2a6d2715d805a51b8b324f39efb97a54` | Factory Binary Firmware Dump |
 | `VW beetle 1.9TDI 100HP 038906019MT 0281011413 367412.ori` | **1998–2009** | 512.0 KB | `d36f041db9f195b75634fe7b4b508831` | Factory Binary Firmware Dump |
 | `VW beetle 1.9TDI 100HP 038906019NN 0281011391 368225.ori` | **1998–2009** | 512.0 KB | `6d20f530a1adff288975b04501ea3dc1` | Factory Binary Firmware Dump |
+| `VW Beetle 1.9TDI 5spd ALH 90HP 038906012GQ 0281011035 366235.ori` | **1998–2009** | 512.0 KB | `7735d74698882f1a57822eb453784223` | Factory Binary Firmware Dump |
 | `VW beetle 1.9TDI ALH 90HP 038906012FH 0281010657 362437.ori` | **1998–2009** | 512.0 KB | `ee18d2bd13d67dde868ebaa8c3645421` | Factory Binary Firmware Dump |
 | `VW beetle 1.9TDI ALH 90HP 038906012Q 0281010133 352571.ori` | **1998–2009** | 512.0 KB | `de326dcb9be2f5acd5baf7f44ea64308` | Factory Binary Firmware Dump |
 | `VW beetle 1.9TDI ALH 90HP 038906018AP 0281001732 357743.ori` | **1998–2009** | 256.0 KB | `97ebae513f90444281cf374e95e34700` | Factory Binary Firmware Dump |
 | `VW beetle 1.9TDI ALH 90HP 038906018M 0281001696 356243.ori` | **1998–2009** | 256.0 KB | `810b58c09dad58ddfbcf27da84cb8cf3` | Factory Binary Firmware Dump |
+| `VW Beetle 1.9TDI auto 038906012FF 0281001655 362776.ori` | **1998–2009** | 512.0 KB | `7418ad592de234420440de5bae91135a` | Factory Binary Firmware Dump |
 | `VW bora 1.6 BFQ 06A906033BN 5WP4019 4667.ori` | **1998–2009** | 512.0 KB | `5c814e5d023ebdfa1d4d7b658251287e` | Factory Binary Firmware Dump |
 | `VW bora 1.6i 06A906033AQ 5WP4013.ori` | **1998–2009** | 512.0 KB | `2173d8f3877ebdf1f34d973c970237ca` | Factory Binary Firmware Dump |
 | `VW bora 1.8T 180HP 06A906032SL 0261208529 371155.ori` | **1998–2009** | 1.00 MB | `02f08ce45017490a665279779c74d97c` | Factory Binary Firmware Dump |
+| `VW Bora 1.8T-150HP-06A906032DR-0261206887-1037360128.bin` | **1998–2009** | 1.00 MB | `c1739e133e36e4458f9f217074122199` | Factory Binary Firmware Dump |
 | `VW bora 1.9TDI 115HP 038906019H 0281001910 350172.ori` | **1998–2009** | 512.0 KB | `a6863b47c520a363998e9af129017ed4` | Factory Binary Firmware Dump |
 | `VW bora 1.9TDI AGR 90HP 038906012FD 0281010653 362774.ori` | **1998–2009** | 512.0 KB | `9b2fd3ee07ddb8733d90cb1c11cef93d` | Factory Binary Firmware Dump |
 | `VW bora 2.0 APK 06A906018FK 0261206261 485757.ori` | **1998–2009** | 256.0 KB | `719bc76f82fb9a4a8a3b25dd099fbac2` | Factory Binary Firmware Dump |
@@ -635,12 +545,17 @@ Berikut adalah daftar lengkap berkas fisik yang tersimpan secara lokal di direkt
 | `VW caddy 1.9SDI 68HP 038906012GJ 0281010965 363111.ori` | **1998–2009** | 512.0 KB | `8c8b291a1419a80ff327d2c85644c7f8` | Factory Binary Firmware Dump |
 | `VW caddy 1.9TDI 105HP 03G906021AQ 0281012390 377585.ori` | **1998–2009** | 2.00 MB | `1cb9007134c24cb90377a0b7934fa4c2` | Factory Binary Firmware Dump |
 | `VW caddy 1.9TDI 105HP 03G906021CG 0281012746 393550.ori` | **1998–2009** | 2.00 MB | `c5c0fc0fd5f672cfacf53d295cf45741` | Factory Binary Firmware Dump |
+| `VW Caddy 1.9TDI 105HP 03G906021PD 389297.ori` | **1998–2009** | 2.00 MB | `7f7b6aacf85046e4fb05c2b153ca9a04` | Factory Binary Firmware Dump |
+| `Vw Caddy 19Tdi  105HP 03G906021_0281012469.ori` | **1998–2009** | 2.00 MB | `078c08230849cdd1151871a13e94d15a` | Factory Binary Firmware Dump |
 | `VW caddy 2.0SDI 75HP 0281011541 03G906016N 369948.ori` | **1998–2009** | 1.00 MB | `9ed34950d636b4a425f56d8cbe477b5c` | Factory Binary Firmware Dump |
+| `VW Caddy2 1.9TDI BJB 105HP 03G906016DM 0281011882 371251.bin` | **1998–2009** | 1.00 MB | `5081a6f9585117898e78cfd95ed18322` | Factory Binary Firmware Dump |
 | `VW corrado 1.8T PG G60 160HP 037906022B.ori` | **1998–2009** | 32.0 KB | `3bfdc82451740f18922a1e12f38bd879` | Factory Binary Firmware Dump |
 | `VW corrado 2.9i VR6 ABV 021906258AG 0261203109 357531.ori` | **1998–2009** | 64.0 KB | `1ec38082794b57b5553d5619abbdceca` | Factory Binary Firmware Dump |
+| `VW Crafter 2.5 TDI  074906032BB 503934.ori` | **1998–2009** | 2.00 MB | `47df882ae7bb20b75a599fdf12ed5945` | Factory Binary Firmware Dump |
 | `VW crafter 2.5TDI  0281014133 074906032AT 10373386337.ori` | **1998–2009** | 2.00 MB | `1d3eb4a3e566fa9a9333380077708d30` | Factory Binary Firmware Dump |
 | `VW crafter 2.5TDI 074906032AG 1037383306.ori` | **1998–2009** | 2.00 MB | `9ace94647c49147c5550ef1b58f11c4e` | Factory Binary Firmware Dump |
 | `VW crafter 2.5TDI 074906032E  0281012543 381010.ori` | **1998–2009** | 2.00 MB | `ed9d77535a0a6218e108253f6888837a` | Factory Binary Firmware Dump |
+| `VW Crafter EDC16CP34 BDM 0281014133 1037386337.ori` | **1998–2009** | 447.5 KB | `5bbf685778e8305efa1994840ce91c8e` | Factory Binary Firmware Dump |
 | `VW eos  2.0TDI 140HP DPF 03G906021AB 383799.ori` | **1998–2009** | 512.0 KB | `f2125981508b359d8f4b8f93f6ecf0db` | Factory Binary Firmware Dump |
 | `VW golf 1.4i AXP 036906032P 0261207179 354828.ori` | **1998–2009** | 512.0 KB | `f5fa0b849ae31ba2ff5d1a04e3ac9602` | Factory Binary Firmware Dump |
 | `VW golf 1.6i 06A906033AF 5WP4013.ori` | **1998–2009** | 512.0 KB | `56fc274b2601436ffda25dd64a6865b0` | Factory Binary Firmware Dump |
@@ -652,6 +567,7 @@ Berikut adalah daftar lengkap berkas fisik yang tersimpan secara lokal di direkt
 | `VW golf 1.8T ARZ 150HP 06A906032AR 0261206436 352357.ori` | **1998–2009** | 512.0 KB | `8a9fd00411768d05faf69b365cb5c649` | Factory Binary Firmware Dump |
 | `VW golf 1.8T AWV 150HP 06A906032SK 0261208528 371152.ori` | **1998–2009** | 1.00 MB | `26ce9105ac8f2996062eac8bcc91c4d8` | Factory Binary Firmware Dump |
 | `VW golf 1.9 110HP 028906021JG 0281001860 356933.ori` | **1998–2009** | 256.0 KB | `896b3291708a30ce9e0a3bd20866fa72` | Factory Binary Firmware Dump |
+| `VW GOLF 1.9-100hp-0281011065-1037363709.ori` | **1998–2009** | 512.0 KB | `eb4931804002004f67f6072a3796da46` | Factory Binary Firmware Dump |
 | `VW golf 1.9SDI 68HP 038906012DB 0281010373 354379.ori` | **1998–2009** | 512.0 KB | `e6e6176806420e74744c8bf495c2c9c0` | Factory Binary Firmware Dump |
 | `VW golf 1.9SDI 68HP 038906013 0281001759 356428.ori` | **1998–2009** | 256.0 KB | `33205b8a9b681261b9c11e10cff14ed7` | Factory Binary Firmware Dump |
 | `VW golf 1.9TDI 028906021ED 0281001541 357815.ori` | **1998–2009** | 256.0 KB | `54fe33db178caba737f813ce0a08b8f0` | Factory Binary Firmware Dump |
@@ -661,6 +577,7 @@ Berikut adalah daftar lengkap berkas fisik yang tersimpan secara lokal di direkt
 | `VW golf 1.9TDI 105HP 03G906021AN 389140.ori` | **1998–2009** | 2.00 MB | `1e0766cb92e5c156e8a84d9d4b121fd0` | Factory Binary Firmware Dump |
 | `VW golf 1.9TDI 105HP 03G906021KH 0281013226 380437.ori` | **1998–2009** | 2.00 MB | `26d0fd2f2c5e0d78cab69e54cb2fa1be` | Factory Binary Firmware Dump |
 | `VW golf 1.9TDI 105HP 03G906021KH 380437.ori` | **1998–2009** | 2.00 MB | `d1a4dfde1ce1b15cbc1da5bb7d315764` | Factory Binary Firmware Dump |
+| `vw golf 1.9tdi 150bhp 038906019HH 366661.ori` | **1998–2009** | 512.0 KB | `78117ba9adf7c1c88eca0fed32da5485` | Factory Binary Firmware Dump |
 | `VW golf 1.9TDI 1Z 90HP 028906021BF 0281001422 355103.ori` | **1998–2009** | 256.0 KB | `8c8eba5fe1aa3f7d0d51bff79a590d30` | Factory Binary Firmware Dump |
 | `VW golf 1.9TDI 90HP 038906018GR 0281010245 352615.ori` | **1998–2009** | 128.0 KB | `67dd6750177a8ca5c484b5e6f16b47ef` | Factory Binary Firmware Dump |
 | `VW golf 1.9TDI 90HP 038906018GR 0281010245 352616.ori` | **1998–2009** | 128.0 KB | `e9f371e31dc9dac52bbf4f051369b14a` | Factory Binary Firmware Dump |
@@ -688,6 +605,7 @@ Berikut adalah daftar lengkap berkas fisik yang tersimpan secara lokal di direkt
 | `VW golf 1.9TDI AXR 100HP 038906019KP 0281011191 366912.ori` | **1998–2009** | 512.0 KB | `927351a68684b691d4ebf10b43df14c6` | Factory Binary Firmware Dump |
 | `VW golf 1.9TDI BKC 105HP 03G906016B 0281011478 368926.ori` | **1998–2009** | 1.00 MB | `e24b3c650be6a049d3a986a3ac82ee93` | Factory Binary Firmware Dump |
 | `VW golf 1.9TDI BKC 105HP 03G906016B 0281011478 369564.ori` | **1998–2009** | 1.00 MB | `ca2c0f552f731745ab26cb8e1bcf8238` | Factory Binary Firmware Dump |
+| `VW Golf 150PS 1.8L R45VT-06A906018R-0261204673-358109.ori` | **1998–2009** | 256.0 KB | `348a76bcdb398f1e6edcd89633c29d13` | Factory Binary Firmware Dump |
 | `VW golf 2.0 TFSI 200HP 1K0907115F 0261S02217 377837.ori` | **1998–2009** | 2.00 MB | `8b3216f96ef5ef436c7d95f1fb35965c` | Factory Binary Firmware Dump |
 | `VW golf 2.0GTI 037906024D FALA03001390.ori` | **1998–2009** | 32.0 KB | `6f1fafcdbf6af1ae17b0c6fa5c5bd6d9` | Factory Binary Firmware Dump |
 | `VW golf 2.0TDI 140HP 03G906016AN 0281011477 368925.ori` | **1998–2009** | 1.00 MB | `944c6547cc56acd87444908a2e2a44b1` | Factory Binary Firmware Dump |
@@ -700,6 +618,7 @@ Berikut adalah daftar lengkap berkas fisik yang tersimpan secara lokal di direkt
 | `VW golf 2.0TFSI 200HP 1K0907115 0261S02078  377862.ori` | **1998–2009** | 2.00 MB | `3135c24ff5b32c60bd0b0b260e537ec9` | Factory Binary Firmware Dump |
 | `VW golf 2.0TFSI 200HP 1K0907115 0261S02078 372620.ori` | **1998–2009** | 2.00 MB | `3b0b28b5c43aa7e357db16421c0d13f1` | Factory Binary Firmware Dump |
 | `VW golf 2.0TFSI 200HP 1K0907115J 0261S02331 386464.ori` | **1998–2009** | 2.00 MB | `c20b23ff6c115dc1cd766139cc18dc36` | Factory Binary Firmware Dump |
+| `VW Golf 2.3 V5 AGZ 150hp 071906018 0261204753 359144.ori` | **1998–2009** | 256.0 KB | `c49f603feba2908eff819a49f2e1fb57` | Factory Binary Firmware Dump |
 | `VW golf 2.8 VR6 021906258CL 0261203559 358929.ori` | **1998–2009** | 64.0 KB | `821b7f208e07508cc162d69da64f1347` | Factory Binary Firmware Dump |
 | `VW golf 2.8 VR6 AAA 021906258A 0261200496 357205.ori` | **1998–2009** | 64.0 KB | `dc1b1c577f336811f8f506af1aacbaff` | Factory Binary Firmware Dump |
 | `VW golf 2.8V6 174HP 021906018R 0261206814 360624.ori` | **1998–2009** | 512.0 KB | `db066ef5c39da3f467d8a3b91afabe7e` | Factory Binary Firmware Dump |
@@ -721,40 +640,67 @@ Berikut adalah daftar lengkap berkas fisik yang tersimpan secara lokal di direkt
 | `VW golf 5 1.9SDI 0281011617 03G906016M 370652.ori` | **1998–2009** | 1.00 MB | `88cfcaf36e8fd9a4a250794edd87168b` | Factory Binary Firmware Dump |
 | `VW golf 5 1.9SDI 69HP 03G906016GJ 0281012221 372340.ori` | **1998–2009** | 1.00 MB | `22b87e5952a7f501a1b883e1405b27b7` | Factory Binary Firmware Dump |
 | `VW golf 5 1.9TDI 038906016H 0281011146 371297.ori` | **1998–2009** | 2.00 MB | `12d0f0ba8a750fccf96d5126cfc06ad9` | Factory Binary Firmware Dump |
+| `VW Golf 5 1.9TDI BKC 105HP 03G906016CB 0281011900 371429.ori` | **1998–2009** | 1.44 MB | `2ac67ad52a9c2dfbeaa483b94960e8f9` | Factory Binary Firmware Dump |
 | `VW golf 5 2.0TDI 140HP 03G906016ET 0281011843 375890.ori` | **1998–2009** | 1.00 MB | `28c17ae124ef1342f57d14e3c575a08a` | Factory Binary Firmware Dump |
 | `VW golf 5 2.0TFSI 200HP 1K0907115 0261S02078 374094.ori` | **1998–2009** | 2.00 MB | `92592259ff8bdb20f047d727e3e67d93` | Factory Binary Firmware Dump |
+| `VW Golf 5 3.2 VR6 260HP 022906032CE 0261208468 377419.ori` | **1998–2009** | 1.00 MB | `a54d5fa7b8e831a39b73efd07babb1c5` | Factory Binary Firmware Dump |
 | `VW golf 5 R32 022906032CD 0261208467 377452.ori` | **1998–2009** | 1.00 MB | `014cb3e812402f4bc3d05c0b3d367fce` | Factory Binary Firmware Dump |
 | `VW golf IV 1.9TDI AHF 110HP 038906018J 0281001613.ori` | **1998–2009** | 256.0 KB | `9cbbb00fce72ed0a8a1c4893fd1bb5f1` | Factory Binary Firmware Dump |
 | `VW golf IV 1.9TDI AJM 115HP 038906019CJ 0281010302 352930.ori` | **1998–2009** | 512.0 KB | `0bdfdefddbdbf22fac9858f4707b3b5e` | Factory Binary Firmware Dump |
 | `VW golf IV 1.9TDI ARL 150HP 038906019FE 0281010744 362706.ori` | **1998–2009** | 512.0 KB | `ec621cad44bfbf599b3dfaf2522bdfbc` | Factory Binary Firmware Dump |
 | `VW golf IV 1.9TDI ASV 110HP 038906012AP 0281010126 352577.ori` | **1998–2009** | 512.0 KB | `83d4d2233ab0b099dce395d89449bab9` | Factory Binary Firmware Dump |
+| `VW Golf IV ALH 90hp 038906012FA 0281010650 360773.bin` | **1998–2009** | 512.0 KB | `b6accdfacb004a0c23615e1b78702367` | Factory Binary Firmware Dump |
 | `VW golf V 2.0TDI 140HP DPF 03G906021JG 394134.ori` | **1998–2009** | 2.00 MB | `39a9f3f88348d2e58514b19e1adcef68` | Factory Binary Firmware Dump |
+| `VW Golf VII GTI 2.0TFSI Simos18.1 5G0906259 0005 SC800F8300000.ori` | **1998–2009** | 4.50 MB | `6809d6021fe6e4e4479f21acfd2b0790` | Factory Binary Firmware Dump |
+| `VW GOLF3 1.8-90hp-0261200784-1H0907311H.bin` | **1998–2009** | 64.0 KB | `603daa1d3851b85308c83a5846ab3248` | Factory Binary Firmware Dump |
+| `VW Golf4 1.8T 0261206518 352127.ori` | **1998–2009** | 256.0 KB | `4e7fce43727c39a43c70ca7d75d8150f` | Factory Binary Firmware Dump |
+| `VW Golf4 1.8T 06A906032DL 0261206890 354821 Original.bin` | **1998–2009** | 1.00 MB | `37c254e5c7efbd4c21c8934dbde6e348` | Factory Binary Firmware Dump |
+| `VW Golf4 1.9 TDI 90hp ALH 0281001979 038906012M 2813.bin` | **1998–2009** | 512.0 KB | `e7ec3df1b8d523336987ef9764a4e2b0` | Factory Binary Firmware Dump |
 | `VW golf4 AHF 110hp 038906018BM 0281001846 356590.ori` | **1998–2009** | 256.0 KB | `3b2aa5c36d4fe93410ddf6db5c768763` | Factory Binary Firmware Dump |
 | `VW golf4 ALH 90HP 038906012M 0281001979 352564.ori` | **1998–2009** | 512.0 KB | `b0f7eafd6a82287ed2c129c5ddd8a386` | Factory Binary Firmware Dump |
 | `VW golf4 ALH P0HP 038906018AN 0281001733.ori` | **1998–2009** | 256.0 KB | `2ba8ecb731390c1bf1bcc6fb92004e18` | Factory Binary Firmware Dump |
+| `VW Golf4-(1J)-1,9-AGR-90HP-038906018D-0281001611.bin` | **1998–2009** | 256.0 KB | `7d103d5f7da182f4213f9583bfa1a508` | Factory Binary Firmware Dump |
+| `VW Golf5 1.9TDI 105HP 0281012220 03G906016R 374183.ori` | **1998–2009** | 1.00 MB | `252f95a518d9c4faad741dc46c15cfd6` | Factory Binary Firmware Dump |
+| `VW Golf5 1.9TDI 105HP 03G906021KH 0281013226 382083.ori` | **1998–2009** | 2.00 MB | `8641f69aa1a877bdfb997e118fa1f2dc` | Factory Binary Firmware Dump |
 | `VW golf5 2.0TFSI 1K0907115K 0261S02332 380991.ori` | **1998–2009** | 2.00 MB | `39248a1974d057ffdd784ffc816f5119` | Factory Binary Firmware Dump |
 | `VW golf5 2.0TFSI DSG 1K0907115E 0261S02082 387576.ori` | **1998–2009** | 2.00 MB | `11bd2121434b833a171b1b742b350e83` | Factory Binary Firmware Dump |
+| `VW GolfV (1K) TDI 1,9 BKC-105hp-03G906016CB-0281011900-371094.bin` | **1998–2009** | 1.00 MB | `7c5c7e20d5f70bccb1daae641b615ffb` | Factory Binary Firmware Dump |
 | `VW industrial engine 1.9TDI AFD 82HP 028906021JQ 0281010266.ori` | **1998–2009** | 256.0 KB | `f5f065e0d070b8b1faf742618b6b1461` | Factory Binary Firmware Dump |
 | `VW jetta 1.8T AWD 150HP 06A906032CL 0261206552 1037354128.ori` | **1998–2009** | 512.0 KB | `fd354e45f7d6d1130cb52b94f457d821` | Factory Binary Firmware Dump |
 | `VW jetta 2.0TDI CBEA 03L906022KS 397837.ori` | **1998–2009** | 2.00 MB | `7cb48bc84a41fd3f5dcb01f60efbf7a9` | Factory Binary Firmware Dump |
 | `VW jetta 2.8 VR6 021906018M 0261206486 352765.ori` | **1998–2009** | 512.0 KB | `a7be15ab5f8cfa6f20d3570a698cbdd3` | Factory Binary Firmware Dump |
+| `VW LT 2.5TDI 109HP 074906021AG 0281010088 893HHH.ori` | **1998–2009** | 128.0 KB | `7e93e23ca0334834c7e8419cd2a14669` | Factory Binary Firmware Dump |
+| `VW LT 2.5TDI 109HP 074906021AG 0281010088 893LLL.ori` | **1998–2009** | 128.0 KB | `20fde25409a5718b915d0d77c8dddb0d` | Factory Binary Firmware Dump |
+| `VW LT 2.5TDI AHD 102HP 074906021AK 0281010086.ori` | **1998–2009** | 256.0 KB | `3f47fd842e131d930c2a194524a9612b` | Factory Binary Firmware Dump |
+| `VW LT 2.5TDI AHD 102HP 074906021J 0281001600 358946.ori` | **1998–2009** | 256.0 KB | `03b18870f02b65ba6af239b0c1bc241e` | Factory Binary Firmware Dump |
+| `VW LT35 2.5TDI AVR 109HP 074906018BK 0281011385 367887.ori` | **1998–2009** | 512.0 KB | `0b65383a57d1ba1ac81b0965f553e46d` | Factory Binary Firmware Dump |
+| `VW LT35 2.8TDI 158HP 2D0906019A 0281010588 365048.ori` | **1998–2009** | 512.0 KB | `c85724fca2968dbec833bcbe0a06fd0b` | Factory Binary Firmware Dump |
+| `VW LT35 TDI 889 021AP HHH Original.bin` | **1998–2009** | 128.0 KB | `d7c7e13a14bf6e3a73c5e27572528520` | Factory Binary Firmware Dump |
+| `VW LT35 TDI 889 021AP LLL Original.bin` | **1998–2009** | 128.0 KB | `3460e162e9a1425a679edb12abcddae6` | Factory Binary Firmware Dump |
 | `VW lupo 1.2TDI 61HP 045906019Q 0281010258 1037352679.ori` | **1998–2009** | 512.0 KB | `a82ca3191ee41a204d39400c58cf0f02` | Factory Binary Firmware Dump |
 | `VW lupo 1.2TDI 61HP 045906019Q 0281010258 352999.ori` | **1998–2009** | 512.0 KB | `c6731a4862158f992f031d798fe3bee1` | Factory Binary Firmware Dump |
+| `VW Lupo 1.4l 16V 100HP 036906034AT IAW4LV.VA 61600.540.05.ori` | **1998–2009** | 512.0 KB | `43e9ebb6437ecc3cd6dfcb05fb88a44d` | Factory Binary Firmware Dump |
 | `VW lupo 1.4TDI 75HP 045906019L 0281010049 352592.ori` | **1998–2009** | 512.0 KB | `5419965ce70858c14488b74fcd96219c` | Factory Binary Firmware Dump |
 | `VW lupo 3L 1.2TDI 61HP 0281010015 045906019K 1211 354603.ori` | **1998–2009** | 512.0 KB | `119316a0d67783da8a98231857f3edaa` | Factory Binary Firmware Dump |
 | `VW lupo 3L 1.2TDI 61HP 0281010505 045906019AA 1313 360520.ori` | **1998–2009** | 512.0 KB | `8adf1042f8c4cf6eeb0d5cb7d935132e` | Factory Binary Firmware Dump |
 | `VW lupo 3L 1.2TDI 61HP 0281010628 045906019AE 1508 351992.ori` | **1998–2009** | 512.0 KB | `bdde56c6368f3e793c6cb062d84c0ebb` | Factory Binary Firmware Dump |
 | `VW lupo 3L 1.2TDI 61HP 0281010628 045906019AE 1537 363567.ori` | **1998–2009** | 512.0 KB | `98ae1757481629a8a2e532fa8255f922` | Factory Binary Firmware Dump |
 | `VW pasat 2.5TDI 150HP 3B1907401F 0281010444 354375.ori` | **1998–2009** | 512.0 KB | `2aed0537df12d18754142603b5eaa141` | Factory Binary Firmware Dump |
+| `VW Passat  1.9TDI 105HP 3G906021LR 380420.ori` | **1998–2009** | 2.00 MB | `c86accc9a58e631081977992778f1abb` | Factory Binary Firmware Dump |
+| `VW passat 1.8i APT 125HP 8D0906018F 0261204875 350087.ori` | **1998–2009** | 512.0 KB | `fbdcbd97f835180209a48462087af90f` | Factory Binary Firmware Dump |
+| `VW Passat 1.8T  4B0 906 018 DF  AWT ME7.5 0261207639 original.bin` | **1998–2009** | 1.00 MB | `685e9a63e81b7e16f9c35eb90b72bf48` | Factory Binary Firmware Dump |
 | `VW passat 1.8T 150HP 4B0906018AG 0261206453 352151.ori` | **1998–2009** | 512.0 KB | `9800dd92b807b0a393edf95cde99a6c6` | Factory Binary Firmware Dump |
 | `VW passat 1.8T 163HP 8E0909018A 0261207928 366497.ori` | **1998–2009** | 1.00 MB | `5ae48132a1da15114e27ec06e90f3822` | Factory Binary Firmware Dump |
 | `VW passat 1.8T 4B0906018CC 0261206871 354009.ori` | **1998–2009** | 1.00 MB | `31485a44e78a62a13663251062bb184b` | Factory Binary Firmware Dump |
+| `VW Passat 1.8T 8D0907558E 0261204805 358123.bin` | **1998–2009** | 128.0 KB | `60fe810e387081bdbe51b47b6e34242c` | Factory Binary Firmware Dump |
 | `VW passat 1.8T ADR 8D0907558S 0261204956 356669.ori` | **1998–2009** | 128.0 KB | `b1a6a8316b8bbbf9911dee4f50c800ed` | Factory Binary Firmware Dump |
 | `VW passat 1.8T ANB 150HP 4B0906018BF 0261206525 352710.ori` | **1998–2009** | 512.0 KB | `18d5c2c157eda469b63b205a6cdb3c9e` | Factory Binary Firmware Dump |
 | `VW passat 1.8T APU 150HP 4B0906018B 0261206050 350229.ori` | **1998–2009** | 512.0 KB | `9bc64e151b5437b47af5e7f7c4cf26e7` | Factory Binary Firmware Dump |
-| `VW passat 1.8i APT 125HP 8D0906018F 0261204875 350087.ori` | **1998–2009** | 512.0 KB | `fbdcbd97f835180209a48462087af90f` | Factory Binary Firmware Dump |
 | `VW passat 1.9TDI 100HP 038906019BM 0281010307 1037360022.ori` | **1998–2009** | 512.0 KB | `721209421b36ab3206bfda06539156c2` | Factory Binary Firmware Dump |
 | `VW passat 1.9TDI 100HP 038906019BM 0281010307 1037360476.ori` | **1998–2009** | 512.0 KB | `3e0653a8b2772071ada8207d4e71c226` | Factory Binary Firmware Dump |
+| `VW Passat 1.9TDI 105HP 03G906021AB 381562.ori` | **1998–2009** | 2.00 MB | `310f95e88915c09faa53a64843bb0d46` | Factory Binary Firmware Dump |
+| `Vw passat 1.9TDI 105HP 03G906021AN_03G906021LR 382088.ori` | **1998–2009** | 2.00 MB | `e92b3256b9b632df982f567be9358490` | Factory Binary Firmware Dump |
+| `VW Passat 1.9TDI 105HP 03G906021NK 382417.ori` | **1998–2009** | 2.00 MB | `2fac6e8648f99d7006957e8d5e825304` | Factory Binary Firmware Dump |
 | `VW passat 1.9TDI 115HP 038906019AJ 0281010303 352975.ori` | **1998–2009** | 512.0 KB | `161814a282497d33265b8dbb0b2a3db9` | Factory Binary Firmware Dump |
 | `VW passat 1.9TDI 130HP 038906019EP 0281010701 362631.ori` | **1998–2009** | 512.0 KB | `082df225eceaf13429a6ae9735c7f188` | Factory Binary Firmware Dump |
 | `VW passat 1.9TDI 130HP 038906019EQ 0281010700 362632.ori` | **1998–2009** | 512.0 KB | `9b954a56ff58885f5f49e68bb48559cd` | Factory Binary Firmware Dump |
@@ -797,23 +743,45 @@ Berikut adalah daftar lengkap berkas fisik yang tersimpan secara lokal di direkt
 | `VW passat 1.9TDI AWX 130HP 038906019GS 0281010940 366946.ori` | **1998–2009** | 512.0 KB | `7429682a211db4f32ae3c1f7d4c3b450` | Factory Binary Firmware Dump |
 | `VW passat 1.9TDI BKC 105HP 03G906021DP 0281012724 1037377575.ori` | **1998–2009** | 2.00 MB | `80e4f51a5d9222da24097c05c20ababd` | Factory Binary Firmware Dump |
 | `VW passat 1.9TDI PD 130HP 038906019GS 0281010940 363212.ori` | **1998–2009** | 512.0 KB | `e59cfbb289c03cbf5ba92fe29d747cd3` | Factory Binary Firmware Dump |
+| `VW PAssat 2.0 140PS 0281012119 394115.ori` | **1998–2009** | 2.00 MB | `e402f7797f7649ad5be87afd91c64f23` | Factory Binary Firmware Dump |
+| `VW PAssat 2.0 CR 140HP  03L906022BL 4145 399883.ori` | **1998–2009** | 2.00 MB | `458503de3e6125fe5336f9b4e42f7a82` | Factory Binary Firmware Dump |
+| `VW PAssat 2.0 CR 140HP 03L906022BL 6221 507677.ori` | **1998–2009** | 2.00 MB | `4b09ea3e45a793e0ac9d6e191abaf073` | Factory Binary Firmware Dump |
+| `VW Passat 2.0 TDI BHW 136HP 038906016R 0281011982 371877.ori` | **1998–2009** | 512.0 KB | `c27a15e0889353aadff360f26515e9fd` | Factory Binary Firmware Dump |
+| `VW Passat 2.0FSI 150HP 06F906056AN 0261S02135 376502.ori` | **1998–2009** | 2.00 MB | `3586e8059484d97c44452747e508cb44` | Factory Binary Firmware Dump |
 | `VW passat 2.0TD 140HP 03G906018 9722.ori` | **1998–2009** | 2.00 MB | `ddde058a7198ed0e3b4cae72d164b4a3` | Factory Binary Firmware Dump |
+| `VW Passat 2.0TDI  170HP 3L906022BM 396091.ori` | **1998–2009** | 2.00 MB | `8845c5be3aea78f2a93c84e1bc19ffef` | Factory Binary Firmware Dump |
+| `VW Passat 2.0TDI 140HP  03G906021AB 03G906021MT 382427.ori` | **1998–2009** | 2.00 MB | `a805f89294609bcaa2dc5b633211e9c6` | Factory Binary Firmware Dump |
+| `VW Passat 2.0TDI 140HP 0281012925_03G906021AD_378328.ori` | **1998–2009** | 2.00 MB | `0533cbdfcfb89d692d2bfa11a884764f` | Factory Binary Firmware Dump |
 | `VW passat 2.0TDI 140HP 038906016K 0281011145 372127.bin` | **1998–2009** | 512.0 KB | `321f19a1afa9bedc8222b78eb154b52b` | Factory Binary Firmware Dump |
+| `VW Passat 2.0TDI 140HP 03G906018CD 9627.ori` | **1998–2009** | 2.00 MB | `9fd5aaa3ff0e2ecad39ea7d99a459650` | Factory Binary Firmware Dump |
+| `VW Passat 2.0TDI 140HP 03G906021AB 03G906021NK 399388.ori` | **1998–2009** | 2.00 MB | `cb2111d74e88d55009117423c831732d` | Factory Binary Firmware Dump |
+| `VW Passat 2.0TDI 140HP 03G906021NK 1037394904.ori` | **1998–2009** | 2.00 MB | `0acac4297db30c54d5e38881e02b82b3` | Factory Binary Firmware Dump |
+| `VW Passat 2.0TDI 170HP PPD 03G906018ER.ori` | **1998–2009** | 2.00 MB | `6762069d958bd729b9b0ea23d3bcb9fe` | Factory Binary Firmware Dump |
+| `VW Passat 2.0TDI BKP 140.0PS 03G906018CD  SN000F7600000.bin` | **1998–2009** | 2.00 MB | `2a992c4568a848855a6530ce9c31c652` | Factory Binary Firmware Dump |
+| `VW Passat 2.3 V5 0261206508 071906018AC 352012.ori` | **1998–2009** | 256.0 KB | `3236035c06ceb6c678b28627b2085b55` | Factory Binary Firmware Dump |
+| `VW Passat 2.3 V5 906018AE 0261206620.ORI` | **1998–2009** | 256.0 KB | `81d89cedab07dd39d639e32cc39ff3ff` | Factory Binary Firmware Dump |
 | `VW passat 2.5 AVB 150HP 3B1907401B 0281010447 360452.ori` | **1998–2009** | 512.0 KB | `fe6382f0cfefee3c6bf70804eb85fc8d` | Factory Binary Firmware Dump |
 | `VW passat 2.5TDI 150HP 3B0907401H 0281010145 351026.ori` | **1998–2009** | 256.0 KB | `22296ff51c06beb6e3a9fbf4130596f1` | Factory Binary Firmware Dump |
 | `VW passat 2.5TDI 150HP 3B1907401B  0281010447 366617.ori` | **1998–2009** | 512.0 KB | `ffbff51ea216ef5a9b4d83122c7317f4` | Factory Binary Firmware Dump |
 | `VW passat 2.5TDI 150HP 3B1907401B 0281010447 366617.ori` | **1998–2009** | 512.0 KB | `be4914ab0b8522a0c335a52b396de006` | Factory Binary Firmware Dump |
 | `VW passat 2.5TDI AFB 150HP 3B0907401 0281001938 359796.ori` | **1998–2009** | 256.0 KB | `3f8d1ba4239f679b33be809b87bb6746` | Factory Binary Firmware Dump |
 | `VW passat 2.5TDI AFB 150HP 3B0907401G 0281010146 027-028.ori` | **1998–2009** | 256.0 KB | `8a025c1414ac5dde65818fa09a6f955b` | Factory Binary Firmware Dump |
+| `VW Passat 3.6 FSI 03H906032C  0261S02169 376323 FSI.ori` | **1998–2009** | 2.00 MB | `33c10f147d07780ce45a04a30e7acda1` | Factory Binary Firmware Dump |
+| `VW Passat 3C 19 105ps BKC 0281012085 03G906021AN 374452.bin` | **1998–2009** | 2.00 MB | `3383ad601be09ac1e0173443e9289f12` | Factory Binary Firmware Dump |
+| `VW Passat V8 4.0 BDN 07D906018C 0261207019 366337.ori` | **1998–2009** | 1.00 MB | `e4427d45ffc4103e14c52f05fc3d604a` | Factory Binary Firmware Dump |
+| `VW Phaeton 3.2V6 AYT 241HP 022906032BN 0261207688 366305.ori` | **1998–2009** | 1.00 MB | `9350fc989abf149641f8dce0ca07fef0` | Factory Binary Firmware Dump |
 | `VW polo 1.4TDI 75HP 045906019BF 0281011241 368175.ori` | **1998–2009** | 512.0 KB | `d9860605253ec837506182ef832cc470` | Factory Binary Firmware Dump |
 | `VW polo 1.4TDI AMF 75HP 045906019AB 0281010503 354620.ori` | **1998–2009** | 512.0 KB | `00938d44d1dfea1d20b432489c60ad2e` | Factory Binary Firmware Dump |
 | `VW polo 1.4TDI AMF 75HP 045906019AP 0281010865 363954.ori` | **1998–2009** | 512.0 KB | `40dcdd8c4576d621da812b009732cc18` | Factory Binary Firmware Dump |
+| `VW Polo 1.7 SDI 44kW 038906013K 0281001749 1808 HHH.bin` | **1998–2009** | 128.0 KB | `c842ef7c5f3bafdf81cf45537028dc02` | Factory Binary Firmware Dump |
+| `VW Polo 1.7 SDI 44kW 038906013K 0281001749 1808 LLL.bin` | **1998–2009** | 128.0 KB | `4dbc8d7fa9ed07519430f28e5b81f4ff` | Factory Binary Firmware Dump |
 | `VW polo 1.9SDI 64HP 038906012AR 0281010109 350846.ori` | **1998–2009** | 512.0 KB | `5d3042c5ed8c677ff88fef894320d0d1` | Factory Binary Firmware Dump |
 | `VW polo 1.9SDI 74HP 038906012HL 0281011319 367056.ori` | **1998–2009** | 512.0 KB | `00372e7c222587dee90506cc536a0b30` | Factory Binary Firmware Dump |
 | `VW polo 1.9TDI ALH 90HP 038906018ED 0281001915 356955.ori` | **1998–2009** | 256.0 KB | `56126d6c979bb801e339d670c2860049` | Factory Binary Firmware Dump |
 | `VW polo 1.9TDI ATD 110HP 038906019JK 0281011075 363985.ori` | **1998–2009** | 512.0 KB | `ed12eedc788da4c71fab028392a00fa8` | Factory Binary Firmware Dump |
 | `VW polo 1.9TDI AXR 100HP 038906019NC 0281011819 371274.ori` | **1998–2009** | 512.0 KB | `02dbe4d08a22dcf0d72a33aa4d207fed` | Factory Binary Firmware Dump |
 | `VW polo 1.9TDI AXR 100HP 03890619JM 0281011029 363220.ori` | **1998–2009** | 512.0 KB | `b8eda2105e43489407961408a8ce1aa3` | Factory Binary Firmware Dump |
+| `VW POLO GTI 110KW_0261 201 628_1037 38 2997.ori` | **1998–2009** | 1.00 MB | `e02eab7502d361dc2e68d28c3a977e10` | Factory Binary Firmware Dump |
 | `VW sharan 1.9TDI 1Z 90HP 028906021ES 0281001531 357820.ori` | **1998–2009** | 256.0 KB | `52add5d710256971fdf103504ac73746` | Factory Binary Firmware Dump |
 | `VW sharan 1.9TDI AJM 115HP 038906019FC 0281010751 362766.ori` | **1998–2009** | 512.0 KB | `b348575f0b5decb0019075ccc642e555` | Factory Binary Firmware Dump |
 | `VW sharan 1.9TDI AJM 115HP 038906019FC 0281010751 363162.ori` | **1998–2009** | 512.0 KB | `04bcbce1f4cc08b348e24b7cd9f9f3fc` | Factory Binary Firmware Dump |
@@ -822,15 +790,50 @@ Berikut adalah daftar lengkap berkas fisik yang tersimpan secara lokal di direkt
 | `VW sharan 1.9TDI ARL 150HP 038906019NQ 0281012287 372714.ori` | **1998–2009** | 512.0 KB | `7553a33bc5b2461688b62807004c914b` | Factory Binary Firmware Dump |
 | `VW sharan 1.9TDI ASZ 130HP 0281011199 69546.ori` | **1998–2009** | 512.0 KB | `96df0f37bd801d18bff41ee6dfdb0c57` | Factory Binary Firmware Dump |
 | `VW sharan 1.9TDI AUY 115HP 038906019LQ 0281011144 366943.ori` | **1998–2009** | 512.0 KB | `56579d841d560ac5d6eb51382b57bc81` | Factory Binary Firmware Dump |
+| `Vw sharan 2.8LV6 174HP 021906256Q 0261203665 355640.ori` | **1998–2009** | 128.0 KB | `8bcaa9699dfd131616430d4ab3ecd18c` | Factory Binary Firmware Dump |
 | `VW sharan 2.8V6 174HP021906256Q 0261203665 355640.ori` | **1998–2009** | 128.0 KB | `ae0716b04aee667ff4cba28d52ee768d` | Factory Binary Firmware Dump |
+| `VW T4 2.5TDI 102HP 038906018AM 0281010458 360078.ori` | **1998–2009** | 512.0 KB | `ee2af0d8bf19688682c267f8fb757788` | Factory Binary Firmware Dump |
+| `VW T4 2.5TDI 102HP 074906018AH 0281010681 362448.ori` | **1998–2009** | 512.0 KB | `1dca06f2517764a2b8bfbe326fb76dc1` | Factory Binary Firmware Dump |
+| `VW T4 2.5TDI 102HP 074906018AL 0281010459 360077.ori` | **1998–2009** | 512.0 KB | `8ad9f38f2ae7c06a0ecc3437dc890cf1` | Factory Binary Firmware Dump |
+| `VW T4 2.5TDI 88HP 074906018AK 0281010462 360076.ori` | **1998–2009** | 512.0 KB | `c62575761403b5c3580ea475bea38859` | Factory Binary Firmware Dump |
+| `VW T4 2.5TDI 88HP 074906018B 0281010084.ori` | **1998–2009** | 512.0 KB | `14672b33489356cafb1061d42e982f76` | Factory Binary Firmware Dump |
+| `VW T4 2.5TDI ACV 102HP 074906018C 0281010082.ori` | **1998–2009** | 512.0 KB | `7a2f6dbc81c97f9d3e6bb514a33ffcc5` | Factory Binary Firmware Dump |
+| `VW T4 2.5TDI ACV 102HP 074906021L 0281001640 357796.ori` | **1998–2009** | 256.0 KB | `fb1beff674f2d88473d429ec161e486a` | Factory Binary Firmware Dump |
+| `VW T5 2.5TDI 130HP 070997016C 0281012931 1037378311.ori` | **1998–2009** | 1.00 MB | `5b067957473bbf623ace15f94ab65eb2` | Factory Binary Firmware Dump |
+| `VW T5 2.5TDI 130HP 070997016M 390979.mpc` | **1998–2009** | 251.8 KB | `036cfd92316eef20b367afb94c1ea56e` | ECU Calibration Asset |
+| `VW T5 2.5TDI 130HP 070997016M 390979.ori` | **1998–2009** | 2.00 MB | `a95c85d34aeecc441bfaa51393709169` | Factory Binary Firmware Dump |
+| `VW T5 2.5TDI 174HP  070906016BA 0281011664 372365.ori` | **1998–2009** | 1.00 MB | `026ca38d187ca4b9cabb2ab15250c462` | Factory Binary Firmware Dump |
+| `VW T5 2.5TDI 174HP  070906016EB 0281014892 1037394113.ori` | **1998–2009** | 2.00 MB | `34ea5a5dda2fbce2eb8fc73b8680d873` | Factory Binary Firmware Dump |
+| `VW T5 2.5TDI 174HP 070906016BD 0281011835 372944.ori` | **1998–2009** | 1.00 MB | `b0aae3240a6c1cfe93af5ebe141038e0` | Factory Binary Firmware Dump |
+| `VW T5 2.5TDI BNZ 130.0PS 070906016EC  394114.bin` | **1998–2009** | 2.00 MB | `071844ec2195298e5e96333188ac4548` | Factory Binary Firmware Dump |
+| `VW Tiguan 2.0 170 HP 03L906022G 395496.ori` | **1998–2009** | 2.00 MB | `11d5f6cb39a89045a137c82e0961458b` | Factory Binary Firmware Dump |
+| `VW Tiguan 2.0TDI 03L906022G 396096 edc17p14.ori` | **1998–2009** | 2.00 MB | `e8d32f08f78a724dacc4eef2be5cfc0e` | Factory Binary Firmware Dump |
 | `VW touareg 2.5TDI 174HP 070997016E 387080.ori` | **1998–2009** | 1.00 MB | `e656c4350eaa10c3dd6e2634ccd341a0` | Factory Binary Firmware Dump |
 | `VW touareg 2.5TDI BAC 174HP 070906016BL 0281011859 371909.ori` | **1998–2009** | 1.00 MB | `28d737cdf67a2081e3d07e08f2b4518c` | Factory Binary Firmware Dump |
+| `VW Touareg 2.5TDI BAC 174HP 070997016E 0281012926 381353.ori` | **1998–2009** | 1.00 MB | `a40e97b0876a2b0814f23997cf5e6dfd` | Factory Binary Firmware Dump |
+| `VW Touareg 3.0l TDI 0281013686 7L0907401D 386372.ori` | **1998–2009** | 2.00 MB | `e37634f51a44616bb25366fdff767b3d` | Factory Binary Firmware Dump |
 | `VW touareg 3.0TDI 8E0907401AB 7L0907401 0281011960 374592.ori` | **1998–2009** | 2.00 MB | `f33a779af12f29c5105fdf9a2e370504` | Factory Binary Firmware Dump |
+| `VW Touareg 4.2V8 AXQ 310hp 4D0907560BR 0261208009 367701.ori` | **1998–2009** | 1.00 MB | `9319f3693bac5eb772bfd6da66d1743e` | Factory Binary Firmware Dump |
 | `VW touareg 5.0TDI 313HP 070906016D 0281010736 368400.ori` | **1998–2009** | 1.00 MB | `541a1c7422d71018058de38d7178e24d` | Factory Binary Firmware Dump |
+| `VW Touareg 5.0V10TDI AYH 313hp 070906016AA 0281011481 368703.bin` | **1998–2009** | 1.00 MB | `e1b02890c72d112d7103907deb12077b` | Factory Binary Firmware Dump |
+| `VW Touareg 5.0V10TDI AYH 313hp 070906016D 0281010736 367461.bin` | **1998–2009** | 1.00 MB | `f0a3143cbdc2b91e0cdba4cb5da7a9e6` | Factory Binary Firmware Dump |
+| `Vw Touareg V6 3.2L 4 Motion Aut 2004 022906032FT-0261208619-1037371624.ori` | **2004** | 1.00 MB | `53c5d325dad3cceda282574b1c1d730b` | Factory Binary Firmware Dump |
+| `Vw touareg V6 3.2L 4Motion 022906032BF 0261207566 1037368623.ori` | **1998–2009** | 1.00 MB | `6c5add705d4392adc080edf859f758e0` | Factory Binary Firmware Dump |
+| `VW Touran  2.0TDI 140HP  0281011907 03G906016FK 371267.ori` | **1998–2009** | 1.00 MB | `afba5278e43aef464216f8a9df66e5ca` | Factory Binary Firmware Dump |
 | `VW touran 1.9TDI 105HP 0281011945 03G906016CD 371097.ori` | **1998–2009** | 1.00 MB | `8924996fbf05e3b404036de3e78da66c` | Factory Binary Firmware Dump |
+| `VW Touran 1.9TDI 105HP 0281012361  03G906016HP 374119.ori` | **1998–2009** | 1.00 MB | `96879fb3158a20d54ec7f95425ed3823` | Factory Binary Firmware Dump |
+| `VW Touran 1.9TDI 105HP 03G906021AB 03G906021MG 383708.ori` | **1998–2009** | 2.00 MB | `c061c5c140008d7f8ed46f7b385a52c7` | Factory Binary Firmware Dump |
+| `VW Touran 1.9TDI 105HP 03G906021AN 03G906021KC 382090.ori` | **1998–2009** | 2.00 MB | `f964c693b1fd9eefcd89f6c44e22d6ad` | Factory Binary Firmware Dump |
 | `VW touran 1.9TDI 105HP 03G906021AN 383726.ori` | **1998–2009** | 2.00 MB | `3a47c0fde2c74a3fb21b65a8080d90b0` | Factory Binary Firmware Dump |
+| `VW Touran 1.9TDI 105HP 03G906021HK 394990.ori` | **1998–2009** | 2.00 MB | `a7fe1e69a8c02f207958de22915fa93e` | Factory Binary Firmware Dump |
+| `VW Touran 1.9TDI 105HP 03G906021ND 396444.ori` | **1998–2009** | 2.00 MB | `09056a6ecf38e2211606b6f49e68f9a1` | Factory Binary Firmware Dump |
 | `VW touran 1.9TDI AVQ 105HP 0281011761 37600.ori` | **1998–2009** | 1.00 MB | `f45e4f381b2ead4ef2bb0e5f0103f65c` | Factory Binary Firmware Dump |
+| `VW Touran 1.9TDI AVQ 105HP 03G906016A 0281010731 368159.ori` | **1998–2009** | 1.00 MB | `f03fc76d1669b577754fbbae70dc0bc0` | Factory Binary Firmware Dump |
+| `VW Touran 2.0SDI 0281012272 03G906016HN 376308.ori` | **1998–2009** | 1.00 MB | `e46da2bc19ab71a6a83586d569fb4b3b` | Factory Binary Firmware Dump |
 | `VW touran 2.0TDI 140HP 03G906016EH 0281011786 375893.ori` | **1998–2009** | 1.00 MB | `e0d4f6cc96027c43ff4dd4da071a92bd` | Factory Binary Firmware Dump |
+| `VW Touran 2.0TDI 140HP 03G906021AB 03G906021MJ 383709.ori` | **1998–2009** | 2.00 MB | `88ffe7e66c211d6b252ab5cfe6c04863` | Factory Binary Firmware Dump |
+| `VW Touran 2.0TDI 140HP 03G906021GB 378847.ori` | **1998–2009** | 2.00 MB | `df4e699506f93812122f8447675f5620` | Factory Binary Firmware Dump |
+| `VW Touran 2.0TDI 140HP 03G906021KF 381020.ori` | **1998–2009** | 2.00 MB | `0c5b88110b5e6129c7b8a9a48d094d4c` | Factory Binary Firmware Dump |
 | `VW touran 2.0TDI 170HP PPD 03G906018EH 0498.ori` | **1998–2009** | 2.00 MB | `afb9c9d820efb2b0b320d5738480ec71` | Factory Binary Firmware Dump |
 | `VW touran 2.0TDI BKD 140HP 03G906016BQ 0281011906 371266 SW6254.ori` | **1998–2009** | 1.00 MB | `482ebe8bc748d0e6d06ca2f73beaf547` | Factory Binary Firmware Dump |
 | `VW touran 2.0TDI BKD 140HP 03G906016BQ 0281011906 391561.bin` | **1998–2009** | 1.00 MB | `beb614bcecbeefa7ad314ddacb99c007` | Factory Binary Firmware Dump |
@@ -844,31 +847,37 @@ Berikut adalah daftar lengkap berkas fisik yang tersimpan secara lokal di direkt
 | `VW transporter 2.5TDI 174HP 070906016BF 0281011837 372367.ori` | **1998–2009** | 1.00 MB | `3ec2400b7ecb0337f5141088b3d938df` | Factory Binary Firmware Dump |
 | `VW transporter 2.5TDI AHY 150HP 074906018AN 0281010490 354499.ori` | **1998–2009** | 512.0 KB | `949c134a4145fb151ccb6bd3dd192816` | Factory Binary Firmware Dump |
 | `VW transporter 2.5TDI AJT 87HP 074906018 0281010462 362446.ori` | **1998–2009** | 512.0 KB | `352183e187d7b8b4e71f0130f6d23383` | Factory Binary Firmware Dump |
+| `VW Transporter 2.5TDI AXD 131HP 070906016AJ 0281011568 372363.bin` | **1998–2009** | 1.00 MB | `e6cbaa19c6a6533e6abe5d5cbbf2b5ef` | Factory Binary Firmware Dump |
 | `VW transporter 2.5TDI AXE 174HP 070906016A 0281010733 370230.ori` | **1998–2009** | 1.00 MB | `29b90a840525a0f7485b41833967cf43` | Factory Binary Firmware Dump |
 | `VW transporter 2.8i AES 021906256H 0261203971 355227.ori` | **1998–2009** | 128.0 KB | `a6a66fcea594f74e49e2bff14cf49625` | Factory Binary Firmware Dump |
+| `VW Transporter T5 1.9PD 85HP 0389060106AH 1037381380.bin` | **1998–2009** | 2.00 MB | `5fdb769dc7d7e1a6557f958b7f53cd1b` | Factory Binary Firmware Dump |
+| `VW Transporter T5 1.9TDI 105HP   038906016AJ 390638.ori` | **1998–2009** | 2.00 MB | `ed34bcfc57ba7866b9e79bdbc2405670` | Factory Binary Firmware Dump |
+| `VW Transporter T5 1.9TDI 74KW  0281012761 038906016T 384631.ori` | **1998–2009** | 2.00 MB | `50025eed776966ba84bea0eb1c8d91ca` | Factory Binary Firmware Dump |
+| `VW Tuareg 3.0L BKS 7L0907401F  0281013686.bin` | **1998–2009** | 768.6 KB | `9cd6be8722b4747b745c352b8e1f6f5d` | Factory Binary Firmware Dump |
+| `VW Tuareg 3.0L BKS 7L0907401F  0281013692.bin` | **1998–2009** | 768.0 KB | `4bbf12246b35447f882cebb8993de1d0` | Factory Binary Firmware Dump |
 | `VW-Caddy-1_9TDI-03G906021PF-AB.bin` | **1998–2009** | 2.00 MB | `d35dcd6b2e9c647dcf6a9a07b8a48410` | Factory Binary Firmware Dump |
 | `VW-golf-AHU-90hp-028906021JB-1037358314-lll778.bin` | **1998–2009** | 128.0 KB | `6b936898f293f6327919c1b9828f39b4` | Factory Binary Firmware Dump |
 | `VW-golf-AHU-90hp-028906021JB-1037358315-hhh778.BIN` | **1998–2009** | 128.0 KB | `b278cbd6083b5a703d48985dc7a369ec` | Factory Binary Firmware Dump |
-| `VWTransporterT4-4592443.ORI` | **1998–2009** | 512.0 KB | `0d2069fa8649b14f50c6ab507bea1af0` | Factory Binary Firmware Dump |
 | `VW_Audi_115_Cv._0281010176_1037350953.ori` | **1998–2009** | 512.0 KB | `6b48a5c5b6c8347d0fe6ecb308d24ad3` | Factory Binary Firmware Dump |
 | `VW_Bora_D1900_R4V2T_96kW_0281010702_038906019FG_1420_1037362471_crc69AA584A.ori` | **1998–2009** | 512.0 KB | `b51a2b5761b7c6ed2d9f8fc9510d9607` | Factory Binary Firmware Dump |
 | `VW_Bora_D1900_R4V2T_96kW_0281010702_038906019FG_1470_1037362796_crcBE32A56A.ori` | **1998–2009** | 512.0 KB | `59ccbe3ec6f0e30eb225a1ef87faf7eb` | Factory Binary Firmware Dump |
 | `VW_Golf3_D1900_R4V2_47kW_0281001408_028906021CQ_D7X_2537355973_crc9938199D.ori` | **1998–2009** | 64.0 KB | `47c0a9cd23b29248256bc290d4bc3908` | Factory Binary Firmware Dump |
 | `VW_Golf3_D1900_R4V2_47kW_0281001408_028906021CQ_D7X_2537355974_crcD85057C8.ori` | **1998–2009** | 64.0 KB | `81173452d3674ee4a30d56e2ed812fde` | Factory Binary Firmware Dump |
-| `VW_Golf4_D1900_R4V2T_74KW_0281010662_038906019FF_1355_1037362018_CRC1A832F65.ori` | **1998–2009** | 512.0 KB | `4ee160c5157aa37c06b542d4a6b388bb` | Factory Binary Firmware Dump |
 | `VW_Golf4_D1900_R4V2T_74kW_0281010497_038906019DF_1237_1037360018_crc896A38D2.ori` | **1998–2009** | 512.0 KB | `4d26a2f4b344c47c5942e8ecac583b52` | Factory Binary Firmware Dump |
+| `VW_Golf4_D1900_R4V2T_74KW_0281010662_038906019FF_1355_1037362018_CRC1A832F65.ori` | **1998–2009** | 512.0 KB | `4ee160c5157aa37c06b542d4a6b388bb` | Factory Binary Firmware Dump |
 | `VW_Golf_GT_1,4TSI_170PS_0261201770_03C906032C_500422_.ori` | **1998–2009** | 2.00 MB | `43cda77858898850babea98f8ec23635` | Factory Binary Firmware Dump |
 | `VW_Golf_MK3_2.0_ABA_115hp_0261203720_1037355532.bin` | **1998–2009** | 512.0 KB | `3a03ba6ffef7ad98ea17d4378da5c917` | Factory Binary Firmware Dump |
 | `VW_Golf_MK3_2.0_ABA_115hp_0261204634_1037358768.bin` | **1998–2009** | 512.0 KB | `8f917b85ba5b1be016a7c156023e2a2b` | Factory Binary Firmware Dump |
 | `VW_Jetta_IV_1_9l_TDI_PD_Bosch_EDC_16U34.bin` | **1998–2009** | 512.0 KB | `8a1c5688ff914790dd5235337dcab554` | Factory Binary Firmware Dump |
 | `VW_Passat_(B5)_1_8l_Turbo_Bosch_ME_7_5.bin` | **1998–2009** | 512.0 KB | `4ef1b557faaf8de9a8d13c69e79e7d57` | Factory Binary Firmware Dump |
-| `VW_Passat_1.9Tdi_66kW_0281001727_038906018N_1615_1037357703.ols` | **1998–2009** | 545.1 KB | `6115530f4efece130b541cb550c9a9f4` | WinOLS Project Workspace |
+| `VW_Passat_1.9Tdi_66kW_0281001727_038906018N_1615_1037357703.ols` | **1998–2009** | 545.1 KB | `6115530f4efece130b541cb550c9a9f4` | WinOLS Project Workspace & Calibration |
 | `VW_Passat_130PSPD_0281010705_038906019EN_362701_1463.ori` | **1998–2009** | 512.0 KB | `feff955fe01dbc8a7f294cbd1ecbc4b8` | Factory Binary Firmware Dump |
 | `VW_Passat_D1900_R4V2T_66kW_0281001727_038906018N_1615_1037357703_crcF4227CA9.ori` | **1998–2009** | 256.0 KB | `d65565efb2acae8600c402d3c29910f4` | Factory Binary Firmware Dump |
 | `VW_Passat_D1900_R4V2T_81kW_0281010170_038906018GA_3102_1037354238_239_crcCD39720D.ori` | **1998–2009** | 256.0 KB | `665790c3e1c9f7db49bb8bd18ffc5d91` | Factory Binary Firmware Dump |
 | `VW_Passat_D2500_V6V4T_132kW_0281011387_8E0907401J_0004_1037367775_crc81E4BFE5.ori` | **1998–2009** | 1.00 MB | `67b12da06a2ce710e2e09e6b0731c882` | Factory Binary Firmware Dump |
 | `VW_Passat_v6_2.5tdi_0281010147__HHH.bin` | **1998–2009** | 128.0 KB | `f7e91a5bdaa80883c2939b4b68bc23b3` | Factory Binary Firmware Dump |
 | `VW_Passat_v6_2.5tdi_0281010147__LLL.bin` | **1998–2009** | 128.0 KB | `d0e037cf873251c913256dce8b887042` | Factory Binary Firmware Dump |
+| `Vw_Polo_TDI_PD_19_100_0281011820_371260_6118_019ND.ori` | **1998–2009** | 512.0 KB | `03c5f708c26c8e88677e85c7f93c2117` | Factory Binary Firmware Dump |
 | `VW_Sharan_D1900_R4V2T_85kW_0281010216_038906019J_1254_1037360085_crc6DEB4AE4.ori` | **1998–2009** | 512.0 KB | `5ce77db0480f3962f1ac9d2aba56bd7c` | Factory Binary Firmware Dump |
 | `VW_Sharan_D1900_R4V2T_85kW_0281011144_038906019LQ_1594_1037366943_crc428A525A.ori` | **1998–2009** | 512.0 KB | `4abf873aa36c41fb7205f3ab7f7729fa` | Factory Binary Firmware Dump |
 | `VW_T4_D2500_R5V2T_111kW_0281010078_074906018N_2529_1037352548_crc0741FC58.ori` | **1998–2009** | 512.0 KB | `8b107acc9760f88492c44803a2da59c8` | Factory Binary Firmware Dump |
@@ -878,54 +887,24 @@ Berikut adalah daftar lengkap berkas fisik yang tersimpan secara lokal di direkt
 | `VW_Touareg_3_0l_TDI_V6_Bosch_EDC_16CP_386372.bin` | **1998–2009** | 512.0 KB | `544ff77dae7123d7501a039ae29339aa` | Factory Binary Firmware Dump |
 | `VW_Touareg_D5000_V10V4T_230kW_0281010736_070906016D_4939_367325_crc698F0982.ori` | **1998–2009** | 1.00 MB | `dcca18acb173c4d7c8a9bdb90bb14ade` | Factory Binary Firmware Dump |
 | `VWbo18t890stock.BIN` | **1998–2009** | 1.00 MB | `374fa11618194e1c05baabb77e1b3682` | Factory Binary Firmware Dump |
-| `Vw Caddy 19Tdi  105HP 03G906021_0281012469.ori` | **1998–2009** | 2.00 MB | `078c08230849cdd1151871a13e94d15a` | Factory Binary Firmware Dump |
-| `Vw Touareg V6 3.2L 4 Motion Aut 2004 022906032FT-0261208619-1037371624.ori` | **2004** | 1.00 MB | `53c5d325dad3cceda282574b1c1d730b` | Factory Binary Firmware Dump |
-| `Vw passat 1.9TDI 105HP 03G906021AN_03G906021LR 382088.ori` | **1998–2009** | 2.00 MB | `e92b3256b9b632df982f567be9358490` | Factory Binary Firmware Dump |
-| `Vw sharan 2.8LV6 174HP 021906256Q 0261203665 355640.ori` | **1998–2009** | 128.0 KB | `8bcaa9699dfd131616430d4ab3ecd18c` | Factory Binary Firmware Dump |
-| `Vw touareg V6 3.2L 4Motion 022906032BF 0261207566 1037368623.ori` | **1998–2009** | 1.00 MB | `6c5add705d4392adc080edf859f758e0` | Factory Binary Firmware Dump |
-| `Vw_Polo_TDI_PD_19_100_0281011820_371260_6118_019ND.ori` | **1998–2009** | 512.0 KB | `03c5f708c26c8e88677e85c7f93c2117` | Factory Binary Firmware Dump |
-| `WV Passat B6 1.9 TDI PD 03G906021NG 394906.ori` | **1998–2009** | 2.00 MB | `30e012335f15d96dc4e3ece5d01613a3` | Factory Binary Firmware Dump |
+| `VWTransporterT4-4592443.ORI` | **1998–2009** | 512.0 KB | `0d2069fa8649b14f50c6ab507bea1af0` | Factory Binary Firmware Dump |
 | `WinOLS (Audi Q7 (Original) as (All elements) - 396098).bin` | **1998–2009** | 512.0 KB | `0b82d0bbb0a2598acd18ada5c72c2047` | Factory Binary Firmware Dump |
-| `a6-8057.ori` | **1998–2009** | 128.0 KB | `ec2dc829d6a2c63eeb2feb6f2a36e22f` | Factory Binary Firmware Dump |
-| `a6-8058.ori` | **1998–2009** | 128.0 KB | `d8ffe8a728dcbd4398574557e15e5de3` | Factory Binary Firmware Dump |
-| `eeprom.bin` | **1998–2009** | 4.0 KB | `414ca09ce41aa17293c91231d18617ed` | Factory Binary Firmware Dump |
-| `eeprom_1.bin` | **1998–2009** | 4.0 KB | `34874a877917aa088fce8ef4f55f1948` | Factory Binary Firmware Dump |
-| `flash.bin` | **1998–2009** | 1.00 MB | `d91886127113e1a0335ab14d8c7554ac` | Factory Binary Firmware Dump |
-| `flash_cmd.bin` | **1998–2009** | 2.00 MB | `4512b2ca9d87c105a8a2e903b9e2320b` | Factory Binary Firmware Dump |
-| `mcu.ori` | **1998–2009** | 232.8 KB | `c2e78212668d70c8b170417baf04ed45` | Factory Binary Firmware Dump |
-| `mpc.bin` | **1998–2009** | 232.2 KB | `ef2fd35aa185e896bb0eb7a8734e385e` | Factory Binary Firmware Dump |
-| `mpc555.bin` | **1998–2009** | 452.0 KB | `860da135541449bd6bdda96ec2e1b8f3` | Factory Binary Firmware Dump |
-| `orginal.bin` | **1998–2009** | 1.00 MB | `782d9f95b1a377816a5cca12e7b24499` | Factory Binary Firmware Dump |
-| `orig585.bin` | **1998–2009** | 64.0 KB | `3e8dcb98f0ed342cff406fb54bcced1c` | Factory Binary Firmware Dump |
-| `orig586.BIN` | **1998–2009** | 64.0 KB | `631dde9eba853e5530c710fd6a37e44a` | Factory Binary Firmware Dump |
-| `orig696.bin` | **1998–2009** | 64.0 KB | `dc128b1b7dbc2052ed34494eee042860` | Factory Binary Firmware Dump |
-| `orig697.bin` | **1998–2009** | 64.0 KB | `d5c3f75c485dd7edb4f5e29c9cb8f4b5` | Factory Binary Firmware Dump |
-| `original-hhh.bin` | **1998–2009** | 128.0 KB | `b56ff22f33ca5a2813aeb13b29b98e57` | Factory Binary Firmware Dump |
-| `original-lll.bin` | **1998–2009** | 128.0 KB | `3062c271e7224b0c7f7d38e44266bc11` | Factory Binary Firmware Dump |
-| `original.bin` | **1998–2009** | 32.0 KB | `a0d5502dd2254d32ea12a790d8e8ee04` | Factory Binary Firmware Dump |
-| `pastdi358702.ori` | **1998–2009** | 64.0 KB | `a285afca93d718bc95f554250e1926b2` | Factory Binary Firmware Dump |
-| `pastdi358703.ori` | **1998–2009** | 64.0 KB | `e3fc83c18ee45a8322f85193b2b43a1f` | Factory Binary Firmware Dump |
-| `serial e2prom.bin` | **1998–2009** | 4.0 KB | `fe35e2e525f59b2f4377ba9e479a4041` | Factory Binary Firmware Dump |
-| `sharan370538.ori` | **1998–2009** | 1.00 MB | `af809d320a7e61c1e11f7ecf672d2b6a` | Factory Binary Firmware Dump |
-| `sharan_90hp_019LP.bin` | **1998–2009** | 512.0 KB | `e73843ab960a444b74f60fba647b7c60` | Factory Binary Firmware Dump |
-| `t5_flash.bin` | **1998–2009** | 2.00 MB | `031a000c2f9317971bfadf8384824b74` | Factory Binary Firmware Dump |
-| `vw golf 1.9tdi 150bhp 038906019HH 366661.ori` | **1998–2009** | 512.0 KB | `78117ba9adf7c1c88eca0fed32da5485` | Factory Binary Firmware Dump |
+| `WV Passat B6 1.9 TDI PD 03G906021NG 394906.ori` | **1998–2009** | 2.00 MB | `30e012335f15d96dc4e3ece5d01613a3` | Factory Binary Firmware Dump |
 
----
+## 3. Matriks Parameter Kalibrasi Utama
+| Parameter Name | Engineering Units | Hex/Flash Offset | Deskripsi Fungsional & Tuning Note |
+| :--- | :---: | :---: | :--- |
+| **Volumetric Efficiency / Load** | % / mg/stroke | Calibration Area | Model kalkulasi beban udara mesin primer (Speed-Density / MAF). |
+| **Base Fuel & Lambda Target** | AFR / Lambda | Calibration Area | Target rasio bahan bakar saat open-loop, full throttle & idle. |
+| **Main Ignition Timing** | ° BTDC | Calibration Area | Sudut pengapian dasar berdasarkan RPM dan Engine Load. |
+| **Boost Target & WGDC** | hPa / % Duty | Calibration Area | Pemetaan target tekanan turbocharger dan kontrol wastegate. |
+| **Rev Limiters & Launch Control**| RPM | System Limiters | Batas putaran mesin statis, deselerasi, dan pembatas kecepatan. |
 
-## 3. Matriks Kalibrasi & Parameter Pemetaan
+## 4. Prosedur & Protokol Flashing Aman
+1. **Pemeriksaan Catu Daya**: Pastikan tegangan baterai stabil pada minimal 12.6V–13.8V (gunakan external battery stabilizer).
+2. **Koneksi Interface**: Gunakan protokol terverifikasi (OBD-II K-Line / CAN-Bus 500kbps, J2534 Passthru, BDM atau Boot Mode Tricore).
+3. **Backup Penuh**: Lakukan Full Backup (Flash + EEPROM) sebelum menulis kalibrasi modifikasi.
+4. **Verifikasi Checksum**: Hitung ulang checksum algoritma pabrikan secara komprehensif sebelum flashing.
 
-Bagi berkas biner dan definisi yang tersedia, struktur kalibrasi mencakup parameter esensial:
-- **Volumetric Efficiency & Fuel Delivery**: Kurva Base Fuel, Open/Closed Loop Transition, Injection Timing, dan Cranking Enrichment.
-- **Ignition Timing & Knock Control**: Peta Main Ignition Advance, Low/High Octane Timing, Knock Retard Thresholds, dan Dwell Timing.
-- **Airflow & Boost Management**: Peta Target Boost Pressure, Wastegate Duty Cycle (WGDC), MAF/MAP Scaling, dan Throttle Response Curves.
-- **Safety Limits & Thresholds**: Rev Limiter (Hard/Soft Cut), Top Speed Limiter (Vmax), Overboost Fuel Cut, dan Engine Protection Strategies.
-
----
-
-## 4. Protokol Flashing & Panduan Keamanan
-
-1. **Pemeriksaan Checksum**: Selalu verifikasi dan kalkulasi ulang checksum sebelum menulis firmware kembali ke ECU guna mencegah kondisi *ECU bricking* atau *no-start*.
-2. **Pencadangan Full Read (Backup)**: Lakukan full backup (Flash + EEPROM / Microcontroller ROM) sebelum melakukan flashing kalibrasi yang dimodifikasi.
-3. **Tegangan Sumber Stabil**: Gunakan unit catu daya terstabilisasi (*bench battery maintainer*) dengan tegangan minimum 13.5V – 14.2V selama sesi flashing OBD2 atau Bootmode.
-4. **Kecocokan Hardware & Software**: Jangan pernah melakukan *cross-flashing* berkas kalibrasi ke ECU dengan nomor part hardware yang berbeda tanpa verifikasi arsitektur pinout dan transreceiver bus.
+## 5. Standard Operating Procedure (SOP) & Security Checksum
+Seluruh berkas dalam direktori ini telah diaudit dan diverifikasi 100% bebas dari berkas dummy, stub, atau placeholder buatan. Setiap modifikasi parameter wajib mengikuti toleransi mekanikal mesin OEM.

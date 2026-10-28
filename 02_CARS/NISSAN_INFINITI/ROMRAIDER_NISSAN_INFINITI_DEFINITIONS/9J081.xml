@@ -1,0 +1,16 @@
+<rom base="6Y324">
+	<romid>
+		<xmlid>9J081</xmlid>
+		<caseid>1TKE8Z5N59</caseid>
+		<internalidaddress>6C61</internalidaddress>
+		<internalidstring>9J081</internalidstring>
+		<ecuid>19J081</ecuid>
+		<year>2003</year>
+		<market>USDM</market>
+		<make>Nissan</make>
+		<model>Altima</model>
+		<submodel>Base</submodel>
+		<transmission>AT</transmission>
+		<memmodel>SH7055</memmodel>
+	</romid>
+</rom>

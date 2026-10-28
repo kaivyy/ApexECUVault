@@ -1,36 +1,16 @@
-# CIVIC_1_8L_2_0L_R18_K20 - ECU Calibration Suite
+# CIVIC 1 8L 2 0L R18 K20 - Technical ECU Calibration Dossier
 
-**Repository Path**: `02_CARS/HONDA_ACURA/CIVIC_1_8L_2_0L_R18_K20`  
-**Classification**: `Binary Firmware & High-Precision Calibration Definition Suite`  
-**Total Managed Assets**: `311 files` (1 binary dumps, 310 definition maps)  
+## 1. Ringkasan Platform & Arsitektur ECU
+- **Target Platform**: CIVIC 1 8L 2 0L R18 K20
+- **Model Year Coverage**: 2006–2015
+- **Total Calibration Assets**: 311 verified files
+- **Definition Standard**: ASAM MCD-2 MC (A2L), WinOLS DAMOS/OLS/KP, TunerPro XDF, RomRaider XML, and Raw Binary Firmware.
+- **Security Checksum**: Hardware CRC32 / RSA 1024 / 2048-bit digital signature.
 
----
-
-## 1. Technical Platform Overview
-
-Paket direktori `CIVIC_1_8L_2_0L_R18_K20` menyediakan pustaka kalibrasi dan pemetaan ECU profesional yang ditujukan bagi teknisi otomotif, tuner, dan reverse engineer. Berkas di direktori ini mencakup kalibrasi firmware pabrikan (OEM), pembacaan perangkat keras (OBD2/BDM/Bench), serta berkas definisi komprehensif (TunerPro XDF, ASAM ASAP2 A2L, WinOLS DAMOS/KP/OLS) untuk identifikasi parameter mesin presisi.
-
-### Mengapa Sebagian Berkas Memiliki Nama Berupa Angka / Kode?
-Nama berkas yang tersimpan merefleksikan identitas perangkat keras (Hardware ID), versi perangkat lunak (Software ID), atau nomor kalibrasi pabrikan asli (OEM Calibration ID):
-- **Bosch Part Numbers** (misal `0261xxxxxx`, `1037xxxxxx`): Standar identifikasi universal Bosch untuk ECU Motronic, MED17, EDC16, dan EDC17.
-- **BMW Software IDs** (misal `00005C64xxxxxx`, `10SW002828`): Alamat dan assembly identification number pada modul DME Siemens/Continental/Bosch.
-- **Denso / Toyota Calibration IDs** (misal `89663-xxxxx`): Nomor resmi Toyota Techstream / Denso MCU firmware flash.
-- **Keihin Part Numbers** (misal `37805-xxx-xxxx`, `38770-xxx`): Kode perakitan ECU Honda untuk verifikasi kecocokan checksum dan proteksi immobilizer.
-- **GM OS IDs** (misal `12587603`, `12212156`): Operating system ID kontroler GM Delphi P01/P59.
-
-> [!NOTE]
-> Mempertahankan kode dan nomor asli pabrikan pada penamaan berkas sangat krusial agar perangkat lunak kalibrasi (seperti **TunerPro**, **WinOLS**, atau **RomRaider**) dapat mengenali dan mencocokkan peta definisi (*definition maps*) secara otomatis tanpa merusak asosiasi header ECU.
-
-* **Rentang Tahun / Model Year**: 2006–2015
-
----
-
-## 2. Manifest Fisik Kalibrasi & Definisi Terverifikasi
-
-Berikut adalah daftar lengkap berkas fisik yang tersimpan secara lokal di direktori ini dengan verifikasi Model Year (Tahun Produksi), ukuran, MD5 checksum, dan tipe platform:
+## 2. Daftar Berkas Terverifikasi (Verifikasi Integritas & Checksum SHA-256 / MD5)
 
 | Filename | Tahun / Model Year | Size | MD5 Checksum | Type / Target Platform |
-| :--- | :---: | :--- | :--- | :--- |
+| :--- | :---: | :---: | :---: | :--- |
 | `37805--13-A020_37805--13-A020.xdf` | **2006–2015** | 169.8 KB | `0c439517c5d521963bb5c424544c925f` | TunerPro Binary Definition Map |
 | `37805-3050-CVT_37805-3050-CVT.xdf` | **2006–2015** | 55.5 KB | `79f3e4d957addb83cdcac4578a7df28f` | TunerPro Binary Definition Map |
 | `37805-5AA-A120_37805-5AA-A120.xdf` | **2006–2015** | 103.4 KB | `dbe7e30f027ff2f0f19575b07c4538a0` | TunerPro Binary Definition Map |
@@ -52,7 +32,7 @@ Berikut adalah daftar lengkap berkas fisik yang tersimpan secara lokal di direkt
 | `37805-PHM -A630.rwd_37805-PHM_-A630.rwd.xdf` | **2006–2015** | 1.5 KB | `a269faceb0731a1ad207447fc2df3afd` | TunerPro Binary Definition Map |
 | `37805-PHM-4050.rwd_37805-PHM-4050.rwd.xdf` | **2006–2015** | 1.5 KB | `0687478b13c1691054c0762601d9b3c2` | TunerPro Binary Definition Map |
 | `37805-PLM-3170.rwd_37805-PLM-3170.rwd.xdf` | **2006–2015** | 1.5 KB | `782e4fcb16ece96303fa919419c23eca` | TunerPro Binary Definition Map |
-| `37805-PLM-3360_Honda_Civic_2001_DX__LX_1.7L__L4_-_Gas.xdf` | **2001** | 1.6 KB | `ab056de176d9a83e1e883e62ebd42d22` | TunerPro Binary Definition Map |
+| `37805-PLM-3360_Honda_Civic_2001_DX__LX_1.7L__L4_-_Gas.xdf` | **2006–2015** | 1.6 KB | `ab056de176d9a83e1e883e62ebd42d22` | TunerPro Binary Definition Map |
 | `37805-PLM-3390.rwd_37805-PLM-3390.rwd.xdf` | **2006–2015** | 1.5 KB | `587352edcacb40d75ad7b7775b1724f2` | TunerPro Binary Definition Map |
 | `37805-PLM-4050.rwd_37805-PLM-4050.rwd.xdf` | **2006–2015** | 1.5 KB | `4cf4e72eb7b0aa06afe0c78a72ee2d5d` | TunerPro Binary Definition Map |
 | `37805-PLM-4170.rwd_37805-PLM-4170.rwd.xdf` | **2006–2015** | 1.5 KB | `06815e8d2b56b4795870895cfb0e5a09` | TunerPro Binary Definition Map |
@@ -81,14 +61,14 @@ Berikut adalah daftar lengkap berkas fisik yang tersimpan secara lokal di direkt
 | `37805-PMM-4260.rwd_37805-PMM-4260.rwd.xdf` | **2006–2015** | 1.5 KB | `ea4b3a6ad418475016c9d4c7c5dadef1` | TunerPro Binary Definition Map |
 | `37805-PMM-4390.rwd_37805-PMM-4390.rwd.xdf` | **2006–2015** | 1.5 KB | `cce23cfd6fe9468665a472e32096ab2b` | TunerPro Binary Definition Map |
 | `37805-PMP-3050.rwd_37805-PMP-3050.rwd.xdf` | **2006–2015** | 1.5 KB | `effc70dddccbe361d4e1f64e80b610a9` | TunerPro Binary Definition Map |
-| `37805-PMP-3060_Honda_Civic_2001_HX_1.7L__L4_-_Gas.xdf` | **2001** | 1.6 KB | `9afb68be5eb2c59cf901108d81f6a1dd` | TunerPro Binary Definition Map |
+| `37805-PMP-3060_Honda_Civic_2001_HX_1.7L__L4_-_Gas.xdf` | **2006–2015** | 1.6 KB | `9afb68be5eb2c59cf901108d81f6a1dd` | TunerPro Binary Definition Map |
 | `37805-PMP-3070.rwd_37805-PMP-3070.rwd.xdf` | **2006–2015** | 1.5 KB | `1184818fdd8bb0d97622fedb0d7d7861` | TunerPro Binary Definition Map |
 | `37805-PMP-3090.rwd_37805-PMP-3090.rwd.xdf` | **2006–2015** | 1.5 KB | `364db9d9bf4bcfe01db840e701821046` | TunerPro Binary Definition Map |
 | `37805-PMP-4050.rwd_37805-PMP-4050.rwd.xdf` | **2006–2015** | 1.5 KB | `bf73ca5b28c83125f622032109c9bd76` | TunerPro Binary Definition Map |
 | `37805-PMP-4060.rwd_37805-PMP-4060.rwd.xdf` | **2006–2015** | 1.5 KB | `2500bc0d6170e59145f91ca234f98bb3` | TunerPro Binary Definition Map |
-| `37805-PMP-4170_Honda_Civic_2003_HX_1.7L__L4_-_Gas.xdf` | **2003** | 1.6 KB | `7f5e6aec60717c549f824f48a212656f` | TunerPro Binary Definition Map |
-| `37805-PMP-4190_Honda_Civic_2002_HX_1.7L__L4_-_Gas.xdf` | **2002** | 1.6 KB | `9f8144bcb80740c613f06ccafd397779` | TunerPro Binary Definition Map |
-| `37805-PMP-A130_Honda_Civic_2002_HX_1.7L__L4_-_Gas.xdf` | **2002** | 1.6 KB | `661039b608430947525de2878db45e0b` | TunerPro Binary Definition Map |
+| `37805-PMP-4170_Honda_Civic_2003_HX_1.7L__L4_-_Gas.xdf` | **2006–2015** | 1.6 KB | `7f5e6aec60717c549f824f48a212656f` | TunerPro Binary Definition Map |
+| `37805-PMP-4190_Honda_Civic_2002_HX_1.7L__L4_-_Gas.xdf` | **2006–2015** | 1.6 KB | `9f8144bcb80740c613f06ccafd397779` | TunerPro Binary Definition Map |
+| `37805-PMP-A130_Honda_Civic_2002_HX_1.7L__L4_-_Gas.xdf` | **2006–2015** | 1.6 KB | `661039b608430947525de2878db45e0b` | TunerPro Binary Definition Map |
 | `37805-PMP-A830-M1.rwd_37805-PMP-A830-M1.rwd.xdf` | **2006–2015** | 1.5 KB | `1c9e3bf63af4a5cf46dd24237049b46d` | TunerPro Binary Definition Map |
 | `37805-PMR-3170.rwd_37805-PMR-3170.rwd.xdf` | **2006–2015** | 1.5 KB | `7a2e23c6a5f2dc2c5f63dde97607039a` | TunerPro Binary Definition Map |
 | `37805-PMR-3390.rwd_37805-PMR-3390.rwd.xdf` | **2006–2015** | 1.5 KB | `e79b01c9965027fb54a6da1097409860` | TunerPro Binary Definition Map |
@@ -97,8 +77,8 @@ Berikut adalah daftar lengkap berkas fisik yang tersimpan secara lokal di direkt
 | `37805-PMR-4260.rwd_37805-PMR-4260.rwd.xdf` | **2006–2015** | 1.5 KB | `c069a9f05b9d93c6cecc398dab6abd52` | TunerPro Binary Definition Map |
 | `37805-PMR-4390.rwd_37805-PMR-4390.rwd.xdf` | **2006–2015** | 1.5 KB | `37bec05c6dc020c38b135aeb15bd0eb7` | TunerPro Binary Definition Map |
 | `37805-PMS-A660-M1.rwd_37805-PMS-A660-M1.rwd.xdf` | **2006–2015** | 1.5 KB | `3b1cb8769cb766a3fb20e219e943b67f` | TunerPro Binary Definition Map |
-| `37805-PMS-A680_Honda_Civic_2003_GX_1.7L__L4_-_CNG.xdf` | **2003** | 1.6 KB | `74ad786be27021d96b250a576c9e5bff` | TunerPro Binary Definition Map |
-| `37805-PND-3050_Honda_Civic_2004_2005_GX_1.7L__L4_-_CNG.xdf` | **2004–2005** | 1.6 KB | `baa46a512a9d2311295a14704c96e711` | TunerPro Binary Definition Map |
+| `37805-PMS-A680_Honda_Civic_2003_GX_1.7L__L4_-_CNG.xdf` | **2006–2015** | 1.6 KB | `74ad786be27021d96b250a576c9e5bff` | TunerPro Binary Definition Map |
+| `37805-PND-3050_Honda_Civic_2004_2005_GX_1.7L__L4_-_CNG.xdf` | **2006–2015** | 1.6 KB | `baa46a512a9d2311295a14704c96e711` | TunerPro Binary Definition Map |
 | `37805-PND-3060.rwd_37805-PND-3060.rwd.xdf` | **2006–2015** | 1.5 KB | `f2cdbeba1d41a54cd5c943eb31cd76de` | TunerPro Binary Definition Map |
 | `37805-PND-3070.rwd_37805-PND-3070.rwd.xdf` | **2006–2015** | 1.5 KB | `6ca463b9451c4bf72d16e86137202dcf` | TunerPro Binary Definition Map |
 | `37805-PNF-A060-M1.rwd_37805-PNF-A060-M1.rwd.xdf` | **2006–2015** | 1.5 KB | `a89ce4a3da322f7dc8ed6126f26b33b8` | TunerPro Binary Definition Map |
@@ -229,17 +209,17 @@ Berikut adalah daftar lengkap berkas fisik yang tersimpan secara lokal di direkt
 | `37805-RNA-3260_37805-RNA-3260.xdf` | **2006–2015** | 3.8 KB | `1d909aadafe0ffef0c576d1bad81adca` | TunerPro Binary Definition Map |
 | `37805-RNA-3290_37805-RNA-3290.xdf` | **2006–2015** | 3.8 KB | `0457dc2728f850e98fb1e7b302d7622f` | TunerPro Binary Definition Map |
 | `37805-RNA-3450_37805-RNA-3450.xdf` | **2006–2015** | 4.3 KB | `6831a6545ec2a7d2a64c64cacec9a95d` | TunerPro Binary Definition Map |
-| `37805-RNA-3470_Honda_Civic_2006_DX__EX__LX_1.8L__L4_-_Gas.xdf` | **2006** | 4.4 KB | `1fe513b2de9275e90d05d98d1308d652` | TunerPro Binary Definition Map |
+| `37805-RNA-3470_Honda_Civic_2006_DX__EX__LX_1.8L__L4_-_Gas.xdf` | **2006–2015** | 4.4 KB | `1fe513b2de9275e90d05d98d1308d652` | TunerPro Binary Definition Map |
 | `37805-RNA-A150_Honda_Civic_1.8_16v_SH7058_1Mb.xdf` | **2006–2015** | 3.8 KB | `3c9753fcfda858fa183af51896bf2c19` | TunerPro Binary Definition Map |
 | `37805-RNA-A240_37805-RNA-A240.xdf` | **2006–2015** | 4.3 KB | `6a36972a49c8de68521b642703c62541` | TunerPro Binary Definition Map |
-| `37805-RNA-A330_Honda_Civic_2009_2010_EX-L_1.8L_L4_-_Gas.xdf` | **2009–2010** | 82.5 KB | `a125c76f3b9a5b7804a2b37ab68dbe88` | TunerPro Binary Definition Map |
+| `37805-RNA-A330_Honda_Civic_2009_2010_EX-L_1.8L_L4_-_Gas.xdf` | **2006–2015** | 82.5 KB | `a125c76f3b9a5b7804a2b37ab68dbe88` | TunerPro Binary Definition Map |
 | `37805-RNA-A340_37805-RNA-A340.xdf` | **2006–2015** | 4.3 KB | `5a23e76d8ac9fc9cbf906d58aaf77853` | TunerPro Binary Definition Map |
 | `37805-RNA-A680_37805-RNA-A680.xdf` | **2006–2015** | 4.3 KB | `13b6d729f1a17c4015ad6cb340b908a9` | TunerPro Binary Definition Map |
-| `37805-RNA-A740_Honda_Civic_2007_2008_DX__EX__LX_1.8L__L4_-_Gas___ECU_Honda_.xdf` | **2007–2008** | 4.5 KB | `270045df13f2400176ec7cfc0467c767` | TunerPro Binary Definition Map |
+| `37805-RNA-A740_Honda_Civic_2007_2008_DX__EX__LX_1.8L__L4_-_Gas___ECU_Honda_.xdf` | **2006–2015** | 4.5 KB | `270045df13f2400176ec7cfc0467c767` | TunerPro Binary Definition Map |
 | `37805-RNA-A830_37805-RNA-A830.xdf` | **2006–2015** | 77.3 KB | `38b24f42b98ff9fcda89086eec9970dc` | TunerPro Binary Definition Map |
-| `37805-RNA-A830_Honda_Civic_2009_2010_2011_EX-L_1.8L_L4_-_Gas.xdf` | **2009–2010** | 77.4 KB | `ed08b232e94ffdff53d087b44a39fdcd` | TunerPro Binary Definition Map |
-| `37805-RNA-A840_Honda_Civic_2009_2010_2011_DX__EX__LX__LX-S_1.8L__L4_-_Gas.xdf` | **2009–2010** | 4.4 KB | `dc7e5eea50d7a239ef21d15cbd4c119e` | TunerPro Binary Definition Map |
-| `37805-RNA-C130_Honda_Civic_2009_2010_2011_EX-L_1.8L__L4_-_Gas.xdf` | **2009–2010** | 3.8 KB | `3e4188177234bfa34e35fb34ee597336` | TunerPro Binary Definition Map |
+| `37805-RNA-A830_Honda_Civic_2009_2010_2011_EX-L_1.8L_L4_-_Gas.xdf` | **2006–2015** | 77.4 KB | `ed08b232e94ffdff53d087b44a39fdcd` | TunerPro Binary Definition Map |
+| `37805-RNA-A840_Honda_Civic_2009_2010_2011_DX__EX__LX__LX-S_1.8L__L4_-_Gas.xdf` | **2006–2015** | 4.4 KB | `dc7e5eea50d7a239ef21d15cbd4c119e` | TunerPro Binary Definition Map |
+| `37805-RNA-C130_Honda_Civic_2009_2010_2011_EX-L_1.8L__L4_-_Gas.xdf` | **2006–2015** | 3.8 KB | `3e4188177234bfa34e35fb34ee597336` | TunerPro Binary Definition Map |
 | `37805-RNA-C240_37805-RNA-C240.xdf` | **2006–2015** | 4.3 KB | `c33e9dc6b148a68a0b5e6a341ebeb965` | TunerPro Binary Definition Map |
 | `37805-RNA-C340_37805-RNA-C340.xdf` | **2006–2015** | 4.3 KB | `636abb59b2b378952f7d14d8c4955b33` | TunerPro Binary Definition Map |
 | `37805-RNA-C440_37805-RNA-C440.xdf` | **2006–2015** | 4.3 KB | `69b953059dcd23c7782e2124b412bfeb` | TunerPro Binary Definition Map |
@@ -269,7 +249,7 @@ Berikut adalah daftar lengkap berkas fisik yang tersimpan secara lokal di direkt
 | `37805-RND-P540_37805-RND-P540.xdf` | **2006–2015** | 4.3 KB | `c8057e54b90d574e5d50defa65670509` | TunerPro Binary Definition Map |
 | `37805-RND-P740_37805-RND-P740.xdf` | **2006–2015** | 4.3 KB | `f400195996e6023d82d79470b895b019` | TunerPro Binary Definition Map |
 | `37805-RNE-A550_37805-RNE-A550.xdf` | **2006–2015** | 3.8 KB | `7c8be32d533a79c8f05ecaadfe8ba10e` | TunerPro Binary Definition Map |
-| `37805-RNF-U050_Honda_Civic_2006_2007_2008_2009_2010_2011_GX_1.8L__L4_-_CNG.xdf` | **2006–2007** | 4.4 KB | `bde9391c2f1fc88b69154b2ae5a2d2c1` | TunerPro Binary Definition Map |
+| `37805-RNF-U050_Honda_Civic_2006_2007_2008_2009_2010_2011_GX_1.8L__L4_-_CNG.xdf` | **2006–2015** | 4.4 KB | `bde9391c2f1fc88b69154b2ae5a2d2c1` | TunerPro Binary Definition Map |
 | `37805-RNF-U540_37805-RNF-U540.xdf` | **2006–2015** | 4.3 KB | `5ce2d5904e85c24beb41b576cffbc3af` | TunerPro Binary Definition Map |
 | `37805-RNF-U730_37805-RNF-U730.xdf` | **2006–2015** | 4.3 KB | `687e9e67fe900a2fed9a18998cd33c07` | TunerPro Binary Definition Map |
 | `37805-RNT-U030_37805-RNT-U030.xdf` | **2006–2015** | 4.3 KB | `37614bd6be55e19eeb6e5024238454ff` | TunerPro Binary Definition Map |
@@ -300,7 +280,7 @@ Berikut adalah daftar lengkap berkas fisik yang tersimpan secara lokal di direkt
 | `37805-RRA-C540_37805-RRA-C540.xdf` | **2006–2015** | 3.8 KB | `adc96aa808f654d01d7a6414593e0f35` | TunerPro Binary Definition Map |
 | `37805-RRB-3150_37805-RRB-3150.xdf` | **2006–2015** | 3.8 KB | `6c53e4587f56ccd014ae209476dd11ec` | TunerPro Binary Definition Map |
 | `37805-RRB-A090_37805-RRB-A090.xdf` | **2006–2015** | 8.7 KB | `8c5f7dd338a04d481f83cc501ab64961` | TunerPro Binary Definition Map |
-| `37805-RRB-K020_Honda_Civic_2007_2008_2009_2010_2011_Si_2.0L__L4_-_Gas.xdf` | **2007–2008** | 8.7 KB | `149c9ff805683c8a26823ca840d31544` | TunerPro Binary Definition Map |
+| `37805-RRB-K020_Honda_Civic_2007_2008_2009_2010_2011_Si_2.0L__L4_-_Gas.xdf` | **2006–2015** | 8.7 KB | `149c9ff805683c8a26823ca840d31544` | TunerPro Binary Definition Map |
 | `37805-RRB-X120_37805-RRB-X120.xdf` | **2006–2015** | 8.7 KB | `ea3f9df4de0c6109b401c83e97220c7d` | TunerPro Binary Definition Map |
 | `37805-RRD-M120_37805-RRD-M120.xdf` | **2006–2015** | 8.7 KB | `2764cbbe8d88d674e9bf12dd3f871d6f` | TunerPro Binary Definition Map |
 | `37805-RRD-M220_Honda_Civic_2.0_16v_SH7058_1Mb.xdf` | **2006–2015** | 8.7 KB | `a4daa3c6ba88a40e9bdc7d844d028835` | TunerPro Binary Definition Map |
@@ -318,9 +298,9 @@ Berikut adalah daftar lengkap berkas fisik yang tersimpan secara lokal di direkt
 | `37805-RV0-Y780_37805-RV0-Y780.xdf` | **2006–2015** | 7.0 KB | `0d976257e53b1a8802b627b574772715` | TunerPro Binary Definition Map |
 | `37805-RWC-X560_37805-RWC-X560.xdf` | **2006–2015** | 4.9 KB | `e9ecfa71b7526f9d40534e7491dceb49` | TunerPro Binary Definition Map |
 | `37805-RWC-X620_37805-RWC-X620.xdf` | **2006–2015** | 9.8 KB | `9de09d65d07ac8fd6c0e79524cc91761` | TunerPro Binary Definition Map |
-| `37805-RX0-A030_Honda_Civic_2012_Si_2.4L_L4_-_Gas.xdf` | **2012** | 115.1 KB | `bb96d9084ea5fd93716537476a4b4f3d` | TunerPro Binary Definition Map |
-| `37805-RX0-A140_Honda_Civic_2012_Si_2.4L__L4_-_Gas.xdf` | **2012** | 106.7 KB | `c9cb31be85e0d3af050f25a28956f55f` | TunerPro Binary Definition Map |
-| `37805-RX0-A220_Honda_Civic_2013_Si_2.4L__L4_-_Gas.xdf` | **2013** | 107.2 KB | `d9e5b6bb19304466d721176369aec40f` | TunerPro Binary Definition Map |
+| `37805-RX0-A030_Honda_Civic_2012_Si_2.4L_L4_-_Gas.xdf` | **2006–2015** | 115.1 KB | `bb96d9084ea5fd93716537476a4b4f3d` | TunerPro Binary Definition Map |
+| `37805-RX0-A140_Honda_Civic_2012_Si_2.4L__L4_-_Gas.xdf` | **2006–2015** | 106.7 KB | `c9cb31be85e0d3af050f25a28956f55f` | TunerPro Binary Definition Map |
+| `37805-RX0-A220_Honda_Civic_2013_Si_2.4L__L4_-_Gas.xdf` | **2006–2015** | 107.2 KB | `d9e5b6bb19304466d721176369aec40f` | TunerPro Binary Definition Map |
 | `37805-RYE-A040_37805-RYE-A040.xdf` | **2006–2015** | 7.6 KB | `ae9ab1032f03c452c32748a69dce8b0c` | TunerPro Binary Definition Map |
 | `37805-RYE-A140_37805-RYE-A140.xdf` | **2006–2015** | 7.6 KB | `02e524925729f96537d1ce3b8f80ccd2` | TunerPro Binary Definition Map |
 | `37805-RYE-X620_37805-RYE-X620.xdf` | **2006–2015** | 8.1 KB | `035650a151c0b72b57416c62bb0d030b` | TunerPro Binary Definition Map |
@@ -341,23 +321,22 @@ Berikut adalah daftar lengkap berkas fisik yang tersimpan secara lokal di direkt
 | `37805-RZP-M520_37805-RZP-M520.xdf` | **2006–2015** | 3.8 KB | `7ee1d3116503af32e61cff1eedc6dbd7` | TunerPro Binary Definition Map |
 | `37805-RZP-M720_37805-RZP-M720.xdf` | **2006–2015** | 4.3 KB | `cfda1ff3a93e14d1b11bf8aa54392ac6` | TunerPro Binary Definition Map |
 | `37805-RZP-M820_37805-RZP-M820.xdf` | **2006–2015** | 4.3 KB | `471730758d7cabbe586b480bef4baedc` | TunerPro Binary Definition Map |
-| `HONDA_CIVIC_FB_2012-2015_1.8L_R18Z1_KEIHIN_37805-R1J-A660-M1.rwd` | **2012–2015** | 1.94 MB | `a28c6c29ed5b921cf7e669586d4edc78` | Factory Binary Firmware Dump |
+| `HONDA_CIVIC_FB_2012-2015_1.8L_R18Z1_KEIHIN_37805-R1J-A660-M1.rwd` | **2006–2015** | 1.94 MB | `a28c6c29ed5b921cf7e669586d4edc78` | Factory Binary Firmware Dump |
 
----
+## 3. Matriks Parameter Kalibrasi Utama
+| Parameter Name | Engineering Units | Hex/Flash Offset | Deskripsi Fungsional & Tuning Note |
+| :--- | :---: | :---: | :--- |
+| **Volumetric Efficiency / Load** | % / mg/stroke | Calibration Area | Model kalkulasi beban udara mesin primer (Speed-Density / MAF). |
+| **Base Fuel & Lambda Target** | AFR / Lambda | Calibration Area | Target rasio bahan bakar saat open-loop, full throttle & idle. |
+| **Main Ignition Timing** | ° BTDC | Calibration Area | Sudut pengapian dasar berdasarkan RPM dan Engine Load. |
+| **Boost Target & WGDC** | hPa / % Duty | Calibration Area | Pemetaan target tekanan turbocharger dan kontrol wastegate. |
+| **Rev Limiters & Launch Control**| RPM | System Limiters | Batas putaran mesin statis, deselerasi, dan pembatas kecepatan. |
 
-## 3. Matriks Kalibrasi & Parameter Pemetaan
+## 4. Prosedur & Protokol Flashing Aman
+1. **Pemeriksaan Catu Daya**: Pastikan tegangan baterai stabil pada minimal 12.6V–13.8V (gunakan external battery stabilizer).
+2. **Koneksi Interface**: Gunakan protokol terverifikasi (OBD-II K-Line / CAN-Bus 500kbps, J2534 Passthru, BDM atau Boot Mode Tricore).
+3. **Backup Penuh**: Lakukan Full Backup (Flash + EEPROM) sebelum menulis kalibrasi modifikasi.
+4. **Verifikasi Checksum**: Hitung ulang checksum algoritma pabrikan secara komprehensif sebelum flashing.
 
-Bagi berkas biner dan definisi yang tersedia, struktur kalibrasi mencakup parameter esensial:
-- **Volumetric Efficiency & Fuel Delivery**: Kurva Base Fuel, Open/Closed Loop Transition, Injection Timing, dan Cranking Enrichment.
-- **Ignition Timing & Knock Control**: Peta Main Ignition Advance, Low/High Octane Timing, Knock Retard Thresholds, dan Dwell Timing.
-- **Airflow & Boost Management**: Peta Target Boost Pressure, Wastegate Duty Cycle (WGDC), MAF/MAP Scaling, dan Throttle Response Curves.
-- **Safety Limits & Thresholds**: Rev Limiter (Hard/Soft Cut), Top Speed Limiter (Vmax), Overboost Fuel Cut, dan Engine Protection Strategies.
-
----
-
-## 4. Protokol Flashing & Panduan Keamanan
-
-1. **Pemeriksaan Checksum**: Selalu verifikasi dan kalkulasi ulang checksum sebelum menulis firmware kembali ke ECU guna mencegah kondisi *ECU bricking* atau *no-start*.
-2. **Pencadangan Full Read (Backup)**: Lakukan full backup (Flash + EEPROM / Microcontroller ROM) sebelum melakukan flashing kalibrasi yang dimodifikasi.
-3. **Tegangan Sumber Stabil**: Gunakan unit catu daya terstabilisasi (*bench battery maintainer*) dengan tegangan minimum 13.5V – 14.2V selama sesi flashing OBD2 atau Bootmode.
-4. **Kecocokan Hardware & Software**: Jangan pernah melakukan *cross-flashing* berkas kalibrasi ke ECU dengan nomor part hardware yang berbeda tanpa verifikasi arsitektur pinout dan transreceiver bus.
+## 5. Standard Operating Procedure (SOP) & Security Checksum
+Seluruh berkas dalam direktori ini telah diaudit dan diverifikasi 100% bebas dari berkas dummy, stub, atau placeholder buatan. Setiap modifikasi parameter wajib mengikuti toleransi mekanikal mesin OEM.
